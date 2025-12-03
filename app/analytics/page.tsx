@@ -24,8 +24,8 @@ export default function AnalyticsPage() {
         const liveData = await liveResponse.json()
         const histData = await histResponse.json()
 
-        if (liveData.averageRate) {
-          setCurrentRate(liveData.averageRate)
+        if (typeof liveData.rate === "number") {
+          setCurrentRate(liveData.rate)
         }
 
         if (histData.historical && histData.historical.length > 0) {

@@ -1,8 +1,36 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export function Hero() {
+  const [rate, setRate] = useState<number | null>(null)
+  const [lastUpdate, setLastUpdate] = useState<string>("Loading…")
+
+  useEffect(() => {
+    let isMounted = true
+    async function fetchRate() {
+      try {
+        const res = await fetch("/api/rates/live")
+        const data = await res.json()
+        if (isMounted && typeof data.rate === "number") {
+          setRate(data.rate)
+          setLastUpdate("Just now")
+        }
+      } catch (e) {
+        // keep graceful fallback
+      }
+    }
+    fetchRate()
+    const id = setInterval(fetchRate, 60000)
+    return () => {
+      isMounted = false
+      clearInterval(id)
+    }
+  }, [])
+
   return (
     <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4 py-16 md:py-24">
@@ -13,7 +41,7 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
               </span>
-              <span className="text-muted-foreground">100+ sources • Updated every 60 seconds</span>
+              <span className="text-muted-foreground">Live • {lastUpdate}</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
@@ -69,17 +97,23 @@ export function Hero() {
                   </span>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-4xl font-bold text-foreground">192.50 LRD</div>
+                  <div className="text-4xl font-bold text-foreground">
+                    {rate ? `${rate.toFixed(2)} LRD` : "—"}
+                  </div>
                   <div className="text-sm text-muted-foreground">per 1 USD</div>
                 </div>
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
                   <div className="space-y-1">
                     <div className="text-xs text-muted-foreground">Buy Rate</div>
-                    <div className="text-lg font-semibold text-foreground">190.50</div>
+                    <div className="text-lg font-semibold text-foreground">
+                      {rate ? (rate - 2).toFixed(2) : "—"}
+                    </div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-xs text-muted-foreground">Sell Rate</div>
-                    <div className="text-lg font-semibold text-foreground">194.50</div>
+                    <div className="text-lg font-semibold text-foreground">
+                      {rate ? (rate + 2).toFixed(2) : "—"}
+                    </div>
                   </div>
                 </div>
                 <div className="pt-2 text-xs text-muted-foreground">Aggregated from 100+ sources</div>

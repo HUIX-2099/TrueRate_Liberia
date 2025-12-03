@@ -38,6 +38,8 @@ export async function GET() {
     ]
 
     return NextResponse.json({
+      // Backward compatibility for clients expecting `data.rate`
+      rate: aggregatedData.rate,
       official: {
         rate: aggregatedData.rate,
         confidence: aggregatedData.confidence,

@@ -5,6 +5,9 @@ interface RateSource {
   weight: number
 }
 
+// Prefer authenticated ExchangeRate-API v6 USD/LRD pair endpoint when key is provided
+const EXCHANGE_RATE_API_KEY = process.env.EXCHANGE_RATE_API_KEY || "demo"
+
 export const RATE_SOURCES: RateSource[] = [
   // Fawaz Ahmed Currency API - Free, supports LRD
   {
@@ -19,6 +22,13 @@ export const RATE_SOURCES: RateSource[] = [
     url: "https://open.er-api.com/v6/latest/USD",
     parser: (data) => data?.rates?.LRD || null,
     weight: 1.0,
+  },
+  // ExchangeRate-API v6 Pair endpoint (authenticated)
+  {
+    name: "ExchangeRate-API v6 Pair",
+    url: `https://v6.exchangerate-api.com/v6/${EXCHANGE_RATE_API_KEY}/pair/USD/LRD`,
+    parser: (data) => data?.conversion_rate || null,
+    weight: 1.2,
   },
   // Exchange Rate API - Free
   {
@@ -61,6 +71,22 @@ export async function getAggregatedRate(): Promise<{
   sources: string[]
   timestamp: string
 }> {
+  // If a real API key is present, prefer the authenticated ExchangeRate-API as the single source of truth
+  if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
+    const preferred = RATE_SOURCES.find((s) => s.name === "ExchangeRate-API v6 Pair")
+    if (preferred) {
+      const result = await fetchFromSource(preferred)
+      if (result) {
+        return {
+          rate: Number(result.rate.toFixed(4)),
+          confidence: 1.0,
+          sources: [result.source],
+          timestamp: new Date().toISOString(),
+        }
+      }
+    }
+  }
+
   const results = await Promise.allSettled(RATE_SOURCES.map((source) => fetchFromSource(source)))
 
   const validResults = results

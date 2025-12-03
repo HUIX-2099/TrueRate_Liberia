@@ -28,8 +28,8 @@ export function CurrencyConverter() {
       try {
         const response = await fetch("/api/rates/live")
         const data = await response.json()
-        if (data.averageRate) {
-          setCurrentRate(data.averageRate)
+        if (typeof data.rate === "number") {
+          setCurrentRate(data.rate)
           setLastUpdate("Just now")
         }
       } catch (error) {
