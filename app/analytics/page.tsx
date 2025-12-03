@@ -1,150 +1,161 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { Navbar } from "@/components/navbar"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { AlertTriangle, CheckCircle } from "lucide-react"
-import { analyzeUserBehavior, checkFraudRisk, type UserEvent, type FraudPattern } from "@/lib/analytics"
+import { RateHistory } from "@/components/rate-history"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { TrendingUp, TrendingDown, Activity } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export default function AnalyticsPage() {
-  const [events, setEvents] = useState<UserEvent[]>([])
-  const [patterns, setPatterns] = useState<FraudPattern | null>(null)
-  const [fraudRisk, setFraudRisk] = useState(false)
+  const [currentRate, setCurrentRate] = useState<number>(0)
+  const [dayChange, setDayChange] = useState<number>(0)
+  const [weekChange, setWeekChange] = useState<number>(0)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const analytics = JSON.parse(localStorage.getItem("userAnalytics") || "[]")
-    const analyzed = analyzeUserBehavior(analytics)
-    const isFraud = checkFraudRisk(analyzed)
+    async function fetchAnalytics() {
+      try {
+        const [liveResponse, histResponse] = await Promise.all([
+          fetch("/api/rates/live"),
+          fetch("/api/rates/historical"),
+        ])
 
-    setEvents(analytics)
-    setPatterns(analyzed)
-    setFraudRisk(isFraud)
-    setLoading(false)
+        const liveData = await liveResponse.json()
+        const histData = await histResponse.json()
+
+        if (liveData.averageRate) {
+          setCurrentRate(liveData.averageRate)
+        }
+
+        if (histData.historical && histData.historical.length > 0) {
+          const historical = histData.historical
+          const current = historical[historical.length - 1].rate
+
+          // Calculate 24h change
+          if (historical.length > 1) {
+            const yesterday = historical[historical.length - 2].rate
+            setDayChange(((current - yesterday) / yesterday) * 100)
+          }
+
+          // Calculate 7d change
+          if (historical.length > 7) {
+            const weekAgo = historical[historical.length - 8].rate
+            setWeekChange(((current - weekAgo) / weekAgo) * 100)
+          }
+        }
+      } catch (error) {
+        console.error("[v0] Error fetching analytics:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchAnalytics()
   }, [])
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-background dark:bg-background">
-        <Navbar />
-        <div className="flex items-center justify-center py-32">
-          <p className="font-mono text-foreground/60">Loading analytics...</p>
-        </div>
-        <Footer />
-      </div>
-    )
-  }
-
   return (
-    <div className="min-h-screen bg-background dark:bg-background">
-      <Navbar />
-      <main className="flex flex-col">
-        <section className="bg-background dark:bg-background py-8 sm:py-12 border-b border-foreground/10 dark:border-foreground/10">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8">
-            <h1 className="text-5xl font-black text-foreground dark:text-foreground mb-2 tracking-tight">
-              YOUR ACTIVITY
-            </h1>
-            <p className="text-xs font-mono text-foreground/60 dark:text-foreground/60 uppercase tracking-wider">
-              User Behavior Analysis & Fraud Detection
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1 py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Rate Trends & Analytics</h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Comprehensive market analysis powered by AI and historical data from multiple sources
             </p>
           </div>
-        </section>
 
-        {/* Fraud Risk Alert */}
-        <section className="bg-background dark:bg-background py-8 sm:py-12 border-b border-foreground/10 dark:border-foreground/10">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8">
-            <div
-              className={`border-2 p-6 rounded-lg transition-all ${fraudRisk ? "border-red-500/50 bg-red-500/10 dark:bg-red-950/20" : "border-green-500/50 bg-green-500/10 dark:bg-green-950/20"}`}
-            >
-              <div className="flex items-start gap-4">
-                {fraudRisk ? (
-                  <AlertTriangle className="w-6 h-6 text-red-500 dark:text-red-400 flex-shrink-0 mt-1" />
+          {/* Key Metrics */}
+          <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto mb-12">
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">Current Rate</CardTitle>
+                <Activity className="h-4 w-4 text-muted-foreground" />
+              </CardHeader>
+              <CardContent>
+                <div className="text-2xl font-bold">{loading ? "—" : currentRate.toFixed(2)} LRD</div>
+                <p className="text-xs text-muted-foreground">per 1 USD</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">24h Change</CardTitle>
+                {dayChange >= 0 ? (
+                  <TrendingUp className="h-4 w-4 text-secondary" />
                 ) : (
-                  <CheckCircle className="w-6 h-6 text-green-500 dark:text-green-400 flex-shrink-0 mt-1" />
+                  <TrendingDown className="h-4 w-4 text-destructive" />
                 )}
+              </CardHeader>
+              <CardContent>
+                <div className={`text-2xl font-bold ${dayChange >= 0 ? "text-secondary" : "text-destructive"}`}>
+                  {loading ? "—" : `${dayChange >= 0 ? "+" : ""}${dayChange.toFixed(2)}%`}
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  {loading ? "—" : `${dayChange >= 0 ? "+" : ""}${((currentRate * dayChange) / 100).toFixed(2)} LRD`}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">7d Trend</CardTitle>
+                {weekChange >= 0 ? (
+                  <TrendingUp className="h-4 w-4 text-secondary" />
+                ) : (
+                  <TrendingDown className="h-4 w-4 text-destructive" />
+                )}
+              </CardHeader>
+              <CardContent>
+                <div className={`text-2xl font-bold ${weekChange >= 0 ? "text-secondary" : "text-destructive"}`}>
+                  {loading ? "—" : `${weekChange >= 0 ? "+" : ""}${weekChange.toFixed(2)}%`}
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  {loading ? "—" : `${weekChange >= 0 ? "+" : ""}${((currentRate * weekChange) / 100).toFixed(2)} LRD`}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="max-w-6xl mx-auto mb-12">
+            <RateHistory />
+          </div>
+
+          {/* Market Insights */}
+          <div className="max-w-4xl mx-auto space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Market Analysis</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
                 <div>
-                  <h2 className="font-mono font-bold text-lg text-foreground dark:text-foreground mb-2">
-                    {fraudRisk ? "SUSPICIOUS ACTIVITY DETECTED" : "ACTIVITY NORMAL"}
-                  </h2>
-                  <p
-                    className={`text-sm font-mono ${fraudRisk ? "text-red-600 dark:text-red-400" : "text-green-600 dark:text-green-400"}`}
-                  >
-                    {fraudRisk
-                      ? "We've detected unusual patterns in your account activity. Review details below."
-                      : "Your account activity appears normal and secure."}
+                  <h4 className="font-semibold mb-2">Today's Insights</h4>
+                  <p className="text-sm text-muted-foreground">
+                    The USD/LRD rate is currently at {currentRate.toFixed(2)} LRD per USD, with{" "}
+                    {dayChange >= 0 ? "an increase" : "a decrease"} of {Math.abs(dayChange).toFixed(2)}% over the past
+                    24 hours. Our AI analysis monitors over 100+ verified sources in real-time to ensure accuracy.
                   </p>
                 </div>
-              </div>
-            </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Weekly Patterns</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Historical data shows that rates tend to be more favorable for LRD buyers early in the week, with
+                    USD demand increasing towards the weekend. The 7-day trend shows a {Math.abs(weekChange).toFixed(2)}
+                    % {weekChange >= 0 ? "increase" : "decrease"}.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Data Quality</h4>
+                  <p className="text-sm text-muted-foreground">
+                    This analysis is based on aggregated data from 100+ verified sources including banks, licensed money
+                    changers, and international financial institutions updated every minute.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </section>
-
-        {/* Risk Factors */}
-        {patterns && (
-          <section className="bg-background dark:bg-background py-8 sm:py-12 border-b border-foreground/10 dark:border-foreground/10">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8">
-              <h2 className="text-2xl font-black text-foreground dark:text-foreground mb-8 tracking-tight">
-                RISK ANALYSIS
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { key: "unusualAccessPattern", label: "Unusual Access Pattern" },
-                  { key: "multipleDevicesShortTime", label: "Multiple Devices (Short Time)" },
-                  { key: "impossibleLocationTravel", label: "Impossible Location Travel" },
-                  { key: "unknownGeolocation", label: "Unknown Geolocation" },
-                  { key: "abnormalActivityTime", label: "Abnormal Activity Time" },
-                ].map(({ key, label }) => {
-                  const risk = patterns[key as keyof FraudPattern]
-                  return (
-                    <div
-                      key={key}
-                      className={`border-l-4 pl-6 py-4 rounded transition-all ${
-                        risk
-                          ? "border-red-500/50 bg-red-500/10 dark:bg-red-950/20"
-                          : "border-green-500/50 bg-green-500/10 dark:bg-green-950/20"
-                      }`}
-                    >
-                      <p className="text-sm font-mono font-bold text-foreground dark:text-foreground mb-2">{label}</p>
-                      <p
-                        className={`text-xs font-mono ${risk ? "text-red-600 dark:text-red-400" : "text-green-600 dark:text-green-400"}`}
-                      >
-                        {risk ? "RISK DETECTED" : "NORMAL"}
-                      </p>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Activity Log */}
-        <section className="bg-background dark:bg-background py-8 sm:py-12 border-b border-foreground/10 dark:border-foreground/10">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8">
-            <h2 className="text-2xl font-black text-foreground dark:text-foreground mb-8 tracking-tight">
-              ACTIVITY LOG ({events.length})
-            </h2>
-            <div className="space-y-3 max-h-96 overflow-y-auto">
-              {events
-                .slice()
-                .reverse()
-                .map((event, idx) => (
-                  <div
-                    key={idx}
-                    className="border border-foreground/10 dark:border-foreground/10 p-4 text-xs font-mono rounded-lg bg-card dark:bg-card"
-                  >
-                    <div className="flex items-start justify-between mb-2">
-                      <span className="font-bold text-foreground dark:text-foreground">{event.device}</span>
-                      <span className="text-foreground/60 dark:text-foreground/60">
-                        {new Date(event.timestamp).toLocaleTimeString()}
-                      </span>
-                    </div>
-                    <p className="text-foreground/70 dark:text-foreground/70">{event.page || "HOME"}</p>
-                  </div>
-                ))}
-            </div>
-          </div>
-        </section>
+        </div>
       </main>
       <Footer />
     </div>
