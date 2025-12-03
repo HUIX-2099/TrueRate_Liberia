@@ -6,6 +6,7 @@ import { AuthProvider } from "@/lib/auth/auth-context"
 import { Toaster } from "@/components/ui/toaster"
 import { DevDisclaimer } from "@/components/dev-disclaimer"
 import { EducationalMicroLessons } from "@/components/educational-micro-lessons"
+import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
   description:
     "The most accurate USD to LRD exchange rates in Liberia. Real-time data from 100+ sources, AI-powered predictions, verified money changers, and market analysis. Built by HUIX-2099.",
   generator: "v0.app",
+  manifest: "/manifest.webmanifest",
+  themeColor: "#16A34A",
   icons: {
     icon: [
       {
@@ -45,6 +48,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         <AuthProvider>
           <DevDisclaimer />
+          <ServiceWorkerRegister />
           {children}
           <EducationalMicroLessons />
           <Toaster />
