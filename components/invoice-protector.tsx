@@ -36,7 +36,8 @@ export function InvoiceProtector() {
         const currentRate = liveData.rate || 198.5
         const predictions = predData.predictions || []
         const avgPredicted = predictions.length > 0 
-          ? predictions.reduce((sum: number, p: { predictedRate: number }) => sum + p.predictedRate, 0) / predictions.length
+          ? predictions.reduce((sum: number, p: { predicted?: number; predictedRate?: number }) => 
+              sum + (p.predicted || p.predictedRate || currentRate), 0) / predictions.length
           : currentRate
         
         setPrediction({
@@ -125,7 +126,7 @@ export function InvoiceProtector() {
                   L${todayCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                 </div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  @ {prediction.currentRate.toFixed(2)} LRD/USD
+                  @ {(prediction.currentRate ?? 0).toFixed(2)} LRD/USD
                 </div>
               </div>
 
@@ -136,7 +137,7 @@ export function InvoiceProtector() {
                   L${futureCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                 </div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  @ {prediction.predictedRate.toFixed(2)} LRD/USD
+                  @ {(prediction.predictedRate ?? 0).toFixed(2)} LRD/USD
                 </div>
               </div>
             </div>
@@ -205,5 +206,6 @@ export function InvoiceProtector() {
     </Card>
   )
 }
+
 
 

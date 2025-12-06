@@ -43,14 +43,20 @@ export function ImportPriceAlert() {
         const liveData = await liveRes.json()
         const predData = await predRes.json()
         
-        setCurrentRate(liveData.rate || 198.5)
+        if (liveData.rate && typeof liveData.rate === 'number') {
+          setCurrentRate(liveData.rate)
+        }
         
         const predictions = predData.predictions || []
-        if (predictions.length >= 5) {
-          setPredictedRate(predictions[4].predictedRate)
+        if (predictions.length >= 5 && predictions[4]) {
+          // API returns 'predicted' not 'predictedRate'
+          const pred = predictions[4].predicted || predictions[4].predictedRate
+          if (pred && typeof pred === 'number') {
+            setPredictedRate(pred)
+          }
         }
       } catch (error) {
-        console.error('Error:', error)
+        console.error('Error fetching rates:', error)
       } finally {
         setLoading(false)
       }
@@ -135,12 +141,12 @@ export function ImportPriceAlert() {
         <div className="grid grid-cols-2 gap-4 p-4 bg-muted/50 rounded-lg">
           <div>
             <div className="text-sm text-muted-foreground">Today's Rate</div>
-            <div className="text-2xl font-bold">{currentRate.toFixed(2)} LRD</div>
+            <div className="text-2xl font-bold">{(currentRate ?? 0).toFixed(2)} LRD</div>
           </div>
           <div>
             <div className="text-sm text-muted-foreground">Friday (Predicted)</div>
-            <div className={`text-2xl font-bold ${predictedRate > currentRate ? 'text-destructive' : 'text-secondary'}`}>
-              {predictedRate.toFixed(2)} LRD
+            <div className={`text-2xl font-bold ${(predictedRate ?? 0) > (currentRate ?? 0) ? 'text-destructive' : 'text-secondary'}`}>
+              {(predictedRate ?? 0).toFixed(2)} LRD
             </div>
           </div>
         </div>
@@ -254,5 +260,6 @@ export function ImportPriceAlert() {
     </Card>
   )
 }
+
 
 

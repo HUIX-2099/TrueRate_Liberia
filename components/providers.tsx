@@ -8,24 +8,27 @@ import { Toaster } from "@/components/ui/toaster"
 import { DevDisclaimer } from "@/components/dev-disclaimer"
 import { EducationalMicroLessons } from "@/components/educational-micro-lessons"
 import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register"
+import { ErrorBoundary } from "@/components/error-boundary"
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <AuthProvider>
-        <LanguageProvider>
-          <DevDisclaimer />
-          <ServiceWorkerRegister />
-          {children}
-          <EducationalMicroLessons />
-          <Toaster />
-        </LanguageProvider>
-      </AuthProvider>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <AuthProvider>
+          <LanguageProvider>
+            <DevDisclaimer />
+            <ServiceWorkerRegister />
+            {children}
+            <EducationalMicroLessons />
+            <Toaster />
+          </LanguageProvider>
+        </AuthProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   )
 }

@@ -21,7 +21,16 @@ interface AuthContextType {
   signOut: () => void
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined)
+// Default context value for when provider is not available
+const defaultContextValue: AuthContextType = {
+  user: null,
+  loading: true,
+  signIn: async () => {},
+  signUp: async () => {},
+  signOut: () => {},
+}
+
+const AuthContext = createContext<AuthContextType>(defaultContextValue)
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
@@ -59,7 +68,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     setUser(mockUser)
     if (typeof window !== 'undefined') {
-      localStorage.setItem("user", JSON.stringify(mockUser))
+      try {
+        localStorage.setItem("user", JSON.stringify(mockUser))
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
   }
 
@@ -78,33 +91,28 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     setUser(mockUser)
     if (typeof window !== 'undefined') {
-      localStorage.setItem("user", JSON.stringify(mockUser))
+      try {
+        localStorage.setItem("user", JSON.stringify(mockUser))
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
   }
 
   const signOut = () => {
     setUser(null)
     if (typeof window !== 'undefined') {
-      localStorage.removeItem("user")
+      try {
+        localStorage.removeItem("user")
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
-  }
-
-  // Don't render until mounted to avoid hydration mismatch
-  if (!mounted) {
-    return (
-      <AuthContext.Provider value={{ user: null, loading: true, signIn, signUp, signOut }}>
-        {children}
-      </AuthContext.Provider>
-    )
   }
 
   return <AuthContext.Provider value={{ user, loading, signIn, signUp, signOut }}>{children}</AuthContext.Provider>
 }
 
 export function useAuth() {
-  const context = useContext(AuthContext)
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
-  }
-  return context
+  return useContext(AuthContext)
 }

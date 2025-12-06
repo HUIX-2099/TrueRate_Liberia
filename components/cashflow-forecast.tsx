@@ -52,9 +52,15 @@ export function CashflowForecast() {
         for (let week = 1; week <= 4; week++) {
           const weekPreds = preds.slice((week - 1) * 7, week * 7)
           if (weekPreds.length > 0) {
-            const avgRate = weekPreds.reduce((sum: number, p: { predictedRate: number }) => sum + p.predictedRate, 0) / weekPreds.length
-            const minRate = Math.min(...weekPreds.map((p: { predictedRate: number }) => p.predictedRate))
-            const maxRate = Math.max(...weekPreds.map((p: { predictedRate: number }) => p.predictedRate))
+            // API returns 'predicted', not 'predictedRate'
+            const getRate = (p: { predicted?: number; predictedRate?: number }) => 
+              p.predicted || p.predictedRate || currentRate
+            
+            const avgRate = weekPreds.reduce((sum: number, p: { predicted?: number; predictedRate?: number }) => 
+              sum + getRate(p), 0) / weekPreds.length
+            const rates = weekPreds.map((p: { predicted?: number; predictedRate?: number }) => getRate(p))
+            const minRate = Math.min(...rates)
+            const maxRate = Math.max(...rates)
             
             weeklyPredictions.push({
               week: `Week ${week}`,
@@ -131,7 +137,7 @@ export function CashflowForecast() {
           
           <div className="p-4 bg-muted/50 rounded-lg">
             <div className="text-xs text-muted-foreground mb-1">Current Rate</div>
-            <div className="text-xl font-bold">{currentRate.toFixed(2)}</div>
+            <div className="text-xl font-bold">{(currentRate ?? 0).toFixed(2)}</div>
             <div className="text-xs text-muted-foreground">LRD/USD</div>
           </div>
           
@@ -268,5 +274,6 @@ export function CashflowForecast() {
     </Card>
   )
 }
+
 
 

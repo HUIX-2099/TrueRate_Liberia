@@ -11,7 +11,16 @@ interface LanguageContextType {
   setMarketWomanMode: (enabled: boolean) => void
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+// Default context value for when provider is not available
+const defaultContextValue: LanguageContextType = {
+  language: 'en',
+  setLanguage: () => {},
+  t: (key: string) => getTranslation('en', key),
+  isMarketWomanMode: false,
+  setMarketWomanMode: () => {},
+}
+
+const LanguageContext = createContext<LanguageContextType>(defaultContextValue)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en')
@@ -35,14 +44,22 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
     if (typeof window !== 'undefined') {
-      localStorage.setItem('truerate-language', lang)
+      try {
+        localStorage.setItem('truerate-language', lang)
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
   }
 
   const setMarketWomanMode = (enabled: boolean) => {
     setMarketWomanModeState(enabled)
     if (typeof window !== 'undefined') {
-      localStorage.setItem('truerate-market-woman-mode', String(enabled))
+      try {
+        localStorage.setItem('truerate-market-woman-mode', String(enabled))
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
     if (enabled && language === 'en') {
       setLanguage('lr-en')
@@ -67,9 +84,5 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 }
 
 export function useLanguage() {
-  const context = useContext(LanguageContext)
-  if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider")
-  }
-  return context
+  return useContext(LanguageContext)
 }

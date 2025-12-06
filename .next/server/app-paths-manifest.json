@@ -1,9 +1,11 @@
 {
   "/api/rates/live/route": "app/api/rates/live/route.js",
+  "/api/rates/predictions/route": "app/api/rates/predictions/route.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/analytics/page": "app/analytics/page.js",
   "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
-  "/converter/page": "app/converter/page.js"
+  "/analytics/page": "app/analytics/page.js",
+  "/predictions/page": "app/predictions/page.js",
+  "/business/page": "app/business/page.js",
+  "/forums/page": "app/forums/page.js",
+  "/community/page": "app/community/page.js"
 }
