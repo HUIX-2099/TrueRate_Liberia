@@ -1,10 +1,13 @@
-import { NextResponse } from "next/server"
+import { NextResponse, type NextRequest } from "next/server"
 import { generateHistoricalData } from "@/lib/api/multi-source-rates"
 import { generateAdvancedPredictions } from "@/lib/api/advanced-prediction"
 
-export async function GET(request: Request) {
+// Mark as dynamic route
+export const dynamic = "force-dynamic"
+
+export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
+    const searchParams = request.nextUrl.searchParams
     const days = Number.parseInt(searchParams.get("days") || "30")
 
     // Generate historical data for ML training
@@ -24,5 +27,3 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Failed to generate predictions" }, { status: 500 })
   }
 }
-
-export const revalidate = 3600 // Revalidate every hour

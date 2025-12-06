@@ -1,4 +1,8 @@
-import { NextResponse } from "next/server"
+import { NextResponse, type NextRequest } from "next/server"
+import { getAggregatedRate } from "@/lib/api/multi-source-rates"
+
+// Mark as dynamic route
+export const dynamic = "force-dynamic"
 
 interface CandleData {
   date: string
@@ -91,17 +95,16 @@ function generatePredictions(lastClose: number, days: number = 7): Prediction[] 
   return predictions
 }
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url)
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams
   const days = parseInt(searchParams.get("days") || "60")
   
-  // Get current rate from live API
-  let currentRate = 192.50 // Default rate
+  // Get current rate directly from aggregator (no self-fetch)
+  let currentRate = 177.0 // Default fallback rate
   try {
-    const liveRes = await fetch(`${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/api/rates/live`)
-    const liveData = await liveRes.json()
-    if (liveData.rate) {
-      currentRate = liveData.rate
+    const rateData = await getAggregatedRate()
+    if (rateData.rate) {
+      currentRate = rateData.rate
     }
   } catch (e) {
     // Use default rate
@@ -154,5 +157,3 @@ export async function GET(request: Request) {
     timestamp: new Date().toISOString(),
   })
 }
-
-export const revalidate = 300 // Revalidate every 5 minutes
