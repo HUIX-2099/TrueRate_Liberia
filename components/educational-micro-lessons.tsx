@@ -47,15 +47,24 @@ export function EducationalMicroLessons() {
   const [currentTip, setCurrentTip] = useState(0)
   const [dismissed, setDismissed] = useState(false)
   const [visited, setVisited] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+    
     // Show popup after 10 seconds on first visit
-    const hasVisited = localStorage.getItem("truerate-tips-shown")
-    if (!hasVisited) {
-      const timer = setTimeout(() => {
-        setVisited(true)
-      }, 10000)
-      return () => clearTimeout(timer)
+    if (typeof window !== 'undefined') {
+      try {
+        const hasVisited = localStorage.getItem("truerate-tips-shown")
+        if (!hasVisited) {
+          const timer = setTimeout(() => {
+            setVisited(true)
+          }, 10000)
+          return () => clearTimeout(timer)
+        }
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
   }, [])
 
@@ -71,14 +80,16 @@ export function EducationalMicroLessons() {
 
   const handleDismiss = () => {
     setDismissed(true)
-    localStorage.setItem("truerate-tips-shown", "true")
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("truerate-tips-shown", "true")
+    }
   }
 
   const handleNext = () => {
     setCurrentTip((prev) => (prev + 1) % tips.length)
   }
 
-  if (!visited || dismissed) return null
+  if (!mounted || !visited || dismissed) return null
 
   const tip = tips[currentTip]
 

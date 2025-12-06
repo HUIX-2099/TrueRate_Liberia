@@ -26,12 +26,20 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined)
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Check for existing session
-    const storedUser = localStorage.getItem("user")
-    if (storedUser) {
-      setUser(JSON.parse(storedUser))
+    setMounted(true)
+    // Check for existing session only on client
+    if (typeof window !== 'undefined') {
+      try {
+        const storedUser = localStorage.getItem("user")
+        if (storedUser) {
+          setUser(JSON.parse(storedUser))
+        }
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
     setLoading(false)
   }, [])
@@ -50,7 +58,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     setUser(mockUser)
-    localStorage.setItem("user", JSON.stringify(mockUser))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("user", JSON.stringify(mockUser))
+    }
   }
 
   const signUp = async (name: string, email: string, password: string) => {
@@ -67,12 +77,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     setUser(mockUser)
-    localStorage.setItem("user", JSON.stringify(mockUser))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("user", JSON.stringify(mockUser))
+    }
   }
 
   const signOut = () => {
     setUser(null)
-    localStorage.removeItem("user")
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem("user")
+    }
+  }
+
+  // Don't render until mounted to avoid hydration mismatch
+  if (!mounted) {
+    return (
+      <AuthContext.Provider value={{ user: null, loading: true, signIn, signUp, signOut }}>
+        {children}
+      </AuthContext.Provider>
+    )
   }
 
   return <AuthContext.Provider value={{ user, loading, signIn, signUp, signOut }}>{children}</AuthContext.Provider>

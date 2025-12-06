@@ -5,10 +5,14 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Volume2, PlayCircle, StopCircle, PhoneCall, Info } from "lucide-react"
+import { Phone, Volume2, PlayCircle, StopCircle, PhoneCall, Info, Settings } from "lucide-react"
 import { useState, useEffect } from "react"
+import { MarketWomanMode } from "@/components/market-woman-mode"
+import { useLanguage } from "@/lib/i18n/language-context"
+import { languages } from "@/lib/i18n/translations"
 
 export default function VoiceAssistantPage() {
+  const { language, setLanguage, isMarketWomanMode, setMarketWomanMode, t } = useLanguage()
   const [currentRate, setCurrentRate] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
   const [playing, setPlaying] = useState(false)
@@ -31,10 +35,13 @@ export default function VoiceAssistantPage() {
   const speakRate = () => {
     if ("speechSynthesis" in window && currentRate) {
       setPlaying(true)
-      const utterance = new SpeechSynthesisUtterance(
-        `Today's exchange rate is 1 U.S. Dollar equals ${currentRate.toFixed(2)} Liberian Dollars.`,
-      )
+      const text = language === 'lr-en'
+        ? `Dollar rate now: ${currentRate.toFixed(0)} LD.`
+        : `Today's exchange rate is 1 U.S. Dollar equals ${currentRate.toFixed(2)} Liberian Dollars.`
+      
+      const utterance = new SpeechSynthesisUtterance(text)
       utterance.lang = "en-US"
+      utterance.rate = language === 'lr-en' ? 0.85 : 1
       utterance.onend = () => setPlaying(false)
       window.speechSynthesis.speak(utterance)
     }
@@ -60,9 +67,14 @@ export default function VoiceAssistantPage() {
                   <Volume2 className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Voice Assistant</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+                {isMarketWomanMode ? t('simple.mode') : 'Voice Assistant'}
+              </h1>
               <p className="text-lg text-muted-foreground text-pretty">
-                Listen to today's exchange rates - perfect for users who prefer audio information
+                {isMarketWomanMode 
+                  ? t('simple.modeDesc') + ' - Perfect for Waterside, Red Light, Duala markets'
+                  : 'Listen to today\'s exchange rates - perfect for users who prefer audio information'
+                }
               </p>
             </div>
           </div>
@@ -70,46 +82,76 @@ export default function VoiceAssistantPage() {
 
         <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              {/* Audio Player */}
-              <Card className="mb-6">
-                <CardContent className="pt-6">
-                  <div className="text-center space-y-6">
-                    <div className="inline-block">
-                      {loading || !currentRate ? (
-                        <div className="text-xl font-semibold">Loading rate...</div>
-                      ) : (
-                        <div>
-                          <div className="text-sm text-muted-foreground mb-2">Current Exchange Rate</div>
-                          <div className="text-5xl font-bold text-primary">1 USD = {currentRate.toFixed(2)} LRD</div>
+            <div className="max-w-4xl mx-auto space-y-6">
+              {/* Mode Toggle */}
+              <Card>
+                <CardContent className="py-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <Settings className="h-5 w-5 text-muted-foreground" />
+                      <div>
+                        <div className="font-semibold">{t('simple.mode')}</div>
+                        <div className="text-sm text-muted-foreground">
+                          Big numbers, voice readout - easy for everyone
                         </div>
-                      )}
+                      </div>
                     </div>
-
-                    <div className="flex justify-center gap-4">
-                      {!playing ? (
-                        <Button size="lg" onClick={speakRate} disabled={loading || !currentRate}>
-                          <PlayCircle className="h-5 w-5 mr-2" />
-                          Play Audio Rate
-                        </Button>
-                      ) : (
-                        <Button size="lg" variant="destructive" onClick={stopSpeaking}>
-                          <StopCircle className="h-5 w-5 mr-2" />
-                          Stop
-                        </Button>
-                      )}
-                    </div>
-
-                    <Badge variant="secondary" className="text-sm">
-                      <Volume2 className="h-3 w-3 mr-1" />
-                      Audio updates every minute
-                    </Badge>
+                    <Button 
+                      variant={isMarketWomanMode ? "default" : "outline"}
+                      onClick={() => setMarketWomanMode(!isMarketWomanMode)}
+                    >
+                      {isMarketWomanMode ? 'ON' : 'OFF'}
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
 
+              {/* Market Woman Mode - Full Screen Rate */}
+              {isMarketWomanMode ? (
+                <MarketWomanMode />
+              ) : (
+                <>
+                  {/* Regular Audio Player */}
+                  <Card className="mb-6">
+                    <CardContent className="pt-6">
+                      <div className="text-center space-y-6">
+                        <div className="inline-block">
+                          {loading || !currentRate ? (
+                            <div className="text-xl font-semibold">Loading rate...</div>
+                          ) : (
+                            <div>
+                              <div className="text-sm text-muted-foreground mb-2">Current Exchange Rate</div>
+                              <div className="text-5xl font-bold text-primary">1 USD = {currentRate.toFixed(2)} LRD</div>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="flex justify-center gap-4">
+                          {!playing ? (
+                            <Button size="lg" onClick={speakRate} disabled={loading || !currentRate}>
+                              <PlayCircle className="h-5 w-5 mr-2" />
+                              Play Audio Rate
+                            </Button>
+                          ) : (
+                            <Button size="lg" variant="destructive" onClick={stopSpeaking}>
+                              <StopCircle className="h-5 w-5 mr-2" />
+                              Stop
+                            </Button>
+                          )}
+                        </div>
+
+                        <Badge variant="secondary" className="text-sm">
+                          <Volume2 className="h-3 w-3 mr-1" />
+                          Audio updates every minute
+                        </Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </>
+              )}
+
               {/* IVR Phone Service */}
-              <Card className="mb-6 border-secondary">
+              <Card className="border-secondary">
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <div className="h-12 w-12 rounded-full bg-secondary/20 flex items-center justify-center">
@@ -158,24 +200,38 @@ export default function VoiceAssistantPage() {
               {/* Language Options */}
               <Card>
                 <CardHeader>
-                  <CardTitle>Available Languages</CardTitle>
-                  <CardDescription>Choose your preferred language for audio rates</CardDescription>
+                  <CardTitle>Select Language</CardTitle>
+                  <CardDescription>Choose your preferred language for the app</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid md:grid-cols-3 gap-3">
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {languages.map((lang) => (
+                      <Button 
+                        key={lang.code} 
+                        variant={language === lang.code ? "default" : "outline"} 
+                        className="justify-start"
+                        onClick={() => setLanguage(lang.code)}
+                      >
+                        <Badge variant="secondary" className="mr-2">
+                          {lang.code.toUpperCase()}
+                        </Badge>
+                        {lang.nativeName}
+                      </Button>
+                    ))}
+                  </div>
+                  <div className="mt-4 grid md:grid-cols-3 gap-3">
                     {[
-                      { name: "English", code: "EN" },
-                      { name: "Kpelle", code: "KP" },
                       { name: "Bassa", code: "BA" },
                       { name: "Gio", code: "GI" },
                       { name: "Mano", code: "MA" },
                       { name: "Kru", code: "KR" },
                     ].map((lang) => (
-                      <Button key={lang.code} variant="outline" className="justify-start bg-transparent">
-                        <Badge variant="secondary" className="mr-2">
+                      <Button key={lang.code} variant="outline" className="justify-start bg-transparent" disabled>
+                        <Badge variant="outline" className="mr-2">
                           {lang.code}
                         </Badge>
                         {lang.name}
+                        <span className="text-xs text-muted-foreground ml-auto">Soon</span>
                       </Button>
                     ))}
                   </div>
@@ -183,15 +239,17 @@ export default function VoiceAssistantPage() {
               </Card>
 
               {/* Info Card */}
-              <Card className="mt-6 bg-accent/10 border-accent/30">
+              <Card className="bg-accent/10 border-accent/30">
                 <CardContent className="pt-6">
                   <div className="flex gap-4">
                     <Info className="h-5 w-5 text-accent-foreground flex-shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-semibold mb-2">For Low-Literacy Users</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        This voice service is designed to help everyone access exchange rate information, regardless of
-                        reading ability. Share this number with family and friends who prefer audio information.
+                        {isMarketWomanMode 
+                          ? 'Market Woman Mode shows one big number with voice. Just tap the screen to hear the rate. Share with your friends at Waterside, Red Light, or Duala markets!'
+                          : 'This voice service is designed to help everyone access exchange rate information, regardless of reading ability. Share this number with family and friends who prefer audio information.'
+                        }
                       </p>
                     </div>
                   </div>

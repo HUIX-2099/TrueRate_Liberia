@@ -1,20 +1,15 @@
 {
   "pages": {
+    "/manifest.webmanifest/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/manifest.webmanifest/route.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/dashboard/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/page.js"
-    ],
-    "/auth/signin/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/auth/signin/page.js"
     ],
     "/converter/page": [
       "static/chunks/webpack.js",
@@ -26,20 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/rates/live/route.js"
     ],
-    "/page": [
+    "/auth/signin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/auth/signin/page.js"
     ],
-    "/map/page": [
+    "/dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/map/page.js"
-    ],
-    "/predictions/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/predictions/page.js"
+      "static/chunks/app/dashboard/page.js"
     ],
     "/analytics/page": [
       "static/chunks/webpack.js",
@@ -51,15 +41,40 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/rates/historical/route.js"
     ],
-    "/manifest.webmanifest/route": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/manifest.webmanifest/route.js"
+      "static/chunks/app/page.js"
     ],
-    "/_not-found/page": [
+    "/community/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/community/page.js"
+    ],
+    "/voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voice/page.js"
+    ],
+    "/business/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/business/page.js"
+    ],
+    "/predictions/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/predictions/page.js"
+    ],
+    "/api/rates/predictions/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/rates/predictions/route.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/about/page.js"
     ]
   }
 }

@@ -7,10 +7,27 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { Users, MapPin, Star, AlertTriangle, Trophy } from "lucide-react"
+import { Users, MapPin, Star, AlertTriangle, Trophy, Gift, Share2 } from "lucide-react"
 import Link from "next/link"
+import { GamificationProfile } from "@/components/gamification"
+import { ReferralProgram } from "@/components/referral-program"
+import { SocialSharing, QuickShareButtons } from "@/components/social-sharing"
+import { useAuth } from "@/lib/auth/auth-context"
+import { useState, useEffect } from "react"
 
 export default function CommunityPage() {
+  const { user } = useAuth()
+  const [currentRate, setCurrentRate] = useState<number>(198.50)
+
+  useEffect(() => {
+    fetch('/api/rates/live')
+      .then(res => res.json())
+      .then(data => {
+        if (data.rate) setCurrentRate(data.rate)
+      })
+      .catch(console.error)
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -31,6 +48,18 @@ export default function CommunityPage() {
               <p className="text-lg text-muted-foreground text-pretty">
                 Join thousands of Liberians helping each other get fair exchange rates, spot fraud, and share knowledge.
               </p>
+              <div className="flex justify-center gap-3 mt-6">
+                <QuickShareButtons rate={currentRate} />
+                <SocialSharing 
+                  data={{ type: 'rate', rate: currentRate, message: 'Check out the current USD rate!' }}
+                  trigger={
+                    <Button variant="outline" className="gap-2">
+                      <Share2 className="h-4 w-4" />
+                      Share Rate
+                    </Button>
+                  }
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -82,10 +111,12 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="reports" className="space-y-6">
-                <TabsList className="grid w-full md:w-auto md:inline-grid grid-cols-3 gap-2">
+                <TabsList className="grid w-full md:w-auto md:inline-grid grid-cols-5 gap-2">
                   <TabsTrigger value="reports">Rate Reports</TabsTrigger>
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>
                   <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
+                  <TabsTrigger value="profile">My Profile</TabsTrigger>
+                  <TabsTrigger value="referral">Referrals</TabsTrigger>
                 </TabsList>
 
                 {/* Rate Reports Tab */}
@@ -105,10 +136,11 @@ export default function CommunityPage() {
 
                   <div className="grid gap-4">
                     {[
-                      { location: "Red Light Market", rate: 184.5, user: "John K.", verified: true, time: "5 min ago" },
-                      { location: "Broad Street", rate: 185.2, user: "Alice M.", verified: true, time: "12 min ago" },
-                      { location: "Sinkor", rate: 183.8, user: "Bob T.", verified: false, time: "25 min ago" },
-                      { location: "Paynesville", rate: 182.5, user: "Mary L.", verified: true, time: "1 hour ago" },
+                      { location: "Red Light Market", rate: 198.5, user: "John K.", verified: true, time: "5 min ago", points: 10 },
+                      { location: "Broad Street", rate: 199.2, user: "Alice M.", verified: true, time: "12 min ago", points: 10 },
+                      { location: "Sinkor", rate: 197.8, user: "Bob T.", verified: false, time: "25 min ago", points: 5 },
+                      { location: "Paynesville", rate: 198.5, user: "Mary L.", verified: true, time: "1 hour ago", points: 10 },
+                      { location: "Duala Market", rate: 199.0, user: "James D.", verified: true, time: "2 hours ago", points: 10 },
                     ].map((report, index) => (
                       <Card key={index}>
                         <CardContent className="p-6">
@@ -130,6 +162,9 @@ export default function CommunityPage() {
                                       Verified
                                     </Badge>
                                   )}
+                                  <Badge variant="outline" className="text-xs">
+                                    +{report.points} pts
+                                  </Badge>
                                 </div>
                                 <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
                                   <MapPin className="h-3 w-3" />
@@ -146,6 +181,18 @@ export default function CommunityPage() {
                               <Button size="sm" variant="ghost">
                                 Flag
                               </Button>
+                              <SocialSharing 
+                                data={{ 
+                                  type: 'rate', 
+                                  rate: report.rate, 
+                                  message: `Rate at ${report.location}` 
+                                }}
+                                trigger={
+                                  <Button size="sm" variant="ghost">
+                                    <Share2 className="h-4 w-4" />
+                                  </Button>
+                                }
+                              />
                             </div>
                           </div>
                         </CardContent>
@@ -170,26 +217,29 @@ export default function CommunityPage() {
                   <div className="grid gap-4">
                     {[
                       {
-                        changer: "First International Bank",
+                        changer: "Duala Money Exchange",
                         rating: 5,
                         user: "Sarah D.",
                         review:
-                          "Excellent service and fair rates. Staff was very professional and the transaction was quick.",
+                          "Excellent service and fair rates. Staff was very professional and the transaction was quick. Best rate I found all day!",
                         time: "2 days ago",
+                        helpful: 24,
                       },
                       {
                         changer: "Liberty Exchange",
                         rating: 4,
                         user: "David W.",
-                        review: "Good rates but can get crowded during peak hours. Overall reliable service.",
+                        review: "Good rates but can get crowded during peak hours. Overall reliable service. They always have cash available.",
                         time: "4 days ago",
+                        helpful: 18,
                       },
                       {
-                        changer: "Quick Cash Bureau",
+                        changer: "Red Light Quick Cash",
                         rating: 3,
                         user: "Grace N.",
-                        review: "Average experience. Rates are okay but you need to negotiate sometimes.",
+                        review: "Average experience. Rates are okay but you need to negotiate sometimes. Be careful and count your money.",
                         time: "1 week ago",
+                        helpful: 12,
                       },
                     ].map((review, index) => (
                       <Card key={index}>
@@ -221,7 +271,12 @@ export default function CommunityPage() {
                                 </div>
                               </div>
                               <p className="text-sm text-muted-foreground leading-relaxed mb-2">{review.review}</p>
-                              <p className="text-xs text-muted-foreground">{review.time}</p>
+                              <div className="flex items-center justify-between">
+                                <p className="text-xs text-muted-foreground">{review.time}</p>
+                                <Button variant="ghost" size="sm" className="text-xs">
+                                  👍 Helpful ({review.helpful})
+                                </Button>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
@@ -308,27 +363,90 @@ export default function CommunityPage() {
                           { rank: 6, name: "Sarah Brown", points: 218, accuracy: 96 },
                           { rank: 7, name: "James Taylor", points: 205, accuracy: 93 },
                           { rank: 8, name: "Emma Davis", points: 192, accuracy: 95 },
-                        ].map((user) => (
-                          <div key={user.rank} className="flex items-center gap-4 p-3 bg-muted/50 rounded-lg">
-                            <div className="text-lg font-bold text-muted-foreground w-8">{user.rank}</div>
+                          { rank: 9, name: "Michael Johnson", points: 178, accuracy: 92 },
+                          { rank: 10, name: "Grace Williams", points: 165, accuracy: 94 },
+                        ].map((u) => (
+                          <div key={u.rank} className="flex items-center gap-4 p-3 bg-muted/50 rounded-lg">
+                            <div className="text-lg font-bold text-muted-foreground w-8">{u.rank}</div>
                             <Avatar>
                               <AvatarFallback>
-                                {user.name
+                                {u.name
                                   .split(" ")
                                   .map((n) => n[0])
                                   .join("")}
                               </AvatarFallback>
                             </Avatar>
                             <div className="flex-1">
-                              <div className="font-semibold">{user.name}</div>
-                              <div className="text-sm text-muted-foreground">{user.accuracy}% accuracy</div>
+                              <div className="font-semibold">{u.name}</div>
+                              <div className="text-sm text-muted-foreground">{u.accuracy}% accuracy</div>
                             </div>
-                            <div className="text-xl font-bold">{user.points}</div>
+                            <div className="text-xl font-bold">{u.points}</div>
                           </div>
                         ))}
                       </div>
                     </CardContent>
                   </Card>
+                </TabsContent>
+
+                {/* Profile Tab - Gamification */}
+                <TabsContent value="profile">
+                  <GamificationProfile />
+                </TabsContent>
+
+                {/* Referral Tab */}
+                <TabsContent value="referral" className="space-y-6">
+                  <div className="grid lg:grid-cols-2 gap-6">
+                    <ReferralProgram />
+                    
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <Gift className="h-5 w-5 text-secondary" />
+                          Referral Rewards
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <div className="p-4 bg-secondary/10 rounded-lg">
+                          <h4 className="font-semibold mb-2">How It Works</h4>
+                          <ol className="text-sm text-muted-foreground space-y-2 list-decimal list-inside">
+                            <li>Share your unique referral code with friends</li>
+                            <li>They sign up using your code</li>
+                            <li>Both you and your friend get 1 month of premium SMS alerts FREE!</li>
+                            <li>No limit on referrals - keep sharing, keep earning!</li>
+                          </ol>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <h4 className="font-semibold">Premium Features You'll Get:</h4>
+                          <ul className="text-sm text-muted-foreground space-y-1">
+                            <li>✅ Daily rate alerts at 8 AM and 4 PM</li>
+                            <li>✅ Instant fraud warnings near you</li>
+                            <li>✅ Rate threshold notifications</li>
+                            <li>✅ Weekly AI prediction summaries</li>
+                          </ul>
+                        </div>
+
+                        <div className="p-4 bg-accent/10 rounded-lg">
+                          <h4 className="font-semibold mb-2">Top Referrers This Month</h4>
+                          <div className="space-y-2">
+                            {[
+                              { name: "Moses K.", referrals: 23 },
+                              { name: "Fatuma D.", referrals: 18 },
+                              { name: "Emmanuel T.", referrals: 15 },
+                            ].map((r, i) => (
+                              <div key={i} className="flex items-center justify-between text-sm">
+                                <span className="flex items-center gap-2">
+                                  <Badge variant="outline">{i + 1}</Badge>
+                                  {r.name}
+                                </span>
+                                <span className="font-semibold">{r.referrals} referrals</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </TabsContent>
               </Tabs>
             </div>

@@ -1,12 +1,8 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { AuthProvider } from "@/lib/auth/auth-context"
-import { Toaster } from "@/components/ui/toaster"
-import { DevDisclaimer } from "@/components/dev-disclaimer"
-import { EducationalMicroLessons } from "@/components/educational-micro-lessons"
-import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register"
+import { Providers } from "@/components/providers"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -18,7 +14,6 @@ export const metadata: Metadata = {
     "The most accurate USD to LRD exchange rates in Liberia. Real-time data from 100+ sources, AI-powered predictions, verified money changers, and market analysis. Built by HUIX-2099.",
   generator: "v0.app",
   manifest: "/manifest.webmanifest",
-  themeColor: "#16A34A",
   icons: {
     icon: [
       {
@@ -38,21 +33,26 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#16A34A" },
+    { media: "(prefers-color-scheme: dark)", color: "#22c55e" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
-        <AuthProvider>
-          <DevDisclaimer />
-          <ServiceWorkerRegister />
+        <Providers>
           {children}
-          <EducationalMicroLessons />
-          <Toaster />
-        </AuthProvider>
+        </Providers>
         <Analytics />
       </body>
     </html>

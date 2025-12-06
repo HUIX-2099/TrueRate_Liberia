@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useAuth } from "@/lib/auth/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { LiveUpdateIndicator } from "@/components/live-update-indicator"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Header() {
   const { user } = useAuth()
@@ -48,32 +49,29 @@ export function Header() {
             Predictions
           </Link>
           <Link
-            href="/tools"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Tools
-          </Link>
-          <Link
-            href="/voice"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Voice
-          </Link>
-          <Link
             href="/business"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Business
           </Link>
           <Link
-            href="/docs"
+            href="/forums"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Docs
+            Forums
+          </Link>
+          <Link
+            href="/community"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Community
           </Link>
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* Theme Toggle */}
+          <ThemeToggle />
+          
           <Button variant="ghost" size="icon" className="hidden md:flex">
             <Bell className="h-5 w-5" />
             <span className="sr-only">Notifications</span>
@@ -116,32 +114,34 @@ export function Header() {
                   Analytics
                 </Link>
                 <Link href="/predictions" className="text-lg font-medium hover:text-primary transition-colors">
-                  Predictions
-                </Link>
-                <Link href="/tools" className="text-lg font-medium hover:text-primary transition-colors">
-                  Tools
-                </Link>
-                <Link href="/voice" className="text-lg font-medium hover:text-primary transition-colors">
-                  Voice Assistant
+                  AI Predictions
                 </Link>
                 <Link href="/business" className="text-lg font-medium hover:text-primary transition-colors">
-                  Business
+                  Business Tools
                 </Link>
-                <Link href="/map" className="text-lg font-medium hover:text-primary transition-colors">
-                  Map
+                <Link href="/voice" className="text-lg font-medium hover:text-primary transition-colors">
+                  Market Woman Mode
                 </Link>
-                <Link href="/docs" className="text-lg font-medium hover:text-primary transition-colors">
-                  Data Sources
+                <Link href="/forums" className="text-lg font-medium hover:text-primary transition-colors">
+                  Forums
                 </Link>
                 <Link href="/community" className="text-lg font-medium hover:text-primary transition-colors">
                   Community
+                </Link>
+                <Link href="/map" className="text-lg font-medium hover:text-primary transition-colors">
+                  Find Changers
+                </Link>
+                <Link href="/report-fraud" className="text-lg font-medium hover:text-primary transition-colors text-destructive">
+                  Report Fraud
                 </Link>
                 {user ? (
                   <Link href="/dashboard">
                     <Button className="mt-4 w-full">Dashboard</Button>
                   </Link>
                 ) : (
-                  <Button className="mt-4">Get Started</Button>
+                  <Link href="/auth/signin">
+                    <Button className="mt-4 w-full">Get Started</Button>
+                  </Link>
                 )}
               </nav>
             </SheetContent>

@@ -7,20 +7,30 @@ import { Card } from "@/components/ui/card"
 
 export function DevDisclaimer() {
   const [isVisible, setIsVisible] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const hasSeenDisclaimer = localStorage.getItem("truerate-disclaimer-seen")
-    if (!hasSeenDisclaimer) {
-      setIsVisible(true)
+    setMounted(true)
+    if (typeof window !== 'undefined') {
+      try {
+        const hasSeenDisclaimer = localStorage.getItem("truerate-disclaimer-seen")
+        if (!hasSeenDisclaimer) {
+          setIsVisible(true)
+        }
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
   }, [])
 
   const handleClose = () => {
-    localStorage.setItem("truerate-disclaimer-seen", "true")
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("truerate-disclaimer-seen", "true")
+    }
     setIsVisible(false)
   }
 
-  if (!isVisible) return null
+  if (!mounted || !isVisible) return null
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-4">
