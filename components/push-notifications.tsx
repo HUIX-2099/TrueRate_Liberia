@@ -23,6 +23,7 @@ interface AlertPreference {
 
 export function PushNotifications() {
   const { user } = useAuth()
+  const [mounted, setMounted] = useState(false)
   const [pushSupported, setPushSupported] = useState(false)
   const [pushEnabled, setPushEnabled] = useState(false)
   const [phone, setPhone] = useState('')
@@ -65,8 +66,9 @@ export function PushNotifications() {
   ])
 
   useEffect(() => {
-    // Check if push notifications are supported
-    if ('Notification' in window && 'serviceWorker' in navigator) {
+    setMounted(true)
+    // Check if push notifications are supported - only on client
+    if (typeof window !== 'undefined' && 'Notification' in window && 'serviceWorker' in navigator) {
       setPushSupported(true)
       setPushEnabled(Notification.permission === 'granted')
     }
@@ -306,6 +308,9 @@ export function PushNotifications() {
     </Card>
   )
 }
+
+
+
 
 
 

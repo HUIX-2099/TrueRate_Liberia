@@ -9,6 +9,7 @@ import { DevDisclaimer } from "@/components/dev-disclaimer"
 import { EducationalMicroLessons } from "@/components/educational-micro-lessons"
 import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register"
 import { ErrorBoundary } from "@/components/error-boundary"
+import { StructuredData } from "@/components/structured-data"
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
@@ -21,6 +22,7 @@ export function Providers({ children }: { children: ReactNode }) {
       >
         <AuthProvider>
           <LanguageProvider>
+            <StructuredData />
             <DevDisclaimer />
             <ServiceWorkerRegister />
             {children}
