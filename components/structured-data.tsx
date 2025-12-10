@@ -209,3 +209,5 @@ export function StructuredData({ currentRate = 198.5 }: StructuredDataProps) {
   )
 }
 
+
+
