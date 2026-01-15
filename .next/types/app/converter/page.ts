@@ -1,4 +1,4 @@
-// File: C:\Users\colem\OneDrive\Documents\GitHub\TrueRate_Liberia\app\converter\page.tsx
+// File: /Users/julian/Documents/GitHub/TrueRate_Liberia/app/converter/page.tsx
 import * as entry from '../../../../app/converter/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,4 +1,4 @@
-// File: C:\Users\colem\OneDrive\Documents\GitHub\TrueRate_Liberia\app\api\rates\live\route.ts
+// File: /Users/julian/Documents/GitHub/TrueRate_Liberia/app/api/rates/live/route.ts
 import * as entry from '../../../../../../app/api/rates/live/route.js'
 import type { NextRequest } from 'next/server.js'
 

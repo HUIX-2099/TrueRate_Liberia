@@ -26,11 +26,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/rates/live/route.js"
     ],
-    "/manifest.webmanifest/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/manifest.webmanifest/route.js"
-    ],
     "/converter/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -46,10 +41,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/predictions/page.js"
     ],
-    "/_not-found/page": [
+    "/privacy/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/privacy/page.js"
+    ],
+    "/manifest.webmanifest/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/manifest.webmanifest/route.js"
     ]
   }
 }
