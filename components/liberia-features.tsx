@@ -44,19 +44,20 @@ interface NewsItem {
   time: string
   impact: "positive" | "negative" | "neutral"
   summary: string
+  url: string
 }
 
 // Market Price Index
 export function PriceIndex({ rate }: { rate: number }) {
   const prices: PriceItem[] = [
-    { name: "25kg Rice (Thai)", icon: <Wheat className="h-4 w-4" />, priceUSD: 28, priceLRD: 28 * rate, change: 2.5, category: "food" },
-    { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 22, priceLRD: 22 * rate, change: 1.8, category: "food" },
-    { name: "Gallon of Gas", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.50, priceLRD: 4.50 * rate, change: -0.5, category: "fuel" },
-    { name: "Gallon of Diesel", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.80, priceLRD: 4.80 * rate, change: 0.3, category: "fuel" },
-    { name: "Cement (50kg)", icon: <Building className="h-4 w-4" />, priceUSD: 12, priceLRD: 12 * rate, change: 1.2, category: "construction" },
-    { name: "Steel Rods (bundle)", icon: <Building className="h-4 w-4" />, priceUSD: 85, priceLRD: 85 * rate, change: 3.5, category: "construction" },
-    { name: "Palm Oil (gallon)", icon: <ShoppingCart className="h-4 w-4" />, priceUSD: 8, priceLRD: 8 * rate, change: -1.0, category: "food" },
-    { name: "Cooking Gas (14kg)", icon: <Fuel className="h-4 w-4" />, priceUSD: 18, priceLRD: 18 * rate, change: 0, category: "fuel" },
+    { name: "25kg Rice (Thai)", icon: <Wheat className="h-4 w-4" />, priceUSD: 14, priceLRD: 14 * rate, change: 2.5, category: "food" },
+    { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 15, priceLRD: 15 * rate, change: 1.8, category: "food" },
+    { name: "Gallon of Gas", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.02, priceLRD: 4.02 * rate, change: -0.5, category: "fuel" },
+    { name: "Gallon of Diesel", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.33, priceLRD: 4.33 * rate, change: 0.3, category: "fuel" },
+    { name: "Cement (50kg)", icon: <Building className="h-4 w-4" />, priceUSD: 8, priceLRD: 8 * rate, change: 1.2, category: "construction" },
+    { name: "Steel Rods (bundle)", icon: <Building className="h-4 w-4" />, priceUSD: 400, priceLRD: 400 * rate, change: 3.5, category: "construction" },
+    { name: "Palm Oil (gallon)", icon: <ShoppingCart className="h-4 w-4" />, priceUSD: 1000 / rate, priceLRD: 1000, change: -1.0, category: "food" },
+    { name: "Cooking Gas (14kg)", icon: <Fuel className="h-4 w-4" />, priceUSD: 20, priceLRD: 20 * rate, change: 0, category: "fuel" },
   ]
 
   const [filter, setFilter] = useState("all")
@@ -280,8 +281,7 @@ export function SMSAlertSignup() {
   )
 }
 
-// Market News Feed
-export function MarketNews() {
+  // Market News Feed
   const news: NewsItem[] = [
     {
       title: "CBL Announces New Foreign Exchange Measures",
@@ -289,6 +289,7 @@ export function MarketNews() {
       time: "2 hours ago",
       impact: "neutral",
       summary: "The Central Bank of Liberia has announced new measures to stabilize the foreign exchange market...",
+      url: "https://frontpageafricaonline.com/",
     },
     {
       title: "Remittance Inflows Increase 12% in Q4",
@@ -296,6 +297,7 @@ export function MarketNews() {
       time: "5 hours ago",
       impact: "positive",
       summary: "Diaspora remittances to Liberia have increased by 12% compared to the previous quarter...",
+      url: "https://www.liberianobserver.com/",
     },
     {
       title: "Rubber Export Season Begins",
@@ -303,6 +305,7 @@ export function MarketNews() {
       time: "1 day ago",
       impact: "positive",
       summary: "The rubber export season has officially begun, expected to bring in significant foreign currency...",
+      url: "https://thenewdawnliberia.com/",
     },
     {
       title: "Fuel Prices May Rise Next Month",
@@ -310,8 +313,33 @@ export function MarketNews() {
       time: "1 day ago",
       impact: "negative",
       summary: "LPRC warns that global oil prices may lead to fuel price increases in Liberia...",
+      url: "https://inquirernewspaper.com/",
     },
   ]
+
+export function MarketNews() {
+  const [items, setItems] = useState<NewsItem[]>(news)
+
+  useEffect(() => {
+    let isMounted = true
+    const loadNews = async () => {
+      try {
+        const res = await fetch("/api/news", { cache: "no-store" })
+        if (!res.ok) return
+        const data = await res.json()
+        if (isMounted && Array.isArray(data?.items) && data.items.length) {
+          setItems(data.items)
+        }
+      } catch {
+        // Keep fallback content
+      }
+    }
+
+    loadNews()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   return (
     <Card>
@@ -324,14 +352,21 @@ export function MarketNews() {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {news.map((item, i) => (
-            <div key={i} className="flex gap-3 pb-4 border-b last:border-0 last:pb-0">
+          {items.map((item, i) => (
+            <a
+              key={i}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-3 pb-4 border-b last:border-0 last:pb-0 group"
+              aria-label={`Read: ${item.title}`}
+            >
               <div className={`h-2 w-2 rounded-full mt-2 flex-shrink-0 ${
                 item.impact === "positive" ? "bg-green-500" :
                 item.impact === "negative" ? "bg-red-500" : "bg-yellow-500"
               }`} />
               <div className="flex-1 min-w-0">
-                <h4 className="font-medium text-sm leading-tight mb-1">{item.title}</h4>
+                <h4 className="font-medium text-sm leading-tight mb-1 group-hover:underline">{item.title}</h4>
                 <p className="text-xs text-muted-foreground line-clamp-2 mb-2">{item.summary}</p>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <span>{item.source}</span>
@@ -342,11 +377,17 @@ export function MarketNews() {
                   </span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
-        <Button variant="ghost" className="w-full mt-4 text-sm">
-          View All News <ArrowRight className="h-4 w-4 ml-1" />
+        <Button variant="ghost" className="w-full mt-4 text-sm" asChild>
+          <a
+            href="https://news.google.com/search?q=Liberia%20exchange%20rate"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View All News <ArrowRight className="h-4 w-4 ml-1" />
+          </a>
         </Button>
       </CardContent>
     </Card>

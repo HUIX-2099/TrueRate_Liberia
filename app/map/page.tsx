@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Suspense, useEffect, useState } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Environment, PerspectiveCamera, Html } from "@react-three/drei"
@@ -18,6 +19,9 @@ interface LocationRate {
   trend: string
   verified: boolean
 }
+
+const getGoogleMapsUrl = (location: LocationRate) =>
+  `https://maps.google.com/?q=${encodeURIComponent(`${location.name} ${location.county} Liberia money changer`)}`
 
 function RateMarker({ location }: { location: LocationRate }) {
   const [hovered, setHovered] = useState(false)
@@ -211,6 +215,15 @@ export default function MapPage() {
                       <CardTitle className="text-2xl">Live Rate Map</CardTitle>
                       <CardDescription>Drag to rotate • Scroll to zoom • Click markers for details</CardDescription>
                     </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://maps.google.com/?q=money%20changer%20Liberia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open in Google Maps
+                      </a>
+                    </Button>
                     <div className="flex items-center gap-2">
                       <div className="flex items-center gap-2">
                         <div className="h-3 w-3 rounded-full bg-secondary" />
@@ -285,6 +298,14 @@ export default function MapPage() {
                           {location.trend === "up" ? "Rising" : "Falling"}
                         </span>
                       </div>
+                      <a
+                        href={getGoogleMapsUrl(location)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex text-xs text-primary hover:underline"
+                      >
+                        View on Google Maps
+                      </a>
                     </CardContent>
                   </Card>
                 ))}
