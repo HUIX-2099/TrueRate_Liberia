@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+/* Use Tailwind's plugin directive to avoid extra CSS loaders. */
+@plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 

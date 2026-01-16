@@ -1,0 +1,261 @@
+import Link from "next/link"
+
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { AlertTriangle, FileText, Globe, Shield, Users } from "lucide-react"
+
+export default function TermsPage() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <Badge className="mb-4">Terms & Conditions</Badge>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+                Terms of Service for TrueRate-Liberia
+              </h1>
+              <p className="text-xl text-muted-foreground text-pretty">
+                These Terms govern your use of the website, tools, community features, and services provided by
+                TrueRate-Liberia.
+              </p>
+              <p className="text-sm text-muted-foreground mt-4">Last updated: Jan 15, 2026</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Summary */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-2">
+                    <FileText className="h-6 w-6 text-primary" />
+                    <CardTitle className="text-2xl">Key Points</CardTitle>
+                  </div>
+                  <CardDescription>Highlights of the most important terms.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="space-y-2">
+                      <Shield className="h-7 w-7 text-primary" />
+                      <p className="font-semibold">Use responsibly</p>
+                      <p className="text-sm text-muted-foreground">
+                        Do not misuse data, try to disrupt services, or attempt to manipulate rate reporting.
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <Users className="h-7 w-7 text-primary" />
+                      <p className="font-semibold">Community standards</p>
+                      <p className="text-sm text-muted-foreground">
+                        Be respectful and submit truthful reports to keep the platform reliable for everyone.
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <AlertTriangle className="h-7 w-7 text-primary" />
+                      <p className="font-semibold">No guarantees</p>
+                      <p className="text-sm text-muted-foreground">
+                        Rates are informational; always confirm with financial institutions before transactions.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Eligibility */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Eligibility & Account Responsibility</CardTitle>
+                  <CardDescription>You are responsible for your account activity.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    By using TrueRate-Liberia you confirm you are at least 13 years old and able to enter into these
+                    Terms. You are responsible for safeguarding your account credentials and for any activity on your
+                    account.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Service Availability</CardTitle>
+                  <CardDescription>We aim for reliability, but outages can happen.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We may update, suspend, or discontinue parts of the service at any time. We will make reasonable
+                    efforts to notify users about major changes that impact availability.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Acceptable Use */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-balance">Acceptable Use</h2>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="space-y-4 text-muted-foreground">
+                    <p>
+                      You agree to use TrueRate-Liberia only for lawful purposes and in ways that do not harm the
+                      platform, community members, or data integrity.
+                    </p>
+                    <ul className="space-y-2">
+                      <li>Do not submit false or misleading rate reports.</li>
+                      <li>Do not attempt to access or disrupt systems or user data.</li>
+                      <li>Do not scrape or republish data without written permission.</li>
+                      <li>Do not use the platform for fraud, harassment, or unlawful activity.</li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Rates Disclaimer */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Rate Accuracy Disclaimer</CardTitle>
+                  <CardDescription>Rates are informative, not financial advice.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We aggregate and estimate exchange rates from multiple sources, including community submissions.
+                    Rates can change rapidly and may differ at point of transaction. Always verify rates directly with
+                    financial providers.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Third-Party Links</CardTitle>
+                  <CardDescription>External services are outside our control.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The platform may link to third-party sites or tools. TrueRate-Liberia is not responsible for their
+                    content, security, or business practices.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Intellectual Property */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-balance">Intellectual Property</h2>
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-muted-foreground leading-relaxed">
+                    TrueRate-Liberia and its content, branding, and software are protected by intellectual property
+                    laws. You may not copy, modify, or distribute our materials without written permission.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Privacy */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Privacy & Data Protection</CardTitle>
+                  </div>
+                  <CardDescription>Your privacy is a core commitment.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Your use of TrueRate-Liberia is also governed by our Privacy Policy. Please review it to understand
+                    how we collect, use, and protect your data.
+                  </p>
+                  <Button asChild variant="outline" className="mt-4">
+                    <Link href="/privacy">Read Privacy Policy</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-2">
+                    <Globe className="h-6 w-6 text-primary" />
+                    <CardTitle>Regional Compliance</CardTitle>
+                  </div>
+                  <CardContent>
+                    <p className="text-muted-foreground leading-relaxed">
+                      We aim to comply with applicable laws in Liberia and other regions where users access our
+                      services. If local regulations require additional rights, we will honor them where feasible.
+                    </p>
+                  </CardContent>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Termination */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Account Termination</h2>
+              <p className="text-lg text-muted-foreground mb-10 text-pretty">
+                We may suspend or terminate accounts that violate these Terms, harm community trust, or pose security
+                risks. You can also close your account at any time by contacting support.
+              </p>
+              <Button asChild size="lg">
+                <Link href="/contact">Contact Support</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Changes */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Changes to These Terms</CardTitle>
+                  <CardDescription>We may update terms as we evolve.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We will notify users of material changes through the platform or via email. Continued use after an
+                    update means you accept the revised Terms.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  )
+}

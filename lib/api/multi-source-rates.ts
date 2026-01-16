@@ -23,13 +23,6 @@ export const RATE_SOURCES: RateSource[] = [
     parser: (data) => data?.rates?.LRD || null,
     weight: 1.0,
   },
-  // ExchangeRate-API v6 Pair endpoint (authenticated)
-  {
-    name: "ExchangeRate-API v6 Pair",
-    url: `https://v6.exchangerate-api.com/v6/${EXCHANGE_RATE_API_KEY}/pair/USD/LRD`,
-    parser: (data) => data?.conversion_rate || null,
-    weight: 1.2,
-  },
   // Exchange Rate API - Free
   {
     name: "ExchangeRate API",
@@ -38,6 +31,16 @@ export const RATE_SOURCES: RateSource[] = [
     weight: 0.9,
   },
 ]
+
+if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
+  // Only add the authenticated source when a real key is configured.
+  RATE_SOURCES.unshift({
+    name: "ExchangeRate-API v6 Pair",
+    url: `https://v6.exchangerate-api.com/v6/${EXCHANGE_RATE_API_KEY}/pair/USD/LRD`,
+    parser: (data) => data?.conversion_rate || null,
+    weight: 1.2,
+  })
+}
 
 async function fetchFromSource(source: RateSource): Promise<{ rate: number; source: string } | null> {
   try {
@@ -71,7 +74,9 @@ export async function getAggregatedRate(): Promise<{
   sources: string[]
   timestamp: string
 }> {
-  // If a real API key is present, prefer the authenticated ExchangeRate-API as the single source of truth
+  let sources = RATE_SOURCES
+
+  // If a real API key is present, try the authenticated source once before fallback aggregation.
   if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
     const preferred = RATE_SOURCES.find((s) => s.name === "ExchangeRate-API v6 Pair")
     if (preferred) {
@@ -84,10 +89,11 @@ export async function getAggregatedRate(): Promise<{
           timestamp: new Date().toISOString(),
         }
       }
+      sources = RATE_SOURCES.filter((s) => s !== preferred)
     }
   }
 
-  const results = await Promise.allSettled(RATE_SOURCES.map((source) => fetchFromSource(source)))
+  const results = await Promise.allSettled(sources.map((source) => fetchFromSource(source)))
 
   const validResults = results
     .filter(
