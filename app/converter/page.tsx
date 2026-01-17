@@ -125,6 +125,15 @@ export default function ConverterPage() {
 
   const fromC = currencies.find(c => c.code === fromCurrency)!
   const toC = currencies.find(c => c.code === toCurrency)!
+  const remittanceAmount = Math.max(parseFloat(amount) || 0, 0)
+
+  const formatUsd = (value: number) => {
+    const rounded = Math.round(value * 100) / 100
+    const hasCents = Math.abs(rounded % 1) > 0
+    return hasCents ? `$${rounded.toFixed(2)}` : `$${rounded.toFixed(0)}`
+  }
+
+  const sendwaveFee = "$3.99"
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -436,22 +445,22 @@ export default function ConverterPage() {
               <TabsContent value="remittance" className="space-y-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {[
-                    { name: "Western Union", fee: "$5", rate: liveRate - 3, time: "Minutes", logoUrl: "/logos/hd-western-union-logo-png-701751694777732wzy9ojcsto.png" },
+                    { name: "Western Union", fee: "$5", rate: liveRate - 3, time: "Minutes", logoUrl: "/logos/unnamed.png" },
                     { name: "MoneyGram", fee: "$4.99", rate: liveRate - 2.5, time: "Minutes", logoUrl: "/logos/png-clipart-moneygram-international-inc-logo-money-transfer-western-union-international-tourism-text-trademark.png" },
-                    { name: "World Remit", fee: "$3.99", rate: liveRate - 1.5, time: "Same Day", logoUrl: "/logos/worldremit-logo-115507212138ffhctbdfv.png" },
-                    { name: "Orange Money", fee: "2%", rate: liveRate, time: "Instant", logoUrl: "/logos/7075-orange-mobile-logo.png" },
+                    { name: "Sendwave", fee: sendwaveFee, rate: liveRate - 1.5, time: "Same Day", logoUrl: "/logos/images.jpeg" },
+                    { name: "Orange Money", fee: "2%", rate: liveRate, time: "Instant", logoUrl: "/logos/orangemoney.png" },
                     { name: "MTN Mobile Money", fee: "1.5%", rate: liveRate, time: "Instant", logoUrl: "/logos/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png" },
                     { name: "Bank Transfer", fee: "$15-25", rate: liveRate + 0.5, time: "1-3 Days", logoUrl: null },
                   ].map((service) => (
                     <Card key={service.name} className="hover:shadow-lg transition-all">
                       <CardContent className="p-4">
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="h-16 w-16 rounded-lg bg-muted flex items-center justify-center">
+                          <div className="h-16 w-16 rounded-lg bg-muted flex items-center justify-center overflow-hidden">
                             {service.logoUrl ? (
                               <img
                                 src={service.logoUrl}
                                 alt={`${service.name} logo`}
-                                className="h-12 w-12 object-contain"
+                                className="h-full w-full object-contain p-2"
                                 loading="lazy"
                                 referrerPolicy="no-referrer"
                                 crossOrigin="anonymous"
@@ -480,7 +489,8 @@ export default function ConverterPage() {
                           </div>
                         </div>
                         <div className="mt-3 p-2 rounded bg-muted text-xs">
-                          $100 → <strong>{(100 * service.rate).toLocaleString()} LRD</strong>
+                          {formatUsd(remittanceAmount)} →{" "}
+                          <strong>{(remittanceAmount * service.rate).toLocaleString()} LRD</strong>
                         </div>
                       </CardContent>
                     </Card>
