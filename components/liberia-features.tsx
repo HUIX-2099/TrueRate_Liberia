@@ -352,7 +352,7 @@ export function MarketNews() {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {items.map((item, i) => (
+          {items.slice(0, 5).map((item, i) => (
             <a
               key={i}
               href={item.url}
@@ -366,11 +366,13 @@ export function MarketNews() {
                 item.impact === "negative" ? "bg-red-500" : "bg-yellow-500"
               }`} />
               <div className="flex-1 min-w-0">
-                <h4 className="font-medium text-sm leading-tight mb-1 group-hover:underline">{item.title}</h4>
-                <p className="text-xs text-muted-foreground line-clamp-2 mb-2">{item.summary}</p>
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <span>{item.source}</span>
-                  <span>•</span>
+                <h4 className="text-base font-medium leading-snug text-foreground group-hover:text-primary transition-colors">
+                  {item.title}
+                </h4>
+                <p className="text-xs text-muted-foreground line-clamp-2 mt-1">{item.summary}</p>
+                <div className="flex items-center gap-2 text-[11px] text-muted-foreground mt-2">
+                  <span className="uppercase tracking-wide">{item.source}</span>
+                  <span className="h-1 w-1 rounded-full bg-muted-foreground/60" />
                   <span className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
                     {item.time}

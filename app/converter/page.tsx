@@ -436,18 +436,27 @@ export default function ConverterPage() {
               <TabsContent value="remittance" className="space-y-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {[
-                    { name: "Western Union", fee: "$5", rate: liveRate - 3, time: "Minutes" },
-                    { name: "MoneyGram", fee: "$4.99", rate: liveRate - 2.5, time: "Minutes" },
-                    { name: "World Remit", fee: "$3.99", rate: liveRate - 1.5, time: "Same Day" },
-                    { name: "Orange Money", fee: "2%", rate: liveRate, time: "Instant" },
-                    { name: "MTN Mobile Money", fee: "1.5%", rate: liveRate, time: "Instant" },
-                    { name: "Bank Transfer", fee: "$15-25", rate: liveRate + 0.5, time: "1-3 Days" },
+                    { name: "Western Union", fee: "$5", rate: liveRate - 3, time: "Minutes", logoUrl: "/logos/hd-western-union-logo-png-701751694777732wzy9ojcsto.png" },
+                    { name: "MoneyGram", fee: "$4.99", rate: liveRate - 2.5, time: "Minutes", logoUrl: "/logos/png-clipart-moneygram-international-inc-logo-money-transfer-western-union-international-tourism-text-trademark.png" },
+                    { name: "World Remit", fee: "$3.99", rate: liveRate - 1.5, time: "Same Day", logoUrl: "/logos/worldremit-logo-115507212138ffhctbdfv.png" },
+                    { name: "Orange Money", fee: "2%", rate: liveRate, time: "Instant", logoUrl: "/logos/7075-orange-mobile-logo.png" },
+                    { name: "MTN Mobile Money", fee: "1.5%", rate: liveRate, time: "Instant", logoUrl: "/logos/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png" },
+                    { name: "Bank Transfer", fee: "$15-25", rate: liveRate + 0.5, time: "1-3 Days", logoUrl: null },
                   ].map((service) => (
                     <Card key={service.name} className="hover:shadow-lg transition-all">
                       <CardContent className="p-4">
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center">
-                            {service.name.includes("Mobile") || service.name.includes("Orange") || service.name.includes("MTN") ? (
+                          <div className="h-16 w-16 rounded-lg bg-muted flex items-center justify-center">
+                            {service.logoUrl ? (
+                              <img
+                                src={service.logoUrl}
+                                alt={`${service.name} logo`}
+                                className="h-12 w-12 object-contain"
+                                loading="lazy"
+                                referrerPolicy="no-referrer"
+                                crossOrigin="anonymous"
+                              />
+                            ) : service.name.includes("Mobile") || service.name.includes("Orange") || service.name.includes("MTN") ? (
                               <Smartphone className="h-5 w-5" />
                             ) : service.name.includes("Bank") ? (
                               <Building2 className="h-5 w-5" />
