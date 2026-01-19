@@ -9,12 +9,13 @@ import { useAuth } from "@/lib/auth/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { LiveUpdateIndicator } from "@/components/live-update-indicator"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { useState } from "react"
 
 export function Header() {
   const { user } = useAuth()
   const router = useRouter()
+  const pathname = usePathname()
   const [searchTerm, setSearchTerm] = useState("")
 
   const handleSearch = (event: React.FormEvent) => {
@@ -27,13 +28,15 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4 gap-3">
+        <div className="container mx-auto flex h-14 md:h-16 items-center justify-between px-4 gap-3">
           <Link href="/" className="flex items-center gap-2 min-w-0" aria-label="TrueRate Liberia home">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
               <span className="text-lg font-bold text-primary-foreground">TR</span>
             </div>
             <div className="flex flex-col min-w-0">
-              <span className="text-lg font-bold text-foreground leading-none truncate">TrueRate Liberia</span>
+              <span className="text-base sm:text-lg font-bold text-foreground leading-none truncate">
+                TrueRate Liberia
+              </span>
               <span className="text-[10px] text-muted-foreground leading-none hidden sm:block">by HUIX-2099</span>
             </div>
           </Link>
@@ -43,7 +46,7 @@ export function Header() {
           </div>
 
           <form
-            className="hidden md:flex flex-1 max-w-md items-center gap-2"
+            className="hidden lg:flex flex-1 max-w-xs items-center gap-2 ml-5"
             role="search"
             aria-label="Search rates or items"
             onSubmit={handleSearch}
@@ -55,13 +58,19 @@ export function Header() {
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
                 placeholder="Search rates or items..."
-                className="pl-9 h-10 bg-background/80"
+                className="pl-9 h-9 bg-background/80 text-sm"
                 aria-label="Search rates or items"
               />
             </div>
           </form>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
+            <Link
+              href="/rates"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Rates
+            </Link>
             <Link
               href="/converter"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -151,6 +160,9 @@ export function Header() {
                     <Link href="/" className="text-lg font-medium hover:text-primary transition-colors">
                       Home
                     </Link>
+                    <Link href="/rates" className="text-lg font-medium hover:text-primary transition-colors">
+                      Rates
+                    </Link>
                     <Link href="/converter" className="text-lg font-medium hover:text-primary transition-colors">
                       Converter
                     </Link>
@@ -184,20 +196,48 @@ export function Header() {
         className="fixed bottom-0 left-0 right-0 z-40 border-t border-border/60 bg-background/90 backdrop-blur md:hidden"
         aria-label="Primary"
       >
-        <div className="mx-auto grid grid-cols-4 gap-1 px-2 pt-2 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] text-xs">
-          <Link href="/converter" className="flex flex-col items-center gap-1 py-2 text-muted-foreground hover:text-foreground">
+        <div className="mx-auto grid grid-cols-4 gap-1 px-2 pt-2 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] text-[11px]">
+          <Link
+            href="/rates"
+            aria-label="Rates"
+            aria-current={pathname === "/rates" ? "page" : undefined}
+            className={`flex flex-col items-center gap-1 rounded-md py-2 min-h-[44px] transition-colors ${
+              pathname === "/rates" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
             <TrendingUp className="h-5 w-5" />
             Rates
           </Link>
-          <Link href="/converter" className="flex flex-col items-center gap-1 py-2 text-muted-foreground hover:text-foreground">
+          <Link
+            href="/converter"
+            aria-label="Converter"
+            aria-current={pathname === "/converter" ? "page" : undefined}
+            className={`flex flex-col items-center gap-1 rounded-md py-2 min-h-[44px] transition-colors ${
+              pathname === "/converter" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
             <Calculator className="h-5 w-5" />
             Converter
           </Link>
-          <Link href="/map" className="flex flex-col items-center gap-1 py-2 text-muted-foreground hover:text-foreground">
+          <Link
+            href="/map"
+            aria-label="Map"
+            aria-current={pathname === "/map" ? "page" : undefined}
+            className={`flex flex-col items-center gap-1 rounded-md py-2 min-h-[44px] transition-colors ${
+              pathname === "/map" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
             <MapPin className="h-5 w-5" />
             Map
           </Link>
-          <Link href="/tools" className="flex flex-col items-center gap-1 py-2 text-muted-foreground hover:text-foreground">
+          <Link
+            href="/tools"
+            aria-label="Alerts"
+            aria-current={pathname === "/tools" ? "page" : undefined}
+            className={`flex flex-col items-center gap-1 rounded-md py-2 min-h-[44px] transition-colors ${
+              pathname === "/tools" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
             <Bell className="h-5 w-5" />
             Alerts
           </Link>

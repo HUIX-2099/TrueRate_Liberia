@@ -525,6 +525,57 @@ export default function ConverterPage() {
           </div>
         </section>
 
+        {/* Rate Highlights */}
+        <section className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8">
+            <div className="max-w-4xl mx-auto text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Rate Highlights</h2>
+              <p className="text-muted-foreground">
+                Quick context around today’s USD/LRD market activity.
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Live USD/LRD</CardTitle>
+                  <CardDescription>Updated {lastUpdate || "just now"}</CardDescription>
+                </CardHeader>
+                <CardContent className="text-2xl font-bold text-primary">
+                  {liveRate.toFixed(2)} LRD
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Today’s Change</CardTitle>
+                  <CardDescription>Intraday movement</CardDescription>
+                </CardHeader>
+                <CardContent className="flex items-center gap-2 text-sm font-medium">
+                  {dayChange > 0 ? (
+                    <TrendingUp className="h-4 w-4 text-red-500" />
+                  ) : (
+                    <TrendingDown className="h-4 w-4 text-green-500" />
+                  )}
+                  <span className={dayChange > 0 ? "text-red-500" : "text-green-500"}>
+                    {dayChange > 0 ? "+" : ""}
+                    {dayChange.toFixed(2)}%
+                  </span>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Compare Locations</CardTitle>
+                  <CardDescription>Find the best local rates</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link href="/map" className="inline-flex items-center text-sm text-primary">
+                    Open Rate Map <ChevronRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-12 border-t">
           <div className="container mx-auto px-4 sm:px-6 text-center">

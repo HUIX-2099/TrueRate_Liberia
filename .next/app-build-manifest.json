@@ -16,40 +16,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/error.js"
     ],
-    "/page": [
+    "/converter/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/converter/page.js"
     ],
     "/api/rates/live/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/rates/live/route.js"
     ],
-    "/analytics/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/analytics/page.js"
-    ],
-    "/converter/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/converter/page.js"
-    ],
     "/predictions/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/predictions/page.js"
     ],
-    "/manifest.webmanifest/route": [
+    "/api/rates/candles/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/manifest.webmanifest/route.js"
+      "static/chunks/app/api/rates/candles/route.js"
     ],
-    "/docs/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/docs/page.js"
+      "static/chunks/app/page.js"
     ],
     "/api/news/route": [
       "static/chunks/webpack.js",
@@ -61,35 +51,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/map/page.js"
     ],
-    "/about/page": [
+    "/tools/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/tools/page.js"
     ],
-    "/business/page": [
+    "/rates/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/business/page.js"
-    ],
-    "/api/rates/predictions/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/rates/predictions/route.js"
-    ],
-    "/forums/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/forums/page.js"
-    ],
-    "/liberia-market/loading": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/liberia-market/loading.js"
-    ],
-    "/liberia-market/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/liberia-market/page.js"
+      "static/chunks/app/rates/page.js"
     ]
   }
 }

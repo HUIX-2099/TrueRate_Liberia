@@ -15,7 +15,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BestRateWidget } from "@/components/best-rate-widget"
 import { MarketLeaderboard } from "@/components/market-leaderboard"
-import { PriceIndex, MarketNews, InflationTracker, SMSAlertSignup } from "@/components/liberia-features"
+import { PriceIndex, MarketNews, InflationTracker } from "@/components/liberia-features"
 import { useEffect, useState } from "react"
 
 export default function HomePage() {
@@ -224,7 +224,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4 sm:px-6 md:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Top 10 Best Rates in Monrovia</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Top Best Rates in Monrovia</h2>
                 <p className="text-lg text-muted-foreground">
                   Live rankings updated every 15 minutes
                 </p>
@@ -249,7 +249,6 @@ export default function HomePage() {
                 <PriceIndex rate={liveRate} />
               </div>
               <div className="space-y-6">
-                <SMSAlertSignup />
                 <InflationTracker />
               </div>
             </div>

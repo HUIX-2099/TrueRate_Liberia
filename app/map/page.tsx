@@ -108,6 +108,16 @@ function Map3DScene({ locations }: { locations: LocationRate[] }) {
 export default function MapPage() {
   const [locations, setLocations] = useState<LocationRate[]>([])
   const [loading, setLoading] = useState(true)
+  const averageRate = locations.length
+    ? locations.reduce((sum, location) => sum + location.rate, 0) / locations.length
+    : 0
+  const highestRate = locations.length
+    ? locations.reduce((best, location) => (location.rate > best.rate ? location : best), locations[0])
+    : null
+  const lowestRate = locations.length
+    ? locations.reduce((best, location) => (location.rate < best.rate ? location : best), locations[0])
+    : null
+  const verifiedCount = locations.filter((location) => location.verified).length
 
   useEffect(() => {
     async function fetchLocations() {
@@ -322,6 +332,47 @@ export default function MapPage() {
                       </ul>
                     </div>
                   </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Rate Summary */}
+        <section className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Rate Summary</h2>
+              <p className="text-muted-foreground">
+                Snapshot across verified locations to help you compare quickly.
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Highest Rate</CardTitle>
+                  <CardDescription>{highestRate?.name || "Loading..."}</CardDescription>
+                </CardHeader>
+                <CardContent className="text-2xl font-bold text-primary">
+                  {highestRate ? highestRate.rate.toFixed(2) : "--"} LRD
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Lowest Rate</CardTitle>
+                  <CardDescription>{lowestRate?.name || "Loading..."}</CardDescription>
+                </CardHeader>
+                <CardContent className="text-2xl font-bold text-primary">
+                  {lowestRate ? lowestRate.rate.toFixed(2) : "--"} LRD
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Average Rate</CardTitle>
+                  <CardDescription>{verifiedCount} verified locations</CardDescription>
+                </CardHeader>
+                <CardContent className="text-2xl font-bold text-primary">
+                  {averageRate ? averageRate.toFixed(2) : "--"} LRD
                 </CardContent>
               </Card>
             </div>

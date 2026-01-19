@@ -32,7 +32,7 @@ export function MarketLeaderboard() {
   useEffect(() => {
     // Simulate fetching leaderboard data
     const fetchLeaderboard = () => {
-      setLeaderboard([
+      const list = [
         {
           rank: 1,
           id: '1',
@@ -143,7 +143,8 @@ export function MarketLeaderboard() {
           volume24h: 28000,
           verified: true
         }
-      ])
+      ]
+      setLeaderboard(list.slice(0, 7))
       setLoading(false)
       setLastUpdate(new Date())
     }
@@ -188,7 +189,7 @@ export function MarketLeaderboard() {
           <div>
             <CardTitle className="flex items-center gap-2">
               <Crown className="h-5 w-5 text-yellow-500" />
-              {t('leaderboard.title')} - Best Rates in Monrovia
+              Top Best Rates in Monrovia
             </CardTitle>
             <CardDescription>
               Updated every 15 minutes • {leaderboard.length} verified changers

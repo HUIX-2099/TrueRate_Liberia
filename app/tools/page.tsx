@@ -7,8 +7,31 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calculator, DollarSign, PiggyBank, TrendingUp, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { SMSAlertSignup } from "@/components/liberia-features"
+import { useEffect, useState } from "react"
 
 export default function ToolsPage() {
+  const [liveRate, setLiveRate] = useState(180)
+  const [lastUpdate, setLastUpdate] = useState("Loading...")
+
+  useEffect(() => {
+    const fetchRate = async () => {
+      try {
+        const res = await fetch("/api/rates/live")
+        const data = await res.json()
+        if (data?.rate) setLiveRate(data.rate)
+        setLastUpdate(new Date().toLocaleTimeString())
+      } catch (error) {
+        console.error("[Tools] Failed to fetch rate", error)
+        setLastUpdate("Recently")
+      }
+    }
+    fetchRate()
+  }, [])
+
+  const alertLow = (liveRate - 2).toFixed(2)
+  const alertHigh = (liveRate + 2).toFixed(2)
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -170,6 +193,65 @@ export default function ToolsPage() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SMS Alerts */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center mb-8">
+              <Badge className="mb-3" variant="secondary">
+                Alerts
+              </Badge>
+              <h2 className="text-3xl font-bold mb-3">Get SMS Alerts</h2>
+              <p className="text-muted-foreground">
+                Get notified when the rate hits your target—even without internet access.
+              </p>
+            </div>
+            <div className="max-w-xl mx-auto">
+              <SMSAlertSignup />
+            </div>
+          </div>
+        </section>
+
+        {/* Alert Insights */}
+        <section className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Alert Insights</h2>
+              <p className="text-muted-foreground">
+                Use the current rate to set realistic targets and avoid missed alerts.
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Current USD/LRD</CardTitle>
+                  <CardDescription>Updated {lastUpdate}</CardDescription>
+                </CardHeader>
+                <CardContent className="text-2xl font-bold text-primary">
+                  {liveRate.toFixed(2)} LRD
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Suggested Alert Band</CardTitle>
+                  <CardDescription>±2 LRD from current</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  {alertLow} – {alertHigh} LRD
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Best Use</CardTitle>
+                  <CardDescription>Set for buy or sell timing</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  Choose a target slightly above or below your typical rate.
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
