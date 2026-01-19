@@ -108,8 +108,15 @@ export function RateHistory() {
                     tickLine={false}
                     domain={["dataMin - 2", "dataMax + 2"]}
                   />
-                  <Tooltip content={<ChartTooltipContent />} />
-                  <Line type="monotone" dataKey="rate" stroke="hsl(var(--primary))" strokeWidth={2} dot={false} />
+                  <Tooltip content={<ChartTooltipContent />} isAnimationActive={false} />
+                  <Line
+                    type="monotone"
+                    dataKey="rate"
+                    stroke="hsl(var(--primary))"
+                    strokeWidth={2}
+                    dot={false}
+                    isAnimationActive={false}
+                  />
                 </LineChart>
               </ResponsiveContainer>
             </ChartContainer>

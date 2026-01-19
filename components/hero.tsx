@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, TrendingUp, TrendingDown, Zap, Shield, Globe } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
 export function Hero() {
+  const router = useRouter()
   const [rate, setRate] = useState<number | null>(null)
   const [lastUpdate, setLastUpdate] = useState<string>("Loading…")
   const [trend, setTrend] = useState<'up' | 'down' | 'stable'>('up')
@@ -177,9 +179,15 @@ export function Hero() {
               {/* Footer */}
               <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">Aggregated from 100+ sources</span>
-                <Link href="/analytics" className="text-xs font-medium text-primary hover:underline">
-                  View History →
-                </Link>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="h-8 px-3 text-xs sm:h-9 sm:px-4 sm:text-sm"
+                  aria-label="View rate history"
+                  onClick={() => router.push("/analytics")}
+                >
+                  View History <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                </Button>
               </div>
             </div>
 

@@ -67,7 +67,8 @@ export default function RatesPage() {
   useEffect(() => {
     if (!Number.isFinite(liveRate)) return
     setRecentRates((prev) => {
-      const next = [...prev, liveRate].slice(-12)
+      const seeded = prev.length === 0 ? [liveRate, liveRate] : [...prev, liveRate]
+      const next = seeded.slice(-12)
       window.localStorage.setItem("truerate-recent-rates", JSON.stringify(next))
       return next
     })
@@ -91,6 +92,19 @@ export default function RatesPage() {
     if (previousDayRate === null) return null
     return liveRate - previousDayRate
   }, [liveRate, previousDayRate])
+
+  const recommendation = useMemo(() => {
+    if (change === null) {
+      return "Track the rate today and set an alert near your typical buy/sell target."
+    }
+    if (change >= 1.5) {
+      return "Rate is rising fast; consider buying USD sooner or set a sell alert."
+    }
+    if (change <= -1.5) {
+      return "Rate is easing; consider waiting or setting a lower buy target."
+    }
+    return "Rate is stable; compare changers and set a tight alert band."
+  }, [change])
 
   const sparklinePath = useMemo(() => {
     if (recentRates.length < 2) return ""
@@ -246,6 +260,15 @@ export default function RatesPage() {
                   ) : (
                     <div className="text-sm text-muted-foreground">Loading changers...</div>
                   )}
+                </CardContent>
+              </Card>
+              <Card className="lg:col-span-3">
+                <CardHeader>
+                  <CardTitle className="text-lg">Financial Recommendation</CardTitle>
+                  <CardDescription>Based on today’s rate movement</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  {recommendation}
                 </CardContent>
               </Card>
             </div>

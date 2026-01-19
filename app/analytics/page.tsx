@@ -2,10 +2,26 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { RateHistory } from "@/components/rate-history"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { TrendingUp, TrendingDown, Activity } from "lucide-react"
 import { useEffect, useState } from "react"
+import dynamic from "next/dynamic"
+
+const RateHistory = dynamic(() => import("@/components/rate-history").then((mod) => mod.RateHistory), {
+  ssr: false,
+  loading: () => (
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle>Exchange Rate History</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="h-[300px] flex items-center justify-center text-muted-foreground">
+          Loading chart...
+        </div>
+      </CardContent>
+    </Card>
+  ),
+})
 
 export default function AnalyticsPage() {
   const [currentRate, setCurrentRate] = useState<number>(0)

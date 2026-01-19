@@ -45,24 +45,7 @@ export function Header() {
             <LiveUpdateIndicator />
           </div>
 
-          <form
-            className="hidden lg:flex flex-1 max-w-xs items-center gap-2 ml-5"
-            role="search"
-            aria-label="Search rates or items"
-            onSubmit={handleSearch}
-          >
-            <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-                placeholder="Search rates or items..."
-                className="pl-9 h-9 bg-background/80 text-sm"
-                aria-label="Search rates or items"
-              />
-            </div>
-          </form>
+
 
           <nav className="hidden lg:flex items-center gap-6">
             <Link
@@ -142,24 +125,23 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="mt-4 space-y-4">
-                  <form role="search" aria-label="Search rates or items" onSubmit={handleSearch}>
-                    <div className="relative">
+                  <form role="search" aria-label="Search rates or items" onSubmit={handleSearch} className="flex justify-center">
+                    <div className="relative w-full max-w-xs">
                       <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                       <Input
                         type="search"
                         value={searchTerm}
                         onChange={(event) => setSearchTerm(event.target.value)}
                         placeholder="Search rates or items..."
-                        className="pl-9 h-10"
+                        className="pl-9 h-9 text-sm"
                         aria-label="Search rates or items"
                       />
                     </div>
                   </form>
-                  <LiveUpdateIndicator />
-                  <nav className="flex flex-col items-start text-left gap-4 mt-2 pl-2.5">
-                    <Link href="/" className="text-lg font-medium hover:text-primary transition-colors">
-                      Home
-                    </Link>
+                  <div className="flex justify-center">
+                    <LiveUpdateIndicator />
+                  </div>
+                  <nav className="flex flex-col items-center text-center gap-4 mt-2">
                     <Link href="/rates" className="text-lg font-medium hover:text-primary transition-colors">
                       Rates
                     </Link>
