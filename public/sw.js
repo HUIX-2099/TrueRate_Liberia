@@ -1,9 +1,14 @@
 /* Simple offline-first service worker for TrueRate Liberia */
-const CACHE_NAME = "truerate-cache-v1"
+const CACHE_NAME = "truerate-cache-v2"
 const PRECACHE = [
   "/",
+  "/rates",
   "/converter",
   "/analytics",
+  "/map",
+  "/tools",
+  "/liberia-market",
+  "/offline",
   "/predictions",
   "/icon.svg",
   "/placeholder-logo.png",
@@ -31,6 +36,7 @@ self.addEventListener("fetch", (event) => {
 
   // Network-first for API calls, cache-first for others
   const isApi = new URL(req.url).pathname.startsWith("/api/")
+  const isNavigate = req.mode === "navigate"
 
   if (isApi) {
     event.respondWith(
@@ -41,6 +47,19 @@ self.addEventListener("fetch", (event) => {
           return res
         })
         .catch(() => caches.match(req))
+    )
+    return
+  }
+
+  if (isNavigate) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const resClone = res.clone()
+          caches.open(CACHE_NAME).then((cache) => cache.put(req, resClone))
+          return res
+        })
+        .catch(() => caches.match(req).then((cached) => cached || caches.match("/offline")))
     )
     return
   }

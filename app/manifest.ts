@@ -14,7 +14,8 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#16A34A",
     icons: [
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any" },
-      { src: "/placeholder-logo.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+      { src: "/icons/icon-192.svg", sizes: "192x192", type: "image/svg+xml", purpose: "any maskable" },
+      { src: "/icons/icon-512.svg", sizes: "512x512", type: "image/svg+xml", purpose: "any maskable" },
     ],
     shortcuts: [
       { name: "Converter", url: "/converter" },
