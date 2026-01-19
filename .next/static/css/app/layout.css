@@ -1578,6 +1578,12 @@
       border-color: color-mix(in oklab, var(--border) 50%, transparent);
     }
   }
+  .border-border\/60 {
+    border-color: var(--border);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--border) 60%, transparent);
+    }
+  }
   .border-destructive {
     border-color: var(--destructive);
   }
@@ -1732,6 +1738,12 @@
     background-color: var(--background);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--background) 80%, transparent);
+    }
+  }
+  .bg-background\/90 {
+    background-color: var(--background);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--background) 90%, transparent);
     }
   }
   .bg-background\/95 {
@@ -2278,8 +2290,17 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
+  .pb-16 {
+    padding-bottom: calc(var(--spacing) * 16);
+  }
+  .pb-\[calc\(env\(safe-area-inset-bottom\)\+0\.5rem\)\] {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
+  }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
+  }
+  .pl-2\.5 {
+    padding-left: calc(var(--spacing) * 2.5);
   }
   .pl-3 {
     padding-left: calc(var(--spacing) * 3);
@@ -5112,6 +5133,14 @@
       margin-top: calc(var(--spacing) * -1);
     }
   }
+  .supports-\[backdrop-filter\]\:bg-background\/70 {
+    @supports (backdrop-filter: var(--tw)) {
+      background-color: var(--background);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--background) 70%, transparent);
+      }
+    }
+  }
   .supports-\[backdrop-filter\]\:bg-background\/80 {
     @supports (backdrop-filter: var(--tw)) {
       background-color: var(--background);
@@ -5421,6 +5450,11 @@
   .md\:py-24 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 24);
+    }
+  }
+  .md\:pb-0 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 0);
     }
   }
   .md\:text-left {

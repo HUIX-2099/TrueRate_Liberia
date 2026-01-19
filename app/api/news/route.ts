@@ -1,6 +1,7 @@
 import Parser from "rss-parser"
 
-export const revalidate = 3600
+// Refresh daily to align with "everyday" updates while keeping API load low.
+export const revalidate = 86400
 
 type NewsItem = {
   title: string
@@ -11,6 +12,8 @@ type NewsItem = {
 }
 
 const SOURCES = [
+  { name: "FrontPageAfrica Economy", url: "https://frontpageafricaonline.com/category/business/economy/feed/" },
+  { name: "allAfrica Business", url: "https://allafrica.com/tools/headlines/rdf/liberia/business/headlines.rdf" },
   { name: "allAfrica", url: "https://allafrica.com/tools/headlines/rdf/liberia/headlines.rdf" },
   { name: "FrontPageAfrica", url: "https://frontpageafricaonline.com/feed/" },
   { name: "New Dawn Liberia", url: "https://thenewdawnliberia.com/feed/" },
