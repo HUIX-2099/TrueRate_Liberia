@@ -90,7 +90,7 @@ export default function ConverterPage() {
 
   // Calculate conversion
   useEffect(() => {
-    const numAmount = parseFloat(amount) || 0
+    const numAmount = Math.max(parseFloat(amount) || 0, 0)
     const fromRate = ratesFromUSD[fromCurrency]
     const toRate = ratesFromUSD[toCurrency]
     const converted = (numAmount / fromRate) * toRate
@@ -102,10 +102,31 @@ export default function ConverterPage() {
     setToCurrency(fromCurrency)
   }
 
-  const copyResult = () => {
-    navigator.clipboard.writeText(result)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+  const copyResult = async () => {
+    try {
+      await navigator.clipboard.writeText(result)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (e) {
+      setCopied(false)
+    }
+  }
+
+  const shareResult = async () => {
+    const fromC = currencies.find(c => c.code === fromCurrency)
+    const toC = currencies.find(c => c.code === toCurrency)
+    const text = `${amount} ${fromC?.code} = ${result} ${toC?.code}`
+    try {
+      if (navigator.share) {
+        await navigator.share({ text })
+        return
+      }
+      await navigator.clipboard.writeText(text)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (e) {
+      setCopied(false)
+    }
   }
 
   const speakResult = () => {
@@ -185,11 +206,11 @@ export default function ConverterPage() {
                 {/* From Currency */}
                 <div className="space-y-3 mb-4">
                   <Label className="text-sm font-medium">You Have</Label>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2">
                     <select
                       value={fromCurrency}
                       onChange={(e) => setFromCurrency(e.target.value)}
-                      className="w-32 sm:w-40 rounded-xl border border-input bg-background px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full sm:w-40 rounded-xl border border-input bg-background px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                       {currencies.map((c) => (
                         <option key={c.code} value={c.code}>
@@ -199,6 +220,9 @@ export default function ConverterPage() {
                     </select>
                     <Input
                       type="number"
+                      inputMode="decimal"
+                      min="0"
+                      step="0.01"
                       value={amount}
                       onChange={(e) => setAmount(e.target.value)}
                       className="flex-1 h-12 text-xl font-bold rounded-xl"
@@ -236,11 +260,11 @@ export default function ConverterPage() {
                 {/* To Currency */}
                 <div className="space-y-3 mb-6">
                   <Label className="text-sm font-medium">You Get</Label>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2">
                     <select
                       value={toCurrency}
                       onChange={(e) => setToCurrency(e.target.value)}
-                      className="w-32 sm:w-40 rounded-xl border border-input bg-background px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full sm:w-40 rounded-xl border border-input bg-background px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                       {currencies.map((c) => (
                         <option key={c.code} value={c.code}>
@@ -273,7 +297,7 @@ export default function ConverterPage() {
                   >
                     <Volume2 className="h-4 w-4" />
                   </Button>
-                  <Button variant="outline" className="h-12 px-4">
+                  <Button variant="outline" className="h-12 px-4" onClick={shareResult}>
                     <Share2 className="h-4 w-4" />
                   </Button>
           </div>

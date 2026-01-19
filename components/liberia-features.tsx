@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
@@ -383,13 +384,9 @@ export function MarketNews() {
           ))}
         </div>
         <Button variant="ghost" className="w-full mt-4 text-sm" asChild>
-          <a
-            href="https://news.google.com/search?q=Liberia%20exchange%20rate"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/liberia-market" aria-label="View all Liberia market news">
             View All News <ArrowRight className="h-4 w-4 ml-1" />
-          </a>
+          </Link>
         </Button>
       </CardContent>
     </Card>
