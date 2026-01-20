@@ -16,6 +16,8 @@ interface BestRateData {
   distanceKm: number
   lat: number
   lng: number
+  rating?: number | null
+  openNow?: boolean | null
   lastUpdated: string
   trend: 'up' | 'down' | 'stable'
   changePercent: number
@@ -29,6 +31,7 @@ export function BestRateWidget() {
   const [alertsEnabled, setAlertsEnabled] = useState({ morning: false, afternoon: false })
   const [showAlertForm, setShowAlertForm] = useState(false)
   const [userAddress, setUserAddress] = useState<string | null>(null)
+  const [nearbyStatus, setNearbyStatus] = useState<"idle" | "loading" | "ready" | "empty">("idle")
 
   useEffect(() => {
     async function fetchBestRate() {
@@ -45,6 +48,8 @@ export function BestRateWidget() {
           distanceKm: 2,
           lat: 6.3125,
           lng: -10.7986,
+          rating: null,
+          openNow: null,
           lastUpdated: new Date().toISOString(),
           trend: 'up',
           changePercent: 0.8
@@ -62,43 +67,87 @@ export function BestRateWidget() {
   }, [])
 
   useEffect(() => {
-    if (!bestRate || typeof window === "undefined" || !navigator.geolocation) return
+    if (!bestRate || typeof window === "undefined") return
+    const fallbackOrigin = { lat: 6.3156, lng: -10.8074 }
     let isMounted = true
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        try {
-          const { latitude, longitude } = position.coords
-          const res = await fetch(
-            `/api/maps/distance?originLat=${latitude}&originLng=${longitude}&destLat=${bestRate.lat}&destLng=${bestRate.lng}`,
+
+    const resolveNearest = async (origin: { lat: number; lng: number }) => {
+      try {
+        setNearbyStatus("loading")
+        const nearbyRes = await fetch(`/api/maps/nearby?lat=${origin.lat}&lng=${origin.lng}`)
+        if (!nearbyRes.ok) {
+          setNearbyStatus("empty")
+          return
+        }
+        const nearbyData = await nearbyRes.json()
+        const nearest = Array.isArray(nearbyData?.results) ? nearbyData.results[0] : null
+        if (!nearest?.lat || !nearest?.lng) {
+          setNearbyStatus("empty")
+          return
+        }
+        if (isMounted) {
+          setBestRate((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  changerName: nearest.name ?? prev.changerName,
+                  location: nearest.address ?? prev.location,
+                  lat: nearest.lat,
+                  lng: nearest.lng,
+                  rating: typeof nearest.rating === "number" ? nearest.rating : prev.rating,
+                  openNow: typeof nearest.openNow === "boolean" ? nearest.openNow : prev.openNow,
+                }
+              : prev,
           )
-          if (!res.ok) return
-          const data = await res.json()
-          if (!isMounted) return
-          if (typeof data?.distanceKm === "number" && typeof data?.durationMinutes === "number") {
+        }
+
+        const distanceRes = await fetch(
+          `/api/maps/distance?originLat=${origin.lat}&originLng=${origin.lng}&destLat=${nearest.lat}&destLng=${nearest.lng}`,
+        )
+        if (distanceRes.ok) {
+          const distanceData = await distanceRes.json()
+          if (
+            isMounted &&
+            typeof distanceData?.distanceKm === "number" &&
+            typeof distanceData?.durationMinutes === "number"
+          ) {
             setBestRate((prev) =>
               prev
                 ? {
                     ...prev,
-                    distanceKm: data.distanceKm,
-                    distanceMinutes: data.durationMinutes,
+                    distanceKm: distanceData.distanceKm,
+                    distanceMinutes: distanceData.durationMinutes,
                   }
                 : prev,
             )
           }
-          const addressRes = await fetch(`/api/maps/geocode?lat=${latitude}&lng=${longitude}`)
-          if (addressRes.ok) {
-            const addressData = await addressRes.json()
-            if (isMounted && typeof addressData?.address === "string") {
-              setUserAddress(addressData.address)
-            }
-          }
-        } catch (error) {
-          console.error("Failed to update distance:", error)
         }
-      },
-      () => {},
-      { enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 },
-    )
+
+        const addressRes = await fetch(`/api/maps/geocode?lat=${origin.lat}&lng=${origin.lng}`)
+        if (addressRes.ok) {
+          const addressData = await addressRes.json()
+          if (isMounted && typeof addressData?.address === "string") {
+            setUserAddress(addressData.address)
+          }
+        }
+
+        setNearbyStatus("ready")
+      } catch (error) {
+        console.error("Failed to update distance:", error)
+        setNearbyStatus("empty")
+      }
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => resolveNearest({ lat: position.coords.latitude, lng: position.coords.longitude }),
+        () => resolveNearest(fallbackOrigin),
+        { enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 },
+      )
+    } else {
+      resolveNearest(fallbackOrigin)
+    }
+
     return () => {
       isMounted = false
     }
@@ -174,9 +223,21 @@ export function BestRateWidget() {
               <MapPin className="h-5 w-5 text-primary mt-0.5" />
               <div>
                 <div className="font-semibold">{bestRate.changerName}</div>
-                <div className="text-sm text-muted-foreground">
-                  {userAddress ?? bestRate.location}
+                <div className="text-sm text-muted-foreground space-y-1">
+                  {userAddress && <div>You: {userAddress}</div>}
+                  <div>Changer: {bestRate.location}</div>
+                  {nearbyStatus === "empty" && (
+                    <div className="text-xs">No nearby changers found. Showing best available.</div>
+                  )}
                 </div>
+                {(typeof bestRate.rating === "number" || typeof bestRate.openNow === "boolean") && (
+                  <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                    {typeof bestRate.rating === "number" && <span>⭐ {bestRate.rating.toFixed(1)}</span>}
+                    {typeof bestRate.openNow === "boolean" && (
+                      <span>{bestRate.openNow ? "Open now" : "Closed now"}</span>
+                    )}
+                  </div>
+                )}
                 <div className="text-sm text-secondary font-medium mt-1">
                   {bestRate.distanceMinutes} {t('widget.distance')}
                 </div>

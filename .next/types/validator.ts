@@ -326,6 +326,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/api/maps/nearby/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/maps/nearby">> = Specific
+  const handler = {} as typeof import("../../app/api/maps/nearby/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/api/news/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/news">> = Specific
