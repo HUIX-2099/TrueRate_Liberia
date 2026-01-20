@@ -1,9 +1,7 @@
 {
-  "/api/rates/live/route": "app/api/rates/live/route.js",
-  "/liberia-market/page": "app/liberia-market/page.js",
-  "/price-index/page": "app/price-index/page.js",
+  "/page": "app/page.js",
   "/report-fraud/page": "app/report-fraud/page.js",
   "/analytics/page": "app/analytics/page.js",
-  "/page": "app/page.js",
-  "/tools/page": "app/tools/page.js"
+  "/tools/page": "app/tools/page.js",
+  "/price-index/page": "app/price-index/page.js"
 }
