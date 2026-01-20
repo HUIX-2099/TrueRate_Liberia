@@ -80,6 +80,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/rates/historical/route.js"
+    ],
+    "/report-fraud/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/report-fraud/page.js"
+    ],
+    "/price-index/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/price-index/page.js"
     ]
   }
 }
