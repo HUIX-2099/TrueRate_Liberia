@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"app/analytics/page.tsx -> @/components/rate-history\":{\"id\":\"app/analytics/page.tsx -> @/components/rate-history\",\"files\":[\"static/chunks/_app-pages-browser_components_rate-history_tsx.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{}"

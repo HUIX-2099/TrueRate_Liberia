@@ -28,6 +28,7 @@ export function BestRateWidget() {
   const [phone, setPhone] = useState('')
   const [alertsEnabled, setAlertsEnabled] = useState({ morning: false, afternoon: false })
   const [showAlertForm, setShowAlertForm] = useState(false)
+  const [userAddress, setUserAddress] = useState<string | null>(null)
 
   useEffect(() => {
     async function fetchBestRate() {
@@ -83,6 +84,13 @@ export function BestRateWidget() {
                   }
                 : prev,
             )
+          }
+          const addressRes = await fetch(`/api/maps/geocode?lat=${latitude}&lng=${longitude}`)
+          if (addressRes.ok) {
+            const addressData = await addressRes.json()
+            if (isMounted && typeof addressData?.address === "string") {
+              setUserAddress(addressData.address)
+            }
           }
         } catch (error) {
           console.error("Failed to update distance:", error)
@@ -166,7 +174,9 @@ export function BestRateWidget() {
               <MapPin className="h-5 w-5 text-primary mt-0.5" />
               <div>
                 <div className="font-semibold">{bestRate.changerName}</div>
-                <div className="text-sm text-muted-foreground">{bestRate.location}</div>
+                <div className="text-sm text-muted-foreground">
+                  {userAddress ?? bestRate.location}
+                </div>
                 <div className="text-sm text-secondary font-medium mt-1">
                   {bestRate.distanceMinutes} {t('widget.distance')}
                 </div>

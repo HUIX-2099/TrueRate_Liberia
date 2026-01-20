@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { MapPin, TrendingUp, TrendingDown } from "lucide-react"
 import { GoogleMap } from "@/components/google-map"
 
@@ -20,19 +20,44 @@ interface LocationRate {
   verified: boolean
 }
 
+interface NearbyChanger {
+  id: string
+  name: string
+  address: string
+  rating?: number
+  openNow?: boolean
+  lat: number
+  lng: number
+  distanceKm?: number
+  durationMinutes?: number
+}
+
 export default function MapPage() {
   const [locations, setLocations] = useState<LocationRate[]>([])
   const [loading, setLoading] = useState(true)
+  const [nearbyChangers, setNearbyChangers] = useState<NearbyChanger[]>([])
+  const [nearbyStatus, setNearbyStatus] = useState<"idle" | "loading" | "ready" | "error">("idle")
+  const [nearbyError, setNearbyError] = useState<string | null>(null)
+  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null)
+  const lastSearchRef = useRef<string | null>(null)
   const mapMarkers = useMemo(
-    () =>
-      locations.map((location) => ({
+    () => [
+      ...locations.map((location) => ({
         id: location.id,
         name: location.name,
         lat: location.lat,
         lng: location.lng,
         label: `${location.rate.toFixed(2)} LRD`,
       })),
-    [locations],
+      ...nearbyChangers.map((changer) => ({
+        id: `nearby-${changer.id}`,
+        name: changer.name,
+        lat: changer.lat,
+        lng: changer.lng,
+        label: "Nearby",
+      })),
+    ],
+    [locations, nearbyChangers],
   )
   const averageRate = locations.length
     ? locations.reduce((sum, location) => sum + location.rate, 0) / locations.length
@@ -131,6 +156,59 @@ export default function MapPage() {
     fetchLocations()
   }, [])
 
+  const handleMapReady = (map: google.maps.Map, location: { lat: number; lng: number } | null) => {
+    if (!location) return
+    setUserLocation(location)
+
+    const key = `${location.lat.toFixed(4)},${location.lng.toFixed(4)}`
+    if (lastSearchRef.current === key || nearbyStatus === "loading") return
+    lastSearchRef.current = key
+
+    setNearbyStatus("loading")
+    setNearbyError(null)
+
+    const service = new google.maps.places.PlacesService(map)
+    service.nearbySearch(
+      {
+        location,
+        radius: 5000,
+        keyword: "money changer",
+        type: "currency_exchange",
+      },
+      (results, status) => {
+        if (status !== google.maps.places.PlacesServiceStatus.OK || !results) {
+          setNearbyStatus("error")
+          setNearbyError("Unable to load nearby changers.")
+          return
+        }
+        const mapped = results
+          .filter((place) => place.geometry?.location)
+          .slice(0, 8)
+          .map((place) => ({
+            id: place.place_id ?? place.name ?? "place",
+            name: place.name ?? "Money Changer",
+            address: place.vicinity ?? "",
+            rating: place.rating,
+            openNow: place.opening_hours?.isOpen?.(),
+            lat: place.geometry!.location!.lat(),
+            lng: place.geometry!.location!.lng(),
+          }))
+        const enriched = mapped.map((changer) => {
+          if (!userLocation || !google.maps.geometry?.spherical) return changer
+          const distanceMeters = google.maps.geometry.spherical.computeDistanceBetween(
+            new google.maps.LatLng(userLocation.lat, userLocation.lng),
+            new google.maps.LatLng(changer.lat, changer.lng),
+          )
+          const distanceKm = distanceMeters / 1000
+          const durationMinutes = Math.max(1, Math.round((distanceKm / 30) * 60))
+          return { ...changer, distanceKm, durationMinutes }
+        })
+        setNearbyChangers(enriched)
+        setNearbyStatus("ready")
+      },
+    )
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -184,11 +262,78 @@ export default function MapPage() {
                       markers={mapMarkers}
                       zoom={10}
                       useUserLocation
+                      onReady={handleMapReady}
                       className="h-[360px] sm:h-[520px] lg:h-[600px]"
                     />
                   )}
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col gap-2 mb-6">
+                <h2 className="text-2xl font-bold">Nearby Money Changers</h2>
+                <p className="text-sm text-muted-foreground">
+                  Results based on your current location and Google Places.
+                </p>
+              </div>
+              {nearbyStatus === "loading" && (
+                <Card>
+                  <CardContent className="p-6 text-sm text-muted-foreground">
+                    Finding money changers near you…
+                  </CardContent>
+                </Card>
+              )}
+              {nearbyStatus === "error" && (
+                <Card>
+                  <CardContent className="p-6 text-sm text-muted-foreground">
+                    {nearbyError ?? "Unable to load nearby changers."}
+                  </CardContent>
+                </Card>
+              )}
+              {nearbyStatus === "ready" && nearbyChangers.length === 0 && (
+                <Card>
+                  <CardContent className="p-6 text-sm text-muted-foreground">
+                    No nearby changers found within 5 km.
+                  </CardContent>
+                </Card>
+              )}
+              {nearbyChangers.length > 0 && (
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {nearbyChangers.map((changer) => (
+                    <Card key={changer.id}>
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-base">{changer.name}</CardTitle>
+                        <CardDescription>{changer.address || "Address unavailable"}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="text-sm text-muted-foreground space-y-1">
+                        {typeof changer.distanceKm === "number" && typeof changer.durationMinutes === "number" && (
+                          <div>
+                            {changer.distanceKm.toFixed(1)} km • ~{changer.durationMinutes} min
+                          </div>
+                        )}
+                        {typeof changer.rating === "number" && (
+                          <div>Rating: {changer.rating.toFixed(1)}</div>
+                        )}
+                        {typeof changer.openNow === "boolean" && (
+                          <div>{changer.openNow ? "Open now" : "Closed now"}</div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              )}
+              {nearbyStatus === "idle" && (
+                <Card>
+                  <CardContent className="p-6 text-sm text-muted-foreground">
+                    Allow location access to see nearby money changers.
+                  </CardContent>
+                </Card>
+              )}
             </div>
           </div>
         </section>
