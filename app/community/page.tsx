@@ -48,12 +48,12 @@ export default function CommunityPage() {
               <p className="text-lg text-muted-foreground text-pretty">
                 Join thousands of Liberians helping each other get fair exchange rates, spot fraud, and share knowledge.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mt-6">
                 <QuickShareButtons rate={currentRate} />
                 <SocialSharing 
                   data={{ type: 'rate', rate: currentRate, message: 'Check out the current USD rate!' }}
                   trigger={
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2 w-full sm:w-auto">
                       <Share2 className="h-4 w-4" />
                       Share Rate
                     </Button>
@@ -111,12 +111,12 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="reports" className="space-y-6">
-                <TabsList className="w-full md:w-auto flex flex-nowrap overflow-x-auto gap-2">
-                  <TabsTrigger value="reports">Rate Reports</TabsTrigger>
-                  <TabsTrigger value="reviews">Reviews</TabsTrigger>
-                  <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
-                  <TabsTrigger value="profile">My Profile</TabsTrigger>
-                  <TabsTrigger value="referral">Referrals</TabsTrigger>
+                <TabsList className="w-full md:w-auto flex flex-nowrap sm:flex-wrap overflow-x-auto sm:overflow-visible gap-2 pb-1">
+                  <TabsTrigger value="reports" className="whitespace-nowrap">Rate Reports</TabsTrigger>
+                  <TabsTrigger value="reviews" className="whitespace-nowrap">Reviews</TabsTrigger>
+                  <TabsTrigger value="leaderboard" className="whitespace-nowrap">Leaderboard</TabsTrigger>
+                  <TabsTrigger value="profile" className="whitespace-nowrap">My Profile</TabsTrigger>
+                  <TabsTrigger value="referral" className="whitespace-nowrap">Referrals</TabsTrigger>
                 </TabsList>
 
                 {/* Rate Reports Tab */}
@@ -127,7 +127,7 @@ export default function CommunityPage() {
                       <p className="text-muted-foreground">Community-submitted exchange rates from across Liberia</p>
                     </div>
                     <Link href="/community/report-rate">
-                      <Button>
+                      <Button className="w-full sm:w-auto">
                         <MapPin className="h-4 w-4 mr-2" />
                         Submit Rate
                       </Button>
@@ -174,11 +174,11 @@ export default function CommunityPage() {
                                 <p className="text-xs text-muted-foreground mt-1">{report.time}</p>
                               </div>
                             </div>
-                            <div className="flex flex-row md:flex-col gap-2 md:items-end">
-                              <Button size="sm" variant="outline">
+                            <div className="flex flex-wrap md:flex-col gap-2 md:items-end">
+                              <Button size="sm" variant="outline" className="w-full sm:w-auto md:w-full">
                                 Confirm
                               </Button>
-                              <Button size="sm" variant="ghost">
+                              <Button size="sm" variant="ghost" className="w-full sm:w-auto md:w-full">
                                 Flag
                               </Button>
                               <SocialSharing 
@@ -188,7 +188,7 @@ export default function CommunityPage() {
                                   message: `Rate at ${report.location}` 
                                 }}
                                 trigger={
-                                  <Button size="sm" variant="ghost">
+                                  <Button size="sm" variant="ghost" className="w-full sm:w-auto md:w-full">
                                     <Share2 className="h-4 w-4" />
                                   </Button>
                                 }
@@ -208,7 +208,7 @@ export default function CommunityPage() {
                       <h2 className="text-2xl font-bold">Money Changer Reviews</h2>
                       <p className="text-muted-foreground">Help others by sharing your experiences</p>
                     </div>
-                    <Button>
+                    <Button className="w-full sm:w-auto">
                       <Star className="h-4 w-4 mr-2" />
                       Write Review
                     </Button>

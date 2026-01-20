@@ -185,7 +185,7 @@ export function MarketLeaderboard() {
   return (
     <Card>
       <CardHeader>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <CardTitle className="flex items-center gap-2">
               <Crown className="h-5 w-5 text-yellow-500" />
@@ -195,7 +195,7 @@ export function MarketLeaderboard() {
               Updated every 15 minutes • {leaderboard.length} verified changers
             </CardDescription>
           </div>
-          <Badge variant="outline" className="gap-1">
+          <Badge variant="outline" className="gap-1 w-fit">
             <Clock className="h-3 w-3" />
             {lastUpdate.toLocaleTimeString()}
           </Badge>
@@ -204,10 +204,10 @@ export function MarketLeaderboard() {
       
       <CardContent>
         <Tabs defaultValue="rate" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="rate">Best Rates</TabsTrigger>
-            <TabsTrigger value="volume">Highest Volume</TabsTrigger>
-            <TabsTrigger value="rating">Top Rated</TabsTrigger>
+          <TabsList className="w-full flex flex-nowrap overflow-x-auto gap-2 pb-1">
+            <TabsTrigger value="rate" className="whitespace-nowrap">Best Rates</TabsTrigger>
+            <TabsTrigger value="volume" className="whitespace-nowrap">Highest Volume</TabsTrigger>
+            <TabsTrigger value="rating" className="whitespace-nowrap">Top Rated</TabsTrigger>
           </TabsList>
 
           <TabsContent value="rate" className="space-y-2">
@@ -216,8 +216,8 @@ export function MarketLeaderboard() {
                 key={changer.id}
                 className={`p-4 border rounded-lg transition-all hover:shadow-md cursor-pointer ${getRankBg(changer.rank)}`}
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
                     {getRankIcon(changer.rank)}
                   </div>
                   
@@ -228,7 +228,7 @@ export function MarketLeaderboard() {
                         <Badge variant="secondary" className="text-xs shrink-0">✓</Badge>
                       )}
                     </div>
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
                       <MapPin className="h-3 w-3" />
                       {changer.location}
                       <span className="mx-1">•</span>
@@ -237,11 +237,11 @@ export function MarketLeaderboard() {
                     </div>
                   </div>
                   
-                  <div className="text-right">
+                  <div className="text-left sm:text-right">
                     <div className={`${isMarketWomanMode ? 'text-2xl' : 'text-xl'} font-bold ${changer.rank <= 3 ? 'text-secondary' : ''}`}>
                       {changer.rate.toFixed(2)}
                     </div>
-                    <div className={`text-xs flex items-center justify-end gap-1 ${
+                    <div className={`text-xs flex items-center justify-start sm:justify-end gap-1 ${
                       changer.rateChange > 0 ? 'text-secondary' : 
                       changer.rateChange < 0 ? 'text-destructive' : 'text-muted-foreground'
                     }`}>
@@ -251,7 +251,7 @@ export function MarketLeaderboard() {
                     </div>
                   </div>
                   
-                  <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                  <ChevronRight className="hidden sm:block h-5 w-5 text-muted-foreground" />
                 </div>
               </div>
             ))}
@@ -263,8 +263,8 @@ export function MarketLeaderboard() {
                 key={changer.id}
                 className="p-4 border rounded-lg"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
                     <span className="text-lg font-bold text-muted-foreground">{idx + 1}</span>
                   </div>
                   
@@ -273,7 +273,7 @@ export function MarketLeaderboard() {
                     <div className="text-sm text-muted-foreground">{changer.location}</div>
                   </div>
                   
-                  <div className="text-right">
+                  <div className="text-left sm:text-right">
                     <div className="text-lg font-bold text-primary">
                       ${changer.volume24h.toLocaleString()}
                     </div>
@@ -290,8 +290,8 @@ export function MarketLeaderboard() {
                 key={changer.id}
                 className="p-4 border rounded-lg"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
                     <span className="text-lg font-bold text-muted-foreground">{idx + 1}</span>
                   </div>
                   
@@ -300,7 +300,7 @@ export function MarketLeaderboard() {
                     <div className="text-sm text-muted-foreground">{changer.location}</div>
                   </div>
                   
-                  <div className="text-right">
+                  <div className="text-left sm:text-right">
                     <div className="flex items-center gap-1 text-lg font-bold">
                       <Star className="h-5 w-5 fill-secondary text-secondary" />
                       {changer.rating}
