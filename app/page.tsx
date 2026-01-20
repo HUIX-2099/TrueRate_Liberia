@@ -264,8 +264,8 @@ export default function HomePage() {
         {/* Referral CTA */}
         <section className="py-12 bg-gradient-to-r from-secondary/10 via-primary/5 to-accent/10">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
+            <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+              <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="h-16 w-16 rounded-full bg-secondary/20 flex items-center justify-center">
                   <Gift className="h-8 w-8 text-secondary" />
                 </div>

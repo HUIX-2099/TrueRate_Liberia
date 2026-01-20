@@ -24,7 +24,7 @@ export function TrustSignals() {
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               {trustPoints.map((point, index) => (
-                <div key={index} className="flex items-start gap-3">
+                <div key={index} className="flex items-start gap-3 text-center md:text-left md:items-start items-center">
                   <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
                   <span className="text-foreground leading-relaxed">{point}</span>
                 </div>

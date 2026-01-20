@@ -48,13 +48,13 @@ export function Features() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <Card key={index} className="border-border">
-              <CardHeader>
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 mb-4">
+              <CardHeader className="text-center md:text-left">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 mb-4 mx-auto md:mx-0">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-xl">{feature.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-center md:text-left">
                 <CardDescription className="text-base leading-relaxed">{feature.description}</CardDescription>
               </CardContent>
             </Card>

@@ -130,6 +130,24 @@
     max-width: 100%;
     height: auto;
   }
+  main {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+  pre,
+  code {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
   button,
   [role="button"],
   a,

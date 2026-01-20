@@ -235,14 +235,14 @@ export default function MapPage() {
                 </CardHeader>
                 <CardContent className="p-0">
                   {loading ? (
-                    <div className="h-[600px] flex items-center justify-center bg-muted/30">
+                    <div className="h-[360px] sm:h-[520px] lg:h-[600px] flex items-center justify-center bg-muted/30">
                       <div className="text-center">
                         <div className="text-lg font-medium mb-2">Loading map...</div>
                         <div className="text-sm text-muted-foreground">Fetching live rates</div>
                       </div>
                     </div>
                   ) : (
-                    <div className="h-[600px] bg-gradient-to-b from-sky-100 to-background dark:from-sky-950 dark:to-background">
+                    <div className="h-[360px] sm:h-[520px] lg:h-[600px] bg-gradient-to-b from-sky-100 to-background dark:from-sky-950 dark:to-background">
                       <Map3DScene locations={locations} />
                     </div>
                   )}

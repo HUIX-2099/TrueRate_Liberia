@@ -642,17 +642,8 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
-  .-ml-2\.5 {
-    margin-left: calc(var(--spacing) * -2.5);
-  }
   .-ml-4 {
     margin-left: calc(var(--spacing) * -4);
-  }
-  .-ml-5 {
-    margin-left: calc(var(--spacing) * -5);
-  }
-  .-ml-7\.5 {
-    margin-left: calc(var(--spacing) * -7.5);
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
@@ -662,9 +653,6 @@
   }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
-  }
-  .ml-5 {
-    margin-left: calc(var(--spacing) * 5);
   }
   .ml-auto {
     margin-left: auto;
@@ -862,6 +850,9 @@
   .h-\[300px\] {
     height: 300px;
   }
+  .h-\[360px\] {
+    height: 360px;
+  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -1056,9 +1047,6 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
-  }
-  .max-w-\[10rem\] {
-    max-width: 10rem;
   }
   .max-w-\[calc\(100\%-2rem\)\] {
     max-width: calc(100% - 2rem);
@@ -2314,9 +2302,6 @@
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
-  }
-  .pl-2\.5 {
-    padding-left: calc(var(--spacing) * 2.5);
   }
   .pl-3 {
     padding-left: calc(var(--spacing) * 3);
@@ -5202,6 +5187,11 @@
       height: calc(var(--spacing) * 9);
     }
   }
+  .sm\:h-\[520px\] {
+    @media (width >= 40rem) {
+      height: 520px;
+    }
+  }
   .sm\:w-4 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 4);
@@ -5210,6 +5200,11 @@
   .sm\:w-40 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 40);
+    }
+  }
+  .sm\:max-w-\[180px\] {
+    @media (width >= 40rem) {
+      max-width: 180px;
     }
   }
   .sm\:max-w-lg {
@@ -5362,6 +5357,11 @@
       grid-column: span 3 / span 3;
     }
   }
+  .md\:mx-0 {
+    @media (width >= 48rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -5445,6 +5445,16 @@
   .md\:justify-between {
     @media (width >= 48rem) {
       justify-content: space-between;
+    }
+  }
+  .md\:justify-end {
+    @media (width >= 48rem) {
+      justify-content: flex-end;
+    }
+  }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
     }
   }
   .md\:gap-1\.5 {
@@ -5636,14 +5646,14 @@
       display: inline-flex;
     }
   }
+  .lg\:h-\[600px\] {
+    @media (width >= 64rem) {
+      height: 600px;
+    }
+  }
   .lg\:w-auto {
     @media (width >= 64rem) {
       width: auto;
-    }
-  }
-  .lg\:max-w-xs {
-    @media (width >= 64rem) {
-      max-width: var(--container-xs);
     }
   }
   .lg\:grid-cols-2 {
@@ -6767,6 +6777,24 @@
   video {
     max-width: 100%;
     height: auto;
+  }
+  main {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+  pre,
+  code {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  input,
+  select,
+  textarea {
+    max-width: 100%;
   }
   button,
   [role="button"],

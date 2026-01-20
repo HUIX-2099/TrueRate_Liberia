@@ -4,9 +4,9 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-muted/30">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-4 text-center md:text-left">
           <div className="space-y-3">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 justify-center md:justify-start">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
                 <span className="text-sm font-bold text-primary-foreground">TR</span>
               </div>
@@ -91,7 +91,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex flex-col items-center md:items-start gap-2">
+          <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
             <p className="text-sm text-muted-foreground">© 2025 TrueRate-Liberia. All rights reserved.</p>
             <p className="text-xs text-muted-foreground">
               Built by{" "}
@@ -106,7 +106,7 @@ export function Footer() {
               • A Liberian Future-Tech Startup
             </p>
           </div>
-          <div className="flex gap-6 text-sm">
+          <div className="flex gap-6 text-sm justify-center md:justify-end">
             <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
               Privacy Policy
             </Link>

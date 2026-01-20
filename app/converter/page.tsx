@@ -67,6 +67,8 @@ export default function ConverterPage() {
   const [lastUpdate, setLastUpdate] = useState("")
   const [dayChange, setDayChange] = useState(0.85)
   const [loading, setLoading] = useState(false)
+  const [useCustomRate, setUseCustomRate] = useState(false)
+  const [customRate, setCustomRate] = useState("")
 
   // Fetch live rate
   useEffect(() => {
@@ -88,14 +90,28 @@ export default function ConverterPage() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    if (!useCustomRate) {
+      setCustomRate(liveRate.toFixed(2))
+    }
+  }, [liveRate, useCustomRate])
+
   // Calculate conversion
   useEffect(() => {
     const numAmount = Math.max(parseFloat(amount) || 0, 0)
-    const fromRate = ratesFromUSD[fromCurrency]
-    const toRate = ratesFromUSD[toCurrency]
+    const parsedCustomRate = Math.max(Number.parseFloat(customRate) || 0, 0)
+    const useRate = useCustomRate && parsedCustomRate > 0 ? parsedCustomRate : liveRate
+    let fromRate = ratesFromUSD[fromCurrency]
+    let toRate = ratesFromUSD[toCurrency]
+    if (fromCurrency === "USD" && toCurrency === "LRD") {
+      toRate = useRate
+    }
+    if (fromCurrency === "LRD" && toCurrency === "USD") {
+      fromRate = useRate
+    }
     const converted = (numAmount / fromRate) * toRate
     setResult(converted.toFixed(2))
-  }, [amount, fromCurrency, toCurrency])
+  }, [amount, fromCurrency, toCurrency, customRate, useCustomRate, liveRate])
 
   const swapCurrencies = () => {
     setFromCurrency(toCurrency)
@@ -192,7 +208,12 @@ export default function ConverterPage() {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Current Rate</div>
-                      <div className="font-bold text-lg">{liveRate.toFixed(2)} LRD/USD</div>
+                      <div className="font-bold text-lg">
+                        {(useCustomRate ? Number(customRate) : liveRate).toFixed(2)} LRD/USD
+                      </div>
+                      {useCustomRate && (
+                        <div className="text-xs text-muted-foreground">Custom rate active</div>
+                      )}
                     </div>
                   </div>
                   <div className={`flex items-center gap-1 text-sm font-medium ${
@@ -201,6 +222,28 @@ export default function ConverterPage() {
                     {dayChange > 0 ? <TrendingUp className="h-4 w-4" /> : <TrendingDown className="h-4 w-4" />}
                     {dayChange > 0 ? "+" : ""}{dayChange.toFixed(2)}%
                   </div>
+                </div>
+
+                <div className="mb-6 flex flex-col sm:flex-row sm:items-center gap-3 rounded-xl border border-border p-3">
+                  <label className="flex items-center gap-2 text-sm font-medium">
+                    <input
+                      type="checkbox"
+                      checked={useCustomRate}
+                      onChange={(e) => setUseCustomRate(e.target.checked)}
+                    />
+                    Use custom USD/LRD rate
+                  </label>
+                  <Input
+                    type="number"
+                    inputMode="decimal"
+                    min="0"
+                    step="0.01"
+                    value={customRate}
+                    onChange={(e) => setCustomRate(e.target.value)}
+                    className="h-10 sm:max-w-[180px]"
+                    placeholder="e.g. 185.50"
+                    disabled={!useCustomRate}
+                  />
                 </div>
 
                 {/* From Currency */}
