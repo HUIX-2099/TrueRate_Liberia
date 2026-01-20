@@ -1,5 +1,9 @@
 {
+  "/api/rates/live/route": "app/api/rates/live/route.js",
+  "/api/rates/candles/route": "app/api/rates/candles/route.js",
   "/page": "app/page.js",
+  "/rates/page": "app/rates/page.js",
   "/price-index/page": "app/price-index/page.js",
-  "/rates/page": "app/rates/page.js"
+  "/liberia-market/page": "app/liberia-market/page.js",
+  "/predictions/page": "app/predictions/page.js"
 }

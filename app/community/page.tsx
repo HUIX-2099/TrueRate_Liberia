@@ -48,7 +48,7 @@ export default function CommunityPage() {
               <p className="text-lg text-muted-foreground text-pretty">
                 Join thousands of Liberians helping each other get fair exchange rates, spot fraud, and share knowledge.
               </p>
-              <div className="flex justify-center gap-3 mt-6">
+              <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6">
                 <QuickShareButtons rate={currentRate} />
                 <SocialSharing 
                   data={{ type: 'rate', rate: currentRate, message: 'Check out the current USD rate!' }}
@@ -68,7 +68,7 @@ export default function CommunityPage() {
         <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-4 gap-4">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <Card>
                   <CardContent className="pt-6">
                     <div className="text-center">
@@ -111,7 +111,7 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="reports" className="space-y-6">
-                <TabsList className="grid w-full md:w-auto md:inline-grid grid-cols-5 gap-2">
+                <TabsList className="w-full md:w-auto flex flex-nowrap overflow-x-auto gap-2">
                   <TabsTrigger value="reports">Rate Reports</TabsTrigger>
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>
                   <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
@@ -121,7 +121,7 @@ export default function CommunityPage() {
 
                 {/* Rate Reports Tab */}
                 <TabsContent value="reports" className="space-y-4">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
                       <h2 className="text-2xl font-bold">Recent Rate Reports</h2>
                       <p className="text-muted-foreground">Community-submitted exchange rates from across Liberia</p>
@@ -144,7 +144,7 @@ export default function CommunityPage() {
                     ].map((report, index) => (
                       <Card key={index}>
                         <CardContent className="p-6">
-                          <div className="flex items-start justify-between">
+                          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                             <div className="flex items-start gap-4 flex-1">
                               <Avatar>
                                 <AvatarFallback>
@@ -155,7 +155,7 @@ export default function CommunityPage() {
                                 </AvatarFallback>
                               </Avatar>
                               <div className="flex-1">
-                                <div className="flex items-center gap-2 mb-1">
+                                <div className="flex items-center gap-2 mb-1 flex-wrap">
                                   <span className="font-semibold">{report.user}</span>
                                   {report.verified && (
                                     <Badge variant="secondary" className="text-xs">
@@ -174,7 +174,7 @@ export default function CommunityPage() {
                                 <p className="text-xs text-muted-foreground mt-1">{report.time}</p>
                               </div>
                             </div>
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-row md:flex-col gap-2 md:items-end">
                               <Button size="sm" variant="outline">
                                 Confirm
                               </Button>
@@ -203,7 +203,7 @@ export default function CommunityPage() {
 
                 {/* Reviews Tab */}
                 <TabsContent value="reviews" className="space-y-4">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
                       <h2 className="text-2xl font-bold">Money Changer Reviews</h2>
                       <p className="text-muted-foreground">Help others by sharing your experiences</p>
@@ -244,7 +244,7 @@ export default function CommunityPage() {
                     ].map((review, index) => (
                       <Card key={index}>
                         <CardContent className="p-6">
-                          <div className="flex items-start gap-4">
+                          <div className="flex flex-col sm:flex-row items-start gap-4">
                             <Avatar>
                               <AvatarFallback>
                                 {review.user
@@ -254,7 +254,7 @@ export default function CommunityPage() {
                               </AvatarFallback>
                             </Avatar>
                             <div className="flex-1">
-                              <div className="flex items-center justify-between mb-2">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                                 <div>
                                   <div className="font-semibold">{review.user}</div>
                                   <div className="text-sm text-muted-foreground">{review.changer}</div>
@@ -271,7 +271,7 @@ export default function CommunityPage() {
                                 </div>
                               </div>
                               <p className="text-sm text-muted-foreground leading-relaxed mb-2">{review.review}</p>
-                              <div className="flex items-center justify-between">
+                              <div className="flex items-center justify-between flex-wrap gap-2">
                                 <p className="text-xs text-muted-foreground">{review.time}</p>
                                 <Button variant="ghost" size="sm" className="text-xs">
                                   👍 Helpful ({review.helpful})
@@ -292,7 +292,7 @@ export default function CommunityPage() {
                     <p className="text-muted-foreground">This month's most active and accurate community members</p>
                   </div>
 
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <Card className="border-secondary">
                       <CardContent className="pt-6 text-center">
                         <div className="flex justify-center mb-4">
@@ -366,7 +366,10 @@ export default function CommunityPage() {
                           { rank: 9, name: "Michael Johnson", points: 178, accuracy: 92 },
                           { rank: 10, name: "Grace Williams", points: 165, accuracy: 94 },
                         ].map((u) => (
-                          <div key={u.rank} className="flex items-center gap-4 p-3 bg-muted/50 rounded-lg">
+                          <div
+                            key={u.rank}
+                            className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 bg-muted/50 rounded-lg"
+                          >
                             <div className="text-lg font-bold text-muted-foreground w-8">{u.rank}</div>
                             <Avatar>
                               <AvatarFallback>

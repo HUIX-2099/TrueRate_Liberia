@@ -1,10 +1,8 @@
 import Parser from "rss-parser"
 import { formatDistanceToNow, format } from "date-fns"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { AlertCircle, ExternalLink, Flame } from "lucide-react"
-import Link from "next/link"
 
 export interface LiberiaNewsItem {
   id: string
@@ -225,7 +223,7 @@ export async function LiberiaMarketNews() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-bold mb-2">Latest Market & Economy News</h2>
+        <h2 className="text-2xl font-bold mb-2">Latest Liberia Market & Economy Headlines</h2>
         <p className="text-muted-foreground">
           Curated from trusted Liberian sources. Updated automatically every 1–2 hours.
         </p>
@@ -288,13 +286,6 @@ export async function LiberiaMarketNews() {
         ))}
       </div>
 
-      <div className="flex justify-center">
-        <Button asChild variant="outline">
-          <Link href="/liberia-market" aria-label="View all Liberia news">
-            View All News
-          </Link>
-        </Button>
-      </div>
     </div>
   )
 }
