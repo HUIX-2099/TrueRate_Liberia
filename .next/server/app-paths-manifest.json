@@ -1,7 +1,5 @@
 {
   "/page": "app/page.js",
-  "/report-fraud/page": "app/report-fraud/page.js",
-  "/analytics/page": "app/analytics/page.js",
-  "/tools/page": "app/tools/page.js",
-  "/price-index/page": "app/price-index/page.js"
+  "/price-index/page": "app/price-index/page.js",
+  "/rates/page": "app/rates/page.js"
 }

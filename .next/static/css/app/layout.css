@@ -856,9 +856,6 @@
   .h-\[400px\] {
     height: 400px;
   }
-  .h-\[600px\] {
-    height: 600px;
-  }
   .h-\[calc\(100\%-1px\)\] {
     height: calc(100% - 1px);
   }
@@ -1816,12 +1813,6 @@
       background-color: color-mix(in oklab, var(--destructive) 10%, transparent);
     }
   }
-  .bg-destructive\/15 {
-    background-color: var(--destructive);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--destructive) 15%, transparent);
-    }
-  }
   .bg-destructive\/20 {
     background-color: var(--destructive);
     @supports (color: color-mix(in lab, red, red)) {
@@ -2518,12 +2509,6 @@
     color: var(--foreground);
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--foreground) 50%, transparent);
-    }
-  }
-  .text-foreground\/80 {
-    color: var(--foreground);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--foreground) 80%, transparent);
     }
   }
   .text-gray-400 {
@@ -3456,16 +3441,6 @@
         background-color: var(--destructive);
         @supports (color: color-mix(in lab, red, red)) {
           background-color: color-mix(in oklab, var(--destructive) 10%, transparent);
-        }
-      }
-    }
-  }
-  .hover\:bg-destructive\/15 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--destructive);
-        @supports (color: color-mix(in lab, red, red)) {
-          background-color: color-mix(in oklab, var(--destructive) 15%, transparent);
         }
       }
     }
