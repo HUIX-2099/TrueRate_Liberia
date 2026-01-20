@@ -12,7 +12,10 @@ interface BestRateData {
   rate: number
   changerName: string
   location: string
-  distance: number
+  distanceMinutes: number
+  distanceKm: number
+  lat: number
+  lng: number
   lastUpdated: string
   trend: 'up' | 'down' | 'stable'
   changePercent: number
@@ -37,7 +40,10 @@ export function BestRateWidget() {
           rate: data.rate || 198.50,
           changerName: "Duala Money Exchange",
           location: "Duala Market, Paynesville",
-          distance: 5,
+          distanceMinutes: 5,
+          distanceKm: 2,
+          lat: 6.3125,
+          lng: -10.7986,
           lastUpdated: new Date().toISOString(),
           trend: 'up',
           changePercent: 0.8
@@ -54,12 +60,48 @@ export function BestRateWidget() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    if (!bestRate || typeof window === "undefined" || !navigator.geolocation) return
+    let isMounted = true
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        try {
+          const { latitude, longitude } = position.coords
+          const res = await fetch(
+            `/api/maps/distance?originLat=${latitude}&originLng=${longitude}&destLat=${bestRate.lat}&destLng=${bestRate.lng}`,
+          )
+          if (!res.ok) return
+          const data = await res.json()
+          if (!isMounted) return
+          if (typeof data?.distanceKm === "number" && typeof data?.durationMinutes === "number") {
+            setBestRate((prev) =>
+              prev
+                ? {
+                    ...prev,
+                    distanceKm: data.distanceKm,
+                    distanceMinutes: data.durationMinutes,
+                  }
+                : prev,
+            )
+          }
+        } catch (error) {
+          console.error("Failed to update distance:", error)
+        }
+      },
+      () => {},
+      { enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 },
+    )
+    return () => {
+      isMounted = false
+    }
+  }, [bestRate])
+
   const speakRate = () => {
     if (!bestRate || typeof window === 'undefined' || !window.speechSynthesis) return
     
     const text = isMarketWomanMode
-      ? `Dollar rate now: ${bestRate.rate.toFixed(0)} LD. ${bestRate.changerName}, ${bestRate.distance} minute from you.`
-      : `Today's best USD buy rate is ${bestRate.rate.toFixed(2)} Liberian Dollars at ${bestRate.changerName}, approximately ${bestRate.distance} minutes from your location.`
+      ? `Dollar rate now: ${bestRate.rate.toFixed(0)} LD. ${bestRate.changerName}, ${bestRate.distanceMinutes} minute from you.`
+      : `Today's best USD buy rate is ${bestRate.rate.toFixed(2)} Liberian Dollars at ${bestRate.changerName}, approximately ${bestRate.distanceMinutes} minutes from your location.`
     
     const utterance = new SpeechSynthesisUtterance(text)
     utterance.rate = isMarketWomanMode ? 0.8 : 1
@@ -126,7 +168,7 @@ export function BestRateWidget() {
                 <div className="font-semibold">{bestRate.changerName}</div>
                 <div className="text-sm text-muted-foreground">{bestRate.location}</div>
                 <div className="text-sm text-secondary font-medium mt-1">
-                  {bestRate.distance} {t('widget.distance')}
+                  {bestRate.distanceMinutes} {t('widget.distance')}
                 </div>
               </div>
             </div>
@@ -158,7 +200,12 @@ export function BestRateWidget() {
               size={isMarketWomanMode ? 'lg' : 'default'}
               variant="outline" 
               className="gap-2"
-              onClick={() => window.open(`https://maps.google.com/?q=${encodeURIComponent(bestRate.location)}`, '_blank')}
+              onClick={() =>
+                window.open(
+                  `https://maps.google.com/?q=${bestRate.lat},${bestRate.lng}`,
+                  "_blank",
+                )
+              }
             >
               <Navigation className="h-4 w-4" />
               Directions

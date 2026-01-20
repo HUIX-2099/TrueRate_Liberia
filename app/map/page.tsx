@@ -4,110 +4,36 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Suspense, useEffect, useState } from "react"
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls, Environment, PerspectiveCamera, Html } from "@react-three/drei"
+import { useEffect, useMemo, useState } from "react"
 import { MapPin, TrendingUp, TrendingDown } from "lucide-react"
+import { GoogleMap } from "@/components/google-map"
 
 interface LocationRate {
   id: string
   name: string
   county: string
   position: [number, number, number]
+  lat: number
+  lng: number
   rate: number
   trend: string
   verified: boolean
 }
 
-function RateMarker({ location }: { location: LocationRate }) {
-  const [hovered, setHovered] = useState(false)
-
-  return (
-    <group position={location.position}>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
-        <sphereGeometry args={[0.15, 16, 16]} />
-        <meshStandardMaterial
-          color={location.verified ? "#10b981" : "#f59e0b"}
-          emissive={hovered ? "#ffffff" : "#000000"}
-          emissiveIntensity={hovered ? 0.3 : 0}
-        />
-      </mesh>
-      <mesh position={[0, 0.5, 0]}>
-        <cylinderGeometry args={[0.02, 0.02, 0.5, 8]} />
-        <meshStandardMaterial color={location.verified ? "#10b981" : "#f59e0b"} />
-      </mesh>
-      {hovered && (
-        <Html position={[0, 0.8, 0]} center>
-          <div className="bg-card border border-border rounded-lg shadow-lg p-3 min-w-[200px]">
-            <div className="text-sm font-semibold mb-1">{location.name}</div>
-            <div className="text-xs text-muted-foreground mb-2">{location.county}</div>
-            <div className="text-lg font-bold text-primary">{location.rate.toFixed(2)} LRD</div>
-            <div className="flex items-center gap-1 text-xs mt-1">
-              {location.trend === "up" ? (
-                <TrendingUp className="h-3 w-3 text-secondary" />
-              ) : (
-                <TrendingDown className="h-3 w-3 text-destructive" />
-              )}
-              <span className={location.trend === "up" ? "text-secondary" : "text-destructive"}>
-                {location.trend === "up" ? "Rising" : "Falling"}
-              </span>
-            </div>
-          </div>
-        </Html>
-      )}
-    </group>
-  )
-}
-
-function LiberiaMap3D({ locations }: { locations: LocationRate[] }) {
-  return (
-    <group>
-      {/* Simplified Liberia shape */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
-        <planeGeometry args={[8, 4]} />
-        <meshStandardMaterial color="#1e40af" opacity={0.3} transparent />
-      </mesh>
-
-      {/* Border outline */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
-        <ringGeometry args={[3.9, 4, 64]} />
-        <meshBasicMaterial color="#3b82f6" />
-      </mesh>
-
-      {/* Rate markers */}
-      {locations.map((location) => (
-        <RateMarker key={location.id} location={location} />
-      ))}
-    </group>
-  )
-}
-
-function Map3DScene({ locations }: { locations: LocationRate[] }) {
-  return (
-    <Canvas shadows className="h-full w-full">
-      <PerspectiveCamera makeDefault position={[0, 8, 8]} fov={50} />
-      <OrbitControls
-        enablePan={true}
-        enableZoom={true}
-        enableRotate={true}
-        minDistance={5}
-        maxDistance={20}
-        maxPolarAngle={Math.PI / 2}
-      />
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
-      <pointLight position={[-10, -10, -5]} intensity={0.5} />
-      <Suspense fallback={null}>
-        <LiberiaMap3D locations={locations} />
-        <Environment preset="city" />
-      </Suspense>
-    </Canvas>
-  )
-}
-
 export default function MapPage() {
   const [locations, setLocations] = useState<LocationRate[]>([])
   const [loading, setLoading] = useState(true)
+  const mapMarkers = useMemo(
+    () =>
+      locations.map((location) => ({
+        id: location.id,
+        name: location.name,
+        lat: location.lat,
+        lng: location.lng,
+        label: `${location.rate.toFixed(2)} LRD`,
+      })),
+    [locations],
+  )
   const averageRate = locations.length
     ? locations.reduce((sum, location) => sum + location.rate, 0) / locations.length
     : 0
@@ -131,6 +57,8 @@ export default function MapPage() {
             name: data.changers[0]?.name || "Monrovia Central",
             county: "Montserrado",
             position: [0, 0, 0],
+            lat: 6.3156,
+            lng: -10.8074,
             rate: data.changers[0]?.buyRate || data.averageRate || 180,
             trend: data.changers[0]?.trend || "up",
             verified: data.changers[0]?.verified !== false,
@@ -140,6 +68,8 @@ export default function MapPage() {
             name: data.changers[1]?.name || "Sinkor",
             county: "Montserrado",
             position: [1.5, 0, -0.5],
+            lat: 6.2907,
+            lng: -10.7716,
             rate: data.changers[1]?.buyRate || data.averageRate || 180,
             trend: data.changers[1]?.trend || "up",
             verified: data.changers[1]?.verified !== false,
@@ -149,6 +79,8 @@ export default function MapPage() {
             name: data.changers[2]?.name || "Paynesville",
             county: "Montserrado",
             position: [2, 0, 0.5],
+            lat: 6.2901,
+            lng: -10.7436,
             rate: data.changers[2]?.buyRate || data.averageRate || 180,
             trend: data.changers[2]?.trend || "down",
             verified: data.changers[2]?.verified !== false,
@@ -158,6 +90,8 @@ export default function MapPage() {
             name: "Buchanan",
             county: "Grand Bassa",
             position: [-2, 0, -1.5],
+            lat: 5.8769,
+            lng: -10.0499,
             rate: (data.averageRate || 180) - 1,
             trend: "up",
             verified: true,
@@ -167,6 +101,8 @@ export default function MapPage() {
             name: "Gbarnga",
             county: "Bong",
             position: [-1, 0, 2],
+            lat: 6.9970,
+            lng: -9.4718,
             rate: (data.averageRate || 180) - 2.5,
             trend: "down",
             verified: true,
@@ -176,6 +112,8 @@ export default function MapPage() {
             name: "Harper",
             county: "Maryland",
             position: [-3.5, 0, -2],
+            lat: 4.3784,
+            lng: -7.7113,
             rate: (data.averageRate || 180) - 3.5,
             trend: "up",
             verified: true,
@@ -210,7 +148,7 @@ export default function MapPage() {
           </div>
         </section>
 
-        {/* 3D Map */}
+        {/* Google Map */}
         <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -219,7 +157,7 @@ export default function MapPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <CardTitle className="text-2xl">Live Rate Map</CardTitle>
-                      <CardDescription>Drag to rotate • Scroll to zoom • Click markers for details</CardDescription>
+                      <CardDescription>Tap markers for details • Pinch/scroll to zoom</CardDescription>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="flex items-center gap-2">
@@ -242,9 +180,12 @@ export default function MapPage() {
                       </div>
                     </div>
                   ) : (
-                    <div className="h-[360px] sm:h-[520px] lg:h-[600px] bg-gradient-to-b from-sky-100 to-background dark:from-sky-950 dark:to-background">
-                      <Map3DScene locations={locations} />
-                    </div>
+                    <GoogleMap
+                      markers={mapMarkers}
+                      zoom={10}
+                      useUserLocation
+                      className="h-[360px] sm:h-[520px] lg:h-[600px]"
+                    />
                   )}
                 </CardContent>
               </Card>
