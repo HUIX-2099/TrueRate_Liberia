@@ -42,7 +42,7 @@ export function BestRateWidget() {
         // Simulate best rate data with changer info
         setBestRate({
           rate: data.rate || 198.50,
-          changerName: "Duala Money Exchange",
+          changerName: "Nearby changer will appear",
           location: "Duala Market, Paynesville",
           distanceMinutes: 5,
           distanceKm: 2,
