@@ -225,9 +225,10 @@ export function BestRateWidget() {
                 <div className="font-semibold">{bestRate.changerName}</div>
                 <div className="text-sm text-muted-foreground space-y-1">
                   {userAddress && <div>You: {userAddress}</div>}
-                  <div>Changer: {bestRate.location}</div>
-                  {nearbyStatus === "empty" && (
-                    <div className="text-xs">No nearby changers found. Showing best available.</div>
+                  {nearbyStatus === "ready" ? (
+                    <div>Changer: {bestRate.location}</div>
+                  ) : (
+                    <div className="text-xs">Finding nearby money changers…</div>
                   )}
                 </div>
                 {(typeof bestRate.rating === "number" || typeof bestRate.openNow === "boolean") && (
