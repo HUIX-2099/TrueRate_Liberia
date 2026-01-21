@@ -890,6 +890,9 @@
   .max-h-\[300px\] {
     max-height: 300px;
   }
+  .max-h-\[calc\(100vh-5rem\)\] {
+    max-height: calc(100vh - 5rem);
+  }
   .max-h-\[calc\(100vh-6rem\)\] {
     max-height: calc(100vh - 6rem);
   }

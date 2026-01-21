@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import {
   Activity,
   Bell,
@@ -11,7 +10,6 @@ import {
   MapPin,
   Menu,
   Newspaper,
-  Search,
   Shield,
   ShoppingCart,
   TrendingUp,
@@ -22,21 +20,11 @@ import { useAuth } from "@/lib/auth/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { LiveUpdateIndicator } from "@/components/live-update-indicator"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { usePathname, useRouter } from "next/navigation"
-import { useState } from "react"
+import { usePathname } from "next/navigation"
 
 export function Header() {
   const { user } = useAuth()
-  const router = useRouter()
   const pathname = usePathname()
-  const [searchTerm, setSearchTerm] = useState("")
-
-  const handleSearch = (event: React.FormEvent) => {
-    event.preventDefault()
-    const query = searchTerm.trim()
-    if (!query) return
-    router.push(`/converter?q=${encodeURIComponent(query)}`)
-  }
 
   return (
     <>
@@ -146,147 +134,134 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="mt-4 space-y-4 max-h-[calc(100vh-6rem)] overflow-y-auto pr-1">
-                  <form role="search" aria-label="Search rates or items" onSubmit={handleSearch} className="flex justify-center">
-                    <div className="relative w-full max-w-xs">
-                      <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <Input
-                        type="search"
-                        value={searchTerm}
-                        onChange={(event) => setSearchTerm(event.target.value)}
-                        placeholder="Search rates or items..."
-                        className="pl-9 h-9 text-sm"
-                        aria-label="Search rates or items"
-                      />
-                    </div>
-                  </form>
-                  <div className="flex justify-center">
-                    <LiveUpdateIndicator />
+                <div className="mt-3 space-y-3 max-h-[calc(100vh-5rem)] overflow-y-auto pr-1">
+                  <div className="px-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                    Quick access
                   </div>
-                  <nav className="flex flex-col items-center text-center gap-3 mt-2">
+                  <nav className="flex flex-col items-center text-center gap-2 mt-1">
                     <Link
                       href="/auth/signin"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <LogIn className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <LogIn className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">Sign In</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Access your dashboard</div>
+                          <div className="text-sm font-semibold text-foreground">Sign In</div>
+                          <div className="text-[11px] text-muted-foreground">Access your dashboard</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/rates"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <TrendingUp className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <TrendingUp className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">Rates</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Live USD/LRD updates</div>
+                          <div className="text-sm font-semibold text-foreground">Rates</div>
+                          <div className="text-[11px] text-muted-foreground">Live USD/LRD updates</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/converter"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <Calculator className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <Calculator className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">Converter</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Convert USD ↔ LRD</div>
+                          <div className="text-sm font-semibold text-foreground">Converter</div>
+                          <div className="text-[11px] text-muted-foreground">Convert USD ↔ LRD</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/analytics"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <Activity className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <Activity className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">Analytics / Charts</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Trends and history</div>
+                          <div className="text-sm font-semibold text-foreground">Analytics / Charts</div>
+                          <div className="text-[11px] text-muted-foreground">Trends and history</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/price-index"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <ShoppingCart className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <ShoppingCart className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">Price Index</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Everyday cost tracking</div>
+                          <div className="text-sm font-semibold text-foreground">Price Index</div>
+                          <div className="text-[11px] text-muted-foreground">Everyday cost tracking</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/map"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <MapPin className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <MapPin className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">Find Changers</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Map of local rates</div>
+                          <div className="text-sm font-semibold text-foreground">Find Changers</div>
+                          <div className="text-[11px] text-muted-foreground">Map of local rates</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/liberia-market"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <Newspaper className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <Newspaper className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">News</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Liberia market updates</div>
+                          <div className="text-sm font-semibold text-foreground">News</div>
+                          <div className="text-[11px] text-muted-foreground">Liberia market updates</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/community"
-                      className="w-full max-w-sm rounded-xl border border-border/60 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                          <Users className="h-5 w-5 text-primary" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                          <Users className="h-4 w-4 text-primary" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-foreground">Community</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Reports and reviews</div>
+                          <div className="text-sm font-semibold text-foreground">Community</div>
+                          <div className="text-[11px] text-muted-foreground">Reports and reviews</div>
                         </div>
                       </div>
                     </Link>
                     <Link
                       href="/report-fraud"
-                      className="w-full max-w-sm rounded-xl border border-destructive/20 bg-destructive/5 px-3 py-2.5 sm:px-4 sm:py-3 transition-all hover:bg-destructive/10 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-lg border border-destructive/20 bg-destructive/5 px-3 py-2 transition-all hover:bg-destructive/10 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-destructive/10">
-                          <Shield className="h-5 w-5 text-destructive" />
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-destructive/10">
+                          <Shield className="h-4 w-4 text-destructive" />
                         </div>
                         <div className="text-left">
-                          <div className="text-sm sm:text-base font-semibold text-destructive">Report Fraud</div>
-                          <div className="text-[11px] sm:text-xs text-muted-foreground">Help keep the community safe</div>
+                          <div className="text-sm font-semibold text-destructive">Report Fraud</div>
+                          <div className="text-[11px] text-muted-foreground">Help keep the community safe</div>
                         </div>
                       </div>
                     </Link>
