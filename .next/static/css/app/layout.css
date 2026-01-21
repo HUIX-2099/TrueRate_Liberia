@@ -911,6 +911,9 @@
   .min-h-\[44px\] {
     min-height: 44px;
   }
+  .min-h-\[48px\] {
+    min-height: 48px;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -1883,10 +1886,22 @@
       background-color: color-mix(in oklab, var(--muted) 30%, transparent);
     }
   }
+  .bg-muted\/40 {
+    background-color: var(--muted);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--muted) 40%, transparent);
+    }
+  }
   .bg-muted\/50 {
     background-color: var(--muted);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--muted) 50%, transparent);
+    }
+  }
+  .bg-muted\/60 {
+    background-color: var(--muted);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--muted) 60%, transparent);
     }
   }
   .bg-pink-500\/10 {
@@ -2364,6 +2379,9 @@
   .pb-\[calc\(env\(safe-area-inset-bottom\)\+0\.5rem\)\] {
     padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
   }
+  .pb-\[calc\(env\(safe-area-inset-bottom\)\+0\.6rem\)\] {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 0.6rem);
+  }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
   }
@@ -2671,6 +2689,10 @@
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_-12px_30px_-24px_rgba\(15\,23\,42\,0\.6\)\] {
+    --tw-shadow: 0 -12px 30px -24px var(--tw-shadow-color, rgba(15,23,42,0.6));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_0_0_1px_hsl\(var\(--sidebar-border\)\)\] {
@@ -3521,6 +3543,16 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--muted);
+      }
+    }
+  }
+  .hover\:bg-muted\/40 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--muted);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--muted) 40%, transparent);
+        }
       }
     }
   }
