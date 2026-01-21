@@ -73,9 +73,9 @@ export function Hero() {
                 in Liberia
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground text-pretty max-w-2xl leading-relaxed">
-                TrueRate aggregates data from <strong className="text-foreground">100+ trusted sources</strong> including 
-                the Central Bank, licensed changers, and international APIs to deliver real-time USD/LRD rates 
-                with <strong className="text-foreground">AI-powered predictions</strong>.
+                TrueRate aggregates data from <strong className="text-foreground">100+ trusted sources</strong> including
+                the Central Bank, licensed changers, and international APIs to deliver real-time USD/LRD rates with{" "}
+                <strong className="text-foreground">AI-powered predictions</strong>.
               </p>
             </div>
 

@@ -120,7 +120,7 @@ export default function RemittanceCalculatorPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -128,8 +128,8 @@ export default function RemittanceCalculatorPage() {
                   <DollarSign className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Remittance Cost Calculator</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Remittance Cost Calculator</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Compare the real cost of sending money to Liberia and find the best deal
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function RemittanceCalculatorPage() {
         </section>
 
         {/* Calculator */}
-        <section className="py-8 bg-background">
+        <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card>
@@ -247,7 +247,7 @@ export default function RemittanceCalculatorPage() {
         </section>
 
         {/* Tips */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl font-bold mb-6">Money Transfer Tips</h2>

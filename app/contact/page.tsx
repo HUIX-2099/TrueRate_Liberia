@@ -49,11 +49,16 @@ export default function ContactPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Get in Touch</h1>
-              <p className="text-xl text-muted-foreground text-pretty">
+              <div className="flex justify-center mb-3">
+                <span className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
+                  Support
+                </span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Get in Touch</span></h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
                 Have questions, feedback, or need support? We're here to help. Reach out to our team and we'll respond
                 as quickly as possible.
               </p>
@@ -62,10 +67,10 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Methods */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <Phone className="h-8 w-8 text-primary mb-2" />
                   <CardTitle>Phone</CardTitle>
@@ -79,7 +84,7 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <Mail className="h-8 w-8 text-primary mb-2" />
                   <CardTitle>Email</CardTitle>
@@ -93,15 +98,14 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <MapPin className="h-8 w-8 text-primary mb-2" />
                   <CardTitle>Office</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-2">Visit our office</p>
-                  <p className="font-medium">123 Broad Street</p>
-                  <p className="text-sm text-muted-foreground">Monrovia, Liberia</p>
+                  <p className="text-muted-foreground mb-2">Office location</p>
+                  <p className="text-sm text-muted-foreground">We’re online‑only for now.</p>
                 </CardContent>
               </Card>
             </div>
@@ -109,10 +113,10 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     <MessageSquare className="h-6 w-6 text-primary" />
@@ -201,12 +205,17 @@ export default function ContactPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center text-balance">Frequently Asked Questions</h2>
+              <div className="text-center mb-8 space-y-2">
+                <span className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
+                  FAQs
+                </span>
+                <h2 className="text-3xl font-bold text-balance">Frequently Asked Questions</h2>
+              </div>
               <div className="space-y-4">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">How often are rates updated?</CardTitle>
                   </CardHeader>
@@ -218,7 +227,7 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">Is TrueRate-Liberia free to use?</CardTitle>
                   </CardHeader>
@@ -230,7 +239,7 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">How do I report incorrect rates?</CardTitle>
                   </CardHeader>
@@ -242,7 +251,7 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">Can I use TrueRate-Liberia without internet?</CardTitle>
                   </CardHeader>

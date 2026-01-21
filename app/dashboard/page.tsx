@@ -40,7 +40,7 @@ export default function DashboardPage() {
       <Header />
       <main className="flex-1 bg-muted/30">
         {/* Hero Section */}
-        <section className="py-12 bg-gradient-to-b from-primary/10 to-transparent">
+        <section className="py-10 sm:py-12 bg-gradient-to-b from-primary/10 to-transparent">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-6">
@@ -48,7 +48,7 @@ export default function DashboardPage() {
                   <AvatarFallback className="text-2xl bg-primary text-primary-foreground">{initials}</AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
-                  <h1 className="text-3xl font-bold mb-2">Welcome back, {user.name}!</h1>
+                  <h1 className="text-3xl font-bold mb-2"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Welcome back, {user.name}!</span></h1>
                   <p className="text-muted-foreground">Member since {new Date(user.joinedDate).toLocaleDateString()}</p>
                 </div>
                 <Button variant="outline" onClick={signOut}>
@@ -60,7 +60,7 @@ export default function DashboardPage() {
         </section>
 
         {/* Stats Overview */}
-        <section className="py-8">
+        <section className="py-6 sm:py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-4 gap-4">
@@ -117,7 +117,7 @@ export default function DashboardPage() {
         </section>
 
         {/* Main Content */}
-        <section className="py-8">
+        <section className="py-6 sm:py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
               {/* Recent Activity */}

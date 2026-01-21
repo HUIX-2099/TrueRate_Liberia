@@ -59,7 +59,7 @@ export default function VoiceAssistantPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -67,10 +67,10 @@ export default function VoiceAssistantPage() {
                   <Volume2 className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 {isMarketWomanMode ? t('simple.mode') : 'Voice Assistant'}
-              </h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              </span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 {isMarketWomanMode 
                   ? t('simple.modeDesc') + ' - Perfect for Waterside, Red Light, Duala markets'
                   : 'Listen to today\'s exchange rates - perfect for users who prefer audio information'
@@ -80,7 +80,7 @@ export default function VoiceAssistantPage() {
           </div>
         </section>
 
-        <section className="py-8 bg-background">
+        <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-6">
               {/* Mode Toggle */}

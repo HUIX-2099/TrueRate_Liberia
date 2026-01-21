@@ -10,14 +10,14 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">About TrueRate-Liberia</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Empowering Liberians with Transparent Exchange Rate Information
-              </h1>
-              <p className="text-xl text-muted-foreground text-pretty">
+              </span></h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
                 We're on a mission to bring clarity and fairness to currency exchange in Liberia through technology,
                 data, and community trust.
               </p>
@@ -26,7 +26,7 @@ export default function AboutPage() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <Card>
@@ -61,12 +61,13 @@ export default function AboutPage() {
         </section>
 
         {/* The Problem We Solve */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-balance">
-                Why TrueRate-Liberia Exists
-              </h2>
+              <div className="text-center mb-8 space-y-2">
+                <Badge variant="outline">Why we exist</Badge>
+                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Why TrueRate-Liberia Exists</h2>
+              </div>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   For too long, Liberians have struggled with opaque and inconsistent exchange rates. Street changers
@@ -91,9 +92,12 @@ export default function AboutPage() {
         </section>
 
         {/* Core Values */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-balance">Our Core Values</h2>
+            <div className="text-center mb-12 space-y-2">
+              <Badge variant="outline">Values</Badge>
+              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Our Core Values</h2>
+            </div>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <Card>
                 <CardHeader>
@@ -138,24 +142,27 @@ export default function AboutPage() {
         </section>
 
         {/* Impact Stats */}
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+        <section className="py-12 sm:py-14 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-balance">Our Impact</h2>
+            <div className="text-center mb-12 space-y-2">
+              <Badge variant="secondary">Impact</Badge>
+              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Our Impact</h2>
+            </div>
             <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
               <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">50K+</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">50K+</div>
                 <div className="text-primary-foreground/80">Monthly Users</div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">15+</div>
                 <div className="text-primary-foreground/80">Verified Changers</div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">98%</div>
                 <div className="text-primary-foreground/80">Rate Accuracy</div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">$2M+</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">$2M+</div>
                 <div className="text-primary-foreground/80">Saved from Fraud</div>
               </div>
             </div>
@@ -163,11 +170,12 @@ export default function AboutPage() {
         </section>
 
         {/* Team */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Our Team</h2>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <Badge variant="outline" className="mb-3">Team</Badge>
+              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-balance">Our Team</h2>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 TrueRate-Liberia is powered by a diverse team of technologists, economists, data scientists, and
                 community advocates. We're united by our commitment to financial transparency and our love for Liberia.
               </p>

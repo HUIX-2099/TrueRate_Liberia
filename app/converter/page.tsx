@@ -183,15 +183,15 @@ export default function ConverterPage() {
             <div className="absolute bottom-0 left-1/4 h-40 w-40 rounded-full bg-secondary/10 blur-2xl" />
           </div>
 
-          <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 md:py-12">
+          <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-6 sm:py-8 md:py-12">
             <div className="text-center mb-8">
               <Badge className="mb-4" variant="secondary">
                 <RefreshCw className="h-3 w-3 mr-1" />
                 Live Rates • Updated {lastUpdate || "Loading..."}
               </Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-balance">
+              <h1 className="text-3xl sm:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Currency <span className="text-primary">Converter</span>
-              </h1>
+              </span></h1>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Instant conversions with real-time rates from 100+ sources. Trusted by thousands in Liberia.
               </p>
@@ -362,8 +362,13 @@ export default function ConverterPage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 md:py-16">
+        <section className="py-12 sm:py-14 md:py-16">
           <div className="container mx-auto px-4 sm:px-6 md:px-8">
+            <div className="text-center mb-10 space-y-2">
+              <Badge variant="outline">Tools</Badge>
+              <h2 className="text-2xl md:text-3xl font-bold">Conversion Utilities</h2>
+              <p className="text-muted-foreground">Helpful calculators and comparisons for daily decisions.</p>
+            </div>
             <Tabs defaultValue="tools" className="space-y-8">
               <TabsList className="w-full justify-start overflow-x-auto flex-nowrap">
                 <TabsTrigger value="tools" className="gap-2">
@@ -383,7 +388,7 @@ export default function ConverterPage() {
               <TabsContent value="tools" className="space-y-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {/* Business Calculator */}
-                  <Card className="group hover:shadow-lg transition-all cursor-pointer">
+                  <Card className="group border-border/60 shadow-sm hover:shadow-lg transition-all cursor-pointer">
                     <CardHeader className="pb-3">
                       <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
                         <Banknote className="h-6 w-6 text-primary" />
@@ -411,7 +416,7 @@ export default function ConverterPage() {
                   </Card>
 
                   {/* Markup Calculator */}
-                  <Card className="group hover:shadow-lg transition-all cursor-pointer">
+                  <Card className="group border-border/60 shadow-sm hover:shadow-lg transition-all cursor-pointer">
                     <CardHeader className="pb-3">
                       <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3 group-hover:bg-secondary/20 transition-colors">
                         <Percent className="h-6 w-6 text-secondary" />
@@ -439,7 +444,7 @@ export default function ConverterPage() {
                   </Card>
 
                   {/* Price Index */}
-                  <Card className="group hover:shadow-lg transition-all cursor-pointer">
+                  <Card className="group border-border/60 shadow-sm hover:shadow-lg transition-all cursor-pointer">
                     <CardHeader className="pb-3">
                       <div className="h-12 w-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-3 group-hover:bg-amber-500/20 transition-colors">
                         <Sparkles className="h-6 w-6 text-amber-500" />
@@ -467,13 +472,13 @@ export default function ConverterPage() {
 
               <TabsContent value="changers" className="space-y-6">
                 <div className="grid gap-4">
-                  {[
+                    {[
                     { name: "Apex Exchange", location: "Broad St, Monrovia", buy: liveRate - 1.5, sell: liveRate + 1.5, rating: 4.8 },
                     { name: "Global Money", location: "Carey St", buy: liveRate - 2, sell: liveRate + 2, rating: 4.6 },
                     { name: "Quick Cash", location: "Waterside", buy: liveRate - 2.5, sell: liveRate + 2, rating: 4.5 },
                     { name: "City Exchange", location: "Sinkor", buy: liveRate - 1.8, sell: liveRate + 1.8, rating: 4.7 },
                   ].map((changer, i) => (
-                    <Card key={i} className="hover:shadow-md transition-all">
+                    <Card key={i} className="border-border/60 shadow-sm hover:shadow-md transition-all">
                       <CardContent className="p-4">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                           <div className="flex items-center gap-4">
@@ -511,7 +516,7 @@ export default function ConverterPage() {
 
               <TabsContent value="remittance" className="space-y-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {[
+                    {[
                     { name: "Western Union", fee: "$5", rate: liveRate - 3, time: "Minutes", logoUrl: "/logos/unnamed.png" },
                     { name: "MoneyGram", fee: "$4.99", rate: liveRate - 2.5, time: "Minutes", logoUrl: "/logos/png-clipart-moneygram-international-inc-logo-money-transfer-western-union-international-tourism-text-trademark.png" },
                     { name: "Sendwave", fee: sendwaveFee, rate: liveRate - 1.5, time: "Same Day", logoUrl: "/logos/images.jpeg" },
@@ -519,7 +524,7 @@ export default function ConverterPage() {
                     { name: "MTN Mobile Money", fee: "1.5%", rate: liveRate, time: "Instant", logoUrl: "/logos/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png" },
                     { name: "Bank Transfer", fee: "$15-25", rate: liveRate + 0.5, time: "1-3 Days", logoUrl: null },
                   ].map((service) => (
-                    <Card key={service.name} className="hover:shadow-lg transition-all">
+                    <Card key={service.name} className="border-border/60 shadow-sm hover:shadow-lg transition-all">
                       <CardContent className="p-4">
                         <div className="flex items-center gap-3 mb-4">
                           <div className="h-16 w-16 rounded-lg bg-muted flex items-center justify-center overflow-hidden">
@@ -569,16 +574,17 @@ export default function ConverterPage() {
         </section>
 
         {/* Rate Highlights */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-10 sm:py-12 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 md:px-8">
             <div className="max-w-4xl mx-auto text-center mb-8">
+              <Badge variant="outline" className="mb-3">Highlights</Badge>
               <h2 className="text-2xl md:text-3xl font-bold mb-2">Rate Highlights</h2>
               <p className="text-muted-foreground">
                 Quick context around today’s USD/LRD market activity.
               </p>
             </div>
             <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-3">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-base">Live USD/LRD</CardTitle>
                   <CardDescription>Updated {lastUpdate || "just now"}</CardDescription>
@@ -587,7 +593,7 @@ export default function ConverterPage() {
                   {liveRate.toFixed(2)} LRD
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-base">Today’s Change</CardTitle>
                   <CardDescription>Intraday movement</CardDescription>
@@ -604,7 +610,7 @@ export default function ConverterPage() {
                   </span>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-base">Compare Locations</CardTitle>
                   <CardDescription>Find the best local rates</CardDescription>
@@ -620,7 +626,7 @@ export default function ConverterPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 border-t">
+        <section className="py-10 sm:py-12 border-t">
           <div className="container mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl font-bold mb-4">Need Rate Alerts?</h2>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">

@@ -37,14 +37,14 @@ export default function ToolsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">Financial Tools</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Smart Tools for Better Financial Decisions
-              </h1>
-              <p className="text-xl text-muted-foreground text-pretty">
+              </span></h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
                 Free calculators and planners to help you manage money, compare costs, and plan for the future.
               </p>
             </div>
@@ -52,10 +52,10 @@ export default function ToolsPage() {
         </section>
 
         {/* Tools Grid */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
@@ -79,7 +79,7 @@ export default function ToolsPage() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardHeader>
                   <div className="h-12 w-12 rounded-lg bg-secondary/20 flex items-center justify-center mb-4">
                     <PiggyBank className="h-6 w-6 text-secondary" />
@@ -99,7 +99,7 @@ export default function ToolsPage() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardHeader>
                   <div className="h-12 w-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
                     <Calculator className="h-6 w-6 text-accent" />
@@ -119,7 +119,7 @@ export default function ToolsPage() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
@@ -146,12 +146,15 @@ export default function ToolsPage() {
         </section>
 
         {/* Features */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Why Use Our Tools?</h2>
+              <div className="text-center mb-12 space-y-2">
+                <Badge variant="outline">Why it helps</Badge>
+                <h2 className="text-3xl font-bold">Why Use Our Tools?</h2>
+              </div>
               <div className="grid md:grid-cols-3 gap-6">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
@@ -165,7 +168,7 @@ export default function ToolsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <div className="h-12 w-12 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
@@ -179,7 +182,7 @@ export default function ToolsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
@@ -198,7 +201,7 @@ export default function ToolsPage() {
         </section>
 
         {/* SMS Alerts */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-8">
               <Badge className="mb-3" variant="secondary">
@@ -216,7 +219,7 @@ export default function ToolsPage() {
         </section>
 
         {/* Alert Insights */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-10 sm:py-12 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">Alert Insights</h2>

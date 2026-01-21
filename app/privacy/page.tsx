@@ -13,12 +13,12 @@ export default function PrivacyPage() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">Privacy & Data Protection</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Your Privacy Matters at TrueRate-Liberia</h1>
-              <p className="text-xl text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Your Privacy Matters at TrueRate-Liberia</span></h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
                 This Privacy Policy explains what we collect, why we collect it, and the choices you have when using
                 our services.
               </p>
@@ -28,10 +28,10 @@ export default function PrivacyPage() {
         </section>
 
         {/* Overview */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <div className="flex items-center gap-2">
                     <Shield className="h-6 w-6 text-primary" />
@@ -70,12 +70,15 @@ export default function PrivacyPage() {
         </section>
 
         {/* Data Collection */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-balance">Information We Collect</h2>
+              <div className="text-center mb-10 space-y-2">
+                <Badge variant="outline">Data collection</Badge>
+                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Information We Collect</h2>
+              </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <div className="flex items-center gap-2">
                       <Database className="h-6 w-6 text-primary" />
@@ -89,7 +92,7 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <div className="flex items-center gap-2">
                       <FileText className="h-6 w-6 text-primary" />
@@ -103,7 +106,7 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <div className="flex items-center gap-2">
                       <Mail className="h-6 w-6 text-primary" />
@@ -117,7 +120,7 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <div className="flex items-center gap-2">
                       <Shield className="h-6 w-6 text-primary" />
@@ -137,12 +140,15 @@ export default function PrivacyPage() {
         </section>
 
         {/* Use of Data */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-balance">How We Use Your Data</h2>
+              <div className="text-center mb-8 space-y-2">
+                <Badge variant="outline">Usage</Badge>
+                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">How We Use Your Data</h2>
+              </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle>Provide core services</CardTitle>
                   </CardHeader>
@@ -153,7 +159,7 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle>Improve accuracy</CardTitle>
                   </CardHeader>
@@ -164,7 +170,7 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle>Keep the community safe</CardTitle>
                   </CardHeader>
@@ -174,7 +180,7 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle>Communicate with you</CardTitle>
                   </CardHeader>
@@ -190,10 +196,10 @@ export default function PrivacyPage() {
         </section>
 
         {/* Sharing & Retention */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>When We Share Information</CardTitle>
                   <CardDescription>We only share data in limited situations.</CardDescription>
@@ -206,7 +212,7 @@ export default function PrivacyPage() {
                   </ul>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Data Retention</CardTitle>
                   <CardDescription>We keep data only as long as needed.</CardDescription>
@@ -224,11 +230,12 @@ export default function PrivacyPage() {
         </section>
 
         {/* Your Rights */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Your Rights & Choices</h2>
-              <p className="text-lg text-muted-foreground mb-10 text-pretty">
+              <Badge variant="outline" className="mb-3">Your rights</Badge>
+              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-balance">Your Rights & Choices</h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-10 text-pretty">
                 You can request access, correction, portability, or deletion of your personal data. You can also
                 opt-out of marketing communications at any time.
               </p>
@@ -240,10 +247,10 @@ export default function PrivacyPage() {
         </section>
 
         {/* Additional Notices */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Cookies & Tracking</CardTitle>
                 </CardHeader>
@@ -254,7 +261,7 @@ export default function PrivacyPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Children's Privacy</CardTitle>
                 </CardHeader>
@@ -265,7 +272,7 @@ export default function PrivacyPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Policy Updates</CardTitle>
                 </CardHeader>

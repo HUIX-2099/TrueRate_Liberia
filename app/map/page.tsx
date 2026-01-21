@@ -214,12 +214,12 @@ export default function MapPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">Interactive Map</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Exchange Rates Across Liberia</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Exchange Rates Across Liberia</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Explore live exchange rates from different counties and cities. Hover over locations to see details.
               </p>
             </div>
@@ -227,10 +227,10 @@ export default function MapPage() {
         </section>
 
         {/* Google Map */}
-        <section className="py-8 bg-background">
+        <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden border-border/60 shadow-sm">
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <div>
@@ -238,14 +238,14 @@ export default function MapPage() {
                       <CardDescription>Tap markers for details • Pinch/scroll to zoom</CardDescription>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 rounded-full bg-secondary" />
-                        <span className="text-xs">Verified</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 rounded-full bg-accent" />
-                        <span className="text-xs">Unverified</span>
-                      </div>
+                      <Badge variant="secondary" className="gap-2">
+                        <span className="h-2 w-2 rounded-full bg-secondary-foreground/80" />
+                        Verified
+                      </Badge>
+                      <Badge variant="outline" className="gap-2">
+                        <span className="h-2 w-2 rounded-full bg-muted-foreground/60" />
+                        Unverified
+                      </Badge>
                     </div>
                   </div>
                 </CardHeader>
@@ -276,6 +276,7 @@ export default function MapPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col gap-2 mb-6">
+                <Badge variant="outline" className="w-fit">Nearby</Badge>
                 <h2 className="text-2xl font-bold">Nearby Money Changers</h2>
                 <p className="text-sm text-muted-foreground">
                   Results based on your current location and Google Places.
@@ -305,7 +306,7 @@ export default function MapPage() {
               {nearbyChangers.length > 0 && (
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {nearbyChangers.map((changer) => (
-                    <Card key={changer.id}>
+                    <Card key={changer.id} className="border-border/60 shadow-sm transition-shadow hover:shadow-md">
                       <CardHeader className="pb-2">
                         <CardTitle className="text-base">{changer.name}</CardTitle>
                         <CardDescription>{changer.address || "Address unavailable"}</CardDescription>
@@ -339,13 +340,13 @@ export default function MapPage() {
         </section>
 
         {/* Location List */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl font-bold mb-6">Rates by Location</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {locations.map((location) => (
-                  <Card key={location.id}>
+                  <Card key={location.id} className="border-border/60 shadow-sm transition-shadow hover:shadow-md">
                     <CardHeader className="pb-3">
                       <div className="flex items-start justify-between">
                         <div>
@@ -390,7 +391,7 @@ export default function MapPage() {
         </section>
 
         {/* Map Legend */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card>
@@ -425,7 +426,7 @@ export default function MapPage() {
         </section>
 
         {/* Rate Summary */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-10 sm:py-12 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">Rate Summary</h2>

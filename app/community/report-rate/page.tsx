@@ -46,7 +46,7 @@ export default function ReportRatePage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -54,8 +54,8 @@ export default function ReportRatePage() {
                   <MapPin className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Report Exchange Rate</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Report Exchange Rate</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Help the community by sharing rates you've seen at money changers
               </p>
               <div className="flex justify-center gap-4 mt-6">
@@ -70,7 +70,7 @@ export default function ReportRatePage() {
           </div>
         </section>
 
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
               <Card>

@@ -71,16 +71,16 @@ export default async function LiberiaMarketPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="py-12 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-10 sm:py-12 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <Badge className="mb-4" variant="secondary">
                 Auto-updating
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Liberia Market News
-              </h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              </span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Live exchange rate snapshot and verified Liberia business headlines — refreshed hourly for accuracy.
               </p>
             </div>

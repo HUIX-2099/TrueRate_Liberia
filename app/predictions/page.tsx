@@ -105,7 +105,7 @@ export default function PredictionsPage() {
             <div className="absolute bottom-0 left-1/4 h-40 w-40 rounded-full bg-secondary/10 blur-2xl" />
           </div>
           
-          <div className="container relative mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-12 md:py-16">
+          <div className="container relative mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-10 sm:py-12 md:py-16">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-4">
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
@@ -116,10 +116,10 @@ export default function PredictionsPage() {
                 <Activity className="h-3 w-3 mr-1 animate-pulse" />
                 Live ML Analysis
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 AI-Powered Rate <span className="text-primary">Predictions</span>
-              </h1>
-              <p className="text-lg text-muted-foreground text-pretty max-w-2xl mx-auto">
+              </span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-2xl mx-auto">
                 Advanced machine learning models analyze historical patterns, economic indicators, 
                 and market sentiment to forecast USD/LRD exchange rate movements.
               </p>
@@ -157,7 +157,7 @@ export default function PredictionsPage() {
         </section>
 
         {/* Main Content */}
-        <section className="py-8 md:py-12">
+        <section className="py-10 sm:py-12 md:py-12">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto space-y-8">
               
@@ -192,7 +192,7 @@ export default function PredictionsPage() {
                 <TabsContent value="signals">
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Trading Signals */}
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <TrendingUp className="h-5 w-5 text-green-500" />
@@ -222,7 +222,7 @@ export default function PredictionsPage() {
                       </CardContent>
                     </Card>
 
-                    <Card>
+                    <Card className="border-border/60 shadow-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <TrendingDown className="h-5 w-5 text-red-500" />
@@ -252,7 +252,7 @@ export default function PredictionsPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <Bell className="h-5 w-5 text-primary" />
@@ -288,7 +288,7 @@ export default function PredictionsPage() {
 
                 <TabsContent value="analysis">
               <div className="grid md:grid-cols-2 gap-6">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                         <CardTitle>Technical Indicators</CardTitle>
                         <CardDescription>Current market technical analysis</CardDescription>
@@ -316,7 +316,7 @@ export default function PredictionsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                         <CardTitle>Market Sentiment</CardTitle>
                         <CardDescription>Based on community reports and trends</CardDescription>
@@ -375,7 +375,7 @@ export default function PredictionsPage() {
               </Tabs>
 
               {/* Model Info */}
-              <Card className="border-primary/20">
+              <Card className="border-primary/30 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex gap-4">
                     <AlertCircle className="h-6 w-6 text-primary flex-shrink-0" />

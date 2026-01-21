@@ -44,7 +44,7 @@ export default function BusinessDashboardPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -52,8 +52,9 @@ export default function BusinessDashboardPage() {
                   <Briefcase className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Business Dashboard</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <Badge variant="outline" className="mb-3">For businesses</Badge>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Business Dashboard</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Professional tools for importers, exporters, and business owners
               </p>
               <div className="flex justify-center gap-3 mt-6 flex-wrap">
@@ -75,7 +76,7 @@ export default function BusinessDashboardPage() {
           </div>
         </section>
 
-        <section className="py-8 bg-background">
+        <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="tools" className="w-full">
@@ -118,7 +119,7 @@ export default function BusinessDashboardPage() {
                     <PushNotifications />
                     
                     {/* Rate Lock Alerts */}
-                    <Card>
+                    <Card className="border-border/60 shadow-sm">
                       <CardHeader>
                         <CardTitle>Rate Lock Alerts</CardTitle>
                         <CardDescription>Set target rates and get instant notifications</CardDescription>
@@ -132,7 +133,7 @@ export default function BusinessDashboardPage() {
                             </div>
                             <div>
                               <label className="text-sm font-medium">Alert Type</label>
-                              <select className="w-full p-2 border rounded-md">
+                              <select className="w-full p-2 border rounded-lg h-10 bg-background">
                                 <option>Above target</option>
                                 <option>Below target</option>
                                 <option>Exact match</option>
@@ -140,7 +141,7 @@ export default function BusinessDashboardPage() {
                             </div>
                             <div>
                               <label className="text-sm font-medium">Notification</label>
-                              <select className="w-full p-2 border rounded-md">
+                              <select className="w-full p-2 border rounded-lg h-10 bg-background">
                                 <option>Push + SMS</option>
                                 <option>Push only</option>
                                 <option>SMS only</option>
@@ -186,7 +187,7 @@ export default function BusinessDashboardPage() {
 
                 {/* Reports Tab */}
                 <TabsContent value="reports" className="space-y-6">
-                  <Card>
+                  <Card className="border-border/60 shadow-sm">
                     <CardHeader>
                       <CardTitle>Bulk Currency Conversion</CardTitle>
                       <CardDescription>Convert multiple amounts at once for invoicing and accounting</CardDescription>
@@ -236,14 +237,14 @@ export default function BusinessDashboardPage() {
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  <Card className="border-border/60 shadow-sm">
                     <CardHeader>
                       <CardTitle>Export Reports</CardTitle>
                       <CardDescription>Generate PDF and CSV reports for accounting and analysis</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-4">
-                        <Card className="border-dashed">
+                        <Card className="border-dashed border-border/60">
                           <CardContent className="pt-6 text-center">
                             <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-3" />
                             <h3 className="font-semibold mb-2">Monthly Rate Report</h3>
@@ -257,7 +258,7 @@ export default function BusinessDashboardPage() {
                           </CardContent>
                         </Card>
 
-                        <Card className="border-dashed">
+                        <Card className="border-dashed border-border/60">
                           <CardContent className="pt-6 text-center">
                             <Calculator className="h-12 w-12 text-muted-foreground mx-auto mb-3" />
                             <h3 className="font-semibold mb-2">Transaction History</h3>
@@ -271,7 +272,7 @@ export default function BusinessDashboardPage() {
                           </CardContent>
                         </Card>
 
-                        <Card className="border-dashed">
+                        <Card className="border-dashed border-border/60">
                           <CardContent className="pt-6 text-center">
                             <TrendingUp className="h-12 w-12 text-muted-foreground mx-auto mb-3" />
                             <h3 className="font-semibold mb-2">Historical Rate Reports</h3>
@@ -284,7 +285,7 @@ export default function BusinessDashboardPage() {
                           </CardContent>
                         </Card>
 
-                        <Card className="border-dashed">
+                        <Card className="border-dashed border-border/60">
                           <CardContent className="pt-6 text-center">
                             <Briefcase className="h-12 w-12 text-muted-foreground mx-auto mb-3" />
                             <h3 className="font-semibold mb-2">Quarterly Summary</h3>
@@ -304,7 +305,7 @@ export default function BusinessDashboardPage() {
 
                 {/* API Tab */}
                 <TabsContent value="api" className="space-y-6">
-                  <Card>
+                  <Card className="border-border/60 shadow-sm">
                     <CardHeader>
                       <CardTitle>API Access for Banks & Fintechs</CardTitle>
                       <CardDescription>Integrate real-time exchange rate data into your systems</CardDescription>
@@ -381,14 +382,14 @@ export default function BusinessDashboardPage() {
               {/* Pricing Section */}
               <div className="mt-12 grid md:grid-cols-2 gap-6">
                 {/* Free Tier */}
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle>Free</CardTitle>
                     <CardDescription>For individual users</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="text-4xl font-bold mb-4">
-                      $0<span className="text-lg text-muted-foreground">/month</span>
+                      $0<span className="text-base sm:text-lg text-muted-foreground">/month</span>
                     </div>
                     <div className="space-y-2 mb-6">
                       {[
@@ -409,7 +410,7 @@ export default function BusinessDashboardPage() {
                 </Card>
 
                 {/* Business Tier */}
-                <Card className="border-secondary">
+                <Card className="border-secondary/60 shadow-sm">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
@@ -424,7 +425,7 @@ export default function BusinessDashboardPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="text-4xl font-bold mb-4">
-                      $3-5<span className="text-lg text-muted-foreground">/month</span>
+                      $3-5<span className="text-base sm:text-lg text-muted-foreground">/month</span>
                     </div>
                     <div className="space-y-2 mb-6">
                       {[

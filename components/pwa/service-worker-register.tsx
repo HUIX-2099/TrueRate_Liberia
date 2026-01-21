@@ -2,9 +2,35 @@
 
 import { useEffect } from "react"
 
+type BeforeInstallPromptEvent = Event & {
+  prompt: () => Promise<void>
+  userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>
+}
+
+declare global {
+  interface Window {
+    __trueratePwaPrompt?: BeforeInstallPromptEvent | null
+  }
+}
+
 export function ServiceWorkerRegister() {
   useEffect(() => {
     if (typeof window === "undefined") return
+
+    const handleBeforeInstallPrompt = (event: Event) => {
+      event.preventDefault()
+      window.__trueratePwaPrompt = event as BeforeInstallPromptEvent
+      window.dispatchEvent(new Event("truerate:pwa-available"))
+    }
+
+    const handleAppInstalled = () => {
+      window.__trueratePwaPrompt = null
+      window.dispatchEvent(new Event("truerate:pwa-available"))
+    }
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt)
+    window.addEventListener("appinstalled", handleAppInstalled)
+
     if (!("serviceWorker" in navigator)) return
     if (process.env.NODE_ENV !== "production") return
 
@@ -26,7 +52,11 @@ export function ServiceWorkerRegister() {
 
     // Delay a bit so it doesn't block first paint
     const id = window.setTimeout(register, 1000)
-    return () => window.clearTimeout(id)
+    return () => {
+      window.clearTimeout(id)
+      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt)
+      window.removeEventListener("appinstalled", handleAppInstalled)
+    }
   }, [])
 
   return null

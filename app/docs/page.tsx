@@ -10,12 +10,12 @@ export default function DocsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background border-b border-border">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background border-b border-border">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">Data Sources & Methodology</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Powered by 100+ Trusted Data Sources</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Powered by 100+ Trusted Data Sources</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 TrueRate-Liberia aggregates exchange rate data from international financial APIs, verified money
                 changers, and community reports to provide the most accurate rates in Liberia.
               </p>
@@ -24,13 +24,16 @@ export default function DocsPage() {
         </section>
 
         {/* Data Sources Overview */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Our Data Sources</h2>
+              <div className="text-center mb-8 space-y-2">
+                <Badge variant="outline">Sources</Badge>
+                <h2 className="text-3xl font-bold">Our Data Sources</h2>
+              </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <Globe className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>International APIs</CardTitle>
@@ -61,7 +64,7 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <Building2 className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Licensed Changers</CardTitle>
@@ -93,7 +96,7 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <Users className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Community Reports</CardTitle>
@@ -125,7 +128,7 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <Database className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Financial Institutions</CardTitle>
@@ -157,7 +160,7 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <TrendingUp className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Market Data Providers</CardTitle>
@@ -193,13 +196,16 @@ export default function DocsPage() {
         </section>
 
         {/* Methodology */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8">Our Methodology</h2>
+              <div className="mb-8 space-y-2">
+                <Badge variant="outline">Methodology</Badge>
+                <h2 className="text-3xl font-bold">Our Methodology</h2>
+              </div>
 
               <div className="space-y-6">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Database className="h-5 w-5" />
@@ -222,7 +228,7 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Shield className="h-5 w-5" />
@@ -247,7 +253,7 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <TrendingUp className="h-5 w-5" />
@@ -271,7 +277,7 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <TrendingUp className="h-5 w-5" />
@@ -305,28 +311,29 @@ export default function DocsPage() {
         </section>
 
         {/* Transparency Commitment */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
+              <Badge variant="outline" className="mb-3">Transparency</Badge>
               <h2 className="text-3xl font-bold mb-6">Our Commitment to Transparency</h2>
-              <p className="text-lg text-muted-foreground mb-8 text-pretty">
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 text-pretty">
                 We believe Liberians deserve access to accurate, unbiased exchange rate information. That's why we've
                 made our methodology completely transparent and our data sources verifiable.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-4xl font-bold text-primary mb-2">100+</div>
                     <div className="text-sm text-muted-foreground">Data Sources</div>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-4xl font-bold text-primary mb-2">99.2%</div>
                     <div className="text-sm text-muted-foreground">Accuracy Rate</div>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-4xl font-bold text-primary mb-2">60s</div>
                     <div className="text-sm text-muted-foreground">Update Interval</div>

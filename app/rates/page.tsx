@@ -127,22 +127,22 @@ export default function RatesPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">Live Rates</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">USD to LRD Live Rate</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">USD to LRD Live Rate</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Real-time updates from verified changers across Liberia.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-10 sm:py-12 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
-              <Card className="border-primary/20">
+              <Card className="border-primary/30 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl">Current USD/LRD</CardTitle>
                   <CardDescription>Updated {lastUpdate}</CardDescription>
@@ -155,7 +155,7 @@ export default function RatesPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl">Explore the Market</CardTitle>
                   <CardDescription>Compare locations and trends</CardDescription>
@@ -184,10 +184,10 @@ export default function RatesPage() {
           </div>
         </section>
 
-        <section className="py-12 bg-muted/30">
+        <section className="py-10 sm:py-12 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid gap-6 lg:grid-cols-3">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Daily Change</CardTitle>
                   <CardDescription>Compared to previous day</CardDescription>
@@ -214,7 +214,7 @@ export default function RatesPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Mini Rate Trend</CardTitle>
                   <CardDescription>Last 12 updates</CardDescription>
@@ -238,7 +238,7 @@ export default function RatesPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Top Changers</CardTitle>
                   <CardDescription>Highest rated today</CardDescription>
@@ -262,7 +262,7 @@ export default function RatesPage() {
                   )}
                 </CardContent>
               </Card>
-              <Card className="lg:col-span-3">
+              <Card className="lg:col-span-3 border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Financial Recommendation</CardTitle>
                   <CardDescription>Based on today’s rate movement</CardDescription>

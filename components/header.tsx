@@ -40,8 +40,8 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-        <div className="container mx-auto flex h-14 md:h-16 items-center justify-between px-4 gap-3">
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
+      <div className="container mx-auto flex h-16 md:h-[72px] items-center justify-between px-4 gap-3">
           <Link href="/" className="flex items-center gap-2 min-w-0" aria-label="TrueRate Liberia home">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
               <span className="text-lg font-bold text-primary-foreground">TR</span>
@@ -60,22 +60,28 @@ export function Header() {
 
 
 
-          <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6">
             <Link
               href="/rates"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Rates
             </Link>
             <Link
               href="/converter"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Converter
             </Link>
+          <Link
+            href="/map"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Nearby
+          </Link>
             <Link
               href="/analytics"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Analytics
             </Link>
@@ -105,12 +111,15 @@ export function Header() {
             </Link>
           </nav>
 
-          <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2">
             <ThemeToggle />
 
-            <Button variant="ghost" size="icon" className="hidden md:flex" aria-label="Notifications">
+          <Button variant="ghost" size="icon" className="hidden md:flex" aria-label="Notifications">
               <Bell className="h-5 w-5" />
             </Button>
+          <Button asChild className="hidden lg:flex">
+            <Link href="/map">Find Nearest</Link>
+          </Button>
             {user ? (
               <Link href="/dashboard">
                 <Button variant="ghost" size="icon" className="hidden md:flex" aria-label="Open dashboard">

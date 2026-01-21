@@ -160,7 +160,7 @@ export default function ForumsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -169,10 +169,10 @@ export default function ForumsPage() {
                 </div>
               </div>
               <Badge className="mb-4">Community Forums</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Discussion Forums
-              </h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              </span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Share tips, report scams, discuss market trends, and connect with fellow Liberians
               </p>
             </div>
@@ -180,7 +180,7 @@ export default function ForumsPage() {
         </section>
 
         {/* Forum Content */}
-        <section className="py-8">
+        <section className="py-6 sm:py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Search and New Post */}

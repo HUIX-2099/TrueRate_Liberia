@@ -43,19 +43,19 @@ export default async function PriceIndexPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">Official CPI</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Liberia Price Index</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Liberia Price Index</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Official Consumer Price Index (CPI) data and inflation trends for Liberia, refreshed daily from LISGIS.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-10 sm:py-12 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid gap-6 md:grid-cols-3">
               <Card>
@@ -111,7 +111,7 @@ export default async function PriceIndexPage() {
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-10 sm:py-12 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <PriceIndex rate={priceIndexRate} />
@@ -119,7 +119,7 @@ export default async function PriceIndexPage() {
           </div>
         </section>
 
-        <section className="py-12 bg-muted/30">
+        <section className="py-10 sm:py-12 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card>

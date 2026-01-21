@@ -193,8 +193,8 @@ export function BestRateWidget() {
   if (!bestRate) return null
 
   return (
-    <Card className={`border-2 border-secondary overflow-hidden ${isMarketWomanMode ? 'bg-secondary/5' : ''}`}>
-      <div className="bg-secondary px-4 py-2 flex items-center justify-between">
+    <Card className={`border-2 border-secondary/60 overflow-hidden shadow-sm ${isMarketWomanMode ? 'bg-secondary/5' : ''}`}>
+      <div className="bg-secondary/90 px-4 py-2 flex items-center justify-between">
         <span className="text-secondary-foreground font-semibold flex items-center gap-2">
           <TrendingUp className="h-4 w-4" />
           {t('widget.bestRate')}
@@ -205,10 +205,10 @@ export function BestRateWidget() {
       </div>
       
       <CardContent className={`p-6 ${isMarketWomanMode ? 'p-8' : ''}`}>
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           {/* Main Rate Display */}
           <div className="flex-1">
-            <div className={`${isMarketWomanMode ? 'text-7xl' : 'text-5xl'} font-bold text-secondary mb-2`}>
+            <div className={`${isMarketWomanMode ? 'text-7xl' : 'text-5xl'} font-bold text-secondary mb-2 tracking-tight`}>
               {bestRate.rate.toFixed(isMarketWomanMode ? 0 : 2)} <span className="text-2xl text-muted-foreground">LRD</span>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
@@ -219,7 +219,7 @@ export function BestRateWidget() {
             </p>
             
             {/* Changer Info */}
-            <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+            <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-xl border border-border/50">
               <MapPin className="h-5 w-5 text-primary mt-0.5" />
               <div>
                 <div className="font-semibold">{bestRate.changerName}</div>
@@ -239,8 +239,13 @@ export function BestRateWidget() {
                     )}
                   </div>
                 )}
-                <div className="text-sm text-secondary font-medium mt-1">
-                  {bestRate.distanceMinutes} {t('widget.distance')}
+                <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+                  <Badge variant="secondary" className="gap-1">
+                    {bestRate.distanceMinutes} min
+                  </Badge>
+                  <Badge variant="outline" className="gap-1">
+                    {bestRate.distanceKm.toFixed(1)} km
+                  </Badge>
                 </div>
               </div>
             </div>

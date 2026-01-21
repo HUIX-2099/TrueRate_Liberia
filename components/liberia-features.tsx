@@ -19,12 +19,16 @@ import {
   ShoppingCart,
   Truck,
   Building,
+  BrickWall,
+  Construction,
   Fuel,
+  Flame,
   Wheat,
   Newspaper,
   Clock,
   MapPin,
   DollarSign,
+  Droplet,
   ArrowRight,
   CheckCircle2,
   Send,
@@ -55,10 +59,10 @@ export function PriceIndex({ rate }: { rate: number }) {
     { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 15, priceLRD: 15 * rate, change: 1.8, category: "food" },
     { name: "Gallon of Gas", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.02, priceLRD: 4.02 * rate, change: -0.5, category: "fuel" },
     { name: "Gallon of Diesel", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.33, priceLRD: 4.33 * rate, change: 0.3, category: "fuel" },
-    { name: "Cement (50kg)", icon: <Building className="h-4 w-4" />, priceUSD: 8, priceLRD: 8 * rate, change: 1.2, category: "construction" },
-    { name: "Steel Rods (bundle)", icon: <Building className="h-4 w-4" />, priceUSD: 400, priceLRD: 400 * rate, change: 3.5, category: "construction" },
-    { name: "Palm Oil (gallon)", icon: <ShoppingCart className="h-4 w-4" />, priceUSD: 1000 / rate, priceLRD: 1000, change: -1.0, category: "food" },
-    { name: "Cooking Gas (14kg)", icon: <Fuel className="h-4 w-4" />, priceUSD: 20, priceLRD: 20 * rate, change: 0, category: "fuel" },
+    { name: "Cement (50kg)", icon: <BrickWall className="h-4 w-4" />, priceUSD: 8, priceLRD: 8 * rate, change: 1.2, category: "construction" },
+    { name: "Steel Rods (bundle)", icon: <Construction className="h-4 w-4" />, priceUSD: 400, priceLRD: 400 * rate, change: 3.5, category: "construction" },
+    { name: "Palm Oil (gallon)", icon: <Droplet className="h-4 w-4" />, priceUSD: 1000 / rate, priceLRD: 1000, change: -1.0, category: "food" },
+    { name: "Cooking Gas (14kg)", icon: <Flame className="h-4 w-4" />, priceUSD: 20, priceLRD: 20 * rate, change: 0, category: "fuel" },
   ]
 
   const [filter, setFilter] = useState("all")
@@ -68,9 +72,9 @@ export function PriceIndex({ rate }: { rate: number }) {
     : prices.filter(p => p.category === filter)
 
   return (
-    <Card>
+    <Card className="border-border/60 shadow-sm">
       <CardHeader>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <CardTitle className="flex items-center gap-2">
               <ShoppingCart className="h-5 w-5" />
@@ -78,9 +82,10 @@ export function PriceIndex({ rate }: { rate: number }) {
             </CardTitle>
             <CardDescription>Real-time prices of essential goods</CardDescription>
           </div>
-          <Badge variant="secondary">
-            Updated Today
-          </Badge>
+          <div className="flex items-center gap-2">
+            <Badge variant="outline">Updated Today</Badge>
+            <Badge variant="secondary">Live</Badge>
+          </div>
         </div>
       </CardHeader>
       <CardContent>
@@ -93,26 +98,26 @@ export function PriceIndex({ rate }: { rate: number }) {
           </TabsList>
         </Tabs>
         
-        <div className="space-y-3">
+        <div className="space-y-2">
           {filteredPrices.map((item) => (
             <div 
               key={item.name} 
-              className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+              className="flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-colors hover:bg-muted"
             >
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-lg bg-background flex items-center justify-center">
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
                   {item.icon}
                 </div>
-                <div>
-                  <div className="font-medium text-sm">{item.name}</div>
+                <div className="min-w-0">
+                  <div className="font-medium text-sm sm:text-base truncate">{item.name}</div>
                   <div className="text-xs text-muted-foreground">
                     ${item.priceUSD.toFixed(2)} USD
                   </div>
                 </div>
               </div>
-              <div className="text-right">
-                <div className="font-bold">{item.priceLRD.toLocaleString()} LRD</div>
-                <div className={`text-xs flex items-center gap-1 justify-end ${
+              <div className="text-right shrink-0">
+                <div className="font-bold text-sm sm:text-base">{item.priceLRD.toLocaleString()} LRD</div>
+                <div className={`text-[11px] sm:text-xs flex items-center gap-1 justify-end ${
                   item.change > 0 ? "text-red-500" : item.change < 0 ? "text-green-500" : "text-muted-foreground"
                 }`}>
                   {item.change > 0 ? <TrendingUp className="h-3 w-3" /> : item.change < 0 ? <TrendingDown className="h-3 w-3" /> : <Minus className="h-3 w-3" />}

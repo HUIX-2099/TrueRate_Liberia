@@ -1,13 +1,18 @@
 import Link from "next/link"
+import { Facebook, Mail, Phone, Twitter } from "lucide-react"
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { InstallPromptButton } from "@/components/pwa/install-prompt-button"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-muted/30">
+    <footer className="border-t border-border/60 bg-muted/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-4 text-center md:text-left">
+        <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
           <div className="space-y-3">
             <div className="flex items-center gap-2 justify-center md:justify-start">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-sm">
                 <span className="text-sm font-bold text-primary-foreground">TR</span>
               </div>
               <span className="text-lg font-bold">TrueRate Liberia</span>
@@ -15,6 +20,38 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               Liberia's most accurate platform for real-time currency exchange rates and AI-powered predictions.
             </p>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+              <Badge variant="outline">Live USD/LRD</Badge>
+              <Badge variant="secondary">Verified changers</Badge>
+            </div>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2">
+              <Button asChild size="sm">
+                <Link href="/map">Find Nearest</Link>
+              </Button>
+              <Button asChild size="sm" variant="outline">
+                <Link href="/converter">Convert Now</Link>
+              </Button>
+            </div>
+            <div className="flex items-center justify-center md:justify-start gap-3 pt-2">
+              <a
+                href="https://twitter.com/TrueRateLiberia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="TrueRate Liberia on X"
+              >
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a
+                href="https://facebook.com/TrueRateLiberia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="TrueRate Liberia on Facebook"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+            </div>
             <p className="text-xs text-muted-foreground mt-2">
               A product by{" "}
               <a
@@ -80,17 +117,30 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-foreground">Contact</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>SMS: 1234 (RATE)</li>
-              <li>Email: info@truerate.lr</li>
-              <li>Monrovia, Liberia</li>
-            </ul>
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold text-foreground">Stay Updated</h3>
+            <div className="rounded-xl border border-border/60 bg-background/70 p-4 text-sm">
+              <div className="font-semibold">Mobile App Access</div>
+              <p className="mt-2 text-muted-foreground">
+                Request access to the mobile experience for faster, on-the-go rates.
+              </p>
+              <InstallPromptButton label="Request App Access" />
+            </div>
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="flex items-center justify-center md:justify-start gap-2">
+                <Phone className="h-4 w-4" />
+                SMS: 1234 (RATE)
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-2">
+                <Mail className="h-4 w-4" />
+                info@truerate.lr
+              </div>
+              <div className="text-center md:text-left">Online-only for now</div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 pt-8 border-t border-border/60 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
             <p className="text-sm text-muted-foreground">© 2025 TrueRate-Liberia. All rights reserved.</p>
             <p className="text-xs text-muted-foreground">

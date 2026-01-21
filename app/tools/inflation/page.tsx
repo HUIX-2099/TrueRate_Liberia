@@ -56,7 +56,7 @@ export default function InflationTrackerPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -64,8 +64,8 @@ export default function InflationTrackerPage() {
                   <TrendingDown className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Inflation-Adjusted Rate Tracker</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Inflation-Adjusted Rate Tracker</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 See how inflation affects your purchasing power over time in Liberia
               </p>
             </div>
@@ -73,7 +73,7 @@ export default function InflationTrackerPage() {
         </section>
 
         {/* Calculator */}
-        <section className="py-8 bg-background">
+        <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card>

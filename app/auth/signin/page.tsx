@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { LogIn } from "lucide-react"
+import { LogIn, MapPin, ShieldCheck, TrendingUp } from "lucide-react"
 import { useState } from "react"
 import { useAuth } from "@/lib/auth/auth-context"
 import { useRouter } from "next/navigation"
@@ -50,57 +50,92 @@ export default function SignInPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 flex items-center justify-center py-16 bg-muted/30">
+      <main className="py-12 sm:py-14 md:py-16 flex-1 flex items-center justify-center bg-gradient-to-b from-muted/40 to-background">
         <div className="container mx-auto px-4">
-          <Card className="max-w-md mx-auto">
-            <CardHeader className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  <LogIn className="h-6 w-6 text-primary" />
+          <div className="grid gap-8 md:grid-cols-2 items-center max-w-5xl mx-auto">
+            <div className="space-y-6 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
+                <ShieldCheck className="h-3.5 w-3.5 text-primary" />
+                Secure access
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
+                Sign in to stay ahead of the USD/LRD market
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
+                Track verified rates, compare changers nearby, and get smarter insights—all in one dashboard.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="flex items-center gap-3 rounded-xl border border-border/60 bg-background/70 px-4 py-3 text-sm">
+                  <TrendingUp className="h-4 w-4 text-primary" />
+                  Live analytics and trends
+                </div>
+                <div className="flex items-center gap-3 rounded-xl border border-border/60 bg-background/70 px-4 py-3 text-sm">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  Nearest changer alerts
                 </div>
               </div>
-              <CardTitle className="text-2xl">Welcome Back</CardTitle>
-              <CardDescription>Sign in to access your dashboard and community features</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="john@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                  />
+            </div>
+
+            <Card className="border-border/60 shadow-sm">
+              <CardHeader className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <LogIn className="h-6 w-6 text-primary" />
+                  </div>
                 </div>
+                <CardTitle className="text-2xl">Welcome Back</CardTitle>
+                <CardDescription>Sign in to access your dashboard and community features</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="john@example.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder="••••••••"
-                    value={formData.password}
-                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    required
-                  />
+                  <div className="space-y-2">
+                    <Label htmlFor="password">Password</Label>
+                    <Input
+                      id="password"
+                      type="password"
+                      placeholder="••••••••"
+                      value={formData.password}
+                      onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm">
+                    <label className="flex items-center gap-2 text-muted-foreground">
+                      <input type="checkbox" className="h-4 w-4 rounded border-border/60" />
+                      Remember me
+                    </label>
+                    <Link href="/contact" className="text-primary hover:underline font-medium">
+                      Forgot password?
+                    </Link>
+                  </div>
+
+                  <Button type="submit" className="w-full" disabled={loading}>
+                    {loading ? "Signing In..." : "Sign In"}
+                  </Button>
+                </form>
+
+                <div className="mt-6 text-center text-sm">
+                  <span className="text-muted-foreground">Don't have an account? </span>
+                  <Link href="/auth/signup" className="text-primary hover:underline font-medium">
+                    Sign Up
+                  </Link>
                 </div>
-
-                <Button type="submit" className="w-full" disabled={loading}>
-                  {loading ? "Signing In..." : "Sign In"}
-                </Button>
-              </form>
-
-              <div className="mt-6 text-center text-sm">
-                <span className="text-muted-foreground">Don't have an account? </span>
-                <Link href="/auth/signup" className="text-primary hover:underline font-medium">
-                  Sign Up
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
       <Footer />

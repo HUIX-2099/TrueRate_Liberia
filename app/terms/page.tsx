@@ -13,14 +13,14 @@ export default function TermsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4">Terms & Conditions</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Terms of Service for TrueRate-Liberia
-              </h1>
-              <p className="text-xl text-muted-foreground text-pretty">
+              </span></h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
                 These Terms govern your use of the website, tools, community features, and services provided by
                 TrueRate-Liberia.
               </p>
@@ -30,10 +30,10 @@ export default function TermsPage() {
         </section>
 
         {/* Summary */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <div className="flex items-center gap-2">
                     <FileText className="h-6 w-6 text-primary" />
@@ -72,10 +72,10 @@ export default function TermsPage() {
         </section>
 
         {/* Eligibility */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Eligibility & Account Responsibility</CardTitle>
                   <CardDescription>You are responsible for your account activity.</CardDescription>
@@ -88,7 +88,7 @@ export default function TermsPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Service Availability</CardTitle>
                   <CardDescription>We aim for reliability, but outages can happen.</CardDescription>
@@ -105,11 +105,14 @@ export default function TermsPage() {
         </section>
 
         {/* Acceptable Use */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-balance">Acceptable Use</h2>
-              <Card>
+              <div className="text-center mb-8 space-y-2">
+                <Badge variant="outline">Acceptable use</Badge>
+                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Acceptable Use</h2>
+              </div>
+              <Card className="border-border/60 shadow-sm">
                 <CardContent className="pt-6">
                   <div className="space-y-4 text-muted-foreground">
                     <p>
@@ -130,10 +133,10 @@ export default function TermsPage() {
         </section>
 
         {/* Rates Disclaimer */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Rate Accuracy Disclaimer</CardTitle>
                   <CardDescription>Rates are informative, not financial advice.</CardDescription>
@@ -146,7 +149,7 @@ export default function TermsPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Third-Party Links</CardTitle>
                   <CardDescription>External services are outside our control.</CardDescription>
@@ -163,11 +166,14 @@ export default function TermsPage() {
         </section>
 
         {/* Intellectual Property */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-balance">Intellectual Property</h2>
-              <Card>
+              <div className="text-center mb-8 space-y-2">
+                <Badge variant="outline">Intellectual property</Badge>
+                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Intellectual Property</h2>
+              </div>
+              <Card className="border-border/60 shadow-sm">
                 <CardContent className="pt-6">
                   <p className="text-muted-foreground leading-relaxed">
                     TrueRate-Liberia and its content, branding, and software are protected by intellectual property
@@ -180,10 +186,10 @@ export default function TermsPage() {
         </section>
 
         {/* Privacy */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <div className="flex items-center gap-2">
                     <Shield className="h-6 w-6 text-primary" />
@@ -201,7 +207,7 @@ export default function TermsPage() {
                   </Button>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <div className="flex items-center gap-2">
                     <Globe className="h-6 w-6 text-primary" />
@@ -220,11 +226,12 @@ export default function TermsPage() {
         </section>
 
         {/* Termination */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Account Termination</h2>
-              <p className="text-lg text-muted-foreground mb-10 text-pretty">
+              <Badge variant="outline" className="mb-3">Termination</Badge>
+              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-balance">Account Termination</h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-10 text-pretty">
                 We may suspend or terminate accounts that violate these Terms, harm community trust, or pose security
                 risks. You can also close your account at any time by contacting support.
               </p>
@@ -236,10 +243,10 @@ export default function TermsPage() {
         </section>
 
         {/* Changes */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle>Changes to These Terms</CardTitle>
                   <CardDescription>We may update terms as we evolve.</CardDescription>

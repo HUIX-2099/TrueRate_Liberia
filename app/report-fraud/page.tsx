@@ -45,9 +45,9 @@ export default function ReportFraudPage() {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center py-16">
+        <main className="py-12 sm:py-14 md:py-16 flex-1 flex items-center justify-center bg-gradient-to-b from-muted/40 to-background">
           <div className="container mx-auto px-4">
-            <Card className="max-w-2xl mx-auto text-center">
+            <Card className="max-w-2xl mx-auto text-center border-border/60 shadow-sm">
               <CardHeader>
                 <div className="flex justify-center mb-4">
                   <div className="h-16 w-16 rounded-full bg-secondary/20 flex items-center justify-center">
@@ -87,7 +87,7 @@ export default function ReportFraudPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-destructive/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-destructive/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -95,8 +95,9 @@ export default function ReportFraudPage() {
                   <AlertTriangle className="h-8 w-8 text-destructive" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Report Fraudulent Activity</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              <Badge variant="outline" className="mb-3">Safety first</Badge>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Report Fraudulent Activity</span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Help us protect the community by reporting suspicious money changers, unfair rates, counterfeit
                 currency, or other fraudulent activities.
               </p>
@@ -105,10 +106,10 @@ export default function ReportFraudPage() {
         </section>
 
         {/* Alert Banner */}
-        <section className="py-8 bg-muted/30">
+        <section className="py-6 sm:py-8 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="border-l-4 border-l-destructive">
+              <Card className="border-l-4 border-l-destructive border-border/60 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex gap-4">
                     <Shield className="h-6 w-6 text-destructive flex-shrink-0" />
@@ -127,10 +128,10 @@ export default function ReportFraudPage() {
         </section>
 
         {/* Form Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <Card>
+              <Card className="border-border/60 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl">Fraud Report Form</CardTitle>
                   <CardDescription>
@@ -258,12 +259,15 @@ export default function ReportFraudPage() {
         </section>
 
         {/* Recent Alerts */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold mb-6">Recent Fraud Alerts</h2>
+              <div className="space-y-2 mb-6">
+                <Badge variant="outline">Recent alerts</Badge>
+                <h2 className="text-2xl font-bold">Recent Fraud Alerts</h2>
+              </div>
               <div className="space-y-4">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <Badge variant="destructive">Active Alert</Badge>
@@ -279,7 +283,7 @@ export default function ReportFraudPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <Badge variant="secondary">Resolved</Badge>

@@ -174,74 +174,80 @@ export function MarketLeaderboard() {
 
   if (loading) {
     return (
-      <Card className="animate-pulse">
+      <Card className="animate-pulse border-border/60 shadow-sm">
         <CardContent className="p-6">
-          <div className="h-96 bg-muted rounded-lg" />
+          <div className="h-96 bg-muted rounded-xl" />
         </CardContent>
       </Card>
     )
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <CardTitle className="flex items-center gap-2">
-              <Crown className="h-5 w-5 text-yellow-500" />
+    <Card className="border-border/60 shadow-sm">
+      <CardHeader className="px-4 sm:px-6 py-4 sm:py-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-2">
+            <Badge variant="outline" className="w-fit text-[11px] sm:text-xs">
+              Live leaderboard
+            </Badge>
+            <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+              <Crown className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-500" />
               Top Best Rates in Monrovia
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="text-xs sm:text-sm">
               Updated every 15 minutes • {leaderboard.length} verified changers
             </CardDescription>
           </div>
-          <Badge variant="outline" className="gap-1 w-fit">
+          <Badge variant="outline" className="gap-1 w-fit text-[11px] sm:text-xs">
             <Clock className="h-3 w-3" />
             {lastUpdate.toLocaleTimeString()}
           </Badge>
         </div>
       </CardHeader>
       
-      <CardContent>
-        <Tabs defaultValue="rate" className="space-y-4">
+      <CardContent className="px-4 sm:px-6">
+        <Tabs defaultValue="rate" className="space-y-3 sm:space-y-4">
           <TabsList className="w-full flex flex-nowrap overflow-x-auto gap-2 pb-1">
-            <TabsTrigger value="rate" className="whitespace-nowrap">Best Rates</TabsTrigger>
-            <TabsTrigger value="volume" className="whitespace-nowrap">Highest Volume</TabsTrigger>
-            <TabsTrigger value="rating" className="whitespace-nowrap">Top Rated</TabsTrigger>
+            <TabsTrigger value="rate" className="whitespace-nowrap text-xs sm:text-sm">Best Rates</TabsTrigger>
+            <TabsTrigger value="volume" className="whitespace-nowrap text-xs sm:text-sm">Highest Volume</TabsTrigger>
+            <TabsTrigger value="rating" className="whitespace-nowrap text-xs sm:text-sm">Top Rated</TabsTrigger>
           </TabsList>
 
           <TabsContent value="rate" className="space-y-2">
             {leaderboard.map((changer) => (
               <div 
                 key={changer.id}
-                className={`p-4 border rounded-lg transition-all hover:shadow-md cursor-pointer ${getRankBg(changer.rank)}`}
+                className={`rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-all hover:shadow-md ${getRankBg(changer.rank)}`}
               >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shrink-0">
                     {getRankIcon(changer.rank)}
                   </div>
                   
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <h4 className="font-semibold truncate">{changer.name}</h4>
+                      <h4 className="font-semibold truncate text-sm sm:text-base">{changer.name}</h4>
                       {changer.verified && (
                         <Badge variant="secondary" className="text-xs shrink-0">✓</Badge>
                       )}
                     </div>
-                    <div className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
-                      <MapPin className="h-3 w-3" />
-                      {changer.location}
-                      <span className="mx-1">•</span>
-                      <Star className="h-3 w-3 fill-secondary text-secondary" />
-                      {changer.rating}
+                    <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                      <span className="inline-flex items-center gap-1">
+                        <MapPin className="h-3 w-3" />
+                        {changer.location}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <Star className="h-3 w-3 fill-secondary text-secondary" />
+                        {changer.rating}
+                      </span>
                     </div>
                   </div>
                   
                   <div className="text-left sm:text-right">
-                    <div className={`${isMarketWomanMode ? 'text-2xl' : 'text-xl'} font-bold ${changer.rank <= 3 ? 'text-secondary' : ''}`}>
+                    <div className={`${isMarketWomanMode ? 'text-2xl' : 'text-lg sm:text-xl'} font-bold ${changer.rank <= 3 ? 'text-secondary' : ''}`}>
                       {changer.rate.toFixed(2)}
                     </div>
-                    <div className={`text-xs flex items-center justify-start sm:justify-end gap-1 ${
+                    <div className={`text-[11px] sm:text-xs flex items-center justify-start sm:justify-end gap-1 ${
                       changer.rateChange > 0 ? 'text-secondary' : 
                       changer.rateChange < 0 ? 'text-destructive' : 'text-muted-foreground'
                     }`}>
@@ -261,23 +267,23 @@ export function MarketLeaderboard() {
             {[...leaderboard].sort((a, b) => b.volume24h - a.volume24h).map((changer, idx) => (
               <div 
                 key={changer.id}
-                className="p-4 border rounded-lg"
+                className="rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-all hover:shadow-sm"
               >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
-                    <span className="text-lg font-bold text-muted-foreground">{idx + 1}</span>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shrink-0">
+                    <span className="text-sm sm:text-lg font-bold text-muted-foreground">{idx + 1}</span>
                   </div>
                   
                   <div className="flex-1">
-                    <h4 className="font-semibold">{changer.name}</h4>
-                    <div className="text-sm text-muted-foreground">{changer.location}</div>
+                    <h4 className="font-semibold text-sm sm:text-base">{changer.name}</h4>
+                    <div className="text-xs sm:text-sm text-muted-foreground">{changer.location}</div>
                   </div>
                   
                   <div className="text-left sm:text-right">
-                    <div className="text-lg font-bold text-primary">
+                    <div className="text-base sm:text-lg font-bold text-primary">
                       ${changer.volume24h.toLocaleString()}
                     </div>
-                    <div className="text-xs text-muted-foreground">24h volume</div>
+                    <div className="text-[11px] sm:text-xs text-muted-foreground">24h volume</div>
                   </div>
                 </div>
               </div>
@@ -288,24 +294,24 @@ export function MarketLeaderboard() {
             {[...leaderboard].sort((a, b) => b.rating - a.rating).map((changer, idx) => (
               <div 
                 key={changer.id}
-                className="p-4 border rounded-lg"
+                className="rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-all hover:shadow-sm"
               >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
-                    <span className="text-lg font-bold text-muted-foreground">{idx + 1}</span>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shrink-0">
+                    <span className="text-sm sm:text-lg font-bold text-muted-foreground">{idx + 1}</span>
                   </div>
                   
                   <div className="flex-1">
-                    <h4 className="font-semibold">{changer.name}</h4>
-                    <div className="text-sm text-muted-foreground">{changer.location}</div>
+                    <h4 className="font-semibold text-sm sm:text-base">{changer.name}</h4>
+                    <div className="text-xs sm:text-sm text-muted-foreground">{changer.location}</div>
                   </div>
                   
                   <div className="text-left sm:text-right">
-                    <div className="flex items-center gap-1 text-lg font-bold">
-                      <Star className="h-5 w-5 fill-secondary text-secondary" />
+                    <div className="flex items-center gap-1 text-base sm:text-lg font-bold">
+                      <Star className="h-4 w-4 sm:h-5 sm:w-5 fill-secondary text-secondary" />
                       {changer.rating}
                     </div>
-                    <div className="text-xs text-muted-foreground">{changer.rate.toFixed(2)} LRD</div>
+                    <div className="text-[11px] sm:text-xs text-muted-foreground">{changer.rate.toFixed(2)} LRD</div>
                   </div>
                 </div>
               </div>
@@ -314,11 +320,11 @@ export function MarketLeaderboard() {
         </Tabs>
 
         {/* Refresh Button */}
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center pt-3 sm:pt-4">
           <Button 
             variant="outline" 
             size="sm" 
-            className="gap-2"
+            className="gap-2 text-xs sm:text-sm"
             onClick={() => setLastUpdate(new Date())}
           >
             <RefreshCw className="h-4 w-4" />

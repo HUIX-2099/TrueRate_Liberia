@@ -33,7 +33,7 @@ export default function CommunityPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-4">
@@ -42,10 +42,10 @@ export default function CommunityPage() {
                 </div>
               </div>
               <Badge className="mb-4">Community Hub</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Built by the Community, for the Community
-              </h1>
-              <p className="text-lg text-muted-foreground text-pretty">
+              </span></h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Join thousands of Liberians helping each other get fair exchange rates, spot fraud, and share knowledge.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mt-6">
@@ -65,11 +65,11 @@ export default function CommunityPage() {
         </section>
 
         {/* Community Stats */}
-        <section className="py-8 bg-background">
+        <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-1">50,234</div>
@@ -77,7 +77,7 @@ export default function CommunityPage() {
                     </div>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-1">15,892</div>
@@ -85,7 +85,7 @@ export default function CommunityPage() {
                     </div>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-1">8,456</div>
@@ -93,7 +93,7 @@ export default function CommunityPage() {
                     </div>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-1">98.5%</div>
@@ -107,7 +107,7 @@ export default function CommunityPage() {
         </section>
 
         {/* Main Content */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="reports" className="space-y-6">
@@ -142,7 +142,7 @@ export default function CommunityPage() {
                       { location: "Paynesville", rate: 198.5, user: "Mary L.", verified: true, time: "1 hour ago", points: 10 },
                       { location: "Duala Market", rate: 199.0, user: "James D.", verified: true, time: "2 hours ago", points: 10 },
                     ].map((report, index) => (
-                      <Card key={index}>
+                      <Card key={index} className="border-border/60 shadow-sm">
                         <CardContent className="p-6">
                           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                             <div className="flex items-start gap-4 flex-1">
@@ -242,7 +242,7 @@ export default function CommunityPage() {
                         helpful: 12,
                       },
                     ].map((review, index) => (
-                      <Card key={index}>
+                      <Card key={index} className="border-border/60 shadow-sm">
                         <CardContent className="p-6">
                           <div className="flex flex-col sm:flex-row items-start gap-4">
                             <Avatar>
@@ -293,7 +293,7 @@ export default function CommunityPage() {
                   </div>
 
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <Card className="border-secondary">
+                    <Card className="border-secondary/60 shadow-sm">
                       <CardContent className="pt-6 text-center">
                         <div className="flex justify-center mb-4">
                           <div className="h-16 w-16 rounded-full bg-secondary/20 flex items-center justify-center">
@@ -312,7 +312,7 @@ export default function CommunityPage() {
                       </CardContent>
                     </Card>
 
-                    <Card>
+                    <Card className="border-border/60 shadow-sm">
                       <CardContent className="pt-6 text-center">
                         <div className="flex justify-center mb-4">
                           <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
@@ -331,7 +331,7 @@ export default function CommunityPage() {
                       </CardContent>
                     </Card>
 
-                    <Card>
+                    <Card className="border-border/60 shadow-sm">
                       <CardContent className="pt-6 text-center">
                         <div className="flex justify-center mb-4">
                           <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
@@ -351,7 +351,7 @@ export default function CommunityPage() {
                     </Card>
                   </div>
 
-                  <Card>
+                  <Card className="border-border/60 shadow-sm">
                     <CardHeader>
                       <CardTitle>Full Leaderboard</CardTitle>
                     </CardHeader>
@@ -401,7 +401,7 @@ export default function CommunityPage() {
                   <div className="grid lg:grid-cols-2 gap-6">
                     <ReferralProgram />
                     
-                    <Card>
+                    <Card className="border-border/60 shadow-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <Gift className="h-5 w-5 text-secondary" />
@@ -457,12 +457,15 @@ export default function CommunityPage() {
         </section>
 
         {/* How it Works */}
-        <section className="py-16 bg-background">
+        <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">How Community Features Work</h2>
+              <div className="text-center mb-8 space-y-2">
+                <Badge variant="outline">How it works</Badge>
+                <h2 className="text-3xl font-bold">How Community Features Work</h2>
+              </div>
               <div className="grid md:grid-cols-3 gap-6">
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <MapPin className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Submit Rates</CardTitle>
@@ -475,7 +478,7 @@ export default function CommunityPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <Star className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Write Reviews</CardTitle>
@@ -488,7 +491,7 @@ export default function CommunityPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-border/60 shadow-sm">
                   <CardHeader>
                     <AlertTriangle className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Report Fraud</CardTitle>
