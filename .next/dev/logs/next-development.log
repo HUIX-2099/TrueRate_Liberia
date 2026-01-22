@@ -460,3 +460,33 @@ All exports of the module are statically known (It doesn't have dynamic exports)
 [00:16:08.598] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
 [00:16:08.598] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
 [00:16:08.598] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:23:19.854] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:19.878] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:19.908] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:19.939] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:19.960] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:19.982] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:20.008] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:20.029] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:20.043] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:17:08.574] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:17:08.576] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:17:08.576] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:17:08.576] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:17:08.588] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:17:08.588] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:17:08.588] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:17:08.588] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:17:08.603] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:17:08.603] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:17:08.603] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:17:08.603] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:24:19.802] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.842] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.859] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.884] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.902] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.926] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.952] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.973] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:19.987] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
