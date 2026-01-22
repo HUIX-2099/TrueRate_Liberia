@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import * as XLSX from "xlsx"
-import cheerio from "cheerio"
+import * as cheerio from "cheerio"
 
 const LISGIS_URL = "https://lisgis.gov.lr/pricestats.php"
 const EXCEL_REVALIDATE_SECONDS = 2592000

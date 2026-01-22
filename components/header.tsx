@@ -9,10 +9,12 @@ import {
   Bell,
   BellRing,
   Calculator,
+  Crown,
   LogIn,
   MapPin,
   MapPinned,
   Menu,
+  MessageSquare,
   Newspaper,
   Shield,
   ShoppingCart,
@@ -35,14 +37,12 @@ const HeaderComponent = () => {
 
   // Memoize navigation items to prevent unnecessary re-renders
   const navigationItems = useMemo(() => [
-    { href: "/rates", label: "Rates" },
-    { href: "/converter", label: "Converter" },
-    { href: "/map", label: "Nearby" },
-    { href: "/analytics", label: "Analytics" },
-    { href: "/predictions", label: "Predictions" },
-    { href: "/business", label: "Business" },
-    { href: "/forums", label: "Forums" },
-    { href: "/community", label: "Community" },
+    { href: "/converter", label: "Converter", icon: Calculator, description: "Convert currencies" },
+    { href: "/analytics", label: "Analytics", icon: Activity, description: "Market insights" },
+    { href: "/predictions", label: "AI Forecasts", icon: Crown, description: "ML predictions" },
+    { href: "/business", label: "Business", icon: ShoppingCart, description: "Enterprise tools" },
+    { href: "/forums", label: "Forums", icon: MessageSquare, description: "Community discussions" },
+    { href: "/community", label: "Community", icon: Users, description: "Rate reports & badges" },
   ], [])
 
   // Memoize mobile menu items
@@ -75,15 +75,32 @@ const HeaderComponent = () => {
     [user?.name]
   )
 
-  // Optimized nav link component
-  const NavLink = memo(({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) => (
-    <Link
-      href={href}
-      className={`text-sm font-medium text-muted-foreground hover:text-foreground transition-colors ${className}`}
-    >
-      {children}
-    </Link>
-  ))
+  // Enhanced nav link component with icons and active states
+  const NavLink = memo(({ item }: { item: typeof navigationItems[0] }) => {
+    const isActive = pathname === item.href
+
+    return (
+      <Link
+        href={item.href}
+        className={`group relative flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+          isActive
+            ? "bg-primary/10 text-primary shadow-sm border border-primary/20"
+            : "text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-transparent"
+        }`}
+        title={item.description}
+      >
+        <item.icon className={`h-4 w-4 transition-colors ${
+          isActive ? "text-primary" : "text-muted-foreground group-hover:text-foreground"
+        }`} />
+        <span className={isActive ? "font-semibold" : ""}>{item.label}</span>
+
+        {/* Active indicator */}
+        {isActive && (
+          <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full" />
+        )}
+      </Link>
+    )
+  })
   NavLink.displayName = "NavLink"
 
   // Optimized mobile menu item component
@@ -154,12 +171,12 @@ const HeaderComponent = () => {
 
 
 
-        <nav className="hidden lg:flex items-center gap-6">
-          {navigationItems.map((item) => (
-            <NavLink key={item.href} href={item.href}>
-              {item.label}
-            </NavLink>
-          ))}
+        <nav className="hidden lg:flex items-center">
+          <div className="flex items-center gap-1 px-2 py-1 rounded-xl bg-muted/30 border border-border/40 backdrop-blur-sm">
+            {navigationItems.map((item) => (
+              <NavLink key={item.href} item={item} />
+            ))}
+          </div>
         </nav>
 
         <div className="flex items-center gap-2">

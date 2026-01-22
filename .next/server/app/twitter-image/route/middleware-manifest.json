@@ -1,0 +1,54 @@
+{
+  "sorted_middleware": [
+    "/twitter-image/route"
+  ],
+  "middleware": {},
+  "instrumentation": null,
+  "functions": {
+    "/twitter-image/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "required-server-files.js",
+        "server/server-reference-manifest.js",
+        "server/app/twitter-image/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_twitter-image_route_actions_72195298.js",
+        "server/edge/chunks/[root-of-the-server]__6dbe1a4a._.js",
+        "server/edge/chunks/node_modules_next_dist_1cb334fb._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_16be1ace._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_2150f44b.js"
+      ],
+      "name": "app/twitter-image/route",
+      "page": "/twitter-image/route",
+      "matchers": [
+        {
+          "regexp": "^/twitter-image(?:/)?$",
+          "originalSource": "/twitter-image"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "fZyzSVOkTnd68k3pLNokh",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "3L/Ffw3OEllLWwHkSc3cASoMrWxJNbBqgAVnfaKFpWI=",
+        "__NEXT_PREVIEW_MODE_ID": "474705b9a9a5a545e204ce617c4f8515",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "3b5de3ed308f4fc298499a826400edac0458b2d97223806bf0694e6386626ea4",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "bb415889821a6b56e9d070d659a3add89649a9a3b3c68e6f9f0a442ae9062d64"
+      }
+    }
+  }
+}
