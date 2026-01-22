@@ -54,7 +54,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "../app-render/work-async-storage.external":
+/***/ "./work-async-storage.external":
 /*!*****************************************************************************!*\
   !*** external "next/dist/server/app-render/work-async-storage.external.js" ***!
   \*****************************************************************************/
@@ -65,7 +65,7 @@ module.exports = require("next/dist/server/app-render/work-async-storage.externa
 
 /***/ }),
 
-/***/ "../app-render/work-unit-async-storage.external":
+/***/ "./work-unit-async-storage.external":
 /*!**********************************************************************************!*\
   !*** external "next/dist/server/app-render/work-unit-async-storage.external.js" ***!
   \**********************************************************************************/
@@ -193,7 +193,7 @@ module.exports = require("url");
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next@15.5.9_@babel+core@7.28.6_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3","vendor-chunks/xmlbuilder@11.0.1","vendor-chunks/entities@2.2.0","vendor-chunks/xml2js@0.5.0","vendor-chunks/rss-parser@3.13.0","vendor-chunks/sax@1.4.4"], () => (__webpack_exec__("(rsc)/./node_modules/.pnpm/next@15.5.9_@babel+core@7.28.6_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fnews%2Froute&page=%2Fapi%2Fnews%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fnews%2Froute.ts&appDir=%2FUsers%2Fjulian%2FDocuments%2FGitHub%2FTrueRate_Liberia%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fjulian%2FDocuments%2FGitHub%2FTrueRate_Liberia&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next@15.5.9_@babel+core@7.28.6_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3","vendor-chunks/xmlbuilder@11.0.1","vendor-chunks/sax@1.4.4","vendor-chunks/entities@2.2.0","vendor-chunks/xml2js@0.5.0","vendor-chunks/rss-parser@3.13.0"], () => (__webpack_exec__("(rsc)/./node_modules/.pnpm/next@15.5.9_@babel+core@7.28.6_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fnews%2Froute&page=%2Fapi%2Fnews%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fnews%2Froute.ts&appDir=%2FUsers%2Fjulian%2FDocuments%2FGitHub%2FTrueRate_Liberia%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fjulian%2FDocuments%2FGitHub%2FTrueRate_Liberia&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!")));
 module.exports = __webpack_exports__;
 
 })();

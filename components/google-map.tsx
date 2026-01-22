@@ -35,7 +35,7 @@ export function GoogleMap({
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null)
 
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "demo"
   const fallbackCenter = useMemo(() => {
     if (center) return center
     if (userLocation) return userLocation
@@ -77,9 +77,9 @@ export function GoogleMap({
   }, [useUserLocation])
 
   useEffect(() => {
-    if (!apiKey) {
+    if (!apiKey || apiKey === "demo") {
       setStatus("error")
-      setErrorMessage("Google Maps API key is missing. Set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY.")
+      setErrorMessage("Google Maps API key is missing. Maps will show in demo mode.")
       return
     }
 

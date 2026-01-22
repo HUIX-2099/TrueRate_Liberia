@@ -36,8 +36,9 @@ import {
   Plus,
   Minus,
 } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo, useCallback, memo } from "react"
 import Link from "next/link"
+import { useDebounce, useThrottle, usePerformanceMonitor } from "@/lib/client-utils"
 
 // Multi-currency support
 const currencies = [
@@ -61,7 +62,9 @@ const ratesFromUSD: Record<string, number> = {
   XOF: 603,
 }
 
-export default function ConverterPage() {
+const ConverterPageComponent = () => {
+  usePerformanceMonitor("ConverterPage")
+
   const [fromCurrency, setFromCurrency] = useState("USD")
   const [toCurrency, setToCurrency] = useState("LRD")
   const [amount, setAmount] = useState("100")
@@ -86,25 +89,30 @@ export default function ConverterPage() {
   // Price Index state
   const [priceIndexCategory, setPriceIndexCategory] = useState("all")
 
-  // Fetch live rate
-  useEffect(() => {
-    const fetchRate = async () => {
-      try {
-        const res = await fetch("/api/rates/live")
-        const data = await res.json()
-        if (data.rate) {
-          setLiveRate(data.rate)
-          ratesFromUSD.LRD = data.rate
-        }
-        setLastUpdate(new Date().toLocaleTimeString())
-      } catch (e) {
-        // Use default rate
+  // Debounced values for performance
+  const debouncedAmount = useDebounce(amount, 300)
+  const debouncedCustomRate = useDebounce(customRate, 300)
+
+  // Throttled API call for live rate
+  const fetchRate = useThrottle(useCallback(async () => {
+    try {
+      const res = await fetch("/api/rates/live")
+      const data = await res.json()
+      if (data.rate) {
+        setLiveRate(data.rate)
+        ratesFromUSD.LRD = data.rate
       }
+      setLastUpdate(new Date().toLocaleTimeString())
+    } catch (e) {
+      // Use default rate
     }
+  }, []), 30000) // Throttle to max once per 30 seconds
+
+  useEffect(() => {
     fetchRate()
     const interval = setInterval(fetchRate, 60000)
     return () => clearInterval(interval)
-  }, [])
+  }, [fetchRate])
 
   useEffect(() => {
     if (!useCustomRate) {
@@ -112,10 +120,10 @@ export default function ConverterPage() {
     }
   }, [liveRate, useCustomRate])
 
-  // Calculate conversion
-  useEffect(() => {
-    const numAmount = Math.max(parseFloat(amount) || 0, 0)
-    const parsedCustomRate = Math.max(Number.parseFloat(customRate) || 0, 0)
+  // Optimized conversion calculation with debounced values
+  const convertedResult = useMemo(() => {
+    const numAmount = Math.max(parseFloat(debouncedAmount) || 0, 0)
+    const parsedCustomRate = Math.max(Number.parseFloat(debouncedCustomRate) || 0, 0)
     const useRate = useCustomRate && parsedCustomRate > 0 ? parsedCustomRate : liveRate
     let fromRate = ratesFromUSD[fromCurrency]
     let toRate = ratesFromUSD[toCurrency]
@@ -125,9 +133,12 @@ export default function ConverterPage() {
     if (fromCurrency === "LRD" && toCurrency === "USD") {
       fromRate = useRate
     }
-    const converted = (numAmount / fromRate) * toRate
-    setResult(converted.toFixed(2))
-  }, [amount, fromCurrency, toCurrency, customRate, useCustomRate, liveRate])
+    return ((numAmount / fromRate) * toRate).toFixed(2)
+  }, [debouncedAmount, fromCurrency, toCurrency, debouncedCustomRate, useCustomRate, liveRate])
+
+  useEffect(() => {
+    setResult(convertedResult)
+  }, [convertedResult])
 
   const swapCurrencies = () => {
     setFromCurrency(toCurrency)
@@ -172,19 +183,36 @@ export default function ConverterPage() {
     }
   }
 
-  // Business Calculator
-  const importValueNum = parseFloat(importValue) || 0
-  const importTaxRateNum = parseFloat(importTaxRate) || 0
-  const shippingCostNum = parseFloat(shippingCost) || 0
-  const importTax = (importValueNum * importTaxRateNum) / 100
-  const totalImportCost = importValueNum + importTax + shippingCostNum
-  const totalLRD = totalImportCost * liveRate
+  // Optimized Business Calculator with memoization
+  const businessCalculator = useMemo(() => {
+    const importValueNum = parseFloat(importValue) || 0
+    const importTaxRateNum = parseFloat(importTaxRate) || 0
+    const shippingCostNum = parseFloat(shippingCost) || 0
+    const importTax = (importValueNum * importTaxRateNum) / 100
+    const totalImportCost = importValueNum + importTax + shippingCostNum
+    const totalLRD = totalImportCost * liveRate
 
-  // Markup Calculator
-  const costPriceNum = parseFloat(costPrice) || 0
-  const markupPercentageNum = parseFloat(markupPercentage) || 0
-  const markupAmount = (costPriceNum * markupPercentageNum) / 100
-  const sellPrice = costPriceNum + markupAmount
+    return {
+      importValueNum,
+      importTax,
+      totalImportCost,
+      totalLRD
+    }
+  }, [importValue, importTaxRate, shippingCost, liveRate])
+
+  // Optimized Markup Calculator with memoization
+  const markupCalculator = useMemo(() => {
+    const costPriceNum = parseFloat(costPrice) || 0
+    const markupPercentageNum = parseFloat(markupPercentage) || 0
+    const markupAmount = (costPriceNum * markupPercentageNum) / 100
+    const sellPrice = costPriceNum + markupAmount
+
+    return {
+      costPriceNum,
+      markupAmount,
+      sellPrice
+    }
+  }, [costPrice, markupPercentage])
 
   const quickAmounts = fromCurrency === "USD" 
     ? [10, 20, 50, 100, 500, 1000] 
@@ -479,20 +507,20 @@ export default function ConverterPage() {
                       <div className="space-y-2 pt-2 border-t">
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">Import Value</span>
-                          <span className="font-medium">${importValueNum.toLocaleString()} → {(importValueNum * liveRate).toLocaleString()} LRD</span>
+                          <span className="font-medium">${businessCalculator.importValueNum.toLocaleString()} → {(businessCalculator.importValueNum * liveRate).toLocaleString()} LRD</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="text-muted-foreground">+ Import Tax ({importTaxRateNum}%)</span>
-                          <span className="font-medium">{(importTax * liveRate).toLocaleString()} LRD</span>
+                          <span className="text-muted-foreground">+ Import Tax ({importTaxRate}%)</span>
+                          <span className="font-medium">{businessCalculator.importTax.toLocaleString()} LRD</span>
                         </div>
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">+ Shipping</span>
-                          <span className="font-medium">{(shippingCostNum * liveRate).toLocaleString()} LRD</span>
+                          <span className="font-medium">{(parseFloat(shippingCost) * liveRate).toLocaleString()} LRD</span>
                         </div>
                         <Separator />
                         <div className="flex justify-between">
                           <span className="font-medium">Total Cost</span>
-                          <span className="font-bold text-primary">{totalLRD.toLocaleString()} LRD</span>
+                          <span className="font-bold text-primary">{businessCalculator.totalLRD.toLocaleString()} LRD</span>
                         </div>
                       </div>
                     </CardContent>
@@ -533,20 +561,20 @@ export default function ConverterPage() {
                       <div className="space-y-2 pt-2 border-t">
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">Cost Price</span>
-                          <span className="font-medium">{costPriceNum.toLocaleString()} LRD</span>
+                          <span className="font-medium">{markupCalculator.costPriceNum.toLocaleString()} LRD</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="text-muted-foreground">+ Markup ({markupPercentageNum}%)</span>
-                          <span className="font-medium">{markupAmount.toLocaleString()} LRD</span>
+                          <span className="text-muted-foreground">+ Markup ({markupPercentage}%)</span>
+                          <span className="font-medium">{markupCalculator.markupAmount.toLocaleString()} LRD</span>
                         </div>
                         <Separator />
                         <div className="flex justify-between">
                           <span className="font-medium">Sell Price</span>
-                          <span className="font-bold text-secondary">{sellPrice.toLocaleString()} LRD</span>
+                          <span className="font-bold text-secondary">{markupCalculator.sellPrice.toLocaleString()} LRD</span>
                         </div>
                         <div className="flex justify-between text-xs text-muted-foreground">
                           <span>Profit Margin</span>
-                          <span>{((markupAmount / sellPrice) * 100).toFixed(1)}%</span>
+                          <span>{((markupCalculator.markupAmount / markupCalculator.sellPrice) * 100).toFixed(1)}%</span>
                         </div>
                       </div>
                     </CardContent>
@@ -925,3 +953,5 @@ export default function ConverterPage() {
     </div>
   )
 }
+
+export default memo(ConverterPageComponent)

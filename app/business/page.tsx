@@ -7,9 +7,21 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { 
-  Briefcase, Download, Bell, TrendingUp, FileText, Calculator, 
-  Lock, CheckCircle2, Zap, Star, Users, Crown, DollarSign 
+import {
+  Briefcase,
+  Download,
+  Bell,
+  TrendingUp,
+  FileText,
+  Calculator,
+  Lock,
+  CheckCircle2,
+  Zap,
+  Star,
+  Users,
+  Crown,
+  DollarSign,
+  Calendar,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import { InvoiceProtector } from "@/components/invoice-protector"
@@ -84,8 +96,8 @@ export default function BusinessDashboardPage() {
                   API Access
                 </Badge>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         <section className="py-6 sm:py-8 bg-background">
@@ -519,6 +531,7 @@ export default function BusinessDashboardPage() {
               </Card>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

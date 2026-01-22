@@ -1,5 +1,6 @@
 "use client"
 
+import React, { memo, useMemo, useCallback } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
@@ -24,10 +25,112 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { LiveUpdateIndicator } from "@/components/live-update-indicator"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
+import { usePerformanceMonitor } from "@/lib/client-utils"
 
-export function Header() {
+const HeaderComponent = () => {
   const { user } = useAuth()
   const pathname = usePathname()
+
+  usePerformanceMonitor("Header")
+
+  // Memoize navigation items to prevent unnecessary re-renders
+  const navigationItems = useMemo(() => [
+    { href: "/rates", label: "Rates" },
+    { href: "/converter", label: "Converter" },
+    { href: "/map", label: "Nearby" },
+    { href: "/analytics", label: "Analytics" },
+    { href: "/predictions", label: "Predictions" },
+    { href: "/business", label: "Business" },
+    { href: "/forums", label: "Forums" },
+    { href: "/community", label: "Community" },
+  ], [])
+
+  // Memoize mobile menu items
+  const mobileMenuItems = useMemo(() => [
+    { href: "/auth/signin", label: "Sign In", icon: LogIn, description: "Access your dashboard" },
+    { href: "/rates", label: "Rates", icon: TrendingUp, description: "Live USD/LRD updates" },
+    { href: "/converter", label: "Converter", icon: Calculator, description: "Convert USD ↔ LRD" },
+    { href: "/analytics", label: "Analytics / Charts", icon: Activity, description: "Trends and history" },
+    { href: "/price-index", label: "Price Index", icon: ShoppingCart, description: "Everyday cost tracking" },
+    { href: "/map", label: "Find Changers", icon: MapPin, description: "Map of local rates" },
+    { href: "/liberia-market", label: "News", icon: Newspaper, description: "Liberia market updates" },
+    { href: "/community", label: "Community", icon: Users, description: "Reports and reviews" },
+  ], [])
+
+  // Memoize bottom navigation items
+  const bottomNavItems = useMemo(() => [
+    { href: "/rates", label: "Rates", icon: TrendingUp },
+    { href: "/converter", label: "Converter", icon: ArrowLeftRight },
+    { href: "/map", label: "Map", icon: MapPinned },
+    { href: "/tools", label: "Alerts", icon: BellRing },
+  ], [])
+
+  // Memoize user avatar initials
+  const userInitials = useMemo(() =>
+    user?.name
+      ?.split(" ")
+      ?.map((n) => n[0])
+      ?.join("")
+      ?.toUpperCase() || "",
+    [user?.name]
+  )
+
+  // Optimized nav link component
+  const NavLink = memo(({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) => (
+    <Link
+      href={href}
+      className={`text-sm font-medium text-muted-foreground hover:text-foreground transition-colors ${className}`}
+    >
+      {children}
+    </Link>
+  ))
+  NavLink.displayName = "NavLink"
+
+  // Optimized mobile menu item component
+  const MobileMenuItem = memo(({ item }: { item: typeof mobileMenuItems[0] }) => (
+    <Link
+      href={item.href}
+      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
+    >
+      <div className="flex items-start gap-3">
+        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+          <item.icon className="h-4 w-4 text-primary" />
+        </div>
+        <div className="text-left">
+          <div className="text-sm font-semibold text-foreground">{item.label}</div>
+          <div className="text-[11px] text-muted-foreground">{item.description}</div>
+        </div>
+      </div>
+    </Link>
+  ))
+  MobileMenuItem.displayName = "MobileMenuItem"
+
+  // Optimized bottom nav item component
+  const BottomNavItem = memo(({ item }: { item: typeof bottomNavItems[0] }) => {
+    const isActive = pathname === item.href
+    return (
+      <Link
+        href={item.href}
+        aria-label={item.label}
+        aria-current={isActive ? "page" : undefined}
+        className={`flex flex-col items-center gap-1 rounded-lg py-2 min-h-[48px] transition-all ${
+          isActive
+            ? "text-foreground bg-muted/60 shadow-sm"
+            : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+        }`}
+      >
+        <span
+          className={`flex h-9 w-9 items-center justify-center rounded-xl ${
+            isActive ? "bg-primary/10 text-primary" : "bg-muted/40 text-muted-foreground"
+          }`}
+        >
+          <item.icon className="h-5 w-5" />
+        </span>
+        <span className={isActive ? "font-medium" : ""}>{item.label}</span>
+      </Link>
+    )
+  })
+  BottomNavItem.displayName = "BottomNavItem"
 
   return (
     <>
@@ -52,55 +155,12 @@ export function Header() {
 
 
         <nav className="hidden lg:flex items-center gap-6">
-            <Link
-              href="/rates"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Rates
-            </Link>
-            <Link
-              href="/converter"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Converter
-            </Link>
-          <Link
-            href="/map"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Nearby
-          </Link>
-            <Link
-              href="/analytics"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Analytics
-            </Link>
-            <Link
-              href="/predictions"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Predictions
-            </Link>
-            <Link
-              href="/business"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Business
-            </Link>
-            <Link
-              href="/forums"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Forums
-            </Link>
-            <Link
-              href="/community"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Community
-            </Link>
-          </nav>
+          {navigationItems.map((item) => (
+            <NavLink key={item.href} href={item.href}>
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
 
         <div className="flex items-center gap-2">
             <ThemeToggle />
@@ -116,11 +176,7 @@ export function Header() {
                 <Button variant="ghost" size="icon" className="hidden md:flex" aria-label="Open dashboard">
                   <Avatar className="h-8 w-8">
                     <AvatarFallback className="text-xs bg-primary text-primary-foreground">
-                      {user.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")
-                        .toUpperCase()}
+                      {userInitials}
                     </AvatarFallback>
                   </Avatar>
                 </Button>
@@ -147,118 +203,9 @@ export function Header() {
                     </div>
                   </div>
                   <nav className="flex flex-col items-center text-center gap-2">
-                    <Link
-                      href="/auth/signin"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <LogIn className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">Sign In</div>
-                          <div className="text-[11px] text-muted-foreground">Access your dashboard</div>
-                        </div>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/rates"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <TrendingUp className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">Rates</div>
-                          <div className="text-[11px] text-muted-foreground">Live USD/LRD updates</div>
-                        </div>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/converter"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <Calculator className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">Converter</div>
-                          <div className="text-[11px] text-muted-foreground">Convert USD ↔ LRD</div>
-                        </div>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/analytics"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <Activity className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">Analytics / Charts</div>
-                          <div className="text-[11px] text-muted-foreground">Trends and history</div>
-                        </div>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/price-index"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <ShoppingCart className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">Price Index</div>
-                          <div className="text-[11px] text-muted-foreground">Everyday cost tracking</div>
-                        </div>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/map"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <MapPin className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">Find Changers</div>
-                          <div className="text-[11px] text-muted-foreground">Map of local rates</div>
-                        </div>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/liberia-market"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <Newspaper className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">News</div>
-                          <div className="text-[11px] text-muted-foreground">Liberia market updates</div>
-                        </div>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/community"
-                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                          <Users className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-foreground">Community</div>
-                          <div className="text-[11px] text-muted-foreground">Reports and reviews</div>
-                        </div>
-                      </div>
-                    </Link>
+                    {mobileMenuItems.map((item) => (
+                      <MobileMenuItem key={item.href} item={item} />
+                    ))}
                     <Link
                       href="/report-fraud"
                       className="w-full max-w-sm rounded-xl border border-destructive/20 bg-destructive/5 px-3 py-2.5 transition-all hover:bg-destructive/10 hover:shadow-sm"
@@ -286,84 +233,13 @@ export function Header() {
         aria-label="Primary"
       >
         <div className="mx-auto grid grid-cols-4 gap-1 px-2 pt-2 pb-[calc(env(safe-area-inset-bottom)+0.6rem)] text-[11px]">
-          <Link
-            href="/rates"
-            aria-label="Rates"
-            aria-current={pathname === "/rates" ? "page" : undefined}
-            className={`flex flex-col items-center gap-1 rounded-lg py-2 min-h-[48px] transition-all ${
-              pathname === "/rates"
-                ? "text-foreground bg-muted/60 shadow-sm"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-            }`}
-          >
-            <span
-              className={`flex h-9 w-9 items-center justify-center rounded-xl ${
-                pathname === "/rates" ? "bg-primary/10 text-primary" : "bg-muted/40 text-muted-foreground"
-              }`}
-            >
-              <TrendingUp className="h-5 w-5" />
-            </span>
-            <span className={pathname === "/rates" ? "font-medium" : ""}>Rates</span>
-          </Link>
-          <Link
-            href="/converter"
-            aria-label="Converter"
-            aria-current={pathname === "/converter" ? "page" : undefined}
-            className={`flex flex-col items-center gap-1 rounded-lg py-2 min-h-[48px] transition-all ${
-              pathname === "/converter"
-                ? "text-foreground bg-muted/60 shadow-sm"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-            }`}
-          >
-            <span
-              className={`flex h-9 w-9 items-center justify-center rounded-xl ${
-                pathname === "/converter" ? "bg-primary/10 text-primary" : "bg-muted/40 text-muted-foreground"
-              }`}
-            >
-              <ArrowLeftRight className="h-5 w-5" />
-            </span>
-            <span className={pathname === "/converter" ? "font-medium" : ""}>Converter</span>
-          </Link>
-          <Link
-            href="/map"
-            aria-label="Map"
-            aria-current={pathname === "/map" ? "page" : undefined}
-            className={`flex flex-col items-center gap-1 rounded-lg py-2 min-h-[48px] transition-all ${
-              pathname === "/map"
-                ? "text-foreground bg-muted/60 shadow-sm"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-            }`}
-          >
-            <span
-              className={`flex h-9 w-9 items-center justify-center rounded-xl ${
-                pathname === "/map" ? "bg-primary/10 text-primary" : "bg-muted/40 text-muted-foreground"
-              }`}
-            >
-              <MapPinned className="h-5 w-5" />
-            </span>
-            <span className={pathname === "/map" ? "font-medium" : ""}>Map</span>
-          </Link>
-          <Link
-            href="/tools"
-            aria-label="Alerts"
-            aria-current={pathname === "/tools" ? "page" : undefined}
-            className={`flex flex-col items-center gap-1 rounded-lg py-2 min-h-[48px] transition-all ${
-              pathname === "/tools"
-                ? "text-foreground bg-muted/60 shadow-sm"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-            }`}
-          >
-            <span
-              className={`flex h-9 w-9 items-center justify-center rounded-xl ${
-                pathname === "/tools" ? "bg-primary/10 text-primary" : "bg-muted/40 text-muted-foreground"
-              }`}
-            >
-              <BellRing className="h-5 w-5" />
-            </span>
-            <span className={pathname === "/tools" ? "font-medium" : ""}>Alerts</span>
-          </Link>
+          {bottomNavItems.map((item) => (
+            <BottomNavItem key={item.href} item={item} />
+          ))}
         </div>
       </nav>
     </>
   )
 }
+
+export const Header = memo(HeaderComponent)

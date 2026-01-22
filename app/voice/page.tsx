@@ -7,9 +7,15 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Phone, Volume2, PlayCircle, StopCircle, PhoneCall, Info, Settings } from "lucide-react"
 import { useState, useEffect } from "react"
-import { MarketWomanMode } from "@/components/market-woman-mode"
+import dynamic from "next/dynamic"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { languages } from "@/lib/i18n/translations"
+
+// Code splitting for heavy components
+const MarketWomanMode = dynamic(() => import("@/components/market-woman-mode").then(mod => ({ default: mod.MarketWomanMode })), {
+  loading: () => <div className="h-64 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>,
+  ssr: false
+})
 
 export default function VoiceAssistantPage() {
   const { language, setLanguage, isMarketWomanMode, setMarketWomanMode, t } = useLanguage()

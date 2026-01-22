@@ -10,8 +10,30 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Invalid coordinates" }, { status: 400 })
   }
 
-  if (!GOOGLE_MAPS_API_KEY) {
-    return NextResponse.json({ error: "Missing Google Maps API key" }, { status: 500 })
+  if (!GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY === "demo") {
+    // Return demo data for development
+    return NextResponse.json({
+      results: [
+        {
+          id: "demo_1",
+          name: "City Exchange - Demo",
+          address: "Broad Street, Monrovia",
+          rating: 4.8,
+          openNow: true,
+          lat: lat || 6.3156,
+          lng: lng || -10.8074,
+        },
+        {
+          id: "demo_2",
+          name: "Quick Cash Bureau - Demo",
+          address: "Sinkor, Monrovia",
+          rating: 4.6,
+          openNow: true,
+          lat: (lat || 6.3156) + 0.01,
+          lng: (lng || -10.8074) + 0.01,
+        }
+      ]
+    })
   }
 
   const params = new URLSearchParams({

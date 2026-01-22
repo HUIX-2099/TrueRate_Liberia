@@ -11,8 +11,11 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Invalid coordinates" }, { status: 400 })
   }
 
-  if (!GOOGLE_MAPS_API_KEY) {
-    return NextResponse.json({ error: "Missing Google Maps API key" }, { status: 500 })
+  if (!GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY === "demo") {
+    // Return demo data for development
+    return NextResponse.json({
+      address: `Demo Location near ${lat?.toFixed(4)}, ${lng?.toFixed(4)} - Liberia`
+    })
   }
 
   const params = new URLSearchParams({
