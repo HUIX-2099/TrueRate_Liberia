@@ -15,14 +15,29 @@ export default function PrivacyPage() {
         {/* Hero */}
         <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <Badge className="mb-4">Privacy & Data Protection</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Your Privacy Matters at TrueRate-Liberia</span></h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="mb-2">Privacy & Data Protection</Badge>
+                <Badge className="bg-primary/10 text-primary">GDPR Compliant</Badge>
+                <Badge variant="secondary">Transparent</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Secure by Design</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Your Privacy Matters at TrueRate Liberia
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
                 This Privacy Policy explains what we collect, why we collect it, and the choices you have when using
                 our services.
               </p>
-              <p className="text-sm text-muted-foreground mt-4">Last updated: Jan 15, 2026</p>
+              <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+                <span className="text-sm text-muted-foreground">Last updated: Jan 15, 2026</span>
+                <Badge variant="secondary" className="gap-1">
+                  <Shield className="h-3 w-3" />
+                  Regularly Reviewed
+                </Badge>
+              </div>
             </div>
           </div>
         </section>
@@ -31,33 +46,39 @@ export default function PrivacyPage() {
         <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="border-border/60 shadow-sm">
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
                 <CardHeader>
                   <div className="flex items-center gap-2">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle className="text-2xl">Privacy at a Glance</CardTitle>
+                    <CardTitle className="text-2xl text-primary">Privacy at a Glance</CardTitle>
                   </div>
                   <CardDescription>Key highlights of how we handle data across the platform.</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <div className="space-y-2">
-                      <Eye className="h-7 w-7 text-primary" />
-                      <p className="font-semibold">Transparent collection</p>
+                    <div className="space-y-3 p-4 rounded-lg bg-background/80 border border-border/40">
+                      <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Eye className="h-6 w-6 text-primary" />
+                      </div>
+                      <p className="font-semibold text-primary">Transparent collection</p>
                       <p className="text-sm text-muted-foreground">
                         We only collect what is needed to provide accurate exchange information and secure experiences.
                       </p>
                     </div>
-                    <div className="space-y-2">
-                      <Lock className="h-7 w-7 text-primary" />
-                      <p className="font-semibold">Secure by design</p>
+                    <div className="space-y-3 p-4 rounded-lg bg-background/80 border border-border/40">
+                      <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center">
+                        <Lock className="h-6 w-6 text-secondary" />
+                      </div>
+                      <p className="font-semibold text-secondary">Secure by design</p>
                       <p className="text-sm text-muted-foreground">
                         We apply encryption and access controls to keep your data protected end-to-end.
                       </p>
                     </div>
-                    <div className="space-y-2">
-                      <Users className="h-7 w-7 text-primary" />
-                      <p className="font-semibold">You stay in control</p>
+                    <div className="space-y-3 p-4 rounded-lg bg-background/80 border border-border/40">
+                      <div className="h-12 w-12 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                        <Users className="h-6 w-6 text-amber-600" />
+                      </div>
+                      <p className="font-semibold text-amber-600">You stay in control</p>
                       <p className="text-sm text-muted-foreground">
                         You can review, update, or request deletion of your personal data at any time.
                       </p>
@@ -73,16 +94,29 @@ export default function PrivacyPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-10 space-y-2">
-                <Badge variant="outline">Data collection</Badge>
-                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Information We Collect</h2>
+              <div className="text-center mb-10 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Data Collection</Badge>
+                  <Badge className="bg-primary/10 text-primary">Minimal & Purposeful</Badge>
+                  <Badge variant="secondary">Transparent</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Information We Collect
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  We collect only what's necessary to provide you with accurate exchange rates and secure experiences
+                </p>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
                     <div className="flex items-center gap-2">
-                      <Database className="h-6 w-6 text-primary" />
-                      <CardTitle>Account & Profile</CardTitle>
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Database className="h-5 w-5 text-primary" />
+                      </div>
+                      <CardTitle className="text-primary">Account & Profile</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -92,11 +126,13 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
                     <div className="flex items-center gap-2">
-                      <FileText className="h-6 w-6 text-primary" />
-                      <CardTitle>Usage & Analytics</CardTitle>
+                      <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                        <FileText className="h-5 w-5 text-secondary" />
+                      </div>
+                      <CardTitle className="text-secondary">Usage & Analytics</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -106,11 +142,13 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
                     <div className="flex items-center gap-2">
-                      <Mail className="h-6 w-6 text-primary" />
-                      <CardTitle>Messages & Support</CardTitle>
+                      <div className="h-10 w-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                        <Mail className="h-5 w-5 text-amber-600" />
+                      </div>
+                      <CardTitle className="text-amber-600">Messages & Support</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -120,11 +158,13 @@ export default function PrivacyPage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-green-500/20 bg-gradient-to-br from-green-500/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
                     <div className="flex items-center gap-2">
-                      <Shield className="h-6 w-6 text-primary" />
-                      <CardTitle>Verification Signals</CardTitle>
+                      <div className="h-10 w-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+                        <Shield className="h-5 w-5 text-green-600" />
+                      </div>
+                      <CardTitle className="text-green-600">Verification Signals</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -143,9 +183,20 @@ export default function PrivacyPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8 space-y-2">
-                <Badge variant="outline">Usage</Badge>
-                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">How We Use Your Data</h2>
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Data Usage</Badge>
+                  <Badge className="bg-primary/10 text-primary">Purpose-Driven</Badge>
+                  <Badge variant="secondary">Transparent</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    How We Use Your Data
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Your data is used only for specific, beneficial purposes that improve our services
+                </p>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="border-border/60 shadow-sm">
@@ -233,13 +284,22 @@ export default function PrivacyPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-3">Your rights</Badge>
-              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-balance">Your Rights & Choices</h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-10 text-pretty">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge variant="outline">Your Rights</Badge>
+                <Badge className="bg-primary/10 text-primary">You Control Your Data</Badge>
+                <Badge variant="secondary">GDPR Compliant</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Easy to Exercise</Badge>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Your Rights & Choices
+                </span>
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-10 text-pretty max-w-3xl mx-auto">
                 You can request access, correction, portability, or deletion of your personal data. You can also
                 opt-out of marketing communications at any time.
               </p>
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="shadow-sm">
                 <Link href="/contact">Contact the Privacy Team</Link>
               </Button>
             </div>
@@ -250,9 +310,14 @@ export default function PrivacyPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-              <Card className="border-border/60 shadow-sm">
-                <CardHeader>
-                  <CardTitle>Cookies & Tracking</CardTitle>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-primary flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Database className="h-4 w-4" />
+                    </div>
+                    Cookies & Tracking
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
@@ -261,20 +326,30 @@ export default function PrivacyPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-border/60 shadow-sm">
-                <CardHeader>
-                  <CardTitle>Children's Privacy</CardTitle>
+              <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-secondary flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-lg bg-secondary/10 flex items-center justify-center">
+                      <Users className="h-4 w-4" />
+                    </div>
+                    Children's Privacy
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    TrueRate-Liberia is not intended for children under 13. If you believe a child has shared data with
+                    TrueRate Liberia is not intended for children under 13. If you believe a child has shared data with
                     us, contact our team for immediate removal.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-border/60 shadow-sm">
-                <CardHeader>
-                  <CardTitle>Policy Updates</CardTitle>
+              <Card className="border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-amber-600 flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                      <FileText className="h-4 w-4" />
+                    </div>
+                    Policy Updates
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">

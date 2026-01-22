@@ -67,33 +67,36 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         {/* Launching Soon Section */}
-        <section className="py-6 sm:py-8 sm:py-10 md:py-14 bg-gradient-to-b from-muted/40 to-background">
+        <section className="py-8 sm:py-10 md:py-14 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto rounded-2xl border border-border/60 bg-card/80 shadow-sm backdrop-blur">
-              <div className="px-5 py-6 sm:px-6 sm:py-6 sm:py-8 md:px-10 md:py-10 text-center space-y-4">
-                <div className="flex items-center justify-center gap-2">
-                  <Badge variant="outline">We’re Launching Soon</Badge>
-                  <Badge className="bg-primary/10 text-primary">New</Badge>
-                </div>
-                <h2 className="text-2xl sm:text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
-                  A smarter way to track Liberia’s FX market is almost here
-                </h2>
-                <p className="text-base sm:text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
-                  Precision FX insights, all in one place.
-                </p>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                    Launch countdown
-                  </span>
-                  <div className="rounded-full border border-border/60 bg-background/80 px-4 py-2 text-sm font-semibold">
-                    {countdown}
+            <div className="max-w-4xl mx-auto">
+              <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card/80 to-secondary/5 shadow-sm backdrop-blur-sm">
+                <div className="px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 text-center space-y-4">
+                  <div className="flex flex-wrap items-center justify-center gap-2">
+                    <Badge variant="outline">We're Launching Soon</Badge>
+                    <Badge className="bg-primary/10 text-primary">New</Badge>
+                    <Badge variant="secondary">March 2026</Badge>
                   </div>
-                  <span className="text-xs text-muted-foreground">March 25, 2026 • 12:00 AM</span>
-                </div>
-                <div className="flex justify-center">
-                  <Button asChild>
-                    <Link href="/contact">Get Early Access</Link>
-                  </Button>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                    <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                      Liberia's FX Analytics Hub
+                    </span>
+                  </h2>
+                  <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
+                    Precision insights, structured data, and high-performance tools in one unified platform.
+                  </p>
+                  <div className="flex flex-col items-center gap-3">
+                    <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Launch countdown</span>
+                    <div className="rounded-full border border-border/60 bg-background/80 px-4 py-2 text-sm font-semibold shadow-sm">
+                      {countdown}
+                    </div>
+                    <span className="text-xs text-muted-foreground">March 25, 2026 • 12:00 AM</span>
+                  </div>
+                  <div className="flex justify-center pt-2">
+                    <Button asChild className="shadow-sm">
+                      <Link href="/contact">Get Early Access</Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -103,15 +106,21 @@ export default function HomePage() {
         <Hero />
 
         {/* Today's Best Rate Widget - Prime Position */}
-        <section className="py-6 sm:py-8 sm:py-10 md:py-10 sm:py-12 bg-background">
+        <section className="py-8 sm:py-10 md:py-14 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-3">
-              <div className="text-center space-y-2">
-                <Badge variant="outline">Best rate near you</Badge>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-balance">
-                  Check the top verified USD/LRD rate right now
+            <div className="max-w-4xl mx-auto space-y-4">
+              <div className="text-center space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Best Rate Today</Badge>
+                  <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Live Updates</Badge>
+                  <Badge variant="secondary">Location-Based</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Find the Best USD/LRD Rate Near You
+                  </span>
                 </h2>
-                <p className="text-muted-foreground text-sm sm:text-base">
+                <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
                   Distance, travel time, and trust signals update with your location.
                 </p>
               </div>
@@ -123,11 +132,19 @@ export default function HomePage() {
         {/* Quick Access Cards */}
         <section className="py-14 sm:py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 md:px-8">
-            <div className="text-center mb-10 sm:mb-12">
-              <Badge variant="outline" className="mb-3">Fast tools</Badge>
-              <h2 className="text-2xl sm:text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-balance">Quick Access Tools</h2>
-              <p className="text-base sm:text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Everything you need to stay informed about USD/LRD exchange rates
+            <div className="text-center mb-10 sm:mb-12 space-y-3">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                <Badge variant="outline">Essential Tools</Badge>
+                <Badge className="bg-primary/10 text-primary">Free Access</Badge>
+                <Badge variant="secondary">All-in-One</Badge>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Everything You Need to Exchange Safely
+                </span>
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                Built for Liberians, by Liberians. Access rates offline, report fraud, and stay informed.
               </p>
             </div>
             <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -293,11 +310,19 @@ export default function HomePage() {
         <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4 sm:px-6 md:px-8">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 space-y-2">
-                <Badge variant="outline">Live leaderboard</Badge>
-                <h2 className="text-2xl sm:text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold">Top Best Rates in Monrovia</h2>
-                <p className="text-base sm:text-base sm:text-lg text-muted-foreground">
-                  Live rankings updated every 15 minutes
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Live Leaderboard</Badge>
+                  <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400 animate-pulse">Real-time</Badge>
+                  <Badge variant="secondary">Every 15 min</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Top Best Rates in Monrovia
+                  </span>
+                </h2>
+                <p className="text-base sm:text-lg text-muted-foreground">
+                  Live rankings updated every 15 minutes • {new Date().toLocaleTimeString()}
                 </p>
               </div>
               <MarketLeaderboard />
@@ -308,12 +333,25 @@ export default function HomePage() {
         {/* Liberia Market Insights Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 md:px-8">
-            <div className="text-center mb-10 sm:mb-12">
-              <Badge className="mb-4" variant="outline">For Liberians</Badge>
-              <h2 className="text-2xl sm:text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Market Insights & Tools</h2>
-              <p className="text-base sm:text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Essential information for everyday decisions in Liberia
+            <div className="text-center mb-10 sm:mb-12 space-y-3">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                <Badge variant="outline">For Liberians</Badge>
+                <Badge className="bg-primary/10 text-primary">Essential Data</Badge>
+                <Badge variant="secondary">Daily Updates</Badge>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Liberia Price Index & Market Insights
+                </span>
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Real-time prices of essential goods and market intelligence for informed decisions
               </p>
+              <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
+                <span className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-primary">Live prices</span>
+                <span className="rounded-full border border-secondary/30 bg-secondary/5 px-3 py-1 text-secondary">Inflation tracker</span>
+                <span className="rounded-full border border-muted-foreground/30 bg-muted/20 px-3 py-1">Local news</span>
+              </div>
             </div>
             <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <div className="lg:col-span-2">
@@ -333,51 +371,73 @@ export default function HomePage() {
         <TrustSignals />
 
         {/* Referral CTA */}
-        <section className="py-10 sm:py-10 sm:py-12 bg-gradient-to-r from-secondary/10 via-primary/5 to-accent/10">
+        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-secondary/10 via-primary/5 to-accent/10">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto rounded-2xl border border-border/60 bg-background/70 px-5 py-6 sm:px-6 sm:py-6 sm:py-8 md:px-10 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-sm">
+            <div className="max-w-5xl mx-auto rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card/90 to-secondary/5 px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-sm backdrop-blur-sm">
               <div className="flex flex-col md:flex-row items-center gap-4">
-                <div className="h-16 w-16 rounded-full bg-secondary/20 flex items-center justify-center">
+                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center shadow-sm">
                   <Gift className="h-8 w-8 text-secondary" />
                 </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold">Invite Friends, Get Rewards!</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground">
-                    Both you and your friend get 1 month of premium SMS alerts FREE
+                <div className="space-y-2">
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2">
+                    <Badge variant="outline">Referral Program</Badge>
+                    <Badge className="bg-secondary/10 text-secondary">Free Premium</Badge>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                    <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">
+                      Invite Friends, Get Rewards!
+                    </span>
+                  </h3>
+                  <p className="text-sm sm:text-base text-muted-foreground max-w-md">
+                    Both you and your friend get 1 month of premium SMS alerts — completely free.
                   </p>
                 </div>
               </div>
-              <Button size="lg" className="gap-2" asChild>
-                <Link href="/community#referral">
-                  Start Sharing
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+                <Button size="lg" className="gap-2 w-full md:w-auto shadow-sm" asChild>
+                  <Link href="/community#referral">
+                    Start Sharing
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="w-full md:w-auto" asChild>
+                  <Link href="/community">Learn More</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-14 sm:py-16 md:py-20 bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground relative overflow-hidden">
+        <section className="py-16 sm:py-18 md:py-24 bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
             <div className="absolute bottom-0 left-1/4 h-40 w-40 rounded-full bg-white/5 blur-2xl" />
           </div>
           <div className="container relative mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-2xl sm:text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-balance">Ready to Get Started?</h2>
-            <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto opacity-90 text-pretty">
-              Join thousands of Liberians who trust TrueRate for accurate exchange rate information
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+              <Badge variant="secondary" className="text-primary bg-primary-foreground/10">Ready to Start</Badge>
+              <Badge variant="secondary" className="text-primary bg-primary-foreground/10">Trusted by Thousands</Badge>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 mb-4 text-balance">
+              <span className="bg-gradient-to-r from-primary-foreground via-secondary to-primary-foreground bg-clip-text text-transparent">
+                Ready to Get Started?
+              </span>
+            </h2>
+            <p className="text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto opacity-90 text-pretty">
+              Join thousands of Liberians who trust TrueRate for accurate exchange rate information.
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" variant="secondary" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" asChild className="shadow-lg shadow-primary/30 gap-2">
                 <Link href="/converter">
-                  Try Converter <ArrowRight className="ml-2 h-4 w-4" />
+                  Try Converter
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent shadow-sm"
                 asChild
               >
                 <Link href="/predictions">View AI Predictions</Link>

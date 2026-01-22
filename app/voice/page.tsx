@@ -61,17 +61,25 @@ export default function VoiceAssistantPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-4">
                 <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center">
                   <Volume2 className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                {isMarketWomanMode ? t('simple.mode') : 'Voice Assistant'}
-              </span></h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-                {isMarketWomanMode 
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="mb-2">Voice Assistant</Badge>
+                <Badge className="bg-primary/10 text-primary">Audio Access</Badge>
+                <Badge variant="secondary">No Internet Needed</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Market Friendly</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  {isMarketWomanMode ? t('simple.mode') : 'Voice Assistant'}
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
+                {isMarketWomanMode
                   ? t('simple.modeDesc') + ' - Perfect for Waterside, Red Light, Duala markets'
                   : 'Listen to today\'s exchange rates - perfect for users who prefer audio information'
                 }
@@ -83,22 +91,40 @@ export default function VoiceAssistantPage() {
         <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-6">
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Voice Features</Badge>
+                  <Badge className="bg-primary/10 text-primary">Audio Access</Badge>
+                  <Badge variant="secondary">Multiple Languages</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Audio Rate Information
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Voice features designed for Liberian users who prefer audio information
+                </p>
+              </div>
               {/* Mode Toggle */}
-              <Card>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
                 <CardContent className="py-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <Settings className="h-5 w-5 text-muted-foreground" />
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Settings className="h-5 w-5 text-primary" />
+                      </div>
                       <div>
-                        <div className="font-semibold">{t('simple.mode')}</div>
+                        <div className="font-semibold text-primary">{t('simple.mode')}</div>
                         <div className="text-sm text-muted-foreground">
                           Big numbers, voice readout - easy for everyone
                         </div>
                       </div>
                     </div>
-                    <Button 
+                    <Button
                       variant={isMarketWomanMode ? "default" : "outline"}
                       onClick={() => setMarketWomanMode(!isMarketWomanMode)}
+                      className="shadow-sm"
                     >
                       {isMarketWomanMode ? 'ON' : 'OFF'}
                     </Button>
@@ -151,15 +177,15 @@ export default function VoiceAssistantPage() {
               )}
 
               {/* IVR Phone Service */}
-              <Card className="border-secondary">
-                <CardHeader>
+              <Card className="border-secondary/60 bg-gradient-to-br from-secondary/5 to-card shadow-sm">
+                <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-secondary" />
+                    <div className="h-14 w-14 rounded-xl bg-secondary/10 flex items-center justify-center">
+                      <Phone className="h-7 w-7 text-secondary" />
                     </div>
                     <div>
-                      <CardTitle>Call for Today's Rate</CardTitle>
-                      <CardDescription>IVR phone service available 24/7</CardDescription>
+                      <CardTitle className="text-secondary">Call for Today's Rate</CardTitle>
+                      <CardDescription className="text-secondary/70">IVR phone service available 24/7</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
@@ -239,14 +265,19 @@ export default function VoiceAssistantPage() {
               </Card>
 
               {/* Info Card */}
-              <Card className="bg-accent/10 border-accent/30">
+              <Card className="bg-gradient-to-br from-amber-500/10 to-accent/10 border-amber-500/30 shadow-sm">
                 <CardContent className="pt-6">
                   <div className="flex gap-4">
-                    <Info className="h-5 w-5 text-accent-foreground flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="font-semibold mb-2">For Low-Literacy Users</h3>
+                    <div className="h-10 w-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                      <Info className="h-5 w-5 text-amber-600" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="font-semibold text-amber-600">For All Users</h3>
+                        <Badge className="bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-400">Inclusive Access</Badge>
+                      </div>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        {isMarketWomanMode 
+                        {isMarketWomanMode
                           ? 'Market Woman Mode shows one big number with voice. Just tap the screen to hear the rate. Share with your friends at Waterside, Red Light, or Duala markets!'
                           : 'This voice service is designed to help everyone access exchange rate information, regardless of reading ability. Share this number with family and friends who prefer audio information.'
                         }

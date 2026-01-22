@@ -162,17 +162,24 @@ export default function ForumsPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-4">
                 <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center">
                   <MessageSquare className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <Badge className="mb-4">Community Forums</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                Discussion Forums
-              </span></h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="mb-2">Community Forums</Badge>
+                <Badge className="bg-primary/10 text-primary">5K+ Members</Badge>
+                <Badge variant="secondary">Real Discussions</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Safe Community</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Discussion Forums
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
                 Share tips, report scams, discuss market trends, and connect with fellow Liberians
               </p>
             </div>
@@ -183,6 +190,21 @@ export default function ForumsPage() {
         <section className="py-6 sm:py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Active Discussions</Badge>
+                  <Badge className="bg-primary/10 text-primary">Community Driven</Badge>
+                  <Badge variant="secondary">Knowledge Sharing</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Join the Conversation
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Connect with fellow Liberians, share insights, and stay informed
+                </p>
+              </div>
               {/* Search and New Post */}
               <div className="flex flex-col md:flex-row gap-4 mb-6">
                 <div className="relative flex-1">
@@ -282,26 +304,39 @@ export default function ForumsPage() {
                   </Card>
 
                   {/* Forum Stats */}
-                  <Card className="mt-4">
-                    <CardHeader>
-                      <CardTitle className="text-lg">Forum Stats</CardTitle>
+                  <Card className="mt-4 border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg text-primary flex items-center gap-2">
+                        <div className="h-6 w-6 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Users className="h-4 w-4" />
+                        </div>
+                        Forum Stats
+                      </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3">
-                      <div className="flex justify-between">
-                        <span className="text-sm text-muted-foreground">Total Topics</span>
-                        <span className="font-semibold">1,234</span>
+                    <CardContent className="space-y-4">
+                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-muted-foreground">Total Topics</span>
+                          <span className="font-semibold text-primary">1,234</span>
+                        </div>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-sm text-muted-foreground">Total Replies</span>
-                        <span className="font-semibold">8,567</span>
+                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-muted-foreground">Total Replies</span>
+                          <span className="font-semibold text-secondary">8,567</span>
+                        </div>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-sm text-muted-foreground">Members</span>
-                        <span className="font-semibold">5,678</span>
+                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-muted-foreground">Members</span>
+                          <span className="font-semibold text-amber-600">5,678</span>
+                        </div>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-sm text-muted-foreground">Online Now</span>
-                        <span className="font-semibold text-secondary">127</span>
+                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-muted-foreground">Online Now</span>
+                          <span className="font-semibold text-green-600">127</span>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>

@@ -46,29 +46,41 @@ export default function BusinessDashboardPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-4">
                 <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center">
                   <Briefcase className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <Badge variant="outline" className="mb-3">For businesses</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Business Dashboard</span></h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-                Professional tools for importers, exporters, and business owners
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge variant="outline">For Businesses</Badge>
+                <Badge className="bg-primary/10 text-primary">Premium Tools</Badge>
+                <Badge variant="secondary">Save Money</Badge>
+                <Badge className="bg-secondary/10 text-secondary">Increase Profits</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Business Dashboard
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
+                Professional tools for importers, exporters, and business owners to maximize profits and minimize risk
               </p>
               <div className="flex justify-center gap-3 mt-6 flex-wrap">
-                <Badge variant="secondary" className="text-sm">
-                  <Zap className="h-3 w-3 mr-1" />
+                <Badge variant="secondary" className="text-sm gap-1">
+                  <Zap className="h-3 w-3" />
                   Premium Tier
                 </Badge>
-                <Badge variant="secondary" className="text-sm">
+                <Badge variant="secondary" className="text-sm gap-1">
+                  <TrendingUp className="h-3 w-3" />
                   30-Day Forecasts
                 </Badge>
-                <Badge variant="secondary" className="text-sm">
+                <Badge variant="secondary" className="text-sm gap-1">
+                  <Calendar className="h-3 w-3" />
                   Changer Booking
                 </Badge>
-                <Badge variant="secondary" className="text-sm">
+                <Badge variant="secondary" className="text-sm gap-1">
+                  <DollarSign className="h-3 w-3" />
                   API Access
                 </Badge>
               </div>
@@ -79,6 +91,21 @@ export default function BusinessDashboardPage() {
         <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Business Tools</Badge>
+                  <Badge className="bg-primary/10 text-primary">AI-Powered</Badge>
+                  <Badge variant="secondary">Professional Grade</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Everything Your Business Needs
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Advanced tools designed specifically for Liberian businesses and entrepreneurs
+                </p>
+              </div>
               <Tabs defaultValue="tools" className="w-full">
                 <TabsList className="grid w-full grid-cols-5">
                   <TabsTrigger value="tools">Smart Tools</TabsTrigger>
@@ -380,12 +407,28 @@ export default function BusinessDashboardPage() {
               </Tabs>
 
               {/* Pricing Section */}
-              <div className="mt-12 grid md:grid-cols-2 gap-6">
+              <div className="mt-16">
+                <div className="text-center mb-8 space-y-3">
+                  <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                    <Badge variant="outline">Pricing Plans</Badge>
+                    <Badge className="bg-primary/10 text-primary">Flexible</Badge>
+                    <Badge variant="secondary">Local Payment</Badge>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                    <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                      Choose Your Plan
+                    </span>
+                  </h2>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    Start free, upgrade when you need more power
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
                 {/* Free Tier */}
-                <Card className="border-border/60 shadow-sm">
-                  <CardHeader>
-                    <CardTitle>Free</CardTitle>
-                    <CardDescription>For individual users</CardDescription>
+                <Card className="border-border/60 shadow-sm bg-gradient-to-br from-card to-muted/20">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-primary">Free</CardTitle>
+                    <CardDescription>For individual users and small businesses</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="text-4xl font-bold mb-4">
@@ -410,17 +453,18 @@ export default function BusinessDashboardPage() {
                 </Card>
 
                 {/* Business Tier */}
-                <Card className="border-secondary/60 shadow-sm">
-                  <CardHeader>
+                <Card className="border-secondary/60 shadow-sm bg-gradient-to-br from-secondary/5 to-card relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-secondary/10 rounded-bl-full"></div>
+                  <CardHeader className="pb-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="flex items-center gap-2">
+                        <CardTitle className="flex items-center gap-2 text-secondary">
                           <Crown className="h-5 w-5 text-secondary" />
                           TrueRate Business
                         </CardTitle>
-                        <CardDescription>For serious businesses</CardDescription>
+                        <CardDescription>For serious businesses and enterprises</CardDescription>
                       </div>
-                      <Badge variant="secondary">Popular</Badge>
+                      <Badge variant="secondary" className="bg-secondary/20 text-secondary">Most Popular</Badge>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -455,13 +499,20 @@ export default function BusinessDashboardPage() {
               </div>
 
               {/* Business Tagline */}
-              <Card className="mt-8 bg-gradient-to-r from-primary/10 to-secondary/10 border-0">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold mb-4">
-                    "TrueRate doesn't just show the rate — it tells you the exact day to change your dollars 
-                    so you keep an extra L$50,000–200,000 every month."
+              <Card className="mt-12 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border-0 shadow-sm">
+                <CardContent className="p-8 sm:p-10 text-center">
+                  <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                    <Badge variant="outline">Success Stories</Badge>
+                    <Badge className="bg-primary/10 text-primary">Real Results</Badge>
+                    <Badge variant="secondary">Proven Track Record</Badge>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 text-balance">
+                    <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                      "TrueRate doesn't just show the rate — it tells you the exact day to change your dollars
+                      so you keep an extra L$50,000–200,000 every month."
+                    </span>
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     Join 25,000+ business users who trust TrueRate for smarter forex decisions
                   </p>
                 </CardContent>

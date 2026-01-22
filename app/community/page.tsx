@@ -35,17 +35,24 @@ export default function CommunityPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-4">
                 <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <Badge className="mb-4">Community Hub</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                Built by the Community, for the Community
-              </span></h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="mb-2">Community Hub</Badge>
+                <Badge className="bg-primary/10 text-primary">50K+ Members</Badge>
+                <Badge variant="secondary">Crowdsourced Data</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Trusted Network</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Built by the Community, for the Community
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
                 Join thousands of Liberians helping each other get fair exchange rates, spot fraud, and share knowledge.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mt-6">
@@ -68,36 +75,40 @@ export default function CommunityPage() {
         <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Card className="border-border/60 shadow-sm">
-                  <CardContent className="pt-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardContent className="pt-8 pb-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">50,234</div>
+                      <div className="text-4xl font-bold text-primary mb-2">50,234</div>
                       <div className="text-sm text-muted-foreground">Active Members</div>
+                      <div className="text-xs text-primary/70 mt-1">Growing daily</div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
-                  <CardContent className="pt-6">
+                <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardContent className="pt-8 pb-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">15,892</div>
+                      <div className="text-4xl font-bold text-secondary mb-2">15,892</div>
                       <div className="text-sm text-muted-foreground">Rate Reports</div>
+                      <div className="text-xs text-secondary/70 mt-1">Real-time updates</div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
-                  <CardContent className="pt-6">
+                <Card className="border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardContent className="pt-8 pb-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">8,456</div>
+                      <div className="text-4xl font-bold text-amber-600 mb-2">8,456</div>
                       <div className="text-sm text-muted-foreground">Reviews Posted</div>
+                      <div className="text-xs text-amber-600/70 mt-1">Community driven</div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
-                  <CardContent className="pt-6">
+                <Card className="border-green-500/20 bg-gradient-to-br from-green-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardContent className="pt-8 pb-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">98.5%</div>
+                      <div className="text-4xl font-bold text-green-600 mb-2">98.5%</div>
                       <div className="text-sm text-muted-foreground">Accuracy Rate</div>
+                      <div className="text-xs text-green-600/70 mt-1">Verified data</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -110,6 +121,21 @@ export default function CommunityPage() {
         <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Community Features</Badge>
+                  <Badge className="bg-primary/10 text-primary">Interactive</Badge>
+                  <Badge variant="secondary">Earn Rewards</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Join the Conversation
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Participate, earn points, and help build a stronger community
+                </p>
+              </div>
               <Tabs defaultValue="reports" className="space-y-6">
                 <TabsList className="w-full md:w-auto flex flex-nowrap sm:flex-wrap overflow-x-auto sm:overflow-visible gap-2 pb-1">
                   <TabsTrigger value="reports" className="whitespace-nowrap">Rate Reports</TabsTrigger>
@@ -121,14 +147,19 @@ export default function CommunityPage() {
 
                 {/* Rate Reports Tab */}
                 <TabsContent value="reports" className="space-y-4">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                    <div className="space-y-2">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Badge variant="outline">Rate Reports</Badge>
+                        <Badge className="bg-primary/10 text-primary">Real-time</Badge>
+                        <Badge variant="secondary">Verified</Badge>
+                      </div>
                       <h2 className="text-2xl font-bold">Recent Rate Reports</h2>
                       <p className="text-muted-foreground">Community-submitted exchange rates from across Liberia</p>
                     </div>
                     <Link href="/community/report-rate">
-                      <Button className="w-full sm:w-auto">
-                        <MapPin className="h-4 w-4 mr-2" />
+                      <Button className="w-full sm:w-auto shadow-sm gap-2">
+                        <MapPin className="h-4 w-4" />
                         Submit Rate
                       </Button>
                     </Link>
@@ -203,13 +234,18 @@ export default function CommunityPage() {
 
                 {/* Reviews Tab */}
                 <TabsContent value="reviews" className="space-y-4">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                    <div className="space-y-2">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Badge variant="outline">Reviews</Badge>
+                        <Badge className="bg-secondary/10 text-secondary">Community Driven</Badge>
+                        <Badge variant="secondary">Helpful</Badge>
+                      </div>
                       <h2 className="text-2xl font-bold">Money Changer Reviews</h2>
                       <p className="text-muted-foreground">Help others by sharing your experiences</p>
                     </div>
-                    <Button className="w-full sm:w-auto">
-                      <Star className="h-4 w-4 mr-2" />
+                    <Button className="w-full sm:w-auto shadow-sm gap-2">
+                      <Star className="h-4 w-4" />
                       Write Review
                     </Button>
                   </div>

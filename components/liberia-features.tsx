@@ -65,11 +65,72 @@ export function PriceIndex({ rate }: { rate: number }) {
     { name: "Cooking Gas (14kg)", icon: <Flame className="h-4 w-4" />, priceUSD: 20, priceLRD: 20 * rate, change: 0, category: "fuel" },
   ]
 
+  const [items, setItems] = useState<PriceItem[]>([])
+  const [loading, setLoading] = useState(true)
+  const [updatedLabel, setUpdatedLabel] = useState<string>("Updated Today")
+  const [sourceLabel, setSourceLabel] = useState<string>("")
   const [filter, setFilter] = useState("all")
 
+  useEffect(() => {
+    let isMounted = true
+    const fetchPriceIndex = async () => {
+      try {
+        setLoading(true)
+        const res = await fetch("/api/price-index")
+        if (!res.ok) return
+        const data = await res.json()
+        if (!isMounted || !Array.isArray(data?.items)) return
+
+        const iconMap: Record<string, React.ReactNode> = {
+          wheat: <Wheat className="h-4 w-4" />,
+          fuel: <Fuel className="h-4 w-4" />,
+          cement: <BrickWall className="h-4 w-4" />,
+          steel: <Construction className="h-4 w-4" />,
+          oil: <Droplet className="h-4 w-4" />,
+          gas: <Flame className="h-4 w-4" />,
+        }
+
+        const mapped = data.items.map((item: any) => ({
+          name: item.name,
+          category: item.category,
+          change: item.change,
+          priceUSD: Number(item.priceUSD),
+          priceLRD: Number(item.priceLRD),
+          icon: iconMap[item.icon] ?? <ShoppingCart className="h-4 w-4" />,
+        }))
+
+        setItems(mapped)
+        if (typeof data?.updatedAt === "string") {
+          const date = new Date(data.updatedAt)
+          setUpdatedLabel(
+            Number.isNaN(date.getTime()) ? "Updated Recently" : `Updated ${date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`,
+          )
+        }
+        if (Array.isArray(data?.sources) && data.sources.length) {
+          setSourceLabel(data.sources[0])
+        }
+      } catch {
+        if (isMounted) {
+          setItems(prices)
+          setUpdatedLabel("Updated Recently")
+          setSourceLabel("Fallback")
+        }
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    fetchPriceIndex()
+    const id = window.setInterval(fetchPriceIndex, 5 * 60 * 1000)
+    return () => {
+      isMounted = false
+      window.clearInterval(id)
+    }
+  }, [])
+
   const filteredPrices = filter === "all" 
-    ? prices 
-    : prices.filter(p => p.category === filter)
+    ? items 
+    : items.filter(p => p.category === filter)
 
   return (
     <Card className="border-border/60 shadow-sm">
@@ -83,49 +144,71 @@ export function PriceIndex({ rate }: { rate: number }) {
             <CardDescription>Real-time prices of essential goods</CardDescription>
           </div>
           <div className="flex items-center gap-2">
-            <Badge variant="outline">Updated Today</Badge>
+            <Badge variant="outline">{updatedLabel}</Badge>
             <Badge variant="secondary">Live</Badge>
           </div>
         </div>
+        {sourceLabel && (
+          <div className="sr-only">Source: {sourceLabel}</div>
+        )}
       </CardHeader>
       <CardContent>
         <Tabs value={filter} onValueChange={setFilter} className="mb-4">
-          <TabsList className="grid grid-cols-4 w-full">
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="food">Food</TabsTrigger>
-            <TabsTrigger value="fuel">Fuel</TabsTrigger>
-            <TabsTrigger value="construction">Build</TabsTrigger>
+          <TabsList className="w-full flex flex-nowrap overflow-x-auto gap-2">
+            <TabsTrigger value="all" className="whitespace-nowrap">All</TabsTrigger>
+            <TabsTrigger value="food" className="whitespace-nowrap">Food</TabsTrigger>
+            <TabsTrigger value="fuel" className="whitespace-nowrap">Fuel</TabsTrigger>
+            <TabsTrigger value="construction" className="whitespace-nowrap">Build</TabsTrigger>
           </TabsList>
         </Tabs>
         
         <div className="space-y-2">
-          {filteredPrices.map((item) => (
-            <div 
-              key={item.name} 
-              className="flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-colors hover:bg-muted"
-            >
-              <div className="flex items-center gap-3 min-w-0">
-                <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
-                  {item.icon}
-                </div>
-                <div className="min-w-0">
-                  <div className="font-medium text-sm sm:text-base truncate">{item.name}</div>
-                  <div className="text-xs text-muted-foreground">
-                    ${item.priceUSD.toFixed(2)} USD
+          {loading
+            ? Array.from({ length: 6 }).map((_, index) => (
+                <div
+                  key={`price-skeleton-${index}`}
+                  className="flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4"
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="h-10 w-10 rounded-lg bg-muted animate-pulse" />
+                    <div className="space-y-2">
+                      <div className="h-3 w-32 rounded bg-muted animate-pulse" />
+                      <div className="h-2 w-20 rounded bg-muted animate-pulse" />
+                    </div>
+                  </div>
+                  <div className="space-y-2 text-right">
+                    <div className="h-3 w-20 rounded bg-muted animate-pulse" />
+                    <div className="h-2 w-12 rounded bg-muted animate-pulse" />
                   </div>
                 </div>
-              </div>
-              <div className="text-right shrink-0">
-                <div className="font-bold text-sm sm:text-base">{item.priceLRD.toLocaleString()} LRD</div>
-                <div className={`text-[11px] sm:text-xs flex items-center gap-1 justify-end ${
-                  item.change > 0 ? "text-red-500" : item.change < 0 ? "text-green-500" : "text-muted-foreground"
-                }`}>
-                  {item.change > 0 ? <TrendingUp className="h-3 w-3" /> : item.change < 0 ? <TrendingDown className="h-3 w-3" /> : <Minus className="h-3 w-3" />}
-                  {item.change > 0 ? "+" : ""}{item.change}%
+              ))
+            : filteredPrices.map((item) => (
+                <div 
+                  key={item.name} 
+                  className="flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-colors hover:bg-muted"
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
+                      {item.icon}
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-medium text-sm sm:text-base truncate">{item.name}</div>
+                      <div className="text-xs text-muted-foreground">
+                        ${item.priceUSD.toFixed(2)} USD
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <div className="font-bold text-sm sm:text-base">{item.priceLRD.toLocaleString()} LRD</div>
+                    <div className={`text-[11px] sm:text-xs flex items-center gap-1 justify-end ${
+                      item.change > 0 ? "text-red-500" : item.change < 0 ? "text-green-500" : "text-muted-foreground"
+                    }`}>
+                      {item.change > 0 ? <TrendingUp className="h-3 w-3" /> : item.change < 0 ? <TrendingDown className="h-3 w-3" /> : <Minus className="h-3 w-3" />}
+                      {item.change > 0 ? "+" : ""}{item.change}%
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              ))}
         </div>
       </CardContent>
     </Card>
@@ -348,47 +431,60 @@ export function MarketNews() {
   }, [])
 
   return (
-    <Card>
+    <Card className="border-border/60 shadow-sm">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Newspaper className="h-5 w-5" />
-          Market News
-        </CardTitle>
-        <CardDescription>Latest news affecting exchange rates</CardDescription>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <CardTitle className="flex items-center gap-2">
+              <Newspaper className="h-5 w-5" />
+              Liberia Market News
+            </CardTitle>
+            <CardDescription>Key headlines impacting FX rates</CardDescription>
+          </div>
+          <Badge variant="outline">Updated daily</Badge>
+        </div>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
+        <div className="space-y-3">
           {items.slice(0, 5).map((item, i) => (
             <a
               key={i}
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex gap-3 pb-4 border-b last:border-0 last:pb-0 group"
+              className="block rounded-xl border border-border/60 bg-background/70 p-4 transition-all hover:shadow-sm hover:border-primary/30"
               aria-label={`Read: ${item.title}`}
             >
-              <div className={`h-2 w-2 rounded-full mt-2 flex-shrink-0 ${
-                item.impact === "positive" ? "bg-green-500" :
-                item.impact === "negative" ? "bg-red-500" : "bg-yellow-500"
-              }`} />
-              <div className="flex-1 min-w-0">
-                <h4 className="text-base font-medium leading-snug text-foreground group-hover:text-primary transition-colors">
-                  {item.title}
-                </h4>
-                <p className="text-xs text-muted-foreground line-clamp-2 mt-1">{item.summary}</p>
-                <div className="flex items-center gap-2 text-[11px] text-muted-foreground mt-2">
-                  <span className="uppercase tracking-wide">{item.source}</span>
-                  <span className="h-1 w-1 rounded-full bg-muted-foreground/60" />
-                  <span className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
-                    {item.time}
-                  </span>
+              <div className="flex items-start gap-3">
+                <div
+                  className={`mt-1 h-2 w-2 rounded-full ${
+                    item.impact === "positive"
+                      ? "bg-green-500"
+                      : item.impact === "negative"
+                        ? "bg-red-500"
+                        : "bg-yellow-500"
+                  }`}
+                />
+                <div className="min-w-0 flex-1 space-y-2">
+                  <h4 className="text-sm sm:text-base font-semibold leading-snug text-foreground group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-muted-foreground line-clamp-2">{item.summary}</p>
+                  <div className="flex flex-wrap items-center gap-2 text-[11px] text-muted-foreground">
+                    <span className="inline-flex items-center rounded-full border border-border/60 px-2 py-0.5 uppercase tracking-wide">
+                      {item.source}
+                    </span>
+                    <span className="inline-flex items-center gap-1 rounded-full border border-border/60 px-2 py-0.5">
+                      <Clock className="h-3 w-3" />
+                      {item.time}
+                    </span>
+                  </div>
                 </div>
               </div>
             </a>
           ))}
         </div>
-        <Button variant="ghost" className="w-full mt-4 text-sm" asChild>
+        <Button variant="outline" className="w-full mt-4 text-sm" asChild>
           <Link href="/liberia-market" aria-label="View all Liberia market news">
             View All News <ArrowRight className="h-4 w-4 ml-1" />
           </Link>
@@ -409,14 +505,53 @@ export function InflationTracker() {
     { month: "Dec", rate: 7.2 },
   ]
 
-  const currentInflation = monthlyData[monthlyData.length - 1].rate
+  const [liveInflation, setLiveInflation] = useState<number | null>(null)
+  const [liveMoM, setLiveMoM] = useState<number | null>(null)
+  const [lastMonthLabel, setLastMonthLabel] = useState<string>("")
+  const [updatedLabel, setUpdatedLabel] = useState<string>("")
+  const [sourceLabel, setSourceLabel] = useState<string>("")
+
+  useEffect(() => {
+    let isMounted = true
+    const fetchInflation = async () => {
+      try {
+        const res = await fetch("/api/liberia-cpi")
+        if (!res.ok) return
+        const data = await res.json()
+        if (!isMounted) return
+        if (typeof data?.inflationYoY === "number") setLiveInflation(data.inflationYoY)
+        if (typeof data?.inflationMoM === "number") setLiveMoM(data.inflationMoM)
+        if (typeof data?.lastMonth === "string") setLastMonthLabel(data.lastMonth)
+        if (typeof data?.updatedAt === "string") {
+          const date = new Date(data.updatedAt)
+          setUpdatedLabel(
+            Number.isNaN(date.getTime()) ? "Recently" : date.toLocaleDateString("en-US", { month: "short", day: "numeric" }),
+          )
+        }
+        if (typeof data?.source === "string") setSourceLabel(data.source)
+      } catch {
+        // keep fallback data
+      }
+    }
+
+    fetchInflation()
+    const id = window.setInterval(fetchInflation, 6 * 60 * 60 * 1000)
+    return () => {
+      isMounted = false
+      window.clearInterval(id)
+    }
+  }, [])
+
+  const fallbackInflation = monthlyData[monthlyData.length - 1].rate
+  const currentInflation = liveInflation ?? fallbackInflation
   const previousInflation = monthlyData[monthlyData.length - 2].rate
-  const change = currentInflation - previousInflation
+  const fallbackChange = currentInflation - previousInflation
+  const change = liveMoM ?? fallbackChange
 
   return (
-    <Card>
+    <Card className="border-border/60 shadow-sm">
       <CardHeader>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
@@ -424,37 +559,53 @@ export function InflationTracker() {
             </CardTitle>
             <CardDescription>Year-over-year consumer price index</CardDescription>
           </div>
-          <div className="text-right">
-            <div className="text-3xl font-bold">{currentInflation}%</div>
-            <div className={`text-xs flex items-center gap-1 justify-end ${
+          <div className="flex items-center gap-2">
+            <Badge variant="outline" className="text-[10px]">Live</Badge>
+            <span className="text-xs text-muted-foreground">{lastMonthLabel || "Latest"}</span>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="grid gap-3 sm:grid-cols-[1.2fr_1fr]">
+          <div className="rounded-xl border border-border/60 bg-background/70 p-4">
+            <div className="text-xs text-muted-foreground">Current Inflation</div>
+            <div className="text-3xl font-bold mt-1">{currentInflation.toFixed(1)}%</div>
+            <div className={`mt-1 inline-flex items-center gap-1 text-xs ${
               change < 0 ? "text-green-500" : "text-red-500"
             }`}>
               {change < 0 ? <TrendingDown className="h-3 w-3" /> : <TrendingUp className="h-3 w-3" />}
               {change > 0 ? "+" : ""}{change.toFixed(1)}% from last month
             </div>
+            {updatedLabel && (
+              <div className="mt-2 text-[11px] text-muted-foreground">
+                Updated {updatedLabel}{sourceLabel ? ` • ${sourceLabel}` : ""}
+              </div>
+            )}
+          </div>
+
+          <div className="rounded-xl border border-border/60 bg-background/70 p-4">
+            <div className="text-xs text-muted-foreground mb-2">Last 6 months</div>
+            <div className="space-y-2">
+              {monthlyData.map((item, i) => (
+                <div key={item.month} className="flex items-center gap-3">
+                  <span className="text-[11px] text-muted-foreground w-8">{item.month}</span>
+                  <div className="flex-1 h-2 rounded-full bg-muted overflow-hidden">
+                    <div
+                      className={`h-full rounded-full transition-all ${
+                        i === monthlyData.length - 1 ? "bg-primary" : "bg-primary/50"
+                      }`}
+                      style={{ width: `${(item.rate / 12) * 100}%` }}
+                    />
+                  </div>
+                  <span className="text-[11px] font-medium w-10 text-right">{item.rate}%</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-3">
-          {monthlyData.map((item, i) => (
-            <div key={item.month} className="flex items-center gap-3">
-              <span className="text-xs text-muted-foreground w-8">{item.month}</span>
-              <div className="flex-1 h-2 rounded-full bg-muted overflow-hidden">
-                <div 
-                  className={`h-full rounded-full transition-all ${
-                    i === monthlyData.length - 1 ? "bg-primary" : "bg-primary/50"
-                  }`}
-                  style={{ width: `${(item.rate / 12) * 100}%` }}
-                />
-              </div>
-              <span className="text-xs font-medium w-10 text-right">{item.rate}%</span>
-            </div>
-          ))}
-        </div>
-        <div className="mt-4 p-3 rounded-lg bg-muted/50 text-xs text-muted-foreground">
-          <strong className="text-foreground">What this means:</strong> Lower inflation is good for the LRD. 
-          When inflation decreases, the currency tends to be more stable.
+
+        <div className="rounded-xl border border-border/60 bg-muted/40 p-3 text-xs text-muted-foreground">
+          <strong className="text-foreground">What this means:</strong> Lower inflation supports a more stable LRD.
         </div>
       </CardContent>
     </Card>

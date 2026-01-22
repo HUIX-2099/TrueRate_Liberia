@@ -89,15 +89,24 @@ export default function ReportFraudPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-destructive/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-4">
                 <div className="h-16 w-16 rounded-full bg-destructive/20 flex items-center justify-center">
                   <AlertTriangle className="h-8 w-8 text-destructive" />
                 </div>
               </div>
-              <Badge variant="outline" className="mb-3">Safety first</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Report Fraudulent Activity</span></h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge variant="outline">Safety First</Badge>
+                <Badge className="bg-destructive/10 text-destructive">Community Protection</Badge>
+                <Badge variant="secondary">24h Response</Badge>
+                <Badge className="bg-primary/10 text-primary">Anonymous Reporting</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Report Fraudulent Activity
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
                 Help us protect the community by reporting suspicious money changers, unfair rates, counterfeit
                 currency, or other fraudulent activities.
               </p>
@@ -106,19 +115,38 @@ export default function ReportFraudPage() {
         </section>
 
         {/* Alert Banner */}
-        <section className="py-6 sm:py-8 bg-muted/30">
+        <section className="py-8 sm:py-10 bg-gradient-to-r from-destructive/5 via-destructive/10 to-destructive/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="border-l-4 border-l-destructive border-border/60 shadow-sm">
+              <Card className="border-l-4 border-l-destructive border-border/60 shadow-sm bg-gradient-to-r from-destructive/5 to-card">
                 <CardContent className="p-6">
                   <div className="flex gap-4">
-                    <Shield className="h-6 w-6 text-destructive flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">Your Safety is Our Priority</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="h-12 w-12 rounded-xl bg-destructive/20 flex items-center justify-center flex-shrink-0">
+                      <Shield className="h-6 w-6 text-destructive" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="font-semibold text-lg">Your Safety is Our Priority</h3>
+                        <Badge className="bg-destructive/10 text-destructive">Protected</Badge>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                         All reports are confidential and reviewed by our fraud investigation team. If you're in
                         immediate danger, please contact the Liberia National Police at 911.
                       </p>
+                      <div className="flex flex-wrap gap-2">
+                        <Badge variant="secondary" className="gap-1">
+                          <Shield className="h-3 w-3" />
+                          Anonymous
+                        </Badge>
+                        <Badge variant="secondary" className="gap-1">
+                          <CheckCircle2 className="h-3 w-3" />
+                          24h Review
+                        </Badge>
+                        <Badge variant="secondary" className="gap-1">
+                          <AlertTriangle className="h-3 w-3" />
+                          Police Coordination
+                        </Badge>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -262,38 +290,79 @@ export default function ReportFraudPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-2 mb-6">
-                <Badge variant="outline">Recent alerts</Badge>
-                <h2 className="text-2xl font-bold">Recent Fraud Alerts</h2>
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Recent Alerts</Badge>
+                  <Badge className="bg-destructive/10 text-destructive">Community Warnings</Badge>
+                  <Badge variant="secondary">Stay Informed</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Recent Fraud Alerts
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Stay informed about active fraud threats in your area
+                </p>
               </div>
               <div className="space-y-4">
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-destructive/20 bg-gradient-to-br from-destructive/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Badge variant="destructive">Active Alert</Badge>
+                      <div className="flex flex-col items-center gap-2">
+                        <Badge variant="destructive" className="gap-1">
+                          <AlertTriangle className="h-3 w-3" />
+                          Active Alert
+                        </Badge>
+                        <div className="text-xs text-muted-foreground">High Priority</div>
+                      </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold mb-2">Counterfeit $100 Bills - Red Light Market</h3>
-                        <p className="text-sm text-muted-foreground mb-2">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h3 className="font-semibold">Counterfeit $100 Bills - Red Light Market</h3>
+                          <Badge className="bg-destructive/10 text-destructive">Counterfeit</Badge>
+                        </div>
+                        <p className="text-sm text-muted-foreground mb-3">
                           Multiple reports of counterfeit $100 bills circulating near Red Light Market. Check serial
                           numbers carefully.
                         </p>
-                        <p className="text-xs text-muted-foreground">Posted 2 days ago • 12 reports</p>
+                        <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <CheckCircle2 className="h-3 w-3" />
+                            12 reports
+                          </span>
+                          <span>Posted 2 days ago</span>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-green-500/20 bg-gradient-to-br from-green-500/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Badge variant="secondary">Resolved</Badge>
+                      <div className="flex flex-col items-center gap-2">
+                        <Badge variant="secondary" className="gap-1 bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-400">
+                          <CheckCircle2 className="h-3 w-3" />
+                          Resolved
+                        </Badge>
+                        <div className="text-xs text-muted-foreground">Case Closed</div>
+                      </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold mb-2">Unauthorized Changer - Broad Street</h3>
-                        <p className="text-sm text-muted-foreground mb-2">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h3 className="font-semibold">Unauthorized Changer - Broad Street</h3>
+                          <Badge className="bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-400">Impersonation</Badge>
+                        </div>
+                        <p className="text-sm text-muted-foreground mb-3">
                           Individual impersonating licensed changer. Authorities have been notified and the individual
                           identified.
                         </p>
-                        <p className="text-xs text-muted-foreground">Posted 1 week ago • Resolved</p>
+                        <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Shield className="h-3 w-3" />
+                            Police notified
+                          </span>
+                          <span>Posted 1 week ago</span>
+                        </div>
                       </div>
                     </div>
                   </CardContent>

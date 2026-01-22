@@ -216,11 +216,20 @@ export default function MapPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <Badge className="mb-4">Interactive Map</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Exchange Rates Across Liberia</span></h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-                Explore live exchange rates from different counties and cities. Hover over locations to see details.
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="mb-2">Interactive Map</Badge>
+                <Badge className="bg-primary/10 text-primary">Live Rates</Badge>
+                <Badge variant="secondary">All Counties</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Location-Based</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Exchange Rates Across Liberia
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-2xl mx-auto">
+                Explore live exchange rates from different counties and cities. Hover over locations to see details and find the best rates near you.
               </p>
             </div>
           </div>
@@ -275,11 +284,19 @@ export default function MapPage() {
         <section className="py-10 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col gap-2 mb-6">
-                <Badge variant="outline" className="w-fit">Nearby</Badge>
-                <h2 className="text-2xl font-bold">Nearby Money Changers</h2>
-                <p className="text-sm text-muted-foreground">
-                  Results based on your current location and Google Places.
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Nearby</Badge>
+                  <Badge className="bg-primary/10 text-primary">Location-Based</Badge>
+                  <Badge variant="secondary">Google Places</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Nearby Money Changers
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+                  Real-time results based on your current location using Google Places API.
                 </p>
               </div>
               {nearbyStatus === "loading" && (
@@ -343,7 +360,21 @@ export default function MapPage() {
         <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl font-bold mb-6">Rates by Location</h2>
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">All Locations</Badge>
+                  <Badge className="bg-primary/10 text-primary">Real-time</Badge>
+                  <Badge variant="secondary">All Counties</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Rates by Location
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Live exchange rates from verified changers across Liberia's counties and cities.
+                </p>
+              </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {locations.map((location) => (
                   <Card key={location.id} className="border-border/60 shadow-sm transition-shadow hover:shadow-md">
@@ -394,10 +425,20 @@ export default function MapPage() {
         <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card>
-                <CardHeader>
-                  <CardTitle>How to Use the Map</CardTitle>
-                </CardHeader>
+              <div className="text-center mb-8">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+                  <Badge variant="outline">Map Guide</Badge>
+                  <Badge className="bg-primary/10 text-primary">Interactive</Badge>
+                  <Badge variant="secondary">Easy Navigation</Badge>
+                </div>
+                <h2 className="text-2xl font-bold mb-2">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    How to Use the Map
+                  </span>
+                </h2>
+                <p className="text-sm text-muted-foreground">Navigate and explore exchange rates across Liberia</p>
+              </div>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 via-card/80 to-secondary/5 shadow-sm">
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -426,40 +467,69 @@ export default function MapPage() {
         </section>
 
         {/* Rate Summary */}
-        <section className="py-10 sm:py-12 bg-muted/30">
+        <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">Rate Summary</h2>
-              <p className="text-muted-foreground">
-                Snapshot across verified locations to help you compare quickly.
+            <div className="max-w-4xl mx-auto text-center mb-8 space-y-3">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                <Badge variant="outline">Rate Summary</Badge>
+                <Badge className="bg-primary/10 text-primary">Market Overview</Badge>
+                <Badge variant="secondary">Verified Data</Badge>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Market Rate Summary
+                </span>
+              </h2>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Comprehensive snapshot across verified locations to help you compare and make informed decisions.
               </p>
             </div>
-            <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-base">Highest Rate</CardTitle>
-                  <CardDescription>{highestRate?.name || "Loading..."}</CardDescription>
+            <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-3">
+              <Card className="border-green-200 bg-green-50/50 dark:bg-green-950/20 shadow-sm">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2 mb-1">
+                    <TrendingUp className="h-4 w-4 text-green-600" />
+                    <CardTitle className="text-base text-green-700 dark:text-green-400">Highest Rate</CardTitle>
+                  </div>
+                  <CardDescription className="text-green-600/70">{highestRate?.name || "Loading..."}</CardDescription>
                 </CardHeader>
-                <CardContent className="text-2xl font-bold text-primary">
-                  {highestRate ? highestRate.rate.toFixed(2) : "--"} LRD
+                <CardContent className="pt-0">
+                  <div className="text-3xl font-bold text-green-600">
+                    {highestRate ? highestRate.rate.toFixed(2) : "--"}
+                  </div>
+                  <div className="text-xs text-green-600/70 mt-1">LRD per USD</div>
                 </CardContent>
               </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-base">Lowest Rate</CardTitle>
-                  <CardDescription>{lowestRate?.name || "Loading..."}</CardDescription>
+              <Card className="border-red-200 bg-red-50/50 dark:bg-red-950/20 shadow-sm">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2 mb-1">
+                    <TrendingDown className="h-4 w-4 text-red-600" />
+                    <CardTitle className="text-base text-red-700 dark:text-red-400">Lowest Rate</CardTitle>
+                  </div>
+                  <CardDescription className="text-red-600/70">{lowestRate?.name || "Loading..."}</CardDescription>
                 </CardHeader>
-                <CardContent className="text-2xl font-bold text-primary">
-                  {lowestRate ? lowestRate.rate.toFixed(2) : "--"} LRD
+                <CardContent className="pt-0">
+                  <div className="text-3xl font-bold text-red-600">
+                    {lowestRate ? lowestRate.rate.toFixed(2) : "--"}
+                  </div>
+                  <div className="text-xs text-red-600/70 mt-1">LRD per USD</div>
                 </CardContent>
               </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-base">Average Rate</CardTitle>
-                  <CardDescription>{verifiedCount} verified locations</CardDescription>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="h-4 w-4 rounded-full bg-primary/20 flex items-center justify-center">
+                      <div className="h-2 w-2 rounded-full bg-primary"></div>
+                    </div>
+                    <CardTitle className="text-base text-primary">Average Rate</CardTitle>
+                  </div>
+                  <CardDescription className="text-primary/70">{verifiedCount} verified locations</CardDescription>
                 </CardHeader>
-                <CardContent className="text-2xl font-bold text-primary">
-                  {averageRate ? averageRate.toFixed(2) : "--"} LRD
+                <CardContent className="pt-0">
+                  <div className="text-3xl font-bold text-primary">
+                    {averageRate ? averageRate.toFixed(2) : "--"}
+                  </div>
+                  <div className="text-xs text-primary/70 mt-1">Market average</div>
                 </CardContent>
               </Card>
             </div>

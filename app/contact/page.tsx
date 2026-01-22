@@ -51,14 +51,24 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center mb-3">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <span className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
                   Support
                 </span>
+                <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs text-primary">
+                  24h Response
+                </span>
+                <span className="inline-flex items-center rounded-full border border-secondary/30 bg-secondary/5 px-3 py-1 text-xs text-secondary">
+                  Free Help
+                </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Get in Touch</span></h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Get in Touch
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
                 Have questions, feedback, or need support? We're here to help. Reach out to our team and we'll respond
                 as quickly as possible.
               </p>
@@ -70,42 +80,62 @@ export default function ContactPage() {
         <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <Card className="border-border/60 shadow-sm">
-                <CardHeader>
-                  <Phone className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Phone</CardTitle>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-3">
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-primary">Phone</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-2">Call or WhatsApp us</p>
-                  <a href="tel:+231777123456" className="text-primary font-medium hover:underline">
+                <CardContent className="space-y-3">
+                  <p className="text-muted-foreground">Call or WhatsApp us</p>
+                  <a href="tel:+231777123456" className="text-primary font-medium hover:underline block">
                     +231 777 123 456
                   </a>
-                  <p className="text-sm text-muted-foreground mt-2">Mon-Fri: 8am - 6pm</p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="rounded-full border border-primary/30 bg-primary/5 px-2 py-0.5 text-primary">
+                      Mon-Fri
+                    </span>
+                    <span>8am - 6pm</span>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-border/60 shadow-sm">
-                <CardHeader>
-                  <Mail className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Email</CardTitle>
+              <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-3">
+                  <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
+                    <Mail className="h-6 w-6 text-secondary" />
+                  </div>
+                  <CardTitle className="text-secondary">Email</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-2">Send us an email</p>
-                  <a href="mailto:support@truerate-liberia.com" className="text-primary font-medium hover:underline">
+                <CardContent className="space-y-3">
+                  <p className="text-muted-foreground">Send us an email</p>
+                  <a href="mailto:support@truerate-liberia.com" className="text-secondary font-medium hover:underline block">
                     support@truerate-liberia.com
                   </a>
-                  <p className="text-sm text-muted-foreground mt-2">Response within 24hrs</p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="rounded-full border border-secondary/30 bg-secondary/5 px-2 py-0.5 text-secondary">
+                      24h Response
+                    </span>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-border/60 shadow-sm">
-                <CardHeader>
-                  <MapPin className="h-8 w-8 text-primary mb-2" />
+              <Card className="border-muted-foreground/20 bg-gradient-to-br from-muted/10 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-3">
+                  <div className="h-12 w-12 rounded-xl bg-muted/20 flex items-center justify-center mb-3">
+                    <MapPin className="h-6 w-6 text-muted-foreground" />
+                  </div>
                   <CardTitle>Office</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-2">Office location</p>
-                  <p className="text-sm text-muted-foreground">We’re online‑only for now.</p>
+                <CardContent className="space-y-3">
+                  <p className="text-muted-foreground">Office location</p>
+                  <p className="text-sm text-muted-foreground">We're online‑only for now.</p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="rounded-full border border-muted-foreground/30 bg-muted/20 px-2 py-0.5">
+                      Digital First
+                    </span>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -208,16 +238,36 @@ export default function ContactPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8 space-y-2">
-                <span className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
-                  FAQs
-                </span>
-                <h2 className="text-3xl font-bold text-balance">Frequently Asked Questions</h2>
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <span className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
+                    FAQs
+                  </span>
+                  <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs text-primary">
+                    Quick Answers
+                  </span>
+                  <span className="inline-flex items-center rounded-full border border-secondary/30 bg-secondary/5 px-3 py-1 text-xs text-secondary">
+                    Help Center
+                  </span>
+                </div>
+                <h2 className="text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Frequently Asked Questions
+                  </span>
+                </h2>
+                <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                  Find quick answers to common questions about TrueRate Liberia
+                </p>
               </div>
               <div className="space-y-4">
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
-                    <CardTitle className="text-lg">How often are rates updated?</CardTitle>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span className="text-xs font-bold text-primary">?</span>
+                      </div>
+                      How often are rates updated?
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
@@ -227,9 +277,14 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
-                    <CardTitle className="text-lg">Is TrueRate-Liberia free to use?</CardTitle>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <div className="h-6 w-6 rounded-full bg-secondary/10 flex items-center justify-center">
+                        <span className="text-xs font-bold text-secondary">✓</span>
+                      </div>
+                      Is TrueRate-Liberia free to use?
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
@@ -239,9 +294,14 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
-                    <CardTitle className="text-lg">How do I report incorrect rates?</CardTitle>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <div className="h-6 w-6 rounded-full bg-amber-500/10 flex items-center justify-center">
+                        <span className="text-xs font-bold text-amber-600">!</span>
+                      </div>
+                      How do I report incorrect rates?
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
@@ -251,9 +311,14 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
+                <Card className="border-green-500/20 bg-gradient-to-br from-green-500/5 to-card shadow-sm hover:shadow-md transition-all">
                   <CardHeader>
-                    <CardTitle className="text-lg">Can I use TrueRate-Liberia without internet?</CardTitle>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <div className="h-6 w-6 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <span className="text-xs font-bold text-green-600">📱</span>
+                      </div>
+                      Can I use TrueRate-Liberia without internet?
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">

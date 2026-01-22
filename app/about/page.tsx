@@ -12,12 +12,19 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <Badge className="mb-4">About TrueRate-Liberia</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                Empowering Liberians with Transparent Exchange Rate Information
-              </span></h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="mb-2">About TrueRate Liberia</Badge>
+                <Badge className="bg-primary/10 text-primary">Founded 2024</Badge>
+                <Badge variant="secondary">Liberian-Owned</Badge>
+                <Badge className="bg-secondary/10 text-secondary">Community-Driven</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Empowering Liberians with Transparent Exchange Rate Information
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
                 We're on a mission to bring clarity and fairness to currency exchange in Liberia through technology,
                 data, and community trust.
               </p>
@@ -29,10 +36,15 @@ export default function AboutPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <Card>
-                <CardHeader>
-                  <Target className="h-10 w-10 text-primary mb-4" />
-                  <CardTitle className="text-2xl">Our Mission</CardTitle>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Target className="h-7 w-7 text-primary" />
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <CardTitle className="text-2xl text-primary">Our Mission</CardTitle>
+                    <Badge className="bg-primary/10 text-primary">Purpose</Badge>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
@@ -43,10 +55,15 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <Award className="h-10 w-10 text-secondary mb-4" />
-                  <CardTitle className="text-2xl">Our Vision</CardTitle>
+              <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <div className="h-14 w-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+                    <Award className="h-7 w-7 text-secondary" />
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <CardTitle className="text-2xl text-secondary">Our Vision</CardTitle>
+                    <Badge className="bg-secondary/10 text-secondary">Future</Badge>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
@@ -64,9 +81,20 @@ export default function AboutPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8 space-y-2">
-                <Badge variant="outline">Why we exist</Badge>
-                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Why TrueRate-Liberia Exists</h2>
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Why We Exist</Badge>
+                  <Badge className="bg-primary/10 text-primary">The Problem</Badge>
+                  <Badge variant="secondary">Our Story</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Why TrueRate Liberia Exists
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Understanding the challenges that inspired our mission
+                </p>
               </div>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -94,15 +122,28 @@ export default function AboutPage() {
         {/* Core Values */}
         <section className="py-12 sm:py-14 md:py-24 bg-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 space-y-2">
-              <Badge variant="outline">Values</Badge>
-              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Our Core Values</h2>
+            <div className="text-center mb-12 space-y-3">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                <Badge variant="outline">Core Values</Badge>
+                <Badge className="bg-primary/10 text-primary">Principles</Badge>
+                <Badge variant="secondary">What Drives Us</Badge>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Our Core Values
+                </span>
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                The principles that guide everything we do
+              </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <Card>
-                <CardHeader>
-                  <Shield className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Trust & Integrity</CardTitle>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-primary">Trust & Integrity</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
@@ -112,10 +153,12 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <Users className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Community First</CardTitle>
+              <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
+                    <Users className="h-6 w-6 text-secondary" />
+                  </div>
+                  <CardTitle className="text-secondary">Community First</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
@@ -125,10 +168,12 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <Globe className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Accessibility</CardTitle>
+              <Card className="border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <div className="h-12 w-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-3">
+                    <Globe className="h-6 w-6 text-amber-600" />
+                  </div>
+                  <CardTitle className="text-amber-600">Accessibility</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
@@ -144,9 +189,20 @@ export default function AboutPage() {
         {/* Impact Stats */}
         <section className="py-12 sm:py-14 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 space-y-2">
-              <Badge variant="secondary">Impact</Badge>
-              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-balance">Our Impact</h2>
+            <div className="text-center mb-12 space-y-3">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                <Badge variant="secondary">Our Impact</Badge>
+                <Badge className="bg-primary-foreground/10 text-primary-foreground">Measurable Results</Badge>
+                <Badge variant="secondary">Growing Strong</Badge>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                <span className="bg-gradient-to-r from-primary-foreground via-secondary to-primary-foreground bg-clip-text text-transparent">
+                  Our Impact So Far
+                </span>
+              </h2>
+              <p className="text-sm sm:text-base text-primary-foreground/80">
+                Real numbers showing how we're making a difference
+              </p>
             </div>
             <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
               <div>
@@ -173,10 +229,18 @@ export default function AboutPage() {
         <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-3">Team</Badge>
-              <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-balance">Our Team</h2>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-                TrueRate-Liberia is powered by a diverse team of technologists, economists, data scientists, and
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge variant="outline">Our Team</Badge>
+                <Badge className="bg-primary/10 text-primary">Diverse Experts</Badge>
+                <Badge variant="secondary">Liberian Pride</Badge>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Meet Our Team
+                </span>
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
+                TrueRate Liberia is powered by a diverse team of technologists, economists, data scientists, and
                 community advocates. We're united by our commitment to financial transparency and our love for Liberia.
               </p>
             </div>

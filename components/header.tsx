@@ -137,14 +137,19 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="mt-3 space-y-3 max-h-[calc(100vh-5rem)] overflow-y-auto pr-1">
-                  <div className="px-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                    Quick access
+                <div className="mt-3 space-y-4 max-h-[calc(100vh-5rem)] overflow-y-auto pr-1">
+                  <div className="rounded-xl border border-border/60 bg-background/70 px-3 py-2 text-left shadow-sm">
+                    <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                      Quick access
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-1">
+                      Navigate rates, tools, and community updates.
+                    </div>
                   </div>
-                  <nav className="flex flex-col items-center text-center gap-2 mt-1">
+                  <nav className="flex flex-col items-center text-center gap-2">
                     <Link
                       href="/auth/signin"
-                      className="w-full max-w-sm rounded-lg border border-border/60 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -158,7 +163,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/rates"
-                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -172,7 +177,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/converter"
-                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -186,7 +191,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/analytics"
-                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -200,7 +205,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/price-index"
-                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -214,7 +219,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/map"
-                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -228,7 +233,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/liberia-market"
-                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -242,7 +247,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/community"
-                      className="w-full max-w-sm rounded-lg border border-border/60 bg-background/70 px-3 py-2 transition-all hover:border-primary/40 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
@@ -256,7 +261,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/report-fraud"
-                      className="w-full max-w-sm rounded-lg border border-destructive/20 bg-destructive/5 px-3 py-2 transition-all hover:bg-destructive/10 hover:shadow-sm"
+                      className="w-full max-w-sm rounded-xl border border-destructive/20 bg-destructive/5 px-3 py-2.5 transition-all hover:bg-destructive/10 hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-destructive/10">

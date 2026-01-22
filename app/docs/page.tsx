@@ -12,11 +12,20 @@ export default function DocsPage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background border-b border-border">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <Badge className="mb-4">Data Sources & Methodology</Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Powered by 100+ Trusted Data Sources</span></h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-                TrueRate-Liberia aggregates exchange rate data from international financial APIs, verified money
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="mb-2">Data Sources & Methodology</Badge>
+                <Badge className="bg-primary/10 text-primary">100+ Sources</Badge>
+                <Badge variant="secondary">Real-time Updates</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">99.2% Accuracy</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Powered by 100+ Trusted Data Sources
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
+                TrueRate Liberia aggregates exchange rate data from international financial APIs, verified money
                 changers, and community reports to provide the most accurate rates in Liberia.
               </p>
             </div>
@@ -27,17 +36,30 @@ export default function DocsPage() {
         <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 space-y-2">
-                <Badge variant="outline">Sources</Badge>
-                <h2 className="text-3xl font-bold">Our Data Sources</h2>
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Data Sources</Badge>
+                  <Badge className="bg-primary/10 text-primary">Verified & Trusted</Badge>
+                  <Badge variant="secondary">Comprehensive Coverage</Badge>
+                </div>
+                <h2 className="text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Our Data Sources
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Multiple layers of data collection ensure accuracy and reliability
+                </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                <Card className="border-border/60 shadow-sm">
-                  <CardHeader>
-                    <Globe className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle>International APIs</CardTitle>
-                    <CardDescription>30+ sources</CardDescription>
+                <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardHeader className="pb-4">
+                    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                      <Globe className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-primary">International APIs</CardTitle>
+                    <CardDescription className="text-primary/70">30+ sources</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm">
@@ -64,11 +86,13 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
-                  <CardHeader>
-                    <Building2 className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle>Licensed Changers</CardTitle>
-                    <CardDescription>60+ locations</CardDescription>
+                <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardHeader className="pb-4">
+                    <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
+                      <Building2 className="h-6 w-6 text-secondary" />
+                    </div>
+                    <CardTitle className="text-secondary">Licensed Changers</CardTitle>
+                    <CardDescription className="text-secondary/70">60+ locations</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm">
@@ -96,11 +120,13 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
-                  <CardHeader>
-                    <Users className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle>Community Reports</CardTitle>
-                    <CardDescription>10,000+ verified reports</CardDescription>
+                <Card className="border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardHeader className="pb-4">
+                    <div className="h-12 w-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-3">
+                      <Users className="h-6 w-6 text-amber-600" />
+                    </div>
+                    <CardTitle className="text-amber-600">Community Reports</CardTitle>
+                    <CardDescription className="text-amber-600/70">10,000+ verified reports</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm">
@@ -128,11 +154,13 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
-                  <CardHeader>
-                    <Database className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle>Financial Institutions</CardTitle>
-                    <CardDescription>15+ banks & MFIs</CardDescription>
+                <Card className="border-green-500/20 bg-gradient-to-br from-green-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardHeader className="pb-4">
+                    <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-3">
+                      <Database className="h-6 w-6 text-green-600" />
+                    </div>
+                    <CardTitle className="text-green-600">Financial Institutions</CardTitle>
+                    <CardDescription className="text-green-600/70">15+ banks & MFIs</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm">
@@ -160,11 +188,13 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-border/60 shadow-sm">
-                  <CardHeader>
-                    <TrendingUp className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle>Market Data Providers</CardTitle>
-                    <CardDescription>20+ sources</CardDescription>
+                <Card className="border-purple-500/20 bg-gradient-to-br from-purple-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardHeader className="pb-4">
+                    <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-3">
+                      <TrendingUp className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <CardTitle className="text-purple-600">Market Data Providers</CardTitle>
+                    <CardDescription className="text-purple-600/70">20+ sources</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm">
@@ -199,9 +229,20 @@ export default function DocsPage() {
         <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="mb-8 space-y-2">
-                <Badge variant="outline">Methodology</Badge>
-                <h2 className="text-3xl font-bold">Our Methodology</h2>
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Methodology</Badge>
+                  <Badge className="bg-primary/10 text-primary">AI-Powered</Badge>
+                  <Badge variant="secondary">Scientific Approach</Badge>
+                </div>
+                <h2 className="text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Our Methodology
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Advanced algorithms and AI ensure data accuracy and reliability
+                </p>
               </div>
 
               <div className="space-y-6">
@@ -313,30 +354,48 @@ export default function DocsPage() {
         {/* Transparency Commitment */}
         <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <Badge variant="outline" className="mb-3">Transparency</Badge>
-              <h2 className="text-3xl font-bold mb-6">Our Commitment to Transparency</h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-8 text-pretty">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge variant="outline">Transparency</Badge>
+                <Badge className="bg-primary/10 text-primary">Open Methodology</Badge>
+                <Badge variant="secondary">Verifiable Data</Badge>
+                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Community Trust</Badge>
+              </div>
+              <h2 className="text-3xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Our Commitment to Transparency
+                </span>
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto">
                 We believe Liberians deserve access to accurate, unbiased exchange rate information. That's why we've
                 made our methodology completely transparent and our data sources verifiable.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
-                <Card className="border-border/60 shadow-sm">
-                  <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-primary mb-2">100+</div>
-                    <div className="text-sm text-muted-foreground">Data Sources</div>
+                <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardContent className="pt-8 pb-6">
+                    <div className="text-center">
+                      <div className="text-5xl font-bold text-primary mb-2">100+</div>
+                      <div className="text-sm text-muted-foreground">Data Sources</div>
+                      <div className="text-xs text-primary/70 mt-1">Trusted & Verified</div>
+                    </div>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
-                  <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-primary mb-2">99.2%</div>
-                    <div className="text-sm text-muted-foreground">Accuracy Rate</div>
+                <Card className="border-green-500/20 bg-gradient-to-br from-green-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardContent className="pt-8 pb-6">
+                    <div className="text-center">
+                      <div className="text-5xl font-bold text-green-600 mb-2">99.2%</div>
+                      <div className="text-sm text-muted-foreground">Accuracy Rate</div>
+                      <div className="text-xs text-green-600/70 mt-1">Industry Leading</div>
+                    </div>
                   </CardContent>
                 </Card>
-                <Card className="border-border/60 shadow-sm">
-                  <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-primary mb-2">60s</div>
-                    <div className="text-sm text-muted-foreground">Update Interval</div>
+                <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardContent className="pt-8 pb-6">
+                    <div className="text-center">
+                      <div className="text-5xl font-bold text-secondary mb-2">60s</div>
+                      <div className="text-sm text-muted-foreground">Update Interval</div>
+                      <div className="text-xs text-secondary/70 mt-1">Real-time Updates</div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>

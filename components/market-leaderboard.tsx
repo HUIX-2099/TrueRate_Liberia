@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -29,10 +29,10 @@ export function MarketLeaderboard() {
   const [loading, setLoading] = useState(true)
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
 
-  useEffect(() => {
+  const fetchLeaderboard = useCallback(() => {
     // Simulate fetching leaderboard data
-    const fetchLeaderboard = () => {
-      const list = [
+    setLoading(true)
+    const list = [
         {
           rank: 1,
           id: '1',
@@ -144,15 +144,16 @@ export function MarketLeaderboard() {
           verified: true
         }
       ]
-      setLeaderboard(list.slice(0, 7))
-      setLoading(false)
-      setLastUpdate(new Date())
-    }
+    setLeaderboard(list.slice(0, 7))
+    setLoading(false)
+    setLastUpdate(new Date())
+  }, [])
 
+  useEffect(() => {
     fetchLeaderboard()
     const interval = setInterval(fetchLeaderboard, 60000) // Update every minute
     return () => clearInterval(interval)
-  }, [])
+  }, [fetchLeaderboard])
 
   const getRankIcon = (rank: number) => {
     switch (rank) {
@@ -325,7 +326,7 @@ export function MarketLeaderboard() {
             variant="outline" 
             size="sm" 
             className="gap-2 text-xs sm:text-sm"
-            onClick={() => setLastUpdate(new Date())}
+            onClick={fetchLeaderboard}
           >
             <RefreshCw className="h-4 w-4" />
             Refresh Leaderboard

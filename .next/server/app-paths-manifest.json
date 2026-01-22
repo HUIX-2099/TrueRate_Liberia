@@ -1,4 +1,12 @@
 {
   "/api/rates/live/route": "app/api/rates/live/route.js",
-  "/api/maps/nearby/route": "app/api/maps/nearby/route.js"
+  "/api/price-index/route": "app/api/price-index/route.js",
+  "/api/liberia-cpi/route": "app/api/liberia-cpi/route.js",
+  "/api/news/route": "app/api/news/route.js",
+  "/api/maps/nearby/route": "app/api/maps/nearby/route.js",
+  "/page": "app/page.js",
+  "/converter/page": "app/converter/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/community/page": "app/community/page.js",
+  "/community/report-rate/page": "app/community/report-rate/page.js"
 }

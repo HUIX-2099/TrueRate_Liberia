@@ -112,15 +112,22 @@ export default function PredictionsPage() {
                   <Brain className="h-8 w-8 text-white" />
                 </div>
               </div>
-              <Badge className="mb-4 px-4 py-1" variant="secondary">
-                <Activity className="h-3 w-3 mr-1 animate-pulse" />
-                Live ML Analysis
-              </Badge>
-              <h1 className="text-3xl sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                AI-Powered Rate <span className="text-primary">Predictions</span>
-              </span></h1>
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge className="px-4 py-1" variant="secondary">
+                  <Activity className="h-3 w-3 mr-1 animate-pulse" />
+                  Live ML Analysis
+                </Badge>
+                <Badge className="bg-primary/10 text-primary">AI-Powered</Badge>
+                <Badge variant="secondary">90-Day Forecasts</Badge>
+                <Badge className="bg-secondary/10 text-secondary">High Accuracy</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  AI-Powered Rate Predictions
+                </span>
+              </h1>
               <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-2xl mx-auto">
-                Advanced machine learning models analyze historical patterns, economic indicators, 
+                Advanced machine learning models analyze historical patterns, economic indicators,
                 and market sentiment to forecast USD/LRD exchange rate movements.
               </p>
             </div>
@@ -128,28 +135,34 @@ export default function PredictionsPage() {
         </section>
 
         {/* Live Stats Bar */}
-        <section className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-16 z-40">
-          <div className="container mx-auto px-4 py-3">
+        <section className="border-b border-border bg-gradient-to-r from-card/80 via-card/60 to-card/80 backdrop-blur-sm sticky top-16 z-40 shadow-sm">
+          <div className="container mx-auto px-4 py-4">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-6">
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold">{currentRate.toFixed(2)}</span>
-                  <span className="text-sm text-muted-foreground">LRD/USD</span>
+                <div className="flex items-center gap-3">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">{currentRate.toFixed(2)}</div>
+                    <div className="text-xs text-muted-foreground">LRD/USD</div>
+                  </div>
                 </div>
-                <div className={`flex items-center gap-1 text-sm font-medium ${
-                  dayChange > 0 ? "text-red-500" : "text-green-500"
+                <div className={`flex items-center gap-2 px-3 py-2 rounded-lg border ${
+                  dayChange > 0 ? "bg-red-50 border-red-200 dark:bg-red-950/20 dark:border-red-800" : "bg-green-50 border-green-200 dark:bg-green-950/20 dark:border-green-800"
                 }`}>
-                  {dayChange > 0 ? <TrendingUp className="h-4 w-4" /> : <TrendingDown className="h-4 w-4" />}
-                  {dayChange > 0 ? "+" : ""}{dayChange.toFixed(2)} ({dayChangePercent.toFixed(2)}%)
-                    </div>
-                    </div>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <span>7D High: <strong className="text-foreground">{weekHigh.toFixed(2)}</strong></span>
-                <span>7D Low: <strong className="text-foreground">{weekLow.toFixed(2)}</strong></span>
-                <span className="hidden md:inline">Avg Vol: <strong className="text-foreground">{Math.round(avgVolume).toLocaleString()}</strong></span>
-                <Button variant="ghost" size="sm" onClick={fetchData} disabled={loading}>
-                  <RefreshCw className={`h-4 w-4 mr-1 ${loading ? "animate-spin" : ""}`} />
-                  {lastUpdate}
+                  {dayChange > 0 ? <TrendingUp className="h-4 w-4 text-red-600" /> : <TrendingDown className="h-4 w-4 text-green-600" />}
+                  <span className={`text-sm font-semibold ${dayChange > 0 ? "text-red-600" : "text-green-600"}`}>
+                    {dayChange > 0 ? "+" : ""}{dayChange.toFixed(2)} ({dayChangePercent.toFixed(2)}%)
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 text-sm">
+                <div className="hidden sm:flex items-center gap-4 text-muted-foreground">
+                  <span>7D High: <strong className="text-foreground">{weekHigh.toFixed(2)}</strong></span>
+                  <span>7D Low: <strong className="text-foreground">{weekLow.toFixed(2)}</strong></span>
+                  <span className="hidden md:inline">Avg Vol: <strong className="text-foreground">{Math.round(avgVolume).toLocaleString()}</strong></span>
+                </div>
+                <Button variant="outline" size="sm" onClick={fetchData} disabled={loading} className="gap-2">
+                  <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
+                  {lastUpdate || "Loading..."}
                 </Button>
               </div>
             </div>
@@ -170,7 +183,20 @@ export default function PredictionsPage() {
 
               {/* Tabs for different views */}
               <Tabs defaultValue="predictions" className="space-y-6">
-                <TabsList className="grid w-full grid-cols-3 lg:w-auto lg:inline-flex">
+                <div className="text-center mb-6">
+                  <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+                    <Badge variant="outline">AI Insights</Badge>
+                    <Badge className="bg-primary/10 text-primary">Multiple Models</Badge>
+                    <Badge variant="secondary">Real-time</Badge>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-2">
+                    <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                      Advanced Analytics
+                    </span>
+                  </h2>
+                  <p className="text-sm text-muted-foreground">Comprehensive market analysis and trading insights</p>
+                </div>
+                <TabsList className="grid w-full grid-cols-3 lg:w-auto lg:inline-flex shadow-sm">
                   <TabsTrigger value="predictions" className="gap-2">
                     <Brain className="h-4 w-4" />
                     <span className="hidden sm:inline">ML</span> Predictions
@@ -375,24 +401,44 @@ export default function PredictionsPage() {
               </Tabs>
 
               {/* Model Info */}
-              <Card className="border-primary/30 shadow-sm">
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 via-card/80 to-secondary/5 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex gap-4">
-                    <AlertCircle className="h-6 w-6 text-primary flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">About Our Prediction Model</h3>
+                    <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center flex-shrink-0">
+                      <AlertCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="font-semibold text-lg">About Our Prediction Model</h3>
+                        <Badge className="bg-primary/10 text-primary">Advanced AI</Badge>
+                      </div>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                        Our ML model combines ARIMA time-series analysis, LSTM neural networks, 
-                        and ensemble methods trained on 3+ years of USD/LRD exchange data. 
-                        The model considers seasonal patterns, economic indicators, remittance flows, 
+                        Our ML model combines ARIMA time-series analysis, LSTM neural networks,
+                        and ensemble methods trained on 3+ years of USD/LRD exchange data.
+                        The model considers seasonal patterns, economic indicators, remittance flows,
                         and regional market trends to generate forecasts.
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary">ARIMA</Badge>
-                        <Badge variant="secondary">LSTM</Badge>
-                        <Badge variant="secondary">Random Forest</Badge>
-                        <Badge variant="secondary">XGBoost</Badge>
-                        <Badge variant="secondary">Ensemble</Badge>
+                        <Badge variant="secondary" className="gap-1">
+                          <Brain className="h-3 w-3" />
+                          ARIMA
+                        </Badge>
+                        <Badge variant="secondary" className="gap-1">
+                          <LineChart className="h-3 w-3" />
+                          LSTM
+                        </Badge>
+                        <Badge variant="secondary" className="gap-1">
+                          <BarChart3 className="h-3 w-3" />
+                          Random Forest
+                        </Badge>
+                        <Badge variant="secondary" className="gap-1">
+                          <Zap className="h-3 w-3" />
+                          XGBoost
+                        </Badge>
+                        <Badge variant="secondary" className="gap-1">
+                          <Target className="h-3 w-3" />
+                          Ensemble
+                        </Badge>
                       </div>
                     </div>
                   </div>
