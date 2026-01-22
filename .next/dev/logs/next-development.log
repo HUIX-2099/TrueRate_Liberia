@@ -511,3 +511,1664 @@ All exports of the module are statically known (It doesn't have dynamic exports)
 [00:25:20.018] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
 [00:25:20.036] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
 [00:25:20.050] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:19:08.588] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:19:08.588] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:19:08.589] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:19:08.589] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:19:08.606] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:19:08.607] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:19:08.608] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:19:08.609] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:19:08.624] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:19:08.625] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:19:08.626] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:19:08.627] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:26:19.782] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.818] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.839] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.870] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.888] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.918] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.944] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.963] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:19.982] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:20:09.481] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:20:09.482] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:20:09.482] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:20:09.482] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:20:09.492] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:20:09.492] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:20:09.492] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:20:09.492] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:20:09.499] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:20:09.500] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:20:09.500] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:20:09.500] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:27:19.807] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.829] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.859] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.886] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.903] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.919] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.941] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.958] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:27:19.971] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:21:09.496] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:21:09.503] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:21:09.504] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:21:09.504] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:21:59.534] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:21:59.535] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:21:59.535] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:21:59.535] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:21:59.544] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:21:59.544] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:21:59.544] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:21:59.544] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:21:59.570] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:21:59.570] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:21:59.570] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:21:59.570] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:28:19.828] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:19.875] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:19.896] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:19.931] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:19.949] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:19.978] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:20.005] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:20.024] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:20.039] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:20.178] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:20.592] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:20.833] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:20.895] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:20.961] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:21.040] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:21.124] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:21.173] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:21.210] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:22:59.814] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:22:59.815] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:22:59.816] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:22:59.816] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:22:59.976] Server  ERROR   TypeError: fetch failed
+[00:22:59.992] Server  ERROR   TypeError: fetch failed
+[00:23:00.667] Server  ERROR   ⨯ Error: failed to pipe response
+[00:23:00.690] Server  ERROR   TypeError: fetch failed
+[00:23:00.695] Server  ERROR   TypeError: fetch failed
+[00:23:00.726] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:23:00.729] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:23:00.730] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:23:00.733] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:23:00.745] Server  ERROR   TypeError: fetch failed
+[00:23:00.754] Server  ERROR   TypeError: fetch failed
+[00:23:00.915] Server  ERROR   ⨯ Error: failed to pipe response
+[00:23:00.920] Server  ERROR   TypeError: fetch failed
+[00:23:00.922] Server  ERROR   TypeError: fetch failed
+[00:23:00.942] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:23:00.943] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:23:00.943] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:23:00.943] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:23:00.949] Server  ERROR   TypeError: fetch failed
+[00:23:00.951] Server  ERROR   TypeError: fetch failed
+[00:23:01.055] Server  ERROR   ⨯ Error: failed to pipe response
+[00:23:01.065] Server  ERROR   TypeError: fetch failed
+[00:23:01.066] Server  ERROR   TypeError: fetch failed
+[00:30:19.912] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.051] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.104] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.177] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.246] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.343] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.462] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.525] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:30:20.567] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:23:59.642] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:23:59.654] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:23:59.655] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:23:59.655] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:23:59.668] Server  ERROR   TypeError: fetch failed
+[00:23:59.669] Server  ERROR   TypeError: fetch failed
+[00:24:00.147] Server  ERROR   ⨯ Error: failed to pipe response
+[00:24:00.157] Server  ERROR   TypeError: fetch failed
+[00:24:00.158] Server  ERROR   TypeError: fetch failed
+[00:24:00.214] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:24:00.214] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:24:00.214] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:24:00.215] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:24:00.246] Server  ERROR   TypeError: fetch failed
+[00:24:00.247] Server  ERROR   TypeError: fetch failed
+[00:24:00.423] Server  ERROR   ⨯ Error: failed to pipe response
+[00:24:00.429] Server  ERROR   TypeError: fetch failed
+[00:24:00.430] Server  ERROR   TypeError: fetch failed
+[00:24:00.443] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:24:00.443] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:24:00.443] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:24:00.444] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:24:00.450] Server  ERROR   TypeError: fetch failed
+[00:24:00.450] Server  ERROR   TypeError: fetch failed
+[00:24:00.539] Server  ERROR   ⨯ Error: failed to pipe response
+[00:24:00.544] Server  ERROR   TypeError: fetch failed
+[00:24:00.547] Server  ERROR   TypeError: fetch failed
+[00:31:20.079] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.126] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.220] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.311] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.360] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.399] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.507] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.559] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:20.591] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:24:59.638] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:24:59.638] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:24:59.639] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:24:59.640] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:24:59.646] Server  ERROR   TypeError: fetch failed
+[00:24:59.647] Server  ERROR   TypeError: fetch failed
+[00:24:59.857] Server  ERROR   ⨯ Error: failed to pipe response
+[00:24:59.863] Server  ERROR   TypeError: fetch failed
+[00:24:59.866] Server  ERROR   TypeError: fetch failed
+[00:24:59.934] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:24:59.935] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:24:59.936] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:24:59.936] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:24:59.947] Server  ERROR   TypeError: fetch failed
+[00:24:59.949] Server  ERROR   TypeError: fetch failed
+[00:25:00.083] Server  ERROR   ⨯ Error: failed to pipe response
+[00:25:00.088] Server  ERROR   TypeError: fetch failed
+[00:25:00.090] Server  ERROR   TypeError: fetch failed
+[00:25:00.134] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:25:00.135] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:25:00.135] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:25:00.135] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:25:00.140] Server  ERROR   TypeError: fetch failed
+[00:25:00.146] Server  ERROR   TypeError: fetch failed
+[00:25:00.354] Server  ERROR   ⨯ Error: failed to pipe response
+[00:25:00.359] Server  ERROR   TypeError: fetch failed
+[00:25:00.360] Server  ERROR   TypeError: fetch failed
+[00:32:20.003] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.114] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.159] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.220] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.271] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.385] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.490] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.542] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:20.598] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:25:59.715] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:25:59.716] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:25:59.719] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:25:59.722] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:25:59.771] Server  ERROR   TypeError: fetch failed
+[00:25:59.772] Server  ERROR   TypeError: fetch failed
+[00:26:00.023] Server  ERROR   ⨯ Error: failed to pipe response
+[00:26:00.033] Server  ERROR   TypeError: fetch failed
+[00:26:00.035] Server  ERROR   TypeError: fetch failed
+[00:26:00.120] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:26:00.120] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:26:00.120] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:26:00.120] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:26:00.126] Server  ERROR   TypeError: fetch failed
+[00:26:00.136] Server  ERROR   TypeError: fetch failed
+[00:26:00.317] Server  ERROR   ⨯ Error: failed to pipe response
+[00:26:00.321] Server  ERROR   TypeError: fetch failed
+[00:26:00.329] Server  ERROR   TypeError: fetch failed
+[00:26:00.354] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:26:00.355] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:26:00.356] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:26:00.356] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:26:00.362] Server  ERROR   TypeError: fetch failed
+[00:26:00.363] Server  ERROR   TypeError: fetch failed
+[00:26:00.451] Server  ERROR   ⨯ Error: failed to pipe response
+[00:26:00.456] Server  ERROR   TypeError: fetch failed
+[00:26:00.457] Server  ERROR   TypeError: fetch failed
+[00:26:09.464] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:26:09.465] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:26:09.465] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:26:09.465] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:26:09.472] Server  ERROR   TypeError: fetch failed
+[00:26:09.472] Server  ERROR   TypeError: fetch failed
+[00:26:09.619] Server  ERROR   ⨯ Error: failed to pipe response
+[00:26:09.622] Server  ERROR   TypeError: fetch failed
+[00:26:09.623] Server  ERROR   TypeError: fetch failed
+[00:33:20.003] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.084] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.169] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.244] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.343] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.393] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.467] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.524] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:20.564] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:26:59.740] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:26:59.748] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:26:59.749] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:26:59.749] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:26:59.788] Server  ERROR   TypeError: fetch failed
+[00:26:59.791] Server  ERROR   TypeError: fetch failed
+[00:27:00.021] Server  ERROR   ⨯ Error: failed to pipe response
+[00:27:00.023] Server  ERROR   TypeError: fetch failed
+[00:27:00.024] Server  ERROR   TypeError: fetch failed
+[00:27:00.075] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:27:00.075] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:27:00.076] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:27:00.079] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:27:00.085] Server  ERROR   TypeError: fetch failed
+[00:27:00.088] Server  ERROR   TypeError: fetch failed
+[00:27:00.295] Server  ERROR   ⨯ Error: failed to pipe response
+[00:27:00.300] Server  ERROR   TypeError: fetch failed
+[00:27:00.303] Server  ERROR   TypeError: fetch failed
+[00:27:00.331] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:27:00.332] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:27:00.332] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:27:00.333] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:27:00.336] Server  ERROR   TypeError: fetch failed
+[00:27:00.336] Server  ERROR   TypeError: fetch failed
+[00:27:00.423] Server  ERROR   ⨯ Error: failed to pipe response
+[00:27:00.428] Server  ERROR   TypeError: fetch failed
+[00:27:00.432] Server  ERROR   TypeError: fetch failed
+[00:27:59.644] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:27:59.645] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:27:59.645] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:27:59.645] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:27:59.656] Server  ERROR   TypeError: fetch failed
+[00:27:59.658] Server  ERROR   TypeError: fetch failed
+[00:27:59.845] Server  ERROR   ⨯ Error: failed to pipe response
+[00:27:59.857] Server  ERROR   TypeError: fetch failed
+[00:27:59.858] Server  ERROR   TypeError: fetch failed
+[00:27:59.870] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:27:59.870] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:27:59.870] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:27:59.870] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:27:59.873] Server  ERROR   TypeError: fetch failed
+[00:27:59.874] Server  ERROR   TypeError: fetch failed
+[00:27:59.992] Server  ERROR   ⨯ Error: failed to pipe response
+[00:27:59.994] Server  ERROR   TypeError: fetch failed
+[00:27:59.998] Server  ERROR   TypeError: fetch failed
+[00:28:00.014] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:28:00.014] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:28:00.015] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:28:00.015] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:28:00.019] Server  ERROR   TypeError: fetch failed
+[00:28:00.020] Server  ERROR   TypeError: fetch failed
+[00:28:00.302] Server  ERROR   ⨯ Error: failed to pipe response
+[00:28:00.306] Server  ERROR   TypeError: fetch failed
+[00:28:00.307] Server  ERROR   TypeError: fetch failed
+[00:34:19.989] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.094] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.205] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.256] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.320] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.411] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.487] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.537] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:20.576] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.009] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.063] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.213] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.336] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.376] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.421] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.483] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.529] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:20.572] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:28:59.504] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:28:59.505] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:28:59.505] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:28:59.505] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:28:59.517] Server  ERROR   TypeError: fetch failed
+[00:28:59.518] Server  ERROR   TypeError: fetch failed
+[00:28:59.924] Server  ERROR   ⨯ Error: failed to pipe response
+[00:28:59.940] Server  ERROR   TypeError: fetch failed
+[00:28:59.954] Server  ERROR   TypeError: fetch failed
+[00:29:00.054] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:29:00.056] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:29:00.057] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:29:00.057] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:29:00.061] Server  ERROR   TypeError: fetch failed
+[00:29:00.061] Server  ERROR   TypeError: fetch failed
+[00:29:00.208] Server  ERROR   ⨯ Error: failed to pipe response
+[00:29:00.216] Server  ERROR   TypeError: fetch failed
+[00:29:00.219] Server  ERROR   TypeError: fetch failed
+[00:29:00.232] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:29:00.232] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:29:00.233] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:29:00.233] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:29:00.238] Server  ERROR   TypeError: fetch failed
+[00:29:00.239] Server  ERROR   TypeError: fetch failed
+[00:29:00.353] Server  ERROR   ⨯ Error: failed to pipe response
+[00:29:00.356] Server  ERROR   TypeError: fetch failed
+[00:29:00.370] Server  ERROR   TypeError: fetch failed
+[00:36:19.872] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:19.995] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:20.054] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:20.129] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:20.178] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:20.274] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:20.349] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:20.379] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:36:20.400] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:29:59.578] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:29:59.579] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:29:59.579] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:29:59.579] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:29:59.620] Server  ERROR   TypeError: fetch failed
+[00:29:59.622] Server  ERROR   TypeError: fetch failed
+[00:29:59.962] Server  ERROR   ⨯ Error: failed to pipe response
+[00:29:59.980] Server  ERROR   TypeError: fetch failed
+[00:29:59.986] Server  ERROR   TypeError: fetch failed
+[00:30:00.007] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:30:00.008] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:30:00.008] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:30:00.008] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:30:00.015] Server  ERROR   TypeError: fetch failed
+[00:30:00.016] Server  ERROR   TypeError: fetch failed
+[00:30:00.101] Server  ERROR   ⨯ Error: failed to pipe response
+[00:30:00.104] Server  ERROR   TypeError: fetch failed
+[00:30:00.104] Server  ERROR   TypeError: fetch failed
+[00:30:00.118] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:30:00.118] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:30:00.118] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:30:00.118] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:30:00.119] Server  ERROR   TypeError: fetch failed
+[00:30:00.120] Server  ERROR   TypeError: fetch failed
+[00:30:00.174] Server  ERROR   ⨯ Error: failed to pipe response
+[00:30:00.177] Server  ERROR   TypeError: fetch failed
+[00:30:00.179] Server  ERROR   TypeError: fetch failed
+[00:30:59.612] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:30:59.613] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:30:59.615] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:30:59.615] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:30:59.625] Server  ERROR   TypeError: fetch failed
+[00:30:59.626] Server  ERROR   TypeError: fetch failed
+[00:30:59.851] Server  ERROR   ⨯ Error: failed to pipe response
+[00:30:59.857] Server  ERROR   TypeError: fetch failed
+[00:30:59.859] Server  ERROR   TypeError: fetch failed
+[00:30:59.893] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:30:59.894] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:30:59.894] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:30:59.894] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:30:59.900] Server  ERROR   TypeError: fetch failed
+[00:30:59.900] Server  ERROR   TypeError: fetch failed
+[00:31:00.032] Server  ERROR   ⨯ Error: failed to pipe response
+[00:31:00.039] Server  ERROR   TypeError: fetch failed
+[00:31:00.041] Server  ERROR   TypeError: fetch failed
+[00:31:00.059] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:31:00.060] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:31:00.060] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:31:00.060] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:31:00.062] Server  ERROR   TypeError: fetch failed
+[00:31:00.063] Server  ERROR   TypeError: fetch failed
+[00:31:00.183] Server  ERROR   ⨯ Error: failed to pipe response
+[00:31:00.186] Server  ERROR   TypeError: fetch failed
+[00:31:00.187] Server  ERROR   TypeError: fetch failed
+[00:37:20.012] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.062] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.168] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.286] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.347] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.400] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.455] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.486] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:20.511] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:09.468] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:31:09.468] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:31:09.468] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:31:09.469] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:31:09.475] Server  ERROR   TypeError: fetch failed
+[00:31:09.475] Server  ERROR   TypeError: fetch failed
+[00:31:09.642] Server  ERROR   ⨯ Error: failed to pipe response
+[00:31:09.650] Server  ERROR   TypeError: fetch failed
+[00:31:09.651] Server  ERROR   TypeError: fetch failed
+[00:38:19.826] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:19.976] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:20.030] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:20.097] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:20.147] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:20.256] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:20.388] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:20.446] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:20.496] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:31:59.706] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:31:59.707] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:31:59.707] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:31:59.708] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:31:59.715] Server  ERROR   TypeError: fetch failed
+[00:31:59.715] Server  ERROR   TypeError: fetch failed
+[00:31:59.924] Server  ERROR   ⨯ Error: failed to pipe response
+[00:31:59.930] Server  ERROR   TypeError: fetch failed
+[00:31:59.934] Server  ERROR   TypeError: fetch failed
+[00:31:59.952] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:31:59.952] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:31:59.952] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:31:59.952] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:31:59.957] Server  ERROR   TypeError: fetch failed
+[00:31:59.957] Server  ERROR   TypeError: fetch failed
+[00:32:00.096] Server  ERROR   ⨯ Error: failed to pipe response
+[00:32:00.102] Server  ERROR   TypeError: fetch failed
+[00:32:00.104] Server  ERROR   TypeError: fetch failed
+[00:32:00.151] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:32:00.151] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:32:00.151] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:32:00.152] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:32:00.163] Server  ERROR   TypeError: fetch failed
+[00:32:00.165] Server  ERROR   TypeError: fetch failed
+[00:32:00.307] Server  ERROR   ⨯ Error: failed to pipe response
+[00:32:00.309] Server  ERROR   TypeError: fetch failed
+[00:32:00.309] Server  ERROR   TypeError: fetch failed
+[00:39:19.906] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:19.971] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:20.062] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:20.119] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:20.251] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:20.339] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:20.396] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:20.468] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:20.503] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:32:59.558] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:32:59.565] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:32:59.570] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:32:59.575] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:32:59.611] Server  ERROR   TypeError: fetch failed
+[00:32:59.614] Server  ERROR   TypeError: fetch failed
+[00:32:59.920] Server  ERROR   ⨯ Error: failed to pipe response
+[00:32:59.922] Server  ERROR   TypeError: fetch failed
+[00:32:59.922] Server  ERROR   TypeError: fetch failed
+[00:32:59.954] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:32:59.954] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:32:59.955] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:32:59.955] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:32:59.957] Server  ERROR   TypeError: fetch failed
+[00:32:59.959] Server  ERROR   TypeError: fetch failed
+[00:33:00.127] Server  ERROR   ⨯ Error: failed to pipe response
+[00:33:00.134] Server  ERROR   TypeError: fetch failed
+[00:33:00.137] Server  ERROR   TypeError: fetch failed
+[00:33:00.155] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:33:00.155] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:33:00.155] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:33:00.156] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:33:00.160] Server  ERROR   TypeError: fetch failed
+[00:33:00.163] Server  ERROR   TypeError: fetch failed
+[00:33:00.283] Server  ERROR   ⨯ Error: failed to pipe response
+[00:33:00.287] Server  ERROR   TypeError: fetch failed
+[00:33:00.288] Server  ERROR   TypeError: fetch failed
+[00:40:20.039] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.111] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.157] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.227] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.280] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.386] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.487] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.558] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:40:20.603] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:33:59.540] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:33:59.540] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:33:59.540] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:33:59.540] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:33:59.548] Server  ERROR   TypeError: fetch failed
+[00:33:59.552] Server  ERROR   TypeError: fetch failed
+[00:33:59.987] Server  ERROR   ⨯ Error: failed to pipe response
+[00:33:59.995] Server  ERROR   TypeError: fetch failed
+[00:34:00.014] Server  ERROR   TypeError: fetch failed
+[00:34:00.102] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:34:00.103] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:34:00.103] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:34:00.104] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:34:00.122] Server  ERROR   TypeError: fetch failed
+[00:34:00.125] Server  ERROR   TypeError: fetch failed
+[00:34:00.254] Server  ERROR   ⨯ Error: failed to pipe response
+[00:34:00.263] Server  ERROR   TypeError: fetch failed
+[00:34:00.264] Server  ERROR   TypeError: fetch failed
+[00:34:00.294] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:34:00.296] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:34:00.296] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:34:00.297] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:34:00.302] Server  ERROR   TypeError: fetch failed
+[00:34:00.302] Server  ERROR   TypeError: fetch failed
+[00:34:00.411] Server  ERROR   ⨯ Error: failed to pipe response
+[00:34:00.415] Server  ERROR   TypeError: fetch failed
+[00:34:00.415] Server  ERROR   TypeError: fetch failed
+[00:41:20.050] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.110] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.202] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.289] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.358] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.403] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.485] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.542] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:20.580] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:34:59.606] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:34:59.606] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:34:59.607] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:34:59.607] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:34:59.625] Server  ERROR   TypeError: fetch failed
+[00:34:59.634] Server  ERROR   TypeError: fetch failed
+[00:34:59.984] Server  ERROR   ⨯ Error: failed to pipe response
+[00:34:59.989] Server  ERROR   TypeError: fetch failed
+[00:34:59.990] Server  ERROR   TypeError: fetch failed
+[00:35:00.009] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:35:00.009] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:35:00.009] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:35:00.009] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:35:00.011] Server  ERROR   TypeError: fetch failed
+[00:35:00.012] Server  ERROR   TypeError: fetch failed
+[00:35:00.189] Server  ERROR   ⨯ Error: failed to pipe response
+[00:35:00.192] Server  ERROR   TypeError: fetch failed
+[00:35:00.195] Server  ERROR   TypeError: fetch failed
+[00:35:00.216] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:35:00.216] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:35:00.216] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:35:00.216] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:35:00.222] Server  ERROR   TypeError: fetch failed
+[00:35:00.222] Server  ERROR   TypeError: fetch failed
+[00:35:00.352] Server  ERROR   ⨯ Error: failed to pipe response
+[00:35:00.357] Server  ERROR   TypeError: fetch failed
+[00:35:00.363] Server  ERROR   TypeError: fetch failed
+[00:42:19.892] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.059] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.102] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.169] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.224] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.324] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.382] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.449] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:20.490] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:35:59.608] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:35:59.609] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:35:59.609] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:35:59.609] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:35:59.625] Server  ERROR   TypeError: fetch failed
+[00:35:59.626] Server  ERROR   TypeError: fetch failed
+[00:35:59.942] Server  ERROR   ⨯ Error: failed to pipe response
+[00:35:59.947] Server  ERROR   TypeError: fetch failed
+[00:35:59.947] Server  ERROR   TypeError: fetch failed
+[00:35:59.963] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:35:59.964] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:35:59.965] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:35:59.965] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:35:59.976] Server  ERROR   TypeError: fetch failed
+[00:35:59.977] Server  ERROR   TypeError: fetch failed
+[00:36:00.166] Server  ERROR   ⨯ Error: failed to pipe response
+[00:36:00.168] Server  ERROR   TypeError: fetch failed
+[00:36:00.170] Server  ERROR   TypeError: fetch failed
+[00:36:00.194] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:36:00.194] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:36:00.195] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:36:00.197] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:36:00.202] Server  ERROR   TypeError: fetch failed
+[00:36:00.206] Server  ERROR   TypeError: fetch failed
+[00:36:00.310] Server  ERROR   ⨯ Error: failed to pipe response
+[00:36:00.314] Server  ERROR   TypeError: fetch failed
+[00:36:00.316] Server  ERROR   TypeError: fetch failed
+[00:36:09.488] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:36:09.488] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:36:09.488] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:36:09.489] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:36:09.496] Server  ERROR   TypeError: fetch failed
+[00:36:09.496] Server  ERROR   TypeError: fetch failed
+[00:36:09.624] Server  ERROR   ⨯ Error: failed to pipe response
+[00:36:09.628] Server  ERROR   TypeError: fetch failed
+[00:36:09.631] Server  ERROR   TypeError: fetch failed
+[00:36:59.687] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:36:59.688] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:36:59.689] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:36:59.690] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:36:59.704] Server  ERROR   TypeError: fetch failed
+[00:36:59.705] Server  ERROR   TypeError: fetch failed
+[00:36:59.887] Server  ERROR   ⨯ Error: failed to pipe response
+[00:36:59.891] Server  ERROR   TypeError: fetch failed
+[00:36:59.892] Server  ERROR   TypeError: fetch failed
+[00:36:59.910] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:36:59.910] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:36:59.910] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:36:59.910] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:36:59.922] Server  ERROR   TypeError: fetch failed
+[00:36:59.924] Server  ERROR   TypeError: fetch failed
+[00:37:00.049] Server  ERROR   ⨯ Error: failed to pipe response
+[00:37:00.051] Server  ERROR   TypeError: fetch failed
+[00:37:00.057] Server  ERROR   TypeError: fetch failed
+[00:37:00.075] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:37:00.075] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:37:00.075] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:37:00.076] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:37:00.077] Server  ERROR   TypeError: fetch failed
+[00:37:00.080] Server  ERROR   TypeError: fetch failed
+[00:37:00.257] Server  ERROR   ⨯ Error: failed to pipe response
+[00:37:00.266] Server  ERROR   TypeError: fetch failed
+[00:37:00.268] Server  ERROR   TypeError: fetch failed
+[00:43:20.025] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.120] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.315] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.414] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.475] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.521] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.580] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.619] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:20.653] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.004] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.076] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.143] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.215] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.277] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.335] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.374] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.420] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:20.463] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:37:59.540] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:37:59.541] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:37:59.544] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:37:59.550] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:37:59.553] Server  ERROR   TypeError: fetch failed
+[00:37:59.554] Server  ERROR   TypeError: fetch failed
+[00:37:59.856] Server  ERROR   ⨯ Error: failed to pipe response
+[00:37:59.859] Server  ERROR   TypeError: fetch failed
+[00:37:59.867] Server  ERROR   TypeError: fetch failed
+[00:37:59.959] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:37:59.968] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:37:59.969] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:37:59.970] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:37:59.986] Server  ERROR   TypeError: fetch failed
+[00:37:59.989] Server  ERROR   TypeError: fetch failed
+[00:38:00.169] Server  ERROR   ⨯ Error: failed to pipe response
+[00:38:00.181] Server  ERROR   TypeError: fetch failed
+[00:38:00.182] Server  ERROR   TypeError: fetch failed
+[00:38:00.201] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:38:00.201] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:38:00.202] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:38:00.202] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:38:00.207] Server  ERROR   TypeError: fetch failed
+[00:38:00.207] Server  ERROR   TypeError: fetch failed
+[00:38:00.298] Server  ERROR   ⨯ Error: failed to pipe response
+[00:38:00.301] Server  ERROR   TypeError: fetch failed
+[00:38:00.302] Server  ERROR   TypeError: fetch failed
+[00:45:19.932] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.002] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.085] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.164] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.222] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.278] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.376] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.407] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:20.426] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:38:59.563] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:38:59.563] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:38:59.563] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:38:59.563] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:38:59.584] Server  ERROR   TypeError: fetch failed
+[00:38:59.593] Server  ERROR   TypeError: fetch failed
+[00:38:59.924] Server  ERROR   ⨯ Error: failed to pipe response
+[00:38:59.933] Server  ERROR   TypeError: fetch failed
+[00:38:59.938] Server  ERROR   TypeError: fetch failed
+[00:38:59.968] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:38:59.968] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:38:59.969] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:38:59.969] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:38:59.975] Server  ERROR   TypeError: fetch failed
+[00:38:59.976] Server  ERROR   TypeError: fetch failed
+[00:39:00.101] Server  ERROR   ⨯ Error: failed to pipe response
+[00:39:00.108] Server  ERROR   TypeError: fetch failed
+[00:39:00.109] Server  ERROR   TypeError: fetch failed
+[00:39:00.124] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:39:00.124] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:39:00.124] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:39:00.125] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:39:00.127] Server  ERROR   TypeError: fetch failed
+[00:39:00.128] Server  ERROR   TypeError: fetch failed
+[00:39:00.185] Server  ERROR   ⨯ Error: failed to pipe response
+[00:39:00.186] Server  ERROR   TypeError: fetch failed
+[00:39:00.186] Server  ERROR   TypeError: fetch failed
+[00:46:19.945] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.053] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.100] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.180] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.225] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.309] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.411] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.445] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:20.475] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:39:59.615] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:39:59.616] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:39:59.616] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:39:59.616] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:39:59.623] Server  ERROR   TypeError: fetch failed
+[00:39:59.626] Server  ERROR   TypeError: fetch failed
+[00:39:59.972] Server  ERROR   ⨯ Error: failed to pipe response
+[00:39:59.981] Server  ERROR   TypeError: fetch failed
+[00:39:59.983] Server  ERROR   TypeError: fetch failed
+[00:40:00.097] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:40:00.098] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:40:00.098] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:40:00.098] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:40:00.103] Server  ERROR   TypeError: fetch failed
+[00:40:00.105] Server  ERROR   TypeError: fetch failed
+[00:40:00.212] Server  ERROR   ⨯ Error: failed to pipe response
+[00:40:00.216] Server  ERROR   TypeError: fetch failed
+[00:40:00.217] Server  ERROR   TypeError: fetch failed
+[00:40:00.223] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:40:00.223] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:40:00.223] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:40:00.224] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:40:00.225] Server  ERROR   TypeError: fetch failed
+[00:40:00.225] Server  ERROR   TypeError: fetch failed
+[00:40:00.309] Server  ERROR   ⨯ Error: failed to pipe response
+[00:40:00.316] Server  ERROR   TypeError: fetch failed
+[00:40:00.319] Server  ERROR   TypeError: fetch failed
+[00:40:59.657] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:40:59.657] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:40:59.657] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:40:59.658] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:40:59.697] Server  ERROR   TypeError: fetch failed
+[00:40:59.707] Server  ERROR   TypeError: fetch failed
+[00:41:00.011] Server  ERROR   ⨯ Error: failed to pipe response
+[00:41:00.013] Server  ERROR   TypeError: fetch failed
+[00:41:00.014] Server  ERROR   TypeError: fetch failed
+[00:41:00.052] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:41:00.052] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:41:00.053] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:41:00.053] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:41:00.059] Server  ERROR   TypeError: fetch failed
+[00:41:00.060] Server  ERROR   TypeError: fetch failed
+[00:41:00.218] Server  ERROR   ⨯ Error: failed to pipe response
+[00:41:00.221] Server  ERROR   TypeError: fetch failed
+[00:41:00.227] Server  ERROR   TypeError: fetch failed
+[00:41:00.240] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:41:00.241] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:41:00.241] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:41:00.241] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:41:00.244] Server  ERROR   TypeError: fetch failed
+[00:41:00.244] Server  ERROR   TypeError: fetch failed
+[00:41:00.315] Server  ERROR   ⨯ Error: failed to pipe response
+[00:41:00.317] Server  ERROR   TypeError: fetch failed
+[00:41:00.317] Server  ERROR   TypeError: fetch failed
+[00:47:19.983] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.069] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.164] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.255] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.426] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.476] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.530] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.559] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:20.575] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:09.487] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:41:09.488] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:41:09.488] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:41:09.488] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:41:09.505] Server  ERROR   TypeError: fetch failed
+[00:41:09.506] Server  ERROR   TypeError: fetch failed
+[00:41:09.661] Server  ERROR   ⨯ Error: failed to pipe response
+[00:41:09.664] Server  ERROR   TypeError: fetch failed
+[00:41:09.665] Server  ERROR   TypeError: fetch failed
+[00:48:20.016] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.138] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.216] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.281] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.343] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.414] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.478] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.532] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:48:20.587] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:41:59.736] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:41:59.737] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:41:59.738] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:41:59.739] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:41:59.751] Server  ERROR   TypeError: fetch failed
+[00:41:59.752] Server  ERROR   TypeError: fetch failed
+[00:41:59.906] Server  ERROR   ⨯ Error: failed to pipe response
+[00:41:59.910] Server  ERROR   TypeError: fetch failed
+[00:41:59.911] Server  ERROR   TypeError: fetch failed
+[00:41:59.978] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:41:59.981] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:41:59.984] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:41:59.984] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:41:59.993] Server  ERROR   TypeError: fetch failed
+[00:41:59.994] Server  ERROR   TypeError: fetch failed
+[00:42:00.268] Server  ERROR   ⨯ Error: failed to pipe response
+[00:42:00.274] Server  ERROR   TypeError: fetch failed
+[00:42:00.275] Server  ERROR   TypeError: fetch failed
+[00:42:00.319] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:42:00.320] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:42:00.320] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:42:00.321] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:42:00.325] Server  ERROR   TypeError: fetch failed
+[00:42:00.327] Server  ERROR   TypeError: fetch failed
+[00:42:00.474] Server  ERROR   ⨯ Error: failed to pipe response
+[00:42:00.478] Server  ERROR   TypeError: fetch failed
+[00:42:00.478] Server  ERROR   TypeError: fetch failed
+[00:49:20.062] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.116] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.230] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.307] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.393] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.492] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.553] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.630] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:20.667] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:42:59.620] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:42:59.621] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:42:59.622] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:42:59.622] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:42:59.641] Server  ERROR   TypeError: fetch failed
+[00:42:59.642] Server  ERROR   TypeError: fetch failed
+[00:43:00.068] Server  ERROR   ⨯ Error: failed to pipe response
+[00:43:00.074] Server  ERROR   TypeError: fetch failed
+[00:43:00.075] Server  ERROR   TypeError: fetch failed
+[00:43:00.119] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:43:00.120] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:43:00.120] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:43:00.121] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:43:00.133] Server  ERROR   TypeError: fetch failed
+[00:43:00.134] Server  ERROR   TypeError: fetch failed
+[00:43:00.306] Server  ERROR   ⨯ Error: failed to pipe response
+[00:43:00.312] Server  ERROR   TypeError: fetch failed
+[00:43:00.312] Server  ERROR   TypeError: fetch failed
+[00:43:00.341] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:43:00.343] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:43:00.343] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:43:00.344] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:43:00.359] Server  ERROR   TypeError: fetch failed
+[00:43:00.370] Server  ERROR   TypeError: fetch failed
+[00:43:00.467] Server  ERROR   ⨯ Error: failed to pipe response
+[00:43:00.468] Server  ERROR   TypeError: fetch failed
+[00:43:00.468] Server  ERROR   TypeError: fetch failed
+[00:50:20.045] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.210] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.308] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.405] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.474] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.557] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.630] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.816] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:50:20.862] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:43:59.658] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:43:59.659] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:43:59.661] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:43:59.662] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:43:59.694] Server  ERROR   TypeError: fetch failed
+[00:43:59.699] Server  ERROR   TypeError: fetch failed
+[00:44:00.109] Server  ERROR   ⨯ Error: failed to pipe response
+[00:44:00.122] Server  ERROR   TypeError: fetch failed
+[00:44:00.130] Server  ERROR   TypeError: fetch failed
+[00:44:00.188] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:44:00.189] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:44:00.189] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:44:00.190] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:44:00.198] Server  ERROR   TypeError: fetch failed
+[00:44:00.200] Server  ERROR   TypeError: fetch failed
+[00:44:00.424] Server  ERROR   ⨯ Error: failed to pipe response
+[00:44:00.429] Server  ERROR   TypeError: fetch failed
+[00:44:00.445] Server  ERROR   TypeError: fetch failed
+[00:44:00.472] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:44:00.473] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:44:00.473] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:44:00.473] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:44:00.492] Server  ERROR   TypeError: fetch failed
+[00:44:00.494] Server  ERROR   TypeError: fetch failed
+[00:44:00.738] Server  ERROR   ⨯ Error: failed to pipe response
+[00:44:00.742] Server  ERROR   TypeError: fetch failed
+[00:44:00.751] Server  ERROR   TypeError: fetch failed
+[00:51:20.008] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.080] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.173] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.372] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.436] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.487] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.541] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.596] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:20.648] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:44:59.630] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:44:59.631] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:44:59.631] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:44:59.632] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:44:59.650] Server  ERROR   TypeError: fetch failed
+[00:44:59.651] Server  ERROR   TypeError: fetch failed
+[00:45:00.067] Server  ERROR   ⨯ Error: failed to pipe response
+[00:45:00.073] Server  ERROR   TypeError: fetch failed
+[00:45:00.074] Server  ERROR   TypeError: fetch failed
+[00:45:00.122] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:45:00.123] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:45:00.125] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:45:00.126] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:45:00.140] Server  ERROR   TypeError: fetch failed
+[00:45:00.142] Server  ERROR   TypeError: fetch failed
+[00:45:00.338] Server  ERROR   ⨯ Error: failed to pipe response
+[00:45:00.349] Server  ERROR   TypeError: fetch failed
+[00:45:00.353] Server  ERROR   TypeError: fetch failed
+[00:45:00.379] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:45:00.380] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:45:00.380] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:45:00.383] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:45:00.391] Server  ERROR   TypeError: fetch failed
+[00:45:00.391] Server  ERROR   TypeError: fetch failed
+[00:45:00.478] Server  ERROR   ⨯ Error: failed to pipe response
+[00:45:00.480] Server  ERROR   TypeError: fetch failed
+[00:45:00.481] Server  ERROR   TypeError: fetch failed
+[00:52:20.040] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.111] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.170] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.254] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.400] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.446] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.549] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.601] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:52:20.639] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:45:59.649] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:45:59.652] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:45:59.652] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:45:59.652] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:45:59.707] Server  ERROR   TypeError: fetch failed
+[00:45:59.708] Server  ERROR   TypeError: fetch failed
+[00:45:59.905] Server  ERROR   ⨯ Error: failed to pipe response
+[00:45:59.908] Server  ERROR   TypeError: fetch failed
+[00:45:59.909] Server  ERROR   TypeError: fetch failed
+[00:45:59.944] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:45:59.944] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:45:59.945] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:45:59.945] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:45:59.951] Server  ERROR   TypeError: fetch failed
+[00:45:59.953] Server  ERROR   TypeError: fetch failed
+[00:46:00.105] Server  ERROR   ⨯ Error: failed to pipe response
+[00:46:00.109] Server  ERROR   TypeError: fetch failed
+[00:46:00.116] Server  ERROR   TypeError: fetch failed
+[00:46:00.191] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:46:00.192] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:46:00.192] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:46:00.192] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:46:00.203] Server  ERROR   TypeError: fetch failed
+[00:46:00.209] Server  ERROR   TypeError: fetch failed
+[00:46:00.394] Server  ERROR   ⨯ Error: failed to pipe response
+[00:46:00.403] Server  ERROR   TypeError: fetch failed
+[00:46:00.406] Server  ERROR   TypeError: fetch failed
+[00:53:20.123] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.191] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.244] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.321] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.383] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.431] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.509] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.564] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:20.606] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:46:59.714] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:46:59.715] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:46:59.716] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:46:59.717] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:46:59.749] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:46:59.750] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:46:59.751] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:46:59.751] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:46:59.756] Server  ERROR   TypeError: fetch failed
+[00:46:59.758] Server  ERROR   TypeError: fetch failed
+[00:47:00.017] Server  ERROR   ⨯ Error: failed to pipe response
+[00:47:00.019] Server  ERROR   TypeError: fetch failed
+[00:47:00.021] Server  ERROR   TypeError: fetch failed
+[00:47:00.024] Server  ERROR   TypeError: fetch failed
+[00:47:00.025] Server  ERROR   TypeError: fetch failed
+[00:47:00.268] Server  ERROR   ⨯ Error: failed to pipe response
+[00:47:00.271] Server  ERROR   TypeError: fetch failed
+[00:47:00.271] Server  ERROR   TypeError: fetch failed
+[00:47:00.308] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:47:00.309] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:47:00.309] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:47:00.309] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:47:00.315] Server  ERROR   TypeError: fetch failed
+[00:47:00.316] Server  ERROR   TypeError: fetch failed
+[00:47:00.414] Server  ERROR   ⨯ Error: failed to pipe response
+[00:47:00.418] Server  ERROR   TypeError: fetch failed
+[00:47:00.420] Server  ERROR   TypeError: fetch failed
+[00:47:00.431] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:47:00.431] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:47:00.432] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:47:00.432] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:47:00.440] Server  ERROR   TypeError: fetch failed
+[00:47:00.444] Server  ERROR   TypeError: fetch failed
+[00:47:00.545] Server  ERROR   ⨯ Error: failed to pipe response
+[00:47:00.561] Server  ERROR   TypeError: fetch failed
+[00:47:00.562] Server  ERROR   TypeError: fetch failed
+[00:54:19.892] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:19.986] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:20.059] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:20.280] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:20.339] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:20.406] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:20.473] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:20.522] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:54:20.557] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:47:59.648] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:47:59.655] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:47:59.658] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:47:59.659] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:47:59.694] Server  ERROR   TypeError: fetch failed
+[00:47:59.699] Server  ERROR   TypeError: fetch failed
+[00:47:59.965] Server  ERROR   ⨯ Error: failed to pipe response
+[00:47:59.970] Server  ERROR   TypeError: fetch failed
+[00:47:59.970] Server  ERROR   TypeError: fetch failed
+[00:48:00.007] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:48:00.007] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:48:00.008] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:48:00.008] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:48:00.011] Server  ERROR   TypeError: fetch failed
+[00:48:00.011] Server  ERROR   TypeError: fetch failed
+[00:48:00.166] Server  ERROR   ⨯ Error: failed to pipe response
+[00:48:00.171] Server  ERROR   TypeError: fetch failed
+[00:48:00.174] Server  ERROR   TypeError: fetch failed
+[00:48:00.194] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:48:00.194] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:48:00.194] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:48:00.194] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:48:00.196] Server  ERROR   TypeError: fetch failed
+[00:48:00.198] Server  ERROR   TypeError: fetch failed
+[00:48:00.320] Server  ERROR   ⨯ Error: failed to pipe response
+[00:48:00.330] Server  ERROR   TypeError: fetch failed
+[00:48:00.331] Server  ERROR   TypeError: fetch failed
+[00:48:59.571] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:48:59.572] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:48:59.572] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:48:59.572] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:48:59.623] Server  ERROR   TypeError: fetch failed
+[00:48:59.627] Server  ERROR   TypeError: fetch failed
+[00:48:59.934] Server  ERROR   ⨯ Error: failed to pipe response
+[00:48:59.937] Server  ERROR   TypeError: fetch failed
+[00:48:59.938] Server  ERROR   TypeError: fetch failed
+[00:48:59.991] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:48:59.992] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:48:59.992] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:48:59.992] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:48:59.997] Server  ERROR   TypeError: fetch failed
+[00:48:59.999] Server  ERROR   TypeError: fetch failed
+[00:49:00.087] Server  ERROR   ⨯ Error: failed to pipe response
+[00:49:00.091] Server  ERROR   TypeError: fetch failed
+[00:49:00.092] Server  ERROR   TypeError: fetch failed
+[00:49:00.101] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:49:00.101] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:49:00.102] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:49:00.102] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:49:00.103] Server  ERROR   TypeError: fetch failed
+[00:49:00.104] Server  ERROR   TypeError: fetch failed
+[00:49:00.178] Server  ERROR   ⨯ Error: failed to pipe response
+[00:49:00.186] Server  ERROR   TypeError: fetch failed
+[00:49:00.188] Server  ERROR   TypeError: fetch failed
+[00:55:20.040] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.126] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.299] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.343] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.368] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.401] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.474] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.533] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:20.576] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:19.887] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:19.992] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:20.038] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:20.098] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:20.149] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:20.355] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:20.415] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:20.447] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:20.476] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:49:59.564] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:49:59.568] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:49:59.568] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:49:59.588] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:49:59.617] Server  ERROR   TypeError: fetch failed
+[00:49:59.619] Server  ERROR   TypeError: fetch failed
+[00:49:59.937] Server  ERROR   ⨯ Error: failed to pipe response
+[00:49:59.942] Server  ERROR   TypeError: fetch failed
+[00:49:59.943] Server  ERROR   TypeError: fetch failed
+[00:49:59.978] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:49:59.978] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:49:59.978] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:49:59.978] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:49:59.989] Server  ERROR   TypeError: fetch failed
+[00:49:59.991] Server  ERROR   TypeError: fetch failed
+[00:50:00.170] Server  ERROR   ⨯ Error: failed to pipe response
+[00:50:00.172] Server  ERROR   TypeError: fetch failed
+[00:50:00.174] Server  ERROR   TypeError: fetch failed
+[00:50:00.181] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:50:00.181] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:50:00.181] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:50:00.182] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:50:00.184] Server  ERROR   TypeError: fetch failed
+[00:50:00.184] Server  ERROR   TypeError: fetch failed
+[00:50:00.255] Server  ERROR   ⨯ Error: failed to pipe response
+[00:50:00.257] Server  ERROR   TypeError: fetch failed
+[00:50:00.257] Server  ERROR   TypeError: fetch failed
+[00:50:59.591] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:50:59.592] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:50:59.592] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:50:59.592] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:50:59.629] Server  ERROR   TypeError: fetch failed
+[00:50:59.630] Server  ERROR   TypeError: fetch failed
+[00:50:59.801] Server  ERROR   ⨯ Error: failed to pipe response
+[00:50:59.804] Server  ERROR   TypeError: fetch failed
+[00:50:59.805] Server  ERROR   TypeError: fetch failed
+[00:50:59.837] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:50:59.838] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:50:59.838] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:50:59.838] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:50:59.843] Server  ERROR   TypeError: fetch failed
+[00:50:59.845] Server  ERROR   TypeError: fetch failed
+[00:50:59.974] Server  ERROR   ⨯ Error: failed to pipe response
+[00:50:59.979] Server  ERROR   TypeError: fetch failed
+[00:50:59.980] Server  ERROR   TypeError: fetch failed
+[00:50:59.988] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:50:59.988] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:50:59.989] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:50:59.989] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:50:59.991] Server  ERROR   TypeError: fetch failed
+[00:50:59.991] Server  ERROR   TypeError: fetch failed
+[00:51:00.075] Server  ERROR   ⨯ Error: failed to pipe response
+[00:51:00.079] Server  ERROR   TypeError: fetch failed
+[00:51:00.092] Server  ERROR   TypeError: fetch failed
+[00:57:19.988] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.079] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.199] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.250] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.274] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.319] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.381] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.429] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:20.466] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:19.952] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.035] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.088] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.220] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.295] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.462] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.559] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.625] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:58:20.658] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:51:59.740] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:51:59.741] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:51:59.742] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:51:59.744] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:51:59.758] Server  ERROR   TypeError: fetch failed
+[00:51:59.759] Server  ERROR   TypeError: fetch failed
+[00:52:00.009] Server  ERROR   ⨯ Error: failed to pipe response
+[00:52:00.013] Server  ERROR   TypeError: fetch failed
+[00:52:00.014] Server  ERROR   TypeError: fetch failed
+[00:52:00.031] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:52:00.032] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:52:00.032] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:52:00.032] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:52:00.039] Server  ERROR   TypeError: fetch failed
+[00:52:00.040] Server  ERROR   TypeError: fetch failed
+[00:52:00.287] Server  ERROR   ⨯ Error: failed to pipe response
+[00:52:00.291] Server  ERROR   TypeError: fetch failed
+[00:52:00.293] Server  ERROR   TypeError: fetch failed
+[00:52:00.322] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:52:00.323] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:52:00.323] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:52:00.323] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:52:00.328] Server  ERROR   TypeError: fetch failed
+[00:52:00.331] Server  ERROR   TypeError: fetch failed
+[00:52:00.456] Server  ERROR   ⨯ Error: failed to pipe response
+[00:52:00.459] Server  ERROR   TypeError: fetch failed
+[00:52:00.461] Server  ERROR   TypeError: fetch failed
+[00:52:00.487] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:52:00.488] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:52:00.488] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:52:00.488] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:52:00.490] Server  ERROR   TypeError: fetch failed
+[00:52:00.491] Server  ERROR   TypeError: fetch failed
+[00:52:00.641] Server  ERROR   ⨯ Error: failed to pipe response
+[00:52:00.665] Server  ERROR   TypeError: fetch failed
+[00:52:00.667] Server  ERROR   TypeError: fetch failed
+[00:52:59.497] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:52:59.498] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:52:59.498] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:52:59.498] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:52:59.513] Server  ERROR   TypeError: fetch failed
+[00:52:59.513] Server  ERROR   TypeError: fetch failed
+[00:52:59.774] Server  ERROR   ⨯ Error: failed to pipe response
+[00:52:59.787] Server  ERROR   TypeError: fetch failed
+[00:52:59.788] Server  ERROR   TypeError: fetch failed
+[00:52:59.816] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:52:59.817] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:52:59.818] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:52:59.818] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:52:59.822] Server  ERROR   TypeError: fetch failed
+[00:52:59.822] Server  ERROR   TypeError: fetch failed
+[00:52:59.944] Server  ERROR   ⨯ Error: failed to pipe response
+[00:52:59.949] Server  ERROR   TypeError: fetch failed
+[00:52:59.952] Server  ERROR   TypeError: fetch failed
+[00:52:59.966] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:52:59.967] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:52:59.967] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:52:59.968] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:52:59.973] Server  ERROR   TypeError: fetch failed
+[00:52:59.977] Server  ERROR   TypeError: fetch failed
+[00:53:00.084] Server  ERROR   ⨯ Error: failed to pipe response
+[00:53:00.095] Server  ERROR   TypeError: fetch failed
+[00:53:00.095] Server  ERROR   TypeError: fetch failed
+[00:59:20.023] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.133] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.261] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.296] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.337] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.369] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.400] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.419] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:20.432] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:19.953] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.058] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.099] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.181] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.299] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.451] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.516] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.560] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:00:20.601] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:53:59.603] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:53:59.604] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:53:59.604] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:53:59.606] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:53:59.755] Server  ERROR   TypeError: fetch failed
+[00:53:59.755] Server  ERROR   TypeError: fetch failed
+[00:54:00.104] Server  ERROR   ⨯ Error: failed to pipe response
+[00:54:00.107] Server  ERROR   TypeError: fetch failed
+[00:54:00.110] Server  ERROR   TypeError: fetch failed
+[00:54:00.159] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:54:00.159] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:54:00.160] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:54:00.160] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:54:00.179] Server  ERROR   TypeError: fetch failed
+[00:54:00.182] Server  ERROR   TypeError: fetch failed
+[00:54:00.286] Server  ERROR   ⨯ Error: failed to pipe response
+[00:54:00.299] Server  ERROR   TypeError: fetch failed
+[00:54:00.300] Server  ERROR   TypeError: fetch failed
+[00:54:00.318] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:54:00.318] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:54:00.319] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:54:00.321] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:54:00.326] Server  ERROR   TypeError: fetch failed
+[00:54:00.327] Server  ERROR   TypeError: fetch failed
+[00:54:00.468] Server  ERROR   ⨯ Error: failed to pipe response
+[00:54:00.469] Server  ERROR   TypeError: fetch failed
+[00:54:00.471] Server  ERROR   TypeError: fetch failed
+[00:54:59.707] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:54:59.708] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:54:59.709] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:54:59.710] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:54:59.750] Server  ERROR   TypeError: fetch failed
+[00:54:59.751] Server  ERROR   TypeError: fetch failed
+[00:54:59.984] Server  ERROR   ⨯ Error: failed to pipe response
+[00:54:59.986] Server  ERROR   TypeError: fetch failed
+[00:54:59.987] Server  ERROR   TypeError: fetch failed
+[00:54:59.997] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:54:59.997] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:54:59.997] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:54:59.998] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:55:00.007] Server  ERROR   TypeError: fetch failed
+[00:55:00.008] Server  ERROR   TypeError: fetch failed
+[00:55:00.145] Server  ERROR   ⨯ Error: failed to pipe response
+[00:55:00.148] Server  ERROR   TypeError: fetch failed
+[00:55:00.150] Server  ERROR   TypeError: fetch failed
+[00:55:00.166] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:55:00.166] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:55:00.166] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:55:00.166] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:55:00.174] Server  ERROR   TypeError: fetch failed
+[00:55:00.175] Server  ERROR   TypeError: fetch failed
+[00:55:00.274] Server  ERROR   ⨯ Error: failed to pipe response
+[00:55:00.289] Server  ERROR   TypeError: fetch failed
+[00:55:00.299] Server  ERROR   TypeError: fetch failed
+[01:01:20.098] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.164] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.233] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.301] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.366] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.424] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.494] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.519] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:20.679] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:55:59.613] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:55:59.613] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:55:59.613] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:55:59.613] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:55:59.632] Server  ERROR   TypeError: fetch failed
+[00:55:59.632] Server  ERROR   TypeError: fetch failed
+[00:55:59.964] Server  ERROR   ⨯ Error: failed to pipe response
+[00:55:59.967] Server  ERROR   TypeError: fetch failed
+[00:55:59.968] Server  ERROR   TypeError: fetch failed
+[00:55:59.996] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:55:59.997] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:55:59.999] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:56:00.004] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:56:00.012] Server  ERROR   TypeError: fetch failed
+[00:56:00.013] Server  ERROR   TypeError: fetch failed
+[00:56:00.176] Server  ERROR   ⨯ Error: failed to pipe response
+[00:56:00.178] Server  ERROR   TypeError: fetch failed
+[00:56:00.192] Server  ERROR   TypeError: fetch failed
+[00:56:00.271] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:56:00.272] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:56:00.272] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:56:00.272] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:56:00.276] Server  ERROR   TypeError: fetch failed
+[00:56:00.276] Server  ERROR   TypeError: fetch failed
+[00:56:00.426] Server  ERROR   ⨯ Error: failed to pipe response
+[00:56:00.428] Server  ERROR   TypeError: fetch failed
+[00:56:00.428] Server  ERROR   TypeError: fetch failed
+[01:02:19.901] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.095] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.156] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.238] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.319] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.464] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.681] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.721] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:20.751] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.116] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.159] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.214] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.295] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.349] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.393] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.446] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.529] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:03:20.560] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:56:59.697] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:56:59.699] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:56:59.700] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:56:59.703] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:56:59.719] Server  ERROR   TypeError: fetch failed
+[00:56:59.720] Server  ERROR   TypeError: fetch failed
+[00:57:00.052] Server  ERROR   ⨯ Error: failed to pipe response
+[00:57:00.060] Server  ERROR   TypeError: fetch failed
+[00:57:00.062] Server  ERROR   TypeError: fetch failed
+[00:57:00.087] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:57:00.088] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:57:00.089] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:57:00.089] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:57:00.098] Server  ERROR   TypeError: fetch failed
+[00:57:00.099] Server  ERROR   TypeError: fetch failed
+[00:57:00.315] Server  ERROR   ⨯ Error: failed to pipe response
+[00:57:00.319] Server  ERROR   TypeError: fetch failed
+[00:57:00.320] Server  ERROR   TypeError: fetch failed
+[00:57:00.339] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:57:00.339] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:57:00.339] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:57:00.339] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:57:00.342] Server  ERROR   TypeError: fetch failed
+[00:57:00.342] Server  ERROR   TypeError: fetch failed
+[00:57:00.431] Server  ERROR   ⨯ Error: failed to pipe response
+[00:57:00.446] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:57:00.446] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:57:00.446] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:57:00.446] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:57:00.457] Server  ERROR   TypeError: fetch failed
+[00:57:00.458] Server  ERROR   TypeError: fetch failed
+[00:57:00.465] Server  ERROR   TypeError: fetch failed
+[00:57:00.466] Server  ERROR   TypeError: fetch failed
+[00:57:00.558] Server  ERROR   ⨯ Error: failed to pipe response
+[00:57:00.564] Server  ERROR   TypeError: fetch failed
+[00:57:00.570] Server  ERROR   TypeError: fetch failed
+[01:04:19.923] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.013] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.068] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.137] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.191] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.362] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.476] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.547] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:04:20.580] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:57:59.669] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:57:59.669] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:57:59.669] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:57:59.670] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:57:59.675] Server  ERROR   TypeError: fetch failed
+[00:57:59.676] Server  ERROR   TypeError: fetch failed
+[00:57:59.956] Server  ERROR   ⨯ Error: failed to pipe response
+[00:57:59.960] Server  ERROR   TypeError: fetch failed
+[00:57:59.962] Server  ERROR   TypeError: fetch failed
+[00:57:59.988] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:57:59.988] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:57:59.988] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:57:59.989] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:57:59.990] Server  ERROR   TypeError: fetch failed
+[00:57:59.991] Server  ERROR   TypeError: fetch failed
+[00:58:00.227] Server  ERROR   ⨯ Error: failed to pipe response
+[00:58:00.231] Server  ERROR   TypeError: fetch failed
+[00:58:00.233] Server  ERROR   TypeError: fetch failed
+[00:58:00.254] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:58:00.254] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:58:00.254] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:58:00.254] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:58:00.257] Server  ERROR   TypeError: fetch failed
+[00:58:00.259] Server  ERROR   TypeError: fetch failed
+[00:58:00.379] Server  ERROR   ⨯ Error: failed to pipe response
+[00:58:00.391] Server  ERROR   TypeError: fetch failed
+[00:58:00.391] Server  ERROR   TypeError: fetch failed
+[00:58:59.645] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:58:59.645] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:58:59.645] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:58:59.645] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:58:59.691] Server  ERROR   TypeError: fetch failed
+[00:58:59.692] Server  ERROR   TypeError: fetch failed
+[00:59:00.049] Server  ERROR   ⨯ Error: failed to pipe response
+[00:59:00.052] Server  ERROR   TypeError: fetch failed
+[00:59:00.054] Server  ERROR   TypeError: fetch failed
+[00:59:00.075] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:59:00.075] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:59:00.075] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:59:00.076] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:59:00.080] Server  ERROR   TypeError: fetch failed
+[00:59:00.081] Server  ERROR   TypeError: fetch failed
+[00:59:00.204] Server  ERROR   ⨯ Error: failed to pipe response
+[00:59:00.207] Server  ERROR   TypeError: fetch failed
+[00:59:00.212] Server  ERROR   TypeError: fetch failed
+[00:59:00.231] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:59:00.232] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:59:00.232] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:59:00.232] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:59:00.235] Server  ERROR   TypeError: fetch failed
+[00:59:00.236] Server  ERROR   TypeError: fetch failed
+[00:59:00.350] Server  ERROR   ⨯ Error: failed to pipe response
+[00:59:00.351] Server  ERROR   TypeError: fetch failed
+[00:59:00.352] Server  ERROR   TypeError: fetch failed
+[01:05:19.954] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.081] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.184] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.304] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.393] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.450] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.543] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.598] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:05:20.642] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:19.947] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.032] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.088] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.175] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.235] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.332] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.423] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.470] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:06:20.528] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[00:59:59.730] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[00:59:59.734] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[00:59:59.736] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[00:59:59.737] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[00:59:59.766] Server  ERROR   TypeError: fetch failed
+[00:59:59.778] Server  ERROR   TypeError: fetch failed
+[01:00:00.118] Server  ERROR   ⨯ Error: failed to pipe response
+[01:00:00.120] Server  ERROR   TypeError: fetch failed
+[01:00:00.121] Server  ERROR   TypeError: fetch failed
+[01:00:00.134] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:00:00.135] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:00:00.135] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:00:00.135] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:00:00.137] Server  ERROR   TypeError: fetch failed
+[01:00:00.139] Server  ERROR   TypeError: fetch failed
+[01:00:00.242] Server  ERROR   ⨯ Error: failed to pipe response
+[01:00:00.245] Server  ERROR   TypeError: fetch failed
+[01:00:00.247] Server  ERROR   TypeError: fetch failed
+[01:00:00.277] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:00:00.278] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:00:00.278] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:00:00.278] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:00:00.282] Server  ERROR   TypeError: fetch failed
+[01:00:00.282] Server  ERROR   TypeError: fetch failed
+[01:00:00.384] Server  ERROR   ⨯ Error: failed to pipe response
+[01:00:00.389] Server  ERROR   TypeError: fetch failed
+[01:00:00.390] Server  ERROR   TypeError: fetch failed
+[01:00:40.631] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:00:40.631] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:00:40.632] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:00:40.633] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:00:40.755] Server  ERROR   TypeError: fetch failed
+[01:00:40.756] Server  ERROR   TypeError: fetch failed
+[01:00:41.155] Server  ERROR   ⨯ Error: failed to pipe response
+[01:00:41.175] Server  ERROR   TypeError: fetch failed
+[01:00:41.177] Server  ERROR   TypeError: fetch failed
+[01:00:41.232] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:00:41.237] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:00:41.237] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:00:41.238] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:00:41.257] Server  ERROR   TypeError: fetch failed
+[01:00:41.260] Server  ERROR   TypeError: fetch failed
+[01:00:42.188] Server  ERROR   ⨯ Error: failed to pipe response
+[01:00:42.228] Server  ERROR   TypeError: fetch failed
+[01:00:42.232] Server  ERROR   TypeError: fetch failed
+[01:00:42.360] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:00:42.361] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:00:42.362] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:00:42.363] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:00:42.384] Server  ERROR   TypeError: fetch failed
+[01:00:42.384] Server  ERROR   TypeError: fetch failed
+[01:00:42.785] Server  ERROR   ⨯ Error: failed to pipe response
+[01:00:42.803] Server  ERROR   TypeError: fetch failed
+[01:00:42.804] Server  ERROR   TypeError: fetch failed
+[01:00:50.195] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:50.727] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:50.980] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:51.166] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:52.009] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:52.347] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:52.543] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:52.946] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:53.190] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:53.477] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:54.851] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:55.245] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:55.487] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:55.843] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:56.167] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:56.401] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:57.035] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:57.526] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:58.413] Server  ERROR   ⨯ TypeError: fetch failed
+[01:00:58.940] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:00.905] Server  ERROR   ⨯ TypeError: fetch failed
+[01:07:20.679] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:20.835] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:20.987] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:21.191] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:21.299] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:21.391] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:21.488] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:21.548] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:07:21.598] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:01:01.408] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:01.590] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:01.912] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:09.477] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:10.167] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:01:10.168] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:01:10.168] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:01:10.168] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:01:10.177] Server  ERROR   TypeError: fetch failed
+[01:01:10.178] Server  ERROR   TypeError: fetch failed
+[01:01:10.402] Server  ERROR   ⨯ Error: failed to pipe response
+[01:01:10.410] Server  ERROR   TypeError: fetch failed
+[01:01:10.417] Server  ERROR   TypeError: fetch failed
+[01:01:10.518] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:01:10.519] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:01:10.522] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:01:10.526] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:01:10.583] Server  ERROR   TypeError: fetch failed
+[01:01:10.583] Server  ERROR   TypeError: fetch failed
+[01:01:10.975] Server  ERROR   ⨯ Error: failed to pipe response
+[01:01:11.050] Server  ERROR   TypeError: fetch failed
+[01:01:11.052] Server  ERROR   TypeError: fetch failed
+[01:01:11.946] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:12.115] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:01:12.116] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:01:12.121] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:01:12.124] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:01:12.144] Server  ERROR   TypeError: fetch failed
+[01:01:12.146] Server  ERROR   TypeError: fetch failed
+[01:01:12.526] Server  ERROR   ⨯ Error: failed to pipe response
+[01:01:12.581] Server  ERROR   TypeError: fetch failed
+[01:01:12.588] Server  ERROR   TypeError: fetch failed
+[01:01:12.861] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:12.906] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:01:12.907] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:01:12.907] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:01:12.907] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:01:12.918] Server  ERROR   TypeError: fetch failed
+[01:01:12.921] Server  ERROR   TypeError: fetch failed
+[01:01:13.154] Server  ERROR   ⨯ Error: failed to pipe response
+[01:01:13.167] Server  ERROR   TypeError: fetch failed
+[01:01:13.168] Server  ERROR   TypeError: fetch failed
+[01:01:13.434] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:13.799] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:14.040] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:14.291] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:14.509] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:14.765] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:15.087] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:15.601] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:15.982] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:16.186] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:16.463] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:16.890] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:17.196] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:17.476] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:17.905] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:19.433] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:20.787] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:29.017] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:37.571] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:45.277] Server  ERROR   ⨯ TypeError: fetch failed
+[01:01:53.269] Server  ERROR   ⨯ TypeError: fetch failed
+[01:02:01.523] Server  ERROR   ⨯ TypeError: fetch failed
+[01:08:20.293] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:20.438] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:20.534] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:20.733] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:20.895] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:21.279] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:21.518] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:21.758] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:08:21.889] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/pages/_app/build-manifest.json'
+[01:02:09.028] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:02:09.029] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:02:09.029] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:02:09.029] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:02:09.628] Server  ERROR   TypeError: fetch failed
+[01:02:09.634] Server  ERROR   TypeError: fetch failed
+[01:02:10.613] Server  ERROR   ⨯ Error: failed to pipe response
+[01:02:10.652] Server  ERROR   TypeError: fetch failed
+[01:02:10.668] Server  ERROR   TypeError: fetch failed
+[01:02:10.766] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:02:10.777] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:02:10.781] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:02:10.782] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:02:10.819] Server  ERROR   TypeError: fetch failed
+[01:02:10.820] Server  ERROR   TypeError: fetch failed
+[01:02:11.062] Server  ERROR   ⨯ Error: failed to pipe response
+[01:02:11.067] Server  ERROR   TypeError: fetch failed
+[01:02:11.068] Server  ERROR   TypeError: fetch failed
+[01:02:11.185] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[01:02:11.186] Server  LOG     [v0] Open Exchange Rates: 183.995022 LRD per USD
+[01:02:11.186] Server  LOG     [v0] ExchangeRate API: 184 LRD per USD
+[01:02:11.186] Server  LOG     [v0] Aggregated rate: 184.26 from 3 sources
+[01:02:11.200] Server  ERROR   TypeError: fetch failed
+[01:02:11.201] Server  ERROR   TypeError: fetch failed
+[01:02:11.361] Server  ERROR   ⨯ Error: failed to pipe response
+[01:02:11.366] Server  ERROR   TypeError: fetch failed
+[01:02:11.367] Server  ERROR   TypeError: fetch failed
+[01:02:11.657] Server  ERROR   ⨯ TypeError: fetch failed
+[01:02:19.284] Server  ERROR   ⨯ TypeError: fetch failed
+[01:02:30.145] Server  ERROR   ⨯ TypeError: fetch failed
+[01:02:37.030] Server  ERROR   ⨯ TypeError: fetch failed
+[01:02:45.086] Server  ERROR   ⨯ TypeError: fetch failed
+[01:02:53.090] Server  ERROR   ⨯ TypeError: fetch failed
