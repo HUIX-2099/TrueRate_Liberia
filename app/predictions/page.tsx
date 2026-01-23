@@ -24,7 +24,7 @@ import {
   LineChart,
   Zap,
 } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 interface CandleData {
   date: string
@@ -41,12 +41,29 @@ interface Prediction {
   confidence: number
 }
 
+const computeBacktestAccuracy = (candles: CandleData[], lookback = 7) => {
+  if (candles.length < 2) return null
+  const startIndex = Math.max(1, candles.length - lookback)
+  const errors = []
+  for (let i = startIndex; i < candles.length; i += 1) {
+    const actual = candles[i]?.close
+    const predicted = candles[i - 1]?.close
+    if (!Number.isFinite(actual) || !Number.isFinite(predicted) || actual === 0) continue
+    const ape = Math.abs((actual - predicted) / actual) * 100
+    errors.push(ape)
+  }
+  if (!errors.length) return null
+  const mape = errors.reduce((sum, value) => sum + value, 0) / errors.length
+  return Math.max(0, 100 - mape)
+}
+
 export default function PredictionsPage() {
   const [candles, setCandles] = useState<CandleData[]>([])
   const [predictions, setPredictions] = useState<Prediction[]>([])
   const [currentRate, setCurrentRate] = useState(177.5)
   const [loading, setLoading] = useState(true)
   const [lastUpdate, setLastUpdate] = useState<string>("")
+  const backtestAccuracy = useMemo(() => computeBacktestAccuracy(candles), [candles])
 
   const fetchData = async () => {
     try {
@@ -212,7 +229,7 @@ export default function PredictionsPage() {
                 </TabsList>
 
                 <TabsContent value="predictions">
-                  <MLPredictions currentRate={currentRate} />
+                  <MLPredictions currentRate={currentRate} backtestAccuracy={backtestAccuracy} />
                 </TabsContent>
 
                 <TabsContent value="signals">

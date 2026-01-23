@@ -2775,6 +2775,16 @@
     background-color: var(--border);
   }
 
+  .bg-border\/60 {
+    background-color: var(--border);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-border\/60 {
+      background-color: color-mix(in oklab, var(--border) 60%, transparent);
+    }
+  }
+
   .bg-card {
     background-color: var(--card);
   }

@@ -1,0 +1,11 @@
+{
+  "[project]/components/rate-history.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/rate-history.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_recharts_es6_2727f5bb._.js",
+      "static/chunks/node_modules_714b3d8f._.js",
+      "static/chunks/components_1498186f._.js",
+      "static/chunks/components_rate-history_tsx_d96f3aa2._.js"
+    ]
+  }
+}

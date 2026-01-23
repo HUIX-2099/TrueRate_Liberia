@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useMemo, useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -42,6 +42,8 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
   const [timeframe, setTimeframe] = useState<"1D" | "1W" | "1M" | "3M">("1M")
   const [hoveredCandle, setHoveredCandle] = useState<CandleData | null>(null)
   const [animationProgress, setAnimationProgress] = useState(0)
+  const [chartData, setChartData] = useState<CandleData[]>(() => (data.length ? data : []))
+  const [isHydrated, setIsHydrated] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   // Generate realistic demo data if none provided
@@ -77,7 +79,18 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
     return data
   }
 
-  const chartData = data.length > 0 ? data : generateDemoData()
+  useEffect(() => {
+    setIsHydrated(true)
+  }, [])
+
+  useEffect(() => {
+    if (data.length) {
+      setChartData(data)
+      return
+    }
+    if (!isHydrated) return
+    setChartData(generateDemoData())
+  }, [data, timeframe, currentRate, isHydrated])
 
   // Animation effect
   useEffect(() => {
@@ -264,11 +277,13 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
     })
   }, [chartData, predictions, currentRate, chartType, animationProgress])
 
-  // Calculate stats
-  const lastCandle = chartData[chartData.length - 1]
-  const firstCandle = chartData[0]
-  const change = lastCandle ? lastCandle.close - firstCandle.close : 0
-  const changePercent = firstCandle ? (change / firstCandle.close) * 100 : 0
+  const { change, changePercent } = useMemo(() => {
+    const first = chartData[0]
+    const last = chartData[chartData.length - 1]
+    if (!first || !last) return { change: 0, changePercent: 0 }
+    const delta = last.close - first.close
+    return { change: delta, changePercent: (delta / first.close) * 100 }
+  }, [chartData])
 
   return (
     <Card className="overflow-hidden">

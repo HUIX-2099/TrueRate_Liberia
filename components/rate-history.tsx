@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useMemo, useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid } from "recharts"
@@ -13,6 +13,10 @@ export function RateHistory() {
   const [timeRange, setTimeRange] = useState<TimeRange>("30d")
   const [data, setData] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
+  const latestPoint = useMemo(() => (data.length ? data[data.length - 1] : null), [data])
+  const latestRate = typeof latestPoint?.rate === "number" ? latestPoint.rate : null
+  const latestDate = latestPoint?.date ?? "—"
+  const formatRate = (value?: number) => (typeof value === "number" ? value.toFixed(4) : "—")
 
   useEffect(() => {
     async function fetchHistoricalData() {
@@ -74,19 +78,50 @@ export function RateHistory() {
             </div>
           </div>
 
-          <div className="flex gap-2">
-            <Button variant={timeRange === "7d" ? "default" : "outline"} size="sm" onClick={() => setTimeRange("7d")}>
-              7D
-            </Button>
-            <Button variant={timeRange === "30d" ? "default" : "outline"} size="sm" onClick={() => setTimeRange("30d")}>
-              30D
-            </Button>
-            <Button variant={timeRange === "90d" ? "default" : "outline"} size="sm" onClick={() => setTimeRange("90d")}>
-              90D
-            </Button>
-            <Button variant={timeRange === "1y" ? "default" : "outline"} size="sm" onClick={() => setTimeRange("1y")}>
-              1Y
-            </Button>
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex items-center gap-2 rounded-full border border-border bg-muted/40 p-1">
+              <Button
+                variant={timeRange === "7d" ? "default" : "ghost"}
+                size="sm"
+                className="rounded-full"
+                onClick={() => setTimeRange("7d")}
+              >
+                7D
+              </Button>
+              <Button
+                variant={timeRange === "30d" ? "default" : "ghost"}
+                size="sm"
+                className="rounded-full"
+                onClick={() => setTimeRange("30d")}
+              >
+                30D
+              </Button>
+              <Button
+                variant={timeRange === "90d" ? "default" : "ghost"}
+                size="sm"
+                className="rounded-full"
+                onClick={() => setTimeRange("90d")}
+              >
+                90D
+              </Button>
+              <Button
+                variant={timeRange === "1y" ? "default" : "ghost"}
+                size="sm"
+                className="rounded-full"
+                onClick={() => setTimeRange("1y")}
+              >
+                1Y
+              </Button>
+            </div>
+
+            <div className="flex items-center gap-3 rounded-xl border border-border/60 bg-background px-3 py-2 shadow-sm">
+              <div className="text-xs text-muted-foreground">{latestDate}</div>
+              <div className="h-6 w-px bg-border/60" />
+              <div>
+                <div className="text-[11px] uppercase tracking-wide text-muted-foreground">Exchange Rate</div>
+                <div className="text-base font-semibold text-foreground">{formatRate(latestRate)}</div>
+              </div>
+            </div>
           </div>
         </div>
       </CardHeader>
@@ -101,14 +136,37 @@ export function RateHistory() {
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} />
-                  <YAxis
-                    stroke="hsl(var(--muted-foreground))"
+                  <XAxis
+                    dataKey="date"
+                    stroke="hsl(var(--foreground))"
+                    tick={{ fill: "hsl(var(--foreground))" }}
                     fontSize={12}
                     tickLine={false}
+                  />
+                  <YAxis
+                    stroke="hsl(var(--foreground))"
+                    tick={{ fill: "hsl(var(--foreground))" }}
+                    fontSize={12}
+                    tickLine={false}
+                    tickFormatter={(value) => Number(value).toFixed(4)}
                     domain={["dataMin - 2", "dataMax + 2"]}
                   />
-                  <Tooltip content={<ChartTooltipContent />} isAnimationActive={false} />
+                  <Tooltip
+                    content={
+                      <ChartTooltipContent
+                        labelFormatter={(label) => `${label}`}
+                        formatter={(value) => (
+                          <div className="flex w-full items-center justify-between">
+                            <span className="text-muted-foreground">Exchange Rate</span>
+                            <span className="font-mono font-medium">
+                              {Number(value).toFixed(4)}
+                            </span>
+                          </div>
+                        )}
+                      />
+                    }
+                    isAnimationActive={false}
+                  />
                   <Line
                     type="monotone"
                     dataKey="rate"
@@ -125,19 +183,19 @@ export function RateHistory() {
               <div className="space-y-1">
                 <div className="text-xs text-muted-foreground">Current</div>
                 <div className="text-lg font-bold text-foreground">
-                  {data.length > 0 ? data[data.length - 1]?.rate.toFixed(2) : "—"} LRD
+                  {formatRate(latestRate)} LRD
                 </div>
               </div>
               <div className="space-y-1">
                 <div className="text-xs text-muted-foreground">Highest</div>
                 <div className="text-lg font-bold text-secondary">
-                  {data.length > 0 ? Math.max(...data.map((d) => d.rate)).toFixed(2) : "—"} LRD
+                  {data.length > 0 ? Math.max(...data.map((d) => d.rate)).toFixed(4) : "—"} LRD
                 </div>
               </div>
               <div className="space-y-1">
                 <div className="text-xs text-muted-foreground">Lowest</div>
                 <div className="text-lg font-bold text-foreground">
-                  {data.length > 0 ? Math.min(...data.map((d) => d.rate)).toFixed(2) : "—"} LRD
+                  {data.length > 0 ? Math.min(...data.map((d) => d.rate)).toFixed(4) : "—"} LRD
                 </div>
               </div>
             </div>

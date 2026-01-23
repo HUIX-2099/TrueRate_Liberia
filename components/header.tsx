@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import {
   Activity,
   ArrowLeftRight,
-  Bell,
   BellRing,
   Calculator,
   Crown,
@@ -165,9 +164,6 @@ const HeaderComponent = () => {
             </div>
           </Link>
 
-          <div className="hidden lg:flex">
-            <LiveUpdateIndicator />
-          </div>
 
 
 
@@ -182,9 +178,6 @@ const HeaderComponent = () => {
         <div className="flex items-center gap-2">
             <ThemeToggle />
 
-          <Button variant="ghost" size="icon" className="hidden md:flex" aria-label="Notifications">
-              <Bell className="h-5 w-5" />
-            </Button>
           <Button asChild className="hidden lg:flex">
             <Link href="/map">Find Nearest</Link>
           </Button>

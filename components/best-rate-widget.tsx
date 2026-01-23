@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -32,6 +32,8 @@ export function BestRateWidget() {
   const [showAlertForm, setShowAlertForm] = useState(false)
   const [userAddress, setUserAddress] = useState<string | null>(null)
   const [nearbyStatus, setNearbyStatus] = useState<"idle" | "loading" | "ready" | "empty">("idle")
+  const lastResolvedRateRef = useRef<number | null>(null)
+  const resolvingRef = useRef(false)
 
   useEffect(() => {
     async function fetchBestRate() {
@@ -68,21 +70,35 @@ export function BestRateWidget() {
 
   useEffect(() => {
     if (!bestRate || typeof window === "undefined") return
+    if (resolvingRef.current) return
+    if (nearbyStatus === "ready" && lastResolvedRateRef.current === bestRate.rate) return
     const fallbackOrigin = { lat: 6.3156, lng: -10.8074 }
     let isMounted = true
 
+    const fetchJsonWithRetry = async (url: string, retryDelayMs = 300) => {
+      const attempt = async () => {
+        const res = await fetch(url)
+        if (!res.ok) {
+          throw new Error(`Request failed: ${res.status}`)
+        }
+        return res.json()
+      }
+      try {
+        return await attempt()
+      } catch (error) {
+        await new Promise((resolve) => setTimeout(resolve, retryDelayMs))
+        return attempt()
+      }
+    }
+
     const resolveNearest = async (origin: { lat: number; lng: number }) => {
       try {
+        resolvingRef.current = true
         setNearbyStatus("loading")
-        const nearbyRes = await fetch(`/api/maps/nearby?lat=${origin.lat}&lng=${origin.lng}`)
-        if (!nearbyRes.ok) {
-          setNearbyStatus("empty")
-          return
-        }
-        const nearbyData = await nearbyRes.json()
+        const nearbyData = await fetchJsonWithRetry(`/api/maps/nearby?lat=${origin.lat}&lng=${origin.lng}`)
         const nearest = Array.isArray(nearbyData?.results) ? nearbyData.results[0] : null
         if (!nearest?.lat || !nearest?.lng) {
-          setNearbyStatus("empty")
+          if (isMounted) setNearbyStatus("empty")
           return
         }
         if (isMounted) {
@@ -101,57 +117,60 @@ export function BestRateWidget() {
           )
         }
 
-        const distanceRes = await fetch(
+        const distanceData = await fetchJsonWithRetry(
           `/api/maps/distance?originLat=${origin.lat}&originLng=${origin.lng}&destLat=${nearest.lat}&destLng=${nearest.lng}`,
         )
-        if (distanceRes.ok) {
-          const distanceData = await distanceRes.json()
-          if (
-            isMounted &&
-            typeof distanceData?.distanceKm === "number" &&
-            typeof distanceData?.durationMinutes === "number"
-          ) {
-            setBestRate((prev) =>
-              prev
-                ? {
-                    ...prev,
-                    distanceKm: distanceData.distanceKm,
-                    distanceMinutes: distanceData.durationMinutes,
-                  }
-                : prev,
-            )
-          }
+        if (
+          isMounted &&
+          typeof distanceData?.distanceKm === "number" &&
+          typeof distanceData?.durationMinutes === "number"
+        ) {
+          setBestRate((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  distanceKm: distanceData.distanceKm,
+                  distanceMinutes: distanceData.durationMinutes,
+                }
+              : prev,
+          )
         }
 
-        const addressRes = await fetch(`/api/maps/geocode?lat=${origin.lat}&lng=${origin.lng}`)
-        if (addressRes.ok) {
-          const addressData = await addressRes.json()
-          if (isMounted && typeof addressData?.address === "string") {
-            setUserAddress(addressData.address)
-          }
+        const addressData = await fetchJsonWithRetry(`/api/maps/geocode?lat=${origin.lat}&lng=${origin.lng}`)
+        if (isMounted && typeof addressData?.address === "string") {
+          setUserAddress(addressData.address)
         }
 
-        setNearbyStatus("ready")
+        if (isMounted) {
+          setNearbyStatus("ready")
+          lastResolvedRateRef.current = bestRate.rate
+        }
       } catch (error) {
         console.error("Failed to update distance:", error)
-        setNearbyStatus("empty")
+        if (isMounted) setNearbyStatus("empty")
+      } finally {
+        resolvingRef.current = false
       }
     }
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => resolveNearest({ lat: position.coords.latitude, lng: position.coords.longitude }),
-        () => resolveNearest(fallbackOrigin),
-        { enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 },
-      )
-    } else {
+    try {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => resolveNearest({ lat: position.coords.latitude, lng: position.coords.longitude }),
+          () => resolveNearest(fallbackOrigin),
+          { enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 },
+        )
+      } else {
+        resolveNearest(fallbackOrigin)
+      }
+    } catch {
       resolveNearest(fallbackOrigin)
     }
 
     return () => {
       isMounted = false
     }
-  }, [bestRate])
+  }, [bestRate, nearbyStatus])
 
   const speakRate = () => {
     if (!bestRate || typeof window === 'undefined' || !window.speechSynthesis) return

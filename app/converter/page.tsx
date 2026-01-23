@@ -68,9 +68,22 @@ const ConverterPageComponent = () => {
   const [fromCurrency, setFromCurrency] = useState("USD")
   const [toCurrency, setToCurrency] = useState("LRD")
   const [amount, setAmount] = useState("100")
-  const [result, setResult] = useState("0")
+  const [result, setResult] = useState("")
   const [copied, setCopied] = useState(false)
-  const [liveRate, setLiveRate] = useState(192.50)
+  const [liveRate, setLiveRate] = useState<number | null>(() => {
+    if (typeof window === "undefined") return null
+    try {
+      const cached = window.localStorage.getItem("truerate-live-rate")
+      const parsed = cached ? Number.parseFloat(cached) : null
+      if (parsed && !Number.isNaN(parsed)) {
+        ratesFromUSD.LRD = parsed
+        return parsed
+      }
+    } catch {
+      // Ignore localStorage errors
+    }
+    return null
+  })
   const [lastUpdate, setLastUpdate] = useState("")
   const [dayChange, setDayChange] = useState(0.85)
   const [loading, setLoading] = useState(false)
@@ -93,14 +106,24 @@ const ConverterPageComponent = () => {
   const debouncedAmount = useDebounce(amount, 300)
   const debouncedCustomRate = useDebounce(customRate, 300)
 
+  const isLiveRateReady = typeof liveRate === "number"
+  const liveRateValue = liveRate ?? 0
+  const formatLrdFromUsd = (usd: number) =>
+    isLiveRateReady ? (usd * liveRateValue).toLocaleString() : "—"
+
   // Throttled API call for live rate
   const fetchRate = useThrottle(useCallback(async () => {
     try {
       const res = await fetch("/api/rates/live")
       const data = await res.json()
-      if (data.rate) {
+      if (typeof data.rate === "number") {
         setLiveRate(data.rate)
         ratesFromUSD.LRD = data.rate
+        try {
+          window.localStorage.setItem("truerate-live-rate", String(data.rate))
+        } catch {
+          // Ignore localStorage errors
+        }
       }
       setLastUpdate(new Date().toLocaleTimeString())
     } catch (e) {
@@ -115,7 +138,7 @@ const ConverterPageComponent = () => {
   }, [fetchRate])
 
   useEffect(() => {
-    if (!useCustomRate) {
+    if (!useCustomRate && typeof liveRate === "number") {
       setCustomRate(liveRate.toFixed(2))
     }
   }, [liveRate, useCustomRate])
@@ -125,13 +148,17 @@ const ConverterPageComponent = () => {
     const numAmount = Math.max(parseFloat(debouncedAmount) || 0, 0)
     const parsedCustomRate = Math.max(Number.parseFloat(debouncedCustomRate) || 0, 0)
     const useRate = useCustomRate && parsedCustomRate > 0 ? parsedCustomRate : liveRate
+    const needsLiveRate = fromCurrency === "LRD" || toCurrency === "LRD"
+    if (needsLiveRate && typeof useRate !== "number") {
+      return ""
+    }
     let fromRate = ratesFromUSD[fromCurrency]
     let toRate = ratesFromUSD[toCurrency]
     if (fromCurrency === "USD" && toCurrency === "LRD") {
-      toRate = useRate
+      toRate = useRate as number
     }
     if (fromCurrency === "LRD" && toCurrency === "USD") {
-      fromRate = useRate
+      fromRate = useRate as number
     }
     return ((numAmount / fromRate) * toRate).toFixed(2)
   }, [debouncedAmount, fromCurrency, toCurrency, debouncedCustomRate, useCustomRate, liveRate])
@@ -147,6 +174,7 @@ const ConverterPageComponent = () => {
 
   const copyResult = async () => {
     try {
+      if (!result || Number.isNaN(Number(result))) return
       await navigator.clipboard.writeText(result)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
@@ -158,6 +186,7 @@ const ConverterPageComponent = () => {
   const shareResult = async () => {
     const fromC = currencies.find(c => c.code === fromCurrency)
     const toC = currencies.find(c => c.code === toCurrency)
+    if (!result || Number.isNaN(Number(result))) return
     const text = `${amount} ${fromC?.code} = ${result} ${toC?.code}`
     try {
       if (navigator.share) {
@@ -174,6 +203,7 @@ const ConverterPageComponent = () => {
 
   const speakResult = () => {
     if ("speechSynthesis" in window) {
+      if (!result || Number.isNaN(Number(result))) return
       const fromC = currencies.find(c => c.code === fromCurrency)
       const toC = currencies.find(c => c.code === toCurrency)
       const text = `${amount} ${fromC?.name} equals ${result} ${toC?.name}`
@@ -190,7 +220,7 @@ const ConverterPageComponent = () => {
     const shippingCostNum = parseFloat(shippingCost) || 0
     const importTax = (importValueNum * importTaxRateNum) / 100
     const totalImportCost = importValueNum + importTax + shippingCostNum
-    const totalLRD = totalImportCost * liveRate
+    const totalLRD = isLiveRateReady ? totalImportCost * liveRateValue : null
 
     return {
       importValueNum,
@@ -198,7 +228,7 @@ const ConverterPageComponent = () => {
       totalImportCost,
       totalLRD
     }
-  }, [importValue, importTaxRate, shippingCost, liveRate])
+  }, [importValue, importTaxRate, shippingCost, isLiveRateReady, liveRateValue])
 
   // Optimized Markup Calculator with memoization
   const markupCalculator = useMemo(() => {
@@ -274,7 +304,12 @@ const ConverterPageComponent = () => {
                     <div>
                       <div className="text-sm text-muted-foreground">Current Rate</div>
                       <div className="font-bold text-lg">
-                        {(useCustomRate ? Number(customRate) : liveRate).toFixed(2)} LRD/USD
+                        {useCustomRate && Number(customRate)
+                          ? Number(customRate).toFixed(2)
+                          : isLiveRateReady
+                            ? liveRateValue.toFixed(2)
+                            : "—"}{" "}
+                        LRD/USD
                       </div>
                       {useCustomRate && (
                         <div className="text-xs text-muted-foreground">Custom rate active</div>
@@ -382,7 +417,9 @@ const ConverterPageComponent = () => {
                     </select>
                     <div className="flex-1 relative">
                       <div className="h-12 rounded-xl bg-muted border border-input px-4 flex items-center">
-                        <span className="text-xl font-bold text-foreground">{parseFloat(result).toLocaleString()}</span>
+                        <span className="text-xl font-bold text-foreground">
+                          {result ? parseFloat(result).toLocaleString() : "—"}
+                        </span>
                         <span className="ml-2 text-muted-foreground">{toCurrency}</span>
                       </div>
                     </div>
@@ -507,7 +544,9 @@ const ConverterPageComponent = () => {
                       <div className="space-y-2 pt-2 border-t">
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">Import Value</span>
-                          <span className="font-medium">${businessCalculator.importValueNum.toLocaleString()} → {(businessCalculator.importValueNum * liveRate).toLocaleString()} LRD</span>
+                          <span className="font-medium">
+                            ${businessCalculator.importValueNum.toLocaleString()} → {formatLrdFromUsd(businessCalculator.importValueNum)} LRD
+                          </span>
                         </div>
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">+ Import Tax ({importTaxRate}%)</span>
@@ -515,12 +554,14 @@ const ConverterPageComponent = () => {
                         </div>
                         <div className="flex justify-between text-sm">
                           <span className="text-muted-foreground">+ Shipping</span>
-                          <span className="font-medium">{(parseFloat(shippingCost) * liveRate).toLocaleString()} LRD</span>
+                          <span className="font-medium">{formatLrdFromUsd(parseFloat(shippingCost) || 0)} LRD</span>
                         </div>
                         <Separator />
                         <div className="flex justify-between">
                           <span className="font-medium">Total Cost</span>
-                          <span className="font-bold text-primary">{businessCalculator.totalLRD.toLocaleString()} LRD</span>
+                          <span className="font-bold text-primary">
+                            {businessCalculator.totalLRD === null ? "—" : `${businessCalculator.totalLRD.toLocaleString()} LRD`}
+                          </span>
                         </div>
                       </div>
                     </CardContent>
@@ -609,7 +650,7 @@ const ConverterPageComponent = () => {
                           ].map((item) => (
                             <div key={item.item} className="flex justify-between text-sm">
                               <span className="text-muted-foreground">{item.item}</span>
-                              <span className="font-medium">${item.usd} / {(item.usd * liveRate).toLocaleString()} LRD</span>
+                              <span className="font-medium">${item.usd} / {formatLrdFromUsd(item.usd)} LRD</span>
                             </div>
                           ))}
                         </TabsContent>
@@ -621,7 +662,7 @@ const ConverterPageComponent = () => {
                           ].map((item) => (
                             <div key={item.item} className="flex justify-between text-sm">
                               <span className="text-muted-foreground">{item.item}</span>
-                              <span className="font-medium">${item.usd} / {(item.usd * liveRate).toLocaleString()} LRD</span>
+                              <span className="font-medium">${item.usd} / {formatLrdFromUsd(item.usd)} LRD</span>
                             </div>
                           ))}
                         </TabsContent>
@@ -632,7 +673,7 @@ const ConverterPageComponent = () => {
                           ].map((item) => (
                             <div key={item.item} className="flex justify-between text-sm">
                               <span className="text-muted-foreground">{item.item}</span>
-                              <span className="font-medium">${item.usd} / {(item.usd * liveRate).toLocaleString()} LRD</span>
+                              <span className="font-medium">${item.usd} / {formatLrdFromUsd(item.usd)} LRD</span>
                             </div>
                           ))}
                         </TabsContent>
@@ -649,11 +690,11 @@ const ConverterPageComponent = () => {
                 </div>
                 <div className="grid gap-4">
                     {[
-                    { name: "Liberty Exchange", location: "Broad St, Monrovia", buy: liveRate - 1.2, sell: liveRate + 1.8, rating: 4.9, verified: true, reviews: 234 },
-                    { name: "Apex Exchange", location: "Carey St, Old Road", buy: liveRate - 1.5, sell: liveRate + 1.5, rating: 4.8, verified: true, reviews: 189 },
-                    { name: "Global Money", location: "Waterside Market", buy: liveRate - 2.0, sell: liveRate + 2.0, rating: 4.6, verified: true, reviews: 142 },
-                    { name: "Red Light Bureau", location: "Red Light Market", buy: liveRate - 2.2, sell: liveRate + 1.8, rating: 4.5, verified: false, reviews: 98 },
-                    { name: "Paynesville Exchange", location: "Paynesville", buy: liveRate - 2.5, sell: liveRate + 2.2, rating: 4.4, verified: true, reviews: 87 },
+                    { name: "Liberty Exchange", location: "Broad St, Monrovia", buy: liveRateValue - 1.2, sell: liveRateValue + 1.8, rating: 4.9, verified: true, reviews: 234 },
+                    { name: "Apex Exchange", location: "Carey St, Old Road", buy: liveRateValue - 1.5, sell: liveRateValue + 1.5, rating: 4.8, verified: true, reviews: 189 },
+                    { name: "Global Money", location: "Waterside Market", buy: liveRateValue - 2.0, sell: liveRateValue + 2.0, rating: 4.6, verified: true, reviews: 142 },
+                    { name: "Red Light Bureau", location: "Red Light Market", buy: liveRateValue - 2.2, sell: liveRateValue + 1.8, rating: 4.5, verified: false, reviews: 98 },
+                    { name: "Paynesville Exchange", location: "Paynesville", buy: liveRateValue - 2.5, sell: liveRateValue + 2.2, rating: 4.4, verified: true, reviews: 87 },
                   ].map((changer, i) => (
                     <Card key={i} className={`border-border/60 shadow-sm hover:shadow-md transition-all ${changer.verified ? 'border-green-200 bg-green-50/30 dark:bg-green-950/20' : ''}`}>
                       <CardContent className="p-4">
@@ -680,12 +721,16 @@ const ConverterPageComponent = () => {
                           <div className="flex items-center gap-4 sm:gap-6">
                             <div className="text-center">
                               <div className="text-xs text-muted-foreground">Buy Rate</div>
-                              <div className="font-bold text-green-600">{changer.buy.toFixed(2)}</div>
+                              <div className="font-bold text-green-600">
+                                {isLiveRateReady ? changer.buy.toFixed(2) : "—"}
+                              </div>
                               <div className="text-xs text-green-600/70">You get more LRD</div>
                             </div>
                             <div className="text-center">
                               <div className="text-xs text-muted-foreground">Sell Rate</div>
-                              <div className="font-bold text-red-600">{changer.sell.toFixed(2)}</div>
+                              <div className="font-bold text-red-600">
+                                {isLiveRateReady ? changer.sell.toFixed(2) : "—"}
+                              </div>
                               <div className="text-xs text-red-600/70">They pay less</div>
                             </div>
                             <div className="text-center">
@@ -731,17 +776,17 @@ const ConverterPageComponent = () => {
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {[
-                    { name: "Western Union", fee: "$5", rate: liveRate - 3, time: "5-10 Minutes", logoUrl: "/logos/unnamed.png", type: "agent", popular: false },
-                    { name: "MoneyGram", fee: "$4.99", rate: liveRate - 2.5, time: "10-15 Minutes", logoUrl: "/logos/png-clipart-moneygram-international-inc-logo-money-transfer-western-union-international-tourism-text-trademark.png", type: "agent", popular: false },
-                    { name: "Sendwave", fee: sendwaveFee, rate: liveRate - 1.5, time: "Same Day", logoUrl: "/logos/images.jpeg", type: "mobile", popular: true },
-                    { name: "Orange Money", fee: "2%", rate: liveRate, time: "Instant", logoUrl: "/logos/orangemoney.png", type: "mobile", popular: false },
-                    { name: "MTN Mobile Money", fee: "1.5%", rate: liveRate, time: "Instant", logoUrl: "/logos/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png", type: "mobile", popular: true },
-                    { name: "Bank Transfer", fee: "$15-25", rate: liveRate + 0.5, time: "1-3 Business Days", logoUrl: null, type: "bank", popular: false },
+                    { name: "Western Union", fee: "$5", rate: liveRateValue - 3, time: "5-10 Minutes", logoUrl: "/logos/unnamed.png", type: "agent", popular: false },
+                    { name: "MoneyGram", fee: "$4.99", rate: liveRateValue - 2.5, time: "10-15 Minutes", logoUrl: "/logos/png-clipart-moneygram-international-inc-logo-money-transfer-western-union-international-tourism-text-trademark.png", type: "agent", popular: false },
+                    { name: "Sendwave", fee: sendwaveFee, rate: liveRateValue - 1.5, time: "Same Day", logoUrl: "/logos/images.jpeg", type: "mobile", popular: true },
+                    { name: "Orange Money", fee: "2%", rate: liveRateValue, time: "Instant", logoUrl: "/logos/orangemoney.png", type: "mobile", popular: false },
+                    { name: "MTN Mobile Money", fee: "1.5%", rate: liveRateValue, time: "Instant", logoUrl: "/logos/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png", type: "mobile", popular: true },
+                    { name: "Bank Transfer", fee: "$15-25", rate: liveRateValue + 0.5, time: "1-3 Business Days", logoUrl: null, type: "bank", popular: false },
                   ].map((service) => {
                     const feeAmount = service.fee.includes('%')
                       ? (remittanceAmount * parseFloat(service.fee.replace('%', '')) / 100)
                       : parseFloat(service.fee.replace('$', ''))
-                    const totalReceived = (remittanceAmount * service.rate) - feeAmount
+                    const totalReceived = isLiveRateReady ? (remittanceAmount * service.rate) - feeAmount : null
                     const feeDisplay = service.fee.includes('%')
                       ? `$${(remittanceAmount * parseFloat(service.fee.replace('%', '')) / 100).toFixed(2)} (${service.fee})`
                       : service.fee
@@ -790,7 +835,9 @@ const ConverterPageComponent = () => {
                             </div>
                             <div>
                               <span className="text-muted-foreground">Exchange Rate: </span>
-                              <span className="font-medium">{service.rate.toFixed(2)}</span>
+                              <span className="font-medium">
+                                {isLiveRateReady ? service.rate.toFixed(2) : "—"}
+                              </span>
                             </div>
                           </div>
                           <div className="space-y-2">
@@ -805,7 +852,9 @@ const ConverterPageComponent = () => {
                               </div>
                               <div className="flex justify-between border-t pt-1 mt-1">
                                 <span>They receive:</span>
-                                <strong className="text-green-600">{totalReceived.toLocaleString()} LRD</strong>
+                                <strong className="text-green-600">
+                                  {totalReceived === null ? "—" : `${totalReceived.toLocaleString()} LRD`}
+                                </strong>
                               </div>
                             </div>
                             <div className="text-xs text-muted-foreground text-center">
@@ -867,7 +916,9 @@ const ConverterPageComponent = () => {
                   <CardDescription className="text-primary/70">Updated {lastUpdate || "just now"}</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <div className="text-3xl font-bold text-primary">{liveRate.toFixed(2)}</div>
+                  <div className="text-3xl font-bold text-primary">
+                    {isLiveRateReady ? liveRateValue.toFixed(2) : "—"}
+                  </div>
                   <div className="text-xs text-primary/70 mt-1">LRD per USD</div>
                 </CardContent>
               </Card>

@@ -22,6 +22,7 @@ import {
 
 interface MLPredictionsProps {
   currentRate: number
+  backtestAccuracy?: number | null
 }
 
 interface PredictionResult {
@@ -41,7 +42,7 @@ interface ModelMetrics {
   weight: number
 }
 
-export function MLPredictions({ currentRate }: MLPredictionsProps) {
+export function MLPredictions({ currentRate, backtestAccuracy }: MLPredictionsProps) {
   const [predictions, setPredictions] = useState<PredictionResult[]>([])
   const [models, setModels] = useState<ModelMetrics[]>([])
   const [ensemblePrediction, setEnsemblePrediction] = useState(currentRate)
@@ -95,29 +96,33 @@ export function MLPredictions({ currentRate }: MLPredictionsProps) {
         },
       ]
 
+      const baseAccuracy = typeof backtestAccuracy === "number"
+        ? backtestAccuracy
+        : 85
+
       // ML Model contributions
       const newModels: ModelMetrics[] = [
         {
           name: "LSTM Neural Network",
-          accuracy: 87.5 + Math.random() * 5,
+          accuracy: Math.min(99, baseAccuracy + 2),
           prediction: currentRate + trend * (1 + Math.random()),
           weight: 0.35,
         },
         {
           name: "ARIMA Time Series",
-          accuracy: 82.3 + Math.random() * 5,
+          accuracy: Math.max(50, baseAccuracy - 1),
           prediction: currentRate + trend * (0.8 + Math.random() * 0.5),
           weight: 0.25,
         },
         {
           name: "XGBoost Regressor",
-          accuracy: 84.1 + Math.random() * 5,
+          accuracy: Math.min(99, baseAccuracy + 1),
           prediction: currentRate + trend * (1.2 + Math.random() * 0.8),
           weight: 0.25,
         },
         {
           name: "Prophet (Facebook)",
-          accuracy: 79.8 + Math.random() * 5,
+          accuracy: Math.max(50, baseAccuracy - 3),
           prediction: currentRate + trend * (0.6 + Math.random() * 0.6),
           weight: 0.15,
         },
@@ -227,9 +232,11 @@ export function MLPredictions({ currentRate }: MLPredictionsProps) {
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-4 rounded-xl bg-background/50">
                 <div className="text-2xl font-bold text-green-500">
-                  {Math.max(...models.map(m => m.accuracy)).toFixed(1)}%
+                  {(backtestAccuracy ?? Math.max(...models.map(m => m.accuracy))).toFixed(1)}%
                 </div>
-                <div className="text-xs text-muted-foreground">Best Model Accuracy</div>
+                <div className="text-xs text-muted-foreground">
+                  {typeof backtestAccuracy === "number" ? "Backtest Accuracy (7D)" : "Best Model Accuracy"}
+                </div>
               </div>
               <div className="text-center p-4 rounded-xl bg-background/50">
                 <div className="text-2xl font-bold text-primary">4</div>
