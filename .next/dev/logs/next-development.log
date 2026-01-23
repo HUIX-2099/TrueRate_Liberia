@@ -38816,3 +38816,369 @@ https://react.dev/link/hydration-mismatch
 [32:43:12.221] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
 [32:43:12.221] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
 [32:43:12.221] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:44:05.089] Browser LOG     Header render time: 94343.60ms
+[32:44:05.089] Browser LOG     ConverterPage render time: 0.70ms
+[32:44:05.089] Browser LOG     Header render time: 1.40ms
+[32:44:05.089] Browser LOG     ConverterPage render time: 41.00ms
+[32:44:05.089] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:8080/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769204969467}
+[32:44:05.411] Browser LOG     ConverterPage render time: 323.60ms
+[32:44:12.585] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:44:12.586] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:44:12.586] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:44:12.586] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:44:12.599] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:44:12.599] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:44:12.600] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:44:12.600] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:44:12.607] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:44:12.608] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:44:12.608] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:44:12.608] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:44:13.856] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:44:13.857] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:44:13.860] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:44:13.861] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:44:13.893] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:44:13.894] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:44:13.894] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:44:13.896] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:44:13.960] Browser LOG     ConverterPage render time: 8507.50ms
+[32:44:13.960] Browser LOG     Header render time: 8875.00ms
+[32:44:13.960] Browser LOG     Header render time: 0.90ms
+[32:44:13.960] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:8080/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769204978344}
+[32:44:13.960] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:13.960] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:39.197] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:39.197] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:40.677] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:40.677] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:42.068] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:42.068] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:46.787] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:46.787] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:49.073] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:44:49.073] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:45:23.158] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:45:23.159] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:45:23.159] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:45:23.159] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:45:23.198] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:45:23.198] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:45:23.199] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:45:23.199] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:45:23.411] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:45:23.411] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:45:23.412] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:45:23.413] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:46:12.151] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:46:12.152] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:46:12.152] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:46:12.152] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:46:12.197] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:46:12.197] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:46:12.197] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:46:12.198] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:46:12.213] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:46:12.213] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:46:12.213] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:46:12.213] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:46:28.860] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:46:28.860] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:46:28.860] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:46:28.860] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:46:28.904] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:46:28.905] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:46:28.905] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:46:28.906] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:46:28.914] Browser LOG     Header render time: 796702.20ms
+[32:46:28.914] Browser LOG     Header render time: 2.00ms
+[32:46:28.914] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:8080/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769205113328}
+[32:46:29.202] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:46:29.202] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:47:35.857] Server  LOG     ✓ Compiled in 748ms
+[32:47:36.047] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:47:36.047] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:47:36.047] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:47:36.047] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:47:36.082] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:47:36.082] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:47:36.082] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:47:36.082] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:47:37.297] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:47:37.297] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:47:37.307] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:47:37.307] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:31.113] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:31.114] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:31.114] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:31.114] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:31.227] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:31.227] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:32.033] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:32.033] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:32.033] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:32.033] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:32.140] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:32.140] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:32.716] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:32.717] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:32.717] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:32.717] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:32.824] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:32.824] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:34.230] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:34.230] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:34.230] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:34.230] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:34.336] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:34.336] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:35.397] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:35.397] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:35.398] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:35.398] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:35.509] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:35.509] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:36.385] Server  LOG     ✓ Compiled in 342ms
+[32:48:36.473] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:36.473] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:36.473] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:36.473] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:36.512] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:36.512] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:36.512] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:36.512] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:36.583] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:36.583] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:36.621] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:36.622] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:39.072] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:39.073] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:39.073] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:39.074] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:39.186] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:39.186] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:40.230] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:40.230] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:40.230] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:40.230] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:40.338] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:40.338] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:40.841] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[32:48:40.841] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:48:40.841] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:48:40.841] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[32:48:40.947] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:40.947] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:48:42.915] Server  LOG     ✓ Compiled in 106ms
+[32:49:22.352] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[32:49:22.578] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:49:22.614] Browser LOG     Header render time: 29.90ms
+[32:49:22.614] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[32:49:22.614] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/analytics","route":"/analytics"}
+[32:49:22.614] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:8080/analytics","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769205287039}
+[32:49:22.639] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:49:23.263] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:49:23.263] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:49:23.277] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:49:23.278] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:49:23.278] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:49:23.278] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:49:23.292] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:49:23.292] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:49:23.292] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:49:23.293] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:49:23.406] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:23.406] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:47.685] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:49:47.686] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:49:47.686] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:49:47.686] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:49:47.794] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:47.794] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:48.618] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:49:48.619] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:49:48.619] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:49:48.619] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:49:48.733] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:48.733] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:49.526] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:49:49.526] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:49:49.526] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:49:49.526] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:49:49.653] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:49.653] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:50.712] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:49:50.712] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:49:50.712] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:49:50.712] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:49:50.824] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:49:50.824] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:50:43.530] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:50:43.531] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:50:43.531] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:50:43.531] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:50:43.674] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[32:50:43.821] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:50:43.821] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:50:43.821] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:50:43.822] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:50:43.845] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[32:50:43.846] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[32:50:43.846] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[32:50:43.846] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[32:50:43.929] Browser LOG     Header render time: 26.70ms
+[32:50:43.929] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[32:50:43.929] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/analytics","route":"/analytics"}
+[32:50:43.929] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:8080/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769205368341}
+[32:50:43.929] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[32:50:43.929] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.

@@ -13,17 +13,36 @@ export function RateHistory() {
   const [timeRange, setTimeRange] = useState<TimeRange>("30d")
   const [data, setData] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
+  const [liveRate, setLiveRate] = useState<number | null>(null)
   const latestPoint = useMemo(() => (data.length ? data[data.length - 1] : null), [data])
-  const latestRate = typeof latestPoint?.rate === "number" ? latestPoint.rate : null
+  const latestRate = typeof liveRate === "number"
+    ? liveRate
+    : typeof latestPoint?.rate === "number"
+      ? latestPoint.rate
+      : null
   const latestDate = latestPoint?.date ?? "—"
   const formatRate = (value?: number) => (typeof value === "number" ? value.toFixed(4) : "—")
+  const highestRate = useMemo(() => {
+    if (!data.length && typeof liveRate !== "number") return null
+    const historyMax = data.length ? Math.max(...data.map((d) => d.rate)) : null
+    if (typeof liveRate === "number" && typeof historyMax === "number") {
+      return Math.max(liveRate, historyMax)
+    }
+    return typeof liveRate === "number" ? liveRate : historyMax
+  }, [data, liveRate])
 
   useEffect(() => {
     async function fetchHistoricalData() {
       try {
         setLoading(true)
-        const response = await fetch("/api/rates/historical")
-        const result = await response.json()
+        const [historyResponse, liveResponse] = await Promise.all([
+          fetch("/api/rates/historical"),
+          fetch("/api/rates/live"),
+        ])
+        const result = await historyResponse.json()
+        const liveResult = await liveResponse.json()
+        const liveValue = typeof liveResult?.rate === "number" ? liveResult.rate : null
+        setLiveRate(liveValue)
 
         const days = getDaysFromRange(timeRange)
         const filteredData = (result.historical || []).slice(-days).map((item: any) => ({
@@ -33,7 +52,17 @@ export function RateHistory() {
           sell: item.rate + 2,
         }))
 
-        setData(filteredData)
+        if (liveValue && filteredData.length) {
+          const next = [...filteredData]
+          next[next.length - 1] = {
+            ...next[next.length - 1],
+            date: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" }),
+            rate: liveValue,
+          }
+          setData(next)
+        } else {
+          setData(filteredData)
+        }
       } catch (error) {
         console.error("[v0] Error fetching historical data:", error)
       } finally {
@@ -189,7 +218,7 @@ export function RateHistory() {
               <div className="space-y-1">
                 <div className="text-xs text-muted-foreground">Highest</div>
                 <div className="text-lg font-bold text-secondary">
-                  {data.length > 0 ? Math.max(...data.map((d) => d.rate)).toFixed(4) : "—"} LRD
+                  {formatRate(highestRate)} LRD
                 </div>
               </div>
               <div className="space-y-1">

@@ -359,21 +359,43 @@ function RateHistory() {
     const [timeRange, setTimeRange] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("30d");
     const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [liveRate, setLiveRate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const latestPoint = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "RateHistory.useMemo[latestPoint]": ()=>data.length ? data[data.length - 1] : null
     }["RateHistory.useMemo[latestPoint]"], [
         data
     ]);
-    const latestRate = typeof latestPoint?.rate === "number" ? latestPoint.rate : null;
+    const latestRate = typeof liveRate === "number" ? liveRate : typeof latestPoint?.rate === "number" ? latestPoint.rate : null;
     const latestDate = latestPoint?.date ?? "—";
     const formatRate = (value)=>typeof value === "number" ? value.toFixed(4) : "—";
+    const highestRate = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "RateHistory.useMemo[highestRate]": ()=>{
+            if (!data.length && typeof liveRate !== "number") return null;
+            const historyMax = data.length ? Math.max(...data.map({
+                "RateHistory.useMemo[highestRate]": (d)=>d.rate
+            }["RateHistory.useMemo[highestRate]"])) : null;
+            if (typeof liveRate === "number" && typeof historyMax === "number") {
+                return Math.max(liveRate, historyMax);
+            }
+            return typeof liveRate === "number" ? liveRate : historyMax;
+        }
+    }["RateHistory.useMemo[highestRate]"], [
+        data,
+        liveRate
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "RateHistory.useEffect": ()=>{
             async function fetchHistoricalData() {
                 try {
                     setLoading(true);
-                    const response = await fetch("/api/rates/historical");
-                    const result = await response.json();
+                    const [historyResponse, liveResponse] = await Promise.all([
+                        fetch("/api/rates/historical"),
+                        fetch("/api/rates/live")
+                    ]);
+                    const result = await historyResponse.json();
+                    const liveResult = await liveResponse.json();
+                    const liveValue = typeof liveResult?.rate === "number" ? liveResult.rate : null;
+                    setLiveRate(liveValue);
                     const days = getDaysFromRange(timeRange);
                     const filteredData = (result.historical || []).slice(-days).map({
                         "RateHistory.useEffect.fetchHistoricalData.filteredData": (item)=>({
@@ -386,7 +408,22 @@ function RateHistory() {
                                 sell: item.rate + 2
                             })
                     }["RateHistory.useEffect.fetchHistoricalData.filteredData"]);
-                    setData(filteredData);
+                    if (liveValue && filteredData.length) {
+                        const next = [
+                            ...filteredData
+                        ];
+                        next[next.length - 1] = {
+                            ...next[next.length - 1],
+                            date: new Date().toLocaleDateString("en-US", {
+                                month: "short",
+                                day: "numeric"
+                            }),
+                            rate: liveValue
+                        };
+                        setData(next);
+                    } else {
+                        setData(filteredData);
+                    }
                 } catch (error) {
                     console.error("[v0] Error fetching historical data:", error);
                 } finally{
@@ -432,12 +469,12 @@ function RateHistory() {
                                         className: "h-5 w-5 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/components/rate-history.tsx",
-                                        lineNumber: 73,
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -446,26 +483,26 @@ function RateHistory() {
                                             children: "Exchange Rate History"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 76,
+                                            lineNumber: 105,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                             children: "Track USD/LRD rate trends over time"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 77,
+                                            lineNumber: 106,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 104,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/rate-history.tsx",
-                            lineNumber: 71,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -482,7 +519,7 @@ function RateHistory() {
                                             children: "7D"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 83,
+                                            lineNumber: 112,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -493,7 +530,7 @@ function RateHistory() {
                                             children: "30D"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 91,
+                                            lineNumber: 120,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -504,7 +541,7 @@ function RateHistory() {
                                             children: "90D"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 128,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -515,13 +552,13 @@ function RateHistory() {
                                             children: "1Y"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 107,
+                                            lineNumber: 136,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -532,14 +569,14 @@ function RateHistory() {
                                             children: latestDate
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 147,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "h-6 w-px bg-border/60"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 119,
+                                            lineNumber: 148,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -549,7 +586,7 @@ function RateHistory() {
                                                     children: "Exchange Rate"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/rate-history.tsx",
-                                                    lineNumber: 121,
+                                                    lineNumber: 150,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -557,36 +594,36 @@ function RateHistory() {
                                                     children: formatRate(latestRate)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/rate-history.tsx",
-                                                    lineNumber: 122,
+                                                    lineNumber: 151,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 120,
+                                            lineNumber: 149,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 146,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/rate-history.tsx",
-                            lineNumber: 81,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/rate-history.tsx",
-                    lineNumber: 70,
+                    lineNumber: 99,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/rate-history.tsx",
-                lineNumber: 69,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -597,12 +634,12 @@ function RateHistory() {
                         children: "Loading historical data..."
                     }, void 0, false, {
                         fileName: "[project]/components/rate-history.tsx",
-                        lineNumber: 131,
+                        lineNumber: 160,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/rate-history.tsx",
-                    lineNumber: 130,
+                    lineNumber: 159,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                     children: [
@@ -620,7 +657,7 @@ function RateHistory() {
                                             stroke: "hsl(var(--border))"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 167,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["XAxis"], {
@@ -633,7 +670,7 @@ function RateHistory() {
                                             tickLine: false
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 168,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["YAxis"], {
@@ -650,7 +687,7 @@ function RateHistory() {
                                             ]
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 146,
+                                            lineNumber: 175,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -664,7 +701,7 @@ function RateHistory() {
                                                                 children: "Exchange Rate"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/rate-history.tsx",
-                                                                lineNumber: 160,
+                                                                lineNumber: 189,
                                                                 columnNumber: 29
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -672,24 +709,24 @@ function RateHistory() {
                                                                 children: Number(value).toFixed(4)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/rate-history.tsx",
-                                                                lineNumber: 161,
+                                                                lineNumber: 190,
                                                                 columnNumber: 29
                                                             }, void 0)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/rate-history.tsx",
-                                                        lineNumber: 159,
+                                                        lineNumber: 188,
                                                         columnNumber: 27
                                                     }, void 0)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/rate-history.tsx",
-                                                lineNumber: 156,
+                                                lineNumber: 185,
                                                 columnNumber: 23
                                             }, void 0),
                                             isAnimationActive: false
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 154,
+                                            lineNumber: 183,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -701,23 +738,23 @@ function RateHistory() {
                                             isAnimationActive: false
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 170,
+                                            lineNumber: 199,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 166,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/rate-history.tsx",
-                                lineNumber: 136,
+                                lineNumber: 165,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/rate-history.tsx",
-                            lineNumber: 135,
+                            lineNumber: 164,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -731,7 +768,7 @@ function RateHistory() {
                                             children: "Current"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 213,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -742,13 +779,13 @@ function RateHistory() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 185,
+                                            lineNumber: 214,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 183,
+                                    lineNumber: 212,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -759,24 +796,24 @@ function RateHistory() {
                                             children: "Highest"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 219,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-lg font-bold text-secondary",
                                             children: [
-                                                data.length > 0 ? Math.max(...data.map((d)=>d.rate)).toFixed(4) : "—",
+                                                formatRate(highestRate),
                                                 " LRD"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 220,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 218,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -787,7 +824,7 @@ function RateHistory() {
                                             children: "Lowest"
                                         }, void 0, false, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 196,
+                                            lineNumber: 225,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -798,36 +835,36 @@ function RateHistory() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/rate-history.tsx",
-                                            lineNumber: 197,
+                                            lineNumber: 226,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/rate-history.tsx",
-                                    lineNumber: 195,
+                                    lineNumber: 224,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/rate-history.tsx",
-                            lineNumber: 182,
+                            lineNumber: 211,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true)
             }, void 0, false, {
                 fileName: "[project]/components/rate-history.tsx",
-                lineNumber: 128,
+                lineNumber: 157,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/rate-history.tsx",
-        lineNumber: 68,
+        lineNumber: 97,
         columnNumber: 5
     }, this);
 }
-_s(RateHistory, "hgDBI3ytf53R8iImDLXUcagumyw=");
+_s(RateHistory, "izS5bnW3WmuH7cFYK86v78GmRzA=");
 _c = RateHistory;
 var _c;
 __turbopack_context__.k.register(_c, "RateHistory");
