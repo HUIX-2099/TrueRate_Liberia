@@ -1,0 +1,3 @@
+{
+  "/api/rates/candles/route": "app/api/rates/candles/route.js"
+}
