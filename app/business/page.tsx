@@ -392,7 +392,7 @@ export default function BusinessDashboardPage() {
                               <div className="text-sm font-medium mb-1">Get Current Rate</div>
                               <code className="block text-xs bg-muted p-3 rounded-lg overflow-x-auto">
                                 curl -H "Authorization: Bearer YOUR_API_KEY" <br />
-                                https://api.truerate-liberia.com/v1/rates/live
+                                /api/rates/live
                               </code>
                             </div>
                             <div>

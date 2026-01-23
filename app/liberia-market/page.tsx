@@ -41,7 +41,7 @@ const fetchUsdToLrd = async () => {
   }
 
   try {
-    const res = await fetch("https://truerateliberia.com/api/rates/live", {
+    const res = await fetch("/api/rates/live", {
       next: { revalidate: 3600 },
     })
     if (res.ok) {

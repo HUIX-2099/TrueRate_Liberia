@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -31,6 +31,11 @@ export function SocialSharing({ data, trigger }: SocialSharingProps) {
   const { t } = useLanguage()
   const [copied, setCopied] = useState(false)
   const [open, setOpen] = useState(false)
+  const [canNativeShare, setCanNativeShare] = useState(false)
+
+  useEffect(() => {
+    setCanNativeShare(typeof navigator !== "undefined" && typeof navigator.share === "function")
+  }, [])
 
   const generateShareText = () => {
     switch (data.type) {
@@ -147,7 +152,7 @@ export function SocialSharing({ data, trigger }: SocialSharingProps) {
               SMS
             </Button>
             
-            {typeof navigator !== 'undefined' && navigator.share && (
+            {canNativeShare && (
               <Button
                 onClick={nativeShare}
                 variant="outline"
