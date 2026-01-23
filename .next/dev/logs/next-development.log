@@ -39263,3 +39263,550 @@ https://react.dev/link/hydration-mismatch
 [33:33:45.423] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
 [33:33:45.423] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
 [33:33:45.423] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:34:44.835] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:34:44.846] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:34:44.847] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:34:44.847] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:34:44.873] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:34:44.873] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:34:44.873] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:34:44.873] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:34:44.883] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:34:44.883] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:34:44.883] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:34:44.883] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:35:14.158] Browser LOG     Header render time: 89265.50ms
+[33:35:17.326] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[33:35:17.434] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:35:17.435] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:35:17.435] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:35:17.435] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:35:17.740] Browser LOG     Header render time: 97.50ms
+[33:35:17.740] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[33:35:17.740] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[33:35:17.740] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208042148}
+[33:35:17.753] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:35:17.757] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:35:18.463] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:35:18.464] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:35:18.475] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:35:18.475] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:35:18.475] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:35:18.475] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:35:18.482] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:35:18.482] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:35:18.482] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:35:18.482] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:09.318] Browser LOG     Header render time: 51675.40ms
+[33:36:09.318] Browser LOG     Header render time: 1.20ms
+[33:36:09.318] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/auth/signin color: rgb(120, 120, 120) color: inherit {"dp":"/auth/signin","o":"http://localhost:8080/auth/signin","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208093766}
+[33:36:21.331] Browser LOG     Header render time: 12009.50ms
+[33:36:21.331] Browser LOG     Header render time: 0.60ms
+[33:36:21.331] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/auth/signup color: rgb(120, 120, 120) color: inherit {"dp":"/auth/signup","o":"http://localhost:8080/auth/signup","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208105779}
+[33:36:32.033] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.033] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.033] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.033] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:32.041] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.041] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.041] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.041] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:32.142] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.142] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.142] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.143] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:32.146] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.146] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.146] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.146] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:32.192] Browser LOG     Header render time: 10764.10ms
+[33:36:32.192] Browser LOG     Header render time: 2.20ms
+[33:36:32.192] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208116547}
+[33:36:32.202] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.203] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.203] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.203] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:32.211] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.211] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.211] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.211] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:32.219] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.219] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.219] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.219] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:32.229] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:32.229] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:32.229] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:32.229] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:47.759] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:47.760] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:47.760] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:47.760] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:47.769] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:36:47.769] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:36:47.770] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:36:47.770] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:36:47.866] Browser LOG     Header render time: 15760.00ms
+[33:36:47.866] Browser LOG     Header render time: 1.40ms
+[33:36:47.866] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/community color: rgb(120, 120, 120) color: inherit {"dp":"/community","o":"http://localhost:8080/community","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208132311}
+[33:36:59.476] Browser LOG     Header render time: 11594.80ms
+[33:36:59.476] Browser LOG     ConverterPage render time: 0.70ms
+[33:36:59.476] Browser LOG     Header render time: 1.00ms
+[33:36:59.476] Browser LOG     ConverterPage render time: 21.60ms
+[33:36:59.476] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:8080/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208143910}
+[33:36:59.814] Browser LOG     ConverterPage render time: 338.10ms
+[33:37:08.015] Browser LOG     ConverterPage render time: 8198.70ms
+[33:37:08.418] Browser LOG     ConverterPage render time: 345.80ms
+[33:37:08.418] Browser LOG     ConverterPage render time: 56.00ms
+[33:37:14.109] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.110] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.110] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.110] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:14.118] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.119] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.119] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.119] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:14.226] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.226] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.226] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.226] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:14.230] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.231] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.231] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.231] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:14.283] Browser LOG     ConverterPage render time: 5766.70ms
+[33:37:14.283] Browser LOG     Header render time: 14731.90ms
+[33:37:14.283] Browser LOG     Header render time: 1.30ms
+[33:37:14.283] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208158646}
+[33:37:14.289] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.290] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.290] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.290] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:14.297] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.297] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.298] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.298] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:14.307] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.307] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.308] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.308] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:14.323] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:14.323] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:14.323] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:14.324] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:22.018] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:22.018] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:22.019] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:22.019] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:22.033] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:22.033] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:22.033] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:22.034] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:22.086] Browser LOG     Header render time: 7890.60ms
+[33:37:22.086] Browser LOG     Header render time: 1.70ms
+[33:37:22.086] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:8080/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208166539}
+[33:37:22.288] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:22.288] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:22.288] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:22.288] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:22.307] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:22.307] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:22.308] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:22.308] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:22.399] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:37:22.399] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:37:51.300] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:51.301] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:51.301] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:51.301] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:51.417] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:37:51.417] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:37:59.316] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:37:59.318] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:37:59.318] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:37:59.319] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:37:59.433] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:37:59.433] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:38:09.305] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:09.306] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:09.306] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:09.306] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:09.415] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:38:09.415] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[33:38:16.966] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:16.966] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:16.966] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:16.966] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:16.976] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:16.976] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:16.976] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:16.976] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:17.100] Browser LOG     Header render time: 54958.70ms
+[33:38:17.100] Browser LOG     Header render time: 2.90ms
+[33:38:17.100] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208221503}
+[33:38:17.113] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:17.113] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:17.113] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:17.113] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:17.120] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:17.120] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:17.120] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:17.120] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:17.170] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:17.171] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:17.171] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:17.171] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:17.177] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:17.177] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:17.177] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:17.177] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:17.186] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:17.186] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:17.186] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:17.186] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:17.193] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:17.193] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:17.193] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:17.193] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:28.821] Browser LOG     Header render time: 11753.60ms
+[33:38:28.821] Browser LOG     Header render time: 0.90ms
+[33:38:28.821] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/report-fraud color: rgb(120, 120, 120) color: inherit {"dp":"/report-fraud","o":"http://localhost:8080/report-fraud","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208233260}
+[33:38:51.883] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:51.884] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:51.884] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:51.884] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:51.906] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:51.907] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:51.907] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:51.907] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:52.021] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:52.022] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:52.022] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:52.022] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:52.024] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:52.025] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:52.025] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:52.025] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:52.026] Browser LOG     Header render time: 23158.00ms
+[33:38:52.026] Browser LOG     Header render time: 1.10ms
+[33:38:52.026] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208256420}
+[33:38:52.066] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:52.066] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:52.067] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:52.067] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:52.079] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:52.079] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:52.079] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:52.080] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:52.087] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:52.087] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:52.088] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:52.088] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:52.094] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:38:52.094] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:38:52.094] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:38:52.094] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:38:57.674] Browser LOG     Header render time: 5696.40ms
+[33:38:57.674] Browser LOG     Header render time: 0.40ms
+[33:38:57.674] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/contact color: rgb(120, 120, 120) color: inherit {"dp":"/contact","o":"http://localhost:8080/contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208262119}
+[33:39:19.503] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.506] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.506] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.507] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:19.521] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.522] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.523] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.523] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:19.637] Browser LOG     Header render time: 21920.20ms
+[33:39:19.637] Browser LOG     Header render time: 1.10ms
+[33:39:19.637] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208284042}
+[33:39:19.660] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.660] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.660] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.660] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:19.664] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.664] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.664] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.664] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:19.713] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.713] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.713] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.713] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:19.721] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.722] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.722] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.722] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:19.737] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.738] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.738] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.738] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:19.748] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:19.748] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:19.748] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:19.749] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:29.702] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:29.706] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:29.706] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:29.719] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:29.748] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:29.749] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:29.749] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:29.749] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:29.757] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:29.757] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:29.757] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:29.758] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:29.762] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:39:29.762] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:39:29.762] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:39:29.762] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:39:29.800] Browser LOG     Header render time: 10187.20ms
+[33:39:29.800] Browser LOG     Header render time: 8.30ms
+[33:39:29.800] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/predictions color: rgb(120, 120, 120) color: inherit {"dp":"/predictions","o":"http://localhost:8080/predictions","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208294238}
+[33:40:29.732] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:40:29.734] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:40:29.735] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:40:29.737] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:40:29.757] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:40:29.757] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:40:29.757] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:40:29.758] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:41:29.731] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:41:29.732] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:41:29.733] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:41:29.733] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:41:29.776] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:41:29.777] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:41:29.777] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:41:29.778] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:42:29.798] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:42:29.799] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:42:29.799] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:42:29.799] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:42:29.821] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:42:29.822] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:42:29.822] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:42:29.822] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:43:04.610] Server  LOG     ✓ Compiled in 622ms
+[33:43:04.842] Browser LOG     Header render time: 215059.00ms
+[33:43:04.842] Browser ERROR   Route error: {}
+[33:43:04.842] Browser ERROR   Route error: {}
+[33:43:58.733] Server  LOG     ✓ Compiled in 145ms
+[33:43:59.013] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:43:59.014] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:43:59.015] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:43:59.015] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:43:59.108] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:43:59.108] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:43:59.108] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:43:59.109] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:21.901] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:21.908] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:21.908] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:21.911] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:22.060] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:22.061] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:22.061] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:22.062] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:22.080] Browser LOG     Header render time: 22748.60ms
+[33:44:22.080] Browser LOG     Header render time: 7.30ms
+[33:44:22.080] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208586112}
+[33:44:22.827] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:22.829] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:22.830] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:22.830] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:22.848] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:22.849] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:22.849] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:22.850] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:23.178] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:23.181] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:23.182] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:23.189] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:23.475] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:23.482] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:23.482] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:23.483] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:23.709] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:23.710] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:23.711] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:23.711] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:44:23.863] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:44:23.865] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:44:23.865] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:44:23.866] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:21.658] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:21.670] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:21.671] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:21.671] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:21.705] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:21.705] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:21.705] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:21.706] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:21.724] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:21.724] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:21.724] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:21.724] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:32.299] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:32.299] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:32.299] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:32.299] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:32.338] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:32.338] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:32.338] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:32.338] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:32.392] Browser LOG     Header render time: 70729.10ms
+[33:45:32.392] Browser LOG     Header render time: 1.40ms
+[33:45:32.392] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/community color: rgb(120, 120, 120) color: inherit {"dp":"/community","o":"http://localhost:8080/community","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208656850}
+[33:45:37.267] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.267] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.267] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.267] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:37.271] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.271] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.271] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.272] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:37.463] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.463] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.464] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.464] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:37.466] Browser LOG     Header render time: 4966.40ms
+[33:45:37.467] Browser LOG     Header render time: 2.10ms
+[33:45:37.467] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208661819}
+[33:45:37.546] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.546] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.546] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.546] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:37.551] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.551] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.551] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.551] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:37.555] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.555] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.555] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.555] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:37.563] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.563] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.563] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.563] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:45:37.570] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:45:37.570] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:45:37.570] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:45:37.570] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:46:37.302] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:46:37.304] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:46:37.305] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:46:37.305] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:46:37.330] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:46:37.331] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:46:37.331] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:46:37.331] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:46:37.375] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:46:37.376] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:46:37.376] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:46:37.376] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:47:13.215] Browser LOG     Header render time: 95857.60ms
+[33:47:14.568] Browser LOG     Header render time: 1351.00ms
+[33:47:37.319] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:47:37.319] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:47:37.320] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:47:37.320] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:47:37.344] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:47:37.345] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:47:37.345] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:47:37.345] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:47:37.386] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:47:37.386] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:47:37.387] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:47:37.387] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:47:56.154] Server  ERROR   ⨯ TypeError: fetch failed
+[33:48:37.301] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:48:37.302] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:48:37.302] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:48:37.303] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:48:37.338] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:48:37.338] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:48:37.338] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:48:37.338] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:48:37.353] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:48:37.353] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:48:37.354] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:48:37.354] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:49:37.447] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:49:37.449] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:49:37.449] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:49:37.449] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:49:37.474] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:49:37.475] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:49:37.475] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:49:37.475] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:49:37.541] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:49:37.547] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:49:37.552] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:49:37.553] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:50:38.105] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:50:38.106] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:38.106] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:38.106] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:50:38.175] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:50:38.175] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:38.176] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:38.176] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:50:38.213] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:50:38.214] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:38.214] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:38.214] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:50:38.235] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.1579818 LRD per USD
+[33:50:38.235] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:38.236] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:38.236] Server  LOG     [v0] Aggregated rate: 184.65 from 3 sources
+[33:50:47.075] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:50:47.075] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:47.075] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:47.075] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:50:47.535] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[33:50:47.719] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:50:47.719] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:47.720] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:47.720] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:50:47.886] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[33:50:48.218] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:50:48.219] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:48.220] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:48.221] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:50:48.246] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:50:48.247] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:48.247] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:48.247] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:50:48.581] Browser LOG     Header render time: 180.90ms
+[33:50:48.592] Server  LOG     [v0] Currency API (Fawaz Ahmed): 184.78988089 LRD per USD
+[33:50:48.593] Server  LOG     [v0] Open Exchange Rates: 184.387584 LRD per USD
+[33:50:48.593] Server  LOG     [v0] ExchangeRate API: 184.39 LRD per USD
+[33:50:48.593] Server  LOG     [v0] Aggregated rate: 184.52 from 3 sources
+[33:50:48.739] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[33:50:48.739] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[33:50:48.739] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:8080/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:8080/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769208973225}
