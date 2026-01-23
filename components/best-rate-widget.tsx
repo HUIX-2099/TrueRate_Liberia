@@ -182,9 +182,9 @@ export function BestRateWidget() {
 
   if (loading) {
     return (
-      <Card className="border-2 border-secondary animate-pulse">
+      <Card className="border-2 border-secondary/40">
         <CardContent className="p-6">
-          <div className="h-32 bg-muted rounded-lg" />
+          <div className="h-32 bg-muted/50 rounded-lg" />
         </CardContent>
       </Card>
     )
@@ -225,11 +225,13 @@ export function BestRateWidget() {
                 <div className="font-semibold">{bestRate.changerName}</div>
                 <div className="text-sm text-muted-foreground space-y-1">
                   {userAddress && <div>You: {userAddress}</div>}
-                  {nearbyStatus === "ready" ? (
-                    <div>Changer: {bestRate.location}</div>
-                  ) : (
-                    <div className="text-xs">Finding nearby money changers…</div>
-                  )}
+                  <div className="min-h-[1.25rem]">
+                    {nearbyStatus === "ready" ? (
+                      <div>Changer: {bestRate.location}</div>
+                    ) : (
+                      <div className="text-xs">Finding nearby money changers…</div>
+                    )}
+                  </div>
                 </div>
                 {(typeof bestRate.rating === "number" || typeof bestRate.openNow === "boolean") && (
                   <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">

@@ -1336,6 +1336,10 @@
     min-height: calc(var(--spacing) * 16);
   }
 
+  .min-h-\[1\.25rem\] {
+    min-height: 1.25rem;
+  }
+
   .min-h-\[48px\] {
     min-height: 48px;
   }
@@ -1586,6 +1590,10 @@
 
   .min-w-10 {
     min-width: calc(var(--spacing) * 10);
+  }
+
+  .min-w-\[8ch\] {
+    min-width: 8ch;
   }
 
   .min-w-\[8rem\] {
@@ -2355,6 +2363,36 @@
     border-color: var(--primary-foreground);
   }
 
+  .border-primary-foreground\/30 {
+    border-color: var(--primary-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-primary-foreground\/30 {
+      border-color: color-mix(in oklab, var(--primary-foreground) 30%, transparent);
+    }
+  }
+
+  .border-primary-foreground\/40 {
+    border-color: var(--primary-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-primary-foreground\/40 {
+      border-color: color-mix(in oklab, var(--primary-foreground) 40%, transparent);
+    }
+  }
+
+  .border-primary-foreground\/50 {
+    border-color: var(--primary-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-primary-foreground\/50 {
+      border-color: color-mix(in oklab, var(--primary-foreground) 50%, transparent);
+    }
+  }
+
   .border-primary\/20 {
     border-color: var(--primary);
   }
@@ -2372,6 +2410,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .border-primary\/30 {
       border-color: color-mix(in oklab, var(--primary) 30%, transparent);
+    }
+  }
+
+  .border-primary\/40 {
+    border-color: var(--primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-primary\/40 {
+      border-color: color-mix(in oklab, var(--primary) 40%, transparent);
     }
   }
 
@@ -2420,6 +2468,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .border-secondary\/30 {
       border-color: color-mix(in oklab, var(--secondary) 30%, transparent);
+    }
+  }
+
+  .border-secondary\/40 {
+    border-color: var(--secondary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-secondary\/40 {
+      border-color: color-mix(in oklab, var(--secondary) 40%, transparent);
     }
   }
 
@@ -2863,6 +2921,26 @@
     }
   }
 
+  .bg-primary-foreground\/15 {
+    background-color: var(--primary-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary-foreground\/15 {
+      background-color: color-mix(in oklab, var(--primary-foreground) 15%, transparent);
+    }
+  }
+
+  .bg-primary-foreground\/20 {
+    background-color: var(--primary-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary-foreground\/20 {
+      background-color: color-mix(in oklab, var(--primary-foreground) 20%, transparent);
+    }
+  }
+
   .bg-primary\/5 {
     background-color: var(--primary);
   }
@@ -2883,6 +2961,16 @@
     }
   }
 
+  .bg-primary\/15 {
+    background-color: var(--primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary\/15 {
+      background-color: color-mix(in oklab, var(--primary) 15%, transparent);
+    }
+  }
+
   .bg-primary\/20 {
     background-color: var(--primary);
   }
@@ -2900,6 +2988,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-primary\/50 {
       background-color: color-mix(in oklab, var(--primary) 50%, transparent);
+    }
+  }
+
+  .bg-primary\/80 {
+    background-color: var(--primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary\/80 {
+      background-color: color-mix(in oklab, var(--primary) 80%, transparent);
     }
   }
 
@@ -2989,6 +3087,16 @@
     }
   }
 
+  .bg-secondary\/15 {
+    background-color: var(--secondary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-secondary\/15 {
+      background-color: color-mix(in oklab, var(--secondary) 15%, transparent);
+    }
+  }
+
   .bg-secondary\/20 {
     background-color: var(--secondary);
   }
@@ -2996,6 +3104,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-secondary\/20 {
       background-color: color-mix(in oklab, var(--secondary) 20%, transparent);
+    }
+  }
+
+  .bg-secondary\/80 {
+    background-color: var(--secondary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-secondary\/80 {
+      background-color: color-mix(in oklab, var(--secondary) 80%, transparent);
     }
   }
 

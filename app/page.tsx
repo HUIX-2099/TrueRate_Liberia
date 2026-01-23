@@ -21,6 +21,7 @@ import { useEffect, useState } from "react"
 export default function HomePage() {
   const [liveRate, setLiveRate] = useState(192.50)
   const [countdown, setCountdown] = useState("00d 00h 00m 00s")
+  const [leaderboardUpdatedAt, setLeaderboardUpdatedAt] = useState("")
 
   useEffect(() => {
     const fetchRate = async () => {
@@ -60,6 +61,10 @@ export default function HomePage() {
     tick()
     const id = window.setInterval(tick, 1000)
     return () => window.clearInterval(id)
+  }, [])
+
+  useEffect(() => {
+    setLeaderboardUpdatedAt(new Date().toLocaleTimeString())
   }, [])
 
   return (
@@ -322,7 +327,10 @@ export default function HomePage() {
                   </span>
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground">
-                  Live rankings updated every 15 minutes • {new Date().toLocaleTimeString()}
+                  Live rankings updated every 15 minutes •{" "}
+                  <span className="inline-block min-w-[8ch] tabular-nums" aria-live="polite">
+                    {leaderboardUpdatedAt || "—"}
+                  </span>
                 </p>
               </div>
               <MarketLeaderboard />
@@ -348,8 +356,12 @@ export default function HomePage() {
                 Real-time prices of essential goods and market intelligence for informed decisions
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
-                <span className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-primary">Live prices</span>
-                <span className="rounded-full border border-secondary/30 bg-secondary/5 px-3 py-1 text-secondary">Inflation tracker</span>
+                <span className="rounded-full border border-primary/40 bg-primary/15 px-3 py-1 text-primary font-semibold shadow-sm">
+                  Live prices
+                </span>
+                <span className="rounded-full border border-secondary/40 bg-secondary/15 px-3 py-1 text-secondary font-semibold shadow-sm">
+                  Inflation tracker
+                </span>
                 <span className="rounded-full border border-muted-foreground/30 bg-muted/20 px-3 py-1">Local news</span>
               </div>
             </div>
@@ -416,8 +428,18 @@ export default function HomePage() {
           </div>
           <div className="container relative mx-auto px-4 sm:px-6 text-center">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-              <Badge variant="secondary" className="text-primary bg-primary-foreground/10">Ready to Start</Badge>
-              <Badge variant="secondary" className="text-primary bg-primary-foreground/10">Trusted by Thousands</Badge>
+              <Badge
+                variant="secondary"
+                className="text-primary-foreground bg-primary-foreground/20 border border-primary-foreground/40 font-semibold shadow-sm"
+              >
+                Ready to Start
+              </Badge>
+              <Badge
+                variant="secondary"
+                className="text-primary-foreground bg-primary-foreground/20 border border-primary-foreground/40 font-semibold shadow-sm"
+              >
+                Trusted by Thousands
+              </Badge>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 mb-4 text-balance">
               <span className="bg-gradient-to-r from-primary-foreground via-secondary to-primary-foreground bg-clip-text text-transparent">

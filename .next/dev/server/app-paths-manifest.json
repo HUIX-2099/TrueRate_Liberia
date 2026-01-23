@@ -1,4 +1,5 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/api/liberia-cpi/route": "app/api/liberia-cpi/route.js",
   "/api/maps/distance/route": "app/api/maps/distance/route.js",
   "/api/maps/geocode/route": "app/api/maps/geocode/route.js",

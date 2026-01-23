@@ -181,7 +181,6 @@ async function GET() {
         const changers = [
             {
                 id: "1",
-                name: "City Exchange",
                 location: "Broad Street, Monrovia",
                 buyRate: baseRate - 2,
                 sellRate: baseRate + 2,

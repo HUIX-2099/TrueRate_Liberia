@@ -4,10 +4,11 @@ import { useEffect, useState } from "react"
 import { RefreshCw } from "lucide-react"
 
 export function LiveUpdateIndicator() {
-  const [lastUpdate, setLastUpdate] = useState(new Date())
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
   const [isUpdating, setIsUpdating] = useState(false)
 
   useEffect(() => {
+    setLastUpdate(new Date())
     const interval = setInterval(
       () => {
         setIsUpdating(true)
@@ -22,13 +23,20 @@ export function LiveUpdateIndicator() {
     return () => clearInterval(interval)
   }, [])
 
-  const timeSinceUpdate = Math.floor((Date.now() - lastUpdate.getTime()) / 1000 / 60)
+  const timeSinceUpdate = lastUpdate
+    ? Math.floor((Date.now() - lastUpdate.getTime()) / 1000 / 60)
+    : null
 
   return (
     <div className="flex items-center gap-2 text-xs text-muted-foreground">
       <RefreshCw className={`h-3 w-3 ${isUpdating ? "animate-spin text-primary" : ""}`} />
       <span className="hidden sm:inline">
-        Live • Updated {timeSinceUpdate === 0 ? "just now" : `${timeSinceUpdate}m ago`}
+        Live • Updated{" "}
+        {timeSinceUpdate === null
+          ? "just now"
+          : timeSinceUpdate === 0
+            ? "just now"
+            : `${timeSinceUpdate}m ago`}
       </span>
       <span className="inline sm:hidden">Live</span>
     </div>

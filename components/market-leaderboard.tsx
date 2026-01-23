@@ -27,7 +27,7 @@ export function MarketLeaderboard() {
   const { t, isMarketWomanMode } = useLanguage()
   const [leaderboard, setLeaderboard] = useState<LeaderboardChanger[]>([])
   const [loading, setLoading] = useState(true)
-  const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
 
   const fetchLeaderboard = useCallback(() => {
     // Simulate fetching leaderboard data
@@ -201,7 +201,9 @@ export function MarketLeaderboard() {
           </div>
           <Badge variant="outline" className="gap-1 w-fit text-[11px] sm:text-xs">
             <Clock className="h-3 w-3" />
-            {lastUpdate.toLocaleTimeString()}
+            <span className="min-w-[8ch] tabular-nums">
+              {lastUpdate ? lastUpdate.toLocaleTimeString() : "—"}
+            </span>
           </Badge>
         </div>
       </CardHeader>

@@ -651,7 +651,6 @@ const ConverterPageComponent = () => {
                     {[
                     { name: "Liberty Exchange", location: "Broad St, Monrovia", buy: liveRate - 1.2, sell: liveRate + 1.8, rating: 4.9, verified: true, reviews: 234 },
                     { name: "Apex Exchange", location: "Carey St, Old Road", buy: liveRate - 1.5, sell: liveRate + 1.5, rating: 4.8, verified: true, reviews: 189 },
-                    { name: "City Exchange", location: "Sinkor, Randall St", buy: liveRate - 1.8, sell: liveRate + 1.2, rating: 4.7, verified: true, reviews: 156 },
                     { name: "Global Money", location: "Waterside Market", buy: liveRate - 2.0, sell: liveRate + 2.0, rating: 4.6, verified: true, reviews: 142 },
                     { name: "Red Light Bureau", location: "Red Light Market", buy: liveRate - 2.2, sell: liveRate + 1.8, rating: 4.5, verified: false, reviews: 98 },
                     { name: "Paynesville Exchange", location: "Paynesville", buy: liveRate - 2.5, sell: liveRate + 2.2, rating: 4.4, verified: true, reviews: 87 },

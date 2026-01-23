@@ -71,7 +71,6 @@ async function GET(request) {
             results: [
                 {
                     id: "demo_1",
-                    name: "City Exchange - Demo",
                     address: "Broad Street, Monrovia",
                     rating: 4.8,
                     openNow: true,

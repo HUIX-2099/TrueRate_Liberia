@@ -27,7 +27,7 @@ export function LiveChangerQueue() {
   const { t, isMarketWomanMode } = useLanguage()
   const [changers, setChangers] = useState<LiveChanger[]>([])
   const [loading, setLoading] = useState(true)
-  const [lastRefresh, setLastRefresh] = useState<Date>(new Date())
+  const [lastRefresh, setLastRefresh] = useState<Date | null>(null)
 
   useEffect(() => {
     // Simulate fetching live data
@@ -248,7 +248,12 @@ export function LiveChangerQueue() {
 
         {/* Footer Info */}
         <div className="flex items-center justify-between pt-4 border-t text-xs text-muted-foreground">
-          <span>Last refresh: {lastRefresh.toLocaleTimeString()}</span>
+          <span>
+            Last refresh:{" "}
+            <span className="inline-block min-w-[8ch] tabular-nums">
+              {lastRefresh ? lastRefresh.toLocaleTimeString() : "—"}
+            </span>
+          </span>
           <span className="flex items-center gap-1">
             <CheckCircle2 className="h-3 w-3 text-secondary" />
             {changers.length} verified changers online
