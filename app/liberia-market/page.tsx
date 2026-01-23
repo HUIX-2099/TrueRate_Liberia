@@ -5,6 +5,7 @@ import { MarketSnapshot } from "@/components/market-snapshot"
 import { LiberiaMarketNews } from "@/components/liberia-market-news"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { fetchJson } from "@/lib/api/fetch-json"
 
 export const metadata: Metadata = {
   title: "Liberia Market News | TrueRate Liberia",
@@ -23,17 +24,14 @@ export const revalidate = 3600
 const fetchUsdToLrd = async () => {
   // Prefer free, no-key API; fallback to internal live rate endpoint.
   try {
-    const res = await fetch("https://open.er-api.com/v6/latest/USD", {
+    const data = await fetchJson<any>("https://open.er-api.com/v6/latest/USD", {
       next: { revalidate: 3600 },
     })
-    if (res.ok) {
-      const data = await res.json()
-      const rate = Number(data?.rates?.LRD)
-      if (!Number.isNaN(rate) && rate > 0) {
-        return {
-          rate,
-          updatedAt: data?.time_last_update_utc ?? new Date().toUTCString(),
-        }
+    const rate = Number(data?.rates?.LRD)
+    if (!Number.isNaN(rate) && rate > 0) {
+      return {
+        rate,
+        updatedAt: data?.time_last_update_utc ?? new Date().toUTCString(),
       }
     }
   } catch (error) {
@@ -41,17 +39,14 @@ const fetchUsdToLrd = async () => {
   }
 
   try {
-    const res = await fetch("/api/rates/live", {
+    const data = await fetchJson<{ rate?: number }>("/api/rates/live", {
       next: { revalidate: 3600 },
     })
-    if (res.ok) {
-      const data = await res.json()
-      const rate = Number(data?.rate)
-      if (!Number.isNaN(rate) && rate > 0) {
-        return {
-          rate,
-          updatedAt: new Date().toUTCString(),
-        }
+    const rate = Number(data?.rate)
+    if (!Number.isNaN(rate) && rate > 0) {
+      return {
+        rate,
+        updatedAt: new Date().toUTCString(),
       }
     }
   } catch (error) {

@@ -10,6 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   // Primary Meta Tags
+  metadataBase: new URL("https://truerateliberia.com"),
   title: {
     default: "TrueRate Liberia - #1 USD to LRD Exchange Rate in Liberia | Live Rates Today",
     template: "%s | TrueRate Liberia",

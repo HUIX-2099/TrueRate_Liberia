@@ -6,14 +6,15 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { PriceIndex } from "@/components/liberia-features"
+import { fetchJson } from "@/lib/api/fetch-json"
+
+export const dynamic = "force-dynamic"
 
 const fetchLiveRate = async () => {
   try {
-    const res = await fetch("/api/rates/live", {
+    return await fetchJson<{ rate?: number }>("/api/rates/live", {
       next: { revalidate: 3600 },
     })
-    if (!res.ok) return null
-    return await res.json()
   } catch {
     return null
   }
@@ -21,9 +22,7 @@ const fetchLiveRate = async () => {
 
 export default async function PriceIndexPage() {
   const [cpiData, liveRate] = await Promise.all([
-    fetch("https://truerateliberia.com/api/liberia-cpi", { next: { revalidate: 3600 } })
-      .then((res) => (res.ok ? res.json() : null))
-      .catch(() => null),
+    fetchJson("/api/liberia-cpi", { next: { revalidate: 3600 } }).catch(() => null),
     fetchLiveRate(),
   ])
 
