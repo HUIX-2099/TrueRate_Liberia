@@ -1536,6 +1536,10 @@
     max-width: var(--container-7xl);
   }
 
+  .max-w-\[60vw\] {
+    max-width: 60vw;
+  }
+
   .max-w-\[calc\(100\%-2rem\)\] {
     max-width: calc(100% - 2rem);
   }
@@ -7685,6 +7689,12 @@
   }
 
   @media (min-width: 64rem) {
+    .lg\:px-2\.5 {
+      padding-inline: calc(var(--spacing) * 2.5);
+    }
+  }
+
+  @media (min-width: 64rem) {
     .lg\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
     }
@@ -7719,6 +7729,25 @@
     .lg\:text-7xl {
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:text-sm {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:max-w-none {
+      max-width: none;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:px-3 {
+      padding-inline: calc(var(--spacing) * 3);
     }
   }
 

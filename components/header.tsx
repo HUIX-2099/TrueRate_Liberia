@@ -81,7 +81,7 @@ const HeaderComponent = () => {
     return (
       <Link
         href={item.href}
-        className={`group relative flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+        className={`group relative flex items-center gap-2 px-2 lg:px-2.5 xl:px-3 py-2 rounded-lg text-xs lg:text-sm font-medium transition-all duration-200 shrink-0 ${
           isActive
             ? "bg-primary/10 text-primary shadow-sm border border-primary/20"
             : "text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-transparent"
@@ -167,8 +167,8 @@ const HeaderComponent = () => {
 
 
 
-        <nav className="hidden lg:flex items-center">
-          <div className="flex items-center gap-1 px-2 py-1 rounded-xl bg-muted/30 border border-border/40 backdrop-blur-sm">
+        <nav className="hidden lg:flex items-center max-w-[60vw] xl:max-w-none">
+          <div className="flex items-center gap-1 px-2 py-1 rounded-xl bg-muted/30 border border-border/40 backdrop-blur-sm overflow-x-auto">
             {navigationItems.map((item) => (
               <NavLink key={item.href} item={item} />
             ))}
