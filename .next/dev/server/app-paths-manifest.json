@@ -9,10 +9,14 @@
   "/api/rates/candles/route": "app/api/rates/candles/route.js",
   "/api/rates/live/route": "app/api/rates/live/route.js",
   "/api/rates/predictions/route": "app/api/rates/predictions/route.js",
+  "/auth/signin/page": "app/auth/signin/page.js",
+  "/auth/signup/page": "app/auth/signup/page.js",
   "/business/page": "app/business/page.js",
   "/community/page": "app/community/page.js",
   "/converter/page": "app/converter/page.js",
+  "/forums/page": "app/forums/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/map/page": "app/map/page.js",
   "/page": "app/page.js",
   "/predictions/page": "app/predictions/page.js"
 }
