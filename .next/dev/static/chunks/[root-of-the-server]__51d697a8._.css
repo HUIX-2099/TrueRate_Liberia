@@ -1340,6 +1340,10 @@
     height: 1.15rem;
   }
 
+  .h-\[70px\] {
+    height: 70px;
+  }
+
   .h-\[300px\] {
     height: 300px;
   }
@@ -1566,6 +1570,10 @@
 
   .w-80 {
     width: calc(var(--spacing) * 80);
+  }
+
+  .w-\[70px\] {
+    width: 70px;
   }
 
   .w-\[100px\] {
@@ -5521,6 +5529,18 @@
   @media (hover: hover) {
     .hover\:bg-primary-foreground:hover {
       background-color: var(--primary-foreground);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-primary\/10:hover {
+      background-color: var(--primary);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-primary\/10:hover {
+        background-color: color-mix(in oklab, var(--primary) 10%, transparent);
+      }
     }
   }
 

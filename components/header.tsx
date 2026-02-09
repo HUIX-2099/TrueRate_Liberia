@@ -2,6 +2,7 @@
 
 import React, { memo, useMemo, useCallback } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
   Activity,
@@ -152,15 +153,16 @@ const HeaderComponent = () => {
     <>
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
       <div className="container mx-auto flex h-16 md:h-[72px] items-center justify-between px-4 gap-3">
-          <Link href="/" className="flex items-center gap-2 min-w-0" aria-label="TrueRate Liberia home">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <span className="text-lg font-bold text-primary-foreground">TR</span>
-            </div>
-            <div className="flex flex-col min-w-0">
-              <span className="text-base sm:text-lg font-bold text-foreground leading-none truncate">
-                TrueRate Liberia
-              </span>
-              <span className="text-[10px] text-muted-foreground leading-none hidden sm:block">by HUIX-2099</span>
+          <Link href="/" className="flex items-center min-w-0" aria-label="TrueRate Liberia home">
+            <div className="flex h-12 w-12 sm:h-[70px] sm:w-[70px] items-center justify-center overflow-hidden">
+              <Image
+                src="/logos/Logo%201.png"
+                alt="TrueRate logo"
+                width={70}
+                height={70}
+                className="h-full w-full object-contain"
+                priority
+              />
             </div>
           </Link>
 
@@ -178,8 +180,14 @@ const HeaderComponent = () => {
         <div className="flex items-center gap-2">
             <ThemeToggle />
 
-          <Button asChild className="hidden lg:flex">
-            <Link href="/map">Find Nearest</Link>
+          <Button
+            asChild
+            className="hidden lg:flex gap-2 rounded-full px-4 shadow-sm bg-primary text-primary-foreground hover:bg-primary/90"
+          >
+            <Link href="/map">
+              <MapPin className="h-4 w-4" />
+              Find Nearest
+            </Link>
           </Button>
             {user ? (
               <Link href="/dashboard">
@@ -193,7 +201,12 @@ const HeaderComponent = () => {
               </Link>
             ) : (
               <Link href="/auth/signin">
-                <Button className="hidden md:flex">Sign In</Button>
+                <Button
+                  variant="outline"
+                  className="hidden md:flex rounded-full px-4 border-primary/30 text-primary hover:bg-primary/10"
+                >
+                  Sign In
+                </Button>
               </Link>
             )}
             <Sheet>

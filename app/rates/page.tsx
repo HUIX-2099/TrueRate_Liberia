@@ -82,8 +82,9 @@ export default function RatesPage() {
         if (Array.isArray(parsed) && parsed.length) {
           setRecentRates(parsed.filter((value) => typeof value === "number"))
         }
-      } catch {
-        // Ignore invalid cached data.
+      } catch (error) {
+        console.error("[Rates] Invalid cached recent rates JSON", error)
+        window.localStorage.removeItem("truerate-recent-rates")
       }
     }
   }, [])

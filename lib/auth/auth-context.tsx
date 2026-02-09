@@ -46,8 +46,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (storedUser) {
           setUser(JSON.parse(storedUser))
         }
-      } catch (e) {
-        // Ignore localStorage errors
+      } catch (error) {
+        console.error("[Auth] Invalid cached user JSON", error)
+        localStorage.removeItem("user")
       }
     }
     setLoading(false)

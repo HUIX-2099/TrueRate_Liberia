@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Mail, Phone, Twitter } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
@@ -11,11 +12,16 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
           <div className="space-y-3">
-            <div className="flex items-center gap-2 justify-center md:justify-start">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-sm">
-                <span className="text-sm font-bold text-primary-foreground">TR</span>
+            <div className="flex items-center justify-center md:justify-start">
+              <div className="flex h-12 w-12 sm:h-[70px] sm:w-[70px] items-center justify-center overflow-hidden">
+                <Image
+                  src="/logos/Logo%201.png"
+                  alt="TrueRate logo"
+                  width={70}
+                  height={70}
+                  className="h-full w-full object-contain"
+                />
               </div>
-              <span className="text-lg font-bold">TrueRate Liberia</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Liberia's most accurate platform for real-time currency exchange rates and AI-powered predictions.

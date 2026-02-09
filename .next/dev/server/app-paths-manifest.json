@@ -1,1 +1,8 @@
-{}
+{
+  "/api/liberia-cpi/route": "app/api/liberia-cpi/route.js",
+  "/api/news/route": "app/api/news/route.js",
+  "/api/price-index/route": "app/api/price-index/route.js",
+  "/api/rates/candles/route": "app/api/rates/candles/route.js",
+  "/api/rates/live/route": "app/api/rates/live/route.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js"
+}
