@@ -90,6 +90,7 @@ export function LiveRates() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Compare rates from verified money changers in real-time. Updated every 5 minutes.
           </p>
+          <p className="text-xs text-muted-foreground mt-2">Rate type: Market / street (indicative)</p>
           {lowDataMode && (
             <p className="text-xs text-muted-foreground mt-2">
               Low-data mode: updates are less frequent to save bandwidth.

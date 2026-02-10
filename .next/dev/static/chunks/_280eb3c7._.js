@@ -2627,12 +2627,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 const trustPoints = [
-    "Updated every 5 minutes with real market data",
-    "Over 500 verified money changers",
-    "Community-driven fraud reporting system",
+    "Indicative market (street) rates with update timestamps",
+    "Transparent sources and update frequency disclosures",
+    "Fraud reporting and safety guidance for users",
     "Works offline with PWA technology",
     "SMS alerts for feature phone users",
-    "Endorsed by local business associations"
+    "Independent, informational platform (not a bank or money transfer service)"
 ];
 function TrustSignals() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3333,6 +3333,14 @@ function Footer() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-xs text-muted-foreground",
+                                    children: "TrueRate Liberia provides indicative FX information for transparency and education. We are not a bank, money transfer service, or licensed FX dealer. Always confirm rates with your provider."
+                                }, void 0, false, {
+                                    fileName: "[project]/components/footer.tsx",
+                                    lineNumber: 159,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs text-muted-foreground",
                                     children: [
                                         "Built by",
                                         " ",
@@ -3344,7 +3352,7 @@ function Footer() {
                                             children: "HUIX-2099"
                                         }, void 0, false, {
                                             fileName: "[project]/components/footer.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 165,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -3352,7 +3360,7 @@ function Footer() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/footer.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -3370,7 +3378,7 @@ function Footer() {
                                     children: "Privacy Policy"
                                 }, void 0, false, {
                                     fileName: "[project]/components/footer.tsx",
-                                    lineNumber: 173,
+                                    lineNumber: 177,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3379,13 +3387,13 @@ function Footer() {
                                     children: "Terms of Service"
                                 }, void 0, false, {
                                     fileName: "[project]/components/footer.tsx",
-                                    lineNumber: 176,
+                                    lineNumber: 180,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/footer.tsx",
-                            lineNumber: 172,
+                            lineNumber: 176,
                             columnNumber: 11
                         }, this)
                     ]
@@ -3754,20 +3762,9 @@ function BestRateWidget() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-muted-foreground text-sm mb-4",
                                         children: [
-                                            "per 1 USD •",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: bestRate.trend === 'up' ? 'text-destructive' : 'text-secondary',
-                                                children: [
-                                                    ' ',
-                                                    bestRate.trend === 'up' ? '+' : '',
-                                                    bestRate.changePercent,
-                                                    "% today"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 239,
-                                                columnNumber: 15
-                                            }, this)
+                                            "Market (street) buy rate • indicative • Updated",
+                                            " ",
+                                            new Date(bestRate.lastUpdated).toLocaleTimeString()
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
@@ -3781,7 +3778,7 @@ function BestRateWidget() {
                                                 className: "h-5 w-5 text-primary mt-0.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 246,
+                                                lineNumber: 244,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3791,7 +3788,7 @@ function BestRateWidget() {
                                                         children: bestRate.changerName
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                                        lineNumber: 248,
+                                                        lineNumber: 246,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3804,7 +3801,7 @@ function BestRateWidget() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                                lineNumber: 250,
+                                                                lineNumber: 248,
                                                                 columnNumber: 35
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3816,25 +3813,25 @@ function BestRateWidget() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/best-rate-widget.tsx",
-                                                                    lineNumber: 253,
+                                                                    lineNumber: 251,
                                                                     columnNumber: 23
                                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "text-xs",
                                                                     children: "Finding nearby money changers…"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/best-rate-widget.tsx",
-                                                                    lineNumber: 255,
+                                                                    lineNumber: 253,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                                lineNumber: 251,
+                                                                lineNumber: 249,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                                        lineNumber: 249,
+                                                        lineNumber: 247,
                                                         columnNumber: 17
                                                     }, this),
                                                     (typeof bestRate.rating === "number" || typeof bestRate.openNow === "boolean") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3847,20 +3844,20 @@ function BestRateWidget() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                                lineNumber: 261,
+                                                                lineNumber: 259,
                                                                 columnNumber: 61
                                                             }, this),
                                                             typeof bestRate.openNow === "boolean" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: bestRate.openNow ? "Open now" : "Closed now"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                                lineNumber: 263,
+                                                                lineNumber: 261,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                                        lineNumber: 260,
+                                                        lineNumber: 258,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3875,7 +3872,7 @@ function BestRateWidget() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                                lineNumber: 268,
+                                                                lineNumber: 266,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -3887,25 +3884,25 @@ function BestRateWidget() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                                lineNumber: 271,
+                                                                lineNumber: 269,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                                        lineNumber: 267,
+                                                        lineNumber: 265,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 247,
+                                                lineNumber: 245,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 245,
+                                        lineNumber: 243,
                                         columnNumber: 13
                                     }, this)
                                 ]
@@ -3927,14 +3924,14 @@ function BestRateWidget() {
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 287,
+                                                lineNumber: 285,
                                                 columnNumber: 15
                                             }, this),
                                             isMarketWomanMode ? 'Hear It' : 'Voice'
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 281,
+                                        lineNumber: 279,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3947,14 +3944,14 @@ function BestRateWidget() {
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 297,
+                                                lineNumber: 295,
                                                 columnNumber: 15
                                             }, this),
                                             "WhatsApp"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 291,
+                                        lineNumber: 289,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3967,14 +3964,14 @@ function BestRateWidget() {
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 312,
+                                                lineNumber: 310,
                                                 columnNumber: 15
                                             }, this),
                                             "Directions"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 301,
+                                        lineNumber: 299,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3986,20 +3983,20 @@ function BestRateWidget() {
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 321,
+                                                lineNumber: 319,
                                                 columnNumber: 15
                                             }, this),
                                             t('widget.smsAlert')
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 316,
+                                        lineNumber: 314,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                lineNumber: 280,
+                                lineNumber: 278,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -4016,7 +4013,7 @@ function BestRateWidget() {
                                 children: "Get Daily Rate Alerts"
                             }, void 0, false, {
                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                lineNumber: 330,
+                                lineNumber: 328,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4024,7 +4021,7 @@ function BestRateWidget() {
                                 children: "Receive the best rate via SMS at 8 AM and 4 PM daily"
                             }, void 0, false, {
                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                lineNumber: 331,
+                                lineNumber: 329,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4038,7 +4035,7 @@ function BestRateWidget() {
                                         className: "flex-1"
                                     }, void 0, false, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 335,
+                                        lineNumber: 333,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -4046,13 +4043,13 @@ function BestRateWidget() {
                                         children: "Enable"
                                     }, void 0, false, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 342,
+                                        lineNumber: 340,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                lineNumber: 334,
+                                lineNumber: 332,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4071,14 +4068,14 @@ function BestRateWidget() {
                                                 className: "rounded"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 348,
+                                                lineNumber: 346,
                                                 columnNumber: 17
                                             }, this),
                                             t('widget.morningAlert')
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 347,
+                                        lineNumber: 345,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -4094,26 +4091,26 @@ function BestRateWidget() {
                                                 className: "rounded"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                                lineNumber: 357,
+                                                lineNumber: 355,
                                                 columnNumber: 17
                                             }, this),
                                             t('widget.afternoonAlert')
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/best-rate-widget.tsx",
-                                        lineNumber: 356,
+                                        lineNumber: 354,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/best-rate-widget.tsx",
-                                lineNumber: 346,
+                                lineNumber: 344,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/best-rate-widget.tsx",
-                        lineNumber: 329,
+                        lineNumber: 327,
                         columnNumber: 11
                     }, this)
                 ]

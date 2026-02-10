@@ -235,10 +235,8 @@ export function BestRateWidget() {
               {bestRate.rate.toFixed(isMarketWomanMode ? 0 : 2)} <span className="text-2xl text-muted-foreground">LRD</span>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              per 1 USD • 
-              <span className={bestRate.trend === 'up' ? 'text-destructive' : 'text-secondary'}>
-                {' '}{bestRate.trend === 'up' ? '+' : ''}{bestRate.changePercent}% today
-              </span>
+              Market (street) buy rate • indicative • Updated{" "}
+              {new Date(bestRate.lastUpdated).toLocaleTimeString()}
             </p>
             
             {/* Changer Info */}

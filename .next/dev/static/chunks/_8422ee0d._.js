@@ -2317,6 +2317,14 @@ function Footer() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-xs text-muted-foreground",
+                                    children: "TrueRate Liberia provides indicative FX information for transparency and education. We are not a bank, money transfer service, or licensed FX dealer. Always confirm rates with your provider."
+                                }, void 0, false, {
+                                    fileName: "[project]/components/footer.tsx",
+                                    lineNumber: 159,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs text-muted-foreground",
                                     children: [
                                         "Built by",
                                         " ",
@@ -2328,7 +2336,7 @@ function Footer() {
                                             children: "HUIX-2099"
                                         }, void 0, false, {
                                             fileName: "[project]/components/footer.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 165,
                                             columnNumber: 15
                                         }, this),
                                         " ",
@@ -2336,7 +2344,7 @@ function Footer() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/footer.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -2354,7 +2362,7 @@ function Footer() {
                                     children: "Privacy Policy"
                                 }, void 0, false, {
                                     fileName: "[project]/components/footer.tsx",
-                                    lineNumber: 173,
+                                    lineNumber: 177,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2363,13 +2371,13 @@ function Footer() {
                                     children: "Terms of Service"
                                 }, void 0, false, {
                                     fileName: "[project]/components/footer.tsx",
-                                    lineNumber: 176,
+                                    lineNumber: 180,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/footer.tsx",
-                            lineNumber: 172,
+                            lineNumber: 176,
                             columnNumber: 11
                         }, this)
                     ]
@@ -3089,12 +3097,23 @@ const ConverterPageComponent = ()=>{
                                                                             lineNumber: 311,
                                                                             columnNumber: 23
                                                                         }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "text-xs text-muted-foreground",
+                                                                            children: [
+                                                                                "Market (street) rate • Updated ",
+                                                                                lastUpdate || "just now"
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/app/converter/page.tsx",
+                                                                            lineNumber: 319,
+                                                                            columnNumber: 23
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
                                                                         useCustomRate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             className: "text-xs text-muted-foreground",
                                                                             children: "Custom rate active"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 320,
+                                                                            lineNumber: 323,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
@@ -3116,13 +3135,13 @@ const ConverterPageComponent = ()=>{
                                                                     className: "h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 327,
+                                                                    lineNumber: 330,
                                                                     columnNumber: 38
                                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingDown$3e$__["TrendingDown"], {
                                                                     className: "h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 327,
+                                                                    lineNumber: 330,
                                                                     columnNumber: 75
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 dayChange > 0 ? "+" : "",
@@ -3131,7 +3150,7 @@ const ConverterPageComponent = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 324,
+                                                            lineNumber: 327,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
@@ -3152,14 +3171,14 @@ const ConverterPageComponent = ()=>{
                                                                     onChange: (e)=>setUseCustomRate(e.target.checked)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 334,
+                                                                    lineNumber: 337,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 "Use custom USD/LRD rate"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 333,
+                                                            lineNumber: 336,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -3174,13 +3193,13 @@ const ConverterPageComponent = ()=>{
                                                             disabled: !useCustomRate
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 341,
+                                                            lineNumber: 344,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 332,
+                                                    lineNumber: 335,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3191,7 +3210,7 @@ const ConverterPageComponent = ()=>{
                                                             children: "You Have"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 356,
+                                                            lineNumber: 359,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3210,12 +3229,12 @@ const ConverterPageComponent = ()=>{
                                                                             ]
                                                                         }, c.code, true, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 364,
+                                                                            lineNumber: 367,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 358,
+                                                                    lineNumber: 361,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -3229,13 +3248,13 @@ const ConverterPageComponent = ()=>{
                                                                     placeholder: "Enter amount"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 369,
+                                                                    lineNumber: 372,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 357,
+                                                            lineNumber: 360,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3251,18 +3270,18 @@ const ConverterPageComponent = ()=>{
                                                                     ]
                                                                 }, amt, true, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 383,
+                                                                    lineNumber: 386,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 381,
+                                                            lineNumber: 384,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 355,
+                                                    lineNumber: 358,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3276,17 +3295,17 @@ const ConverterPageComponent = ()=>{
                                                             className: "h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 404,
+                                                            lineNumber: 407,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 398,
+                                                        lineNumber: 401,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 397,
+                                                    lineNumber: 400,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3297,7 +3316,7 @@ const ConverterPageComponent = ()=>{
                                                             children: "You Get"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 410,
+                                                            lineNumber: 413,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3316,12 +3335,12 @@ const ConverterPageComponent = ()=>{
                                                                             ]
                                                                         }, c.code, true, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 418,
+                                                                            lineNumber: 421,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 412,
+                                                                    lineNumber: 415,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3334,7 +3353,7 @@ const ConverterPageComponent = ()=>{
                                                                                 children: result ? parseFloat(result).toLocaleString() : "—"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 425,
+                                                                                lineNumber: 428,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3342,30 +3361,30 @@ const ConverterPageComponent = ()=>{
                                                                                 children: toCurrency
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 428,
+                                                                                lineNumber: 431,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 424,
+                                                                        lineNumber: 427,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 423,
+                                                                    lineNumber: 426,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 411,
+                                                            lineNumber: 414,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 409,
+                                                    lineNumber: 412,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3379,20 +3398,20 @@ const ConverterPageComponent = ()=>{
                                                                     className: "h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 440,
+                                                                    lineNumber: 443,
                                                                     columnNumber: 31
                                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
                                                                     className: "h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 440,
+                                                                    lineNumber: 443,
                                                                     columnNumber: 63
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 copied ? "Copied!" : "Copy Result"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 436,
+                                                            lineNumber: 439,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3403,12 +3422,12 @@ const ConverterPageComponent = ()=>{
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 448,
+                                                                lineNumber: 451,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 443,
+                                                            lineNumber: 446,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3419,18 +3438,18 @@ const ConverterPageComponent = ()=>{
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 451,
+                                                                lineNumber: 454,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 450,
+                                                            lineNumber: 453,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 435,
+                                                    lineNumber: 438,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3449,7 +3468,7 @@ const ConverterPageComponent = ()=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 458,
+                                                                lineNumber: 461,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3463,18 +3482,18 @@ const ConverterPageComponent = ()=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 464,
+                                                                lineNumber: 467,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 457,
+                                                        lineNumber: 460,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 456,
+                                                    lineNumber: 459,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
@@ -3516,7 +3535,7 @@ const ConverterPageComponent = ()=>{
                                                     children: "Essential Tools"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 482,
+                                                    lineNumber: 485,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -3524,7 +3543,7 @@ const ConverterPageComponent = ()=>{
                                                     children: "Free Calculators"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 483,
+                                                    lineNumber: 486,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -3532,13 +3551,13 @@ const ConverterPageComponent = ()=>{
                                                     children: "Business Ready"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 484,
+                                                    lineNumber: 487,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 481,
+                                            lineNumber: 484,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3548,12 +3567,12 @@ const ConverterPageComponent = ()=>{
                                                 children: "Conversion Utilities"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/converter/page.tsx",
-                                                lineNumber: 487,
+                                                lineNumber: 490,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 486,
+                                            lineNumber: 489,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3561,13 +3580,13 @@ const ConverterPageComponent = ()=>{
                                             children: "Helpful calculators and comparisons for daily decisions and business planning."
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 491,
+                                            lineNumber: 494,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 480,
+                                    lineNumber: 483,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tabs"], {
@@ -3585,14 +3604,14 @@ const ConverterPageComponent = ()=>{
                                                             className: "h-4 w-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 498,
+                                                            lineNumber: 501,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         "Quick Tools"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 497,
+                                                    lineNumber: 500,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -3603,14 +3622,14 @@ const ConverterPageComponent = ()=>{
                                                             className: "h-4 w-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 502,
+                                                            lineNumber: 505,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         "Compare Changers"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 501,
+                                                    lineNumber: 504,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -3621,20 +3640,20 @@ const ConverterPageComponent = ()=>{
                                                             className: "h-4 w-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 506,
+                                                            lineNumber: 509,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         "Remittance"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 505,
+                                                    lineNumber: 508,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 496,
+                                            lineNumber: 499,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -3655,12 +3674,12 @@ const ConverterPageComponent = ()=>{
                                                                             className: "h-7 w-7 text-primary"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 517,
+                                                                            lineNumber: 520,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 516,
+                                                                        lineNumber: 519,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -3668,20 +3687,20 @@ const ConverterPageComponent = ()=>{
                                                                         children: "Business Calculator"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 519,
+                                                                        lineNumber: 522,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                                         children: "Calculate import costs, taxes, and shipping"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 520,
+                                                                        lineNumber: 523,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 515,
+                                                                lineNumber: 518,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -3697,7 +3716,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Import Value ($)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 525,
+                                                                                        lineNumber: 528,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -3708,13 +3727,13 @@ const ConverterPageComponent = ()=>{
                                                                                         placeholder: "1000"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 526,
+                                                                                        lineNumber: 529,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 524,
+                                                                                lineNumber: 527,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3724,7 +3743,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Tax Rate (%)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 535,
+                                                                                        lineNumber: 538,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -3735,19 +3754,19 @@ const ConverterPageComponent = ()=>{
                                                                                         placeholder: "10"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 536,
+                                                                                        lineNumber: 539,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 534,
+                                                                                lineNumber: 537,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 523,
+                                                                        lineNumber: 526,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3757,7 +3776,7 @@ const ConverterPageComponent = ()=>{
                                                                                 children: "Shipping Cost ($)"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 546,
+                                                                                lineNumber: 549,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -3768,13 +3787,13 @@ const ConverterPageComponent = ()=>{
                                                                                 placeholder: "50"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 547,
+                                                                                lineNumber: 550,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 545,
+                                                                        lineNumber: 548,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3788,7 +3807,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Import Value"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 557,
+                                                                                        lineNumber: 560,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3802,13 +3821,13 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 558,
+                                                                                        lineNumber: 561,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 556,
+                                                                                lineNumber: 559,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3823,7 +3842,7 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 563,
+                                                                                        lineNumber: 566,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3834,13 +3853,13 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 564,
+                                                                                        lineNumber: 567,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 562,
+                                                                                lineNumber: 565,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3851,7 +3870,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "+ Shipping"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 567,
+                                                                                        lineNumber: 570,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3862,18 +3881,18 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 568,
+                                                                                        lineNumber: 571,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 566,
+                                                                                lineNumber: 569,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Separator"], {}, void 0, false, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 570,
+                                                                                lineNumber: 573,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3884,7 +3903,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Total Cost"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 572,
+                                                                                        lineNumber: 575,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3892,31 +3911,31 @@ const ConverterPageComponent = ()=>{
                                                                                         children: businessCalculator.totalLRD === null ? "—" : `${businessCalculator.totalLRD.toLocaleString()} LRD`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 573,
+                                                                                        lineNumber: 576,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 571,
+                                                                                lineNumber: 574,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 555,
+                                                                        lineNumber: 558,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 522,
+                                                                lineNumber: 525,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 514,
+                                                        lineNumber: 517,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -3931,12 +3950,12 @@ const ConverterPageComponent = ()=>{
                                                                             className: "h-7 w-7 text-secondary"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 585,
+                                                                            lineNumber: 588,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 584,
+                                                                        lineNumber: 587,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -3944,20 +3963,20 @@ const ConverterPageComponent = ()=>{
                                                                         children: "Markup Calculator"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 587,
+                                                                        lineNumber: 590,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                                         children: "Find the best sell price for your goods"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 588,
+                                                                        lineNumber: 591,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 583,
+                                                                lineNumber: 586,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -3973,7 +3992,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Cost Price (LRD)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 593,
+                                                                                        lineNumber: 596,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -3984,13 +4003,13 @@ const ConverterPageComponent = ()=>{
                                                                                         placeholder: "50000"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 594,
+                                                                                        lineNumber: 597,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 592,
+                                                                                lineNumber: 595,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4000,7 +4019,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Markup (%)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 603,
+                                                                                        lineNumber: 606,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -4011,19 +4030,19 @@ const ConverterPageComponent = ()=>{
                                                                                         placeholder: "25"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 604,
+                                                                                        lineNumber: 607,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 602,
+                                                                                lineNumber: 605,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 591,
+                                                                        lineNumber: 594,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4037,7 +4056,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Cost Price"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 615,
+                                                                                        lineNumber: 618,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4048,13 +4067,13 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 616,
+                                                                                        lineNumber: 619,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 614,
+                                                                                lineNumber: 617,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4069,7 +4088,7 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 619,
+                                                                                        lineNumber: 622,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4080,18 +4099,18 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 620,
+                                                                                        lineNumber: 623,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 618,
+                                                                                lineNumber: 621,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Separator"], {}, void 0, false, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 622,
+                                                                                lineNumber: 625,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4102,7 +4121,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Sell Price"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 624,
+                                                                                        lineNumber: 627,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4113,13 +4132,13 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 625,
+                                                                                        lineNumber: 628,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 623,
+                                                                                lineNumber: 626,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4129,7 +4148,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Profit Margin"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 628,
+                                                                                        lineNumber: 631,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4139,31 +4158,31 @@ const ConverterPageComponent = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 629,
+                                                                                        lineNumber: 632,
                                                                                         columnNumber: 27
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 627,
+                                                                                lineNumber: 630,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 613,
+                                                                        lineNumber: 616,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 590,
+                                                                lineNumber: 593,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 582,
+                                                        lineNumber: 585,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -4178,12 +4197,12 @@ const ConverterPageComponent = ()=>{
                                                                             className: "h-7 w-7 text-amber-600"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 639,
+                                                                            lineNumber: 642,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 638,
+                                                                        lineNumber: 641,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -4191,20 +4210,20 @@ const ConverterPageComponent = ()=>{
                                                                         children: "Price Index"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 641,
+                                                                        lineNumber: 644,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                                         children: "Common goods prices in USD & LRD"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 642,
+                                                                        lineNumber: 645,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 637,
+                                                                lineNumber: 640,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -4223,7 +4242,7 @@ const ConverterPageComponent = ()=>{
                                                                                     children: "All"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 647,
+                                                                                    lineNumber: 650,
                                                                                     columnNumber: 27
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -4232,7 +4251,7 @@ const ConverterPageComponent = ()=>{
                                                                                     children: "Food"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 648,
+                                                                                    lineNumber: 651,
                                                                                     columnNumber: 27
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -4241,13 +4260,13 @@ const ConverterPageComponent = ()=>{
                                                                                     children: "Building"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 649,
+                                                                                    lineNumber: 652,
                                                                                     columnNumber: 27
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 646,
+                                                                            lineNumber: 649,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -4302,7 +4321,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: item.item
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 663,
+                                                                                            lineNumber: 666,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4316,18 +4335,18 @@ const ConverterPageComponent = ()=>{
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 664,
+                                                                                            lineNumber: 667,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, item.item, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 662,
+                                                                                    lineNumber: 665,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 651,
+                                                                            lineNumber: 654,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -4354,7 +4373,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: item.item
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 675,
+                                                                                            lineNumber: 678,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4368,18 +4387,18 @@ const ConverterPageComponent = ()=>{
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 676,
+                                                                                            lineNumber: 679,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, item.item, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 674,
+                                                                                    lineNumber: 677,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 668,
+                                                                            lineNumber: 671,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -4402,7 +4421,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: item.item
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 686,
+                                                                                            lineNumber: 689,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4416,46 +4435,46 @@ const ConverterPageComponent = ()=>{
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 687,
+                                                                                            lineNumber: 690,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, item.item, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 685,
+                                                                                    lineNumber: 688,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 680,
+                                                                            lineNumber: 683,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 645,
+                                                                    lineNumber: 648,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 644,
+                                                                lineNumber: 647,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 636,
+                                                        lineNumber: 639,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/converter/page.tsx",
-                                                lineNumber: 512,
+                                                lineNumber: 515,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 511,
+                                            lineNumber: 514,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -4470,7 +4489,7 @@ const ConverterPageComponent = ()=>{
                                                             children: "Best Buy/Sell Rates Today"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 699,
+                                                            lineNumber: 702,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4478,13 +4497,13 @@ const ConverterPageComponent = ()=>{
                                                             children: "Compare verified money changers across Monrovia"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 700,
+                                                            lineNumber: 703,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 698,
+                                                    lineNumber: 701,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4550,7 +4569,7 @@ const ConverterPageComponent = ()=>{
                                                                                     children: i + 1
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 714,
+                                                                                    lineNumber: 717,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4563,7 +4582,7 @@ const ConverterPageComponent = ()=>{
                                                                                                     children: changer.name
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                                    lineNumber: 719,
+                                                                                                    lineNumber: 722,
                                                                                                     columnNumber: 33
                                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                                 changer.verified && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -4572,13 +4591,13 @@ const ConverterPageComponent = ()=>{
                                                                                                     children: "✓ Verified"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                                    lineNumber: 721,
+                                                                                                    lineNumber: 724,
                                                                                                     columnNumber: 35
                                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 718,
+                                                                                            lineNumber: 721,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4588,26 +4607,26 @@ const ConverterPageComponent = ()=>{
                                                                                                     className: "h-3 w-3"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                                    lineNumber: 727,
+                                                                                                    lineNumber: 730,
                                                                                                     columnNumber: 33
                                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                                 changer.location
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 726,
+                                                                                            lineNumber: 729,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 717,
+                                                                                    lineNumber: 720,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 713,
+                                                                            lineNumber: 716,
                                                                             columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4621,7 +4640,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: "Buy Rate"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 734,
+                                                                                            lineNumber: 737,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4629,7 +4648,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: isLiveRateReady ? changer.buy.toFixed(2) : "—"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 735,
+                                                                                            lineNumber: 738,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4637,13 +4656,13 @@ const ConverterPageComponent = ()=>{
                                                                                             children: "You get more LRD"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 738,
+                                                                                            lineNumber: 741,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 733,
+                                                                                    lineNumber: 736,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4654,7 +4673,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: "Sell Rate"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 741,
+                                                                                            lineNumber: 744,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4662,7 +4681,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: isLiveRateReady ? changer.sell.toFixed(2) : "—"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 742,
+                                                                                            lineNumber: 745,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4670,13 +4689,13 @@ const ConverterPageComponent = ()=>{
                                                                                             children: "They pay less"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 745,
+                                                                                            lineNumber: 748,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 740,
+                                                                                    lineNumber: 743,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4687,7 +4706,7 @@ const ConverterPageComponent = ()=>{
                                                                                             children: "Rating"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 748,
+                                                                                            lineNumber: 751,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4697,14 +4716,14 @@ const ConverterPageComponent = ()=>{
                                                                                                     className: "h-3 w-3 fill-yellow-400 text-yellow-400"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                                    lineNumber: 750,
+                                                                                                    lineNumber: 753,
                                                                                                     columnNumber: 33
                                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                                 changer.rating
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 749,
+                                                                                            lineNumber: 752,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4715,13 +4734,13 @@ const ConverterPageComponent = ()=>{
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 753,
+                                                                                            lineNumber: 756,
                                                                                             columnNumber: 31
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 747,
+                                                                                    lineNumber: 750,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -4734,40 +4753,40 @@ const ConverterPageComponent = ()=>{
                                                                                             className: "h-4 w-4 ml-1"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                                            lineNumber: 756,
+                                                                                            lineNumber: 759,
                                                                                             columnNumber: 44
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 755,
+                                                                                    lineNumber: 758,
                                                                                     columnNumber: 29
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 732,
+                                                                            lineNumber: 735,
                                                                             columnNumber: 27
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 712,
+                                                                    lineNumber: 715,
                                                                     columnNumber: 25
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 711,
+                                                                lineNumber: 714,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, i, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 710,
+                                                            lineNumber: 713,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 702,
+                                                    lineNumber: 705,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -4781,7 +4800,7 @@ const ConverterPageComponent = ()=>{
                                                                     className: "h-5 w-5 text-amber-600 mt-0.5"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 767,
+                                                                    lineNumber: 770,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4791,7 +4810,7 @@ const ConverterPageComponent = ()=>{
                                                                             children: "Pro Tip: Best Times to Exchange"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 769,
+                                                                            lineNumber: 772,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4799,35 +4818,35 @@ const ConverterPageComponent = ()=>{
                                                                             children: "Rates are typically best between 10 AM - 12 PM and 2 PM - 4 PM when business activity is highest. Monday through Thursday usually offer better rates than weekends."
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 770,
+                                                                            lineNumber: 773,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 768,
+                                                                    lineNumber: 771,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 766,
+                                                            lineNumber: 769,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 765,
+                                                        lineNumber: 768,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 764,
+                                                    lineNumber: 767,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 697,
+                                            lineNumber: 700,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -4842,7 +4861,7 @@ const ConverterPageComponent = ()=>{
                                                             children: "Send Money Home Safely"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 782,
+                                                            lineNumber: 785,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4850,7 +4869,7 @@ const ConverterPageComponent = ()=>{
                                                             children: "Compare remittance services and fees"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 783,
+                                                            lineNumber: 786,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4862,13 +4881,13 @@ const ConverterPageComponent = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 784,
+                                                            lineNumber: 787,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 781,
+                                                    lineNumber: 784,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4951,30 +4970,30 @@ const ConverterPageComponent = ()=>{
                                                                                     crossOrigin: "anonymous"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 811,
+                                                                                    lineNumber: 814,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)) : service.type === "mobile" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smartphone$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Smartphone$3e$__["Smartphone"], {
                                                                                     className: "h-5 w-5"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 820,
+                                                                                    lineNumber: 823,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)) : service.type === "bank" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"], {
                                                                                     className: "h-5 w-5"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 822,
+                                                                                    lineNumber: 825,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"], {
                                                                                     className: "h-5 w-5"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 824,
+                                                                                    lineNumber: 827,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 809,
+                                                                                lineNumber: 812,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4988,7 +5007,7 @@ const ConverterPageComponent = ()=>{
                                                                                                 children: service.name
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 829,
+                                                                                                lineNumber: 832,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                                             service.popular && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -4996,13 +5015,13 @@ const ConverterPageComponent = ()=>{
                                                                                                 children: "Popular"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 831,
+                                                                                                lineNumber: 834,
                                                                                                 columnNumber: 35
                                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 828,
+                                                                                        lineNumber: 831,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5012,26 +5031,26 @@ const ConverterPageComponent = ()=>{
                                                                                                 className: "h-3 w-3"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 837,
+                                                                                                lineNumber: 840,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                                             service.time
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 836,
+                                                                                        lineNumber: 839,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 827,
+                                                                                lineNumber: 830,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 808,
+                                                                        lineNumber: 811,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5044,7 +5063,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Transfer Fee: "
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 844,
+                                                                                        lineNumber: 847,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5052,13 +5071,13 @@ const ConverterPageComponent = ()=>{
                                                                                         children: feeDisplay
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 845,
+                                                                                        lineNumber: 848,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 843,
+                                                                                lineNumber: 846,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5068,7 +5087,7 @@ const ConverterPageComponent = ()=>{
                                                                                         children: "Exchange Rate: "
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 848,
+                                                                                        lineNumber: 851,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5076,19 +5095,19 @@ const ConverterPageComponent = ()=>{
                                                                                         children: isLiveRateReady ? service.rate.toFixed(2) : "—"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 849,
+                                                                                        lineNumber: 852,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 847,
+                                                                                lineNumber: 850,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 842,
+                                                                        lineNumber: 845,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5104,20 +5123,20 @@ const ConverterPageComponent = ()=>{
                                                                                                 children: "You send:"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 857,
+                                                                                                lineNumber: 860,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                 children: formatUsd(remittanceAmount)
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 858,
+                                                                                                lineNumber: 861,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 856,
+                                                                                        lineNumber: 859,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5127,7 +5146,7 @@ const ConverterPageComponent = ()=>{
                                                                                                 children: "Fee:"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 861,
+                                                                                                lineNumber: 864,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5138,13 +5157,13 @@ const ConverterPageComponent = ()=>{
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 862,
+                                                                                                lineNumber: 865,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 860,
+                                                                                        lineNumber: 863,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5154,7 +5173,7 @@ const ConverterPageComponent = ()=>{
                                                                                                 children: "They receive:"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 865,
+                                                                                                lineNumber: 868,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
@@ -5162,19 +5181,19 @@ const ConverterPageComponent = ()=>{
                                                                                                 children: totalReceived === null ? "—" : `${totalReceived.toLocaleString()} LRD`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                                lineNumber: 866,
+                                                                                                lineNumber: 869,
                                                                                                 columnNumber: 33
                                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                                        lineNumber: 864,
+                                                                                        lineNumber: 867,
                                                                                         columnNumber: 31
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 855,
+                                                                                lineNumber: 858,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5185,30 +5204,30 @@ const ConverterPageComponent = ()=>{
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                                lineNumber: 871,
+                                                                                lineNumber: 874,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 854,
+                                                                        lineNumber: 857,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/converter/page.tsx",
-                                                                lineNumber: 807,
+                                                                lineNumber: 810,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, service.name, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 806,
+                                                            lineNumber: 809,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0));
                                                     })
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 788,
+                                                    lineNumber: 791,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -5222,7 +5241,7 @@ const ConverterPageComponent = ()=>{
                                                                     className: "h-5 w-5 text-blue-600 mt-0.5"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 883,
+                                                                    lineNumber: 886,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5232,7 +5251,7 @@ const ConverterPageComponent = ()=>{
                                                                             children: "💡 Smart Remittance Tips"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 885,
+                                                                            lineNumber: 888,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5242,72 +5261,72 @@ const ConverterPageComponent = ()=>{
                                                                                     children: "• Mobile money services (MTN, Orange) often have the best rates and lowest fees"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 887,
+                                                                                    lineNumber: 890,
                                                                                     columnNumber: 27
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                                     children: "• Agent-based services (Western Union, MoneyGram) are good for urgent transfers"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 888,
+                                                                                    lineNumber: 891,
                                                                                     columnNumber: 27
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                                     children: "• Always compare the total cost, not just the exchange rate"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                                    lineNumber: 889,
+                                                                                    lineNumber: 892,
                                                                                     columnNumber: 27
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/converter/page.tsx",
-                                                                            lineNumber: 886,
+                                                                            lineNumber: 889,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 884,
+                                                                    lineNumber: 887,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 882,
+                                                            lineNumber: 885,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 881,
+                                                        lineNumber: 884,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 880,
+                                                    lineNumber: 883,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 780,
+                                            lineNumber: 783,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 495,
+                                    lineNumber: 498,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/converter/page.tsx",
-                            lineNumber: 479,
+                            lineNumber: 482,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/converter/page.tsx",
-                        lineNumber: 478,
+                        lineNumber: 481,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -5326,7 +5345,7 @@ const ConverterPageComponent = ()=>{
                                                     children: "Market Overview"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 905,
+                                                    lineNumber: 908,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -5334,7 +5353,7 @@ const ConverterPageComponent = ()=>{
                                                     children: "Live Data"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 906,
+                                                    lineNumber: 909,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -5342,13 +5361,13 @@ const ConverterPageComponent = ()=>{
                                                     children: "Daily Summary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 907,
+                                                    lineNumber: 910,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 904,
+                                            lineNumber: 907,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5358,12 +5377,12 @@ const ConverterPageComponent = ()=>{
                                                 children: "Rate Highlights"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/converter/page.tsx",
-                                                lineNumber: 910,
+                                                lineNumber: 913,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 909,
+                                            lineNumber: 912,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5371,13 +5390,13 @@ const ConverterPageComponent = ()=>{
                                             children: "Quick context around today's USD/LRD market activity and key insights."
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 914,
+                                            lineNumber: 917,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 903,
+                                    lineNumber: 906,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5398,12 +5417,12 @@ const ConverterPageComponent = ()=>{
                                                                         className: "h-2 w-2 rounded-full bg-primary"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/converter/page.tsx",
-                                                                        lineNumber: 923,
+                                                                        lineNumber: 926,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 922,
+                                                                    lineNumber: 925,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -5411,13 +5430,13 @@ const ConverterPageComponent = ()=>{
                                                                     children: "Live USD/LRD"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 925,
+                                                                    lineNumber: 928,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 921,
+                                                            lineNumber: 924,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -5428,13 +5447,13 @@ const ConverterPageComponent = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 927,
+                                                            lineNumber: 930,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 920,
+                                                    lineNumber: 923,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -5445,7 +5464,7 @@ const ConverterPageComponent = ()=>{
                                                             children: isLiveRateReady ? liveRateValue.toFixed(2) : "—"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 930,
+                                                            lineNumber: 933,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5453,19 +5472,19 @@ const ConverterPageComponent = ()=>{
                                                             children: "LRD per USD"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 933,
+                                                            lineNumber: 936,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 929,
+                                                    lineNumber: 932,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 919,
+                                            lineNumber: 922,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -5481,13 +5500,13 @@ const ConverterPageComponent = ()=>{
                                                                     className: "h-4 w-4 text-red-600"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 940,
+                                                                    lineNumber: 943,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingDown$3e$__["TrendingDown"], {
                                                                     className: "h-4 w-4 text-green-600"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 942,
+                                                                    lineNumber: 945,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -5495,13 +5514,13 @@ const ConverterPageComponent = ()=>{
                                                                     children: "Today's Change"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 944,
+                                                                    lineNumber: 947,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 938,
+                                                            lineNumber: 941,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -5509,13 +5528,13 @@ const ConverterPageComponent = ()=>{
                                                             children: "Intraday movement"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 948,
+                                                            lineNumber: 951,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 937,
+                                                    lineNumber: 940,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -5530,7 +5549,7 @@ const ConverterPageComponent = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 953,
+                                                            lineNumber: 956,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5538,19 +5557,19 @@ const ConverterPageComponent = ()=>{
                                                             children: dayChange > 0 ? "Rate increased" : "Rate decreased"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 956,
+                                                            lineNumber: 959,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 952,
+                                                    lineNumber: 955,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 936,
+                                            lineNumber: 939,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -5566,7 +5585,7 @@ const ConverterPageComponent = ()=>{
                                                                     className: "h-4 w-4 text-secondary"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 964,
+                                                                    lineNumber: 967,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -5574,13 +5593,13 @@ const ConverterPageComponent = ()=>{
                                                                     children: "Compare Locations"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 965,
+                                                                    lineNumber: 968,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 963,
+                                                            lineNumber: 966,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -5588,13 +5607,13 @@ const ConverterPageComponent = ()=>{
                                                             children: "Find the best local rates"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 967,
+                                                            lineNumber: 970,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 962,
+                                                    lineNumber: 965,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -5609,13 +5628,13 @@ const ConverterPageComponent = ()=>{
                                                                     className: "ml-1 h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/converter/page.tsx",
-                                                                    lineNumber: 971,
+                                                                    lineNumber: 974,
                                                                     columnNumber: 35
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 970,
+                                                            lineNumber: 973,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5623,36 +5642,36 @@ const ConverterPageComponent = ()=>{
                                                             children: "Interactive map view"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/converter/page.tsx",
-                                                            lineNumber: 973,
+                                                            lineNumber: 976,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/converter/page.tsx",
-                                                    lineNumber: 969,
+                                                    lineNumber: 972,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 961,
+                                            lineNumber: 964,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 918,
+                                    lineNumber: 921,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/converter/page.tsx",
-                            lineNumber: 902,
+                            lineNumber: 905,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/converter/page.tsx",
-                        lineNumber: 901,
+                        lineNumber: 904,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -5668,7 +5687,7 @@ const ConverterPageComponent = ()=>{
                                             children: "Stay Informed"
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 984,
+                                            lineNumber: 987,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -5676,7 +5695,7 @@ const ConverterPageComponent = ()=>{
                                             children: "Smart Alerts"
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 985,
+                                            lineNumber: 988,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -5684,13 +5703,13 @@ const ConverterPageComponent = ()=>{
                                             children: "Never Miss"
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 986,
+                                            lineNumber: 989,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 983,
+                                    lineNumber: 986,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5700,12 +5719,12 @@ const ConverterPageComponent = ()=>{
                                         children: "Need Rate Alerts?"
                                     }, void 0, false, {
                                         fileName: "[project]/app/converter/page.tsx",
-                                        lineNumber: 989,
+                                        lineNumber: 992,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 988,
+                                    lineNumber: 991,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5713,7 +5732,7 @@ const ConverterPageComponent = ()=>{
                                     children: "Get notified when the rate hits your target. Never miss a good exchange opportunity."
                                 }, void 0, false, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 993,
+                                    lineNumber: 996,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5729,19 +5748,19 @@ const ConverterPageComponent = ()=>{
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 999,
+                                                        lineNumber: 1002,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "Set Rate Alert"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/converter/page.tsx",
-                                                lineNumber: 998,
+                                                lineNumber: 1001,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 997,
+                                            lineNumber: 1000,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5755,36 +5774,36 @@ const ConverterPageComponent = ()=>{
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/converter/page.tsx",
-                                                        lineNumber: 1005,
+                                                        lineNumber: 1008,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "View Predictions"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/converter/page.tsx",
-                                                lineNumber: 1004,
+                                                lineNumber: 1007,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/converter/page.tsx",
-                                            lineNumber: 1003,
+                                            lineNumber: 1006,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/converter/page.tsx",
-                                    lineNumber: 996,
+                                    lineNumber: 999,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/converter/page.tsx",
-                            lineNumber: 982,
+                            lineNumber: 985,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/converter/page.tsx",
-                        lineNumber: 981,
+                        lineNumber: 984,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -5795,7 +5814,7 @@ const ConverterPageComponent = ()=>{
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Footer"], {}, void 0, false, {
                 fileName: "[project]/app/converter/page.tsx",
-                lineNumber: 1013,
+                lineNumber: 1016,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

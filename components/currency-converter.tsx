@@ -169,6 +169,10 @@ export function CurrencyConverter() {
             <span className="font-semibold text-foreground">{currentRate.toFixed(2)} LRD per USD</span>
           </div>
           <div className="flex justify-between text-sm">
+            <span className="text-muted-foreground">Applied Rate</span>
+            <span className="font-medium text-foreground">{currentRate.toFixed(2)} LRD/USD (market)</span>
+          </div>
+          <div className="flex justify-between text-sm">
             <span className="text-muted-foreground">Last Updated</span>
             <span className="font-medium text-foreground">{lastUpdate}</span>
           </div>
@@ -177,6 +181,20 @@ export function CurrencyConverter() {
               Low-data mode: updates are less frequent to save bandwidth.
             </div>
           )}
+        </div>
+        <div className="rounded-lg border border-border/60 p-4 text-sm text-muted-foreground space-y-1">
+          <div className="flex justify-between">
+            <span>Original amount</span>
+            <span className="font-medium text-foreground">
+              {activeInput === "usd" ? `$${usdAmount || "0.00"}` : `L$${lrdAmount || "0.00"}`}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>Resulting amount</span>
+            <span className="font-medium text-foreground">
+              {activeInput === "usd" ? `L$${lrdAmount || "0.00"}` : `$${usdAmount || "0.00"}`}
+            </span>
+          </div>
         </div>
 
         <p className="text-xs text-muted-foreground text-center leading-relaxed">

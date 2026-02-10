@@ -157,6 +157,10 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
             <p className="text-sm text-muted-foreground">© 2025 TrueRate-Liberia. All rights reserved.</p>
             <p className="text-xs text-muted-foreground">
+              TrueRate Liberia provides indicative FX information for transparency and education. We are not a bank,
+              money transfer service, or licensed FX dealer. Always confirm rates with your provider.
+            </p>
+            <p className="text-xs text-muted-foreground">
               Built by{" "}
               <a
                 href="https://huix-2099.vercel.app"

@@ -316,6 +316,9 @@ const ConverterPageComponent = () => {
                             : "—"}{" "}
                         LRD/USD
                       </div>
+                      <div className="text-xs text-muted-foreground">
+                        Market (street) rate • Updated {lastUpdate || "just now"}
+                      </div>
                       {useCustomRate && (
                         <div className="text-xs text-muted-foreground">Custom rate active</div>
                       )}

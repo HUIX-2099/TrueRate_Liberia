@@ -25,5 +25,6 @@
   "/privacy/page": "app/privacy/page.js",
   "/rates/page": "app/rates/page.js",
   "/report-fraud/page": "app/report-fraud/page.js",
-  "/tools/page": "app/tools/page.js"
+  "/tools/page": "app/tools/page.js",
+  "/tools/remittance/page": "app/tools/remittance/page.js"
 }

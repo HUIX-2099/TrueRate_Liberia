@@ -3,12 +3,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
 
 const trustPoints = [
-  "Updated every 5 minutes with real market data",
-  "Over 500 verified money changers",
-  "Community-driven fraud reporting system",
+  "Indicative market (street) rates with update timestamps",
+  "Transparent sources and update frequency disclosures",
+  "Fraud reporting and safety guidance for users",
   "Works offline with PWA technology",
   "SMS alerts for feature phone users",
-  "Endorsed by local business associations",
+  "Independent, informational platform (not a bank or money transfer service)",
 ]
 
 export function TrustSignals() {
