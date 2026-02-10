@@ -49,8 +49,11 @@ export async function GET() {
       timestamp: new Date().toISOString(),
     })
   } catch (error) {
-    console.error("[v0] Error in live rates API:", error)
-    return NextResponse.json({ error: "Failed to fetch rates" }, { status: 500 })
+    console.error("Best rate API error:", error)
+    return NextResponse.json(
+      { error: "Unable to fetch best rate" },
+      { status: 500 }
+    )
   }
 }
 

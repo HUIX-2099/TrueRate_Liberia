@@ -24,7 +24,7 @@ async function fetchLiveRate(): Promise<ExchangeRateData> {
     })
 
     if (!response.ok) {
-      throw new Error("Failed to fetch exchange rate")
+      throw new Error(`Request failed: ${response.status}`)
     }
 
     const data = await response.json()

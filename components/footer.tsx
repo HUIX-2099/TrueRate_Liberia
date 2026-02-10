@@ -11,15 +11,22 @@ export function Footer() {
     <footer className="border-t border-border/60 bg-muted/20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
-          <div className="space-y-3">
-            <div className="flex items-center justify-center md:justify-start">
-              <div className="flex h-12 w-12 sm:h-[70px] sm:w-[70px] items-center justify-center overflow-hidden">
+          <div className="space-y-3 -mt-[20px]">
+            <div className="flex items-start justify-center md:justify-start -mt-[30px]">
+              <div className="flex w-full max-w-[420px] items-center justify-center overflow-hidden mx-auto md:mx-0">
                 <Image
-                  src="/logos/Logo%201.png"
+                  src="/logos/logo-5-light.png"
                   alt="TrueRate logo"
-                  width={70}
-                  height={70}
-                  className="h-full w-full object-contain"
+                  width={420}
+                  height={180}
+                  className="h-auto w-full object-contain dark:hidden"
+                />
+                <Image
+                  src="/logos/logo-5-dark.png"
+                  alt="TrueRate logo"
+                  width={420}
+                  height={180}
+                  className="hidden h-auto w-full object-contain dark:block"
                 />
               </div>
             </div>

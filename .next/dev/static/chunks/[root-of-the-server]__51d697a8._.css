@@ -985,8 +985,24 @@
     margin-top: calc(var(--spacing) * -1);
   }
 
+  .-mt-2 {
+    margin-top: calc(var(--spacing) * -2);
+  }
+
   .-mt-4 {
     margin-top: calc(var(--spacing) * -4);
+  }
+
+  .-mt-\[10px\] {
+    margin-top: -10px;
+  }
+
+  .-mt-\[20px\] {
+    margin-top: -20px;
+  }
+
+  .-mt-\[30px\] {
+    margin-top: -30px;
   }
 
   .mt-0\.5 {
@@ -1340,8 +1356,20 @@
     height: 1.15rem;
   }
 
+  .h-\[30px\] {
+    height: 30px;
+  }
+
   .h-\[70px\] {
     height: 70px;
+  }
+
+  .h-\[90px\] {
+    height: 90px;
+  }
+
+  .h-\[150px\] {
+    height: 150px;
   }
 
   .h-\[300px\] {
@@ -1572,12 +1600,24 @@
     width: calc(var(--spacing) * 80);
   }
 
+  .w-\[30px\] {
+    width: 30px;
+  }
+
   .w-\[70px\] {
     width: 70px;
   }
 
+  .w-\[90px\] {
+    width: 90px;
+  }
+
   .w-\[100px\] {
     width: 100px;
+  }
+
+  .w-\[150px\] {
+    width: 150px;
   }
 
   .w-auto {
@@ -1630,6 +1670,10 @@
 
   .max-w-\[60vw\] {
     max-width: 60vw;
+  }
+
+  .max-w-\[420px\] {
+    max-width: 420px;
   }
 
   .max-w-\[calc\(100\%-2rem\)\] {
@@ -5401,6 +5445,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:scale-\[1\.02\]:hover {
+      scale: 1.02;
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:scale-\[1\.03\]:hover {
+      scale: 1.03;
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:border-muted-foreground\/50:hover {
       border-color: var(--muted-foreground);
     }
@@ -7022,6 +7078,24 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:h-\[70px\] {
+      height: 70px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:h-\[75px\] {
+      height: 75px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:h-\[150px\] {
+      height: 150px;
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:h-\[520px\] {
       height: 520px;
     }
@@ -7048,6 +7122,24 @@
   @media (min-width: 40rem) {
     .sm\:w-40 {
       width: calc(var(--spacing) * 40);
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-\[70px\] {
+      width: 70px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-\[75px\] {
+      width: 75px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-\[150px\] {
+      width: 150px;
     }
   }
 
@@ -7871,6 +7963,14 @@
     .\@md\/field-group\:has-\[\>\[data-slot\=field-content\]\]\:items-start:has( > [data-slot="field-content"]) {
       align-items: flex-start;
     }
+  }
+
+  .dark\:block:is(.dark *) {
+    display: block;
+  }
+
+  .dark\:hidden:is(.dark *) {
+    display: none;
   }
 
   .dark\:scale-0:is(.dark *) {
