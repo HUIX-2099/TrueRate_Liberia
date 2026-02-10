@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
@@ -9,6 +9,9 @@ export async function GET(request: Request) {
 
   if (![lat, lng].every((v) => Number.isFinite(v))) {
     return NextResponse.json({ error: "Invalid coordinates" }, { status: 400 })
+  }
+  if (Math.abs(lat) > 90 || Math.abs(lng) > 180) {
+    return NextResponse.json({ error: "Coordinates out of range" }, { status: 400 })
   }
 
   if (!GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY === "demo") {

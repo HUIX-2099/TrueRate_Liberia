@@ -8,7 +8,8 @@ export const dynamic = "force-dynamic"
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
-    const days = Number.parseInt(searchParams.get("days") || "30")
+    const requestedDays = Number.parseInt(searchParams.get("days") || "30")
+    const days = Number.isFinite(requestedDays) ? Math.min(Math.max(requestedDays, 1), 30) : 30
 
     // Generate historical data for ML training
     const historicalData = generateHistoricalData(90)

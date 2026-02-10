@@ -110,6 +110,11 @@ const ConverterPageComponent = () => {
   const liveRateValue = liveRate ?? 0
   const formatLrdFromUsd = (usd: number) =>
     isLiveRateReady ? (usd * liveRateValue).toLocaleString() : "—"
+  const lrdRate = useCustomRate && Number(customRate)
+    ? Number(customRate)
+    : typeof liveRate === "number"
+      ? liveRate
+      : ratesFromUSD.LRD
 
   // Throttled API call for live rate
   const fetchRate = useThrottle(useCallback(async () => {
@@ -451,10 +456,16 @@ const ConverterPageComponent = () => {
                 <div className="mt-6 p-4 rounded-xl bg-muted/50 text-sm">
                   <div className="flex flex-wrap justify-between gap-2 text-muted-foreground">
                     <span>
-                      1 {fromCurrency} = {(ratesFromUSD[toCurrency] / ratesFromUSD[fromCurrency]).toFixed(4)} {toCurrency}
+                      1 {fromCurrency} = {(
+                        (toCurrency === "LRD" ? lrdRate : ratesFromUSD[toCurrency]) /
+                        (fromCurrency === "LRD" ? lrdRate : ratesFromUSD[fromCurrency])
+                      ).toFixed(4)} {toCurrency}
                     </span>
                     <span>
-                      1 {toCurrency} = {(ratesFromUSD[fromCurrency] / ratesFromUSD[toCurrency]).toFixed(6)} {fromCurrency}
+                      1 {toCurrency} = {(
+                        (fromCurrency === "LRD" ? lrdRate : ratesFromUSD[fromCurrency]) /
+                        (toCurrency === "LRD" ? lrdRate : ratesFromUSD[toCurrency])
+                      ).toFixed(6)} {fromCurrency}
                     </span>
                   </div>
                 </div>

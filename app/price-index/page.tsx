@@ -1,6 +1,3 @@
-// Run: npm install xlsx   (or pnpm add xlsx / yarn add xlsx)
-// Optional types: npm install --save-dev @types/xlsx
-// If XLSX parsing is tricky, consider fallback: npm install exceljs
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -35,7 +32,17 @@ export default async function PriceIndexPage() {
     momChange: -0.4,
     referenceMonth: "December 2025",
   }
-  const effectiveData = cpiData ?? fallback
+  const normalizedCpi = cpiData
+    ? {
+        cpi: cpiData?.cpi ?? null,
+        yoyInflation: cpiData?.yoyInflation ?? cpiData?.inflationYoY ?? null,
+        momChange: cpiData?.momChange ?? cpiData?.inflationMoM ?? null,
+        referenceMonth: cpiData?.referenceMonth ?? cpiData?.lastMonth ?? null,
+        source: cpiData?.source,
+        excelUrl: cpiData?.excelUrl,
+      }
+    : null
+  const effectiveData = normalizedCpi ?? fallback
   const lastUpdated = effectiveData.referenceMonth ?? null
 
   return (
@@ -94,15 +101,15 @@ export default async function PriceIndexPage() {
             <div className="mt-6 text-center text-xs text-muted-foreground">
               Source:{" "}
               <a
-                href={cpiData?.excelUrl ?? "https://lisgis.gov.lr/pricestats.php"}
+                href={normalizedCpi?.excelUrl ?? "https://lisgis.gov.lr/pricestats.php"}
                 target="_blank"
                 rel="noreferrer"
                 className="text-primary hover:underline"
               >
-                {cpiData?.source ? `${cpiData.source} CPI Release` : "LISGIS CPI Release"}
+                {normalizedCpi?.source ? `${normalizedCpi.source} CPI Release` : "LISGIS CPI Release"}
               </a>
             </div>
-            {!cpiData?.cpi && (
+            {!normalizedCpi?.cpi && (
               <div className="mt-2 text-center text-sm text-muted-foreground">
                 Latest official data unavailable – showing last known CPI (Dec 2025).
               </div>

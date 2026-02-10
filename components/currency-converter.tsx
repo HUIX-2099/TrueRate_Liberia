@@ -13,41 +13,68 @@ export function CurrencyConverter() {
   const [activeInput, setActiveInput] = useState<"usd" | "lrd">("usd")
   const [currentRate, setCurrentRate] = useState<number>(180)
   const [lastUpdate, setLastUpdate] = useState<string>("Loading...")
+  const [lowDataMode, setLowDataMode] = useState(false)
+  const parseAmount = (value: string) => {
+    const normalized = value.replace(/,/g, "").trim()
+    const parsed = Number.parseFloat(normalized)
+    return Number.isFinite(parsed) ? parsed : null
+  }
+  const roundTo2 = (value: number) => Math.round(value * 100) / 100
 
   useEffect(() => {
-    if (usdAmount && activeInput === "usd") {
-      const numValue = Number.parseFloat(usdAmount)
-      if (!isNaN(numValue)) {
-        setLrdAmount((numValue * currentRate).toFixed(2))
+    if (activeInput === "usd") {
+      const numValue = parseAmount(usdAmount)
+      if (numValue !== null && currentRate > 0) {
+        setLrdAmount(roundTo2(numValue * currentRate).toFixed(2))
+      } else {
+        setLrdAmount("")
+      }
+    } else {
+      const numValue = parseAmount(lrdAmount)
+      if (numValue !== null && currentRate > 0) {
+        setUsdAmount(roundTo2(numValue / currentRate).toFixed(2))
+      } else {
+        setUsdAmount("")
       }
     }
-  }, [currentRate])
+  }, [currentRate, activeInput])
 
   useEffect(() => {
     async function fetchRate() {
       try {
+        if (typeof document !== "undefined" && document.hidden) return
         const response = await fetch("/api/rates/live")
+        if (!response.ok) {
+          throw new Error(`Request failed: ${response.status}`)
+        }
         const data = await response.json()
         if (typeof data.rate === "number") {
           setCurrentRate(data.rate)
-          setLastUpdate("Just now")
+          const updatedAt = data.timestamp ? new Date(data.timestamp) : new Date()
+          setLastUpdate(updatedAt.toLocaleTimeString())
         }
       } catch (error) {
         console.error("[v0] Error fetching rate:", error)
+        setLastUpdate("Offline")
       }
     }
 
+    const connection = typeof navigator !== "undefined" ? (navigator as any).connection : null
+    const isLowBandwidth = Boolean(connection?.saveData) || ["slow-2g", "2g"].includes(connection?.effectiveType)
+    setLowDataMode(isLowBandwidth)
+    const refreshMs = isLowBandwidth ? 300000 : 60000
+
     fetchRate()
-    const interval = setInterval(fetchRate, 60000) // Update every minute
+    const interval = setInterval(fetchRate, refreshMs)
     return () => clearInterval(interval)
   }, [])
 
   const handleUsdChange = (value: string) => {
     setUsdAmount(value)
     setActiveInput("usd")
-    const numValue = Number.parseFloat(value)
-    if (!isNaN(numValue)) {
-      setLrdAmount((numValue * currentRate).toFixed(2))
+    const numValue = parseAmount(value)
+    if (numValue !== null && currentRate > 0) {
+      setLrdAmount(roundTo2(numValue * currentRate).toFixed(2))
     } else {
       setLrdAmount("")
     }
@@ -56,19 +83,32 @@ export function CurrencyConverter() {
   const handleLrdChange = (value: string) => {
     setLrdAmount(value)
     setActiveInput("lrd")
-    const numValue = Number.parseFloat(value)
-    if (!isNaN(numValue)) {
-      setUsdAmount((numValue / currentRate).toFixed(2))
+    const numValue = parseAmount(value)
+    if (numValue !== null && currentRate > 0) {
+      setUsdAmount(roundTo2(numValue / currentRate).toFixed(2))
     } else {
       setUsdAmount("")
     }
   }
 
   const swapCurrencies = () => {
-    const tempUsd = usdAmount
-    setUsdAmount(lrdAmount)
-    setLrdAmount(tempUsd)
-    setActiveInput(activeInput === "usd" ? "lrd" : "usd")
+    if (activeInput === "usd") {
+      setActiveInput("lrd")
+      const numValue = parseAmount(lrdAmount)
+      if (numValue !== null && currentRate > 0) {
+        setUsdAmount(roundTo2(numValue / currentRate).toFixed(2))
+      } else {
+        setUsdAmount("")
+      }
+    } else {
+      setActiveInput("usd")
+      const numValue = parseAmount(usdAmount)
+      if (numValue !== null && currentRate > 0) {
+        setLrdAmount(roundTo2(numValue * currentRate).toFixed(2))
+      } else {
+        setLrdAmount("")
+      }
+    }
   }
 
   return (
@@ -132,6 +172,11 @@ export function CurrencyConverter() {
             <span className="text-muted-foreground">Last Updated</span>
             <span className="font-medium text-foreground">{lastUpdate}</span>
           </div>
+          {lowDataMode && (
+            <div className="text-xs text-muted-foreground">
+              Low-data mode: updates are less frequent to save bandwidth.
+            </div>
+          )}
         </div>
 
         <p className="text-xs text-muted-foreground text-center leading-relaxed">

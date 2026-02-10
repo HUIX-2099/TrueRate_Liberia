@@ -153,9 +153,16 @@ export function GoogleMap({
         label: marker.label ? { text: marker.label, className: "map-label" } : undefined,
       })
       gMarker.addListener("click", () => {
-        infoWindow.setContent(
-          `<div style="font-weight:600">${marker.name}</div><div style="color:#64748b">${marker.label ?? ""}</div>`,
-        )
+        const container = document.createElement("div")
+        const nameEl = document.createElement("div")
+        nameEl.style.fontWeight = "600"
+        nameEl.textContent = marker.name
+        const labelEl = document.createElement("div")
+        labelEl.style.color = "#64748b"
+        labelEl.textContent = marker.label ?? ""
+        container.appendChild(nameEl)
+        container.appendChild(labelEl)
+        infoWindow.setContent(container)
         infoWindow.open({ anchor: gMarker, map })
       })
       markersRef.current.push(gMarker)

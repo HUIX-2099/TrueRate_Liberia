@@ -39,11 +39,15 @@ export function BestRateWidget() {
     async function fetchBestRate() {
       try {
         const res = await fetch('/api/rates/live')
+        if (!res.ok) {
+          throw new Error(`Request failed: ${res.status}`)
+        }
         const data = await res.json()
+        const resolvedRate = typeof data?.rate === "number" ? data.rate : 198.5
         
         // Simulate best rate data with changer info
         setBestRate({
-          rate: data.rate || 198.50,
+          rate: resolvedRate,
           changerName: "Nearby changer will appear",
           location: "Duala Market, Paynesville",
           distanceMinutes: 5,
@@ -52,9 +56,9 @@ export function BestRateWidget() {
           lng: -10.7986,
           rating: null,
           openNow: null,
-          lastUpdated: new Date().toISOString(),
-          trend: 'up',
-          changePercent: 0.8
+          lastUpdated: data?.timestamp ?? new Date().toISOString(),
+          trend: 'stable',
+          changePercent: 0
         })
       } catch (error) {
         console.error('Error fetching best rate:', error)

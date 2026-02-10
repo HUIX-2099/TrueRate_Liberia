@@ -66,14 +66,14 @@ const RATE_SOURCES = [
     {
         name: "Open Exchange Rates",
         url: "https://open.er-api.com/v6/latest/USD",
-        parser: (data)=>data?.rates?.LRD || null,
+        parser: (data)=>data?.rates?.LRD ?? data?.rates?.lrd ?? null,
         weight: 1.0
     },
     // Exchange Rate API - Free
     {
         name: "ExchangeRate API",
         url: "https://api.exchangerate-api.com/v4/latest/USD",
-        parser: (data)=>data?.rates?.LRD || null,
+        parser: (data)=>data?.rates?.LRD ?? data?.rates?.lrd ?? null,
         weight: 0.9
     }
 ];
@@ -178,14 +178,19 @@ async function GET() {
         const aggregatedData = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2f$multi$2d$source$2d$rates$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["getAggregatedRate"])();
         // Simulate money changer rates with slight variations
         const baseRate = aggregatedData.rate;
+        const now = new Date().toISOString();
         const changers = [
             {
                 id: "1",
+                name: "Central Bank of Liberia",
                 location: "Broad Street, Monrovia",
                 buyRate: baseRate - 2,
                 sellRate: baseRate + 2,
                 rating: 4.8,
-                verified: true
+                verified: true,
+                reviews: 1250,
+                trend: "stable",
+                lastUpdate: now
             },
             {
                 id: "2",
@@ -194,7 +199,10 @@ async function GET() {
                 buyRate: baseRate - 1.5,
                 sellRate: baseRate + 2.5,
                 rating: 4.6,
-                verified: true
+                verified: true,
+                reviews: 892,
+                trend: "up",
+                lastUpdate: now
             },
             {
                 id: "3",
@@ -203,7 +211,10 @@ async function GET() {
                 buyRate: baseRate - 3,
                 sellRate: baseRate + 1,
                 rating: 4.9,
-                verified: true
+                verified: true,
+                reviews: 634,
+                trend: "down",
+                lastUpdate: now
             }
         ];
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
@@ -216,7 +227,7 @@ async function GET() {
                 timestamp: aggregatedData.timestamp
             },
             changers,
-            timestamp: new Date().toISOString()
+            timestamp: now
         });
     } catch (error) {
         console.error("Best rate API error:", error);

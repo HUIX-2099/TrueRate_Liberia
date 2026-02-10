@@ -66,14 +66,14 @@ const RATE_SOURCES = [
     {
         name: "Open Exchange Rates",
         url: "https://open.er-api.com/v6/latest/USD",
-        parser: (data)=>data?.rates?.LRD || null,
+        parser: (data)=>data?.rates?.LRD ?? data?.rates?.lrd ?? null,
         weight: 1.0
     },
     // Exchange Rate API - Free
     {
         name: "ExchangeRate API",
         url: "https://api.exchangerate-api.com/v4/latest/USD",
-        parser: (data)=>data?.rates?.LRD || null,
+        parser: (data)=>data?.rates?.LRD ?? data?.rates?.lrd ?? null,
         weight: 0.9
     }
 ];

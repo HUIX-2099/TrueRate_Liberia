@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 import { Gift, Copy, Check, Users, MessageCircle, Send, Star, Zap } from "lucide-react"
 import { useAuth } from "@/lib/auth/auth-context"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -18,10 +19,10 @@ export function ReferralProgram() {
 
   // Generate referral code based on user
   const referralCode = user?.id 
-    ? `TR-${user.name.substring(0, 2).toUpperCase()}${user.id.substring(0, 4).toUpperCase()}`
+    ? `TR-${(user.name?.substring(0, 2) || "TR").toUpperCase()}${user.id.substring(0, 4).toUpperCase()}`
     : 'TR-GUEST'
 
-  const referralLink = `https://truerate-liberia.com/join?ref=${referralCode}`
+  const referralLink = `https://truerate-liberia.com/auth/signup?ref=${referralCode}`
 
   const copyCode = async () => {
     try {
@@ -191,8 +192,8 @@ export function ReferralProgram() {
             <p className="text-sm text-muted-foreground mb-2">
               Sign in to track your referrals and earn rewards
             </p>
-            <Button variant="outline" size="sm">
-              Sign In
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/auth/signin">Sign In</Link>
             </Button>
           </div>
         )}

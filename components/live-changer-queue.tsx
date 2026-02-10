@@ -135,6 +135,9 @@ export function LiveChangerQueue() {
             <CardDescription>
               Real-time availability from verified changers
             </CardDescription>
+            <div className="text-xs text-muted-foreground">
+              Demo data for illustration only. Live integrations are in progress.
+            </div>
           </div>
           <div className="flex items-center gap-2">
             <Badge variant="outline" className="gap-1">

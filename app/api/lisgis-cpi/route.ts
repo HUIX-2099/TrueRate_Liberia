@@ -122,7 +122,6 @@ export async function GET() {
         const rowText = $(row).text().replace(/\s+/g, " ").trim()
         const lower = rowText.toLowerCase()
         if (!lower.includes("consumer price index") && !lower.includes("cpi")) return null
-        if (!lower.includes("december") || !lower.includes("2025") || !lower.includes("2026-01")) return null
         const date = parseMonthYear(rowText)
         const link = $(row)
           .find('a[href*="Liberia_CPI_"][href$=".xlsx"], a[href*="Liberia_CPI_"][href$=".xls"]')

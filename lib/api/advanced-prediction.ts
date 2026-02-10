@@ -18,13 +18,11 @@ function smaPredict(data: number[], periods: number): number[] {
 // Exponential Moving Average (more weight on recent data)
 function emaPredict(data: number[], periods: number): number[] {
   const predictions: number[] = []
-  const alpha = 0.3 // Smoothing factor
-
-  let ema = data[data.length - 1]
+  let ema = data[data.length - 1] ?? 0
   for (let i = 0; i < periods; i++) {
     predictions.push(ema)
     // Assume slight trend continuation
-    const trend = data[data.length - 1] - data[data.length - 2]
+    const trend = data.length >= 2 ? data[data.length - 1] - data[data.length - 2] : 0
     ema = ema + trend * 0.5
   }
   return predictions
@@ -42,7 +40,11 @@ function linearRegressionPredict(data: number[], periods: number): number[] {
   const sumXY = x.reduce((sum, xi, i) => sum + xi * y[i], 0)
   const sumX2 = x.reduce((sum, xi) => sum + xi * xi, 0)
 
-  const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX)
+  const denominator = n * sumX2 - sumX * sumX
+  if (denominator === 0 || n === 0) {
+    return Array.from({ length: periods }, () => data[data.length - 1] ?? 0)
+  }
+  const slope = (n * sumXY - sumX * sumY) / denominator
   const intercept = (sumY - slope * sumX) / n
 
   const predictions: number[] = []
@@ -74,10 +76,12 @@ function seasonalPredict(data: number[], periods: number): number[] {
   for (let i = 0; i < periods; i++) {
     const seasonalIndex = (data.length + i) % seasonalPeriod
     const seasonalValues = data.filter((_, idx) => idx % seasonalPeriod === seasonalIndex)
-    const seasonal = seasonalValues.reduce((a, b) => a + b, 0) / seasonalValues.length
+    const seasonal = seasonalValues.length
+      ? seasonalValues.reduce((a, b) => a + b, 0) / seasonalValues.length
+      : data[data.length - 1] ?? 0
 
     // Add trend
-    const recentTrend = data[data.length - 1] - data[data.length - 8]
+    const recentTrend = data.length >= 8 ? data[data.length - 1] - data[data.length - 8] : 0
     predictions.push(seasonal + (recentTrend / 7) * i)
   }
   return predictions
@@ -101,6 +105,9 @@ export interface PredictionResult {
 
 export function generateAdvancedPredictions(historicalData: Array<{ rate: number }>): PredictionResult[] {
   const rates = historicalData.map((d) => d.rate)
+  if (rates.length === 0) {
+    return []
+  }
 
   // Get predictions from all models
   const allPredictions = MODELS.map((model) => ({

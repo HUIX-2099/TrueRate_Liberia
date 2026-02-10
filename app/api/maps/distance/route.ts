@@ -24,6 +24,14 @@ export async function GET(request: Request) {
   if (![originLat, originLng, destLat, destLng].every((v) => Number.isFinite(v))) {
     return NextResponse.json({ error: "Invalid coordinates" }, { status: 400 })
   }
+  if (
+    Math.abs(originLat) > 90 ||
+    Math.abs(destLat) > 90 ||
+    Math.abs(originLng) > 180 ||
+    Math.abs(destLng) > 180
+  ) {
+    return NextResponse.json({ error: "Coordinates out of range" }, { status: 400 })
+  }
 
   if (GOOGLE_MAPS_API_KEY) {
     const params = new URLSearchParams({

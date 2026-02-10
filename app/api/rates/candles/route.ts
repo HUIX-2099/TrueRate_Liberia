@@ -97,7 +97,8 @@ function generatePredictions(lastClose: number, days: number = 7): Prediction[] 
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
-  const days = parseInt(searchParams.get("days") || "60")
+  const requestedDays = parseInt(searchParams.get("days") || "60")
+  const days = Number.isFinite(requestedDays) ? Math.min(Math.max(requestedDays, 1), 365) : 60
   
   // Get current rate directly from aggregator (no self-fetch)
   let currentRate = 177.0 // Default fallback rate
@@ -110,19 +111,41 @@ export async function GET(request: NextRequest) {
     // Use default rate
   }
   
-  const candles = generateCandleData(Math.min(days, 365), currentRate)
+  const candles = generateCandleData(days, currentRate)
   const lastCandle = candles[candles.length - 1]
   const predictions = generatePredictions(lastCandle?.close || currentRate)
   
   // Calculate statistics
   const closes = candles.map(c => c.close)
+  if (closes.length === 0) {
+    return NextResponse.json({
+      candles,
+      predictions,
+      currentRate: currentRate,
+      stats: {
+        high: 0,
+        low: 0,
+        avgVolume: 0,
+        sma7: 0,
+        sma30: 0,
+        rsi: 50,
+      },
+      timestamp: new Date().toISOString(),
+    })
+  }
   const high = Math.max(...candles.map(c => c.high))
   const low = Math.min(...candles.map(c => c.low))
   const avgVolume = candles.reduce((sum, c) => sum + c.volume, 0) / candles.length
   
   // Simple moving averages
-  const sma7 = closes.slice(-7).reduce((a, b) => a + b, 0) / 7
-  const sma30 = closes.slice(-30).reduce((a, b) => a + b, 0) / Math.min(30, closes.length)
+  const sma7Window = Math.min(7, closes.length)
+  const sma7 = sma7Window
+    ? closes.slice(-sma7Window).reduce((a, b) => a + b, 0) / sma7Window
+    : 0
+  const sma30Window = Math.min(30, closes.length)
+  const sma30 = sma30Window
+    ? closes.slice(-sma30Window).reduce((a, b) => a + b, 0) / sma30Window
+    : 0
   
   // RSI calculation (simplified)
   const gains: number[] = []
@@ -137,10 +160,13 @@ export async function GET(request: NextRequest) {
       losses.push(Math.abs(change))
     }
   }
-  const avgGain = gains.reduce((a, b) => a + b, 0) / gains.length
-  const avgLoss = losses.reduce((a, b) => a + b, 0) / losses.length
-  const rs = avgLoss === 0 ? 100 : avgGain / avgLoss
-  const rsi = 100 - (100 / (1 + rs))
+  const avgGain = gains.length ? gains.reduce((a, b) => a + b, 0) / gains.length : 0
+  const avgLoss = losses.length ? losses.reduce((a, b) => a + b, 0) / losses.length : 0
+  let rsi = 50
+  if (gains.length && losses.length) {
+    const rs = avgLoss === 0 ? 100 : avgGain / avgLoss
+    rsi = 100 - (100 / (1 + rs))
+  }
   
   return NextResponse.json({
     candles,
