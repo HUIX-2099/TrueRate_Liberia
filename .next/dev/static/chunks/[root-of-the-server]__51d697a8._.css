@@ -1604,8 +1604,20 @@
     width: 30px;
   }
 
+  .w-\[58px\] {
+    width: 58px;
+  }
+
   .w-\[70px\] {
     width: 70px;
+  }
+
+  .w-\[78px\] {
+    width: 78px;
+  }
+
+  .w-\[88px\] {
+    width: 88px;
   }
 
   .w-\[90px\] {
@@ -1670,6 +1682,10 @@
 
   .max-w-\[60vw\] {
     max-width: 60vw;
+  }
+
+  .max-w-\[320px\] {
+    max-width: 320px;
   }
 
   .max-w-\[420px\] {
@@ -7078,6 +7094,24 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:h-12 {
+      height: calc(var(--spacing) * 12);
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:h-14 {
+      height: calc(var(--spacing) * 14);
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:h-16 {
+      height: calc(var(--spacing) * 16);
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:h-\[70px\] {
       height: 70px;
     }
@@ -7120,6 +7154,12 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:w-16 {
+      width: calc(var(--spacing) * 16);
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:w-40 {
       width: calc(var(--spacing) * 40);
     }
@@ -7132,8 +7172,26 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:w-\[74px\] {
+      width: 74px;
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:w-\[75px\] {
       width: 75px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-\[94px\] {
+      width: 94px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-\[104px\] {
+      width: 104px;
     }
   }
 
@@ -7152,6 +7210,12 @@
   @media (min-width: 40rem) {
     .sm\:max-w-\[180px\] {
       max-width: 180px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:max-w-\[380px\] {
+      max-width: 380px;
     }
   }
 
@@ -7503,6 +7567,24 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:h-12 {
+      height: calc(var(--spacing) * 12);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:h-14 {
+      height: calc(var(--spacing) * 14);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:h-20 {
+      height: calc(var(--spacing) * 20);
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:h-\[72px\] {
       height: 72px;
     }
@@ -7511,6 +7593,30 @@
   @media (min-width: 48rem) {
     .md\:h-\[500px\] {
       height: 500px;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-20 {
+      width: calc(var(--spacing) * 20);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-\[90px\] {
+      width: 90px;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-\[110px\] {
+      width: 110px;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-\[120px\] {
+      width: 120px;
     }
   }
 

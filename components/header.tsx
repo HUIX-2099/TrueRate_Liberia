@@ -154,7 +154,7 @@ const HeaderComponent = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
       <div className="container mx-auto flex h-16 md:h-[72px] items-center justify-between px-4 gap-3">
           <Link href="/" className="flex items-center min-w-0" aria-label="TrueRate Liberia home">
-            <div className="flex h-[90px] w-[90px] sm:h-[150px] sm:w-[150px] items-center justify-center overflow-hidden transition-transform duration-200 hover:scale-[1.03]">
+            <div className="flex h-12 w-[78px] sm:h-14 sm:w-[94px] md:h-14 md:w-[110px] items-center justify-center overflow-hidden rounded-xl bg-muted/40 p-1 shadow-sm transition-transform duration-200 hover:scale-[1.03]">
               <Image
                 src="/logos/logo-5-light.png"
                 alt="TrueRate logo"

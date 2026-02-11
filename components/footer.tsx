@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
           <div className="space-y-3 -mt-[20px]">
             <div className="flex items-start justify-center md:justify-start -mt-[30px]">
-              <div className="flex w-full max-w-[420px] items-center justify-center overflow-hidden mx-auto md:mx-0">
+              <div className="flex w-full max-w-[320px] sm:max-w-[380px] items-center justify-center overflow-hidden mx-auto md:mx-0 rounded-2xl bg-muted/30 p-2 shadow-sm">
                 <Image
                   src="/logos/logo-5-light.png"
                   alt="TrueRate logo"
@@ -156,10 +156,6 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border/60 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
             <p className="text-sm text-muted-foreground">© 2025 TrueRate-Liberia. All rights reserved.</p>
-            <p className="text-xs text-muted-foreground">
-              TrueRate Liberia provides indicative FX information for transparency and education. We are not a bank,
-              money transfer service, or licensed FX dealer. Always confirm rates with your provider.
-            </p>
             <p className="text-xs text-muted-foreground">
               Built by{" "}
               <a
