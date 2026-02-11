@@ -486,7 +486,7 @@ async function __TURBOPACK__default__export__(props) {
         const data = {
             alt: imageMetadata.alt,
             type: imageMetadata.contentType || 'image/png',
-            url: imageUrl + (idParam ? '/' + idParam : '') + "?ec1f6e93375ccd1f"
+            url: imageUrl + (idParam ? '/' + idParam : '') + "?51f82f6402861ff2"
         };
         const { size } = imageMetadata;
         if (size) {
