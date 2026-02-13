@@ -1,66 +1,32 @@
-[00:00:00.749] Server  LOG     ✓ Ready in 537ms
-[00:00:01.829] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:01.830] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:01.831] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:01.831] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:01.837] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:01.853] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:01.866] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:01.867] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:01.867] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:01.867] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:01.876] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:01.894] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:01.895] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:01.895] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:01.895] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:02.236] Browser LOG     Header render time: 32.20ms
-[00:00:02.236] Browser WARN    Image with src "/logos/logo-1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:02.236] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:02.236] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:00:02.236] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770990044337}
-[00:00:02.246] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RedirectBoundary>
-      <RedirectErrorBoundary router={{...}}>
-        <InnerLayoutRouter url="/map" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
-          <SegmentViewNode type="page" pagePath="map/page.tsx">
-            <SegmentTrieNode>
-            <ClientPageRoot Component={function MapPage} serverProvidedParams={{...}}>
-              <MapPage params={Promise} searchParams={Promise}>
-                <div className="min-h-scre...">
-                  <HeaderComponent>
-                    <header className="sticky top...">
-                      <div className="container ...">
-                        <LinkComponent href="/" className="flex items..." aria-label="TrueRate L...">
-                          <a className="flex items..." aria-label="TrueRate L..." ref={function} ...>
-                            <div
-+                             className="flex h-10 w-[70px] sm:h-12 sm:w-[90px] md:h-14 md:w-[110px] lg:h-16 lg:w-[130..."
--                             className="flex h-[88px] w-[118px] sm:h-[96px] sm:w-[134px] md:h-[96px] md:w-[150px] ite..."
-                            >
-                        ...
-                    ...
-                  ...
-          ...
-        ...
-
-[00:00:02.246] Browser LOG     Header render time: 69.40ms
-[00:00:02.246] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:02.246] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:00:02.246] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770990044422}
-[00:00:03.229] Browser LOG     Header render time: 50.40ms
-[00:00:03.229] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:03.231] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:00:03.231] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770990044449}
-[00:00:05.170] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[00:02:32.284] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/api/maps/nearby/[__metadata_id__]/route/app-paths-manifest.json'
+[00:02:35.300] Server  LOG     ○ Compiling /_error ...
+[00:02:58.595] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[00:03:05.114] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/map/page/build-manifest.json'
+[00:03:24.055] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/api/rates/live/[__metadata_id__]/route/app-paths-manifest.json'
+[00:03:44.058] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/api/rates/live/[__metadata_id__]/route/app-paths-manifest.json'
+[00:03:44.093] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/api/rates/live/[__metadata_id__]/route/app-paths-manifest.json'
+[00:04:17.901] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[00:04:17.936] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/manifest.webmanifest/[__metadata_id__]/route/app-paths-manifest.json'
+[00:04:17.975] Browser LOG     Header render time: 167077.30ms
+[00:04:17.975] Browser ERROR   Route error: {"name":"ChunkLoadError"}
+[00:04:17.975] Browser ERROR   Route error: {"name":"ChunkLoadError"}
+[00:04:17.975] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770993070272}
+[00:04:20.152] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[00:04:26.299] Browser ERROR   Google Maps JavaScript API error: ApiProjectMapError
+https://developers.google.com/maps/documentation/javascript/error-messages#api-project-map-error
+[00:04:27.082] Browser LOG     Header render time: 328185.50ms
+[00:04:27.082] Browser ERROR   Route error: {"name":"ChunkLoadError"}
+[00:04:27.083] Browser ERROR   Route error: {"name":"ChunkLoadError"}
+[00:04:27.083] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770993079377}
+[00:04:44.050] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/api/rates/live/[__metadata_id__]/route/app-paths-manifest.json'
+[00:04:46.981] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[00:04:57.881] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/manifest.webmanifest/[__metadata_id__]/route/app-paths-manifest.json'
+[00:05:03.194] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/manifest.webmanifest/[__metadata_id__]/route/app-paths-manifest.json'
+[00:08:05.214] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/map/page/build-manifest.json'
+[00:10:19.725] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[00:10:26.505] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[00:10:39.251] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[00:10:44.740] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/converter/page/build-manifest.json'
+[00:10:44.762] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/rates/page/build-manifest.json'
+[00:11:04.743] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/page/build-manifest.json'
+[05:00:09.856] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/julian/Documents/GitHub/TrueRate_Liberia/.next/dev/server/app/_not-found/page/build-manifest.json'

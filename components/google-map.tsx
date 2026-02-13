@@ -48,7 +48,9 @@ export function GoogleMap({
     const previousHandler = (window as typeof window & { gm_authFailure?: () => void }).gm_authFailure
     ;(window as typeof window & { gm_authFailure?: () => void }).gm_authFailure = () => {
       setStatus("error")
-      setErrorMessage("Google Maps authentication failed. Check API key and referrer restrictions.")
+      setErrorMessage(
+        "ApiProjectMapError: The API key or project could not be resolved. Create a new API key, enable billing, and add localhost to referrer restrictions in Google Cloud Console."
+      )
       if (previousHandler) previousHandler()
     }
     return () => {
@@ -97,14 +99,17 @@ export function GoogleMap({
     ])
       .then(() => {
         if (!isMounted || !mapRef.current) return
-        mapInstanceRef.current = new google.maps.Map(mapRef.current, {
+        const map = new google.maps.Map(mapRef.current, {
           center: fallbackCenter,
           zoom,
           mapTypeControl: false,
           fullscreenControl: false,
           streetViewControl: false,
         })
+        mapInstanceRef.current = map
         setStatus("ready")
+        // Trigger resize so map fills container (fixes display on tab focus / responsive)
+        setTimeout(() => google.maps.event.trigger(map, "resize"), 100)
         if (onReady && mapInstanceRef.current) {
           onReady(mapInstanceRef.current, userLocation)
         }
@@ -113,7 +118,14 @@ export function GoogleMap({
         console.error("Google Maps failed to load:", error)
         if (!isMounted) return
         setStatus("error")
-        setErrorMessage("Failed to load Google Maps. Verify API key, billing, and enabled APIs.")
+        const msg = String(error?.message ?? "")
+        if (msg.includes("ApiProjectMapError") || msg.includes("ApiProject")) {
+          setErrorMessage(
+            "ApiProjectMapError: The API key or project could not be resolved. Create a new API key in Google Cloud Console, enable billing, and add localhost to referrer restrictions."
+          )
+        } else {
+          setErrorMessage("Failed to load Google Maps. Verify API key, billing, and enabled APIs.")
+        }
       })
 
     return () => {
@@ -180,23 +192,23 @@ export function GoogleMap({
 
   if (status === "error") {
     return (
-      <div className={`flex min-h-[300px] flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-muted-foreground/30 bg-muted/20 p-6 text-center text-sm text-muted-foreground ${className ?? ""}`}>
+      <div className={`flex min-h-[300px] flex-col items-center justify-center gap-3 rounded-lg border border-dashed border-muted-foreground/30 bg-muted/20 p-6 text-center text-sm text-muted-foreground ${className ?? ""}`}>
         <p className="font-medium">{errorMessage ?? "Map unavailable."}</p>
-        <p className="text-xs">
-          For localhost: add <code className="rounded bg-muted px-1">http://localhost:3000/*</code> to API key referrer restrictions in Google Cloud Console.
+        <p className="text-xs max-w-md">
+          Fix: <a href="https://console.cloud.google.com/google/maps-apis" target="_blank" rel="noopener noreferrer" className="text-primary underline">Google Cloud Console</a> → Create/verify project → Enable Maps JavaScript API → Create API key → Add <code className="rounded bg-muted px-1">http://localhost:3000/*</code> to referrers → Enable billing.
         </p>
       </div>
     )
   }
 
   return (
-    <div className={`relative min-h-[300px] ${className ?? ""}`}>
+    <div className={`relative w-full min-h-[300px] block ${className ?? ""}`}>
       {status === "loading" && (
-        <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground bg-muted/30">
+        <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground bg-muted/30 z-10">
           Loading map…
         </div>
       )}
-      <div ref={mapRef} className="absolute inset-0 min-h-[300px]" />
+      <div ref={mapRef} className="absolute inset-0 w-full min-h-[300px]" />
     </div>
   )
 }

@@ -240,40 +240,40 @@ export default function MapPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Card className="overflow-hidden border-border/60 shadow-sm">
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <CardTitle className="text-2xl">Live Rate Map</CardTitle>
-                      <CardDescription>Tap markers for details • Pinch/scroll to zoom</CardDescription>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Badge variant="secondary" className="gap-2">
-                        <span className="h-2 w-2 rounded-full bg-secondary-foreground/80" />
-                        Verified
-                      </Badge>
-                      <Badge variant="outline" className="gap-2">
-                        <span className="h-2 w-2 rounded-full bg-muted-foreground/60" />
-                        Unverified
-                      </Badge>
-                    </div>
+                <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <CardTitle className="text-xl sm:text-2xl">Live Rate Map</CardTitle>
+                    <CardDescription>Tap markers for details • Pinch/scroll to zoom</CardDescription>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2 shrink-0">
+                    <Badge variant="secondary" className="gap-2">
+                      <span className="h-2 w-2 rounded-full bg-secondary-foreground/80" />
+                      Verified
+                    </Badge>
+                    <Badge variant="outline" className="gap-2">
+                      <span className="h-2 w-2 rounded-full bg-muted-foreground/60" />
+                      Unverified
+                    </Badge>
                   </div>
                 </CardHeader>
-                <CardContent className="p-0">
+                <CardContent className="p-0 block overflow-hidden">
                   {loading ? (
-                    <div className="h-[360px] sm:h-[520px] lg:h-[600px] flex items-center justify-center bg-muted/30">
+                    <div className="h-[360px] sm:h-[520px] lg:h-[600px] w-full flex items-center justify-center bg-muted/30">
                       <div className="text-center">
                         <div className="text-lg font-medium mb-2">Loading map...</div>
                         <div className="text-sm text-muted-foreground">Fetching live rates</div>
                       </div>
                     </div>
                   ) : (
-                    <GoogleMap
-                      markers={mapMarkers}
-                      zoom={10}
-                      useUserLocation
-                      onReady={handleMapReady}
-                      className="h-[360px] sm:h-[520px] lg:h-[600px]"
-                    />
+                    <div className="relative w-full h-[360px] sm:h-[520px] lg:h-[600px]">
+                      <GoogleMap
+                        markers={mapMarkers}
+                        zoom={10}
+                        useUserLocation
+                        onReady={handleMapReady}
+                        className="h-full w-full"
+                      />
+                    </div>
                   )}
                 </CardContent>
               </Card>
