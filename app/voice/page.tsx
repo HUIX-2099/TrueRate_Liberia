@@ -10,6 +10,7 @@ import { useState, useEffect } from "react"
 import dynamic from "next/dynamic"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { languages } from "@/lib/i18n/translations"
+import { useToast } from "@/hooks/use-toast"
 
 // Code splitting for heavy components
 const MarketWomanMode = dynamic(() => import("@/components/market-woman-mode").then(mod => ({ default: mod.MarketWomanMode })), {
@@ -18,6 +19,7 @@ const MarketWomanMode = dynamic(() => import("@/components/market-woman-mode").t
 })
 
 export default function VoiceAssistantPage() {
+  const { toast } = useToast()
   const { language, setLanguage, isMarketWomanMode, setMarketWomanMode, t } = useLanguage()
   const [currentRate, setCurrentRate] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
@@ -258,7 +260,12 @@ export default function VoiceAssistantPage() {
                       { name: "Mano", code: "MA" },
                       { name: "Kru", code: "KR" },
                     ].map((lang) => (
-                      <Button key={lang.code} variant="outline" className="justify-start bg-transparent" disabled>
+                      <Button
+                        key={lang.code}
+                        variant="outline"
+                        className="justify-start bg-transparent"
+                        onClick={() => toast({ title: "Coming soon", description: `${lang.name} voice support will be available in a future update.` })}
+                      >
                         <Badge variant="outline" className="mr-2">
                           {lang.code}
                         </Badge>

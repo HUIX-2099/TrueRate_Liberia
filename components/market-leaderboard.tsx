@@ -29,10 +29,9 @@ export function MarketLeaderboard() {
   const [loading, setLoading] = useState(true)
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
 
-  const fetchLeaderboard = useCallback(() => {
-    // Simulate fetching leaderboard data
-    setLoading(true)
-    const list = [
+  const [refreshing, setRefreshing] = useState(false)
+
+  const fallbackList: LeaderboardChanger[] = [
         {
           rank: 1,
           id: '1',
@@ -144,9 +143,35 @@ export function MarketLeaderboard() {
           verified: true
         }
       ]
-    setLeaderboard(list.slice(0, 7))
-    setLoading(false)
-    setLastUpdate(new Date())
+
+  const fetchLeaderboard = useCallback(async () => {
+    setRefreshing(true)
+    try {
+      const res = await fetch("/api/rates/live")
+      const data = await res.json()
+      if (res.ok && Array.isArray(data?.changers) && data.changers.length) {
+        const apiChangers: LeaderboardChanger[] = data.changers.map((c: any, idx: number) => ({
+          rank: idx + 1,
+          id: c.id || String(idx + 1),
+          name: c.name || "Changer",
+          location: c.location || "Monrovia",
+          rate: c.buyRate ?? c.sellRate ?? 198,
+          rateChange: 0.1 * (Math.random() - 0.5),
+          rating: c.rating ?? 4.5,
+          volume24h: 50000 + Math.floor(Math.random() * 100000),
+          verified: c.verified !== false,
+        }))
+        setLeaderboard(apiChangers.slice(0, 7))
+      } else {
+        setLeaderboard(fallbackList.slice(0, 7))
+      }
+    } catch {
+      setLeaderboard(fallbackList.slice(0, 7))
+    } finally {
+      setLoading(false)
+      setRefreshing(false)
+      setLastUpdate(new Date())
+    }
   }, [])
 
   useEffect(() => {
@@ -329,9 +354,10 @@ export function MarketLeaderboard() {
             size="sm" 
             className="gap-2 text-xs sm:text-sm"
             onClick={fetchLeaderboard}
+            disabled={refreshing}
           >
-            <RefreshCw className="h-4 w-4" />
-            Refresh Leaderboard
+            <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
+            {refreshing ? "Refreshing…" : "Refresh Leaderboard"}
           </Button>
         </div>
       </CardContent>

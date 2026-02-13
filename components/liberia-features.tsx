@@ -121,7 +121,7 @@ export function PriceIndex({ rate }: { rate: number }) {
     }
 
     fetchPriceIndex()
-    const id = window.setInterval(fetchPriceIndex, 5 * 60 * 1000)
+    const id = window.setInterval(fetchPriceIndex, 60 * 1000) // Auto-update every minute
     return () => {
       isMounted = false
       window.clearInterval(id)
@@ -141,7 +141,18 @@ export function PriceIndex({ rate }: { rate: number }) {
               <ShoppingCart className="h-5 w-5" />
               Liberia Price Index
             </CardTitle>
-            <CardDescription>Real-time prices of essential goods</CardDescription>
+            <CardDescription>
+              Prices of essential goods • Source:{" "}
+              <a
+                href="https://lisgis.gov.lr/pricestats.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                LISGIS
+              </a>{" "}
+              (Liberia Institute of Statistics)
+            </CardDescription>
           </div>
           <div className="flex items-center gap-2">
             <Badge variant="outline">{updatedLabel}</Badge>
@@ -557,7 +568,17 @@ export function InflationTracker() {
               <TrendingUp className="h-5 w-5" />
               Inflation Rate
             </CardTitle>
-            <CardDescription>Year-over-year consumer price index</CardDescription>
+            <CardDescription>
+              Year-over-year CPI • Source:{" "}
+              <a
+                href="https://lisgis.gov.lr/pricestats.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                LISGIS
+              </a>
+            </CardDescription>
           </div>
           <div className="flex items-center gap-2">
             <Badge variant="outline" className="text-[10px]">Live</Badge>

@@ -122,8 +122,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   img,
   video {
@@ -160,5 +165,13 @@
   select,
   textarea {
     font-size: 16px;
+  }
+  /* Mobile: prevent zoom on input focus (iOS) */
+  @media screen and (max-width: 768px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
   }
 }

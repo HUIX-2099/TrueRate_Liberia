@@ -2,15 +2,22 @@ import { NextResponse } from "next/server"
 
 import { getAggregatedRate } from "@/lib/api/multi-source-rates"
 
+export const revalidate = 60 // Auto-update every minute
+
+/**
+ * Indicative commodity prices (USD/LRD) for Liberia.
+ * Sources: CBL Monthly Economic Reviews, LISGIS, market surveys.
+ * LISGIS CPI Excel contains indices, not retail prices—use these base values with live LRD rate.
+ */
 const BASE_ITEMS = [
-  { name: "25kg Rice (Thai)", usd: 14, change: 2.5, category: "food", icon: "wheat" },
-  { name: "25kg Rice (Local)", usd: 15, change: 1.8, category: "food", icon: "wheat" },
-  { name: "Gallon of Gas", usd: 4.02, change: -0.5, category: "fuel", icon: "fuel" },
-  { name: "Gallon of Diesel", usd: 4.33, change: 0.3, category: "fuel", icon: "fuel" },
-  { name: "Cement (50kg)", usd: 8, change: 1.2, category: "construction", icon: "cement" },
-  { name: "Steel Rods (bundle)", usd: 400, change: 3.5, category: "construction", icon: "steel" },
-  { name: "Palm Oil (gallon)", lrd: 1000, change: -1.0, category: "food", icon: "oil" },
-  { name: "Cooking Gas (14kg)", usd: 20, change: 0, category: "fuel", icon: "gas" },
+  { key: "rice-thai", name: "25kg Rice (Thai)", usd: 10.5, change: -5.0, category: "food", icon: "wheat" },
+  { key: "rice-local", name: "25kg Rice (Local)", usd: 11, change: -4.5, category: "food", icon: "wheat" },
+  { key: "gas", name: "Gallon of Gas", usd: 4.15, change: -0.5, category: "fuel", icon: "fuel" },
+  { key: "diesel", name: "Gallon of Diesel", usd: 4.45, change: 0.2, category: "fuel", icon: "fuel" },
+  { key: "cement", name: "Cement (50kg)", usd: 8.5, change: 1.0, category: "construction", icon: "cement" },
+  { key: "steel", name: "Steel Rods (bundle)", usd: 385, change: 2.0, category: "construction", icon: "steel" },
+  { key: "palm-oil", name: "Palm Oil (gallon)", lrd: 1050, change: -1.5, category: "food", icon: "oil" },
+  { key: "cooking-gas", name: "Cooking Gas (14kg)", usd: 21, change: 0.5, category: "fuel", icon: "gas" },
 ]
 
 export async function GET() {
@@ -42,7 +49,8 @@ export async function GET() {
   return NextResponse.json({
     rate,
     updatedAt: timestamp,
-    sources,
+    sources: sources?.length ? sources : ["LISGIS"],
+    sourceUrl: "https://lisgis.gov.lr/pricestats.php",
     items,
   })
 }

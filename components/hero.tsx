@@ -65,7 +65,7 @@ export function Hero() {
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-[1.1]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-balance leading-[1.1]">
                 The most accurate{" "}
                 <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
                   exchange rates
@@ -177,12 +177,12 @@ export function Hero() {
               </div>
 
               {/* Footer */}
-              <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between">
+              <div className="mt-6 pt-4 border-t border-border/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
                 <span className="text-xs text-muted-foreground">Aggregated from 100+ sources</span>
                 <Button
                   size="sm"
                   variant="outline"
-                  className="h-8 px-3 text-xs sm:h-9 sm:px-4 sm:text-sm"
+                  className="h-8 px-3 text-xs sm:h-9 sm:px-4 sm:text-sm w-full sm:w-auto shrink-0"
                   aria-label="View rate history"
                   onClick={() => router.push("/analytics")}
                 >

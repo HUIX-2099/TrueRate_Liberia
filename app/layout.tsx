@@ -143,6 +143,8 @@ export const viewport: Viewport = {
   ],
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
 }
 
 export default function RootLayout({
@@ -162,7 +164,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
-      <body className={`font-sans antialiased pb-16 md:pb-0`}>
+      <body className="font-sans antialiased pb-16 md:pb-0 overflow-x-hidden min-h-screen">
         <Providers>
           {children}
         </Providers>

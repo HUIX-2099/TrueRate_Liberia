@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border/60 bg-muted/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
+        <div className="grid gap-8 sm:gap-10 md:gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
           <div className="space-y-3 -mt-[20px]">
             <div className="flex items-start justify-center md:justify-start -mt-[30px]">
               <div className="flex w-full max-w-[320px] sm:max-w-[380px] items-center justify-center overflow-hidden mx-auto md:mx-0">

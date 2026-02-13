@@ -301,12 +301,12 @@ const ConverterPageComponent = () => {
             <Card className="max-w-2xl mx-auto shadow-2xl border-border/50 backdrop-blur-sm bg-card/80">
               <CardContent className="p-4 sm:p-6 md:p-8">
                 {/* Live Rate Display */}
-                <div className="flex items-center justify-between mb-6 p-3 rounded-xl bg-muted/50">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6 p-3 sm:p-4 rounded-xl bg-muted/50">
+                  <div className="flex items-center gap-2 min-w-0">
                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                       <DollarSign className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <div className="text-sm text-muted-foreground">Current Rate</div>
                       <div className="font-bold text-lg">
                         {useCustomRate && Number(customRate)

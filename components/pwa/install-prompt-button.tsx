@@ -56,8 +56,7 @@ export function InstallPromptButton({ label = "Request App Access" }: { label?: 
       variant="outline"
       className="mt-3 w-full"
       onClick={handleClick}
-      disabled={!available}
-      aria-disabled={!available}
+      aria-label={label}
     >
       {label}
     </Button>

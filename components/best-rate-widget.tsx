@@ -231,14 +231,9 @@ export function BestRateWidget() {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           {/* Main Rate Display */}
           <div className="flex-1">
-            <div className={`${isMarketWomanMode ? 'text-7xl' : 'text-5xl'} font-bold text-secondary mb-2 tracking-tight`}>
+            <div className={`${isMarketWomanMode ? 'text-7xl' : 'text-5xl'} font-bold text-secondary mb-4 tracking-tight`}>
               {bestRate.rate.toFixed(isMarketWomanMode ? 0 : 2)} <span className="text-2xl text-muted-foreground">LRD</span>
             </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              Market (street) buy rate • indicative • Updated{" "}
-              {new Date(bestRate.lastUpdated).toLocaleTimeString()}
-            </p>
-            
             {/* Changer Info */}
             <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-xl border border-border/50">
               <MapPin className="h-5 w-5 text-primary mt-0.5" />

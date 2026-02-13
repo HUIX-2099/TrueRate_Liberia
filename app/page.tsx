@@ -20,7 +20,6 @@ import { useEffect, useState } from "react"
 
 export default function HomePage() {
   const [liveRate, setLiveRate] = useState(192.50)
-  const [countdown, setCountdown] = useState("00d 00h 00m 00s")
   const [leaderboardUpdatedAt, setLeaderboardUpdatedAt] = useState("")
 
   useEffect(() => {
@@ -39,31 +38,6 @@ export default function HomePage() {
   }, [])
 
   useEffect(() => {
-    const target = new Date("2026-03-25T00:00:00")
-    const tick = () => {
-      const diff = target.getTime() - Date.now()
-      if (diff <= 0) {
-        setCountdown("00d 00h 00m 00s")
-        return
-      }
-      const totalSeconds = Math.floor(diff / 1000)
-      const days = Math.floor(totalSeconds / 86400)
-      const hours = Math.floor((totalSeconds % 86400) / 3600)
-      const minutes = Math.floor((totalSeconds % 3600) / 60)
-      const seconds = totalSeconds % 60
-      setCountdown(
-        `${days.toString().padStart(2, "0")}d ${hours.toString().padStart(2, "0")}h ${minutes
-          .toString()
-          .padStart(2, "0")}m ${seconds.toString().padStart(2, "0")}s`,
-      )
-    }
-
-    tick()
-    const id = window.setInterval(tick, 1000)
-    return () => window.clearInterval(id)
-  }, [])
-
-  useEffect(() => {
     setLeaderboardUpdatedAt(new Date().toLocaleTimeString())
   }, [])
 
@@ -71,43 +45,6 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Launching Soon Section */}
-        <section className="py-8 sm:py-10 md:py-14 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card/80 to-secondary/5 shadow-sm backdrop-blur-sm">
-                <div className="px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 text-center space-y-4">
-                  <div className="flex flex-wrap items-center justify-center gap-2">
-                    <Badge variant="outline">We're Launching Soon</Badge>
-                    <Badge className="bg-primary/10 text-primary">New</Badge>
-                    <Badge variant="secondary">March 2026</Badge>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
-                    <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                      Liberia's FX Analytics Hub
-                    </span>
-                  </h2>
-                  <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
-                    Precision insights, structured data, and high-performance tools in one unified platform.
-                  </p>
-                  <div className="flex flex-col items-center gap-3">
-                    <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Launch countdown</span>
-                    <div className="rounded-full border border-border/60 bg-background/80 px-4 py-2 text-sm font-semibold shadow-sm">
-                      {countdown}
-                    </div>
-                    <span className="text-xs text-muted-foreground">March 25, 2026 • 12:00 AM</span>
-                  </div>
-                  <div className="flex justify-center pt-2">
-                    <Button asChild className="shadow-sm">
-                      <Link href="/contact">Get Early Access</Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Hero />
 
         {/* Today's Best Rate Widget - Prime Position */}
@@ -363,6 +300,14 @@ export default function HomePage() {
                   Inflation tracker
                 </span>
                 <span className="rounded-full border border-muted-foreground/30 bg-muted/20 px-3 py-1">Local news</span>
+                <a
+                  href="https://lisgis.gov.lr/pricestats.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-amber-700 dark:text-amber-400 font-medium hover:bg-amber-500/20 transition-colors"
+                >
+                  Source: LISGIS
+                </a>
               </div>
             </div>
             <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
