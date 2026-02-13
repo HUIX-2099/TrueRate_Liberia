@@ -15,11 +15,11 @@ const nextConfig = {
   },
   // Compression and caching
   compress: true,
-  // Provide env vars directly to avoid loading issues
+  // Provide env vars - use .env values when set, fallback to demo
   env: {
-    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: 'demo',
-    GOOGLE_MAPS_API_KEY: 'demo',
-    EXCHANGE_RATE_API_KEY: 'demo',
+    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'demo',
+    GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY || process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'demo',
+    EXCHANGE_RATE_API_KEY: process.env.EXCHANGE_RATE_API_KEY || 'demo',
   },
   // Enable React strict mode for better performance
   reactStrictMode: true,

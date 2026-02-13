@@ -1,5 +1,6 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
+  "/analytics/page": "app/analytics/page.js",
   "/api/liberia-cpi/route": "app/api/liberia-cpi/route.js",
   "/api/maps/distance/route": "app/api/maps/distance/route.js",
   "/api/maps/geocode/route": "app/api/maps/geocode/route.js",
@@ -7,6 +8,13 @@
   "/api/news/route": "app/api/news/route.js",
   "/api/price-index/route": "app/api/price-index/route.js",
   "/api/rates/live/route": "app/api/rates/live/route.js",
+  "/converter/page": "app/converter/page.js",
+  "/liberia-market/page": "app/liberia-market/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/page": "app/page.js"
+  "/map/page": "app/map/page.js",
+  "/offline/page": "app/offline/page.js",
+  "/page": "app/page.js",
+  "/predictions/page": "app/predictions/page.js",
+  "/rates/page": "app/rates/page.js",
+  "/tools/page": "app/tools/page.js"
 }

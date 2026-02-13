@@ -13,20 +13,13 @@ export function Footer() {
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
           <div className="space-y-3 -mt-[20px]">
             <div className="flex items-start justify-center md:justify-start -mt-[30px]">
-              <div className="flex w-full max-w-[320px] sm:max-w-[380px] items-center justify-center overflow-hidden mx-auto md:mx-0 rounded-2xl bg-muted/30 p-2 shadow-sm">
+              <div className="flex w-full max-w-[320px] sm:max-w-[380px] items-center justify-center overflow-hidden mx-auto md:mx-0">
                 <Image
-                  src="/logos/logo-5-light.png"
+                  src="/logos/logo-1.png"
                   alt="TrueRate logo"
                   width={420}
                   height={180}
-                  className="h-auto w-full object-contain dark:hidden"
-                />
-                <Image
-                  src="/logos/logo-5-dark.png"
-                  alt="TrueRate logo"
-                  width={420}
-                  height={180}
-                  className="hidden h-auto w-full object-contain dark:block"
+                  className="h-auto w-full object-contain"
                 />
               </div>
             </div>
