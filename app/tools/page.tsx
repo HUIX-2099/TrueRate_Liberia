@@ -8,26 +8,12 @@ import { Button } from "@/components/ui/button"
 import { Calculator, DollarSign, PiggyBank, TrendingUp, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { SMSAlertSignup } from "@/components/liberia-features"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 export default function ToolsPage() {
-  const [liveRate, setLiveRate] = useState(180)
-  const [lastUpdate, setLastUpdate] = useState("Loading...")
-
-  useEffect(() => {
-    const fetchRate = async () => {
-      try {
-        const res = await fetch("/api/rates/live")
-        const data = await res.json()
-        if (data?.rate) setLiveRate(data.rate)
-        setLastUpdate(new Date().toLocaleTimeString())
-      } catch (error) {
-        console.error("[Tools] Failed to fetch rate", error)
-        setLastUpdate("Recently")
-      }
-    }
-    fetchRate()
-  }, [])
+  const { rate: liveRate } = useLiveRate()
+  const [lastUpdate, setLastUpdate] = useState("Just now")
 
   const alertLow = (liveRate - 2).toFixed(2)
   const alertHigh = (liveRate + 2).toFixed(2)

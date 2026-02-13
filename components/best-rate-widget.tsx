@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -25,6 +26,7 @@ interface BestRateData {
 
 export function BestRateWidget() {
   const { t, isMarketWomanMode } = useLanguage()
+  const { rate: contextRate } = useLiveRate()
   const [bestRate, setBestRate] = useState<BestRateData | null>(null)
   const [loading, setLoading] = useState(true)
   const [phone, setPhone] = useState('')
@@ -36,7 +38,27 @@ export function BestRateWidget() {
   const resolvingRef = useRef(false)
 
   useEffect(() => {
-    async function fetchBestRate() {
+    // Show instant rate from context while fetching changers
+    const baseRate = typeof contextRate === "number" ? contextRate : 198.5
+    setLoading(false)
+    setBestRate((prev) => prev ? { ...prev, rate: baseRate } : {
+      rate: baseRate,
+      changerName: "Nearby changer will appear",
+      location: "Duala Market, Paynesville",
+      distanceMinutes: 5,
+      distanceKm: 2,
+      lat: 6.3125,
+      lng: -10.7986,
+      rating: null,
+      openNow: null,
+      lastUpdated: new Date().toISOString(),
+      trend: "stable" as const,
+      changePercent: 0,
+    })
+  }, [contextRate])
+
+  useEffect(() => {
+    async function fetchChangers() {
       try {
         const res = await fetch('/api/rates/live')
         if (!res.ok) {
@@ -67,8 +89,8 @@ export function BestRateWidget() {
       }
     }
 
-    fetchBestRate()
-    const interval = setInterval(fetchBestRate, 60000)
+    fetchChangers()
+    const interval = setInterval(fetchChangers, 60000)
     return () => clearInterval(interval)
   }, [])
 

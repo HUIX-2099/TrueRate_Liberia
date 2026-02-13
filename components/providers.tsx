@@ -10,6 +10,7 @@ import { EducationalMicroLessons } from "@/components/educational-micro-lessons"
 import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { StructuredData } from "@/components/structured-data"
+import { LiveRateProvider } from "@/lib/live-rate-context"
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
@@ -22,11 +23,13 @@ export function Providers({ children }: { children: ReactNode }) {
       >
         <AuthProvider>
           <LanguageProvider>
+            <LiveRateProvider>
             <StructuredData />
             <DevDisclaimer />
             <ServiceWorkerRegister />
             {children}
             <EducationalMicroLessons />
+            </LiveRateProvider>
             <Toaster />
           </LanguageProvider>
         </AuthProvider>

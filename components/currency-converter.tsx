@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -8,12 +9,12 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeftRight, Calculator } from "lucide-react"
 
 export function CurrencyConverter() {
+  const { rate: currentRate } = useLiveRate()
   const [usdAmount, setUsdAmount] = useState<string>("100")
   const [lrdAmount, setLrdAmount] = useState<string>("")
   const [activeInput, setActiveInput] = useState<"usd" | "lrd">("usd")
-  const [currentRate, setCurrentRate] = useState<number>(180)
-  const [lastUpdate, setLastUpdate] = useState<string>("Loading...")
   const [lowDataMode, setLowDataMode] = useState(false)
+  const lastUpdate = "Just now"
   const parseAmount = (value: string) => {
     const normalized = value.replace(/,/g, "").trim()
     const parsed = Number.parseFloat(normalized)
@@ -40,33 +41,9 @@ export function CurrencyConverter() {
   }, [currentRate, activeInput])
 
   useEffect(() => {
-    async function fetchRate() {
-      try {
-        if (typeof document !== "undefined" && document.hidden) return
-        const response = await fetch("/api/rates/live")
-        if (!response.ok) {
-          throw new Error(`Request failed: ${response.status}`)
-        }
-        const data = await response.json()
-        if (typeof data.rate === "number") {
-          setCurrentRate(data.rate)
-          const updatedAt = data.timestamp ? new Date(data.timestamp) : new Date()
-          setLastUpdate(updatedAt.toLocaleTimeString())
-        }
-      } catch (error) {
-        console.error("[v0] Error fetching rate:", error)
-        setLastUpdate("Offline")
-      }
-    }
-
     const connection = typeof navigator !== "undefined" ? (navigator as any).connection : null
     const isLowBandwidth = Boolean(connection?.saveData) || ["slow-2g", "2g"].includes(connection?.effectiveType)
     setLowDataMode(isLowBandwidth)
-    const refreshMs = isLowBandwidth ? 300000 : 60000
-
-    fetchRate()
-    const interval = setInterval(fetchRate, refreshMs)
-    return () => clearInterval(interval)
   }, [])
 
   const handleUsdChange = (value: string) => {

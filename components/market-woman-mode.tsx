@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Volume2, VolumeX, TrendingUp, TrendingDown, Minus, RefreshCw } from "lucide-react"
@@ -8,33 +9,22 @@ import { useLanguage } from "@/lib/i18n/language-context"
 
 export function MarketWomanMode() {
   const { t, language, setLanguage } = useLanguage()
-  const [rate, setRate] = useState<number | null>(null)
+  const { rate, loading, refresh } = useLiveRate()
   const [previousRate, setPreviousRate] = useState<number | null>(null)
-  const [loading, setLoading] = useState(true)
   const [isSpeaking, setIsSpeaking] = useState(false)
   const [autoSpeak, setAutoSpeak] = useState(false)
+  const prevRateRef = useRef<number | null>(null)
 
-  const fetchRate = useCallback(async () => {
-    try {
-      const res = await fetch('/api/rates/live')
-      const data = await res.json()
-      
-      if (rate !== null) {
-        setPreviousRate(rate)
+  useEffect(() => {
+    if (typeof rate === "number" && rate > 0) {
+      if (prevRateRef.current !== null) {
+        setPreviousRate(prevRateRef.current)
       }
-      setRate(data.rate || 198.5)
-    } catch (error) {
-      console.error('Error:', error)
-    } finally {
-      setLoading(false)
+      prevRateRef.current = rate
     }
   }, [rate])
 
-  useEffect(() => {
-    fetchRate()
-    const interval = setInterval(fetchRate, 30000) // Update every 30 seconds
-    return () => clearInterval(interval)
-  }, [fetchRate])
+  const fetchRate = useCallback(() => refresh(), [refresh])
 
   const trend = previousRate && rate 
     ? rate > previousRate ? 'up' : rate < previousRate ? 'down' : 'stable'

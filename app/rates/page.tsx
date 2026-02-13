@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
+import { useLiveRate } from "@/lib/live-rate-context"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -20,7 +21,7 @@ interface Changer {
 }
 
 export default function RatesPage() {
-  const [liveRate, setLiveRate] = useState(180)
+  const { rate: liveRate } = useLiveRate()
   const [lastUpdate, setLastUpdate] = useState("Loading...")
   const [sourceCount, setSourceCount] = useState(0)
   const [changers, setChangers] = useState<Changer[]>([])
@@ -28,22 +29,22 @@ export default function RatesPage() {
   const [previousDayRate, setPreviousDayRate] = useState<number | null>(null)
 
   useEffect(() => {
-    const fetchRate = async () => {
+    const fetchChangers = async () => {
       try {
         const res = await fetch("/api/rates/live")
         const data = await res.json()
-        const rate = data?.rate ?? data?.averageRate
-        if (rate) setLiveRate(rate)
-        if (Array.isArray(data?.changers)) setSourceCount(data.changers.length)
-        if (Array.isArray(data?.changers)) setChangers(data.changers)
+        if (Array.isArray(data?.changers)) {
+          setSourceCount(data.changers.length)
+          setChangers(data.changers)
+        }
         setLastUpdate(new Date().toLocaleTimeString())
       } catch (error) {
         console.error("[Rates] Failed to fetch rate", error)
         setLastUpdate("Recently")
       }
     }
-    fetchRate()
-    const interval = setInterval(fetchRate, 60000)
+    fetchChangers()
+    const interval = setInterval(fetchChangers, 60000)
     return () => clearInterval(interval)
   }, [])
 

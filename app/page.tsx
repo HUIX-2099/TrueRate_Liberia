@@ -17,25 +17,11 @@ import { BestRateWidget } from "@/components/best-rate-widget"
 import { MarketLeaderboard } from "@/components/market-leaderboard"
 import { PriceIndex, MarketNews, InflationTracker } from "@/components/liberia-features"
 import { useEffect, useState } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 export default function HomePage() {
-  const [liveRate, setLiveRate] = useState(192.50)
+  const { rate: liveRate } = useLiveRate()
   const [leaderboardUpdatedAt, setLeaderboardUpdatedAt] = useState("")
-
-  useEffect(() => {
-    const fetchRate = async () => {
-      try {
-        const res = await fetch("/api/rates/live")
-        const data = await res.json()
-        if (data.rate) setLiveRate(data.rate)
-      } catch (e) {
-        // Use default
-      }
-    }
-    fetchRate()
-    const interval = setInterval(fetchRate, 60000)
-    return () => clearInterval(interval)
-  }, [])
 
   useEffect(() => {
     setLeaderboardUpdatedAt(new Date().toLocaleTimeString())

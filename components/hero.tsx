@@ -5,40 +5,15 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, TrendingUp, TrendingDown, Zap, Shield, Globe } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 export function Hero() {
   const router = useRouter()
-  const [rate, setRate] = useState<number | null>(null)
-  const [lastUpdate, setLastUpdate] = useState<string>("Loading…")
+  const { rate, loading } = useLiveRate()
   const [trend, setTrend] = useState<'up' | 'down' | 'stable'>('up')
   const [changePercent, setChangePercent] = useState(0.8)
-
-  useEffect(() => {
-    let isMounted = true
-    async function fetchRate() {
-      try {
-        const res = await fetch("/api/rates/live")
-        const data = await res.json()
-        if (isMounted && typeof data.rate === "number") {
-          setRate(data.rate)
-          setLastUpdate("Just now")
-          // Simulate trend (in production this would come from API)
-          const change = (Math.random() - 0.5) * 2
-          setChangePercent(Math.abs(change))
-          setTrend(change > 0 ? 'up' : change < 0 ? 'down' : 'stable')
-        }
-      } catch (e) {
-        // keep graceful fallback
-      }
-    }
-    fetchRate()
-    const id = setInterval(fetchRate, 60000)
-    return () => {
-      isMounted = false
-      clearInterval(id)
-    }
-  }, [])
+  const lastUpdate = loading ? "Loading…" : "Just now"
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
