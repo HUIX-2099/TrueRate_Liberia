@@ -130,20 +130,25 @@ const HeaderComponent = () => {
         href={item.href}
         aria-label={item.label}
         aria-current={isActive ? "page" : undefined}
-        className={`flex flex-col items-center gap-1 rounded-lg py-2 min-h-[48px] transition-all ${
+        className={`relative flex flex-col items-center justify-center gap-1 rounded-xl py-2 px-1 min-h-[44px] transition-all duration-200 ease-out ${
           isActive
-            ? "text-foreground bg-muted/60 shadow-sm"
-            : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+            ? "text-primary"
+            : "text-muted-foreground active:scale-95"
         }`}
       >
         <span
-          className={`flex h-9 w-9 items-center justify-center rounded-xl ${
-            isActive ? "bg-primary/10 text-primary" : "bg-muted/40 text-muted-foreground"
+          className={`relative flex h-8 w-8 items-center justify-center rounded-full transition-colors ${
+            isActive ? "bg-primary/15 text-primary" : "hover:bg-muted/60"
           }`}
         >
-          <item.icon className="h-5 w-5" />
+          <item.icon className={`h-[22px] w-[22px] ${isActive ? "drop-shadow-sm" : ""}`} />
+          {isActive && (
+            <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary" />
+          )}
         </span>
-        <span className={isActive ? "font-medium" : ""}>{item.label}</span>
+        <span className={`text-[10px] font-medium tracking-wide ${isActive ? "text-primary" : "text-muted-foreground"}`}>
+          {item.label}
+        </span>
       </Link>
     )
   })
@@ -252,13 +257,15 @@ const HeaderComponent = () => {
       </header>
 
       <nav
-        className="fixed bottom-0 left-0 right-0 z-40 border-t border-border/60 bg-background/95 backdrop-blur shadow-[0_-12px_30px_-24px_rgba(15,23,42,0.6)] md:hidden"
+        className="fixed bottom-0 left-0 right-0 z-40 flex justify-center px-4 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] md:hidden pointer-events-none"
         aria-label="Primary"
       >
-        <div className="mx-auto grid grid-cols-4 gap-1 px-2 pt-2 pb-[calc(env(safe-area-inset-bottom)+0.6rem)] text-[11px]">
-          {bottomNavItems.map((item) => (
-            <BottomNavItem key={item.href} item={item} />
-          ))}
+        <div className="pointer-events-auto mx-auto w-full max-w-[min(380px,calc(100vw-1.5rem))] rounded-2xl border border-border/80 bg-background/98 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.12),0_2px_8px_-2px_rgba(0,0,0,0.06)] backdrop-blur-xl">
+          <div className="mx-auto grid grid-cols-4 gap-1 p-2">
+            {bottomNavItems.map((item) => (
+              <BottomNavItem key={item.href} item={item} />
+            ))}
+          </div>
         </div>
       </nav>
     </>

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-import { fetchCentralBankRates } from "@/lib/central-bank-rates"
+import { fetchCblLatestRate } from "@/lib/cbl-rates"
 
 const MULTI_API_URL = "https://open.er-api.com/v6/latest/USD"
 const FALLBACK_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json"
@@ -41,8 +41,8 @@ function extractRatesFromFawaz(data: { usd?: Record<string, number> }): Record<s
 
 export async function GET() {
   try {
-    const [cbRates, multiRes] = await Promise.all([
-      fetchCentralBankRates(),
+    const [cbl, multiRes] = await Promise.all([
+      fetchCblLatestRate(),
       fetch(MULTI_API_URL, { next: { revalidate: 300 }, headers: { "User-Agent": "TrueRate-Liberia/1.0" } }),
     ])
 
@@ -76,13 +76,7 @@ export async function GET() {
       }
     }
 
-    if (cbRates.LRD) rates.LRD = cbRates.LRD.rate
-    if (cbRates.GHS) rates.GHS = cbRates.GHS.rate
-    if (cbRates.NGN) rates.NGN = cbRates.NGN.rate
-    if (cbRates.SLL) rates.SLL = cbRates.SLL.rate
-    if (cbRates.EUR) rates.EUR = cbRates.EUR.rate
-    if (cbRates.GBP) rates.GBP = cbRates.GBP.rate
-    if (cbRates.XOF) rates.XOF = cbRates.XOF.rate
+    if (cbl && cbl.rate > 150 && cbl.rate < 220) rates.LRD = cbl.rate
 
     for (const code of CURRENCY_CODES) {
       if (!rates[code] || rates[code] <= 0) {

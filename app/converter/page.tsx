@@ -101,8 +101,9 @@ const ConverterPageComponent = () => {
   const [costPrice, setCostPrice] = useState("50000")
   const [markupPercentage, setMarkupPercentage] = useState("25")
 
-  // Price Index state
+  // Price Index state - fetches from same API as homepage
   const [priceIndexCategory, setPriceIndexCategory] = useState("all")
+  const [priceIndexItems, setPriceIndexItems] = useState<Array<{ name: string; priceUSD: number; priceLRD: number; category: string }>>([])
 
   // Debounced values for performance
   const debouncedAmount = useDebounce(amount, 300)
@@ -138,6 +139,17 @@ const ConverterPageComponent = () => {
     const interval = setInterval(fetchRate, 60000)
     return () => clearInterval(interval)
   }, [fetchRate])
+
+  useEffect(() => {
+    fetch("/api/price-index")
+      .then((r) => r.json())
+      .then((data) => {
+        if (Array.isArray(data?.items)) {
+          setPriceIndexItems(data.items)
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     if (!useCustomRate && typeof liveRate === "number") {
@@ -628,51 +640,29 @@ const ConverterPageComponent = () => {
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <Tabs value={priceIndexCategory} onValueChange={setPriceIndexCategory} className="w-full">
-                        <TabsList className="grid w-full grid-cols-3">
+                        <TabsList className="grid w-full grid-cols-4">
                           <TabsTrigger value="all" className="text-xs">All</TabsTrigger>
                           <TabsTrigger value="food" className="text-xs">Food</TabsTrigger>
-                          <TabsTrigger value="building" className="text-xs">Building</TabsTrigger>
+                          <TabsTrigger value="fuel" className="text-xs">Fuel</TabsTrigger>
+                          <TabsTrigger value="construction" className="text-xs">Build</TabsTrigger>
                         </TabsList>
-                        <TabsContent value="all" className="space-y-2 mt-3">
-                          {[
-                            { item: "25kg Rice (Thai)", usd: 28, category: "food" },
-                            { item: "25kg Rice (Local)", usd: 15, category: "food" },
-                            { item: "Gallon of Gas", usd: 4.5, category: "fuel" },
-                            { item: "Gallon of Diesel", usd: 4.33, category: "fuel" },
-                            { item: "Cement (50kg)", usd: 12, category: "building" },
-                            { item: "Steel Rods (bundle)", usd: 400, category: "building" },
-                            { item: "Palm Oil (gallon)", usd: 5.5, category: "food" },
-                            { item: "Cooking Gas (14kg)", usd: 20, category: "fuel" },
-                          ].map((item) => (
-                            <div key={item.item} className="flex justify-between text-sm">
-                              <span className="text-muted-foreground">{item.item}</span>
-                              <span className="font-medium">${item.usd} / {formatLrdFromUsd(item.usd)} LRD</span>
-                            </div>
-                          ))}
-                        </TabsContent>
-                        <TabsContent value="food" className="space-y-2 mt-3">
-                          {[
-                            { item: "25kg Rice (Thai)", usd: 28 },
-                            { item: "25kg Rice (Local)", usd: 15 },
-                            { item: "Palm Oil (gallon)", usd: 5.5 },
-                          ].map((item) => (
-                            <div key={item.item} className="flex justify-between text-sm">
-                              <span className="text-muted-foreground">{item.item}</span>
-                              <span className="font-medium">${item.usd} / {formatLrdFromUsd(item.usd)} LRD</span>
-                            </div>
-                          ))}
-                        </TabsContent>
-                        <TabsContent value="building" className="space-y-2 mt-3">
-                          {[
-                            { item: "Cement (50kg)", usd: 12 },
-                            { item: "Steel Rods (bundle)", usd: 400 },
-                          ].map((item) => (
-                            <div key={item.item} className="flex justify-between text-sm">
-                              <span className="text-muted-foreground">{item.item}</span>
-                              <span className="font-medium">${item.usd} / {formatLrdFromUsd(item.usd)} LRD</span>
-                            </div>
-                          ))}
-                        </TabsContent>
+                        {(["all", "food", "fuel", "construction"] as const).map((tab) => {
+                          const filtered = priceIndexItems.length
+                            ? priceIndexItems.filter((p) => tab === "all" || p.category === tab)
+                            : []
+                          return (
+                            <TabsContent key={tab} value={tab} className="space-y-2 mt-3">
+                              {filtered.map((item) => (
+                                <div key={item.name} className="flex justify-between text-sm">
+                                  <span className="text-muted-foreground">{item.name}</span>
+                                  <span className="font-medium">
+                                    ${item.priceUSD.toFixed(1)} / {item.priceLRD.toLocaleString()} LRD
+                                  </span>
+                                </div>
+                              ))}
+                            </TabsContent>
+                          )
+                        })}
                       </Tabs>
                     </CardContent>
                   </Card>
