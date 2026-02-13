@@ -74,9 +74,19 @@ export async function getAggregatedRate(): Promise<{
   sources: string[]
   timestamp: string
 }> {
+  const { fetchCblLatestRate } = await import("@/lib/cbl-rates")
+  const cbl = await fetchCblLatestRate()
+  if (cbl && cbl.rate > 150 && cbl.rate < 220) {
+    return {
+      rate: Number(cbl.rate.toFixed(4)),
+      confidence: 1.0,
+      sources: ["Central Bank of Liberia"],
+      timestamp: new Date().toISOString(),
+    }
+  }
+
   let sources = RATE_SOURCES
 
-  // If a real API key is present, try the authenticated source once before fallback aggregation.
   if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
     const preferred = RATE_SOURCES.find((s) => s.name === "ExchangeRate-API v6 Pair")
     if (preferred) {

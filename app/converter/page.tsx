@@ -44,6 +44,7 @@ import { useDebounce, useThrottle, usePerformanceMonitor } from "@/lib/client-ut
 const currencies = [
   { code: "USD", name: "US Dollar", symbol: "$", flag: "🇺🇸" },
   { code: "LRD", name: "Liberian Dollar", symbol: "L$", flag: "🇱🇷" },
+  { code: "SLL", name: "Sierra Leone Leone", symbol: "Le", flag: "🇸🇱" },
   { code: "EUR", name: "Euro", symbol: "€", flag: "🇪🇺" },
   { code: "GBP", name: "British Pound", symbol: "£", flag: "🇬🇧" },
   { code: "NGN", name: "Nigerian Naira", symbol: "₦", flag: "🇳🇬" },
@@ -55,6 +56,7 @@ const currencies = [
 const ratesFromUSD: Record<string, number> = {
   USD: 1,
   LRD: 192.50, // Updated accurate rate
+  SLL: 22000, // Sierra Leone Leone (approximate)
   EUR: 0.92,
   GBP: 0.79,
   NGN: 1580,
@@ -70,20 +72,20 @@ const ConverterPageComponent = () => {
   const [amount, setAmount] = useState("100")
   const [result, setResult] = useState("")
   const [copied, setCopied] = useState(false)
-  const [liveRate, setLiveRate] = useState<number | null>(() => {
+  const [liveRates, setLiveRates] = useState<Record<string, number> | null>(() => {
     if (typeof window === "undefined") return null
     try {
-      const cached = window.localStorage.getItem("truerate-live-rate")
-      const parsed = cached ? Number.parseFloat(cached) : null
-      if (parsed && !Number.isNaN(parsed)) {
-        ratesFromUSD.LRD = parsed
-        return parsed
+      const cached = window.localStorage.getItem("truerate-live-rates")
+      if (cached) {
+        const parsed = JSON.parse(cached) as Record<string, number>
+        if (parsed && typeof parsed.LRD === "number") return parsed
       }
     } catch {
       // Ignore localStorage errors
     }
     return null
   })
+  const liveRate = liveRates?.LRD ?? null
   const [lastUpdate, setLastUpdate] = useState("")
   const [dayChange, setDayChange] = useState(0.85)
   const [loading, setLoading] = useState(false)
@@ -110,29 +112,24 @@ const ConverterPageComponent = () => {
   const liveRateValue = liveRate ?? 0
   const formatLrdFromUsd = (usd: number) =>
     isLiveRateReady ? (usd * liveRateValue).toLocaleString() : "—"
-  const lrdRate = useCustomRate && Number(customRate)
-    ? Number(customRate)
-    : typeof liveRate === "number"
-      ? liveRate
-      : ratesFromUSD.LRD
+  const effectiveRates = liveRates ?? ratesFromUSD
 
-  // Throttled API call for live rate
+  // Throttled API call for live rates (all currencies)
   const fetchRate = useThrottle(useCallback(async () => {
     try {
-      const res = await fetch("/api/rates/live")
+      const res = await fetch("/api/rates/multi")
       const data = await res.json()
-      if (typeof data.rate === "number") {
-        setLiveRate(data.rate)
-        ratesFromUSD.LRD = data.rate
+      if (data?.rates && typeof data.rates === "object") {
+        setLiveRates(data.rates)
         try {
-          window.localStorage.setItem("truerate-live-rate", String(data.rate))
+          window.localStorage.setItem("truerate-live-rates", JSON.stringify(data.rates))
         } catch {
           // Ignore localStorage errors
         }
       }
       setLastUpdate(new Date().toLocaleTimeString())
     } catch (e) {
-      // Use default rate
+      // Use default rates
     }
   }, []), 30000) // Throttle to max once per 30 seconds
 
@@ -148,25 +145,19 @@ const ConverterPageComponent = () => {
     }
   }, [liveRate, useCustomRate])
 
+  const getRate = (code: string) =>
+    useCustomRate && code === "LRD" && Number(customRate)
+      ? Number(customRate)
+      : effectiveRates[code] ?? ratesFromUSD[code]
+
   // Optimized conversion calculation with debounced values
   const convertedResult = useMemo(() => {
     const numAmount = Math.max(parseFloat(debouncedAmount) || 0, 0)
-    const parsedCustomRate = Math.max(Number.parseFloat(debouncedCustomRate) || 0, 0)
-    const useRate = useCustomRate && parsedCustomRate > 0 ? parsedCustomRate : liveRate
-    const needsLiveRate = fromCurrency === "LRD" || toCurrency === "LRD"
-    if (needsLiveRate && typeof useRate !== "number") {
-      return ""
-    }
-    let fromRate = ratesFromUSD[fromCurrency]
-    let toRate = ratesFromUSD[toCurrency]
-    if (fromCurrency === "USD" && toCurrency === "LRD") {
-      toRate = useRate as number
-    }
-    if (fromCurrency === "LRD" && toCurrency === "USD") {
-      fromRate = useRate as number
-    }
+    const fromRate = getRate(fromCurrency)
+    const toRate = getRate(toCurrency)
+    if (!fromRate || !toRate) return ""
     return ((numAmount / fromRate) * toRate).toFixed(2)
-  }, [debouncedAmount, fromCurrency, toCurrency, debouncedCustomRate, useCustomRate, liveRate])
+  }, [debouncedAmount, fromCurrency, toCurrency, liveRates, useCustomRate, customRate])
 
   useEffect(() => {
     setResult(convertedResult)
@@ -316,9 +307,6 @@ const ConverterPageComponent = () => {
                             : "—"}{" "}
                         LRD/USD
                       </div>
-                      <div className="text-xs text-muted-foreground">
-                        Market (street) rate • Updated {lastUpdate || "just now"}
-                      </div>
                       {useCustomRate && (
                         <div className="text-xs text-muted-foreground">Custom rate active</div>
                       )}
@@ -459,16 +447,10 @@ const ConverterPageComponent = () => {
                 <div className="mt-6 p-4 rounded-xl bg-muted/50 text-sm">
                   <div className="flex flex-wrap justify-between gap-2 text-muted-foreground">
                     <span>
-                      1 {fromCurrency} = {(
-                        (toCurrency === "LRD" ? lrdRate : ratesFromUSD[toCurrency]) /
-                        (fromCurrency === "LRD" ? lrdRate : ratesFromUSD[fromCurrency])
-                      ).toFixed(4)} {toCurrency}
+                      1 {fromCurrency} = {(getRate(toCurrency) / getRate(fromCurrency)).toFixed(4)} {toCurrency}
                     </span>
                     <span>
-                      1 {toCurrency} = {(
-                        (fromCurrency === "LRD" ? lrdRate : ratesFromUSD[fromCurrency]) /
-                        (toCurrency === "LRD" ? lrdRate : ratesFromUSD[toCurrency])
-                      ).toFixed(6)} {fromCurrency}
+                      1 {toCurrency} = {(getRate(fromCurrency) / getRate(toCurrency)).toFixed(6)} {fromCurrency}
                     </span>
                   </div>
                 </div>

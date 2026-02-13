@@ -14,6 +14,8 @@ export function RateHistory() {
   const [data, setData] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [liveRate, setLiveRate] = useState<number | null>(null)
+  const [source, setSource] = useState<string | null>(null)
+  const [sourceUrl, setSourceUrl] = useState<string | null>(null)
   const latestPoint = useMemo(() => (data.length ? data[data.length - 1] : null), [data])
   const latestRate = typeof liveRate === "number"
     ? liveRate
@@ -43,6 +45,8 @@ export function RateHistory() {
         const liveResult = await liveResponse.json()
         const liveValue = typeof liveResult?.rate === "number" ? liveResult.rate : null
         setLiveRate(liveValue)
+        setSource(result.source ?? null)
+        setSourceUrl(result.sourceUrl ?? null)
 
         const days = getDaysFromRange(timeRange)
         const filteredData = (result.historical || []).slice(-days).map((item: any) => ({
@@ -103,7 +107,27 @@ export function RateHistory() {
             </div>
             <div>
               <CardTitle>Exchange Rate History</CardTitle>
-              <CardDescription>Track USD/LRD rate trends over time</CardDescription>
+              <CardDescription>
+                {source ? (
+                  <>
+                    Track USD/LRD rate trends from{" "}
+                    {sourceUrl ? (
+                      <a
+                        href={sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-primary"
+                      >
+                        {source}
+                      </a>
+                    ) : (
+                      source
+                    )}
+                  </>
+                ) : (
+                  "Track USD/LRD rate trends over time"
+                )}
+              </CardDescription>
             </div>
           </div>
 
