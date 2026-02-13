@@ -1,343 +1,25 @@
-[00:00:00.919] Server  LOG     ✓ Ready in 702ms
-[00:00:02.928] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:02.928] Browser LOG     Header render time: 28.00ms
-[00:00:02.928] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:02.928] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:00:02.928] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987076490}
-[00:00:05.169] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.169] Browser LOG     Header render time: 123.80ms
-[00:00:05.169] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:05.169] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:05.169] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987088289}
-[00:00:33.437] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:33.443] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:33.446] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:33.447] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:33.451] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:33.562] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:33.562] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:33.563] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:33.563] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:33.590] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:33.590] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:33.590] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:33.590] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:33.632] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:33.633] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:33.633] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:33.633] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:33.843] Browser LOG     Header render time: 110.00ms
-[00:00:33.877] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:33.877] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:33.877] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987182709}
-[00:00:35.214] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:35.215] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:35.216] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:35.216] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:35.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:35.323] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:35.323] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:35.323] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:35.323] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:35.328] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:35.329] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:35.329] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:35.329] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:35.398] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:35.399] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:35.399] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:35.399] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:35.565] Browser LOG     Header render time: 78.30ms
-[00:00:35.565] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:35.565] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:35.565] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987184400}
-[00:00:37.446] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:37.446] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:37.446] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:37.447] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:37.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:37.894] Browser LOG     Header render time: 102.10ms
-[00:00:37.894] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:37.894] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:37.894] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987186697}
-[00:00:37.901] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:37.901] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:37.901] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:37.901] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:37.918] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:37.918] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:37.918] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:37.918] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:37.983] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:37.983] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:37.983] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:37.983] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:41.976] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:41.977] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:41.977] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:41.977] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.172] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:42.172] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:42.172] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:42.172] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.177] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:42.177] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:42.177] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:42.177] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.244] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:42.244] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:42.244] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:42.245] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.349] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:42.349] Browser LOG     Header render time: 101.60ms
-[00:00:42.421] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:42.421] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:42.421] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:42.421] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:42.567] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:42.567] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:42.567] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:42.567] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.573] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:42.574] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:42.574] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:42.574] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.628] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:42.628] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:42.628] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:42.628] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:42.834] Browser LOG     Header render time: 101.30ms
-[00:00:42.835] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:42.835] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:42.835] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987191670}
-[00:00:44.805] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
-[00:00:49.583] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:49.584] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:49.584] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:49.584] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:49.594] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:49.594] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:49.594] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:49.595] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:49.652] Browser LOG     Header render time: 6881.00ms
-[00:00:49.652] Browser LOG     Header render time: 2.10ms
-[00:00:49.652] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987198481}
-[00:00:53.904] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:53.904] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:53.904] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:53.904] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:53.919] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:54.280] Browser LOG     Header render time: 28.70ms
-[00:00:54.280] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:54.280] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:00:54.280] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987203115}
-[00:00:55.459] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:55.460] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:55.460] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:55.460] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:55.475] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:55.671] Browser LOG     Header render time: 19.90ms
-[00:00:55.671] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:55.671] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:00:55.671] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987204507}
-[00:00:57.749] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
-[00:00:58.174] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:00:58.174] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:00:58.174] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:00:58.175] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:00:58.226] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:58.491] Browser LOG     Header render time: 55.40ms
-[00:00:58.608] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:58.608] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:00:58.608] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987207442}
-[00:01:04.134] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
-[00:01:37.717] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:01:37.719] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:01:37.719] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:01:37.720] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:01:37.736] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:01:37.736] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:01:37.737] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:01:37.737] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:01:37.746] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:01:37.746] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:01:37.747] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:01:37.747] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:01:43.303] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:43.304] Browser LOG     Header render time: 33.40ms
-[00:01:43.304] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:43.304] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:01:43.304] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987252085}
-[00:01:43.381] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:01:43.929] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:01:44.261] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:01:44.261] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:01:45.093] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:01:45.096] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:01:45.110] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:45.233] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:01:45.233] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:01:45.600] Browser LOG     Header render time: 74.00ms
-[00:01:45.600] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:45.600] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:01:45.600] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987254434}
-[00:01:55.507] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:01:55.523] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:01:55.524] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:01:55.526] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:01:55.606] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:55.861] Browser LOG     Header render time: 23.10ms
-[00:01:55.861] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:55.861] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:01:55.861] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987264696}
-[00:01:59.010] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
-[00:01:59.750] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:01:59.822] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:01:59.822] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:01:59.822] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:02:00.044] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:00.500] Browser LOG     Header render time: 60.70ms
-[00:02:00.552] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:02:00.553] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:02:00.553] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987269388}
-[00:02:06.236] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
-[00:02:37.735] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:02:37.736] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:02:37.736] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:02:37.736] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:02:37.751] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:02:37.751] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:02:37.751] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:02:37.751] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:02:37.759] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:02:37.759] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:02:37.759] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:02:37.760] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:03:37.745] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:03:37.746] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:03:37.747] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:03:37.747] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:03:37.762] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:03:37.762] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:03:37.762] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:03:37.762] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:03:37.773] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:03:37.773] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:03:37.773] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:03:37.773] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:04:31.515] Server  LOG       Reload env: .env.local
-[00:04:32.069] Server  LOG     ✓ Compiled in 383ms
-[00:04:32.172] Server  LOG     ✓ Compiled in 0ms
-[00:04:32.236] Browser LOG     Header render time: 151823.30ms
-[00:04:32.439] Browser LOG     Header render time: 183.60ms
-[00:04:32.685] Browser LOG     Header render time: 166682.50ms
-[00:04:32.685] Browser LOG     Header render time: 183.70ms
-[00:04:32.756] Browser LOG     Header render time: 234116.80ms
-[00:04:32.756] Browser LOG     Header render time: 309.50ms
-[00:04:32.756] Browser LOG     Header render time: 111.00ms
-[00:04:37.770] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:04:37.773] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:04:37.774] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:04:37.774] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:04:37.791] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:04:37.792] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:04:37.792] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:04:37.792] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:04:37.799] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:04:37.799] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:04:37.799] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:04:37.799] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:04:47.279] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:47.465] Browser LOG     Header render time: 22.60ms
-[00:04:47.465] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:47.465] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:04:47.465] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987436301}
-[00:04:47.581] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:04:47.799] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:04:48.269] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:04:48.270] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:04:50.091] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:50.125] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:04:50.135] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:04:50.265] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:04:50.265] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:04:50.300] Browser LOG     Header render time: 23.90ms
-[00:04:50.300] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:50.300] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:04:50.300] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987439137}
-[00:05:37.744] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:05:37.745] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:05:37.745] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:05:37.745] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:05:37.778] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:05:37.787] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:05:37.787] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:05:37.787] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:05:37.795] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:05:37.795] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:05:37.795] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:05:37.795] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:05:37.804] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:05:37.805] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:05:37.805] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:05:37.805] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:05:44.677] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:44.924] Browser LOG     Header render time: 21.40ms
-[00:05:44.924] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:05:44.924] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:05:44.924] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987493760}
-[00:05:45.270] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:05:45.522] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:05:45.720] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:05:45.721] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:05:46.760] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:05:46.761] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:05:46.761] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:05:46.761] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:05:46.786] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:46.983] Browser LOG     Header render time: 21.20ms
-[00:05:46.983] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:05:46.983] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:05:46.983] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987495819}
-[00:06:21.180] Server  LOG     ✓ Compiled in 1111ms
-[00:06:21.279] Browser LOG     Header render time: 90975.00ms
-[00:06:21.311] Browser LOG     Header render time: 34366.00ms
-[00:06:21.784] Server  LOG     ✓ Compiled in 88ms
-[00:06:21.802] Browser LOG     Header render time: 327.60ms
-[00:06:22.125] Browser LOG     Header render time: 860.10ms
-[00:06:22.684] Browser LOG     Header render time: 109007.30ms
-[00:06:22.684] Browser LOG     Header render time: 358.40ms
-[00:06:37.750] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:06:37.751] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:06:37.751] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:06:37.751] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:06:37.769] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:06:37.769] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:06:37.770] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:06:37.770] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:06:37.778] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:06:37.779] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:06:37.779] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:06:37.779] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:06:54.913] Server  LOG     ✓ Compiled in 208ms
-[00:06:54.920] Browser LOG     Header render time: 32722.80ms
-[00:06:54.921] Browser LOG     Header render time: 33222.30ms
-[00:06:55.685] Browser LOG     Header render time: 33331.60ms
-[00:06:56.397] Server  LOG     ✓ Compiled in 98ms
-[00:06:56.686] Browser LOG     Header render time: 1540.50ms
-[00:06:56.686] Browser LOG     Header render time: 1686.60ms
-[00:06:56.844] Browser LOG     Header render time: 1993.60ms
-[00:07:28.973] Server  LOG     ✓ Compiled in 157ms
-[00:07:29.025] Browser LOG     Header render time: 32177.20ms
-[00:07:29.028] Browser LOG     Header render time: 32473.80ms
-[00:07:29.687] Browser LOG     Header render time: 32459.60ms
-[00:07:42.663] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:07:42.663] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:07:42.663] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:07:42.663] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:07:42.690] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:42.955] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.749] Server  LOG     ✓ Ready in 537ms
+[00:00:01.829] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
+[00:00:01.830] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
+[00:00:01.831] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
+[00:00:01.831] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
+[00:00:01.837] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.853] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.866] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
+[00:00:01.867] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
+[00:00:01.867] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
+[00:00:01.867] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
+[00:00:01.876] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.894] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
+[00:00:01.895] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
+[00:00:01.895] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
+[00:00:01.895] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
+[00:00:02.236] Browser LOG     Header render time: 32.20ms
+[00:00:02.236] Browser WARN    Image with src "/logos/logo-1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:02.236] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:02.236] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
+[00:00:02.236] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770990044337}
+[00:00:02.246] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -364,7 +46,7 @@ It can also happen if the client has a browser extension installed which messes 
                         <LinkComponent href="/" className="flex items..." aria-label="TrueRate L...">
                           <a className="flex items..." aria-label="TrueRate L..." ref={function} ...>
                             <div
-+                             className="flex h-[68px] w-[98px] sm:h-[76px] sm:w-[114px] md:h-[76px] md:w-[130px] item..."
++                             className="flex h-10 w-[70px] sm:h-12 sm:w-[90px] md:h-14 md:w-[110px] lg:h-16 lg:w-[130..."
 -                             className="flex h-[88px] w-[118px] sm:h-[96px] sm:w-[134px] md:h-[96px] md:w-[150px] ite..."
                             >
                         ...
@@ -373,41 +55,12 @@ It can also happen if the client has a browser extension installed which messes 
           ...
         ...
 
-[00:07:42.955] Browser LOG     Header render time: 24.20ms
-[00:07:42.955] Browser WARN    Image with src "/logos/logo-1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:07:42.955] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:07:42.955] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:07:42.955] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987611792}
-[00:07:52.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:52.793] Browser LOG     Header render time: 19.30ms
-[00:07:52.793] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:07:52.793] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
-[00:07:52.793] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770987621628}
-[00:07:53.180] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:07:53.180] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:07:53.850] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:07:53.851] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:08:17.789] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:08:17.789] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:08:17.789] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:08:17.789] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:08:17.802] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:08:17.802] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:08:17.802] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:08:17.802] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:08:17.809] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:08:17.809] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:08:17.810] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:08:17.810] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:09:17.770] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:09:17.770] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:09:17.771] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:09:17.771] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:09:17.797] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:09:17.797] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:09:17.798] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:09:17.798] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
-[00:09:17.808] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.74373441 LRD per USD
-[00:09:17.808] Server  LOG     [v0] Open Exchange Rates: 186.728329 LRD per USD
-[00:09:17.808] Server  LOG     [v0] ExchangeRate API: 186.73 LRD per USD
-[00:09:17.808] Server  LOG     [v0] Aggregated rate: 186.73 from 3 sources
+[00:00:02.246] Browser LOG     Header render time: 69.40ms
+[00:00:02.246] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:02.246] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
+[00:00:02.246] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770990044422}
+[00:00:03.229] Browser LOG     Header render time: 50.40ms
+[00:00:03.229] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:03.231] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
+[00:00:03.231] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1770990044449}
+[00:00:05.170] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function

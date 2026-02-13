@@ -180,20 +180,23 @@ export function GoogleMap({
 
   if (status === "error") {
     return (
-      <div className={`flex items-center justify-center text-sm text-muted-foreground ${className ?? ""}`}>
-        {errorMessage ?? "Map unavailable."}
+      <div className={`flex min-h-[300px] flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-muted-foreground/30 bg-muted/20 p-6 text-center text-sm text-muted-foreground ${className ?? ""}`}>
+        <p className="font-medium">{errorMessage ?? "Map unavailable."}</p>
+        <p className="text-xs">
+          For localhost: add <code className="rounded bg-muted px-1">http://localhost:3000/*</code> to API key referrer restrictions in Google Cloud Console.
+        </p>
       </div>
     )
   }
 
   return (
-    <div className={`relative ${className ?? ""}`}>
+    <div className={`relative min-h-[300px] ${className ?? ""}`}>
       {status === "loading" && (
         <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground bg-muted/30">
           Loading map…
         </div>
       )}
-      <div ref={mapRef} className="h-full w-full" />
+      <div ref={mapRef} className="absolute inset-0 min-h-[300px]" />
     </div>
   )
 }
