@@ -39,6 +39,7 @@ import {
 import { useEffect, useState, useMemo, useCallback, memo } from "react"
 import Link from "next/link"
 import { useDebounce, useThrottle, usePerformanceMonitor } from "@/lib/client-utils"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 // Multi-currency support
 const currencies = [
@@ -72,20 +73,10 @@ const ConverterPageComponent = () => {
   const [amount, setAmount] = useState("100")
   const [result, setResult] = useState("")
   const [copied, setCopied] = useState(false)
-  const [liveRates, setLiveRates] = useState<Record<string, number> | null>(() => {
-    if (typeof window === "undefined") return null
-    try {
-      const cached = window.localStorage.getItem("truerate-live-rates")
-      if (cached) {
-        const parsed = JSON.parse(cached) as Record<string, number>
-        if (parsed && typeof parsed.LRD === "number") return parsed
-      }
-    } catch {
-      // Ignore localStorage errors
-    }
-    return null
-  })
-  const liveRate = liveRates?.LRD ?? null
+  const { rate: contextLrdRate } = useLiveRate()
+  const [liveRates, setLiveRates] = useState<Record<string, number> | null>(null)
+  // Use shared LRD rate immediately; merge with multi-currency rates when they load
+  const liveRate = liveRates?.LRD ?? (typeof contextLrdRate === "number" ? contextLrdRate : null)
   const [lastUpdate, setLastUpdate] = useState("")
   const [dayChange, setDayChange] = useState(0.85)
   const [loading, setLoading] = useState(false)
@@ -113,7 +104,11 @@ const ConverterPageComponent = () => {
   const liveRateValue = liveRate ?? 0
   const formatLrdFromUsd = (usd: number) =>
     isLiveRateReady ? (usd * liveRateValue).toLocaleString() : "—"
-  const effectiveRates = liveRates ?? ratesFromUSD
+  const effectiveRates: Record<string, number> = {
+    ...ratesFromUSD,
+    ...(liveRates ?? {}),
+    LRD: liveRates?.LRD ?? (typeof contextLrdRate === "number" ? contextLrdRate : ratesFromUSD.LRD),
+  }
 
   // Throttled API call for live rates (all currencies)
   const fetchRate = useThrottle(useCallback(async () => {
@@ -169,7 +164,7 @@ const ConverterPageComponent = () => {
     const toRate = getRate(toCurrency)
     if (!fromRate || !toRate) return ""
     return ((numAmount / fromRate) * toRate).toFixed(2)
-  }, [debouncedAmount, fromCurrency, toCurrency, liveRates, useCustomRate, customRate])
+  }, [debouncedAmount, fromCurrency, toCurrency, liveRates, contextLrdRate, useCustomRate, customRate])
 
   useEffect(() => {
     setResult(convertedResult)

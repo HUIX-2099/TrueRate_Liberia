@@ -22,7 +22,7 @@ export function useThrottle<T extends (...args: any[]) => any>(
   callback: T,
   delay: number
 ): T {
-  const lastRan = useRef(Date.now())
+  const lastRan = useRef(0) // 0 so first call runs immediately
 
   return useCallback(
     ((...args) => {
