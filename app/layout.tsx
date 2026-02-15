@@ -117,15 +117,12 @@ export const metadata: Metadata = {
   // Icons
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.png", type: "image/png" },
+      { url: "/icons/Logo%206.png", type: "image/png", sizes: "any" },
     ],
     apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/icons/Logo%206.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/icons/Logo%206.png",
   },
   
   // Other
