@@ -256,7 +256,7 @@ export default function HomePage() {
                   </span>
                 </p>
               </div>
-              <MarketLeaderboard />
+              <MarketLeaderboard maxItems={3} />
             </div>
           </div>
         </section>

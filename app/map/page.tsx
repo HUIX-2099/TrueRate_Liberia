@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { MapPin, TrendingUp, TrendingDown } from "lucide-react"
 import { GoogleMap } from "@/components/google-map"
+import { MarketLeaderboard } from "@/components/market-leaderboard"
 
 interface LocationRate {
   id: string
@@ -277,6 +278,30 @@ export default function MapPage() {
                   )}
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Live Leaderboard */}
+        <section className="py-10 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-6 space-y-2">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Live Leaderboard</Badge>
+                  <Badge className="bg-primary/10 text-primary">Real-time</Badge>
+                  <Badge variant="secondary">Every 15 min</Badge>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Top Best Rates in Monrovia
+                  </span>
+                </h2>
+                <p className="text-sm text-muted-foreground">
+                  Live rankings updated every 15 minutes
+                </p>
+              </div>
+              <MarketLeaderboard />
             </div>
           </div>
         </section>

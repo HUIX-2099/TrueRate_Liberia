@@ -23,7 +23,11 @@ interface LeaderboardChanger {
   verified: boolean
 }
 
-export function MarketLeaderboard() {
+interface MarketLeaderboardProps {
+  maxItems?: number
+}
+
+export function MarketLeaderboard({ maxItems }: MarketLeaderboardProps) {
   const { t, isMarketWomanMode } = useLanguage()
   const [leaderboard, setLeaderboard] = useState<LeaderboardChanger[]>([])
   const [loading, setLoading] = useState(true)
@@ -161,18 +165,21 @@ export function MarketLeaderboard() {
           volume24h: 50000 + Math.floor(Math.random() * 100000),
           verified: c.verified !== false,
         }))
-        setLeaderboard(apiChangers.slice(0, 7))
+        const limit = maxItems ?? 7
+        setLeaderboard(apiChangers.slice(0, limit))
       } else {
-        setLeaderboard(fallbackList.slice(0, 7))
+        const limit = maxItems ?? 7
+        setLeaderboard(fallbackList.slice(0, limit))
       }
     } catch {
-      setLeaderboard(fallbackList.slice(0, 7))
+      const limit = maxItems ?? 7
+      setLeaderboard(fallbackList.slice(0, limit))
     } finally {
       setLoading(false)
       setRefreshing(false)
       setLastUpdate(new Date())
     }
-  }, [])
+  }, [maxItems])
 
   useEffect(() => {
     fetchLeaderboard()
