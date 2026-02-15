@@ -19585,3 +19585,1293 @@ https://react.dev/link/hydration-mismatch
 [50:28:42.447] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
 [50:28:42.447] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
 [50:28:42.447] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:07.197] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:07.197] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:07.198] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:07.198] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:07.218] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:07.218] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:07.218] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:07.218] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:07.231] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:07.231] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:07.231] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:07.231] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:07.240] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:07.240] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:07.240] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:07.240] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:29.514] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:29.515] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:29.515] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:29.515] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:42.280] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:42.280] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:42.280] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:42.281] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:42.297] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:42.298] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:42.298] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:42.298] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:42.317] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:42.317] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:42.317] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:42.317] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:29:42.372] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:29:42.373] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:29:42.373] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:29:42.374] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:30:07.235] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:30:07.236] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:30:07.236] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:30:07.236] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:30:07.251] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:30:07.251] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:30:07.251] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:30:07.251] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:30:07.265] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:30:07.265] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:30:07.265] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:30:07.265] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:30:07.274] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:30:07.274] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:30:07.274] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:30:07.275] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:30:29.547] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:30:29.547] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:30:29.548] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:30:29.548] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:07.205] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:07.205] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:07.205] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:07.206] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:07.222] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:07.222] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:07.223] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:07.223] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:07.235] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:07.235] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:07.235] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:07.236] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:07.252] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:07.252] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:07.252] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:07.252] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:29.530] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:29.531] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:29.536] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:29.536] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:41.343] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:41.343] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:41.343] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:41.343] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:41.371] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:41.372] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:41.372] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:41.372] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:41.400] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:41.400] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:41.400] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:41.400] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:31:41.446] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:31:41.446] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:31:41.446] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:31:41.447] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:32:07.218] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:32:07.219] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:32:07.219] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:32:07.221] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:32:07.235] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:32:07.235] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:32:07.235] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:32:07.235] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:32:07.243] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:32:07.244] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:32:07.244] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:32:07.244] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:32:07.253] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:32:07.253] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:32:07.253] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:32:07.253] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:32:29.550] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:32:29.550] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:32:29.550] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:32:29.550] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:07.214] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:07.215] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:07.215] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:07.217] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:07.233] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:07.234] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:07.234] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:07.234] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:07.254] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:07.254] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:07.254] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:07.255] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:07.273] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:07.273] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:07.273] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:07.273] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:29.560] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:29.561] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:29.561] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:29.561] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:41.374] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:41.374] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:41.374] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:41.374] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:41.397] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:41.397] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:41.397] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:41.397] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:41.415] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:41.415] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:41.416] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:41.416] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:33:41.430] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:33:41.430] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:33:41.431] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:33:41.431] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:34:07.211] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:34:07.211] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:34:07.211] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:34:07.211] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:34:07.225] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:34:07.225] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:34:07.225] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:34:07.225] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:34:07.236] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:34:07.237] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:34:07.237] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:34:07.237] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:34:07.246] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:34:07.247] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:34:07.247] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:34:07.247] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:34:29.546] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:34:29.546] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:34:29.546] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:34:29.550] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:07.224] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:07.224] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:07.224] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:07.224] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:07.241] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:07.241] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:07.242] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:07.242] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:07.255] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:07.255] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:07.255] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:07.255] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:07.272] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:07.272] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:07.272] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:07.272] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:29.590] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:29.591] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:29.591] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:29.595] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:41.305] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:41.305] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:41.306] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:41.306] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:41.320] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:41.320] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:41.320] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:41.320] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:41.332] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:41.332] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:41.332] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:41.333] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:35:41.349] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:35:41.349] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:35:41.349] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:35:41.349] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:36:07.223] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:36:07.223] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:36:07.224] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:36:07.224] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:36:07.240] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:36:07.240] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:36:07.240] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:36:07.240] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:36:07.251] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:36:07.252] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:36:07.252] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:36:07.252] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:36:07.268] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:36:07.268] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:36:07.268] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:36:07.268] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:36:29.594] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:36:29.594] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:36:29.594] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:36:29.597] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:07.896] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:07.980] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:08.024] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:08.058] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:08.389] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:08.389] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:08.390] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:08.390] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:08.658] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:08.659] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:08.659] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:08.660] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:08.750] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:08.751] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:08.751] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:08.752] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:29.530] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:29.531] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:29.531] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:29.531] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:41.216] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:41.217] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:41.217] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:41.217] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:41.239] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:41.240] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:41.240] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:41.240] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:41.266] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:41.266] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:41.266] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:41.266] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:37:41.285] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:37:41.286] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:37:41.286] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:37:41.286] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:38:07.179] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:38:07.180] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:38:07.180] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:38:07.180] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:38:07.202] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:38:07.202] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:38:07.202] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:38:07.202] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:38:07.216] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:38:07.216] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:38:07.217] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:38:07.217] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:38:07.238] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:38:07.238] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:38:07.238] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:38:07.239] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:38:29.587] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:38:29.587] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:38:29.588] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:38:29.590] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:07.248] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:07.248] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:07.248] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:07.248] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:07.274] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:07.274] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:07.274] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:07.274] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:07.301] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:07.301] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:07.301] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:07.301] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:07.356] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:07.357] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:07.358] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:07.358] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:29.552] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:29.552] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:29.552] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:29.552] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:41.298] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:41.299] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:41.299] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:41.299] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:41.319] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:41.319] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:41.319] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:41.319] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:41.333] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:41.333] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:41.333] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:41.333] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:39:41.356] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:39:41.356] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:39:41.356] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:39:41.356] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:40:07.156] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:40:07.156] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:40:07.156] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:40:07.157] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:40:07.174] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:40:07.175] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:40:07.175] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:40:07.175] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:40:07.190] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:40:07.190] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:40:07.190] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:40:07.190] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:40:07.203] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:40:07.203] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:40:07.203] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:40:07.204] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:40:29.527] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:40:29.528] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:40:29.528] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:40:29.528] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:07.219] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:07.219] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:07.219] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:07.220] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:07.235] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:07.235] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:07.235] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:07.235] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:07.246] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:07.247] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:07.247] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:07.247] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:07.256] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:07.256] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:07.256] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:07.256] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:29.548] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:29.549] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:29.549] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:29.553] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:41.282] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:41.282] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:41.282] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:41.282] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:41.298] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:41.299] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:41.299] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:41.299] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:41.321] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:41.321] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:41.321] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:41.321] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:41:41.396] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:41:41.396] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:41:41.396] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:41:41.396] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:42:04.705] Browser LOG     Header render time: 1015484.70ms
+[50:42:04.705] Browser LOG     Header render time: 2.80ms
+[50:42:05.324] Browser LOG     Header render time: 1018929.00ms
+[50:42:07.680] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:42:07.681] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:42:07.681] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:42:07.682] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:42:07.739] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:42:07.740] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:42:07.740] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:42:07.740] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:42:08.058] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:42:08.058] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:42:08.058] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:42:08.059] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:42:08.386] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:42:08.386] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:42:08.387] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:42:08.387] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:42:16.452] Browser LOG     Header render time: 946415.90ms
+[50:42:29.630] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:42:29.631] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:42:29.632] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:42:29.633] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:08.799] Server  LOG     ✓ Compiled in 2.4s
+[50:43:09.306] Server  LOG     ○ Compiling / ...
+[50:43:12.673] Browser LOG     Header render time: 61339.10ms
+[50:43:12.676] Browser LOG     Header render time: 62842.30ms
+[50:43:12.676] Browser LOG     Header render time: 7.80ms
+[50:43:14.719] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:14.720] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:14.721] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:14.722] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:21.900] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:21.903] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:21.905] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:21.907] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:22.114] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:22.118] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:22.119] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:22.119] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:22.791] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:22.792] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:22.792] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:22.793] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:28.748] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:28.750] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:28.750] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:28.751] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:29.023] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:29.024] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:29.025] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:29.025] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:34.066] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:34.066] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:34.067] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:34.067] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:34.177] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:34.178] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:34.179] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:34.179] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:43:34.529] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:43:34.530] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:43:34.531] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:43:34.532] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:00.955] Browser LOG     Header render time: 104496.90ms
+[50:44:07.144] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:07.144] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:07.145] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:07.145] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:07.159] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:07.159] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:07.159] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:07.159] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:07.173] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:07.173] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:07.173] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:07.173] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:07.183] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:07.183] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:07.183] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:07.184] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:29.548] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:29.549] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:29.549] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:29.549] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:41.396] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:41.396] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:41.396] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:41.397] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:41.421] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:41.422] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:41.422] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:41.422] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:41.440] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:41.440] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:41.440] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:41.440] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:41.523] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:41.523] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:41.523] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:41.523] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.059] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.062] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.062] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.063] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[50:44:44.346] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.346] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.346] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.346] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.356] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.356] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.356] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.356] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.611] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.611] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.611] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.611] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.626] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.627] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.627] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.627] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.628] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="page.tsx">
+        <SegmentTrieNode>
+        <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+          <HomePage params={Promise} searchParams={Promise}>
+            <div className="min-h-scre...">
+              <HeaderComponent>
+              <main className="flex-1">
+                <Hero>
+                  <section className="relative o...">
+                    <div>
+                    <div className="container ...">
+                      <div className="grid gap-1...">
+                        <div>
+                        <div className="relative l...">
+                          <div className="relative r...">
+                            <div>
+                            <div className="text-cente...">
+                              <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
++                               186.49
+-                               192.50
+                              ...
+                            ...
+                          ...
+                    ...
+                ...
+              ...
+      ...
+
+[50:44:44.629] Browser LOG     Header render time: 4.80ms
+[50:44:44.629] Browser LOG     Header render time: 46.60ms
+[50:44:44.629] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[50:44:44.629] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[50:44:44.629] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[50:44:44.629] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771193571159}
+[50:44:44.629] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771193571159}
+[50:44:44.801] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.802] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.803] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.804] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.842] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.842] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.842] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.842] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:44.850] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:44:44.850] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:44:44.850] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:44:44.850] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:44:49.294] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[50:45:07.214] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:07.214] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:07.215] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:07.215] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:07.229] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:07.229] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:07.229] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:07.229] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:07.240] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:07.240] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:07.240] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:07.240] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:07.248] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:07.248] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:07.248] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:07.248] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:30.240] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:30.241] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:30.241] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:30.241] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:45.292] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:45.292] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:45.292] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:45.292] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:45.313] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:45.314] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:45.314] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:45.314] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:45.329] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:45.329] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:45.330] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:45.330] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:45:45.357] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:45:45.357] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:45:45.357] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:45:45.358] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:07.136] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:07.136] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:07.137] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:07.137] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:07.161] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:07.161] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:07.161] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:07.162] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:07.179] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:07.180] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:07.180] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:07.180] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:07.191] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:07.191] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:07.191] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:07.191] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:29.912] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:29.914] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:29.914] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:29.976] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:45.532] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:45.533] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:45.534] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:45.539] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:45.665] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:45.666] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:45.690] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:45.691] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:45.808] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:45.810] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:45.810] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:45.811] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:46:45.956] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:46:45.956] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:46:45.957] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:46:45.979] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:47:09.212] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:47:09.246] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:47:09.262] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:47:09.295] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:47:10.938] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:47:10.939] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:47:10.940] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:47:10.941] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:47:11.157] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:47:11.158] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:47:11.159] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:47:11.159] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:47:11.522] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:47:11.523] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:47:11.523] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:47:11.524] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:47:16.020] Server  LOG     ✓ Compiled in 3.7s
+[50:47:16.024] Browser LOG     Header render time: 150053.60ms
+[50:47:29.091] Server  LOG     ✓ Compiled in 34ms
+[50:47:29.239] Browser LOG     Header render time: 2158.50ms
+[50:47:31.181] Browser LOG     Header render time: 14206.50ms
+[50:47:31.233] Browser LOG     Header render time: 250956.70ms
+[50:47:31.233] Browser LOG     Header render time: 5.30ms
+[50:47:33.865] Browser LOG     Header render time: 14532.90ms
+[50:47:33.865] Browser LOG     Header render time: 3.00ms
+[50:47:49.447] Server  ERROR   [LiberiaMarket] Invest Liberia scrape failed TypeError: fetch failed
+[50:47:52.916] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:47:52.990] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:47:52.994] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:47:52.995] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:47:56.946] Browser ERROR   Error fetching best rate: {}
+[50:48:14.148] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:48:14.149] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:48:14.149] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:48:14.149] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:48:20.204] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:48:20.206] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:48:20.206] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:48:20.207] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:48:32.426] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[50:48:33.438] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:48:33.440] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:48:33.441] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:48:33.447] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:48:33.507] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[50:48:42.425] Server  ERROR   [LiberiaMarket] Invest Liberia scrape failed TypeError: fetch failed
+[50:48:47.452] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="page.tsx">
+        <SegmentTrieNode>
+        <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+          <HomePage params={Promise} searchParams={Promise}>
+            <div className="min-h-scre...">
+              <HeaderComponent>
+              <main className="flex-1">
+                <Hero>
+                  <section className="relative o...">
+                    <div>
+                    <div className="container ...">
+                      <div className="grid gap-1...">
+                        <div>
+                        <div className="relative l...">
+                          <div className="relative r...">
+                            <div>
+                            <div className="text-cente...">
+                              <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
++                               186.49
+-                               192.50
+                              ...
+                            ...
+                          ...
+                    ...
+                ...
+              ...
+      ...
+
+[50:48:47.452] Browser LOG     Header render time: 145.00ms
+[50:48:47.452] Browser LOG     Header render time: 288.60ms
+[50:48:47.452] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[50:48:47.452] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[50:48:47.452] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[50:48:47.452] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771193812098}
+[50:48:47.452] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771193812098}
+[50:48:56.954] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="page.tsx">
+        <SegmentTrieNode>
+        <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+          <HomePage params={Promise} searchParams={Promise}>
+            <div className="min-h-scre...">
+              <HeaderComponent>
+              <main className="flex-1">
+                <Hero>
+                  <section className="relative o...">
+                    <div>
+                    <div className="container ...">
+                      <div className="grid gap-1...">
+                        <div>
+                        <div className="relative l...">
+                          <div className="relative r...">
+                            <div>
+                            <div className="text-cente...">
+                              <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
++                               186.49
+-                               192.50
+                              ...
+                            ...
+                          ...
+                    ...
+                ...
+              ...
+      ...
+
+[50:48:56.954] Browser LOG     Header render time: 63.50ms
+[50:48:56.954] Browser LOG     Header render time: 132.40ms
+[50:48:56.954] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[50:48:56.954] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[50:48:56.954] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[50:48:56.954] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771193823566}
+[50:48:56.954] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771193823566}
+[50:49:00.506] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:00.508] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:00.508] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:00.513] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:00.730] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:00.735] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:00.736] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:00.737] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:02.102] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:02.103] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:02.104] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:02.104] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:02.422] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:02.422] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:02.423] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:02.423] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:03.037] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:03.038] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:03.038] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:03.038] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:03.347] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:03.347] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:03.348] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:03.348] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:03.414] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:03.414] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:03.415] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:03.415] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:16.380] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:17.808] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:19.690] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:21.040] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:22.052] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:22.082] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:22.083] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:22.083] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:22.083] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:23.093] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:23.124] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:23.125] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:23.125] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:23.125] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:23.970] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[50:49:25.218] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:25.239] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:25.239] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:25.239] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:25.240] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:25.254] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:25.254] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:25.254] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:25.255] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:25.267] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:25.267] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:25.267] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:25.267] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:25.280] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:25.281] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:25.281] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:25.281] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:25.291] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:25.292] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:25.292] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:25.292] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:25.397] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:25.397] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:25.398] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:25.398] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:25.415] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:25.415] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:25.415] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:25.415] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:27.349] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[50:49:28.692] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:28.751] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:29.105] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:30.183] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:30.183] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:30.185] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:30.186] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:31.705] Server  ERROR   ⨯ TypeError: fetch failed
+[50:49:45.206] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:45.207] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:45.207] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:45.207] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:45.227] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:45.227] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:45.227] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:45.228] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:45.242] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:45.242] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:45.242] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:45.242] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:45.257] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:45.258] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:45.258] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:45.258] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:56.592] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:56.600] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:56.600] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:56.601] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:56.616] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:56.617] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:56.617] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:56.617] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:56.626] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:56.626] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:56.626] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:56.626] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:49:56.638] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:49:56.638] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:49:56.638] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:49:56.638] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:29.553] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:29.553] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:29.553] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:29.554] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:45.056] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:45.057] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:45.057] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:45.057] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:45.074] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:45.075] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:45.075] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:45.075] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:45.141] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:45.142] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:45.142] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:45.142] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:45.154] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:45.155] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:45.155] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:45.155] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:57.143] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:57.144] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:57.145] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:57.146] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:57.433] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:57.434] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:57.479] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:57.481] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:57.933] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:57.940] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:57.941] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:57.942] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:50:58.282] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:50:58.283] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:50:58.289] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:50:58.291] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:51:29.635] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:51:29.637] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:51:29.638] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:51:29.641] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:51:45.799] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:51:45.800] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:51:45.803] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:51:45.806] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:51:45.892] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:51:45.893] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:51:45.893] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:51:45.893] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:51:46.078] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:51:46.079] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:51:46.109] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:51:46.110] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:51:46.233] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:51:46.239] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:51:46.241] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:51:46.244] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:51:57.540] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:51:57.541] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:51:57.542] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:51:57.544] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:51:58.296] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:51:58.297] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:51:58.298] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:51:58.298] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:00.722] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:00.723] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:00.731] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:00.731] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:00.947] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:00.948] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:00.948] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:00.949] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:29.710] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:29.711] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:29.712] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:29.714] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:45.318] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:45.325] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:45.326] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:45.327] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:45.432] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:45.433] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:45.433] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:45.434] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:45.577] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:45.577] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:45.577] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:45.578] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:45.649] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:45.649] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:45.649] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:45.650] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:58.193] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:58.194] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:58.208] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:58.216] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:58.631] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:58.639] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:58.640] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:58.656] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:59.049] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:59.050] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:59.050] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:52:59.054] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:52:59.575] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:52:59.584] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:52:59.591] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:53:00.060] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:53:04.742] Browser LOG     Header render time: 330558.70ms
+[50:53:04.742] Browser ERROR   Route error: {"digest":"1268728117","environmentName":"Server","name":"TypeError"}
+[50:53:04.743] Browser ERROR   Route error: {"digest":"1268728117","environmentName":"Server","name":"TypeError"}
+[50:53:05.428] Browser LOG     Header render time: 256724.90ms
+[50:53:05.431] Browser LOG     Header render time: 245702.60ms
+[50:53:07.358] Server  LOG     ✓ Compiled in 13.1s
+[50:53:08.174] Browser LOG     Header render time: 4871.50ms
+[50:53:08.176] Browser ERROR   Route error: {"digest":"1268728117","environmentName":"Server","name":"TypeError"}
+[50:53:08.177] Browser LOG     Header render time: 4821.90ms
+[50:53:15.066] Server  LOG     ○ Compiling /liberia-market ...
+[50:53:38.531] Server  LOG     ✓ Compiled in 18s
+[50:53:42.560] Browser LOG     Header render time: 32163.10ms
+[50:53:43.202] Browser LOG     Header render time: 32177.00ms
+[50:53:48.448] Server  ERROR   ⨯ TypeError: fetch failed
+[50:53:59.767] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:53:59.885] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:53:59.949] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:53:59.965] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:54:08.342] Server  LOG     ○ Compiling /liberia-market ...
+[50:54:58.368] Server  LOG     ✓ Finished writing to filesystem cache in 63s
+[50:54:59.178] Browser ERROR   Route error: {"digest":"1268728117","environmentName":"Server","name":"TypeError"}
+[50:55:01.849] Server  LOG     ✓ Compiled in 1ms
+[50:55:02.564] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:02.567] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:02.575] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:02.576] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:02.937] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:02.938] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:02.938] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:02.938] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:03.079] Browser LOG     Header render time: 80084.20ms
+[50:55:03.079] Browser LOG     Header render time: 81422.90ms
+[50:55:04.709] Server  ERROR   ⨯ TypeError: fetch failed
+[50:55:20.549] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:20.552] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:20.559] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:20.561] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:20.869] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:26.729] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:26.746] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:26.749] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:27.234] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:27.235] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:27.247] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:27.249] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:43.768] Server  ERROR   ⨯ TypeError: fetch failed
+[50:55:44.167] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:44.169] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:44.207] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:44.208] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:45.007] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:45.008] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:45.013] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:45.014] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:45.315] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:45.316] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:46.698] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:46.699] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:47.274] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:47.275] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:47.276] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:47.276] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:48.025] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:48.110] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:48.112] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:48.113] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:48.265] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:48.267] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:48.291] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:48.293] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:50.848] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:50.849] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:50.850] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:50.851] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:51.238] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:51.240] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:51.241] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:51.250] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:51.575] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:51.576] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:51.577] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:51.578] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:51.717] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:51.718] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:51.719] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:51.732] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:51.952] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:51.954] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:51.956] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:51.957] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:55.360] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:55.364] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:55.364] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:55.368] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:55:56.161] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:55:56.249] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:55:56.258] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:55:56.259] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:03.668] Server  ERROR   ⨯ TypeError: fetch failed
+[50:56:30.798] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:30.799] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:30.799] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:30.800] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:31.174] Server  LOG     ✓ Compiled in 61ms
+[50:56:31.324] Server  LOG     ✓ Finished filesystem cache database compaction in 96s
+[50:56:31.325] Server  LOG     ✓ Finished writing to filesystem cache in 102s
+[50:56:34.499] Server  LOG     ✓ Compiled in 14ms
+[50:56:34.845] Browser LOG     Header render time: 92327.80ms
+[50:56:34.845] Browser LOG     Header render time: 2440.70ms
+[50:56:34.846] Browser LOG     Header render time: 91669.30ms
+[50:56:34.846] Browser LOG     Header render time: 1856.70ms
+[50:56:35.597] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:35.598] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:35.598] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:35.598] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:35.823] Browser ERROR   Route error: {"digest":"891485658","environmentName":"Server","name":"TypeError"}
+[50:56:36.847] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:36.849] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:36.850] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:36.850] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:37.580] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:37.581] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:37.581] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:37.581] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:37.749] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:37.749] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:37.749] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:37.750] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:37.872] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:37.879] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:37.880] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:37.880] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:45.235] Server  LOG     ✓ Finished writing to filesystem cache in 11.5s
+[50:56:46.586] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:46.588] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:46.588] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:46.590] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:46.780] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:46.781] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:46.782] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:46.782] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:56:47.434] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:56:47.435] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:56:47.448] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:56:47.449] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:57:49.630] Server  ERROR   ⨯ TypeError: fetch failed
+[50:57:58.166] Server  ERROR   ⨯ TypeError: fetch failed
+[50:57:58.618] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:57:58.619] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:57:58.620] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:57:58.625] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:57:59.215] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:57:59.217] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:57:59.217] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:57:59.218] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:04.048] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:04.050] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:04.051] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:04.083] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:04.719] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:04.726] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:04.727] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:04.728] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:05.947] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:05.948] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:05.948] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:05.948] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:06.619] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:06.624] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:06.625] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:06.676] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:07.343] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:07.343] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:07.347] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:07.347] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:07.794] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:07.835] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:07.835] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:10.506] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:10.597] Server  LOG     ✓ Finished writing to filesystem cache in 10.5s
+[50:58:10.769] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:10.778] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:10.780] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:10.781] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:20.552] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:20.553] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:20.561] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:20.562] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:24.577] Server  ERROR   ⨯ TypeError: fetch failed
+[50:58:25.603] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:25.612] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:25.612] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:25.613] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:25.697] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:25.698] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:25.700] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:25.702] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:27.284] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:27.285] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:27.286] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:27.335] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:27.810] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:27.811] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:27.812] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:27.882] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:28.496] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:28.497] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:28.497] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:28.497] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:28.572] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:29.156] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:29.160] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:29.162] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:29.448] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:29.449] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:29.449] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:29.449] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:29.791] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:29.792] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:29.794] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:29.794] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:45.532] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:45.533] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:45.534] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:45.535] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:45.635] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:45.635] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:45.635] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:45.636] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:45.703] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:45.709] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:45.709] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:45.710] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:45.798] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:45.798] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:45.798] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:48.593] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:57.580] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:57.581] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:57.581] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:57.582] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:57.852] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:57.853] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:57.899] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:57.899] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:58.434] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:58.436] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:58.444] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:58.446] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:58:58.613] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:58:58.614] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:58:58.616] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:58:58.617] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[50:59:29.617] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.27057155 LRD per USD
+[50:59:29.618] Server  LOG     [v0] Open Exchange Rates: 186.600946 LRD per USD
+[50:59:29.618] Server  LOG     [v0] ExchangeRate API: 186.6 LRD per USD
+[50:59:29.619] Server  LOG     [v0] Aggregated rate: 186.49 from 3 sources
+[51:02:00.470] Browser LOG     Header render time: 277593.90ms
+[51:02:00.729] Browser LOG     Header render time: 278025.90ms
+[51:03:10.921] Browser LOG     Header render time: 85067.40ms
+[51:03:10.921] Browser LOG     Header render time: 917.00ms
+[51:03:10.938] Browser LOG     Header render time: 497.60ms
+[51:03:10.938] Browser LOG     Header render time: 258.90ms
+[51:03:10.948] Browser LOG     Header render time: 348.60ms
+[51:03:10.948] Browser LOG     Header render time: 393.90ms
+[51:03:10.948] Browser LOG     Header render time: 1116.50ms
+[51:03:10.961] Browser LOG     Header render time: 1977.10ms
+[51:03:10.962] Browser LOG     Header render time: 1984.80ms
+[51:03:10.962] Browser LOG     Header render time: 752.20ms
+[51:03:10.962] Browser LOG     Header render time: 644.20ms
+[51:03:10.962] Browser LOG     Header render time: 716.40ms
+[51:03:36.283] Server  LOG     ✓ Finished writing to filesystem cache in 2.3min
+[51:04:27.948] Browser LOG     Header render time: 69156.80ms
+[51:05:22.870] Browser LOG     Header render time: 90429.30ms
+[51:05:22.920] Browser LOG     Header render time: 910.10ms
+[51:05:22.969] Browser LOG     Header render time: 1914.10ms
+[51:05:22.969] Browser LOG     Header render time: 3156.60ms
+[51:05:22.969] Browser LOG     Header render time: 68516.60ms
+[51:05:22.969] Browser ERROR   Error fetching best rate: {}
+[51:05:22.969] Browser LOG     Header render time: 54779.20ms
+[51:06:27.065] Browser LOG     Header render time: 32968.20ms
+[51:06:27.973] Browser ERROR   Error fetching best rate: {}
+[51:06:28.474] Browser LOG     Header render time: 55486.30ms
+[51:06:28.475] Browser ERROR   Error fetching best rate: {}
+[51:06:28.557] Browser LOG     Header render time: 32270.00ms
+[51:06:28.744] Browser ERROR   Error fetching best rate: {}
+[51:07:34.608] Browser LOG     Header render time: 70209.70ms
+[51:07:34.901] Browser ERROR   Error fetching best rate: {}
+[51:07:34.904] Browser LOG     Header render time: 70279.00ms
+[51:07:34.904] Browser ERROR   Error fetching best rate: {}
+[51:12:55.964] Server  LOG     ✓ Finished writing to filesystem cache in 6.3min
+[51:12:56.280] Browser LOG     Header render time: 70138.40ms
+[51:12:56.281] Browser ERROR   Error fetching best rate: {}
+[51:12:56.281] Browser ERROR   Error fetching best rate: {}
+[51:12:56.282] Browser ERROR   Error fetching best rate: {}
+[51:12:56.282] Browser ERROR   Error fetching best rate: {}
