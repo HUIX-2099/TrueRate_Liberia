@@ -161,7 +161,7 @@ const HeaderComponent = () => {
           <Link href="/" className="flex items-center min-w-0" aria-label="TrueRate Liberia home">
             <div className="flex h-[98px] w-[128px] sm:h-[106px] sm:w-[144px] md:h-[106px] md:w-[160px] items-center justify-center overflow-hidden">
               <Image
-                src="/logos/logo-1.png"
+                src="/truerate-logo.png"
                 alt="TrueRate logo"
                 width={150}
                 height={150}

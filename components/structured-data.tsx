@@ -22,7 +22,7 @@ export function StructuredData({ currentRate = 198.5 }: StructuredDataProps) {
     "name": "TrueRate Liberia",
     "alternateName": ["TrueRate", "TrueRate-Liberia", "TrueRateLiberia"],
     "url": "https://truerateliberia.com",
-    "logo": "https://truerateliberia.com/icon.png",
+    "logo": "https://truerateliberia.com/truerate-logo.png",
     "description": "Liberia's #1 USD/LRD exchange rate platform providing real-time rates, AI predictions, and verified money changers.",
     "foundingDate": "2024",
     "founders": [{
