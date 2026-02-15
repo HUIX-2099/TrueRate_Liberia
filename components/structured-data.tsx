@@ -22,7 +22,7 @@ export function StructuredData({ currentRate = 198.5 }: StructuredDataProps) {
     "name": "TrueRate Liberia",
     "alternateName": "Liberia's most accurate platform for real-time currency exchange rates and AI-powered predictions.",
     "url": "https://truerateliberia.com",
-    "logo": "https://truerateliberia.com/icons/Logo%206.png",
+    "logo": "https://truerateliberia.com/icons/logo-512.png",
     "description": "Liberia's go-to solution for accurate USD/LRD exchange rates and business tools. Search real-time rates, AI predictions, currency converter, import calculator, and verified money changers across Monrovia and Liberia.",
     "slogan": "Know today, plan tomorrow",
     "knowsAbout": ["USD/LRD exchange rates", "currency conversion", "money changers Liberia", "business finance tools", "import pricing", "remittance rates"],

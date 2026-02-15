@@ -14,7 +14,7 @@ const PRECACHE = [
   "/liberia-market",
   "/offline",
   "/predictions",
-  "/icons/Logo%206.png",
+  "/icons/logo-192.png",
   "/placeholder-logo.png",
   "/manifest.ts",
 ]
