@@ -424,11 +424,26 @@ export function MarketNews() {
     let isMounted = true
     const loadNews = async () => {
       try {
-        const res = await fetch("/api/news", { cache: "no-store" })
-        if (!res.ok) return
-        const data = await res.json()
-        if (isMounted && Array.isArray(data?.items) && data.items.length) {
-          setItems(data.items)
+        const res = await fetch("/api/liberia-market-news", { cache: "no-store" })
+        if (res.ok) {
+          const data = await res.json()
+          if (isMounted && Array.isArray(data?.items) && data.items.length) {
+            setItems(data.items.map((i: { title: string; source: string; time: string; summary: string; url: string; impact?: "positive" | "negative" | "neutral" }) => ({
+              ...i,
+              impact: (i.impact ?? "neutral") as "positive" | "negative" | "neutral",
+            })))
+            return
+          }
+        }
+        const fallbackRes = await fetch("/api/news", { cache: "no-store" })
+        if (fallbackRes.ok) {
+          const data = await fallbackRes.json()
+          if (isMounted && Array.isArray(data?.items) && data.items.length) {
+            setItems(data.items.map((i: { title: string; source: string; time: string; summary: string; url: string }) => ({
+              ...i,
+              impact: "neutral" as const,
+            })))
+          }
         }
       } catch {
         // Keep fallback content

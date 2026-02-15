@@ -308,6 +308,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/api/liberia-market-news/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/liberia-market-news">> = Specific
+  const handler = {} as typeof import("../../../app/api/liberia-market-news/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/api/lisgis-cpi/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/lisgis-cpi">> = Specific
