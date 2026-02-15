@@ -85,7 +85,7 @@ export function PushNotifications() {
         // In production, register with push service
         new Notification('TrueRate Liberia', {
           body: 'Push notifications enabled! You\'ll receive rate alerts.',
-          icon: '/icons/logo-192.png'
+          icon: '/icons/Logo%206.png'
         })
       }
     } catch (error) {

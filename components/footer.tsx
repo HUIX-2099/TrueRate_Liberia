@@ -15,7 +15,7 @@ export function Footer() {
             <div className="flex items-start justify-center md:justify-start -mt-[30px]">
               <div className="flex w-full max-w-[320px] sm:max-w-[380px] items-center justify-center overflow-hidden mx-auto md:mx-0">
                 <Image
-                  src="/icons/logo-512.png"
+                  src="/icons/Logo%206.png"
                   alt="TrueRate logo"
                   width={420}
                   height={180}

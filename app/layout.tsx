@@ -114,17 +114,15 @@ export const metadata: Metadata = {
   // Category
   category: "Finance",
   
-  // Icons - use sized variants for crisp display
+  // Icons
   icons: {
     icon: [
-      { url: "/icons/logo-32.png", type: "image/png", sizes: "32x32" },
-      { url: "/icons/logo-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/icons/logo-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/icons/Logo%206.png", type: "image/png", sizes: "any" },
     ],
     apple: [
-      { url: "/icons/logo-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/Logo%206.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/icons/logo-192.png",
+    shortcut: "/icons/Logo%206.png",
   },
   
   // Other
@@ -157,7 +155,6 @@ export default function RootLayout({
         {/* Preload critical resources */}
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/api/rates/live" as="fetch" crossOrigin="anonymous" />
-        <link rel="preload" href="/icons/logo-32.png" as="image" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         {/* Preconnect to external APIs */}
