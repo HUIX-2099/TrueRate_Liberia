@@ -4513,6 +4513,16 @@
     color: var(--muted-foreground);
   }
 
+  .text-muted-foreground\/60 {
+    color: var(--muted-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-muted-foreground\/60 {
+      color: color-mix(in oklab, var(--muted-foreground) 60%, transparent);
+    }
+  }
+
   .text-orange-500 {
     color: var(--color-orange-500);
   }

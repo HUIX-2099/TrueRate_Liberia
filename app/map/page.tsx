@@ -382,17 +382,16 @@ export default function MapPage() {
                     <CardTitle className="text-xl sm:text-2xl">Live Rate Map</CardTitle>
                     <CardDescription>Interactive map with live rates across Liberia</CardDescription>
                   </div>
-                  <Badge variant="secondary">{locations.length + communityReports.length} locations</Badge>
+                  <Badge variant="secondary">Coming soon</Badge>
                 </CardHeader>
                 <CardContent className="p-0 block overflow-hidden">
-                  <GoogleMap
-                    markers={mapMarkers}
-                    center={{ lat: 6.3156, lng: -10.8074 }}
-                    zoom={7}
-                    className="h-[360px] sm:h-[520px] lg:h-[600px] w-full"
-                    useUserLocation
-                    onReady={handleMapReady}
-                  />
+                  <div className="h-[360px] sm:h-[520px] lg:h-[600px] w-full flex flex-col items-center justify-center gap-4 bg-muted/30 border-t border-border/60">
+                    <MapPin className="h-16 w-16 text-muted-foreground/60" />
+                    <p className="text-lg font-medium text-muted-foreground">Coming soon</p>
+                    <p className="text-sm text-muted-foreground text-center max-w-md px-4">
+                      We’re building an interactive map with live rates across Liberia. Check back soon.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
               <Card className="mt-4 border-border/60">
