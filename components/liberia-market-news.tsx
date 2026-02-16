@@ -22,6 +22,7 @@ const KEYWORDS = [
   "currency",
   "exchange",
   "rate",
+  "rates",
   "investment",
   "gold",
   "rubber",
@@ -33,18 +34,40 @@ const KEYWORDS = [
   "inflation",
   "lrd",
   "usd",
+  "dollar",
+  "forex",
+  "remittance",
+  "central bank",
+  "cbl",
+  "foreign exchange",
+  "import",
+  "trade",
+  "budget",
+  "finance",
 ]
 
 const COMMODITY_KEYWORDS = ["gold", "rubber", "palm oil", "iron ore"]
 
 const FEEDS = [
   {
-    source: "FrontPageAfrica",
+    source: "FrontPageAfrica Economy",
     url: "https://frontpageafricaonline.com/category/business/economy/feed/",
   },
   {
-    source: "allAfrica",
+    source: "FrontPageAfrica",
+    url: "https://frontpageafricaonline.com/feed/",
+  },
+  {
+    source: "allAfrica Business",
     url: "https://allafrica.com/tools/headlines/rdf/liberia/business/headlines.rdf",
+  },
+  {
+    source: "allAfrica Liberia",
+    url: "https://allafrica.com/tools/headlines/rdf/liberia/headlines.rdf",
+  },
+  {
+    source: "New Dawn Liberia",
+    url: "https://thenewdawnliberia.com/feed/",
   },
 ]
 
@@ -181,9 +204,19 @@ export const fetchLiberiaNews = async (): Promise<LiberiaNewsItem[]> => {
   for (const item of merged) {
     if (!unique.has(item.url)) unique.set(item.url, item)
   }
+  const fxKeywords = ["rate", "rates", "currency", "exchange", "dollar", "forex", "lrd", "usd", "remittance", "cbl", "central bank", "inflation"]
+  const scoreFxRelevance = (item: LiberiaNewsItem) => {
+    const text = normalizeText(`${item.title} ${item.excerpt}`)
+    return fxKeywords.filter((k) => text.includes(k)).length
+  }
   return Array.from(unique.values())
-    .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime())
-    .slice(0, 10)
+    .sort((a, b) => {
+      const scoreA = scoreFxRelevance(a)
+      const scoreB = scoreFxRelevance(b)
+      if (scoreB !== scoreA) return scoreB - scoreA
+      return b.publishedAt.getTime() - a.publishedAt.getTime()
+    })
+    .slice(0, 15)
 }
 
 const buildMarketMovers = (items: LiberiaNewsItem[]) => {
@@ -209,7 +242,7 @@ export async function LiberiaMarketNews() {
         <CardHeader className="flex flex-row items-center gap-3">
           <AlertCircle className="h-5 w-5 text-muted-foreground" />
           <div>
-            <CardTitle>Latest Market & Economy News</CardTitle>
+            <CardTitle>Liberia FX Pulse — Headlines That Move the Rate</CardTitle>
             <CardDescription>We could not load market headlines right now.</CardDescription>
           </div>
         </CardHeader>
@@ -223,9 +256,9 @@ export async function LiberiaMarketNews() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-bold mb-2">Latest Liberia Market & Economy Headlines</h2>
+        <h2 className="text-2xl font-bold mb-2">Liberia FX Pulse — Headlines That Move the Rate</h2>
         <p className="text-muted-foreground">
-          Curated from trusted Liberian sources. Updated automatically every 1–2 hours.
+          Curated from trusted Liberian sources. Headlines ranked by relevance to currency, exchange rates, and markets. Updated automatically every 1–2 hours.
         </p>
       </div>
 

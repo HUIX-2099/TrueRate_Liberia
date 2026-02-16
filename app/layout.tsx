@@ -114,15 +114,19 @@ export const metadata: Metadata = {
   // Category
   category: "Finance",
   
-  // Icons - sized variants for crisp visibility at all scales
+  // Icons - HD variants for crisp rendering on Retina/ high-DPI displays
   icons: {
     icon: [
-      { url: "/icons/logo-32.png", type: "image/png", sizes: "32x32" },
-      { url: "/icons/logo-48.png", type: "image/png", sizes: "48x48" },
       { url: "/icons/logo-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/icons/logo-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icons/logo-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/icons/logo-64.png", type: "image/png", sizes: "64x64" },
+      { url: "/icons/logo-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icons/logo-32.png", type: "image/png", sizes: "32x32" },
     ],
     apple: [
-      { url: "/icons/logo-512.png", sizes: "180x180", type: "image/png" },
+      { url: "/icons/logo-180.png", sizes: "180x180", type: "image/png" },
+      { url: "/icons/logo-192.png", sizes: "192x192", type: "image/png" },
     ],
     shortcut: "/icons/logo-512.png",
   },
@@ -157,7 +161,7 @@ export default function RootLayout({
         {/* Preload critical resources */}
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/api/rates/live" as="fetch" crossOrigin="anonymous" />
-        <link rel="preload" href="/icons/logo-32.png" as="image" />
+        <link rel="preload" href="/icons/logo-192.png" as="image" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         {/* Preconnect to external APIs */}

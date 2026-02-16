@@ -97,11 +97,11 @@ export default async function LiberiaMarketPage() {
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                  Latest Market Updates
+                  Liberia FX Pulse — Headlines That Move the Rate
                 </span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground">
-                Stay informed with curated Liberia business news and live market data
+                Curated Liberia business and economy news affecting USD/LRD exchange — ranked by FX relevance
               </p>
             </div>
             <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
