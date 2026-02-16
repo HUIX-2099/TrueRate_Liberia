@@ -16,10 +16,11 @@ interface ImportItem {
   icon: string
 }
 
+// Base USD prices aligned with Liberia Price Index (/api/price-index): CBL, LISGIS, market surveys
 const importItems: ImportItem[] = [
-  { id: 'rice', name: 'Rice (50kg)', nameKey: 'import.rice', baseUSDPrice: 45, unit: 'bag', icon: '🌾' },
-  { id: 'cement', name: 'Cement (50kg)', nameKey: 'import.cement', baseUSDPrice: 12, unit: 'bag', icon: '🧱' },
-  { id: 'fuel', name: 'Fuel/Gasoline', nameKey: 'import.fuel', baseUSDPrice: 4.5, unit: 'gallon', icon: '⛽' },
+  { id: 'rice', name: 'Rice (50kg)', nameKey: 'import.rice', baseUSDPrice: 21, unit: 'bag', icon: '🌾' }, // ~2× 25kg Local (11) per price-index
+  { id: 'cement', name: 'Cement (50kg)', nameKey: 'import.cement', baseUSDPrice: 8.5, unit: 'bag', icon: '🧱' },
+  { id: 'fuel', name: 'Fuel/Gasoline', nameKey: 'import.fuel', baseUSDPrice: 4.15, unit: 'gallon', icon: '⛽' },
   { id: 'flour', name: 'Flour (25kg)', nameKey: 'import.flour', baseUSDPrice: 18, unit: 'bag', icon: '🌾' },
   { id: 'sugar', name: 'Sugar (50kg)', nameKey: 'import.sugar', baseUSDPrice: 35, unit: 'bag', icon: '🍬' },
   { id: 'oil', name: 'Cooking Oil (20L)', nameKey: 'import.oil', baseUSDPrice: 28, unit: 'jerrycan', icon: '🫒' },

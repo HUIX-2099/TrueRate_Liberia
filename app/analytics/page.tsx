@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TrendingUp, TrendingDown, Activity, RefreshCw, Sparkles, Calendar, MapPin } from "lucide-react"
 import { RateHistoryExport } from "@/components/rate-history-export"
+import { RateBrief } from "@/components/rate-brief"
 import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 
@@ -241,6 +242,11 @@ export default function AnalyticsPage() {
               </Card>
             </div>
           )}
+
+          {/* Rate brief — why the rate moved */}
+          <div className="max-w-5xl mx-auto mb-12">
+            <RateBrief variant="card" weekChangePercent={weekChange} />
+          </div>
 
           {/* Regional breakdown */}
           {(regional.length > 0 || byCounty.length > 0) && (

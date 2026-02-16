@@ -46,6 +46,7 @@ import { StaleRateWarning } from "@/components/stale-rate-warning"
 import { OfflineBanner } from "@/components/offline-banner"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { RateChangeAnimation } from "@/components/rate-change-animation"
+import { RateBrief } from "@/components/rate-brief"
 
 // Multi-currency support
 const currencies = [
@@ -355,6 +356,7 @@ const ConverterPageComponent = () => {
                             compact
                             className="mt-1"
                           />
+                          <RateBrief variant="inline" className="mt-1 block" />
                         </>
                       )}
                     </div>

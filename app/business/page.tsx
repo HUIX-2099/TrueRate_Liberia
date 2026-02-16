@@ -518,7 +518,7 @@ export default function BusinessDashboardPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="text-4xl font-bold mb-4">
-                      $3-5<span className="text-base sm:text-lg text-muted-foreground">/month</span>
+                      $5<span className="text-base sm:text-lg text-muted-foreground">/month</span>
                     </div>
                     <div className="space-y-2 mb-6">
                       {[
@@ -541,7 +541,7 @@ export default function BusinessDashboardPage() {
                     </div>
                     <Button className="w-full">Upgrade to Business</Button>
                     <p className="text-xs text-muted-foreground text-center mt-2">
-                      Pay via Orange Money or Lonestar Cash
+                      Pay via Orange Money or Lonestar Momo
                     </p>
                   </CardContent>
                 </Card>

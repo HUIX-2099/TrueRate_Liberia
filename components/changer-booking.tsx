@@ -324,7 +324,7 @@ export function ChangerBooking() {
             <div>
               <div className="font-semibold text-sm">TrueRate Business Feature</div>
               <p className="text-xs text-muted-foreground mt-1">
-                Reserve cash and lock in rates with TrueRate Business ($3-5/month).
+                Reserve cash and lock in rates with TrueRate Business ($5/month).
                 Reservations are guaranteed for 2 hours.
               </p>
             </div>

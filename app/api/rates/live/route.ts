@@ -81,8 +81,8 @@ export async function GET() {
       },
       {
         id: "6",
-        name: "Paynesville Forex",
-        location: "Paynesville, Monrovia",
+        name: "SR Forex Exchange Bureau",
+        location: "Mount Barclay, Monrovia",
         buyRate: baseRate - 2.8,
         sellRate: baseRate + 1.5,
         rating: 4.6,

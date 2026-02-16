@@ -33,6 +33,16 @@ export const translations: Record<Language, Record<string, string>> = {
     'rate.best': "Today's Best Rate",
     'rate.bestNearYou': 'Best rate near you',
     'rate.updated': 'Last updated',
+
+    // Rate brief (why the rate moves)
+    'rateBrief.trigger': 'Why did the rate move?',
+    'rateBrief.title': 'Why did the rate move?',
+    'rateBrief.cbl': 'CBL policy — the Central Bank of Liberia sets the official rate; market rates can differ.',
+    'rateBrief.demand': 'Demand for USD — when more people need dollars, the street rate often rises.',
+    'rateBrief.seasonality': 'Seasonality — back-to-school, holidays, and harvest times affect demand.',
+    'rateBrief.footer': 'LRD is measurable and understandable. We show both official and market rates so you see the full picture.',
+    'rateBrief.thisWeekUp': 'This week the rate is up {pct}% vs last week.',
+    'rateBrief.thisWeekDown': 'This week the rate is down {pct}% vs last week.',
     
     // Best Rate Widget
     'widget.bestRate': "Today's Best Rate",
@@ -113,7 +123,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Business Pro
     'business.pro': 'TrueRate Business',
-    'business.proPrice': '$3-5/month',
+    'business.proPrice': '$5/month',
     'business.bulkConvert': 'Bulk Invoice Converter',
     'business.pdfExport': 'PDF Export',
     'business.booking': 'Book a Changer',
@@ -197,6 +207,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'rate.best': 'Best Rate Today',
     'rate.bestNearYou': 'Best rate by you',
     'rate.updated': 'Last time we check',
+
+    'rateBrief.trigger': 'Why the rate move?',
+    'rateBrief.title': 'Why the rate move?',
+    'rateBrief.cbl': 'CBL set the official rate; market can be different.',
+    'rateBrief.demand': 'When plenty people need dollar, street rate go up.',
+    'rateBrief.seasonality': 'School time, holiday, harvest — demand change.',
+    'rateBrief.footer': 'LRD you can measure. We show official and market so you see.',
+    'rateBrief.thisWeekUp': 'This week rate up {pct}% from last week.',
+    'rateBrief.thisWeekDown': 'This week rate down {pct}% from last week.',
     
     'widget.bestRate': 'Best Rate Today-O!',
     'widget.nearestChanger': 'Money Man Near You',
@@ -268,7 +287,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'leaderboard.allTime': 'All Time',
     
     'business.pro': 'Business Plan',
-    'business.proPrice': '$3-5 every month',
+    'business.proPrice': '$5 every month',
     'business.bulkConvert': 'Change Plenty Bill',
     'business.pdfExport': 'Get Paper',
     'business.booking': 'Book Money Man',
@@ -344,6 +363,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'rate.best': 'Meilleur Taux du Jour',
     'rate.bestNearYou': 'Meilleur taux près de vous',
     'rate.updated': 'Dernière mise à jour',
+
+    'rateBrief.trigger': 'Pourquoi le taux a bougé ?',
+    'rateBrief.title': 'Pourquoi le taux a bougé ?',
+    'rateBrief.cbl': 'Politique CBL — la Banque centrale fixe le taux officiel ; le marché peut différer.',
+    'rateBrief.demand': 'Demande en USD — quand plus de gens ont besoin de dollars, le taux de rue monte souvent.',
+    'rateBrief.seasonality': 'Saisonnalité — rentrée, fêtes et récoltes influencent la demande.',
+    'rateBrief.footer': 'Le LRD est mesurable. Nous montrons taux officiel et marché pour la transparence.',
+    'rateBrief.thisWeekUp': 'Cette semaine le taux est en hausse de {pct}% vs la semaine dernière.',
+    'rateBrief.thisWeekDown': 'Cette semaine le taux est en baisse de {pct}% vs la semaine dernière.',
     
     'widget.bestRate': 'Meilleur Taux du Jour',
     'widget.nearestChanger': 'Bureau de Change le Plus Proche',
@@ -459,7 +487,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'leaderboard.thisWeek': 'Cette semaine',
     'leaderboard.allTime': 'Tout',
     'business.pro': 'TrueRate Business',
-    'business.proPrice': '3-5 $/mois',
+    'business.proPrice': '5 $/mois',
     'business.bulkConvert': 'Conversion en masse',
     'business.pdfExport': 'Export PDF',
     'business.booking': 'Réserver un bureau',
@@ -493,6 +521,14 @@ export const translations: Record<Language, Record<string, string>> = {
     'rate.best': 'Kpala Kɛlɛi',
     'rate.bestNearYou': 'Kpala kɛlɛi nɛɛ',
     'rate.updated': 'Kɛɛ yɛɛi',
+    'rateBrief.trigger': 'Why did the rate move?',
+    'rateBrief.title': 'Why did the rate move?',
+    'rateBrief.cbl': 'CBL policy sets official rate; market rate can differ.',
+    'rateBrief.demand': 'When demand for USD is high, street rate often rises.',
+    'rateBrief.seasonality': 'Seasonality — school, holidays, harvest affect demand.',
+    'rateBrief.footer': 'LRD is measurable. We show official and market rates.',
+    'rateBrief.thisWeekUp': 'This week rate up {pct}% vs last week.',
+    'rateBrief.thisWeekDown': 'This week rate down {pct}% vs last week.',
     'simple.mode': 'Laa-kaa Tɔɔ',
     'simple.currentRate': 'Dɔla Kpalai',
     'simple.tapForVoice': 'Gɛɛ ma woo',

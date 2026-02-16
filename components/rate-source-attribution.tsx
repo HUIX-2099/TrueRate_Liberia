@@ -44,6 +44,8 @@ export function RateSourceAttribution({
   className = "",
 }: RateSourceAttributionProps) {
   const hasCbl = cblRate != null && cblRate > 0
+  const hasBoth = hasCbl && compositeRate != null && compositeRate > 0
+  const spread = hasBoth ? compositeRate - cblRate : 0
   const sourceLabel = sources.length === 0
     ? "Multiple sources"
     : sources.length === 1
@@ -59,9 +61,14 @@ export function RateSourceAttribution({
               <Info className="h-3.5 w-3.5" />
               {sourceLabel}
               {timestamp ? ` · ${formatTime(timestamp)}` : ""}
-              {hasCbl && compositeRate != null && (
+              {hasCbl && (
                 <span className="text-foreground/80">
-                  · CBL: {cblRate.toFixed(2)}
+                  · CBL: {cblRate!.toFixed(2)}
+                </span>
+              )}
+              {hasBoth && Math.abs(spread) >= 0.01 && (
+                <span className="text-foreground/80">
+                  · Market: {compositeRate!.toFixed(2)}
                 </span>
               )}
             </span>
@@ -71,14 +78,17 @@ export function RateSourceAttribution({
             <p className="text-xs mt-1">{sources.length ? sources.join(", ") : "Aggregated from multiple APIs"}</p>
             {timestamp && <p className="text-xs mt-1">Updated: {formatTime(timestamp)}</p>}
             {hasCbl && (
-              <p className="text-xs mt-1">
-                CBL official: {cblRate!.toFixed(2)} LRD/USD
-                {compositeRate != null && compositeRate !== cblRate && (
-                  <span className="text-muted-foreground">
-                    {" "}(TrueRate composite: {compositeRate.toFixed(2)})
-                  </span>
+              <p className="text-xs mt-1 font-medium">CBL official rate: {cblRate!.toFixed(2)} LRD/USD</p>
+            )}
+            {hasBoth && (
+              <>
+                <p className="text-xs mt-1 font-medium">Market (street) rate: {compositeRate!.toFixed(2)} LRD/USD</p>
+                {Math.abs(spread) >= 0.01 && (
+                  <p className="text-xs mt-1 text-muted-foreground">
+                    Spread: {spread >= 0 ? "+" : ""}{spread.toFixed(2)} LRD. The gap between official and what changers trade. We show both so you see the full picture.
+                  </p>
                 )}
-              </p>
+              </>
             )}
           </TooltipContent>
         </Tooltip>
@@ -110,13 +120,23 @@ export function RateSourceAttribution({
         <p className="text-xs text-muted-foreground">Last updated: {formatTime(timestamp)}</p>
       )}
       {hasCbl && (
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-muted-foreground">CBL official:</span>
-          <span className="font-medium">{cblRate!.toFixed(2)} LRD/USD</span>
-          {compositeRate != null && Math.abs(compositeRate - cblRate) >= 0.01 && (
-            <span className="text-muted-foreground">
-              (TrueRate: {compositeRate.toFixed(2)})
-            </span>
+        <div className="text-xs space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="text-muted-foreground">CBL official rate:</span>
+            <span className="font-medium">{cblRate!.toFixed(2)} LRD/USD</span>
+          </div>
+          {compositeRate != null && compositeRate > 0 && (
+            <>
+              <div className="flex items-center gap-2">
+                <span className="text-muted-foreground">Market (street) rate:</span>
+                <span className="font-medium">{compositeRate.toFixed(2)} LRD/USD</span>
+              </div>
+              {Math.abs(compositeRate - cblRate) >= 0.01 && (
+                <p className="text-muted-foreground mt-1">
+                  Spread: {(compositeRate - cblRate) >= 0 ? "+" : ""}{(compositeRate - cblRate).toFixed(2)} LRD. The gap between official and what changers actually trade. We show both so you see the full picture.
+                </p>
+              )}
+            </>
           )}
         </div>
       )}
