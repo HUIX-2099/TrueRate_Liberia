@@ -21,15 +21,27 @@ async function main() {
 
   for (const size of sizes) {
     const outPath = path.join(OUT_DIR, `logo-${size}.png`);
-    await logo
-      .clone()
-      .resize(size, size)
-      .png()
-      .toFile(outPath);
+    await logo.clone().resize(size, size).png().toFile(outPath);
     console.log("Wrote", outPath);
   }
 
-  console.log("Done. HD favicons (original color): 32, 48, 64, 96, 180, 192, 512");
+  const maskableSizes = [192, 512];
+  const MASKABLE_INSET = 0.1;
+  for (const size of maskableSizes) {
+    const inner = Math.round(size * (1 - 2 * MASKABLE_INSET));
+    const left = Math.floor((size - inner) / 2);
+    const outPath = path.join(OUT_DIR, `logo-${size}-maskable.png`);
+    const resized = await logo.clone().resize(inner, inner).png().toBuffer();
+    await sharp({
+      create: { width: size, height: size, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 1 } },
+    })
+      .composite([{ input: resized, left, top: left }])
+      .png()
+      .toFile(outPath);
+    console.log("Wrote", outPath, "(maskable)");
+  }
+
+  console.log("Done. HD favicons + maskable 192, 512 for PWA.");
 }
 
 main().catch((err) => {
