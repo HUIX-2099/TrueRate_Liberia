@@ -8,12 +8,12 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { 
   ArrowRight, TrendingUp, MapPin, Calculator, Shield, 
-  Briefcase, MessageSquare, Users, Gift, Brain, Crown
+  Briefcase, MessageSquare, Users, Gift, Brain, Crown, Bell, Zap
 } from "lucide-react"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { BestRateWidget } from "@/components/best-rate-widget"
+import { RegionalBreakdownWidget } from "@/components/regional-breakdown-widget"
 import { MarketLeaderboard } from "@/components/market-leaderboard"
 import { PriceIndex, MarketNews, InflationTracker } from "@/components/liberia-features"
 import { useEffect, useState } from "react"
@@ -33,26 +33,53 @@ export default function HomePage() {
       <main className="flex-1">
         <Hero />
 
-        {/* Today's Best Rate Widget - Prime Position */}
+        {/* Regional breakdown + Quick Tools */}
         <section className="py-8 sm:py-10 md:py-14 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-4">
               <div className="text-center space-y-3">
                 <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-                  <Badge variant="outline">Best Rate Today</Badge>
-                  <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Live Updates</Badge>
-                  <Badge variant="secondary">Location-Based</Badge>
+                  <Badge variant="outline">Regional breakdown</Badge>
+                  <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Live</Badge>
+                  <Badge variant="secondary">By county</Badge>
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
                   <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                    Find the Best USD/LRD Rate Near You
+                    Rates by Region
                   </span>
                 </h2>
                 <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-                  Distance, travel time, and trust signals update with your location.
+                  Compare average USD/LRD rates across Monrovia and upcountry. Use the tools below for quick access.
                 </p>
+                {/* Quick-access tools */}
+                <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
+                    <Link href="/converter">
+                      <Calculator className="h-4 w-4" />
+                      Converter
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
+                    <Link href="/tools">
+                      <Bell className="h-4 w-4" />
+                      Alerts
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
+                    <Link href="/map">
+                      <MapPin className="h-4 w-4" />
+                      Map
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
+                    <Link href="/rates">
+                      <Zap className="h-4 w-4" />
+                      All rates
+                    </Link>
+                  </Button>
+                </div>
               </div>
-              <BestRateWidget />
+              <RegionalBreakdownWidget />
             </div>
           </div>
         </section>

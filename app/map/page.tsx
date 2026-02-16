@@ -14,6 +14,7 @@ import { GoogleMap } from "@/components/google-map"
 import { MarketLeaderboard } from "@/components/market-leaderboard"
 import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
 import { ErrorBoundary } from "@/components/error-boundary"
+import { RegionalBreakdownWidget } from "@/components/regional-breakdown-widget"
 
 interface LocationRate {
   id: string
@@ -546,77 +547,26 @@ export default function MapPage() {
           </div>
         </section>
 
-        {/* Location List */}
+        {/* Regional breakdown */}
         <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="text-center mb-8 space-y-3">
                 <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-                  <Badge variant="outline">All Locations</Badge>
-                  <Badge className="bg-primary/10 text-primary">Real-time</Badge>
-                  <Badge variant="secondary">All Counties</Badge>
+                  <Badge variant="outline">Regional breakdown</Badge>
+                  <Badge className="bg-primary/10 text-primary">Live</Badge>
+                  <Badge variant="secondary">By county</Badge>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-balance">
                   <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                    Rates by Location
+                    Rates by Region
                   </span>
                 </h2>
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  Live exchange rates from verified changers across Liberia's counties and cities.
+                  Average USD/LRD rates across Monrovia and upcountry counties.
                 </p>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {locations.map((location) => (
-                  <Card key={location.id} className="border-border/60 shadow-sm transition-shadow hover:shadow-md">
-                    <CardHeader className="pb-3">
-                      <div className="flex items-start justify-between">
-                        <div>
-                          <CardTitle className="text-lg flex items-center gap-2">
-                            <MapPin className="h-4 w-4" />
-                            {location.name}
-                          </CardTitle>
-                          <CardDescription>{location.county} County</CardDescription>
-                        </div>
-                        {location.verified && (
-                          <Badge variant="secondary" className="text-xs">
-                            Verified
-                          </Badge>
-                        )}
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-3xl font-bold">{location.rate.toFixed(2)}</span>
-                        <span className="text-sm text-muted-foreground">LRD</span>
-                      </div>
-                      <div className="flex items-center gap-1 mt-2">
-                        {location.trend === "up" ? (
-                          <TrendingUp className="h-4 w-4 text-secondary" />
-                        ) : (
-                          <TrendingDown className="h-4 w-4 text-destructive" />
-                        )}
-                        <span
-                          className={`text-sm font-medium ${
-                            location.trend === "up" ? "text-secondary" : "text-destructive"
-                          }`}
-                        >
-                          {location.trend === "up" ? "Rising" : "Falling"}
-                        </span>
-                      </div>
-                      {(location.openingHours || location.phone) && (
-                        <div className="mt-3 pt-3 border-t border-border/60 space-y-1 text-xs text-muted-foreground">
-                          {location.openingHours && <div>{location.openingHours}</div>}
-                          {location.phone && (
-                            <a href={`tel:${location.phone.replace(/\s/g, "")}`} className="text-primary hover:underline">
-                              {location.phone}
-                            </a>
-                          )}
-                        </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              <RegionalBreakdownWidget />
             </div>
           </div>
         </section>
