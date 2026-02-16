@@ -244,38 +244,23 @@ export default function MapPage() {
                 <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <CardTitle className="text-xl sm:text-2xl">Live Rate Map</CardTitle>
-                    <CardDescription>Tap markers for details • Pinch/scroll to zoom</CardDescription>
+                    <CardDescription>Interactive map with live rates across Liberia</CardDescription>
                   </div>
-                  <div className="flex flex-wrap items-center gap-2 shrink-0">
-                    <Badge variant="secondary" className="gap-2">
-                      <span className="h-2 w-2 rounded-full bg-secondary-foreground/80" />
-                      Verified
-                    </Badge>
-                    <Badge variant="outline" className="gap-2">
-                      <span className="h-2 w-2 rounded-full bg-muted-foreground/60" />
-                      Unverified
-                    </Badge>
-                  </div>
+                  <Badge variant="secondary">Coming soon</Badge>
                 </CardHeader>
                 <CardContent className="p-0 block overflow-hidden">
-                  {loading ? (
-                    <div className="h-[360px] sm:h-[520px] lg:h-[600px] w-full flex items-center justify-center bg-muted/30">
-                      <div className="text-center">
-                        <div className="text-lg font-medium mb-2">Loading map...</div>
-                        <div className="text-sm text-muted-foreground">Fetching live rates</div>
+                  <div className="h-[360px] sm:h-[520px] lg:h-[600px] w-full flex flex-col items-center justify-center bg-muted/30 gap-4">
+                    <MapPin className="h-16 w-16 text-muted-foreground/50" />
+                    <div className="text-center space-y-1">
+                      <div className="text-xl font-semibold">Coming Soon</div>
+                      <div className="text-sm text-muted-foreground max-w-sm">
+                        We&apos;re building an interactive map with live rates by location. Check back soon.
                       </div>
                     </div>
-                  ) : (
-                    <div className="relative w-full h-[360px] sm:h-[520px] lg:h-[600px]">
-                      <GoogleMap
-                        markers={mapMarkers}
-                        zoom={10}
-                        useUserLocation
-                        onReady={handleMapReady}
-                        className="h-full w-full"
-                      />
-                    </div>
-                  )}
+                    <Badge variant="outline" className="text-xs">
+                      In development
+                    </Badge>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -373,7 +358,7 @@ export default function MapPage() {
               {nearbyStatus === "idle" && (
                 <Card>
                   <CardContent className="p-6 text-sm text-muted-foreground">
-                    Allow location access to see nearby money changers.
+                    Coming soon — nearby money changers will appear here.
                   </CardContent>
                 </Card>
               )}

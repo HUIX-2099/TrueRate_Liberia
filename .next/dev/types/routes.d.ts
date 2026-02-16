@@ -6,7 +6,7 @@ type AppRouteHandlerRoutes = "/api/health" | "/api/liberia-cpi" | "/api/liberia-
 type PageRoutes = never
 type LayoutRoutes = "/"
 type RedirectRoutes = never
-type RewriteRoutes = never
+type RewriteRoutes = "/favicon.ico"
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes | AppRouteHandlerRoutes
 
 
@@ -38,6 +38,7 @@ interface ParamMap {
   "/converter": {}
   "/dashboard": {}
   "/docs": {}
+  "/favicon.ico": {}
   "/forums": {}
   "/liberia-market": {}
   "/map": {}

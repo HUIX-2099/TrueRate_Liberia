@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async rewrites() {
+    return [
+      // Serve HD icon for favicon.ico (bookmarks, tab icons)
+      { source: '/favicon.ico', destination: '/icons/logo-192.png' },
+    ]
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

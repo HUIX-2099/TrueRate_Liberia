@@ -242,7 +242,7 @@ export async function LiberiaMarketNews() {
         <CardHeader className="flex flex-row items-center gap-3">
           <AlertCircle className="h-5 w-5 text-muted-foreground" />
           <div>
-            <CardTitle>Liberia FX Pulse — Headlines That Move the Rate</CardTitle>
+            <CardTitle>FX Pulse</CardTitle>
             <CardDescription>We could not load market headlines right now.</CardDescription>
           </div>
         </CardHeader>
@@ -255,13 +255,6 @@ export async function LiberiaMarketNews() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold mb-2">Liberia FX Pulse — Headlines That Move the Rate</h2>
-        <p className="text-muted-foreground">
-          Curated from trusted Liberian sources. Headlines ranked by relevance to currency, exchange rates, and markets. Updated automatically every 1–2 hours.
-        </p>
-      </div>
-
       {movers.length > 0 && (
         <Card>
           <CardHeader>
