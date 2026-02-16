@@ -20,6 +20,7 @@ import {
   ShoppingCart,
   TrendingUp,
   Users,
+  Volume2,
 } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useAuth } from "@/lib/auth/auth-context"
@@ -37,6 +38,7 @@ const HeaderComponent = () => {
 
   // Memoize navigation items to prevent unnecessary re-renders
   const navigationItems = useMemo(() => [
+    { href: "/voice", label: "Simple mode", icon: Volume2, description: "Big numbers + voice (Market Woman Mode)" },
     { href: "/converter", label: "Converter", icon: Calculator, description: "Convert currencies" },
     { href: "/analytics", label: "Analytics", icon: Activity, description: "Market insights" },
     { href: "/predictions", label: "AI Forecasts", icon: Crown, description: "ML predictions" },
@@ -48,6 +50,7 @@ const HeaderComponent = () => {
   // Memoize mobile menu items
   const mobileMenuItems = useMemo(() => [
     { href: "/auth/signin", label: "Sign In", icon: LogIn, description: "Access your dashboard" },
+    { href: "/voice", label: "Simple mode", icon: Volume2, description: "Big numbers + voice (Market Woman)" },
     { href: "/rates", label: "Rates", icon: TrendingUp, description: "Live USD/LRD updates" },
     { href: "/converter", label: "Converter", icon: Calculator, description: "Convert USD ↔ LRD" },
     { href: "/analytics", label: "Analytics / Charts", icon: Activity, description: "Trends and history" },
@@ -59,6 +62,7 @@ const HeaderComponent = () => {
 
   // Memoize bottom navigation items
   const bottomNavItems = useMemo(() => [
+    { href: "/voice", label: "Simple", icon: Volume2 },
     { href: "/rates", label: "Rates", icon: TrendingUp },
     { href: "/converter", label: "Converter", icon: ArrowLeftRight },
     { href: "/map", label: "Map", icon: MapPinned },

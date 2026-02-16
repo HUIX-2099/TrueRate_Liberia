@@ -18,6 +18,8 @@ import { useToast } from "@/hooks/use-toast"
 export default function ReportFraudPage() {
   const { toast } = useToast()
   const [submitted, setSubmitted] = useState(false)
+  const [referenceId, setReferenceId] = useState<string | null>(null)
+  const [submitting, setSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     reportType: "",
     changerName: "",
@@ -30,15 +32,37 @@ export default function ReportFraudPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    setSubmitted(true)
-    toast({
-      title: "Report Submitted",
-      description: "Thank you for helping keep our community safe. We'll investigate this report.",
-    })
+    setSubmitting(true)
+    try {
+      const res = await fetch("/api/community/fraud-reports", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        toast({
+          title: "Could not submit",
+          description: data?.error ?? "Please try again.",
+          variant: "destructive",
+        })
+        return
+      }
+      setReferenceId(data.reference ?? data.id ?? null)
+      setSubmitted(true)
+      toast({
+        title: "Report submitted",
+        description: "Thank you for helping keep our community safe. We'll investigate this report.",
+      })
+    } catch {
+      toast({
+        title: "Error",
+        description: "Could not submit report. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -56,7 +80,7 @@ export default function ReportFraudPage() {
                 </div>
                 <CardTitle className="text-2xl">Report Submitted Successfully</CardTitle>
                 <CardDescription className="text-base">
-                  Reference Number: <span className="font-mono font-bold">FR-{Date.now().toString().slice(-8)}</span>
+                  Reference: <span className="font-mono font-bold">{referenceId ?? "—"}</span>
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -276,8 +300,8 @@ export default function ReportFraudPage() {
                       </div>
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg">
-                      Submit Fraud Report
+                    <Button type="submit" className="w-full" size="lg" disabled={submitting}>
+                      {submitting ? "Submitting…" : "Submit Fraud Report"}
                     </Button>
                   </form>
                 </CardContent>

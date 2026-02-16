@@ -1,16 +1,30 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Switch } from "@/components/ui/switch"
+import { Label } from "@/components/ui/label"
 import { 
   Bell, BellOff, Smartphone, Mail, MessageSquare,
   TrendingUp, AlertTriangle, DollarSign, Clock, Check
 } from "lucide-react"
 import { useAuth } from "@/lib/auth/auth-context"
+import { useToast } from "@/hooks/use-toast"
+
+const NOTIFICATION_CLIENT_ID_KEY = "truerate-notification-client-id"
+
+function getOrCreateClientId(): string {
+  if (typeof window === "undefined") return "anonymous"
+  let id = localStorage.getItem(NOTIFICATION_CLIENT_ID_KEY)
+  if (!id) {
+    id = "c-" + Math.random().toString(36).slice(2) + "-" + Date.now().toString(36)
+    localStorage.setItem(NOTIFICATION_CLIENT_ID_KEY, id)
+  }
+  return id
+}
 
 interface AlertPreference {
   id: string
@@ -23,12 +37,19 @@ interface AlertPreference {
 
 export function PushNotifications() {
   const { user } = useAuth()
+  const { toast } = useToast()
   const [mounted, setMounted] = useState(false)
   const [pushSupported, setPushSupported] = useState(false)
   const [pushEnabled, setPushEnabled] = useState(false)
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [saved, setSaved] = useState(false)
+  const [rateAbove, setRateAbove] = useState<string>("")
+  const [rateBelow, setRateBelow] = useState<string>("")
+  const [moveUpPct, setMoveUpPct] = useState<string>("")
+  const [moveDownPct, setMoveDownPct] = useState<string>("")
+  const [digest, setDigest] = useState<"none" | "daily" | "weekly">("none")
+  const [digestEmail, setDigestEmail] = useState("")
   
   const [alerts, setAlerts] = useState<AlertPreference[]>([
     {
@@ -67,12 +88,35 @@ export function PushNotifications() {
 
   useEffect(() => {
     setMounted(true)
-    // Check if push notifications are supported - only on client
     if (typeof window !== 'undefined' && 'Notification' in window && 'serviceWorker' in navigator) {
       setPushSupported(true)
       setPushEnabled(Notification.permission === 'granted')
     }
   }, [])
+
+  const fetchPreferences = useCallback(async () => {
+    try {
+      const clientId = getOrCreateClientId()
+      const res = await fetch("/api/notifications/preferences", {
+        headers: { "x-notification-client-id": clientId },
+      })
+      const data = await res.json()
+      if (res.ok && data) {
+        if (data.rateAbove != null) setRateAbove(String(data.rateAbove))
+        if (data.rateBelow != null) setRateBelow(String(data.rateBelow))
+        if (data.moveUpPct != null) setMoveUpPct(String(data.moveUpPct))
+        if (data.moveDownPct != null) setMoveDownPct(String(data.moveDownPct))
+        if (data.digest) setDigest(data.digest)
+        if (data.digestEmail) setDigestEmail(data.digestEmail)
+      }
+    } catch {
+      // ignore
+    }
+  }, [])
+
+  useEffect(() => {
+    fetchPreferences()
+  }, [fetchPreferences])
 
   const requestPushPermission = async () => {
     if (!pushSupported) return
@@ -111,10 +155,36 @@ export function PushNotifications() {
     }))
   }
 
-  const savePreferences = () => {
-    // In production, save to backend
+  const savePreferences = async () => {
     setSaved(true)
-    setTimeout(() => setSaved(false), 2000)
+    try {
+      const clientId = getOrCreateClientId()
+      const res = await fetch("/api/notifications/preferences", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-notification-client-id": clientId,
+        },
+        body: JSON.stringify({
+          rateAbove: rateAbove.trim() ? parseFloat(rateAbove) : null,
+          rateBelow: rateBelow.trim() ? parseFloat(rateBelow) : null,
+          moveUpPct: moveUpPct.trim() ? parseFloat(moveUpPct) : null,
+          moveDownPct: moveDownPct.trim() ? parseFloat(moveDownPct) : null,
+          digest,
+          digestEmail: digestEmail.trim() || null,
+        }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        toast({ title: "Could not save", description: data?.error ?? "Try again.", variant: "destructive" })
+        return
+      }
+      toast({ title: "Preferences saved", description: "Your notification rules are updated." })
+    } catch {
+      toast({ title: "Error", description: "Could not save preferences.", variant: "destructive" })
+    } finally {
+      setTimeout(() => setSaved(false), 2000)
+    }
   }
 
   return (
@@ -262,32 +332,107 @@ export function PushNotifications() {
           ))}
         </div>
 
-        {/* Rate Threshold Settings */}
-        {alerts.find(a => a.id === 'rate-threshold')?.enabled && (
-          <div className="p-4 border rounded-lg">
-            <h4 className="font-semibold mb-3">Rate Threshold Settings</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm text-muted-foreground mb-1 block">
-                  Alert when rate goes above
-                </label>
-                <div className="flex gap-2">
-                  <Input type="number" placeholder="200.00" />
-                  <span className="flex items-center text-sm text-muted-foreground">LRD</span>
-                </div>
+        {/* Push rules: rate > X, moved by Y% */}
+        <div className="p-4 border rounded-lg space-y-4">
+          <h4 className="font-semibold">Notify when rate…</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <Label className="text-sm text-muted-foreground">…goes above (LRD/USD)</Label>
+              <div className="flex gap-2 mt-1">
+                <Input
+                  type="number"
+                  inputMode="decimal"
+                  placeholder="e.g. 200"
+                  value={rateAbove}
+                  onChange={(e) => setRateAbove(e.target.value)}
+                />
+                <span className="flex items-center text-sm text-muted-foreground">LRD</span>
               </div>
-              <div>
-                <label className="text-sm text-muted-foreground mb-1 block">
-                  Alert when rate goes below
-                </label>
-                <div className="flex gap-2">
-                  <Input type="number" placeholder="195.00" />
-                  <span className="flex items-center text-sm text-muted-foreground">LRD</span>
-                </div>
+            </div>
+            <div>
+              <Label className="text-sm text-muted-foreground">…goes below (LRD/USD)</Label>
+              <div className="flex gap-2 mt-1">
+                <Input
+                  type="number"
+                  inputMode="decimal"
+                  placeholder="e.g. 190"
+                  value={rateBelow}
+                  onChange={(e) => setRateBelow(e.target.value)}
+                />
+                <span className="flex items-center text-sm text-muted-foreground">LRD</span>
+              </div>
+            </div>
+            <div>
+              <Label className="text-sm text-muted-foreground">…moves up by (%)</Label>
+              <div className="flex gap-2 mt-1">
+                <Input
+                  type="number"
+                  inputMode="decimal"
+                  placeholder="e.g. 2"
+                  value={moveUpPct}
+                  onChange={(e) => setMoveUpPct(e.target.value)}
+                />
+                <span className="flex items-center text-sm text-muted-foreground">%</span>
+              </div>
+            </div>
+            <div>
+              <Label className="text-sm text-muted-foreground">…moves down by (%)</Label>
+              <div className="flex gap-2 mt-1">
+                <Input
+                  type="number"
+                  inputMode="decimal"
+                  placeholder="e.g. 2"
+                  value={moveDownPct}
+                  onChange={(e) => setMoveDownPct(e.target.value)}
+                />
+                <span className="flex items-center text-sm text-muted-foreground">%</span>
               </div>
             </div>
           </div>
-        )}
+        </div>
+
+        {/* Daily / weekly digest */}
+        <div className="p-4 border rounded-lg space-y-4">
+          <h4 className="font-semibold">Daily or weekly digest</h4>
+          <p className="text-sm text-muted-foreground">
+            Get a summary of the rate and changes by email or push.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <Button
+              size="sm"
+              variant={digest === "none" ? "default" : "outline"}
+              onClick={() => setDigest("none")}
+            >
+              None
+            </Button>
+            <Button
+              size="sm"
+              variant={digest === "daily" ? "default" : "outline"}
+              onClick={() => setDigest("daily")}
+            >
+              Daily
+            </Button>
+            <Button
+              size="sm"
+              variant={digest === "weekly" ? "default" : "outline"}
+              onClick={() => setDigest("weekly")}
+            >
+              Weekly
+            </Button>
+          </div>
+          {(digest === "daily" || digest === "weekly") && (
+            <div>
+              <Label className="text-sm text-muted-foreground">Email (optional)</Label>
+              <Input
+                type="email"
+                placeholder="your@email.com"
+                value={digestEmail}
+                onChange={(e) => setDigestEmail(e.target.value)}
+                className="mt-1"
+              />
+            </div>
+          )}
+        </div>
 
         {/* Save Button */}
         <Button 

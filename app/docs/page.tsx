@@ -327,8 +327,8 @@ export default function DocsPage() {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <p className="text-muted-foreground">
-                      Our prediction engine uses ensemble machine learning with 5 different models trained on historical
-                      data, seasonal patterns, and economic indicators.
+                      Our prediction engine uses ensemble machine learning with 5 different models trained on the last 90 days
+                      of rate history, seasonal patterns, and economic indicators. Forecasts become less certain further out.
                     </p>
                     <div className="bg-muted/50 p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">ML Models Used</h4>
@@ -399,6 +399,42 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Business API */}
+        <section id="api" className="py-12 sm:py-14 md:py-16 bg-background scroll-mt-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto space-y-6">
+              <h2 className="text-2xl font-bold">Business API</h2>
+              <p className="text-muted-foreground">
+                Get live and historical USD/LRD rates in your app. Create an API key from the Business dashboard or by calling the key endpoint.
+              </p>
+              <div className="rounded-lg border bg-muted/30 p-4 font-mono text-sm space-y-2">
+                <p><strong>Create key:</strong> POST /api/business/api-keys</p>
+                <p><strong>Live rate:</strong> GET /api/v1/rate (header: Authorization: Bearer YOUR_KEY or ?api_key=YOUR_KEY)</p>
+                <p><strong>Historical:</strong> GET /api/v1/historical?days=90 (same auth)</p>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Responses are JSON. Rate endpoint returns <code className="rounded bg-muted px-1">rate</code>, <code className="rounded bg-muted px-1">cblRate</code>, <code className="rounded bg-muted px-1">sources</code>, <code className="rounded bg-muted px-1">timestamp</code>. Historical returns <code className="rounded bg-muted px-1">historical</code> (array of date/rate).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* USSD / Feature phones */}
+        <section id="ussd" className="py-12 sm:py-14 md:py-16 bg-muted/30 scroll-mt-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-2xl font-bold mb-4">No smartphone? USSD (coming soon)</h2>
+              <p className="text-muted-foreground mb-4">
+                We plan to offer the rate via USSD so any phone can get today&apos;s rate by dialing a short code (e.g. *XXX#). 
+                No app or internet needed. Until we launch with a mobile network partner, use SMS alerts or the web app when you have connectivity.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Technical details for integration are in <code className="rounded bg-muted px-1.5 py-0.5">docs/USSD.md</code> in the repo.
+              </p>
             </div>
           </div>
         </section>

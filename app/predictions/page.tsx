@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { ErrorBoundary } from "@/components/error-boundary"
 import {
   Brain,
   TrendingUp,
@@ -63,35 +64,39 @@ export default function PredictionsPage() {
   const [currentRate, setCurrentRate] = useState(177.5)
   const [loading, setLoading] = useState(true)
   const [lastUpdate, setLastUpdate] = useState<string>("")
+  const [predictionExplanation, setPredictionExplanation] = useState<string>("")
   const backtestAccuracy = useMemo(() => computeBacktestAccuracy(candles), [candles])
 
   const fetchData = async () => {
     try {
       setLoading(true)
-      const [candleRes, liveRes] = await Promise.all([
+      const [candleRes, liveRes, predRes] = await Promise.all([
         fetch("/api/rates/candles?days=60"),
         fetch("/api/rates/live"),
+        fetch("/api/rates/predictions?days=7"),
       ])
 
       const candleData = await candleRes.json()
       const liveData = await liveRes.json()
+      const predData = await predRes.json()
 
       setCandles(candleData.candles || [])
       setPredictions(candleData.predictions || [])
-      
+      if (typeof predData.explanation === "string") setPredictionExplanation(predData.explanation)
+
       if (typeof liveData.rate === "number") {
         setCurrentRate(liveData.rate)
       } else if (candleData.currentRate) {
         setCurrentRate(candleData.currentRate)
       }
-      
+
       setLastUpdate(new Date().toLocaleTimeString())
-      } catch (error) {
+    } catch (error) {
       console.error("Error fetching data:", error)
-      } finally {
-        setLoading(false)
-      }
+    } finally {
+      setLoading(false)
     }
+  }
 
   useEffect(() => {
     fetchData()
@@ -114,6 +119,7 @@ export default function PredictionsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
+      <ErrorBoundary>
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-background via-background to-primary/5">
@@ -229,7 +235,7 @@ export default function PredictionsPage() {
                 </TabsList>
 
                 <TabsContent value="predictions">
-                  <MLPredictions currentRate={currentRate} backtestAccuracy={backtestAccuracy} />
+                  <MLPredictions currentRate={currentRate} backtestAccuracy={backtestAccuracy} explanation={predictionExplanation} />
                 </TabsContent>
 
                 <TabsContent value="signals">
@@ -465,6 +471,7 @@ export default function PredictionsPage() {
           </div>
         </section>
       </main>
+      </ErrorBoundary>
       <Footer />
     </div>
   )

@@ -5,9 +5,15 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useEffect, useMemo, useRef, useState } from "react"
-import { MapPin, TrendingUp, TrendingDown } from "lucide-react"
+import { MapPin, TrendingUp, TrendingDown, Send } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { useToast } from "@/hooks/use-toast"
 import { GoogleMap } from "@/components/google-map"
 import { MarketLeaderboard } from "@/components/market-leaderboard"
+import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
+import { ErrorBoundary } from "@/components/error-boundary"
 
 interface LocationRate {
   id: string
@@ -19,6 +25,8 @@ interface LocationRate {
   rate: number
   trend: string
   verified: boolean
+  openingHours?: string
+  phone?: string
 }
 
 interface NearbyChanger {
@@ -31,6 +39,18 @@ interface NearbyChanger {
   lng: number
   distanceKm?: number
   durationMinutes?: number
+  openingHours?: string
+  phone?: string
+}
+
+interface CommunityReport {
+  id: string
+  lat: number
+  lng: number
+  rate: number
+  message?: string
+  photoUrl?: string
+  createdAt: string
 }
 
 export default function MapPage() {
@@ -40,7 +60,12 @@ export default function MapPage() {
   const [nearbyStatus, setNearbyStatus] = useState<"idle" | "loading" | "ready" | "error">("idle")
   const [nearbyError, setNearbyError] = useState<string | null>(null)
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null)
+  const [communityReports, setCommunityReports] = useState<CommunityReport[]>([])
+  const [reportRate, setReportRate] = useState("")
+  const [reportMessage, setReportMessage] = useState("")
+  const [reportSubmitting, setReportSubmitting] = useState(false)
   const lastSearchRef = useRef<string | null>(null)
+  const { toast } = useToast()
   const mapMarkers = useMemo(
     () => [
       ...locations.map((location) => ({
@@ -57,8 +82,15 @@ export default function MapPage() {
         lng: changer.lng,
         label: "Nearby",
       })),
+      ...communityReports.map((r) => ({
+        id: `report-${r.id}`,
+        name: `Community: ${r.rate.toFixed(2)} LRD`,
+        lat: r.lat,
+        lng: r.lng,
+        label: `${r.rate.toFixed(2)}`,
+      })),
     ],
-    [locations, nearbyChangers],
+    [locations, nearbyChangers, communityReports],
   )
   const averageRate = locations.length
     ? locations.reduce((sum, location) => sum + location.rate, 0) / locations.length
@@ -77,39 +109,47 @@ export default function MapPage() {
         const response = await fetch("/api/rates/live")
         const data = await response.json()
 
+        const avg = data.rate ?? data.averageRate ?? 180
+        const ch = data.changers || []
         const mappedLocations: LocationRate[] = [
           {
             id: "1",
-            name: data.changers[0]?.name || "Monrovia Central",
+            name: ch[0]?.name || "Monrovia Central",
             county: "Montserrado",
             position: [0, 0, 0],
             lat: 6.3156,
             lng: -10.8074,
-            rate: data.changers[0]?.buyRate || data.averageRate || 180,
-            trend: data.changers[0]?.trend || "up",
-            verified: data.changers[0]?.verified !== false,
+            rate: ch[0]?.buyRate ?? avg,
+            trend: ch[0]?.trend || "up",
+            verified: ch[0]?.verified !== false,
+            openingHours: ch[0]?.openingHours,
+            phone: ch[0]?.phone,
           },
           {
             id: "2",
-            name: data.changers[1]?.name || "Sinkor",
+            name: ch[1]?.name || "Sinkor",
             county: "Montserrado",
             position: [1.5, 0, -0.5],
             lat: 6.2907,
             lng: -10.7716,
-            rate: data.changers[1]?.buyRate || data.averageRate || 180,
-            trend: data.changers[1]?.trend || "up",
-            verified: data.changers[1]?.verified !== false,
+            rate: ch[1]?.buyRate ?? avg,
+            trend: ch[1]?.trend || "up",
+            verified: ch[1]?.verified !== false,
+            openingHours: ch[1]?.openingHours,
+            phone: ch[1]?.phone,
           },
           {
             id: "3",
-            name: data.changers[2]?.name || "Paynesville",
+            name: ch[2]?.name || "Paynesville",
             county: "Montserrado",
             position: [2, 0, 0.5],
             lat: 6.2901,
             lng: -10.7436,
-            rate: data.changers[2]?.buyRate || data.averageRate || 180,
-            trend: data.changers[2]?.trend || "down",
-            verified: data.changers[2]?.verified !== false,
+            rate: ch[2]?.buyRate ?? avg,
+            trend: ch[2]?.trend || "down",
+            verified: ch[2]?.verified !== false,
+            openingHours: ch[2]?.openingHours,
+            phone: ch[2]?.phone,
           },
           {
             id: "4",
@@ -118,7 +158,7 @@ export default function MapPage() {
             position: [-2, 0, -1.5],
             lat: 5.8769,
             lng: -10.0499,
-            rate: (data.averageRate || 180) - 1,
+            rate: avg - 1,
             trend: "up",
             verified: true,
           },
@@ -129,7 +169,7 @@ export default function MapPage() {
             position: [-1, 0, 2],
             lat: 6.9970,
             lng: -9.4718,
-            rate: (data.averageRate || 180) - 2.5,
+            rate: avg - 2.5,
             trend: "down",
             verified: true,
           },
@@ -140,7 +180,62 @@ export default function MapPage() {
             position: [-3.5, 0, -2],
             lat: 4.3784,
             lng: -7.7113,
-            rate: (data.averageRate || 180) - 3.5,
+            rate: avg - 3.5,
+            trend: "up",
+            verified: true,
+          },
+          {
+            id: "7",
+            name: "Sanniquellie",
+            county: "Nimba",
+            position: [0.5, 0, 2.5],
+            lat: 7.3611,
+            lng: -8.6964,
+            rate: avg - 2,
+            trend: "stable",
+            verified: true,
+          },
+          {
+            id: "8",
+            name: "Voinjama",
+            county: "Lofa",
+            position: [-0.5, 0, 3],
+            lat: 8.4219,
+            lng: -9.7478,
+            rate: avg - 3,
+            trend: "up",
+            verified: true,
+          },
+          {
+            id: "9",
+            name: "Kakata",
+            county: "Margibi",
+            position: [1, 0, 0.2],
+            lat: 6.5291,
+            lng: -10.3517,
+            rate: avg - 1.5,
+            trend: "down",
+            verified: true,
+          },
+          {
+            id: "10",
+            name: "Tubmanburg",
+            county: "Bomi",
+            position: [-1.5, 0, -0.5],
+            lat: 6.8708,
+            lng: -10.8211,
+            rate: avg - 2.2,
+            trend: "stable",
+            verified: true,
+          },
+          {
+            id: "11",
+            name: "Robertsport",
+            county: "Grand Cape Mount",
+            position: [-2.5, 0, -1],
+            lat: 6.7533,
+            lng: -11.3686,
+            rate: avg - 2.8,
             trend: "up",
             verified: true,
           },
@@ -156,6 +251,46 @@ export default function MapPage() {
 
     fetchLocations()
   }, [])
+
+  useEffect(() => {
+    fetch("/api/community/rate-reports")
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data?.reports)) setCommunityReports(data.reports)
+      })
+      .catch(() => {})
+  }, [])
+
+  const submitReport = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const rateNum = parseFloat(reportRate)
+    if (!Number.isFinite(rateNum) || rateNum < 100 || rateNum > 300) {
+      toast({ title: "Invalid rate", description: "Enter a rate between 100 and 300 LRD.", variant: "destructive" })
+      return
+    }
+    const loc = userLocation ?? { lat: 6.3156, lng: -10.8074 }
+    setReportSubmitting(true)
+    try {
+      const res = await fetch("/api/community/rate-reports", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lat: loc.lat, lng: loc.lng, rate: rateNum, message: reportMessage.trim() || undefined }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        toast({ title: "Could not submit", description: data?.error ?? "Try again.", variant: "destructive" })
+        return
+      }
+      toast({ title: "Thanks!", description: "Your rate report was added to the map." })
+      setReportRate("")
+      setReportMessage("")
+      if (data.report) setCommunityReports((prev) => [data.report, ...prev])
+    } catch {
+      toast({ title: "Error", description: "Could not submit report.", variant: "destructive" })
+    } finally {
+      setReportSubmitting(false)
+    }
+  }
 
   const handleMapReady = (map: google.maps.Map, location: { lat: number; lng: number } | null) => {
     if (!location) return
@@ -213,6 +348,7 @@ export default function MapPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <ErrorBoundary>
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
@@ -246,21 +382,60 @@ export default function MapPage() {
                     <CardTitle className="text-xl sm:text-2xl">Live Rate Map</CardTitle>
                     <CardDescription>Interactive map with live rates across Liberia</CardDescription>
                   </div>
-                  <Badge variant="secondary">Coming soon</Badge>
+                  <Badge variant="secondary">{locations.length + communityReports.length} locations</Badge>
                 </CardHeader>
                 <CardContent className="p-0 block overflow-hidden">
-                  <div className="h-[360px] sm:h-[520px] lg:h-[600px] w-full flex flex-col items-center justify-center bg-muted/30 gap-4">
-                    <MapPin className="h-16 w-16 text-muted-foreground/50" />
-                    <div className="text-center space-y-1">
-                      <div className="text-xl font-semibold">Coming Soon</div>
-                      <div className="text-sm text-muted-foreground max-w-sm">
-                        We&apos;re building an interactive map with live rates by location. Check back soon.
-                      </div>
+                  <GoogleMap
+                    markers={mapMarkers}
+                    center={{ lat: 6.3156, lng: -10.8074 }}
+                    zoom={7}
+                    className="h-[360px] sm:h-[520px] lg:h-[600px] w-full"
+                    useUserLocation
+                    onReady={handleMapReady}
+                  />
+                </CardContent>
+              </Card>
+              <Card className="mt-4 border-border/60">
+                <CardHeader>
+                  <CardTitle className="text-lg">Rate at this spot</CardTitle>
+                  <CardDescription>
+                    See a rate here? Report it so others can see. Your location is used when available.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={submitReport} className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex-1 space-y-2">
+                      <Label htmlFor="report-rate">Rate (LRD per 1 USD)</Label>
+                      <Input
+                        id="report-rate"
+                        type="number"
+                        inputMode="decimal"
+                        min={100}
+                        max={300}
+                        step={0.01}
+                        placeholder="e.g. 192.50"
+                        value={reportRate}
+                        onChange={(e) => setReportRate(e.target.value)}
+                        required
+                      />
                     </div>
-                    <Badge variant="outline" className="text-xs">
-                      In development
-                    </Badge>
-                  </div>
+                    <div className="flex-1 space-y-2">
+                      <Label htmlFor="report-message">Note (optional)</Label>
+                      <Input
+                        id="report-message"
+                        type="text"
+                        placeholder="e.g. Waterside market"
+                        value={reportMessage}
+                        onChange={(e) => setReportMessage(e.target.value)}
+                      />
+                    </div>
+                    <div className="flex items-end">
+                      <Button type="submit" disabled={reportSubmitting} className="gap-2">
+                        <Send className="h-4 w-4" />
+                        {reportSubmitting ? "Submitting…" : "Submit"}
+                      </Button>
+                    </div>
+                  </form>
                 </CardContent>
               </Card>
             </div>
@@ -350,6 +525,12 @@ export default function MapPage() {
                         {typeof changer.openNow === "boolean" && (
                           <div>{changer.openNow ? "Open now" : "Closed now"}</div>
                         )}
+                        {changer.openingHours && <div>{changer.openingHours}</div>}
+                        {changer.phone && (
+                          <a href={`tel:${changer.phone.replace(/\s/g, "")}`} className="text-primary hover:underline text-sm">
+                            {changer.phone}
+                          </a>
+                        )}
                       </CardContent>
                     </Card>
                   ))}
@@ -423,6 +604,16 @@ export default function MapPage() {
                           {location.trend === "up" ? "Rising" : "Falling"}
                         </span>
                       </div>
+                      {(location.openingHours || location.phone) && (
+                        <div className="mt-3 pt-3 border-t border-border/60 space-y-1 text-xs text-muted-foreground">
+                          {location.openingHours && <div>{location.openingHours}</div>}
+                          {location.phone && (
+                            <a href={`tel:${location.phone.replace(/\s/g, "")}`} className="text-primary hover:underline">
+                              {location.phone}
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 ))}
@@ -540,12 +731,21 @@ export default function MapPage() {
                     {averageRate ? averageRate.toFixed(2) : "--"}
                   </div>
                   <div className="text-xs text-primary/70 mt-1">Market average</div>
+                  {averageRate != null && (
+                    <RateFeedbackButtons
+                      rate={averageRate}
+                      location="Map (average)"
+                      compact
+                      className="mt-2"
+                    />
+                  )}
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
       </main>
+      </ErrorBoundary>
       <Footer />
     </div>
   )

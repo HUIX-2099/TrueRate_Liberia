@@ -136,6 +136,47 @@ export default function RemittanceCalculatorPage() {
           </div>
         </section>
 
+        {/* Remittance corridors */}
+        <section className="py-6 sm:py-8 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-xl font-semibold mb-4">Remittance corridors</h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Card className="border-primary/20 bg-primary/5">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-base">US → Liberia</CardTitle>
+                    <CardDescription>Most common corridor</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-2xl font-bold">{currentRate.toFixed(2)} LRD</div>
+                    <p className="text-xs text-muted-foreground mt-1">Typical remittance rate (1 USD)</p>
+                  </CardContent>
+                </Card>
+                <Card className="border-border/60">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-base">UK → Liberia</CardTitle>
+                    <CardDescription>GBP converted to USD then LRD</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-2xl font-bold">~{(currentRate * 1.27).toFixed(0)} LRD</div>
+                    <p className="text-xs text-muted-foreground mt-1">Per £1 (approx, via USD)</p>
+                  </CardContent>
+                </Card>
+                <Card className="border-border/60">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-base">Nigeria → Liberia</CardTitle>
+                    <CardDescription>NGN → USD → LRD</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-2xl font-bold">~{(currentRate / 1580).toFixed(4)} LRD</div>
+                    <p className="text-xs text-muted-foreground mt-1">Per 1 NGN (approx)</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Calculator */}
         <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">

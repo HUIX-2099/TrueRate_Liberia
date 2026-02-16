@@ -40,6 +40,12 @@ import { useEffect, useState, useMemo, useCallback, memo } from "react"
 import Link from "next/link"
 import { useDebounce, useThrottle, usePerformanceMonitor } from "@/lib/client-utils"
 import { useLiveRate } from "@/lib/live-rate-context"
+import { RateSourceAttribution } from "@/components/rate-source-attribution"
+import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
+import { StaleRateWarning } from "@/components/stale-rate-warning"
+import { OfflineBanner } from "@/components/offline-banner"
+import { ErrorBoundary } from "@/components/error-boundary"
+import { RateChangeAnimation } from "@/components/rate-change-animation"
 
 // Multi-currency support
 const currencies = [
@@ -73,7 +79,7 @@ const ConverterPageComponent = () => {
   const [amount, setAmount] = useState("100")
   const [result, setResult] = useState("")
   const [copied, setCopied] = useState(false)
-  const { rate: contextLrdRate } = useLiveRate()
+  const { rate: contextLrdRate, sources: rateSources, timestamp: rateTimestamp, cblRate: contextCblRate, refresh: refreshLiveRate } = useLiveRate()
   const [liveRates, setLiveRates] = useState<Record<string, number> | null>(null)
   // Use shared LRD rate immediately; merge with multi-currency rates when they load
   const liveRate = liveRates?.LRD ?? (typeof contextLrdRate === "number" ? contextLrdRate : null)
@@ -266,6 +272,7 @@ const ConverterPageComponent = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
+      <ErrorBoundary>
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-background via-background to-primary/5">
@@ -295,6 +302,17 @@ const ConverterPageComponent = () => {
               </p>
             </div>
 
+            <OfflineBanner
+              lastUpdatedLabel={rateTimestamp ? (() => {
+                try {
+                  const d = new Date(rateTimestamp)
+                  const diff = (Date.now() - d.getTime()) / 60_000
+                  if (diff < 60) return `${Math.floor(diff)}m ago`
+                  return d.toLocaleString(undefined, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })
+                } catch { return "" }
+              })() : undefined}
+              className="max-w-2xl mx-auto mb-4"
+            />
             {/* Main Converter Card */}
             <Card className="max-w-2xl mx-auto shadow-2xl border-border/50 backdrop-blur-sm bg-card/80">
               <CardContent className="p-4 sm:p-6 md:p-8">
@@ -310,12 +328,34 @@ const ConverterPageComponent = () => {
                         {useCustomRate && Number(customRate)
                           ? Number(customRate).toFixed(2)
                           : isLiveRateReady
-                            ? liveRateValue.toFixed(2)
+                            ? (
+                                <RateChangeAnimation rate={liveRateValue}>
+                                  {liveRateValue.toFixed(2)}
+                                </RateChangeAnimation>
+                              )
                             : "—"}{" "}
                         LRD/USD
                       </div>
                       {useCustomRate && (
                         <div className="text-xs text-muted-foreground">Custom rate active</div>
+                      )}
+                      {!useCustomRate && (
+                        <>
+                          <RateSourceAttribution
+                            sources={rateSources}
+                            timestamp={rateTimestamp}
+                            cblRate={contextCblRate}
+                            compositeRate={isLiveRateReady ? liveRateValue : undefined}
+                            compact
+                            className="mt-1"
+                          />
+                          <StaleRateWarning timestamp={rateTimestamp} onRefresh={refreshLiveRate} compact className="mt-1" />
+                          <RateFeedbackButtons
+                            rate={isLiveRateReady ? liveRateValue : undefined}
+                            compact
+                            className="mt-1"
+                          />
+                        </>
                       )}
                     </div>
                   </div>
@@ -980,6 +1020,7 @@ const ConverterPageComponent = () => {
           </div>
         </section>
       </main>
+      </ErrorBoundary>
       <Footer />
     </div>
   )

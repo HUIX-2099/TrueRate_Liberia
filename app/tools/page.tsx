@@ -5,9 +5,10 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calculator, DollarSign, PiggyBank, TrendingUp, ArrowRight } from "lucide-react"
+import { Calculator, DollarSign, PiggyBank, TrendingUp, ArrowRight, Smartphone } from "lucide-react"
 import Link from "next/link"
 import { SMSAlertSignup } from "@/components/liberia-features"
+import { PushNotifications } from "@/components/push-notifications"
 import { useState } from "react"
 import { useLiveRate } from "@/lib/live-rate-context"
 
@@ -149,6 +150,27 @@ export default function ToolsPage() {
                   </Link>
                 </CardContent>
               </Card>
+
+              <Card className="border-border/60 bg-muted/30 shadow-sm">
+                <CardHeader className="pb-4">
+                  <div className="h-14 w-14 rounded-xl bg-muted flex items-center justify-center mb-4">
+                    <Smartphone className="h-7 w-7 text-muted-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">No smartphone?</CardTitle>
+                  <CardDescription>
+                    Get the rate on any phone. Dial <span className="font-mono font-semibold">*XXX#</span> (coming soon). We&apos;re working with mobile networks to bring USSD to Liberia.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-muted-foreground mb-3">Until then: use SMS alerts or ask someone to share the rate from the app.</p>
+                  <Link href="/docs#ussd">
+                    <Button variant="outline" size="sm" className="w-full gap-2">
+                      How USSD will work
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -237,8 +259,11 @@ export default function ToolsPage() {
                 Get notified when the rate hits your target—even without internet access.
               </p>
             </div>
-            <div className="max-w-xl mx-auto">
+            <div className="max-w-xl mx-auto mb-8">
               <SMSAlertSignup />
+            </div>
+            <div className="max-w-2xl mx-auto">
+              <PushNotifications />
             </div>
           </div>
         </section>

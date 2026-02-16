@@ -20,6 +20,8 @@ export async function GET() {
         reviews: 1250,
         trend: "stable",
         lastUpdate: now,
+        openingHours: "Mon–Fri 8:00 AM – 4:00 PM",
+        phone: "+231 77 123 4567",
       },
       {
         id: "2",
@@ -32,6 +34,8 @@ export async function GET() {
         reviews: 892,
         trend: "up",
         lastUpdate: now,
+        openingHours: "Mon–Sat 8:00 AM – 6:00 PM",
+        phone: "+231 77 234 5678",
       },
       {
         id: "3",
@@ -44,6 +48,8 @@ export async function GET() {
         reviews: 634,
         trend: "down",
         lastUpdate: now,
+        openingHours: "Daily 7:00 AM – 8:00 PM",
+        phone: "+231 77 345 6789",
       },
       {
         id: "4",
@@ -56,6 +62,8 @@ export async function GET() {
         reviews: 312,
         trend: "stable",
         lastUpdate: now,
+        openingHours: "Mon–Sat 7:30 AM – 5:30 PM",
+        phone: "+231 77 456 7890",
       },
       {
         id: "5",
@@ -68,6 +76,8 @@ export async function GET() {
         reviews: 287,
         trend: "up",
         lastUpdate: now,
+        openingHours: "Mon–Fri 8:00 AM – 6:00 PM",
+        phone: "+231 77 567 8901",
       },
       {
         id: "6",
@@ -80,6 +90,8 @@ export async function GET() {
         reviews: 198,
         trend: "down",
         lastUpdate: now,
+        openingHours: "Daily 8:00 AM – 7:00 PM",
+        phone: "+231 77 678 9012",
       },
       {
         id: "7",
@@ -92,20 +104,24 @@ export async function GET() {
         reviews: 156,
         trend: "stable",
         lastUpdate: now,
+        openingHours: "Mon–Sat 7:00 AM – 6:00 PM",
+        phone: "+231 77 789 0123",
       },
     ]
 
     return NextResponse.json({
       // Backward compatibility for clients expecting `data.rate`
       rate: aggregatedData.rate,
+      cblRate: aggregatedData.cblRate ?? null,
       official: {
         rate: aggregatedData.rate,
         confidence: aggregatedData.confidence,
         sources: aggregatedData.sources,
         timestamp: aggregatedData.timestamp,
       },
+      sources: aggregatedData.sources,
+      timestamp: aggregatedData.timestamp,
       changers,
-      timestamp: now,
     })
   } catch (error) {
     console.error("Best rate API error:", error)

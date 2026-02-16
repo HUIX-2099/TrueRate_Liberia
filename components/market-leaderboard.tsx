@@ -228,7 +228,7 @@ export function MarketLeaderboard({ maxItems }: MarketLeaderboardProps) {
               Top Best Rates in Monrovia
             </CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              Updated every 15 minutes • {leaderboard.length} verified changers
+              Updated every 15 minutes • {leaderboard.length} verified changers • Community reports strengthen rankings
             </CardDescription>
           </div>
           <Badge variant="outline" className="gap-1 w-fit text-[11px] sm:text-xs">
@@ -260,10 +260,15 @@ export function MarketLeaderboard({ maxItems }: MarketLeaderboardProps) {
                   </div>
                   
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
                       <h4 className="font-semibold truncate text-sm sm:text-base">{changer.name}</h4>
                       {changer.verified && (
-                        <Badge variant="secondary" className="text-xs shrink-0">✓</Badge>
+                        <>
+                          <Badge variant="secondary" className="text-xs shrink-0">✓</Badge>
+                          <Badge variant="outline" className="text-[10px] sm:text-xs shrink-0 bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400 border-green-200 dark:border-green-800">
+                            Community verified
+                          </Badge>
+                        </>
                       )}
                     </div>
                     <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-muted-foreground">

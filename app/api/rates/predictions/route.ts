@@ -11,8 +11,9 @@ export async function GET(request: NextRequest) {
     const requestedDays = Number.parseInt(searchParams.get("days") || "30")
     const days = Number.isFinite(requestedDays) ? Math.min(Math.max(requestedDays, 1), 30) : 30
 
-    // Generate historical data for ML training
-    const historicalData = generateHistoricalData(90)
+    // Generate historical data for ML training (90 days)
+    const trainingDays = 90
+    const historicalData = generateHistoricalData(trainingDays)
 
     // Use advanced ensemble prediction
     const predictions = generateAdvancedPredictions(historicalData)
@@ -21,6 +22,8 @@ export async function GET(request: NextRequest) {
       predictions: predictions.slice(0, Math.min(days, 30)),
       models: ["SMA", "EMA", "Linear Regression", "ARIMA", "Seasonal Decomposition"],
       methodology: "Ensemble learning with 5 ML models",
+      explanation: `Based on the last ${trainingDays} days of rate history. Ensemble of 5 models: SMA, EMA, Linear Regression, ARIMA, Seasonal. Forecasts become less certain further out.`,
+      trainingDays,
       timestamp: new Date().toISOString(),
     })
   } catch (error) {

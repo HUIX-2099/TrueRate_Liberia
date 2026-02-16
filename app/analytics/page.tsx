@@ -6,7 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { TrendingUp, TrendingDown, Activity, RefreshCw, Sparkles } from "lucide-react"
+import { TrendingUp, TrendingDown, Activity, RefreshCw, Sparkles, Calendar, MapPin } from "lucide-react"
+import { RateHistoryExport } from "@/components/rate-history-export"
 import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 
@@ -34,17 +35,23 @@ export default function AnalyticsPage() {
   const [lastUpdated, setLastUpdated] = useState<string>("Loading...")
   const [sourceCount, setSourceCount] = useState<number>(0)
   const [showPercent, setShowPercent] = useState(true)
+  const [thisWeekAvg, setThisWeekAvg] = useState<number | null>(null)
+  const [lastWeekAvg, setLastWeekAvg] = useState<number | null>(null)
+  const [regional, setRegional] = useState<Array<{ region: string; county?: string; avgRate: number; count: number }>>([])
+  const [byCounty, setByCounty] = useState<Array<{ county: string; region: string; avgRate: number; count: number }>>([])
 
   useEffect(() => {
     async function fetchAnalytics() {
       try {
-        const [liveResponse, histResponse] = await Promise.all([
+        const [liveResponse, histResponse, regionalResponse] = await Promise.all([
           fetch("/api/rates/live"),
           fetch("/api/rates/historical"),
+          fetch("/api/rates/regional"),
         ])
 
         const liveData = await liveResponse.json()
         const histData = await histResponse.json()
+        const regionalData = await regionalResponse.json()
 
         if (typeof liveData.rate === "number") {
           setCurrentRate(liveData.rate)
@@ -54,20 +61,29 @@ export default function AnalyticsPage() {
         }
         setLastUpdated(new Date().toLocaleTimeString())
 
+        if (Array.isArray(regionalData.regional)) setRegional(regionalData.regional)
+        if (Array.isArray(regionalData.byCounty)) setByCounty(regionalData.byCounty)
+
         if (histData.historical && histData.historical.length > 0) {
           const historical = histData.historical
           const current = historical[historical.length - 1].rate
 
-          // Calculate 24h change
           if (historical.length > 1) {
             const yesterday = historical[historical.length - 2].rate
             setDayChange(((current - yesterday) / yesterday) * 100)
           }
 
-          // Calculate 7d change
           if (historical.length > 7) {
             const weekAgo = historical[historical.length - 8].rate
             setWeekChange(((current - weekAgo) / weekAgo) * 100)
+          }
+
+          const n = historical.length
+          if (n >= 7) {
+            const thisWeekRates = historical.slice(-7).map((p: { rate: number }) => p.rate)
+            const lastWeekRates = n >= 14 ? historical.slice(-14, -7).map((p: { rate: number }) => p.rate) : thisWeekRates
+            setThisWeekAvg(thisWeekRates.reduce((a: number, b: number) => a + b, 0) / thisWeekRates.length)
+            setLastWeekAvg(lastWeekRates.reduce((a: number, b: number) => a + b, 0) / lastWeekRates.length)
           }
         }
       } catch (error) {
@@ -105,7 +121,7 @@ export default function AnalyticsPage() {
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
               Real-time insights, historical context, and AI-powered market analysis for USD/LRD.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 flex-wrap">
               <Button
                 variant="outline"
                 className="gap-2 shadow-sm"
@@ -121,6 +137,7 @@ export default function AnalyticsPage() {
               >
                 {showPercent ? "Show LRD Change" : "Show % Change"}
               </Button>
+              <RateHistoryExport />
             </div>
           </div>
 
@@ -190,6 +207,82 @@ export default function AnalyticsPage() {
               </CardContent>
             </Card>
           </div>
+
+          {/* Compare periods */}
+          {thisWeekAvg != null && lastWeekAvg != null && (
+            <div className="max-w-5xl mx-auto mb-12">
+              <Card className="border-border/60 shadow-sm">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
+                  <CardTitle className="text-sm font-medium flex items-center gap-2">
+                    <Calendar className="h-4 w-4" />
+                    Compare periods
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    <div className="p-3 rounded-lg bg-muted/50 border border-border/40">
+                      <div className="text-xs text-muted-foreground mb-1">This week (avg)</div>
+                      <div className="text-xl font-bold text-primary">{thisWeekAvg.toFixed(2)} LRD</div>
+                    </div>
+                    <div className="p-3 rounded-lg bg-muted/50 border border-border/40">
+                      <div className="text-xs text-muted-foreground mb-1">Last week (avg)</div>
+                      <div className="text-xl font-bold">{lastWeekAvg.toFixed(2)} LRD</div>
+                    </div>
+                    <div className="p-3 rounded-lg bg-muted/50 border border-border/40 flex flex-col justify-center">
+                      <div className="text-xs text-muted-foreground mb-1">Week-over-week</div>
+                      <div className={`text-xl font-bold ${((thisWeekAvg - lastWeekAvg) / lastWeekAvg) * 100 >= 0 ? "text-red-600" : "text-green-600"}`}>
+                        {(((thisWeekAvg - lastWeekAvg) / lastWeekAvg) * 100 >= 0 ? "+" : "")}
+                        {(((thisWeekAvg - lastWeekAvg) / lastWeekAvg) * 100).toFixed(2)}%
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-3">Comparison of 7-day average rate vs previous 7 days.</p>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* Regional breakdown */}
+          {(regional.length > 0 || byCounty.length > 0) && (
+            <div className="max-w-5xl mx-auto mb-12">
+              <Card className="border-border/60 shadow-sm">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
+                  <CardTitle className="text-sm font-medium flex items-center gap-2">
+                    <MapPin className="h-4 w-4" />
+                    Regional breakdown
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <div className="text-xs font-medium text-muted-foreground mb-2">Monrovia vs Upcountry</div>
+                      <div className="space-y-2">
+                        {regional.map((r) => (
+                          <div key={r.region} className="flex items-center justify-between gap-2 p-2 rounded-lg bg-muted/50 border border-border/40">
+                            <span className="text-sm font-medium">{r.region}</span>
+                            <span className="text-sm font-mono font-semibold">{r.avgRate.toFixed(2)} LRD</span>
+                            <span className="text-xs text-muted-foreground shrink-0">({r.count})</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-medium text-muted-foreground mb-2">By county</div>
+                      <div className="space-y-2 max-h-[200px] overflow-y-auto">
+                        {byCounty.slice(0, 8).map((c) => (
+                          <div key={c.county} className="flex items-center justify-between py-1.5 text-sm">
+                            <span>{c.county}</span>
+                            <span className="font-mono text-muted-foreground">{c.avgRate.toFixed(2)}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-3">Average rates by region; Monrovia (Montserrado) vs upcountry counties.</p>
+                </CardContent>
+              </Card>
+            </div>
+          )}
 
           <div className="max-w-6xl mx-auto mb-12">
             <RateHistory />

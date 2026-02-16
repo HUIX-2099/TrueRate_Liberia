@@ -175,3 +175,19 @@
     }
   }
 }
+
+/* Rate change flash (up = red, down = green) */
+@keyframes rate-flash-up {
+  0% { background-color: oklch(0.577 0.245 27.325 / 0.25); }
+  100% { background-color: transparent; }
+}
+@keyframes rate-flash-down {
+  0% { background-color: oklch(0.62 0.15 150 / 0.25); }
+  100% { background-color: transparent; }
+}
+.animate-rate-flash-up {
+  animation: rate-flash-up 0.5s ease-out;
+}
+.animate-rate-flash-down {
+  animation: rate-flash-down 0.5s ease-out;
+}

@@ -27,16 +27,41 @@ export function SMSAlerts() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const res = await fetch("/api/sms/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          phone: phoneNumber.replace(/\D/g, "").replace(/^231/, "") || phoneNumber,
+          frequency,
+          alerts,
+        }),
+      })
+      const data = await res.json()
 
-    toast({
-      title: "SMS Alerts Activated!",
-      description: `You'll receive rate updates at ${phoneNumber}`,
-    })
+      if (!res.ok) {
+        toast({
+          title: "Could not subscribe",
+          description: data?.error ?? "Please try again.",
+          variant: "destructive",
+        })
+        return
+      }
 
-    setIsSubmitting(false)
-    setPhoneNumber("")
+      toast({
+        title: "SMS Alerts Activated!",
+        description: `You'll receive rate updates at ${phoneNumber}`,
+      })
+      setPhoneNumber("")
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

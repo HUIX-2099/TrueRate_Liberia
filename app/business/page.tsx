@@ -24,7 +24,9 @@ import {
   Calendar,
 } from "lucide-react"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { InvoiceProtector } from "@/components/invoice-protector"
+import { BulkConverter } from "@/components/bulk-converter"
 import { CashflowForecast } from "@/components/cashflow-forecast"
 import { ImportPriceAlert } from "@/components/import-price-alert"
 import { ChangerBooking } from "@/components/changer-booking"
@@ -35,6 +37,8 @@ import { SentimentAnalysis } from "@/components/sentiment-analysis"
 export default function BusinessDashboardPage() {
   const [currentRate, setCurrentRate] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
+  const [apiKey, setApiKey] = useState<string | null>(null)
+  const [apiKeyLoading, setApiKeyLoading] = useState(false)
 
   useEffect(() => {
     fetch("/api/rates/live")
@@ -139,6 +143,9 @@ export default function BusinessDashboardPage() {
                   
                   {/* Import Price Alert */}
                   <ImportPriceAlert />
+
+                  {/* Bulk conversion */}
+                  <BulkConverter />
                   
                   {/* AI Sentiment Analysis */}
                   <SentimentAnalysis />
@@ -353,14 +360,40 @@ export default function BusinessDashboardPage() {
                       <div className="space-y-6">
                         <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg">
                           <Lock className="h-5 w-5 text-primary mt-0.5" />
-                          <div>
+                          <div className="flex-1 min-w-0">
                             <h3 className="font-semibold mb-1">Your API Key</h3>
-                            <code className="text-sm bg-background px-3 py-1 rounded border">
-                              trl_live_sk_xxxxxxxxxxxxxxxxxxxx
-                            </code>
+                            {apiKey ? (
+                              <code className="text-sm bg-background px-3 py-1 rounded border break-all block">
+                                {apiKey}
+                              </code>
+                            ) : (
+                              <p className="text-sm text-muted-foreground">Create a key to access the live and historical rate API.</p>
+                            )}
                             <p className="text-sm text-muted-foreground mt-2">
-                              Keep this key secure. It provides access to all API endpoints.
+                              Keep this key secure. Use it in the Authorization header (Bearer) or as the api_key query parameter.
                             </p>
+                            {!apiKey && (
+                              <Button
+                                className="mt-2"
+                                disabled={apiKeyLoading}
+                                onClick={async () => {
+                                  setApiKeyLoading(true)
+                                  try {
+                                    const res = await fetch("/api/business/api-keys", {
+                                      method: "POST",
+                                      headers: { "Content-Type": "application/json" },
+                                      body: JSON.stringify({}),
+                                    })
+                                    const data = await res.json()
+                                    if (data?.api_key) setApiKey(data.api_key)
+                                  } finally {
+                                    setApiKeyLoading(false)
+                                  }
+                                }}
+                              >
+                                {apiKeyLoading ? "Creating…" : "Create API key"}
+                              </Button>
+                            )}
                           </div>
                         </div>
 
@@ -389,28 +422,32 @@ export default function BusinessDashboardPage() {
                           <h3 className="font-semibold mb-3">Quick Start</h3>
                           <div className="space-y-3">
                             <div>
-                              <div className="text-sm font-medium mb-1">Get Current Rate</div>
+                              <div className="text-sm font-medium mb-1">Get current rate</div>
                               <code className="block text-xs bg-muted p-3 rounded-lg overflow-x-auto">
-                                curl -H "Authorization: Bearer YOUR_API_KEY" <br />
-                                /api/rates/live
+                                GET /api/v1/rate<br />
+                                Authorization: Bearer YOUR_API_KEY
                               </code>
                             </div>
                             <div>
-                              <div className="text-sm font-medium mb-1">Get 30-Day Predictions</div>
+                              <div className="text-sm font-medium mb-1">Get historical rates</div>
                               <code className="block text-xs bg-muted p-3 rounded-lg overflow-x-auto">
-                                curl -H "Authorization: Bearer YOUR_API_KEY" <br />
-                                https://api.truerate-liberia.com/v1/rates/predictions?days=30
+                                GET /api/v1/historical?days=90<br />
+                                Authorization: Bearer YOUR_API_KEY
                               </code>
                             </div>
                           </div>
                         </div>
 
                         <div className="flex gap-2">
-                          <Button>
-                            <FileText className="h-4 w-4 mr-2" />
-                            View Full Documentation
+                          <Button asChild>
+                            <Link href="/docs#api">
+                              <FileText className="h-4 w-4 mr-2" />
+                              API documentation
+                            </Link>
                           </Button>
-                          <Button variant="outline">Contact Sales</Button>
+                          <Button variant="outline" asChild>
+                            <Link href="/contact">Contact Sales</Link>
+                          </Button>
                         </div>
                       </div>
                     </CardContent>

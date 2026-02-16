@@ -94,6 +94,11 @@ export function Footer() {
                   Interactive Map
                 </Link>
               </li>
+              <li>
+                <Link href="/status" className="text-muted-foreground hover:text-foreground transition-colors">
+                  System Status
+                </Link>
+              </li>
             </ul>
           </div>
 

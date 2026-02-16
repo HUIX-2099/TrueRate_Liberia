@@ -2,18 +2,30 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, TrendingUp, TrendingDown, Zap, Shield, Globe } from "lucide-react"
+import { ArrowRight, TrendingUp, TrendingDown, Zap, Shield, Globe, Volume2 } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { useLiveRate } from "@/lib/live-rate-context"
+import { RateSourceAttribution } from "@/components/rate-source-attribution"
+import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
+import { StaleRateWarning } from "@/components/stale-rate-warning"
+import { RateChangeAnimation } from "@/components/rate-change-animation"
 
 export function Hero() {
   const router = useRouter()
-  const { rate, loading } = useLiveRate()
+  const { rate, loading, sources, timestamp, cblRate, refresh } = useLiveRate()
   const [trend, setTrend] = useState<'up' | 'down' | 'stable'>('up')
   const [changePercent, setChangePercent] = useState(0.8)
-  const lastUpdate = loading ? "Loading…" : "Just now"
+  const lastUpdate = loading ? "Loading…" : timestamp ? (() => {
+    try {
+      const d = new Date(timestamp)
+      const diff = (Date.now() - d.getTime()) / 60_000
+      if (diff < 1) return "Just now"
+      if (diff < 60) return `${Math.floor(diff)}m ago`
+      return d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })
+    } catch { return "Just now" }
+  })() : "Just now"
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
@@ -55,7 +67,7 @@ export function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Button size="lg" className="gap-2 h-14 px-8 text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all" asChild>
                 <Link href="/converter">
                   Try Converter
@@ -66,6 +78,12 @@ export function Hero() {
                 <Link href="/predictions">
                   <TrendingUp className="h-5 w-5" />
                   View Predictions
+                </Link>
+              </Button>
+              <Button size="lg" variant="secondary" className="gap-2 h-14 px-8 text-lg border border-secondary/30" asChild>
+                <Link href="/voice">
+                  <Volume2 className="h-5 w-5" />
+                  Simple mode
                 </Link>
               </Button>
             </div>
@@ -130,7 +148,9 @@ export function Hero() {
               {/* Main Rate Display */}
               <div className="text-center mb-8">
                 <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
-                  {rate ? rate.toFixed(2) : "—"}
+                  <RateChangeAnimation rate={rate ?? 0}>
+                    {rate ? rate.toFixed(2) : "—"}
+                  </RateChangeAnimation>
                 </div>
                 <div className="text-lg text-muted-foreground mt-2">LRD per 1 USD</div>
               </div>
@@ -151,9 +171,18 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Footer */}
-              <div className="mt-6 pt-4 border-t border-border/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
-                <span className="text-xs text-muted-foreground">Aggregated from 100+ sources</span>
+              {/* Footer: source attribution + CBL when available */}
+              <div className="mt-6 pt-4 border-t border-border/50 flex flex-col gap-3">
+                <RateSourceAttribution
+                  sources={sources}
+                  timestamp={timestamp}
+                  cblRate={cblRate}
+                  compositeRate={rate ?? undefined}
+                  compact={false}
+                />
+                <StaleRateWarning timestamp={timestamp} onRefresh={refresh} compact />
+                <RateFeedbackButtons rate={rate ?? undefined} compact />
+                <div className="flex justify-end">
                 <Button
                   size="sm"
                   variant="outline"
@@ -163,6 +192,7 @@ export function Hero() {
                 >
                   View History <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
+                </div>
               </div>
             </div>
 

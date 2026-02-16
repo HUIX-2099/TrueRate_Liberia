@@ -9,6 +9,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { MapPin, TrendingDown, TrendingUp } from "lucide-react"
+import { RateSourceAttribution } from "@/components/rate-source-attribution"
+import { RateHistoryExport } from "@/components/rate-history-export"
+import { StaleRateWarning } from "@/components/stale-rate-warning"
 
 interface Changer {
   id: string
@@ -21,9 +24,12 @@ interface Changer {
 }
 
 export default function RatesPage() {
-  const { rate: liveRate } = useLiveRate()
+  const { rate: liveRate, refresh: refreshLiveRate } = useLiveRate()
   const [lastUpdate, setLastUpdate] = useState("Loading...")
   const [sourceCount, setSourceCount] = useState(0)
+  const [rateSources, setRateSources] = useState<string[]>([])
+  const [rateTimestamp, setRateTimestamp] = useState("")
+  const [cblRate, setCblRate] = useState<number | null>(null)
   const [changers, setChangers] = useState<Changer[]>([])
   const [recentRates, setRecentRates] = useState<number[]>([])
   const [previousDayRate, setPreviousDayRate] = useState<number | null>(null)
@@ -37,6 +43,10 @@ export default function RatesPage() {
           setSourceCount(data.changers.length)
           setChangers(data.changers)
         }
+        if (Array.isArray(data?.sources)) setRateSources(data.sources)
+        else if (Array.isArray(data?.official?.sources)) setRateSources(data.official.sources)
+        if (typeof data?.timestamp === "string") setRateTimestamp(data.timestamp)
+        if (typeof data?.cblRate === "number") setCblRate(data.cblRate)
         setLastUpdate(new Date().toLocaleTimeString())
       } catch (error) {
         console.error("[Rates] Failed to fetch rate", error)
@@ -160,9 +170,19 @@ export default function RatesPage() {
                     <div className="text-5xl font-bold text-primary mb-1">{liveRate.toFixed(2)}</div>
                     <div className="text-sm text-muted-foreground font-medium">LRD per USD</div>
                   </div>
+                  <div className="pt-2 border-t border-border/40 space-y-2">
+                    <RateSourceAttribution
+                      sources={rateSources}
+                      timestamp={rateTimestamp}
+                      cblRate={cblRate}
+                      compositeRate={liveRate}
+                      compact={false}
+                    />
+                    <StaleRateWarning timestamp={rateTimestamp} onRefresh={refreshLiveRate} compact />
+                  </div>
                   <div className="grid grid-cols-3 gap-2 text-xs">
                     <div className="rounded-lg border border-border/60 px-3 py-2 text-center bg-muted/20">
-                      <div className="text-muted-foreground">Sources</div>
+                      <div className="text-muted-foreground">Changers</div>
                       <div className="font-semibold text-foreground">
                         {sourceCount ? `${sourceCount}` : "..."}
                       </div>
@@ -205,6 +225,7 @@ export default function RatesPage() {
                         View Analytics
                       </Button>
                     </Link>
+                    <RateHistoryExport />
                   </div>
                 </CardContent>
               </Card>

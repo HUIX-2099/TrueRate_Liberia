@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { TrendingUp, MapPin, Bell, Share2, Volume2, Navigation } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { StaleRateWarning } from "@/components/stale-rate-warning"
 
 interface BestRateData {
   rate: number
@@ -26,7 +27,7 @@ interface BestRateData {
 
 export function BestRateWidget() {
   const { t, isMarketWomanMode } = useLanguage()
-  const { rate: contextRate } = useLiveRate()
+  const { rate: contextRate, timestamp: rateTimestamp, refresh: refreshRate } = useLiveRate()
   const [bestRate, setBestRate] = useState<BestRateData | null>(null)
   const [loading, setLoading] = useState(true)
   const [phone, setPhone] = useState('')
@@ -289,6 +290,7 @@ export function BestRateWidget() {
                 </div>
               </div>
             </div>
+            <StaleRateWarning timestamp={rateTimestamp} onRefresh={refreshRate} compact className="mt-3" />
           </div>
 
           {/* Action Buttons */}

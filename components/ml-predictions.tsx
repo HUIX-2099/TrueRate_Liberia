@@ -23,6 +23,8 @@ import {
 interface MLPredictionsProps {
   currentRate: number
   backtestAccuracy?: number | null
+  /** Short explanation for ML predictions (e.g. "Based on last 90 days...") */
+  explanation?: string
 }
 
 interface PredictionResult {
@@ -42,7 +44,7 @@ interface ModelMetrics {
   weight: number
 }
 
-export function MLPredictions({ currentRate, backtestAccuracy }: MLPredictionsProps) {
+export function MLPredictions({ currentRate, backtestAccuracy, explanation }: MLPredictionsProps) {
   const [predictions, setPredictions] = useState<PredictionResult[]>([])
   const [models, setModels] = useState<ModelMetrics[]>([])
   const [ensemblePrediction, setEnsemblePrediction] = useState(currentRate)
@@ -196,6 +198,11 @@ export function MLPredictions({ currentRate, backtestAccuracy }: MLPredictionsPr
 
   return (
     <div className="space-y-6">
+      {explanation && (
+        <p className="text-sm text-muted-foreground rounded-lg border border-border/60 bg-muted/30 px-4 py-3">
+          {explanation}
+        </p>
+      )}
       {/* Ensemble Prediction Hero */}
       <Card className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 border-primary/20">
         <CardContent className="p-6 md:p-8">

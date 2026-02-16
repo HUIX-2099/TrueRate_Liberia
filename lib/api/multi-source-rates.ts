@@ -73,15 +73,19 @@ export async function getAggregatedRate(): Promise<{
   confidence: number
   sources: string[]
   timestamp: string
+  cblRate: number | null
 }> {
   const { fetchCblLatestRate } = await import("@/lib/cbl-rates")
   const cbl = await fetchCblLatestRate()
-  if (cbl && cbl.rate > 150 && cbl.rate < 220) {
+  const cblRate = cbl && cbl.rate > 150 && cbl.rate < 220 ? Number(cbl.rate.toFixed(4)) : null
+
+  if (cblRate != null) {
     return {
-      rate: Number(cbl.rate.toFixed(4)),
+      rate: cblRate,
       confidence: 1.0,
       sources: ["Central Bank of Liberia"],
       timestamp: new Date().toISOString(),
+      cblRate,
     }
   }
 
@@ -97,6 +101,7 @@ export async function getAggregatedRate(): Promise<{
           confidence: 1.0,
           sources: [result.source],
           timestamp: new Date().toISOString(),
+          cblRate,
         }
       }
       sources = RATE_SOURCES.filter((s) => s !== preferred)
@@ -119,6 +124,7 @@ export async function getAggregatedRate(): Promise<{
       confidence: 0.7,
       sources: ["Central Bank of Liberia (Fallback)"],
       timestamp: new Date().toISOString(),
+      cblRate: null,
     }
   }
 
@@ -136,6 +142,7 @@ export async function getAggregatedRate(): Promise<{
     confidence: Number(confidence.toFixed(2)),
     sources: validResults.map((r) => r.source),
     timestamp: new Date().toISOString(),
+    cblRate,
   }
 }
 

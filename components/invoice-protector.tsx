@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { TrendingUp, TrendingDown, Camera, Share2, AlertCircle, CheckCircle2 } from "lucide-react"
+import { TrendingUp, TrendingDown, Camera, Share2, AlertCircle, CheckCircle2, Download } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 interface PredictionData {
@@ -77,6 +77,36 @@ export function InvoiceProtector() {
   const takeScreenshot = async () => {
     // In production, use html2canvas or similar
     alert('Screenshot saved! You can share it via any app.')
+  }
+
+  const downloadPdf = () => {
+    if (!prediction || !invoiceAmount) return
+    const payNow = difference > 0
+    const html = `
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>TrueRate Invoice Check</title>
+<style>body{font-family:system-ui,sans-serif;max-width:400px;margin:24px auto;padding:16px;color:#111;}
+h1{font-size:1.25rem;margin-bottom:8px;} .muted{color:#666;font-size:0.875rem;}
+.row{display:flex;justify-content:space-between;margin:8px 0;} .bold{font-weight:600;}
+.rec{margin-top:16px;padding:12px;border-radius:8px;background:${payNow ? '#fef2f2' : '#f0fdf4'};}
+</style></head><body>
+<h1>TrueRate Liberia – Invoice Protector</h1>
+<p class="muted">Generated ${new Date().toLocaleString()}</p>
+<div class="row"><span>Invoice amount (USD)</span><span class="bold">$${invoiceAmount}</span></div>
+<div class="row"><span>Today's cost @ ${prediction.currentRate.toFixed(2)} LRD/USD</span><span class="bold">L$${todayCost.toLocaleString(undefined,{maximumFractionDigits:0})}</span></div>
+<div class="row"><span>Predicted in 7 days @ ${prediction.predictedRate.toFixed(2)} LRD/USD</span><span class="bold">L$${futureCost.toLocaleString(undefined,{maximumFractionDigits:0})}</span></div>
+<div class="rec">
+  <div class="bold">${payNow ? 'Pay now to save' : 'Wait to save'}</div>
+  <div>L$${Math.abs(difference).toLocaleString(undefined,{maximumFractionDigits:0})} ${payNow ? 'savings if you pay today' : 'savings if you wait'}</div>
+</div>
+<p class="muted" style="margin-top:20px;">truerateliberia.com</p>
+</body></html>`
+    const w = window.open('', '_blank')
+    if (!w) return
+    w.document.write(html)
+    w.document.close()
+    w.focus()
+    setTimeout(() => { w.print(); w.close(); }, 300)
   }
 
   if (loading) {
@@ -184,12 +214,16 @@ export function InvoiceProtector() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-2 pt-2">
-              <Button variant="outline" className="flex-1 gap-2" onClick={takeScreenshot}>
+            <div className="flex flex-wrap gap-2 pt-2">
+              <Button variant="outline" className="gap-2" onClick={downloadPdf}>
+                <Download className="h-4 w-4" />
+                Download PDF
+              </Button>
+              <Button variant="outline" className="gap-2" onClick={takeScreenshot}>
                 <Camera className="h-4 w-4" />
                 {t('invoice.share')}
               </Button>
-              <Button className="flex-1 gap-2" onClick={shareToWhatsApp}>
+              <Button className="gap-2" onClick={shareToWhatsApp}>
                 <Share2 className="h-4 w-4" />
                 WhatsApp
               </Button>
