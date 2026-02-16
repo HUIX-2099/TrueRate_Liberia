@@ -158,6 +158,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Favicon for Google Search - absolute URL, 48x48 minimum */}
+        <link rel="icon" href="https://truerateliberia.com/icons/logo-48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="https://truerateliberia.com/icons/logo-192.png" type="image/png" sizes="192x192" />
         {/* Preload critical resources */}
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/api/rates/live" as="fetch" crossOrigin="anonymous" />

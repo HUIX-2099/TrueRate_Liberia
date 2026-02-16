@@ -41,13 +41,14 @@ export function StructuredData({ currentRate = 198.5 }: StructuredDataProps) {
     ]
   }
 
-  // WebSite Schema with Search Action
+  // WebSite Schema with Search Action (image helps Google show favicon in search)
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "TrueRate Liberia",
     "alternateName": "TrueRate",
     "url": "https://truerateliberia.com",
+    "image": "https://truerateliberia.com/icons/logo-192.png",
     "description": "Real-time USD to LRD exchange rates in Liberia",
     "potentialAction": {
       "@type": "SearchAction",
