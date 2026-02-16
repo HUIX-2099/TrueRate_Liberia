@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useMemo, useRef } from "react"
+import { useTheme } from "next-themes"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -38,6 +39,8 @@ interface TradingChartProps {
 }
 
 export function TradingChart({ data, predictions, currentRate }: TradingChartProps) {
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === "dark"
   const [chartType, setChartType] = useState<"candle" | "line" | "area">("candle")
   const [timeframe, setTimeframe] = useState<"1D" | "1W" | "1M" | "3M">("1M")
   const [hoveredCandle, setHoveredCandle] = useState<CandleData | null>(null)
@@ -45,6 +48,11 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
   const [chartData, setChartData] = useState<CandleData[]>(() => (data.length ? data : []))
   const [isHydrated, setIsHydrated] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  const gridStroke = isDark ? "rgba(255, 255, 255, 0.12)" : "rgba(128, 128, 128, 0.1)"
+  const labelFill = isDark ? "rgba(255, 255, 255, 0.85)" : "rgba(128, 128, 128, 0.8)"
+  const priceLabelBg = isDark ? "#7c3aed" : "#8b5cf6"
+  const priceLabelText = isDark ? "#0f0f12" : "#fff"
 
   // Generate realistic demo data if none provided
   const generateDemoData = (): CandleData[] => {
@@ -137,8 +145,8 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
     // Animated data slice
     const visibleData = chartData.slice(0, Math.ceil((chartData.length * animationProgress) / 100))
 
-    // Draw grid
-    ctx.strokeStyle = "rgba(128, 128, 128, 0.1)"
+    // Draw grid (theme-aware)
+    ctx.strokeStyle = gridStroke
     ctx.lineWidth = 1
     for (let i = 0; i <= 5; i++) {
       const y = padding.top + (chartHeight / 5) * i
@@ -147,9 +155,9 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
       ctx.lineTo(rect.width - padding.right, y)
       ctx.stroke()
 
-      // Price labels
+      // Price labels (theme-aware)
       const price = maxPrice - (priceRange / 5) * i
-      ctx.fillStyle = "rgba(128, 128, 128, 0.8)"
+      ctx.fillStyle = labelFill
       ctx.font = "11px monospace"
       ctx.textAlign = "left"
       ctx.fillText(price.toFixed(2), rect.width - padding.right + 5, y + 4)
@@ -252,10 +260,10 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
       ctx.stroke()
       ctx.setLineDash([])
 
-      // Current price label
-      ctx.fillStyle = "#8b5cf6"
+      // Current price label (theme-aware)
+      ctx.fillStyle = priceLabelBg
       ctx.fillRect(rect.width - padding.right + 2, currentY - 10, 55, 20)
-      ctx.fillStyle = "#fff"
+      ctx.fillStyle = priceLabelText
       ctx.font = "bold 11px monospace"
       ctx.fillText(currentRate.toFixed(2), rect.width - padding.right + 5, currentY + 4)
     }
@@ -275,7 +283,7 @@ export function TradingChart({ data, predictions, currentRate }: TradingChartPro
         barHeight
       )
     })
-  }, [chartData, predictions, currentRate, chartType, animationProgress])
+  }, [chartData, predictions, currentRate, chartType, animationProgress, gridStroke, labelFill, priceLabelBg, priceLabelText])
 
   const { change, changePercent } = useMemo(() => {
     const first = chartData[0]

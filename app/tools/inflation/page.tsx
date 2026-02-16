@@ -166,24 +166,30 @@ export default function InflationTrackerPage() {
                 <CardContent>
                   <ResponsiveContainer width="100%" height={300}>
                     <LineChart data={chartData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="year" />
-                      <YAxis yAxisId="left" />
-                      <YAxis yAxisId="right" orientation="right" />
-                      <Tooltip />
+                      <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+                      <XAxis dataKey="year" stroke="var(--border)" tick={{ fill: "var(--foreground)" }} />
+                      <YAxis yAxisId="left" stroke="var(--border)" tick={{ fill: "var(--foreground)" }} />
+                      <YAxis yAxisId="right" orientation="right" stroke="var(--border)" tick={{ fill: "var(--foreground)" }} />
+                      <Tooltip
+                        contentStyle={{
+                          backgroundColor: "var(--card)",
+                          border: "1px solid var(--border)",
+                          color: "var(--card-foreground)",
+                        }}
+                      />
                       <Legend />
                       <Line
                         yAxisId="left"
                         type="monotone"
                         dataKey="Purchasing Power"
-                        stroke="hsl(var(--primary))"
+                        stroke="var(--primary)"
                         strokeWidth={2}
                       />
                       <Line
                         yAxisId="right"
                         type="monotone"
                         dataKey="Inflation Rate"
-                        stroke="hsl(var(--destructive))"
+                        stroke="var(--destructive)"
                         strokeWidth={2}
                       />
                     </LineChart>

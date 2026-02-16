@@ -191,3 +191,30 @@
 .animate-rate-flash-down {
   animation: rate-flash-down 0.5s ease-out;
 }
+
+/* Chart visibility in dark mode (recharts) */
+.dark [data-slot="chart"] .recharts-cartesian-grid line,
+.dark [data-chart] .recharts-cartesian-grid line {
+  stroke: var(--border);
+}
+.dark [data-slot="chart"] .recharts-cartesian-axis-tick text,
+.dark [data-chart] .recharts-cartesian-axis-tick text {
+  fill: var(--foreground);
+}
+.dark [data-slot="chart"] .recharts-curve,
+.dark [data-chart] .recharts-curve {
+  stroke: var(--primary);
+}
+.dark [data-slot="chart"] .recharts-line,
+.dark [data-chart] .recharts-line {
+  stroke: var(--primary);
+}
+.dark [data-slot="chart"] .recharts-area,
+.dark [data-chart] .recharts-area {
+  fill: var(--primary);
+  fill-opacity: 0.2;
+}
+.dark [data-slot="chart"] .recharts-tooltip-wrapper,
+.dark [data-chart] .recharts-tooltip-wrapper {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+}

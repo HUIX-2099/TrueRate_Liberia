@@ -9124,6 +9124,36 @@
   }
 }
 
+@keyframes rate-flash-up {
+  0% {
+    background-color: #e4001440;
+    background-color: lab(48.4493% 77.4328 61.5452 / .25);
+  }
+
+  100% {
+    background-color: #0000;
+  }
+}
+
+@keyframes rate-flash-down {
+  0% {
+    background-color: #2e9e5240;
+    background-color: lab(57.7987% -45.4011 30.0617 / .25);
+  }
+
+  100% {
+    background-color: #0000;
+  }
+}
+
+.animate-rate-flash-up {
+  animation: .5s ease-out rate-flash-up;
+}
+
+.animate-rate-flash-down {
+  animation: .5s ease-out rate-flash-down;
+}
+
 @keyframes enter {
   from {
     opacity: var(--tw-enter-opacity, 1);

@@ -198,17 +198,19 @@ export function CashflowForecast() {
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={forecastData}>
-                  <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
-                  <XAxis dataKey="week" tick={{ fontSize: 12 }} />
-                  <YAxis 
-                    tick={{ fontSize: 12 }}
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" opacity={0.5} />
+                  <XAxis dataKey="week" tick={{ fontSize: 12, fill: "var(--foreground)" }} stroke="var(--border)" />
+                  <YAxis
+                    stroke="var(--border)"
+                    tick={{ fontSize: 12, fill: "var(--foreground)" }}
                     tickFormatter={(value) => `L$${(value / 1000).toFixed(0)}k`}
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: 'hsl(var(--card))',
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px',
+                      backgroundColor: "var(--card)",
+                      border: "1px solid var(--border)",
+                      borderRadius: "8px",
+                      color: "var(--card-foreground)",
                     }}
                     formatter={(value: number) => [`L$${value.toLocaleString()}`, '']}
                   />
@@ -216,7 +218,7 @@ export function CashflowForecast() {
                     type="monotone"
                     dataKey="worstCaseLRD"
                     stroke="transparent"
-                    fill="hsl(var(--destructive))"
+                    fill="var(--destructive)"
                     fillOpacity={0.1}
                     name="Worst Case"
                   />
@@ -224,15 +226,15 @@ export function CashflowForecast() {
                     type="monotone"
                     dataKey="bestCaseLRD"
                     stroke="transparent"
-                    fill="hsl(var(--secondary))"
+                    fill="var(--secondary)"
                     fillOpacity={0.1}
                     name="Best Case"
                   />
                   <Area
                     type="monotone"
                     dataKey="predictedLRD"
-                    stroke="hsl(var(--primary))"
-                    fill="hsl(var(--primary))"
+                    stroke="var(--primary)"
+                    fill="var(--primary)"
                     fillOpacity={0.3}
                     strokeWidth={2}
                     name="Predicted LRD"

@@ -93,7 +93,7 @@ export function RateHistory() {
   const chartConfig = {
     rate: {
       label: "Exchange Rate",
-      color: "hsl(var(--primary))",
+      color: "var(--primary)",
     },
   }
 
@@ -188,17 +188,17 @@ export function RateHistory() {
             <ChartContainer config={chartConfig} className="h-[300px] w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
                   <XAxis
                     dataKey="date"
-                    stroke="hsl(var(--foreground))"
-                    tick={{ fill: "hsl(var(--foreground))" }}
+                    stroke="var(--border)"
+                    tick={{ fill: "var(--foreground)" }}
                     fontSize={12}
                     tickLine={false}
                   />
                   <YAxis
-                    stroke="hsl(var(--foreground))"
-                    tick={{ fill: "hsl(var(--foreground))" }}
+                    stroke="var(--border)"
+                    tick={{ fill: "var(--foreground)" }}
                     fontSize={12}
                     tickLine={false}
                     tickFormatter={(value) => Number(value).toFixed(4)}
@@ -223,7 +223,7 @@ export function RateHistory() {
                   <Line
                     type="monotone"
                     dataKey="rate"
-                    stroke="hsl(var(--primary))"
+                    stroke="var(--primary)"
                     strokeWidth={2}
                     dot={false}
                     isAnimationActive={false}
