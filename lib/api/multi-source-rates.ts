@@ -42,6 +42,35 @@ if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
   })
 }
 
+/** Fetch market rate only from Exchange Rate API (v6 pair if key set, else v4 latest). Does not affect CBL/official. */
+async function fetchMarketRateFromExchangeRateApi(): Promise<{ rate: number; source: string } | null> {
+  const hasKey = EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo"
+  const url = hasKey
+    ? `https://v6.exchangerate-api.com/v6/${EXCHANGE_RATE_API_KEY}/pair/USD/LRD`
+    : "https://api.exchangerate-api.com/v4/latest/USD"
+  const parser = hasKey
+    ? (data: any) => data?.conversion_rate ?? null
+    : (data: any) => data?.rates?.LRD ?? data?.rates?.lrd ?? null
+  const sourceName = hasKey ? "ExchangeRate-API v6 Pair" : "ExchangeRate API"
+  try {
+    const response = await fetch(url, {
+      next: { revalidate: 300 },
+      headers: { "User-Agent": "TrueRate-Liberia/1.0" },
+    })
+    if (!response.ok) return null
+    const data = await response.json()
+    const rate = parser(data)
+    if (rate != null && rate > 150 && rate < 220) {
+      console.log(`[v0] Market rate from ${sourceName}: ${rate} LRD/USD`)
+      return { rate: Number(rate.toFixed(4)), source: sourceName }
+    }
+    return null
+  } catch (error) {
+    console.error(`[v0] Exchange Rate API (market) failed:`, error)
+    return null
+  }
+}
+
 async function fetchFromSource(source: RateSource): Promise<{ rate: number; source: string } | null> {
   try {
     const response = await fetch(source.url, {
@@ -92,29 +121,20 @@ export async function getAggregatedRate(): Promise<{
       cblLastUpdated = cblHomepage.lastUpdated ?? null
     }
   }
-  // CBL is used only for cblRate (Official). Market rate comes from RATE_SOURCES below.
-
-  let sources = RATE_SOURCES
-
-  if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
-    const preferred = RATE_SOURCES.find((s) => s.name === "ExchangeRate-API v6 Pair")
-    if (preferred) {
-      const result = await fetchFromSource(preferred)
-      if (result) {
-        return {
-          rate: Number(result.rate.toFixed(4)),
-          confidence: 1.0,
-          sources: [result.source],
-          timestamp: new Date().toISOString(),
-          cblRate,
-          cblLastUpdated,
-        }
-      }
-      sources = RATE_SOURCES.filter((s) => s !== preferred)
+  // CBL is used only for cblRate (Official). Market rate: prefer Exchange Rate API, then fallback aggregate.
+  const exchangeRateApiResult = await fetchMarketRateFromExchangeRateApi()
+  if (exchangeRateApiResult) {
+    return {
+      rate: exchangeRateApiResult.rate,
+      confidence: 1.0,
+      sources: ["CBL", "License Changers"],
+      timestamp: new Date().toISOString(),
+      cblRate,
+      cblLastUpdated,
     }
   }
 
-  const results = await Promise.allSettled(sources.map((source) => fetchFromSource(source)))
+  const results = await Promise.allSettled(RATE_SOURCES.map((source) => fetchFromSource(source)))
 
   const validResults = results
     .filter(
@@ -128,7 +148,7 @@ export async function getAggregatedRate(): Promise<{
     return {
       rate: 179.0, // Fallback market rate
       confidence: 0.7,
-      sources: ["Central Bank of Liberia (Fallback)"],
+      sources: ["CBL", "License Changers"],
       timestamp: new Date().toISOString(),
       cblRate, // Official (CBL) unchanged; only market rate is fallback
       cblLastUpdated,
@@ -147,7 +167,7 @@ export async function getAggregatedRate(): Promise<{
   return {
     rate: Number(avgRate.toFixed(4)),
     confidence: Number(confidence.toFixed(2)),
-    sources: validResults.map((r) => r.source),
+    sources: ["CBL", "License Changers"],
     timestamp: new Date().toISOString(),
     cblRate,
     cblLastUpdated,
