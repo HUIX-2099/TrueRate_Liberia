@@ -81,8 +81,14 @@ export interface LiveRateContextValue {
 const LiveRateContext = createContext<LiveRateContextValue | null>(null)
 
 export function LiveRateProvider({ children }: { children: ReactNode }) {
-  const [rate, setRate] = useState<number>(readCachedRate)
-  const [meta, setMeta] = useState(readCachedMeta)
+  // Use DEFAULT_RATE for initial state so server and client render the same (avoids hydration mismatch).
+  // Cache is applied in useEffect after mount.
+  const [rate, setRate] = useState<number>(DEFAULT_RATE)
+  const [meta, setMeta] = useState<{ sources: string[]; timestamp: string; cblRate: number | null }>(() => ({
+    sources: [],
+    timestamp: "",
+    cblRate: null,
+  }))
   const [loading, setLoading] = useState(true)
 
   const refresh = useCallback(async () => {
@@ -107,6 +113,8 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
   }, [])
 
   useEffect(() => {
+    setRate(readCachedRate())
+    setMeta(readCachedMeta())
     refresh()
     const id = setInterval(refresh, REFRESH_MS)
     return () => clearInterval(id)
