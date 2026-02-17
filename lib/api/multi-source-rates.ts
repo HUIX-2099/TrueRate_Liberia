@@ -104,21 +104,29 @@ export async function getAggregatedRate(): Promise<{
   timestamp: string
   cblRate: number | null
   cblLastUpdated: string | null
+  cblBuying: number | null
+  cblSelling: number | null
 }> {
   const { fetchCblRateFromHomepage } = await import("@/lib/cbl-homepage")
   const { fetchCblLatestRate } = await import("@/lib/cbl-rates")
   let cblRate: number | null = null
   let cblLastUpdated: string | null = null
+  let cblBuying: number | null = null
+  let cblSelling: number | null = null
   const cblResearch = await fetchCblLatestRate()
   if (cblResearch && cblResearch.rate > 150 && cblResearch.rate < 220) {
     cblRate = Number(cblResearch.rate.toFixed(4))
     cblLastUpdated = cblResearch.lastUpdated ?? null
+    cblBuying = Number(cblResearch.buying.toFixed(4))
+    cblSelling = Number(cblResearch.selling.toFixed(4))
   }
   if (cblRate == null) {
     const cblHomepage = await fetchCblRateFromHomepage()
     if (cblHomepage && cblHomepage.rate > 150 && cblHomepage.rate < 220) {
       cblRate = Number(cblHomepage.rate.toFixed(4))
       cblLastUpdated = cblHomepage.lastUpdated ?? null
+      cblBuying = Number(cblHomepage.buying.toFixed(4))
+      cblSelling = Number(cblHomepage.selling.toFixed(4))
     }
   }
   // CBL is used only for cblRate (Official). Market rate: prefer Exchange Rate API, then fallback aggregate.
@@ -131,6 +139,8 @@ export async function getAggregatedRate(): Promise<{
       timestamp: new Date().toISOString(),
       cblRate,
       cblLastUpdated,
+      cblBuying,
+      cblSelling,
     }
   }
 
@@ -152,6 +162,8 @@ export async function getAggregatedRate(): Promise<{
       timestamp: new Date().toISOString(),
       cblRate, // Official (CBL) unchanged; only market rate is fallback
       cblLastUpdated,
+      cblBuying,
+      cblSelling,
     }
   }
 
@@ -171,6 +183,8 @@ export async function getAggregatedRate(): Promise<{
     timestamp: new Date().toISOString(),
     cblRate,
     cblLastUpdated,
+    cblBuying,
+    cblSelling,
   }
 }
 

@@ -113,6 +113,8 @@ export async function GET() {
       rate: aggregatedData.rate,
       cblRate: aggregatedData.cblRate ?? null,
       cblLastUpdated: aggregatedData.cblLastUpdated ?? null,
+      cblBuying: aggregatedData.cblBuying ?? null,
+      cblSelling: aggregatedData.cblSelling ?? null,
       official: {
         rate: aggregatedData.rate,
         confidence: aggregatedData.confidence,

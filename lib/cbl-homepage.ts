@@ -53,13 +53,12 @@ export function parseCblHomepageHtml(html: string): CblHomepageRate | null {
   }
 
   if (!Number.isFinite(buying) || !Number.isFinite(selling) || buying < 100 || selling > 300) return null
-  const buyRate = Math.min(buying, selling)
-  const sellRate = Math.max(buying, selling)
+  if (buying > selling) [buying, selling] = [selling, buying]
 
   return {
-    rate: Number(sellRate.toFixed(4)),
-    buying: buyRate,
-    selling: sellRate,
+    rate: Number(selling.toFixed(4)),
+    buying,
+    selling,
     date: dateStr,
     lastUpdated: new Date().toISOString(),
     source: "Central Bank of Liberia",

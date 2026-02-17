@@ -16,7 +16,7 @@ import { RateSourceSelector } from "@/components/rate-source-selector"
 
 export function Hero() {
   const router = useRouter()
-  const { rate, loading, sources, timestamp, cblRate, cblLastUpdated, refresh, effectiveRate } = useLiveRate()
+  const { rate, loading, sources, timestamp, cblRate, cblBuying, cblSelling, cblLastUpdated, refresh, effectiveRate } = useLiveRate()
   const [trend, setTrend] = useState<'up' | 'down' | 'stable'>('up')
   const [changePercent, setChangePercent] = useState(0.8)
   const lastUpdate = loading ? "Loading…" : timestamp ? (() => {
@@ -161,24 +161,32 @@ export function Hero() {
                 {rate != null && rate > 0 && (
                   <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm mt-3 text-muted-foreground">
                     <span><span className="font-medium text-foreground">Official (CBL):</span> {cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD{cblLastUpdated ? ` · ${(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}` : ""}</span>
-                    <span><span className="font-medium text-foreground">Market:</span> {rate.toFixed(2)} LRD/USD</span>
+                    <span><span className="font-medium text-foreground">Market:</span> {rate != null && rate > 0 ? rate.toFixed(2) : "—"} LRD/USD</span>
                   </div>
                 )}
                 <RateTip className="mt-3 justify-center" />
               </div>
 
-              {/* Buy/Sell Rates */}
+              {/* Buy/Sell Rates: when Official (CBL) selected, show CBL buying/selling; else effectiveRate ± 2 */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-2xl bg-secondary/10 p-4 text-center">
                   <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">Buy Rate</div>
                   <div className="text-2xl font-bold text-secondary">
-                    {effectiveRate ? (effectiveRate - 2).toFixed(2) : "—"}
+                    {cblBuying != null && cblRate != null && effectiveRate === cblRate
+                      ? cblBuying.toFixed(2)
+                      : effectiveRate
+                        ? (effectiveRate - 2).toFixed(2)
+                        : "—"}
                   </div>
                 </div>
                 <div className="rounded-2xl bg-destructive/10 p-4 text-center">
                   <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">Sell Rate</div>
                   <div className="text-2xl font-bold text-destructive">
-                    {effectiveRate ? (effectiveRate + 2).toFixed(2) : "—"}
+                    {(cblSelling != null && cblRate != null && effectiveRate === cblRate)
+                      ? cblSelling.toFixed(2)
+                      : effectiveRate
+                        ? (effectiveRate + 2).toFixed(2)
+                        : "—"}
                   </div>
                 </div>
               </div>

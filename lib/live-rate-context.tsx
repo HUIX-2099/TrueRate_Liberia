@@ -43,8 +43,8 @@ function readCachedRate(): number {
   }
 }
 
-function readCachedMeta(): { sources: string[]; timestamp: string; cblRate: number | null; cblLastUpdated: string | null } {
-  if (typeof window === "undefined") return { sources: [], timestamp: "", cblRate: null, cblLastUpdated: null }
+function readCachedMeta(): { sources: string[]; timestamp: string; cblRate: number | null; cblBuying: number | null; cblSelling: number | null; cblLastUpdated: string | null } {
+  if (typeof window === "undefined") return { sources: [], timestamp: "", cblRate: null, cblBuying: null, cblSelling: null, cblLastUpdated: null }
   try {
     const raw = window.localStorage.getItem(RATE_SOURCES_KEY)
     const sources: string[] = raw ? (JSON.parse(raw) as string[]) : []
@@ -56,14 +56,16 @@ function readCachedMeta(): { sources: string[]; timestamp: string; cblRate: numb
       sources: Array.isArray(sources) ? sources : [],
       timestamp,
       cblRate: cblRate != null && Number.isFinite(cblRate) ? cblRate : null,
+      cblBuying: null,
+      cblSelling: null,
       cblLastUpdated: cblLastUpdated || null,
     }
   } catch {
-    return { sources: [], timestamp: "", cblRate: null, cblLastUpdated: null }
+    return { sources: [], timestamp: "", cblRate: null, cblBuying: null, cblSelling: null, cblLastUpdated: null }
   }
 }
 
-function writeCachedRate(rate: number, meta?: { sources: string[]; timestamp: string; cblRate: number | null; cblLastUpdated?: string | null }) {
+function writeCachedRate(rate: number, meta?: { sources: string[]; timestamp: string; cblRate: number | null; cblBuying?: number | null; cblSelling?: number | null; cblLastUpdated?: string | null }) {
   if (typeof window === "undefined") return
   try {
     window.localStorage.setItem(RATE_STORAGE_KEY, rate.toString())
@@ -96,8 +98,12 @@ export interface LiveRateContextValue {
   sources: string[]
   /** ISO timestamp of last successful fetch */
   timestamp: string
-  /** CBL official rate when available (for comparison) */
+  /** CBL official (sell) rate when available (for comparison) */
   cblRate: number | null
+  /** CBL buying rate when available (for Buy/Sell display when official is selected) */
+  cblBuying: number | null
+  /** CBL selling rate when available (for Sell Rate display when official is selected) */
+  cblSelling: number | null
   /** CBL rate date from source (e.g. research page table date); ISO string when available */
   cblLastUpdated: string | null
   /** User preference: which rate to use for display and conversion */
@@ -113,10 +119,12 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
   // Use DEFAULT_RATE for initial state so server and client render the same (avoids hydration mismatch).
   // Cache is applied in useEffect after mount.
   const [rate, setRate] = useState<number>(DEFAULT_RATE)
-  const [meta, setMeta] = useState<{ sources: string[]; timestamp: string; cblRate: number | null; cblLastUpdated: string | null }>(() => ({
+  const [meta, setMeta] = useState<{ sources: string[]; timestamp: string; cblRate: number | null; cblBuying: number | null; cblSelling: number | null; cblLastUpdated: string | null }>(() => ({
     sources: [],
     timestamp: "",
     cblRate: null,
+    cblBuying: null,
+    cblSelling: null,
     cblLastUpdated: null,
   }))
   const [loading, setLoading] = useState(true)
@@ -143,12 +151,16 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
       // Official (CBL) is updated only from the CBL API so it never gets mixed with market/sources
       let cblRate: number | null = null
       let cblLastUpdated: string | null = null
+      let cblBuying: number | null = null
+      let cblSelling: number | null = null
       try {
         const cblRes = await fetch("/api/rates/cbl")
         const cblData = await cblRes.json()
         if (cblRes.ok && typeof cblData?.rate === "number" && cblData.rate > 100 && cblData.rate < 300) {
           cblRate = Number(cblData.rate.toFixed(4))
           cblLastUpdated = typeof cblData?.lastUpdated === "string" ? cblData.lastUpdated : null
+          if (typeof cblData?.buying === "number" && cblData.buying > 100 && cblData.buying < 300) cblBuying = Number(cblData.buying.toFixed(4))
+          if (typeof cblData?.selling === "number" && cblData.selling > 100 && cblData.selling < 300) cblSelling = Number(cblData.selling.toFixed(4))
         }
       } catch {
         // keep existing CBL values on CBL API failure
@@ -163,14 +175,16 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
       if (cblRate == null && typeof data?.cblRate === "number" && data.cblRate > 100 && data.cblRate < 300) {
         cblRate = data.cblRate
         cblLastUpdated = typeof data?.cblLastUpdated === "string" ? data.cblLastUpdated : null
+        if (typeof data?.cblBuying === "number") cblBuying = Number(data.cblBuying.toFixed(4))
+        if (typeof data?.cblSelling === "number") cblSelling = Number(data.cblSelling.toFixed(4))
       }
       if (r != null) {
         setRate(r)
-        const nextMeta = { sources, timestamp, cblRate, cblLastUpdated }
+        const nextMeta = { sources, timestamp, cblRate, cblBuying, cblSelling, cblLastUpdated }
         setMeta(nextMeta)
         writeCachedRate(r, nextMeta)
       } else {
-        setMeta((prev) => ({ ...prev, cblRate, cblLastUpdated }))
+        setMeta((prev) => ({ ...prev, cblRate, cblBuying, cblSelling, cblLastUpdated }))
       }
     } catch {
       // keep existing rate
@@ -194,6 +208,8 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
     sources: meta.sources,
     timestamp: meta.timestamp,
     cblRate: meta.cblRate,
+    cblBuying: meta.cblBuying,
+    cblSelling: meta.cblSelling,
     cblLastUpdated: meta.cblLastUpdated,
     rateSource,
     setRateSource,
@@ -217,6 +233,8 @@ export function useLiveRate(): LiveRateContextValue {
       sources: cached.sources,
       timestamp: cached.timestamp,
       cblRate: cached.cblRate,
+      cblBuying: null,
+      cblSelling: null,
       cblLastUpdated: cached.cblLastUpdated,
       rateSource: "market",
       setRateSource: () => {},

@@ -38,18 +38,17 @@ const fetchWithTimeout = async (url: string, init: RequestInit, timeoutMs: numbe
   }
 }
 
-/** Parse table row: Date | Buying | Selling, or rate-only row. If no date in row, use today so we still return a rate. Normalize so selling is always the higher rate. */
+/** Parse table row: Date | Buying | Selling (e.g. Monday, February 16, 2026 | L$184.9247/US$1.00 | L$186.9973/US$1.00) */
 function parseTableRow(row: string): CblHistoricalPoint | null {
+  const dateStr = parseDate(row)
+  if (!dateStr) return null
   const rateMatches = [...row.matchAll(/L\$?([\d.]+)\s*\/\s*US?\$?1\.00/gi)]
   if (rateMatches.length < 2) return null
-  const r1 = Number.parseFloat(rateMatches[0][1])
-  const r2 = Number.parseFloat(rateMatches[1][1])
-  if (!Number.isFinite(r1) || !Number.isFinite(r2) || r1 < 100 || r2 > 300) return null
-  const buying = Math.min(r1, r2)
-  const selling = Math.max(r1, r2)
+  const buying = Number.parseFloat(rateMatches[0][1])
+  const selling = Number.parseFloat(rateMatches[1][1])
+  if (!Number.isFinite(buying) || !Number.isFinite(selling) || buying < 100 || selling > 300) return null
   const rate = Number(((buying + selling) / 2).toFixed(4))
-  const useDate = parseDate(row) || new Date().toISOString().slice(0, 10)
-  return { date: useDate, rate, buying, selling }
+  return { date: dateStr, rate, buying, selling }
 }
 
 function parseCblHtml(html: string): CblHistoricalPoint[] {
@@ -71,33 +70,16 @@ function parseCblHtml(html: string): CblHistoricalPoint[] {
     const dateStr = parseDate(line)
     if (!dateStr) continue
     const nextLine = lines[i + 1] ?? ""
-    const rateMatches = [...nextLine.matchAll(/L\$?([\d.]+)\s*\/\s*US\$1\.00/g)]
-    if (!rateMatches || rateMatches.length < 2) continue
-    const r1 = Number.parseFloat(rateMatches[0][1])
-    const r2 = Number.parseFloat(rateMatches[1][1])
-    if (Number.isNaN(r1) || Number.isNaN(r2)) continue
-    const buying = Math.min(r1, r2)
-    const selling = Math.max(r1, r2)
-    if (buying < 100 || selling > 300) continue
+    const buyMatch = nextLine.match(/L\$?([\d.]+)\s*\/\s*US\$1\.00/)
+    const sellMatches = nextLine.match(/L\$?([\d.]+)\s*\/\s*US\$1\.00/g)
+    if (!buyMatch || !sellMatches || sellMatches.length < 2) continue
+    const buying = Number.parseFloat(buyMatch[1])
+    const sellStr = sellMatches[1] ?? ""
+    const sellNum = sellStr.match(/[\d.]+/)?.[0]
+    const selling = sellNum ? Number.parseFloat(sellNum) : buying + 2
+    if (Number.isNaN(buying) || Number.isNaN(selling)) continue
     const mid = (buying + selling) / 2
     points.push({ date: dateStr, rate: Number(mid.toFixed(4)), buying, selling })
-  }
-
-  if (points.length === 0) {
-    const rateRowRegex = /L\$?([\d.]+)\s*\/\s*US?\$?1\.00[\s\S]*?L\$?([\d.]+)\s*\/\s*US?\$?1\.00/gi
-    let rateRow: RegExpExecArray | null
-    while ((rateRow = rateRowRegex.exec(normalized)) !== null) {
-      const r1 = Number.parseFloat(rateRow[1])
-      const r2 = Number.parseFloat(rateRow[2])
-      if (!Number.isFinite(r1) || !Number.isFinite(r2) || r1 < 100 || r2 > 300) continue
-      const buying = Math.min(r1, r2)
-      const selling = Math.max(r1, r2)
-      const today = new Date().toISOString().slice(0, 10)
-      if (!points.some((p) => p.date === today)) {
-        points.push({ date: today, rate: Number(((buying + selling) / 2).toFixed(4)), buying, selling })
-        break
-      }
-    }
   }
   return points
 }

@@ -24037,3 +24037,999 @@ https://react.dev/link/hydration-mismatch
 [36:16:25.758] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
 [36:16:25.769] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
 [36:16:25.775] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:19.293] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:19.304] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:19.318] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:23.298] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:23.308] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:23.351] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:23.977] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:17:24.145] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:24.151] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:24.543] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:17:24.543] Browser LOG     Header render time: 2.30ms
+[36:17:24.543] Browser LOG     Header render time: 44.10ms
+[36:17:24.543] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:17:24.543] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:17:24.543] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:17:24.543] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361677154}
+[36:17:24.543] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361677154}
+[36:17:24.591] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:24.603] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:26.431] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:26.452] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:26.465] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:17:26.476] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:03.054] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:18:03.219] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:03.234] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:03.438] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:18:03.438] Browser LOG     Header render time: 2.40ms
+[36:18:03.438] Browser LOG     Header render time: 51.60ms
+[36:18:03.438] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:18:03.438] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:18:03.438] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:18:03.438] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361716224}
+[36:18:03.438] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361716224}
+[36:18:03.474] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:03.489] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:05.293] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:05.321] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:05.333] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:05.345] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:13.743] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:18:13.924] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:13.942] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:14.162] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:18:14.162] Browser LOG     Header render time: 4.70ms
+[36:18:14.162] Browser LOG     Header render time: 52.60ms
+[36:18:14.162] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:18:14.162] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:18:14.162] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:18:14.162] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361726976}
+[36:18:14.162] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361726976}
+[36:18:14.204] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:14.209] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:16.842] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:16.869] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:16.880] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:16.890] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:17.915] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:18:18.057] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:18.064] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:18.305] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:18:18.305] Browser LOG     Header render time: 2.20ms
+[36:18:18.305] Browser LOG     Header render time: 68.20ms
+[36:18:18.305] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:18:18.305] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:18:18.305] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:18:18.305] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361731085}
+[36:18:18.305] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361731085}
+[36:18:18.338] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:18.364] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:19.188] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:19.208] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:19.258] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:18:19.268] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:03.246] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:03.273] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:03.307] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:18.073] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:18.087] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:18.137] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:26.241] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:19:26.450] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:26.508] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:26.837] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:19:26.837] Browser LOG     Header render time: 13.00ms
+[36:19:26.837] Browser LOG     Header render time: 71.90ms
+[36:19:26.837] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:19:26.837] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:19:26.837] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:19:26.837] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361799463}
+[36:19:26.837] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361799463}
+[36:19:26.843] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:26.849] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:28.668] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:28.702] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:28.716] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:19:28.723] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:06.353] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:20:06.539] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:06.553] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:06.774] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:20:06.774] Browser LOG     Header render time: 2.50ms
+[36:20:06.774] Browser LOG     Header render time: 50.30ms
+[36:20:06.774] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:20:06.774] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:20:06.774] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:20:06.774] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361839541}
+[36:20:06.774] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771361839541}
+[36:20:06.806] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:06.816] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:08.706] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:08.725] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:08.738] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:08.746] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:18.076] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:18.091] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:20:18.145] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:21:06.593] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:21:06.618] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:21:06.645] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:21:18.208] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:21:18.335] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:21:18.365] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:22:06.638] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:22:06.654] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:22:06.684] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:22:18.192] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:22:18.220] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:22:18.249] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:04.668] Server  LOG     ✓ Compiled in 216ms
+[36:23:06.748] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:07.011] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:07.025] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:18.292] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:18.357] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:18.396] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:43.104] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:23:43.288] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:43.604] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:43.666] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:23:43.666] Browser LOG     Header render time: 2.70ms
+[36:23:43.666] Browser LOG     Header render time: 64.70ms
+[36:23:43.666] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:23:43.666] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:23:43.666] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:23:43.666] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362056295}
+[36:23:43.666] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362056295}
+[36:23:45.989] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:46.598] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:47.435] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:47.474] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:47.493] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:23:47.528] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:24:18.152] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:24:18.165] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:24:18.195] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:24:43.321] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:24:43.341] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:24:43.376] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:25:18.136] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:25:18.153] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:25:18.271] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:25:43.395] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:25:43.418] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:25:43.489] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:26:18.118] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:26:18.223] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:26:18.265] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:26:43.682] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:26:43.839] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:26:43.913] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:18.109] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:18.234] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:18.272] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:25.037] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:27:25.687] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:25.697] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:26.052] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:27:26.052] Browser LOG     Header render time: 3.50ms
+[36:27:26.052] Browser LOG     Header render time: 17.30ms
+[36:27:26.052] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:27:26.052] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:27:26.052] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:27:26.052] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362278495}
+[36:27:26.052] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362278495}
+[36:27:26.115] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:26.127] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:28.322] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:28.348] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:28.361] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:27:28.401] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:28:18.149] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:28:18.172] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:28:18.203] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:28:25.526] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:28:25.551] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:28:25.590] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:29:18.171] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:29:18.189] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:29:18.331] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:29:25.592] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:29:25.700] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:29:25.729] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:18.471] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:18.564] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:18.642] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:25.625] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:25.658] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:25.702] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:45.828] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:30:46.003] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:46.326] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:46.340] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:30:46.340] Browser LOG     Header render time: 2.50ms
+[36:30:46.340] Browser LOG     Header render time: 54.90ms
+[36:30:46.340] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:30:46.340] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:30:46.340] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:30:46.340] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362479005}
+[36:30:46.340] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362479005}
+[36:30:46.406] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:46.610] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:48.168] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:48.196] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:48.207] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:30:48.225] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:18.183] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:18.211] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:18.239] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:46.039] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:46.061] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:46.164] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:53.310] Server  LOG     ✓ Compiled in 246ms
+[36:31:53.544] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:53.614] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:53.676] Browser LOG     Header render time: 67348.20ms
+[36:31:53.677] Browser LOG     Header render time: 1.60ms
+[36:31:53.677] Browser LOG     Header render time: 815316.10ms
+[36:31:53.677] Browser LOG     Header render time: 2.90ms
+[36:31:53.689] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:54.974] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:54.991] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.005] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.020] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.040] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.090] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.476] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.585] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.600] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.605] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:31:55.756] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.136] Server  LOG     ✓ Compiled in 96ms
+[36:32:01.344] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.384] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.390] Browser LOG     Header render time: 7753.30ms
+[36:32:01.390] Browser LOG     Header render time: 2.00ms
+[36:32:01.390] Browser LOG     Header render time: 7805.60ms
+[36:32:01.390] Browser LOG     Header render time: 2.80ms
+[36:32:01.401] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.654] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.667] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.673] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.688] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.695] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:01.705] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:02.050] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:02.071] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:02.134] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:02.242] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:02.248] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.056] Server  LOG     ✓ Compiled in 90ms
+[36:32:04.180] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.271] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.281] Browser LOG     Header render time: 2896.90ms
+[36:32:04.282] Browser LOG     Header render time: 2906.30ms
+[36:32:04.296] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.307] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.314] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.324] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.779] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:04.794] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.050] Server  LOG     ✓ Compiled in 126ms
+[36:32:10.231] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.251] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.261] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.267] Browser LOG     Header render time: 5986.30ms
+[36:32:10.267] Browser LOG     Header render time: 3.20ms
+[36:32:10.267] Browser LOG     Header render time: 5995.00ms
+[36:32:10.267] Browser LOG     Header render time: 2.30ms
+[36:32:10.574] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.593] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.601] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.608] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.618] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:10.629] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:11.967] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:12.089] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:12.107] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:12.115] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:12.252] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:16.461] Server  LOG     ✓ Compiled in 94ms
+[36:32:16.575] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:16.666] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:16.676] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:16.706] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:16.973] Browser LOG     Header render time: 6410.30ms
+[36:32:16.973] Browser LOG     Header render time: 1.60ms
+[36:32:16.973] Browser LOG     Header render time: 6407.20ms
+[36:32:16.973] Browser LOG     Header render time: 2.30ms
+[36:32:17.099] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.148] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.157] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.175] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.188] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.483] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.515] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.525] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.536] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:17.677] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:21.370] Server  LOG     ✓ Compiled in 76ms
+[36:32:21.484] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:21.606] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:21.615] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:21.634] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:21.644] Browser LOG     Header render time: 4893.90ms
+[36:32:21.644] Browser LOG     Header render time: 1.30ms
+[36:32:21.645] Browser LOG     Header render time: 4890.90ms
+[36:32:21.645] Browser LOG     Header render time: 1.60ms
+[36:32:21.903] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:21.980] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:21.987] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:22.002] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:22.008] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:22.256] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:22.263] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:22.278] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:22.290] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:22.403] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:24.707] Server  LOG     ✓ Compiled in 173ms
+[36:32:24.777] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:24.814] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:24.888] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:24.895] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.095] Browser LOG     Header render time: 3308.40ms
+[36:32:25.095] Browser LOG     Header render time: 3.40ms
+[36:32:25.096] Browser LOG     Header render time: 3306.40ms
+[36:32:25.096] Browser LOG     Header render time: 2.90ms
+[36:32:25.102] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.224] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.229] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.256] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.262] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.540] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.555] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.565] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.575] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:32:25.677] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:33:01.170] Server  LOG     ✓ Compiled in 100ms
+[36:33:08.329] Server  LOG     ✓ Compiled in 90ms
+[36:33:24.956] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:33:25.026] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:33:25.126] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:33:25.136] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:33:25.143] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:33:25.156] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:34:24.915] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:34:24.932] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:34:24.953] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:34:24.966] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:34:24.975] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:34:25.080] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:35:24.907] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:35:24.956] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:35:24.989] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:35:25.008] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:35:25.019] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:35:25.035] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:36:24.933] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:36:24.968] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:36:24.996] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:36:25.003] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:36:25.016] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:36:25.026] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:37:24.909] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:37:24.941] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:37:24.972] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:37:24.984] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:37:24.994] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:37:25.043] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:38:25.036] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:38:25.099] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:38:25.166] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:38:25.177] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:38:25.199] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:38:25.206] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:38:41.989] Server  LOG     ✓ Compiled in 163ms
+[36:39:23.347] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:39:23.524] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:23.954] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:23.956] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:39:23.956] Browser LOG     Header render time: 5.40ms
+[36:39:23.956] Browser LOG     Header render time: 62.20ms
+[36:39:23.956] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:39:23.956] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:39:23.956] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:39:23.956] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362996506}
+[36:39:23.956] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771362996506}
+[36:39:24.064] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:24.185] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:24.384] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[36:39:24.458] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[36:39:24.767] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:24.809] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:24.848] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:26.451] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:26.473] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:26.487] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:26.499] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:32.715] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:39:32.948] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:32.960] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:33.169] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:39:33.169] Browser LOG     Header render time: 2.20ms
+[36:39:33.169] Browser LOG     Header render time: 45.20ms
+[36:39:33.169] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:39:33.169] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:39:33.169] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:39:33.169] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771363005966}
+[36:39:33.169] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771363005966}
+[36:39:33.205] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:33.209] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:33.467] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[36:39:34.381] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[36:39:36.730] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:36.756] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:36.769] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:36.786] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:38.288] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[36:39:38.476] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:38.493] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:38.727] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1">
+              <Hero>
+                <section className="relative o...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid gap-1...">
+                      <div>
+                      <div className="relative l...">
+                        <div className="relative r...">
+                          <div>
+                          <div className="text-cente...">
+                            <div>
+                            <div>
+                            <div>
+                            <RateTip className="mt-3 justi...">
+                              <p className="text-xs te..." role="note">
+                                <Lightbulb>
+                                <span>
++                                 Market rate is what changers actually trade; we show it alongside the CBL official rate.
+-                                 A stronger LRD means you need fewer LRD to buy 1 USD.
+                          ...
+                        ...
+                  ...
+              ...
+            ...
+    ...
+
+[36:39:38.727] Browser LOG     Header render time: 3.00ms
+[36:39:38.727] Browser LOG     Header render time: 70.20ms
+[36:39:38.727] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[36:39:38.727] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:39:38.727] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[36:39:38.727] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771363011547}
+[36:39:38.727] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771363011547}
+[36:39:38.766] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:38.771] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:39.041] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[36:39:39.142] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[36:39:41.951] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:41.991] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:42.004] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[36:39:42.022] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
