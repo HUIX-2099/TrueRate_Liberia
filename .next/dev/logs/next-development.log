@@ -30432,3 +30432,101 @@ https://react.dev/link/hydration-mismatch
 [36:59:47.376] Browser ERROR   Route error: {"digest":"1263003388","environmentName":"Server","name":"TypeError"}
 [36:59:47.376] Browser ERROR   Route error: {"digest":"1263003388","environmentName":"Server","name":"TypeError"}
 [36:59:48.245] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:00:20.305] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:00:20.319] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:00:20.423] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:00:46.021] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:01:20.382] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:01:20.402] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:01:22.064] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:01:46.027] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:02:20.331] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:02:20.349] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:02:20.376] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:02:47.468] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:03:20.386] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:03:20.402] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:03:20.429] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:03:46.047] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:20.364] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:20.386] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:21.690] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:41.215] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:41.242] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:41.270] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:41.282] Browser LOG     Header render time: 320790.30ms
+[37:04:41.282] Browser LOG     Header render time: 2.60ms
+[37:04:41.282] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:3000/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771364514018}
+[37:04:41.290] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:41.434] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:41.443] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:45.571] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[37:04:45.571] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[37:04:45.969] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:56.291] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:56.310] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:56.320] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:56.622] Browser LOG     Header render time: 15129.20ms
+[37:04:56.622] Browser LOG     Header render time: 1.70ms
+[37:04:56.622] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771364529150}
+[37:04:56.671] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:57.044] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[37:04:57.115] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[37:04:57.125] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:04:57.132] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:05:02.372] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:05:02.508] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[37:05:02.619] Server  ERROR   ⨯ TypeError: fetch failed
+[37:05:02.765] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[37:05:02.766] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/liberia-market","route":"/liberia-market"}
+[37:05:02.766] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/liberia-market color: rgb(120, 120, 120) color: inherit {"dp":"/liberia-market","o":"http://localhost:3000/liberia-market","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771364535452}
+[37:05:02.766] Browser ERROR   Route error: {"digest":"1263003388","environmentName":"Server","name":"TypeError"}
+[37:05:02.766] Browser ERROR   Route error: {"digest":"1263003388","environmentName":"Server","name":"TypeError"}
+[37:05:05.165] Server  ERROR   ⨯ TypeError: fetch failed
+[37:05:20.305] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:05:56.362] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:05:56.390] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:06:03.262] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:06:20.277] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:06:57.320] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:06:57.335] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:07:03.257] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:07:21.256] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:07:56.333] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:07:56.366] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:08:05.373] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:08:20.276] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:08:56.359] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:08:56.375] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:09:03.264] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:09:22.068] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:09:56.397] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:09:56.419] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:10:03.259] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:10:20.269] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:10:56.405] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:10:56.426] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:11:03.353] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:11:21.336] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:11:56.409] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:11:56.424] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:12:20.887] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:12:21.898] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:12:56.403] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:12:56.424] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:13:05.800] Server  LOG     ✓ Compiled in 298ms
+[37:13:14.179] Server  LOG     ✓ Compiled in 175ms
+[37:13:19.348] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:13:20.268] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:13:24.708] Server  LOG     ✓ Compiled in 114ms
+[37:13:26.847] Server  LOG     ✓ Compiled in 155ms
+[37:13:56.414] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:13:56.433] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:14:19.340] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:14:20.266] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
