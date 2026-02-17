@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2, Database, Globe, Building2, Users, TrendingUp, Shield } from "lucide-react"
+import { CheckCircle2, Database, Globe, Building2, Users, TrendingUp, Shield, Link2, BookOpen } from "lucide-react"
 
 export default function DocsPage() {
   return (
@@ -28,6 +28,89 @@ export default function DocsPage() {
                 TrueRate Liberia aggregates exchange rate data from international financial APIs, verified money
                 changers, and community reports to provide the most accurate rates in Liberia.
               </p>
+              <p className="text-sm text-muted-foreground mt-4">
+                <a href="#cbl-and-market" className="text-primary hover:underline font-medium">How TrueRate relates to the Central Bank of Liberia</a>
+                {" "}&middot;{" "}
+                <a href="#cbl-and-market" className="text-primary hover:underline font-medium">Why market and official rates differ</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Institutional & narrative alignment: CBL, market, TrueRate as bridge */}
+        <section id="cbl-and-market" className="py-12 sm:py-14 md:py-16 bg-muted/30 scroll-mt-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                  <Badge variant="outline">Institutional alignment</Badge>
+                  <Badge className="bg-primary/10 text-primary">CBL & market</Badge>
+                  <Badge variant="secondary">Transparent LRD</Badge>
+                </div>
+                <h2 className="text-3xl font-bold text-balance">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                    Official rate, market rate, and TrueRate
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+                  TrueRate is the bridge between the Central Bank of Liberia (official) and the street (market). When both are visible, the LRD is seen as a real, monitored national currency—with an official definition and a transparent market.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
+                  <CardHeader>
+                    <div className="flex items-center gap-2">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Building2 className="h-5 w-5 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg">How TrueRate&apos;s rate relates to the Central Bank of Liberia</CardTitle>
+                    </div>
+                    <CardDescription>Institutional clarity</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3 text-sm text-muted-foreground">
+                    <p>
+                      The <strong className="text-foreground">Central Bank of Liberia (CBL)</strong> publishes an official USD/LRD rate—the rate at which the Bank and many formal institutions define the dollar. That rate is the LRD&apos;s official reference.
+                    </p>
+                    <p>
+                      <strong className="text-foreground">TrueRate</strong> does not replace the CBL rate. We show it next to our composite &quot;market&quot; rate wherever we have it. Our composite rate comes from licensed changers, international APIs, and verified community reports—so it reflects what people actually get when they exchange on the street or at bureaus.
+                    </p>
+                    <p>
+                      By showing both, we position TrueRate as the <strong className="text-foreground">bridge</strong>: you see the official definition (CBL) and the transparent market (TrueRate) in one place. The Liberian dollar is a real, monitored currency—with a clear official anchor and visible market reality.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-secondary/20 bg-gradient-to-br from-secondary/5 to-card shadow-sm">
+                  <CardHeader>
+                    <div className="flex items-center gap-2">
+                      <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                        <BookOpen className="h-5 w-5 text-secondary" />
+                      </div>
+                      <CardTitle className="text-lg">Why market and official rates differ</CardTitle>
+                    </div>
+                    <CardDescription>No spin—just clarity</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3 text-sm text-muted-foreground">
+                    <p>
+                      The <strong className="text-foreground">official (CBL) rate</strong> is set by the Central Bank for policy, reserves, and formal reporting. It may be updated on a fixed schedule and can lag behind day-to-day demand and supply.
+                    </p>
+                    <p>
+                      The <strong className="text-foreground">market (street) rate</strong> is what changers and bureaus actually trade. It moves with supply and demand for USD, seasonal flows, and local conditions. So the two rates often differ—sometimes by a little, sometimes more.
+                    </p>
+                    <p>
+                      We show both so you see the full picture. The &quot;spread&quot; between them is not hidden: it&apos;s the gap between official definition and real-world exchange. That transparency supports trust—and reinforces that the LRD is measurable, understandable, and worth taking seriously.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+                <Badge variant="outline" className="gap-1">
+                  <Link2 className="h-3 w-3" />
+                  TrueRate = bridge between CBL (official) and street (market)
+                </Badge>
+              </div>
             </div>
           </div>
         </section>
@@ -218,6 +301,35 @@ export default function DocsPage() {
                         <CheckCircle2 className="h-4 w-4 text-secondary" />+ 16 more providers
                       </li>
                     </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-blue-500/20 bg-gradient-to-br from-blue-500/5 to-card shadow-sm hover:shadow-md transition-all">
+                  <CardHeader className="pb-4">
+                    <div className="h-12 w-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-3">
+                      <Building2 className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <CardTitle className="text-blue-600">Central Bank of Liberia (CBL)</CardTitle>
+                    <CardDescription className="text-blue-600/70">Official rate</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-secondary" />
+                        Official USD/LRD reference rate
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-secondary" />
+                        Shown alongside our market rate
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-secondary" />
+                        TrueRate = bridge (official + market)
+                      </li>
+                    </ul>
+                    <p className="text-xs text-muted-foreground mt-3">
+                      <a href="#cbl-and-market" className="text-primary hover:underline">How we relate to CBL →</a>
+                    </p>
                   </CardContent>
                 </Card>
               </div>

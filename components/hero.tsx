@@ -11,6 +11,7 @@ import { RateSourceAttribution } from "@/components/rate-source-attribution"
 import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
 import { StaleRateWarning } from "@/components/stale-rate-warning"
 import { RateChangeAnimation } from "@/components/rate-change-animation"
+import { RateTip } from "@/components/rate-tip"
 
 export function Hero() {
   const router = useRouter()
@@ -153,6 +154,7 @@ export function Hero() {
                   </RateChangeAnimation>
                 </div>
                 <div className="text-lg text-muted-foreground mt-2">LRD per 1 USD</div>
+                <RateTip className="mt-3 justify-center" />
               </div>
 
               {/* Buy/Sell Rates */}

@@ -58,7 +58,7 @@ export function GamificationProfile() {
       {
         id: 'fraud-fighter',
         name: t('badge.fraudFighter'),
-        description: 'Report 5 verified fraud cases',
+        description: 'Report 5 verified fraud cases—help others avoid getting cheated',
         icon: <Shield className="h-5 w-5 text-destructive" />,
         earned: true,
         earnedDate: '2024-03-01',

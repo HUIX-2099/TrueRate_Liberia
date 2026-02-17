@@ -47,6 +47,8 @@ import { OfflineBanner } from "@/components/offline-banner"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { RateChangeAnimation } from "@/components/rate-change-animation"
 import { RateBrief } from "@/components/rate-brief"
+import { PlanInLRD } from "@/components/plan-in-lrd"
+import { RateTip } from "@/components/rate-tip"
 
 // Multi-currency support
 const currencies = [
@@ -357,6 +359,7 @@ const ConverterPageComponent = () => {
                             className="mt-1"
                           />
                           <RateBrief variant="inline" className="mt-1 block" />
+                          <RateTip className="mt-2" />
                         </>
                       )}
                     </div>
@@ -447,7 +450,7 @@ const ConverterPageComponent = () => {
 
                 {/* To Currency */}
                 <div className="space-y-3 mb-6">
-                  <Label className="text-sm font-medium">You Get</Label>
+                  <Label className="text-sm font-medium">{toCurrency === "LRD" ? "Amount in LRD" : "You Get"}</Label>
                   <div className="flex flex-col sm:flex-row gap-2">
                     <select
                       value={toCurrency}
@@ -469,6 +472,16 @@ const ConverterPageComponent = () => {
                       </div>
                     </div>
                   </div>
+                  {fromCurrency === "USD" && toCurrency === "LRD" && result && !Number.isNaN(parseFloat(result)) && (
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Your {parseFloat(amount) || 0} USD is worth {toC.symbol}{parseFloat(result).toLocaleString()} today.
+                    </p>
+                  )}
+                  {fromCurrency === "LRD" && toCurrency === "USD" && result && !Number.isNaN(parseFloat(result)) && (
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Your {parseFloat(amount) || 0} LRD is worth {toC.symbol}{parseFloat(result).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} USD today.
+                    </p>
+                  )}
           </div>
 
                 {/* Action Buttons */}
@@ -544,6 +557,9 @@ const ConverterPageComponent = () => {
 
               <TabsContent value="tools" className="space-y-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {/* Plan in LRD */}
+                  <PlanInLRD rate={isLiveRateReady ? liveRateValue : null} />
+
                   {/* Business Calculator */}
                   <Card className="group border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-lg transition-all">
                     <CardHeader className="pb-3">
@@ -673,7 +689,7 @@ const ConverterPageComponent = () => {
                         <Sparkles className="h-7 w-7 text-amber-600" />
                       </div>
                       <CardTitle className="text-lg text-amber-600">Price Index</CardTitle>
-                      <CardDescription>Common goods prices in USD & LRD</CardDescription>
+                      <CardDescription>Prices in LRD (with USD equivalent)</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <Tabs value={priceIndexCategory} onValueChange={setPriceIndexCategory} className="w-full">
@@ -693,7 +709,7 @@ const ConverterPageComponent = () => {
                                 <div key={item.name} className="flex justify-between text-sm">
                                   <span className="text-muted-foreground">{item.name}</span>
                                   <span className="font-medium">
-                                    ${item.priceUSD.toFixed(1)} / {item.priceLRD.toLocaleString()} LRD
+                                    L${item.priceLRD.toLocaleString()} <span className="text-muted-foreground font-normal">(≈ ${item.priceUSD.toFixed(1)})</span>
                                   </span>
                                 </div>
                               ))}
@@ -1003,7 +1019,7 @@ const ConverterPageComponent = () => {
               </span>
             </h2>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto text-sm sm:text-base">
-              Get notified when the rate hits your target. Never miss a good exchange opportunity.
+              Plan in LRD: need a target amount? We&apos;ll tell you how much to send at today&apos;s rate and alert you if the rate moves so you can send at a better time. Less at the mercy of the rate—more stability for using LRD.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/business">

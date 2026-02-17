@@ -399,7 +399,7 @@ export default function MapPage() {
                 <CardHeader>
                   <CardTitle className="text-lg">Rate at this spot</CardTitle>
                   <CardDescription>
-                    See a rate here? Report it so others can see. Your location is used when available.
+                    Report the rate at this spot so others can see. Report wrong or fake rates so others don&apos;t get cheated. Your location is used when available.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

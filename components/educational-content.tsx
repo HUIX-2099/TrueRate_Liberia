@@ -75,7 +75,7 @@ const lessons = [
       {
         title: "Understanding street vs official rates",
         content:
-          "The 'street rate' from money changers often differs from official banking rates. Street rates reflect real market supply and demand, while official rates may be controlled. Most everyday transactions use street rates, which is why TrueRate-Liberia focuses on actual market prices.",
+          "The Central Bank of Liberia (CBL) publishes the official USD/LRD rate—the LRD's official definition. The 'street' or market rate is what changers and bureaus actually trade; it reflects supply and demand and often differs from the CBL rate. TrueRate shows both: we are the bridge between official (CBL) and market (street), so you see the full picture. When both are visible, the LRD is seen as a real, monitored currency—with an official anchor and a transparent market.",
         duration: "3 min read",
       },
     ],

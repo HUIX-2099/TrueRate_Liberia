@@ -228,7 +228,7 @@ export function MarketLeaderboard({ maxItems }: MarketLeaderboardProps) {
               Top Best Rates in Monrovia
             </CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              Updated every 15 minutes • {leaderboard.length} verified changers • Community reports strengthen rankings
+              Updated every 15 minutes • {leaderboard.length} verified changers • Report bad rates or fraud so others don&apos;t get cheated—trust in the system helps everyone use LRD with confidence
             </CardDescription>
           </div>
           <Badge variant="outline" className="gap-1 w-fit text-[11px] sm:text-xs">

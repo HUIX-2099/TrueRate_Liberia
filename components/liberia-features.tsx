@@ -142,7 +142,7 @@ export function PriceIndex({ rate }: { rate: number }) {
               Liberia Price Index
             </CardTitle>
             <CardDescription>
-              Prices of essential goods • Source:{" "}
+              Prices in LRD — essential goods • Source:{" "}
               <a
                 href="https://lisgis.gov.lr/pricestats.php"
                 target="_blank"
@@ -205,12 +205,12 @@ export function PriceIndex({ rate }: { rate: number }) {
                     <div className="min-w-0">
                       <div className="font-medium text-sm sm:text-base truncate">{item.name}</div>
                       <div className="text-xs text-muted-foreground">
-                        ${item.priceUSD.toFixed(2)} USD
+                        L${item.priceLRD.toLocaleString()} LRD <span className="text-muted-foreground/80">(≈ ${item.priceUSD.toFixed(2)} USD)</span>
                       </div>
                     </div>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="font-bold text-sm sm:text-base">{item.priceLRD.toLocaleString()} LRD</div>
+                    <div className="font-bold text-sm sm:text-base">L${item.priceLRD.toLocaleString()}</div>
                     <div className={`text-[11px] sm:text-xs flex items-center gap-1 justify-end ${
                       item.change > 0 ? "text-red-500" : item.change < 0 ? "text-green-500" : "text-muted-foreground"
                     }`}>

@@ -9,6 +9,7 @@ import { Calculator, DollarSign, PiggyBank, TrendingUp, ArrowRight, Smartphone }
 import Link from "next/link"
 import { SMSAlertSignup } from "@/components/liberia-features"
 import { PushNotifications } from "@/components/push-notifications"
+import { PlanInLRD } from "@/components/plan-in-lrd"
 import { useState } from "react"
 import { useLiveRate } from "@/lib/live-rate-context"
 
@@ -64,6 +65,8 @@ export default function ToolsPage() {
               </p>
             </div>
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+              <PlanInLRD rate={liveRate ?? undefined} />
+
               <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between">
@@ -256,8 +259,11 @@ export default function ToolsPage() {
                 </span>
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base">
-                Get notified when the rate hits your target—even without internet access.
+                Plan in LRD: need a target amount? See how much to send at today&apos;s rate, then get alerted when the rate moves so you can send at a better time. Less at the mercy of the rate—more stability for using LRD.
               </p>
+            </div>
+            <div className="max-w-xl mx-auto mb-6">
+              <PlanInLRD compact />
             </div>
             <div className="max-w-xl mx-auto mb-8">
               <SMSAlertSignup />

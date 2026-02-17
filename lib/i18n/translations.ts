@@ -43,6 +43,13 @@ export const translations: Record<Language, Record<string, string>> = {
     'rateBrief.footer': 'LRD is measurable and understandable. We show both official and market rates so you see the full picture.',
     'rateBrief.thisWeekUp': 'This week the rate is up {pct}% vs last week.',
     'rateBrief.thisWeekDown': 'This week the rate is down {pct}% vs last week.',
+
+    // One-line rate tips (education near converter/rate)
+    'rateTip.strongerLrd': 'A stronger LRD means you need fewer LRD to buy 1 USD.',
+    'rateTip.rateMeaning': 'The rate is how many LRD you need for 1 USD—lower number means LRD is stronger.',
+    'rateTip.marketVsOfficial': 'Market rate is what changers actually trade; we show it alongside the CBL official rate.',
+    'rateTip.oneNumber': 'One number, many uses: the same rate helps you convert, plan, and compare.',
+    'rateTip.planWithLrd': 'Planning in LRD is easier when you know the rate—you can budget and hedge with confidence.',
     
     // Best Rate Widget
     'widget.bestRate': "Today's Best Rate",
@@ -216,7 +223,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'rateBrief.footer': 'LRD you can measure. We show official and market so you see.',
     'rateBrief.thisWeekUp': 'This week rate up {pct}% from last week.',
     'rateBrief.thisWeekDown': 'This week rate down {pct}% from last week.',
-    
+    'rateTip.strongerLrd': 'When LRD strong, you pay less LRD for 1 dollar.',
+    'rateTip.rateMeaning': 'Rate = how much LRD for 1 USD. Small number = LRD strong.',
+    'rateTip.marketVsOfficial': 'Market rate what changer use; we show CBL official too.',
+    'rateTip.oneNumber': 'Same rate for convert, plan, compare.',
+    'rateTip.planWithLrd': 'When you know the rate you can plan in LRD with confidence.',
     'widget.bestRate': 'Best Rate Today-O!',
     'widget.nearestChanger': 'Money Man Near You',
     'widget.distance': 'minute from you',
@@ -372,7 +383,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'rateBrief.footer': 'Le LRD est mesurable. Nous montrons taux officiel et marché pour la transparence.',
     'rateBrief.thisWeekUp': 'Cette semaine le taux est en hausse de {pct}% vs la semaine dernière.',
     'rateBrief.thisWeekDown': 'Cette semaine le taux est en baisse de {pct}% vs la semaine dernière.',
-    
+    'rateTip.strongerLrd': 'Un LRD plus fort signifie qu\'il faut moins de LRD pour acheter 1 USD.',
+    'rateTip.rateMeaning': 'Le taux = combien de LRD pour 1 USD — plus bas = LRD plus fort.',
+    'rateTip.marketVsOfficial': 'Le taux marché est ce que les changeurs pratiquent ; on l\'affiche avec le taux officiel CBL.',
+    'rateTip.oneNumber': 'Un seul nombre pour convertir, planifier et comparer.',
+    'rateTip.planWithLrd': 'Planifier en LRD est plus simple quand on connaît le taux.',
     'widget.bestRate': 'Meilleur Taux du Jour',
     'widget.nearestChanger': 'Bureau de Change le Plus Proche',
     'widget.distance': 'minutes de vous',
@@ -529,6 +544,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'rateBrief.footer': 'LRD is measurable. We show official and market rates.',
     'rateBrief.thisWeekUp': 'This week rate up {pct}% vs last week.',
     'rateBrief.thisWeekDown': 'This week rate down {pct}% vs last week.',
+    'rateTip.strongerLrd': 'A stronger LRD means you need fewer LRD to buy 1 USD.',
+    'rateTip.rateMeaning': 'The rate is how many LRD for 1 USD—lower means LRD stronger.',
+    'rateTip.marketVsOfficial': 'Market rate is what changers trade; we show CBL official too.',
+    'rateTip.oneNumber': 'One number for convert, plan, compare.',
+    'rateTip.planWithLrd': 'Knowing the rate helps you plan in LRD with confidence.',
     'simple.mode': 'Laa-kaa Tɔɔ',
     'simple.currentRate': 'Dɔla Kpalai',
     'simple.tapForVoice': 'Gɛɛ ma woo',

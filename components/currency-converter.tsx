@@ -167,11 +167,21 @@ export function CurrencyConverter() {
             </span>
           </div>
           <div className="flex justify-between">
-            <span>Resulting amount</span>
+            <span>{activeInput === "usd" ? "Amount in LRD" : "Amount in USD"}</span>
             <span className="font-medium text-foreground">
               {activeInput === "usd" ? `L$${lrdAmount || "0.00"}` : `$${usdAmount || "0.00"}`}
             </span>
           </div>
+          {activeInput === "usd" && usdAmount && lrdAmount && currentRate > 0 && (
+            <p className="text-xs pt-1 border-t border-border/60 mt-1">
+              Your ${parseFloat(usdAmount) || 0} USD is worth L${(parseFloat(lrdAmount) || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })} today.
+            </p>
+          )}
+          {activeInput === "lrd" && lrdAmount && usdAmount && currentRate > 0 && (
+            <p className="text-xs pt-1 border-t border-border/60 mt-1">
+              Your L${(parseFloat(lrdAmount) || 0).toLocaleString()} LRD is worth ${parseFloat(usdAmount)?.toFixed(2) || "0.00"} USD today.
+            </p>
+          )}
         </div>
 
         <p className="text-xs text-muted-foreground text-center leading-relaxed">

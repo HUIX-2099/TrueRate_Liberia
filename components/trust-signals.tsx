@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react"
 const trustPoints = [
   "Indicative market (street) rates with update timestamps",
   "Transparent sources and update frequency disclosures",
-  "Fraud reporting and safety guidance for users",
+  "Report bad rates and fraud so others don't get cheated; safety guidance for users",
   "Works offline with PWA technology",
   "SMS alerts for feature phone users",
   "Independent, informational platform (not a bank or money transfer service)",

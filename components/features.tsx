@@ -11,7 +11,7 @@ const features = [
   {
     icon: Shield,
     title: "Fraud Protection",
-    description: "Report scams and see warnings about fraudulent changers. Community-driven safety.",
+    description: "Report bad rates and fraud so others don't get cheated. See warnings about fraudulent changers. When people trust the system, LRD is taken seriously.",
   },
   {
     icon: Users,

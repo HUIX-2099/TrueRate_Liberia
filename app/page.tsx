@@ -99,7 +99,7 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Built for Liberians, by Liberians. Access rates offline, report fraud, and stay informed.
+                Built for Liberians, by Liberians. Access rates offline, report bad rates and fraud so others don&apos;t get cheated, and stay informed.
               </p>
             </div>
             <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -233,7 +233,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-2">Report Fraud</h3>
-                        <p className="text-sm text-muted-foreground">Help keep the community safe</p>
+                        <p className="text-sm text-muted-foreground">Report bad rates and fraud so others don&apos;t get cheated. Fair rates + accountability = trust in LRD.</p>
                       </div>
                     </div>
                   </CardContent>

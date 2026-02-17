@@ -52,7 +52,7 @@ export default function ReportFraudPage() {
       setSubmitted(true)
       toast({
         title: "Report submitted",
-        description: "Thank you for helping keep our community safe. We'll investigate this report.",
+        description: "Thank you. Your report helps others avoid getting cheated. We'll investigate.",
       })
     } catch {
       toast({
@@ -90,8 +90,8 @@ export default function ReportFraudPage() {
                 </p>
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <p className="text-sm text-muted-foreground">
-                    Your report helps protect the entire community. We take every report seriously and work with local
-                    authorities when necessary.
+                    Your report helps protect others from getting cheated. We take every report seriously and work with local
+                    authorities when necessary. When people trust that bad actors can be reported, they trust the system—and the LRD—more.
                   </p>
                 </div>
                 <Button onClick={() => setSubmitted(false)} variant="outline" className="w-full">
@@ -131,8 +131,10 @@ export default function ReportFraudPage() {
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
-                Help us protect the community by reporting suspicious money changers, unfair rates, counterfeit
-                currency, or other fraudulent activities.
+                Report bad rates and fraud so others don&apos;t get cheated. When more people trust that the rate they see is fair and that bad actors can be reported, they trust the system around the LRD—so the Liberian dollar is worth taking seriously and using.
+              </p>
+              <p className="text-sm text-muted-foreground/90 mt-3 max-w-2xl mx-auto">
+                Report suspicious changers, unfair rates, counterfeit currency, or other fraud. All reports are confidential.
               </p>
             </div>
           </div>

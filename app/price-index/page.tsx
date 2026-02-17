@@ -55,7 +55,7 @@ export default async function PriceIndexPage() {
               <Badge className="mb-4">Official CPI</Badge>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Liberia Price Index</span></h1>
               <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-                Official Consumer Price Index (CPI) data and inflation trends for Liberia, refreshed daily from LISGIS.
+                Official Consumer Price Index (CPI) data and inflation trends for Liberia, refreshed daily from LISGIS. Prices in LRD so the national currency is the main unit of account for daily life.
               </p>
             </div>
           </div>
@@ -119,7 +119,10 @@ export default async function PriceIndexPage() {
 
         <section className="py-10 sm:py-12 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto space-y-4">
+              <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto">
+                Daily life in Liberia is quoted in LRD: market baskets, typical salaries, and retail prices are usually discussed in Liberian dollars. Below, essential goods are shown in LRD first.
+              </p>
               <PriceIndex rate={priceIndexRate} />
             </div>
           </div>

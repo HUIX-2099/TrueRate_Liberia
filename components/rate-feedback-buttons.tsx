@@ -68,7 +68,7 @@ export function RateFeedbackButtons({
         description:
           type === "confirm"
             ? "Your confirmation helps others trust the rate."
-            : "We'll review reported issues.",
+            : "Your report helps protect others from bad rates. We'll review it.",
       })
     } catch {
       toast({
@@ -109,7 +109,7 @@ export function RateFeedbackButtons({
             Report wrong rate
           </DialogTitle>
           <DialogDescription>
-            Tell us what rate you’re seeing so we can improve. Your report is anonymous.
+            Report wrong or unfair rates so others don&apos;t get cheated. Tell us what rate you saw—your report is anonymous and helps keep the system fair.
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-2">
