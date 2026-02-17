@@ -38,8 +38,32 @@ const fetchWithTimeout = async (url: string, init: RequestInit, timeoutMs: numbe
   }
 }
 
+/** Parse table row: Date | Buying | Selling (e.g. Monday, February 16, 2026 | L$184.9247/US$1.00 | L$186.9973/US$1.00) */
+function parseTableRow(row: string): CblHistoricalPoint | null {
+  const dateStr = parseDate(row)
+  if (!dateStr) return null
+  const rateMatches = [...row.matchAll(/L\$?([\d.]+)\s*\/\s*US?\$?1\.00/gi)]
+  if (rateMatches.length < 2) return null
+  const buying = Number.parseFloat(rateMatches[0][1])
+  const selling = Number.parseFloat(rateMatches[1][1])
+  if (!Number.isFinite(buying) || !Number.isFinite(selling) || buying < 100 || selling > 300) return null
+  const rate = Number(((buying + selling) / 2).toFixed(4))
+  return { date: dateStr, rate, buying, selling }
+}
+
 function parseCblHtml(html: string): CblHistoricalPoint[] {
   const points: CblHistoricalPoint[] = []
+  const normalized = html.replace(/\r\n/g, "\n").replace(/>\s+</g, "><")
+  const trRegex = /<tr[^>]*>([\s\S]*?)<\/tr\s*>/gi
+  let m: RegExpExecArray | null
+  while ((m = trRegex.exec(normalized)) !== null) {
+    const row = m[1].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()
+    if (!row) continue
+    const point = parseTableRow(row)
+    if (point && !points.some((p) => p.date === point.date)) points.push(point)
+  }
+  if (points.length > 0) return points
+
   const lines = html.split(/\r?\n/)
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
@@ -57,17 +81,32 @@ function parseCblHtml(html: string): CblHistoricalPoint[] {
     const mid = (buying + selling) / 2
     points.push({ date: dateStr, rate: Number(mid.toFixed(4)), buying, selling })
   }
-
   return points
 }
 
-/** Fetch the latest USD/LRD rate from CBL (most recent published day). */
-export async function fetchCblLatestRate(): Promise<{ rate: number; date: string } | null> {
+export interface CblLatestRate {
+  rate: number
+  date: string
+  buying: number
+  selling: number
+  lastUpdated: string
+}
+
+/** Fetch the latest USD/LRD rate from CBL research page (most recent published day). Uses selling as official rate. */
+export async function fetchCblLatestRate(): Promise<CblLatestRate | null> {
   try {
     const points = await fetchCblPage(1)
     if (points.length === 0) return null
-    const latest = points[0]
-    return { rate: latest.rate, date: latest.date }
+    const byDateDesc = [...points].sort((a, b) => b.date.localeCompare(a.date))
+    const latest = byDateDesc[0]
+    const lastUpdated = `${latest.date}T12:00:00.000Z`
+    return {
+      rate: Number(latest.selling.toFixed(4)),
+      date: latest.date,
+      buying: latest.buying,
+      selling: latest.selling,
+      lastUpdated,
+    }
   } catch {
     return null
   }

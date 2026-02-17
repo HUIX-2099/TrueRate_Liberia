@@ -12,10 +12,11 @@ import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
 import { StaleRateWarning } from "@/components/stale-rate-warning"
 import { RateChangeAnimation } from "@/components/rate-change-animation"
 import { RateTip } from "@/components/rate-tip"
+import { RateSourceSelector } from "@/components/rate-source-selector"
 
 export function Hero() {
   const router = useRouter()
-  const { rate, loading, sources, timestamp, cblRate, refresh } = useLiveRate()
+  const { rate, loading, sources, timestamp, cblRate, cblLastUpdated, refresh, effectiveRate } = useLiveRate()
   const [trend, setTrend] = useState<'up' | 'down' | 'stable'>('up')
   const [changePercent, setChangePercent] = useState(0.8)
   const lastUpdate = loading ? "Loading…" : timestamp ? (() => {
@@ -148,12 +149,21 @@ export function Hero() {
 
               {/* Main Rate Display */}
               <div className="text-center mb-8">
-                <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
-                  <RateChangeAnimation rate={rate ?? 0}>
-                    {rate ? rate.toFixed(2) : "—"}
-                  </RateChangeAnimation>
+                <div className="flex flex-col items-center gap-2 mb-2">
+                  <RateSourceSelector variant="pills" className="mb-1" />
+                  <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
+                    <RateChangeAnimation rate={effectiveRate ?? 0}>
+                      {effectiveRate ? effectiveRate.toFixed(2) : "—"}
+                    </RateChangeAnimation>
+                  </div>
                 </div>
                 <div className="text-lg text-muted-foreground mt-2">LRD per 1 USD</div>
+                {rate != null && rate > 0 && (
+                  <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm mt-3 text-muted-foreground">
+                    <span><span className="font-medium text-foreground">Official (CBL):</span> {cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD{cblLastUpdated ? ` · ${(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}` : ""}</span>
+                    <span><span className="font-medium text-foreground">Market:</span> {rate.toFixed(2)} LRD/USD</span>
+                  </div>
+                )}
                 <RateTip className="mt-3 justify-center" />
               </div>
 
@@ -162,13 +172,13 @@ export function Hero() {
                 <div className="rounded-2xl bg-secondary/10 p-4 text-center">
                   <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">Buy Rate</div>
                   <div className="text-2xl font-bold text-secondary">
-                    {rate ? (rate - 2).toFixed(2) : "—"}
+                    {effectiveRate ? (effectiveRate - 2).toFixed(2) : "—"}
                   </div>
                 </div>
                 <div className="rounded-2xl bg-destructive/10 p-4 text-center">
                   <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">Sell Rate</div>
                   <div className="text-2xl font-bold text-destructive">
-                    {rate ? (rate + 2).toFixed(2) : "—"}
+                    {effectiveRate ? (effectiveRate + 2).toFixed(2) : "—"}
                   </div>
                 </div>
               </div>
@@ -179,6 +189,7 @@ export function Hero() {
                   sources={sources}
                   timestamp={timestamp}
                   cblRate={cblRate}
+                  cblLastUpdated={cblLastUpdated}
                   compositeRate={rate ?? undefined}
                   compact={false}
                 />

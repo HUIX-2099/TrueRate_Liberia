@@ -110,9 +110,9 @@ export async function GET() {
     ]
 
     return NextResponse.json({
-      // Backward compatibility for clients expecting `data.rate`
       rate: aggregatedData.rate,
       cblRate: aggregatedData.cblRate ?? null,
+      cblLastUpdated: aggregatedData.cblLastUpdated ?? null,
       official: {
         rate: aggregatedData.rate,
         confidence: aggregatedData.confidence,

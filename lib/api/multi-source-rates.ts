@@ -74,20 +74,25 @@ export async function getAggregatedRate(): Promise<{
   sources: string[]
   timestamp: string
   cblRate: number | null
+  cblLastUpdated: string | null
 }> {
+  const { fetchCblRateFromHomepage } = await import("@/lib/cbl-homepage")
   const { fetchCblLatestRate } = await import("@/lib/cbl-rates")
-  const cbl = await fetchCblLatestRate()
-  const cblRate = cbl && cbl.rate > 150 && cbl.rate < 220 ? Number(cbl.rate.toFixed(4)) : null
-
-  if (cblRate != null) {
-    return {
-      rate: cblRate,
-      confidence: 1.0,
-      sources: ["Central Bank of Liberia"],
-      timestamp: new Date().toISOString(),
-      cblRate,
+  let cblRate: number | null = null
+  let cblLastUpdated: string | null = null
+  const cblResearch = await fetchCblLatestRate()
+  if (cblResearch && cblResearch.rate > 150 && cblResearch.rate < 220) {
+    cblRate = Number(cblResearch.rate.toFixed(4))
+    cblLastUpdated = cblResearch.lastUpdated ?? null
+  }
+  if (cblRate == null) {
+    const cblHomepage = await fetchCblRateFromHomepage()
+    if (cblHomepage && cblHomepage.rate > 150 && cblHomepage.rate < 220) {
+      cblRate = Number(cblHomepage.rate.toFixed(4))
+      cblLastUpdated = cblHomepage.lastUpdated ?? null
     }
   }
+  // CBL is used only for cblRate (Official). Market rate comes from RATE_SOURCES below.
 
   let sources = RATE_SOURCES
 
@@ -102,6 +107,7 @@ export async function getAggregatedRate(): Promise<{
           sources: [result.source],
           timestamp: new Date().toISOString(),
           cblRate,
+          cblLastUpdated,
         }
       }
       sources = RATE_SOURCES.filter((s) => s !== preferred)
@@ -118,13 +124,14 @@ export async function getAggregatedRate(): Promise<{
     .map((result) => result.value)
 
   if (validResults.length === 0) {
-    console.log("[v0] All APIs failed, using CBL fallback rate")
+    console.log("[v0] All market sources failed, using fallback rate")
     return {
-      rate: 179.0, // Latest CBL rate as of Nov 2025
+      rate: 179.0, // Fallback market rate
       confidence: 0.7,
       sources: ["Central Bank of Liberia (Fallback)"],
       timestamp: new Date().toISOString(),
-      cblRate: null,
+      cblRate, // Official (CBL) unchanged; only market rate is fallback
+      cblLastUpdated,
     }
   }
 
@@ -143,6 +150,7 @@ export async function getAggregatedRate(): Promise<{
     sources: validResults.map((r) => r.source),
     timestamp: new Date().toISOString(),
     cblRate,
+    cblLastUpdated,
   }
 }
 

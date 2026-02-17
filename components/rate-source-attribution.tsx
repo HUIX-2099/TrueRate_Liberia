@@ -11,6 +11,8 @@ export interface RateSourceAttributionProps {
   timestamp?: string
   /** CBL official rate when available — show alongside composite for comparison */
   cblRate?: number | null
+  /** CBL rate date from source (ISO); shown as "CBL rate updated [date]" */
+  cblLastUpdated?: string | null
   /** Composite/display rate (to show "TrueRate" vs "CBL") */
   compositeRate?: number
   /** Compact layout for small spaces */
@@ -35,10 +37,18 @@ function formatTime(iso: string): string {
   }
 }
 
+function formatCblDate(iso: string): string {
+  if (!iso) return ""
+  try {
+    return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })
+  } catch { return "" }
+}
+
 export function RateSourceAttribution({
   sources,
   timestamp = "",
   cblRate = null,
+  cblLastUpdated,
   compositeRate,
   compact = false,
   className = "",
@@ -78,7 +88,7 @@ export function RateSourceAttribution({
             <p className="text-xs mt-1">{sources.length ? sources.join(", ") : "Aggregated from multiple APIs"}</p>
             {timestamp && <p className="text-xs mt-1">Updated: {formatTime(timestamp)}</p>}
             {hasCbl && (
-              <p className="text-xs mt-1 font-medium">CBL official rate: {cblRate!.toFixed(2)} LRD/USD</p>
+              <p className="text-xs mt-1 font-medium">CBL official rate: {cblRate!.toFixed(2)} LRD/USD{cblLastUpdated ? ` (rate date: ${formatCblDate(cblLastUpdated)})` : ""}</p>
             )}
             {hasBoth && (
               <>
@@ -124,6 +134,7 @@ export function RateSourceAttribution({
           <div className="flex items-center gap-2">
             <span className="text-muted-foreground">CBL official rate:</span>
             <span className="font-medium">{cblRate!.toFixed(2)} LRD/USD</span>
+            {cblLastUpdated && <span className="text-muted-foreground">(rate date: {formatCblDate(cblLastUpdated)})</span>}
           </div>
           {compositeRate != null && compositeRate > 0 && (
             <>

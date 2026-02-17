@@ -30,6 +30,7 @@ export default function RatesPage() {
   const [rateSources, setRateSources] = useState<string[]>([])
   const [rateTimestamp, setRateTimestamp] = useState("")
   const [cblRate, setCblRate] = useState<number | null>(null)
+  const [cblLastUpdated, setCblLastUpdated] = useState<string | null>(null)
   const [changers, setChangers] = useState<Changer[]>([])
   const [recentRates, setRecentRates] = useState<number[]>([])
   const [previousDayRate, setPreviousDayRate] = useState<number | null>(null)
@@ -47,6 +48,8 @@ export default function RatesPage() {
         else if (Array.isArray(data?.official?.sources)) setRateSources(data.official.sources)
         if (typeof data?.timestamp === "string") setRateTimestamp(data.timestamp)
         if (typeof data?.cblRate === "number") setCblRate(data.cblRate)
+        if (typeof data?.cblLastUpdated === "string") setCblLastUpdated(data.cblLastUpdated)
+        else setCblLastUpdated(null)
         setLastUpdate(new Date().toLocaleTimeString())
       } catch (error) {
         console.error("[Rates] Failed to fetch rate", error)
@@ -169,12 +172,17 @@ export default function RatesPage() {
                   <div className="text-center">
                     <div className="text-5xl font-bold text-primary mb-1">{liveRate.toFixed(2)}</div>
                     <div className="text-sm text-muted-foreground font-medium">LRD per USD</div>
+                    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm mt-2 text-muted-foreground">
+                      <span><span className="font-medium text-foreground">Official (CBL):</span> {cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD{cblLastUpdated ? ` · ${(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}` : ""}</span>
+                      <span><span className="font-medium text-foreground">Market:</span> {liveRate.toFixed(2)} LRD/USD</span>
+                    </div>
                   </div>
                   <div className="pt-2 border-t border-border/40 space-y-2">
                     <RateSourceAttribution
                       sources={rateSources}
                       timestamp={rateTimestamp}
                       cblRate={cblRate}
+                      cblLastUpdated={cblLastUpdated}
                       compositeRate={liveRate}
                       compact={false}
                     />

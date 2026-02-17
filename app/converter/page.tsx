@@ -49,6 +49,7 @@ import { RateChangeAnimation } from "@/components/rate-change-animation"
 import { RateBrief } from "@/components/rate-brief"
 import { PlanInLRD } from "@/components/plan-in-lrd"
 import { RateTip } from "@/components/rate-tip"
+import { RateSourceSelector } from "@/components/rate-source-selector"
 
 // Multi-currency support
 const currencies = [
@@ -82,10 +83,10 @@ const ConverterPageComponent = () => {
   const [amount, setAmount] = useState("100")
   const [result, setResult] = useState("")
   const [copied, setCopied] = useState(false)
-  const { rate: contextLrdRate, sources: rateSources, timestamp: rateTimestamp, cblRate: contextCblRate, refresh: refreshLiveRate } = useLiveRate()
+  const { rate: contextLrdRate, sources: rateSources, timestamp: rateTimestamp, cblRate: contextCblRate, cblLastUpdated: contextCblLastUpdated, refresh: refreshLiveRate, effectiveRate: contextEffectiveRate } = useLiveRate()
   const [liveRates, setLiveRates] = useState<Record<string, number> | null>(null)
-  // Use shared LRD rate immediately; merge with multi-currency rates when they load
-  const liveRate = liveRates?.LRD ?? (typeof contextLrdRate === "number" ? contextLrdRate : null)
+  // Use shared LRD rate: effectiveRate (user choice of market vs official) when not using multi-currency; else multi-currency LRD
+  const liveRate = liveRates?.LRD ?? (typeof contextEffectiveRate === "number" ? contextEffectiveRate : null)
   const [lastUpdate, setLastUpdate] = useState("")
   const [dayChange, setDayChange] = useState(0.85)
   const [loading, setLoading] = useState(false)
@@ -116,7 +117,7 @@ const ConverterPageComponent = () => {
   const effectiveRates: Record<string, number> = {
     ...ratesFromUSD,
     ...(liveRates ?? {}),
-    LRD: liveRates?.LRD ?? (typeof contextLrdRate === "number" ? contextLrdRate : ratesFromUSD.LRD),
+    LRD: liveRates?.LRD ?? (typeof contextEffectiveRate === "number" ? contextEffectiveRate : ratesFromUSD.LRD),
   }
 
   // Throttled API call for live rates (all currencies)
@@ -173,7 +174,7 @@ const ConverterPageComponent = () => {
     const toRate = getRate(toCurrency)
     if (!fromRate || !toRate) return ""
     return ((numAmount / fromRate) * toRate).toFixed(2)
-  }, [debouncedAmount, fromCurrency, toCurrency, liveRates, contextLrdRate, useCustomRate, customRate])
+  }, [debouncedAmount, fromCurrency, toCurrency, liveRates, contextEffectiveRate, useCustomRate, customRate])
 
   useEffect(() => {
     setResult(convertedResult)
@@ -344,10 +345,20 @@ const ConverterPageComponent = () => {
                       )}
                       {!useCustomRate && (
                         <>
+                          <div className="mt-2">
+                            <RateSourceSelector variant="pills" />
+                          </div>
+                          {isLiveRateReady && (
+                            <div className="text-xs text-muted-foreground mt-1 flex flex-wrap gap-x-4 gap-y-0.5">
+                              <span><span className="font-medium text-foreground">Official (CBL):</span> {contextCblRate != null && contextCblRate > 0 ? contextCblRate.toFixed(2) : "—"} LRD/USD</span>
+                              <span><span className="font-medium text-foreground">Market:</span> {contextLrdRate != null ? contextLrdRate.toFixed(2) : "—"} LRD/USD</span>
+                            </div>
+                          )}
                           <RateSourceAttribution
                             sources={rateSources}
                             timestamp={rateTimestamp}
                             cblRate={contextCblRate}
+                            cblLastUpdated={contextCblLastUpdated}
                             compositeRate={isLiveRateReady ? liveRateValue : undefined}
                             compact
                             className="mt-1"
