@@ -95,7 +95,7 @@ export interface CblLatestRate {
 /** Fetch the latest USD/LRD rate from CBL research page (most recent published day). Uses selling as official rate. */
 export async function fetchCblLatestRate(): Promise<CblLatestRate | null> {
   try {
-    const points = await fetchCblPage(1)
+    const points = await fetchCblPage(1, 60)
     if (points.length === 0) return null
     const byDateDesc = [...points].sort((a, b) => b.date.localeCompare(a.date))
     const latest = byDateDesc[0]
@@ -112,11 +112,11 @@ export async function fetchCblLatestRate(): Promise<CblLatestRate | null> {
   }
 }
 
-async function fetchCblPage(page: number): Promise<CblHistoricalPoint[]> {
+async function fetchCblPage(page: number, revalidateSeconds = 86400): Promise<CblHistoricalPoint[]> {
   const url = page <= 1 ? CBL_RATES_URL : `${CBL_RATES_URL}?page=${page}`
   const res = await fetchWithTimeout(
     url,
-    { next: { revalidate: 86400 }, headers: { "User-Agent": "TrueRate-Liberia/1.0" } },
+    { next: { revalidate: revalidateSeconds }, headers: { "User-Agent": "TrueRate-Liberia/1.0" } },
     FETCH_TIMEOUT_MS,
   )
   if (!res.ok) return []

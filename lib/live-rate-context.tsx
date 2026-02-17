@@ -16,7 +16,7 @@ const RATE_CBL_KEY = "truerate-live-cbl"
 const RATE_CBL_LAST_UPDATED_KEY = "truerate-live-cbl-last-updated"
 const RATE_SOURCE_PREF_KEY = "truerate-rate-source"
 const DEFAULT_RATE = 192.5
-const REFRESH_MS = 60_000
+const REFRESH_MS = 60_000 // Auto-update market and CBL rate every minute
 
 export type RateSourcePreference = "market" | "official"
 

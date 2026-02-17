@@ -72,7 +72,7 @@ async function fetchWithTimeout(url: string, timeoutMs: number): Promise<string>
     const res = await fetch(url, {
       headers: { "User-Agent": "TrueRate-Liberia/1.0 (https://truerate-liberia.com)" },
       signal: controller.signal,
-      next: { revalidate: 3600 },
+      next: { revalidate: 60 },
     })
     if (!res.ok) throw new Error(`CBL homepage ${res.status}`)
     return await res.text()
