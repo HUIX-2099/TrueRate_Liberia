@@ -310,7 +310,7 @@ export default function ForumsPage() {
                               </span>
                               <span className="text-xs text-muted-foreground flex items-center gap-1">
                                 <MessageCircle className="h-3 w-3" />
-                                {thread.replies} replies
+                                {thread.replies} comments
                               </span>
                             </div>
                             <h3 className="font-semibold text-base mb-1 line-clamp-1">{thread.title}</h3>

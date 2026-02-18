@@ -151,12 +151,12 @@ export default function ThreadPage() {
 
           <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
             <MessageSquare className="h-5 w-5 text-primary" />
-            Replies {totalReplies > 0 && `(${totalReplies})`}
+            Comments {totalReplies > 0 && `(${totalReplies})`}
           </h2>
 
           <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
             {displayReplies.length === 0 ? (
-              <p className="text-sm text-muted-foreground py-4">No replies yet. Be the first.</p>
+              <p className="text-sm text-muted-foreground py-4">No comments yet. Be the first.</p>
             ) : (
               displayReplies.map((r) => (
                 <Card key={r.id} className="border-border/60 overflow-hidden">
@@ -188,11 +188,11 @@ export default function ThreadPage() {
 
           <Card className="border-primary/20 bg-muted/20 overflow-hidden">
             <CardHeader className="p-4 sm:p-6">
-              <CardTitle className="text-base">Reply</CardTitle>
+              <CardTitle className="text-base">Comment</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 p-4 sm:p-6 pt-0">
               <Textarea
-                placeholder="Write your reply..."
+                placeholder="Write your comment..."
                 rows={4}
                 value={replyBody}
                 onChange={(e) => setReplyBody(e.target.value)}
@@ -200,7 +200,7 @@ export default function ThreadPage() {
               />
               <Button onClick={addReply} disabled={!replyBody.trim()} className="gap-2 min-h-10 w-full sm:w-auto touch-manipulation">
                 <Send className="h-4 w-4" />
-                Post reply
+                Post comment
               </Button>
             </CardContent>
           </Card>
