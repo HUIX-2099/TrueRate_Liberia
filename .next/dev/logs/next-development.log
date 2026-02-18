@@ -30530,3 +30530,951 @@ https://react.dev/link/hydration-mismatch
 [37:13:56.433] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
 [37:14:19.340] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
 [37:14:20.266] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:14:56.432] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:14:56.460] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:15:21.846] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:15:23.142] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:15:56.438] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:15:56.459] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:11.273] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:13.817] Browser LOG     Header render time: 4.20ms
+[37:16:13.817] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771365205261}
+[37:16:13.859] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:13.907] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:13.924] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:14.270] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:14.277] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:14.289] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:15.479] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[37:16:15.598] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[37:16:17.981] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:18.114] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[37:16:18.310] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:18.319] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:18.504] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:18.567] Browser LOG     Header render time: 95.40ms
+[37:16:18.567] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[37:16:18.567] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[37:16:18.567] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771365211330}
+[37:16:19.894] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[37:16:21.271] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:21.481] Server  ERROR   ⨯ TypeError: fetch failed
+[37:16:57.239] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:16:57.251] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:17:19.245] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:17:19.258] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:17:19.350] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:17:31.248] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:17:56.339] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:17:56.368] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:18:19.284] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:18:19.295] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:18:22.193] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:18:22.255] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:18:56.408] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:18:56.438] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:19:19.349] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:19:19.375] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:19:19.405] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:19:20.520] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:19:56.432] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:19:56.459] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:20:19.294] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:20:19.316] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:20:19.348] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:20:20.289] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:20:56.419] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:20:56.437] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:21:19.293] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:21:19.313] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:21:22.206] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:21:23.031] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:21:56.353] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:21:56.437] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:22:19.239] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:22:19.254] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:22:19.283] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:22:20.274] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:22:56.404] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:22:56.418] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:23:19.390] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:23:19.409] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:23:19.446] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:23:20.277] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:23:56.440] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:23:56.488] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:24:19.346] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:24:19.365] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:24:21.950] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:24:23.238] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:24:56.397] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:24:56.430] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:25:19.437] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:25:19.478] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:25:19.508] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:25:20.276] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:43:54.612] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:43:54.634] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:43:54.642] Server  ERROR   TypeError: fetch failed
+[37:43:54.642] Server  ERROR   TypeError: fetch failed
+[37:43:54.807] Server  ERROR   ⨯ Error: failed to pipe response
+[37:43:54.810] Server  ERROR   TypeError: fetch failed
+[37:43:54.810] Server  ERROR   TypeError: fetch failed
+[37:43:54.810] Server  ERROR   TypeError: fetch failed
+[37:43:54.896] Server  ERROR   ⨯ Error: failed to pipe response
+[37:43:54.897] Server  ERROR   TypeError: fetch failed
+[37:44:16.529] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:44:16.539] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:44:16.550] Server  ERROR   TypeError: fetch failed
+[37:44:16.550] Server  ERROR   TypeError: fetch failed
+[37:44:16.645] Server  ERROR   ⨯ Error: failed to pipe response
+[37:44:16.648] Server  ERROR   TypeError: fetch failed
+[37:44:16.649] Server  ERROR   TypeError: fetch failed
+[37:44:16.649] Server  ERROR   TypeError: fetch failed
+[37:44:16.708] Server  ERROR   ⨯ Error: failed to pipe response
+[37:44:16.710] Server  ERROR   TypeError: fetch failed
+[37:44:16.710] Server  ERROR   TypeError: fetch failed
+[37:44:16.729] Server  ERROR   TypeError: fetch failed
+[37:44:16.805] Server  ERROR   ⨯ Error: failed to pipe response
+[37:44:16.815] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:44:16.816] Server  ERROR   TypeError: fetch failed
+[37:44:16.816] Server  ERROR   TypeError: fetch failed
+[37:44:16.869] Server  ERROR   ⨯ Error: failed to pipe response
+[37:44:16.885] Server  ERROR   TypeError: fetch failed
+[37:44:18.461] Server  ERROR   TypeError: fetch failed
+[37:44:18.461] Server  ERROR   TypeError: fetch failed
+[37:44:18.546] Server  ERROR   ⨯ Error: failed to pipe response
+[37:44:18.567] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[37:44:18.568] Server  ERROR   TypeError: fetch failed
+[37:44:18.569] Server  ERROR   TypeError: fetch failed
+[37:44:18.612] Server  ERROR   ⨯ Error: failed to pipe response
+[37:44:18.612] Server  ERROR   TypeError: fetch failed
+[39:24:16.681] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[39:24:16.701] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[39:24:16.716] Server  ERROR   TypeError: fetch failed
+[39:24:16.716] Server  ERROR   TypeError: fetch failed
+[39:24:16.872] Server  ERROR   ⨯ Error: failed to pipe response
+[39:24:16.874] Server  ERROR   TypeError: fetch failed
+[39:24:16.874] Server  ERROR   TypeError: fetch failed
+[39:24:16.875] Server  ERROR   TypeError: fetch failed
+[39:24:16.955] Server  ERROR   ⨯ Error: failed to pipe response
+[39:24:16.956] Server  ERROR   TypeError: fetch failed
+[39:24:16.972] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[39:24:16.979] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[39:24:16.982] Server  ERROR   TypeError: fetch failed
+[39:24:16.983] Server  ERROR   TypeError: fetch failed
+[39:24:17.046] Server  ERROR   ⨯ Error: failed to pipe response
+[39:24:17.048] Server  ERROR   TypeError: fetch failed
+[39:24:17.052] Server  ERROR   TypeError: fetch failed
+[39:24:17.053] Server  ERROR   TypeError: fetch failed
+[39:24:17.127] Server  ERROR   ⨯ Error: failed to pipe response
+[39:24:17.128] Server  ERROR   TypeError: fetch failed
+[39:24:17.147] Server  ERROR   TypeError: fetch failed
+[39:24:17.148] Server  ERROR   TypeError: fetch failed
+[39:24:17.211] Server  ERROR   ⨯ Error: failed to pipe response
+[39:24:17.235] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[39:24:17.236] Server  ERROR   TypeError: fetch failed
+[39:24:17.237] Server  ERROR   TypeError: fetch failed
+[39:24:17.280] Server  ERROR   ⨯ Error: failed to pipe response
+[39:24:17.280] Server  ERROR   TypeError: fetch failed
+[40:44:56.149] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[40:44:56.201] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[40:44:56.231] Server  ERROR   TypeError: fetch failed
+[40:44:56.231] Server  ERROR   TypeError: fetch failed
+[40:44:56.361] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:56.365] Server  ERROR   TypeError: fetch failed
+[40:44:56.366] Server  ERROR   TypeError: fetch failed
+[40:44:56.366] Server  ERROR   TypeError: fetch failed
+[40:44:56.439] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:56.440] Server  ERROR   TypeError: fetch failed
+[40:44:56.440] Server  ERROR   TypeError: fetch failed
+[40:44:56.441] Server  ERROR   TypeError: fetch failed
+[40:44:56.500] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:56.507] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[40:44:56.555] Server  ERROR   TypeError: fetch failed
+[40:44:56.555] Server  ERROR   TypeError: fetch failed
+[40:44:57.258] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:57.270] Server  ERROR   TypeError: fetch failed
+[40:44:57.288] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[40:44:57.296] Server  ERROR   TypeError: fetch failed
+[40:44:57.296] Server  ERROR   TypeError: fetch failed
+[40:44:57.354] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:57.355] Server  ERROR   TypeError: fetch failed
+[40:44:57.362] Server  ERROR   TypeError: fetch failed
+[40:44:57.362] Server  ERROR   TypeError: fetch failed
+[40:44:57.405] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:57.419] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[40:44:57.420] Server  ERROR   TypeError: fetch failed
+[40:44:57.420] Server  ERROR   TypeError: fetch failed
+[40:44:57.461] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:57.462] Server  ERROR   TypeError: fetch failed
+[40:44:57.470] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[40:44:57.475] Server  ERROR   TypeError: fetch failed
+[40:44:57.475] Server  ERROR   TypeError: fetch failed
+[40:44:57.521] Server  ERROR   ⨯ Error: failed to pipe response
+[40:44:57.531] Server  ERROR   TypeError: fetch failed
+[42:03:59.533] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[42:03:59.548] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[42:03:59.551] Server  ERROR   TypeError: fetch failed
+[42:03:59.552] Server  ERROR   TypeError: fetch failed
+[42:03:59.716] Server  ERROR   ⨯ Error: failed to pipe response
+[42:03:59.717] Server  ERROR   TypeError: fetch failed
+[42:03:59.718] Server  ERROR   TypeError: fetch failed
+[42:03:59.718] Server  ERROR   TypeError: fetch failed
+[42:03:59.770] Server  ERROR   ⨯ Error: failed to pipe response
+[42:03:59.771] Server  ERROR   TypeError: fetch failed
+[42:03:59.784] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[42:03:59.791] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[42:03:59.792] Server  ERROR   TypeError: fetch failed
+[42:03:59.793] Server  ERROR   TypeError: fetch failed
+[42:03:59.833] Server  ERROR   ⨯ Error: failed to pipe response
+[42:03:59.833] Server  ERROR   TypeError: fetch failed
+[42:03:59.834] Server  ERROR   TypeError: fetch failed
+[42:03:59.834] Server  ERROR   TypeError: fetch failed
+[42:03:59.892] Server  ERROR   ⨯ Error: failed to pipe response
+[42:03:59.894] Server  ERROR   TypeError: fetch failed
+[42:03:59.901] Server  ERROR   TypeError: fetch failed
+[42:03:59.901] Server  ERROR   TypeError: fetch failed
+[42:03:59.953] Server  ERROR   ⨯ Error: failed to pipe response
+[42:03:59.972] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[42:03:59.974] Server  ERROR   TypeError: fetch failed
+[42:03:59.975] Server  ERROR   TypeError: fetch failed
+[42:04:00.030] Server  ERROR   ⨯ Error: failed to pipe response
+[42:04:00.031] Server  ERROR   TypeError: fetch failed
+[43:21:02.480] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:21:02.491] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:21:02.499] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:21:02.505] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:21:02.576] Server  ERROR   TypeError: fetch failed
+[43:21:02.576] Server  ERROR   TypeError: fetch failed
+[43:21:02.651] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:02.653] Server  ERROR   TypeError: fetch failed
+[43:21:02.653] Server  ERROR   TypeError: fetch failed
+[43:21:02.723] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:02.724] Server  ERROR   TypeError: fetch failed
+[43:21:02.724] Server  ERROR   TypeError: fetch failed
+[43:21:02.724] Server  ERROR   TypeError: fetch failed
+[43:21:02.785] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:02.786] Server  ERROR   TypeError: fetch failed
+[43:21:02.787] Server  ERROR   TypeError: fetch failed
+[43:21:02.787] Server  ERROR   TypeError: fetch failed
+[43:21:02.834] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:02.835] Server  ERROR   TypeError: fetch failed
+[43:21:02.836] Server  ERROR   TypeError: fetch failed
+[43:21:02.836] Server  ERROR   TypeError: fetch failed
+[43:21:02.889] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:02.890] Server  ERROR   TypeError: fetch failed
+[43:21:02.890] Server  ERROR   TypeError: fetch failed
+[43:21:02.890] Server  ERROR   TypeError: fetch failed
+[43:21:02.957] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:02.967] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:21:02.973] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:21:02.975] Server  ERROR   TypeError: fetch failed
+[43:21:02.975] Server  ERROR   TypeError: fetch failed
+[43:21:03.036] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:03.037] Server  ERROR   TypeError: fetch failed
+[43:21:03.037] Server  ERROR   TypeError: fetch failed
+[43:21:03.038] Server  ERROR   TypeError: fetch failed
+[43:21:03.100] Server  ERROR   ⨯ Error: failed to pipe response
+[43:21:03.101] Server  ERROR   TypeError: fetch failed
+[43:23:15.581] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:23:15.595] Server  ERROR   TypeError: fetch failed
+[43:23:15.595] Server  ERROR   TypeError: fetch failed
+[43:23:15.742] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:15.747] Server  ERROR   TypeError: fetch failed
+[43:23:15.763] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:23:15.768] Server  ERROR   TypeError: fetch failed
+[43:23:15.769] Server  ERROR   TypeError: fetch failed
+[43:23:15.823] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:15.825] Server  ERROR   TypeError: fetch failed
+[43:23:38.499] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:23:38.507] Server  ERROR   TypeError: fetch failed
+[43:23:38.507] Server  ERROR   TypeError: fetch failed
+[43:23:38.652] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:38.657] Server  ERROR   TypeError: fetch failed
+[43:23:38.672] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:23:38.675] Server  ERROR   TypeError: fetch failed
+[43:23:38.675] Server  ERROR   TypeError: fetch failed
+[43:23:38.728] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:38.729] Server  ERROR   TypeError: fetch failed
+[43:23:38.752] Server  ERROR   TypeError: fetch failed
+[43:23:38.752] Server  ERROR   TypeError: fetch failed
+[43:23:38.804] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:38.813] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:23:38.815] Server  ERROR   TypeError: fetch failed
+[43:23:38.815] Server  ERROR   TypeError: fetch failed
+[43:23:38.856] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:38.871] Server  ERROR   TypeError: fetch failed
+[43:23:39.426] Server  ERROR   TypeError: fetch failed
+[43:23:39.426] Server  ERROR   TypeError: fetch failed
+[43:23:39.502] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:39.512] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:23:39.513] Server  ERROR   TypeError: fetch failed
+[43:23:39.513] Server  ERROR   TypeError: fetch failed
+[43:23:39.561] Server  ERROR   ⨯ Error: failed to pipe response
+[43:23:39.562] Server  ERROR   TypeError: fetch failed
+[43:24:15.605] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:24:15.624] Server  LOG     [v0] Market rate from ExchangeRate API: 186.3 LRD/USD
+[43:24:38.651] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:24:38.719] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:24:40.156] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:24:40.276] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:25:15.561] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:25:15.585] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:25:38.540] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:25:38.562] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:25:39.631] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:25:40.504] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:25:42.179] Server  LOG     ✓ Compiled in 356ms
+[43:25:48.777] Server  LOG     ✓ Compiled in 197ms
+[43:25:53.988] Server  LOG     ✓ Compiled in 127ms
+[43:26:15.577] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:26:15.599] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:26:38.481] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:26:38.499] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:26:38.524] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:26:40.734] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:15.589] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:15.643] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:38.514] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:38.547] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:38.576] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:39.841] Server  LOG     ✓ Compiled in 127ms
+[43:27:39.957] Browser LOG     Header render time: 1824402.30ms
+[43:27:39.957] Browser ERROR   Route error: {}
+[43:27:39.957] Browser ERROR   Route error: {}
+[43:27:40.360] Browser LOG     Header render time: 1142301.50ms
+[43:27:40.360] Browser ERROR   Route error: {}
+[43:27:40.360] Browser ERROR   Route error: {}
+[43:27:40.904] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:44.221] Server  LOG     ✓ Compiled in 115ms
+[43:27:44.396] Browser ERROR   Route error: {}
+[43:27:45.366] Browser ERROR   Route error: {}
+[43:27:45.463] Server  LOG     ✓ Compiled in 151ms
+[43:27:45.782] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:45.900] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:45.924] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:45.934] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:45.976] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:49.394] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:27:53.982] Server  LOG     ✓ Finished filesystem cache database compaction in 10.6s
+[43:28:38.500] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:28:39.446] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:28:45.544] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:28:45.670] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:28:46.414] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:28:46.426] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:29:38.551] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:29:39.465] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:29:45.646] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:29:45.679] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:29:46.401] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:29:46.417] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:29:57.703] Server  LOG     ✓ Compiled in 278ms
+[43:30:38.555] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:30:39.456] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:30:45.547] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:30:45.565] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:30:46.400] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:30:46.421] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:38.540] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:39.452] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:45.545] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:45.567] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:46.395] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:46.415] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:50.137] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:50.145] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:31:50.288] Browser LOG     Header render time: 244504.60ms
+[43:31:50.288] Browser LOG     ConverterPage render time: 2.90ms
+[43:31:50.288] Browser LOG     Header render time: 4.30ms
+[43:31:50.288] Browser LOG     ConverterPage render time: 42.50ms
+[43:31:50.288] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771387742564}
+[43:31:50.288] Browser LOG     ConverterPage render time: 88.90ms
+[43:31:50.288] Browser LOG     ConverterPage render time: 19.70ms
+[43:31:50.506] Browser LOG     ConverterPage render time: 211.60ms
+[43:31:50.660] Browser LOG     ConverterPage render time: 123.70ms
+[43:31:50.660] Browser LOG     ConverterPage render time: 28.90ms
+[43:31:51.047] Browser LOG     ConverterPage render time: 383.30ms
+[43:31:54.150] Browser LOG     ConverterPage render time: 3100.60ms
+[43:31:55.421] Browser LOG     ConverterPage render time: 1270.60ms
+[43:32:11.645] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:11.653] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:11.700] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:11.852] Browser LOG     ConverterPage render time: 16290.00ms
+[43:32:11.852] Browser LOG     Header render time: 21582.70ms
+[43:32:11.852] Browser LOG     Header render time: 3.20ms
+[43:32:11.852] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771387764155}
+[43:32:11.985] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:11.994] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:12.001] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:38.473] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:39.441] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:46.378] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:32:46.395] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:33:11.696] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:33:11.715] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:33:38.466] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:33:39.436] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:33:46.495] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:33:46.523] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:34:11.931] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:34:11.932] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:34:11.932] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:34:11.932] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:34:11.932] Server  LOG     [v0] Market rate (median): 186.33 from 1 feeds: ExchangeRate API
+[43:34:12.038] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:34:12.038] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:34:12.038] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:34:12.038] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:34:12.038] Server  LOG     [v0] Market rate (median): 186.33 from 1 feeds: ExchangeRate API
+[43:34:38.639] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:34:38.640] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:34:38.640] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:34:38.640] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:34:38.640] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:34:39.444] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:34:39.445] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:34:39.445] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:34:39.445] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:34:39.445] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:11.800] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:11.800] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:11.800] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:11.800] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:11.800] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:11.908] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:11.908] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:11.909] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:11.909] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:11.909] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:38.824] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:38.825] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:38.825] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:38.825] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:38.825] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:38.871] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:38.871] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:38.871] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:38.871] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:38.871] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:38.918] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:38.918] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:38.918] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:38.918] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:38.919] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:39.204] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[43:35:39.347] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:39.347] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:39.347] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:39.347] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:39.347] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:39.737] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:39.737] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:39.737] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:39.737] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:39.737] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:39.743] Browser LOG     Header render time: 93.50ms
+[43:35:39.743] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[43:35:39.743] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[43:35:39.743] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771387972007}
+[43:35:40.125] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:40.489] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:41.061] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:41.362] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:41.364] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:35:41.391] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:35:41.391] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:35:41.392] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:35:41.392] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:35:41.392] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:36:38.438] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:36:38.438] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:36:38.439] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:36:38.439] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:36:38.439] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:36:38.774] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:36:38.774] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:36:38.774] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:36:38.774] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:36:38.775] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:36:39.642] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:36:39.642] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:36:39.648] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:36:39.648] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:36:39.649] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:36:39.888] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:36:39.890] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:36:39.896] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:36:39.896] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:36:39.897] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:36:41.214] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:36:41.214] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:36:41.215] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:36:41.215] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:36:41.215] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:36:42.028] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:36:42.028] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:36:42.028] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:36:42.028] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:36:42.028] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:37:38.510] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:37:38.511] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:37:38.511] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:37:38.511] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:37:38.511] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:37:38.526] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:37:38.526] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:37:38.526] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:37:38.527] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:37:38.527] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:37:38.547] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:37:38.547] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:37:38.547] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:37:38.547] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:37:38.548] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:37:39.359] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:37:39.360] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:37:39.360] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:37:39.360] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:37:39.360] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:37:39.395] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:37:39.395] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:37:39.395] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:37:39.395] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:37:39.395] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:37:39.430] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:37:39.430] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:37:39.430] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:37:39.430] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:37:39.430] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:38:38.521] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:38:38.521] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:38:38.521] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:38:38.521] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:38:38.521] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:38:38.550] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:38:38.551] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:38:38.551] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:38:38.551] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:38:38.551] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:38:39.353] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:38:39.354] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:38:39.362] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:38:39.363] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:38:39.363] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:38:39.379] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:38:39.379] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:38:39.380] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:38:39.380] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:38:39.380] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:38:39.730] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:38:39.730] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:38:39.730] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:38:39.730] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:38:39.730] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:38:40.546] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:38:40.546] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:38:40.547] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:38:40.547] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:38:40.547] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:39:39.016] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:39:39.101] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:39:39.260] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:39:39.277] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:39:39.409] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:39:39.445] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:39:39.494] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:39:39.532] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:39:39.759] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:39:39.995] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:39:39.995] Server  LOG     [v0] Market rate (median): 186.65 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:39:40.000] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:39:40.003] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:39:40.003] Server  LOG     [v0] Market rate (median): 186.65 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:39:40.095] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:39:40.175] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:39:40.318] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:39:40.319] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:39:40.319] Server  LOG     [v0] Market rate (median): 186.65 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:39:40.497] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:39:40.510] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:39:40.511] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:39:40.512] Server  LOG     [v0] Market rate (median): 186.65 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:39:40.526] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:39:40.527] Server  LOG     [v0] Market rate (median): 186.65 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:39:40.607] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:39:40.695] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:39:40.830] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:39:40.847] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:39:40.847] Server  LOG     [v0] Market rate (median): 186.65 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:40:38.552] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:40:38.552] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:40:38.553] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:40:38.553] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:40:38.553] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:40:38.666] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:40:38.666] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:40:38.666] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:40:38.667] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:40:38.667] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:40:38.695] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:40:38.695] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:40:38.695] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:40:38.695] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:40:38.695] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:40:39.354] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:40:39.354] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:40:39.354] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:40:39.355] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:40:39.355] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:40:39.369] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:40:39.369] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:40:39.370] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:40:39.370] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:40:39.370] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:40:39.403] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:40:39.403] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:40:39.407] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:40:39.407] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:40:39.407] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:41:38.526] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:41:38.526] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:41:38.526] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:41:38.526] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:41:38.526] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:41:38.553] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:41:38.554] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:41:38.554] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:41:38.554] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:41:38.554] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:41:39.358] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:41:39.358] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:41:39.358] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:41:39.359] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:41:39.359] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:41:39.373] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:41:39.373] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:41:39.374] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:41:39.374] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:41:39.374] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:41:39.630] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:41:39.630] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:41:39.630] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:41:39.636] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:41:39.636] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:41:40.456] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:41:40.457] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:41:40.457] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:41:40.457] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:41:40.457] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:42:25.343] Server  LOG     ✓ Compiled in 511ms
+[43:42:38.670] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:42:38.670] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:42:38.670] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:42:38.670] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:42:38.671] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:42:38.730] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:42:38.731] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:42:38.731] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:42:38.731] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:42:38.731] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:42:38.782] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:42:38.783] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:42:38.783] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:42:38.783] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:42:38.783] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:42:39.360] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:42:39.360] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:42:39.360] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:42:39.360] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:42:39.360] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:42:39.403] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:42:39.403] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:42:39.403] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:42:39.403] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:42:39.403] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:42:40.461] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:42:40.461] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:42:40.461] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:42:40.461] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:42:40.462] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:43:38.436] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:43:38.437] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:43:38.437] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:43:38.437] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:43:38.437] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:43:38.470] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:43:38.470] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:43:38.471] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:43:38.471] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:43:38.471] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:43:38.580] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:43:38.581] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:43:38.581] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:43:38.581] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:43:38.581] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:43:39.360] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:43:39.360] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:43:39.361] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:43:39.361] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:43:39.361] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:43:39.385] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:43:39.385] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:43:39.385] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:43:39.385] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:43:39.385] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:43:40.601] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:43:40.601] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:43:40.601] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:43:40.601] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:43:40.601] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:44:38.430] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:44:38.431] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:44:38.431] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:44:38.431] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:44:38.434] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:44:38.512] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:44:38.512] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:44:38.512] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:44:38.512] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:44:38.512] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:44:38.546] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:44:38.547] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:44:38.547] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:44:38.547] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:44:38.547] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:44:39.419] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:44:39.420] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:44:39.420] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:44:39.420] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:44:39.420] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:44:39.439] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:44:39.440] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:44:39.440] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:44:39.440] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:44:39.440] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:44:40.552] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:44:40.552] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:44:40.553] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:44:40.553] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:44:40.553] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:45:38.640] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:45:38.640] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:45:38.640] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:45:38.641] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:45:38.641] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:45:38.659] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:45:38.659] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:45:38.659] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:45:38.659] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:45:38.659] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:45:38.689] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:45:38.689] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:45:38.689] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:45:38.689] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:45:38.689] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:45:39.390] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:45:39.390] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:45:39.390] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:45:39.390] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:45:39.390] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:45:39.411] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:45:39.411] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:45:39.411] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:45:39.411] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:45:39.411] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:45:40.522] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:45:40.522] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:45:40.522] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:45:40.523] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:45:40.523] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:46:38.567] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:46:38.567] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:46:38.568] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:46:38.568] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:46:38.568] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:46:38.587] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:46:38.587] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:46:38.587] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:46:38.587] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:46:38.587] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:46:38.675] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:46:38.675] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:46:38.730] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:46:38.731] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:46:38.731] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:46:39.409] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:46:39.409] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:46:39.409] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:46:39.409] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:46:39.409] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:46:39.457] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:46:39.458] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:46:39.458] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:46:39.458] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:46:39.458] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:46:41.237] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[43:46:41.237] Server  LOG     [v0] Currency API (Fawaz Ahmed): 186.20862959 LRD per USD
+[43:46:41.238] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[43:46:41.238] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[43:46:41.238] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[43:47:41.983] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:47:43.906] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:47:43.962] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:47:44.194] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:47:44.274] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:47:44.302] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:48:38.548] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:48:38.564] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:48:38.585] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:48:39.382] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:48:39.402] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:48:39.508] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:49:38.648] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:49:38.660] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:49:39.356] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:49:39.378] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:49:39.818] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:49:40.411] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:50:38.595] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:50:38.616] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:50:38.638] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:50:39.362] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:50:39.380] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:50:40.419] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:50:57.448] Server  LOG     ✓ Compiled in 161ms
+[43:51:02.951] Server  LOG     ✓ Compiled in 199ms
+[43:51:03.382] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:03.447] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:03.451] Browser LOG     Header render time: 923608.00ms
+[43:51:03.451] Browser LOG     Header render time: 2.70ms
+[43:51:03.516] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:03.517] Browser LOG     Header render time: 1397553.30ms
+[43:51:03.517] Browser LOG     Header render time: 9.30ms
+[43:51:03.969] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:04.016] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:04.048] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:04.057] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:04.593] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:04.665] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:04.722] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:05.756] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:05.900] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:05.934] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:06.142] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:51:51.297] Server  LOG     ✓ Compiled in 87ms
+[43:52:03.119] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:52:03.136] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:52:03.404] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:52:03.416] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:52:04.216] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:52:04.530] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:53:03.128] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:53:03.241] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:53:03.260] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:53:03.423] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:53:03.437] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:53:04.608] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:54:03.184] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:54:03.203] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:54:03.222] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:54:03.419] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:54:03.440] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:54:04.609] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:03.149] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:03.214] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:03.244] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:03.432] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:03.451] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:04.532] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:43.378] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:43.441] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:43.599] Browser LOG     Header render time: 280274.50ms
+[43:55:43.599] Browser LOG     ConverterPage render time: 1.80ms
+[43:55:43.599] Browser LOG     Header render time: 4.10ms
+[43:55:43.599] Browser LOG     ConverterPage render time: 56.10ms
+[43:55:43.599] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771389175801}
+[43:55:43.599] Browser LOG     ConverterPage render time: 69.00ms
+[43:55:43.599] Browser LOG     ConverterPage render time: 44.70ms
+[43:55:43.803] Browser LOG     ConverterPage render time: 200.50ms
+[43:55:44.189] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:55:45.171] Browser LOG     ConverterPage render time: 1362.70ms
+[43:55:46.840] Browser LOG     ConverterPage render time: 1604.50ms
+[43:55:46.840] Browser LOG     ConverterPage render time: 57.60ms
+[43:55:47.225] Browser LOG     ConverterPage render time: 385.20ms
+[43:55:52.329] Browser LOG     ConverterPage render time: 5044.90ms
+[43:55:52.329] Browser LOG     ConverterPage render time: 56.30ms
+[43:55:52.706] Browser LOG     ConverterPage render time: 374.00ms
+[43:56:03.124] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:03.426] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:03.440] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:04.371] Browser LOG     ConverterPage render time: 11663.00ms
+[43:56:04.670] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:13.124] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:13.135] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:13.164] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:13.343] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:13.401] Browser LOG     ConverterPage render time: 8833.40ms
+[43:56:13.401] Browser LOG     Header render time: 29787.90ms
+[43:56:13.401] Browser LOG     Header render time: 4.60ms
+[43:56:13.401] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771389205607}
+[43:56:13.419] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:56:13.486] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:57:03.122] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:57:03.491] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:57:03.509] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:57:04.537] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:57:13.175] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:57:13.195] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:57:32.959] Server  LOG     ✓ Compiled in 112ms
+[43:58:03.143] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:13.221] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:13.236] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:38.587] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:38.612] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:38.633] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:38.870] Server  LOG     ✓ Compiled in 112ms
+[43:58:56.135] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:56.163] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:56.191] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:58:56.356] Browser LOG     Header render time: 162960.80ms
+[43:58:56.356] Browser LOG     ConverterPage render time: 2.30ms
+[43:58:56.356] Browser LOG     Header render time: 3.90ms
+[43:58:56.356] Browser LOG     ConverterPage render time: 59.30ms
+[43:58:56.356] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771389368574}
+[43:58:56.356] Browser LOG     ConverterPage render time: 83.40ms
+[43:58:56.356] Browser LOG     ConverterPage render time: 30.20ms
+[43:58:56.554] Browser LOG     ConverterPage render time: 195.70ms
+[43:59:03.285] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:04.071] Browser LOG     ConverterPage render time: 7516.20ms
+[43:59:38.507] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:38.524] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:39.543] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:51.586] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:51.624] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:51.629] Browser LOG     ConverterPage render time: 47417.20ms
+[43:59:51.629] Browser LOG     Header render time: 55310.50ms
+[43:59:51.629] Browser LOG     Header render time: 3.30ms
+[43:59:51.629] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771389423895}
+[43:59:51.673] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:51.861] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:51.914] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:51.984] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:58.213] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[43:59:58.350] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:58.367] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[43:59:58.566] Browser LOG     Header render time: 86.30ms
+[43:59:58.566] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[43:59:58.566] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[43:59:58.566] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771389430958}
+[43:59:58.572] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[44:00:00.035] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[44:00:38.478] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[44:00:38.556] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[44:00:38.566] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[44:00:54.054] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[44:00:54.054] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[44:00:58.365] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[44:00:58.381] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD
+[44:00:59.541] Server  LOG     [v0] Market rate from Xe: 185.717 LRD/USD

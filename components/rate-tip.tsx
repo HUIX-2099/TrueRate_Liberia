@@ -8,8 +8,6 @@ const TIP_KEYS = [
   "rateTip.strongerLrd",
   "rateTip.rateMeaning",
   "rateTip.marketVsOfficial",
-  "rateTip.oneNumber",
-  "rateTip.planWithLrd",
 ] as const
 
 export interface RateTipProps {

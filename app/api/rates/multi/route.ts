@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 
+import { getAggregatedRate } from "@/lib/api/multi-source-rates"
 import { fetchCblLatestRate } from "@/lib/cbl-rates"
 
 const MULTI_API_URL = "https://open.er-api.com/v6/latest/USD"
@@ -76,7 +77,14 @@ export async function GET() {
       }
     }
 
-    if (cbl && cbl.rate > 150 && cbl.rate < 220) rates.LRD = cbl.rate
+    // Same LRD rate as convert/plan/compare: use market rate from main aggregator.
+    try {
+      const aggregated = await getAggregatedRate()
+      if (typeof aggregated.rate === "number" && aggregated.rate > 0) rates.LRD = aggregated.rate
+    } catch {
+      if (cbl && cbl.rate > 150 && cbl.rate < 220) rates.LRD = cbl.rate
+    }
+    if ((!rates.LRD || rates.LRD <= 0) && cbl && cbl.rate > 150 && cbl.rate < 220) rates.LRD = cbl.rate
 
     for (const code of CURRENCY_CODES) {
       if (!rates[code] || rates[code] <= 0) {

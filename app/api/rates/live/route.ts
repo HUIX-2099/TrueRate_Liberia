@@ -109,17 +109,28 @@ export async function GET() {
       },
     ]
 
+    const marketRate = aggregatedData.rate
+    const officialRate = aggregatedData.cblRate ?? null
     return NextResponse.json({
-      rate: aggregatedData.rate,
-      cblRate: aggregatedData.cblRate ?? null,
+      rate: marketRate,
+      marketRate,
+      officialRate,
+      cblRate: officialRate,
       cblLastUpdated: aggregatedData.cblLastUpdated ?? null,
       cblBuying: aggregatedData.cblBuying ?? null,
       cblSelling: aggregatedData.cblSelling ?? null,
-      official: {
-        rate: aggregatedData.rate,
+      market: {
+        rate: marketRate,
         confidence: aggregatedData.confidence,
         sources: aggregatedData.sources,
         timestamp: aggregatedData.timestamp,
+      },
+      official: {
+        rate: officialRate,
+        lastUpdated: aggregatedData.cblLastUpdated ?? null,
+        buying: aggregatedData.cblBuying ?? null,
+        selling: aggregatedData.cblSelling ?? null,
+        sources: ["Central Bank of Liberia"],
       },
       sources: aggregatedData.sources,
       timestamp: aggregatedData.timestamp,

@@ -158,12 +158,17 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="text-lg text-muted-foreground mt-2">LRD per 1 USD</div>
-                {rate != null && rate > 0 && (
-                  <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm mt-3 text-muted-foreground">
-                    <span><span className="font-medium text-foreground">Official (CBL):</span> {cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD{cblLastUpdated ? ` · ${(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}` : ""}</span>
-                    <span><span className="font-medium text-foreground">Market:</span> {rate != null && rate > 0 ? rate.toFixed(2) : "—"} LRD/USD</span>
+                <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm mt-3">
+                  <div className="rounded-lg bg-muted/50 px-3 py-1.5 text-muted-foreground">
+                    <span className="font-medium text-foreground">Market rate</span>
+                    <span className="ml-1.5">{rate != null && rate > 0 ? rate.toFixed(2) : "—"} LRD/USD</span>
                   </div>
-                )}
+                  <div className="rounded-lg bg-muted/50 px-3 py-1.5 text-muted-foreground">
+                    <span className="font-medium text-foreground">Official (CBL)</span>
+                    <span className="ml-1.5">{cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD</span>
+                    {cblLastUpdated ? <span className="ml-1 text-xs">· {(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}</span> : null}
+                  </div>
+                </div>
                 <RateTip className="mt-3 justify-center" />
               </div>
 

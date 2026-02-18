@@ -57,8 +57,10 @@ export default function AnalyticsPage() {
         if (typeof liveData.rate === "number") {
           setCurrentRate(liveData.rate)
         }
-        if (Array.isArray(liveData?.official?.sources)) {
-          setSourceCount(liveData.official.sources.length)
+        if (Array.isArray(liveData?.sources)) {
+          setSourceCount(liveData.sources.length)
+        } else if (Array.isArray(liveData?.market?.sources)) {
+          setSourceCount(liveData.market.sources.length)
         }
         setLastUpdated(new Date().toLocaleTimeString())
 

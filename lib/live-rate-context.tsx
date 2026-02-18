@@ -166,7 +166,7 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
         // keep existing CBL values on CBL API failure
       }
 
-      const res = await fetch("/api/rates/live")
+      const res = await fetch(`/api/rates/live?t=${Date.now()}`, { cache: "no-store" })
       const data = await res.json()
       const r = typeof data?.rate === "number" && data.rate > 100 && data.rate < 300 ? data.rate : null
       const sources = Array.isArray(data?.sources) ? data.sources : Array.isArray(data?.official?.sources) ? data.official.sources : []

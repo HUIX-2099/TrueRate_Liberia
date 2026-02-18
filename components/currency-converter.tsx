@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeftRight, Calculator } from "lucide-react"
 
 export function CurrencyConverter() {
-  const { rate: currentRate } = useLiveRate()
+  const { effectiveRate: currentRate } = useLiveRate()
   const [usdAmount, setUsdAmount] = useState<string>("100")
   const [lrdAmount, setLrdAmount] = useState<string>("")
   const [activeInput, setActiveInput] = useState<"usd" | "lrd">("usd")

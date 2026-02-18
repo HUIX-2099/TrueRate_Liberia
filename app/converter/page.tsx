@@ -85,8 +85,8 @@ const ConverterPageComponent = () => {
   const [copied, setCopied] = useState(false)
   const { rate: contextLrdRate, sources: rateSources, timestamp: rateTimestamp, cblRate: contextCblRate, cblLastUpdated: contextCblLastUpdated, refresh: refreshLiveRate, effectiveRate: contextEffectiveRate } = useLiveRate()
   const [liveRates, setLiveRates] = useState<Record<string, number> | null>(null)
-  // Use shared LRD rate: effectiveRate (user choice of market vs official) when not using multi-currency; else multi-currency LRD
-  const liveRate = liveRates?.LRD ?? (typeof contextEffectiveRate === "number" ? contextEffectiveRate : null)
+  // Same rate for convert, plan, compare: always use live context effective rate for LRD (market vs official by user choice).
+  const liveRate = typeof contextEffectiveRate === "number" ? contextEffectiveRate : (liveRates?.LRD ?? null)
   const [lastUpdate, setLastUpdate] = useState("")
   const [dayChange, setDayChange] = useState(0.85)
   const [loading, setLoading] = useState(false)
@@ -117,7 +117,7 @@ const ConverterPageComponent = () => {
   const effectiveRates: Record<string, number> = {
     ...ratesFromUSD,
     ...(liveRates ?? {}),
-    LRD: liveRates?.LRD ?? (typeof contextEffectiveRate === "number" ? contextEffectiveRate : ratesFromUSD.LRD),
+    LRD: typeof contextEffectiveRate === "number" ? contextEffectiveRate : (liveRates?.LRD ?? ratesFromUSD.LRD),
   }
 
   // Throttled API call for live rates (all currencies)

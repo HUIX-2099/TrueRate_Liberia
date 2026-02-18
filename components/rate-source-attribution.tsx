@@ -73,6 +73,10 @@ export function RateSourceAttribution({
     )
   }
 
+  const hasCbl = cblRate != null && Number.isFinite(cblRate) && cblRate > 0
+  const hasComposite = compositeRate != null && Number.isFinite(compositeRate) && compositeRate > 0
+  const spread = hasCbl && hasComposite ? compositeRate - cblRate : null
+
   return (
     <div className={`space-y-1 ${className}`}>
       <div className="flex flex-wrap items-center gap-2">
@@ -93,6 +97,11 @@ export function RateSourceAttribution({
           <span className="text-xs text-muted-foreground">Aggregated</span>
         )}
       </div>
+      {spread != null && (
+        <p className="text-xs text-muted-foreground">
+          Spread: {spread >= 0 ? "+" : ""}{spread.toFixed(2)} LRD. The gap between official and what changers actually trade. We show both so you see the full picture.
+        </p>
+      )}
       {timestamp && (
         <p className="text-xs text-muted-foreground">Last updated: {formatTime(timestamp)}</p>
       )}

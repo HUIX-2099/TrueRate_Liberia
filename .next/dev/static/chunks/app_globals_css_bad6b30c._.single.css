@@ -1023,6 +1023,10 @@
     margin-left: calc(var(--spacing) * 1);
   }
 
+  .ml-1\.5 {
+    margin-left: calc(var(--spacing) * 1.5);
+  }
+
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
@@ -2106,6 +2110,10 @@
 
   .gap-y-1\.5 {
     row-gap: calc(var(--spacing) * 1.5);
+  }
+
+  .gap-y-2 {
+    row-gap: calc(var(--spacing) * 2);
   }
 
   .self-start {

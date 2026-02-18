@@ -42,6 +42,32 @@ if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
   })
 }
 
+const XE_USD_LRD_URL = "https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=LRD"
+
+/** Fetch market rate from Xe.com converter page (mid-market rate). Source: https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=LRD */
+async function fetchMarketRateFromXe(): Promise<{ rate: number; source: string } | null> {
+  try {
+    const response = await fetch(XE_USD_LRD_URL, {
+      next: { revalidate: 60 },
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; TrueRate-Liberia/1.0; +https://truerate.org)",
+        Accept: "text/html",
+      },
+    })
+    if (!response.ok) return null
+    const html = await response.text()
+    const match = html.match(/1\.00\s*USD\s*=\s*([\d,.]+)\s*LRD/i) ?? html.match(/(\d{3,}\.?\d*)\s*LRD/i)
+    if (!match?.[1]) return null
+    const rate = Number.parseFloat(match[1].replace(/,/g, ""))
+    if (!Number.isFinite(rate) || rate < 100 || rate > 300) return null
+    console.log(`[v0] Market rate from Xe: ${rate} LRD/USD`)
+    return { rate: Number(rate.toFixed(4)), source: "Xe" }
+  } catch (error) {
+    console.error(`[v0] Xe (market) failed:`, error)
+    return null
+  }
+}
+
 /** Fetch market rate only from Exchange Rate API (v6 pair if key set, else v4 latest). Does not affect CBL/official. */
 async function fetchMarketRateFromExchangeRateApi(): Promise<{ rate: number; source: string } | null> {
   const hasKey = EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo"
@@ -54,7 +80,7 @@ async function fetchMarketRateFromExchangeRateApi(): Promise<{ rate: number; sou
   const sourceName = hasKey ? "ExchangeRate-API v6 Pair" : "ExchangeRate API"
   try {
     const response = await fetch(url, {
-      next: { revalidate: 300 },
+      next: { revalidate: 60 },
       headers: { "User-Agent": "TrueRate-Liberia/1.0" },
     })
     if (!response.ok) return null
@@ -74,7 +100,7 @@ async function fetchMarketRateFromExchangeRateApi(): Promise<{ rate: number; sou
 async function fetchFromSource(source: RateSource): Promise<{ rate: number; source: string } | null> {
   try {
     const response = await fetch(source.url, {
-      next: { revalidate: 300 }, // Cache for 5 minutes
+      next: { revalidate: 60 },
       headers: { "User-Agent": "TrueRate-Liberia/1.0" },
     })
 
@@ -97,7 +123,9 @@ async function fetchFromSource(source: RateSource): Promise<{ rate: number; sour
   }
 }
 
+/** Returns market rate (from APIs) and official CBL rate separately. `rate` is always market, never CBL. */
 export async function getAggregatedRate(): Promise<{
+  /** Market rate from aggregated APIs; never the CBL official rate */
   rate: number
   confidence: number
   sources: string[]
@@ -129,13 +157,13 @@ export async function getAggregatedRate(): Promise<{
       cblSelling = Number(cblHomepage.selling.toFixed(4))
     }
   }
-  // CBL is used only for cblRate (Official). Market rate: prefer Exchange Rate API, then fallback aggregate.
-  const exchangeRateApiResult = await fetchMarketRateFromExchangeRateApi()
-  if (exchangeRateApiResult) {
+  // Market rate: prefer Xe.com (mid-market), then aggregate other APIs.
+  const xeResult = await fetchMarketRateFromXe()
+  if (xeResult) {
     return {
-      rate: exchangeRateApiResult.rate,
+      rate: xeResult.rate,
       confidence: 1.0,
-      sources: ["CBL", "License Changers"],
+      sources: [xeResult.source],
       timestamp: new Date().toISOString(),
       cblRate,
       cblLastUpdated,
@@ -144,42 +172,50 @@ export async function getAggregatedRate(): Promise<{
     }
   }
 
-  const results = await Promise.allSettled(RATE_SOURCES.map((source) => fetchFromSource(source)))
+  const marketPromises = [
+    fetchMarketRateFromExchangeRateApi(),
+    ...RATE_SOURCES.map((source) => fetchFromSource(source)),
+  ]
+  const settled = await Promise.allSettled(marketPromises)
 
-  const validResults = results
+  const validResults = settled
     .filter(
-      (result): result is PromiseFulfilledResult<{ rate: number; source: string }> =>
-        result.status === "fulfilled" && result.value !== null,
+      (s): s is PromiseFulfilledResult<{ rate: number; source: string }> =>
+        s.status === "fulfilled" && s.value != null,
     )
-    .map((result) => result.value)
+    .map((s) => s.value)
 
   if (validResults.length === 0) {
     console.log("[v0] All market sources failed, using fallback rate")
     return {
       rate: 179.0, // Fallback market rate
       confidence: 0.7,
-      sources: ["CBL", "License Changers"],
+      sources: ["Market (indicative)"],
       timestamp: new Date().toISOString(),
-      cblRate, // Official (CBL) unchanged; only market rate is fallback
+      cblRate,
       cblLastUpdated,
       cblBuying,
       cblSelling,
     }
   }
 
-  const rates = validResults.map((r) => r.rate)
-  const avgRate = rates.reduce((sum, rate) => sum + rate, 0) / rates.length
+  const rates = validResults.map((r) => r.rate).sort((a, b) => a - b)
+  const mid = rates.length >> 1
+  const medianRate =
+    rates.length % 2 === 1 ? rates[mid]! : (rates[mid - 1]! + rates[mid]!) / 2
 
+  const avgRate = rates.reduce((sum, rate) => sum + rate, 0) / rates.length
   const variance = rates.reduce((sum, rate) => sum + Math.pow(rate - avgRate, 2), 0) / rates.length
   const stdDev = Math.sqrt(variance)
   const confidence = Math.max(0.6, Math.min(1.0, 1 - stdDev / avgRate))
 
-  console.log(`[v0] Aggregated rate: ${avgRate.toFixed(2)} from ${validResults.length} sources`)
+  const sourceNames = [...new Set(validResults.map((r) => r.source))]
+  console.log(`[v0] Market rate (median): ${medianRate.toFixed(2)} from ${validResults.length} feeds: ${sourceNames.join(", ")}`)
 
   return {
-    rate: Number(avgRate.toFixed(4)),
+    rate: Number(medianRate.toFixed(4)),
     confidence: Number(confidence.toFixed(2)),
-    sources: ["CBL", "License Changers"],
+    sources: sourceNames.length > 0 ? sourceNames : ["Market (indicative)"],
     timestamp: new Date().toISOString(),
     cblRate,
     cblLastUpdated,

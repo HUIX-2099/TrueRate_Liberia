@@ -14,11 +14,11 @@ import { useState } from "react"
 import { useLiveRate } from "@/lib/live-rate-context"
 
 export default function ToolsPage() {
-  const { rate: liveRate } = useLiveRate()
+  const { effectiveRate: liveRate } = useLiveRate()
   const [lastUpdate, setLastUpdate] = useState("Just now")
 
-  const alertLow = (liveRate - 2).toFixed(2)
-  const alertHigh = (liveRate + 2).toFixed(2)
+  const alertLow = typeof liveRate === "number" ? (liveRate - 2).toFixed(2) : "—"
+  const alertHigh = typeof liveRate === "number" ? (liveRate + 2).toFixed(2) : "—"
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -65,7 +65,7 @@ export default function ToolsPage() {
               </p>
             </div>
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-              <PlanInLRD rate={liveRate ?? undefined} />
+              <PlanInLRD rate={typeof liveRate === "number" ? liveRate : undefined} />
 
               <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardHeader className="pb-4">
@@ -263,7 +263,7 @@ export default function ToolsPage() {
               </p>
             </div>
             <div className="max-w-xl mx-auto mb-6">
-              <PlanInLRD compact />
+              <PlanInLRD rate={typeof liveRate === "number" ? liveRate : undefined} compact />
             </div>
             <div className="max-w-xl mx-auto mb-8">
               <SMSAlertSignup />

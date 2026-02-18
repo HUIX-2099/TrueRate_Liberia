@@ -45,7 +45,7 @@ export default function RatesPage() {
           setChangers(data.changers)
         }
         if (Array.isArray(data?.sources)) setRateSources(data.sources)
-        else if (Array.isArray(data?.official?.sources)) setRateSources(data.official.sources)
+        else if (Array.isArray(data?.market?.sources)) setRateSources(data.market.sources)
         if (typeof data?.timestamp === "string") setRateTimestamp(data.timestamp)
         if (typeof data?.cblRate === "number") setCblRate(data.cblRate)
         if (typeof data?.cblLastUpdated === "string") setCblLastUpdated(data.cblLastUpdated)
