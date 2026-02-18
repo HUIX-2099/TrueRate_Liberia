@@ -3268,3 +3268,598 @@ https://react.dev/link/hydration-mismatch
 [10:19:06.504] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
 [10:19:06.675] Browser LOG     ConverterPage render time: 66430.10ms
 [10:19:06.675] Browser LOG     ConverterPage render time: 112.20ms
+[10:19:59.845] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:19:59.856] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:20:00.013] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:20:07.429] Browser LOG     ConverterPage render time: 53364.30ms
+[10:20:07.429] Browser LOG     ConverterPage render time: 104.90ms
+[10:20:12.265] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:20:12.292] Server  ERROR   TypeError: fetch failed
+[10:20:12.293] Server  ERROR   TypeError: fetch failed
+[10:20:12.471] Server  ERROR   ⨯ Error: failed to pipe response
+[10:20:12.474] Server  ERROR   TypeError: fetch failed
+[10:20:12.486] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:20:12.523] Server  ERROR   TypeError: fetch failed
+[10:20:12.523] Server  ERROR   TypeError: fetch failed
+[10:20:12.567] Server  ERROR   ⨯ Error: failed to pipe response
+[10:20:12.568] Server  ERROR   TypeError: fetch failed
+[10:20:12.568] Server  ERROR   TypeError: fetch failed
+[10:20:12.569] Server  ERROR   TypeError: fetch failed
+[10:20:12.685] Server  ERROR   ⨯ Error: failed to pipe response
+[10:21:15.631] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:21:15.653] Server  ERROR   TypeError: fetch failed
+[10:21:15.653] Server  ERROR   TypeError: fetch failed
+[10:21:15.770] Server  ERROR   ⨯ Error: failed to pipe response
+[10:21:15.773] Server  ERROR   TypeError: fetch failed
+[10:21:15.773] Server  ERROR   TypeError: fetch failed
+[10:21:15.773] Server  ERROR   TypeError: fetch failed
+[10:21:15.842] Server  ERROR   ⨯ Error: failed to pipe response
+[10:21:15.864] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:21:15.867] Server  ERROR   TypeError: fetch failed
+[10:21:15.868] Server  ERROR   TypeError: fetch failed
+[10:21:15.918] Server  ERROR   ⨯ Error: failed to pipe response
+[10:21:15.937] Server  ERROR   TypeError: fetch failed
+[10:21:16.079] Browser LOG     ConverterPage render time: 59967.20ms
+[10:21:16.079] Browser LOG     ConverterPage render time: 122.30ms
+[10:21:29.760] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:21:29.775] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:21:29.777] Server  ERROR   TypeError: fetch failed
+[10:21:29.778] Server  ERROR   TypeError: fetch failed
+[10:21:29.890] Server  ERROR   ⨯ Error: failed to pipe response
+[10:21:29.892] Server  ERROR   TypeError: fetch failed
+[10:21:29.892] Server  ERROR   TypeError: fetch failed
+[10:21:29.893] Server  ERROR   TypeError: fetch failed
+[10:21:29.954] Server  ERROR   ⨯ Error: failed to pipe response
+[10:21:29.955] Server  ERROR   TypeError: fetch failed
+[10:21:30.007] Server  ERROR   TypeError: fetch failed
+[10:21:30.013] Server  ERROR   TypeError: fetch failed
+[10:21:30.203] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:08.158] Server  ERROR   TypeError: fetch failed
+[10:23:08.159] Server  ERROR   TypeError: fetch failed
+[10:23:08.272] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:08.282] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:23:08.284] Server  ERROR   TypeError: fetch failed
+[10:23:08.284] Server  ERROR   TypeError: fetch failed
+[10:23:08.357] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:08.358] Server  ERROR   TypeError: fetch failed
+[10:23:39.617] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:23:39.621] Server  ERROR   TypeError: fetch failed
+[10:23:39.621] Server  ERROR   TypeError: fetch failed
+[10:23:39.707] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:39.708] Server  ERROR   TypeError: fetch failed
+[10:23:39.724] Server  ERROR   TypeError: fetch failed
+[10:23:39.724] Server  ERROR   TypeError: fetch failed
+[10:23:39.766] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:39.809] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:23:39.811] Server  ERROR   TypeError: fetch failed
+[10:23:39.812] Server  ERROR   TypeError: fetch failed
+[10:23:39.865] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:39.866] Server  ERROR   TypeError: fetch failed
+[10:23:40.031] Browser LOG     ConverterPage render time: 59773.90ms
+[10:23:40.031] Browser LOG     ConverterPage render time: 145.90ms
+[10:23:44.850] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:23:44.862] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:23:44.864] Server  ERROR   TypeError: fetch failed
+[10:23:44.864] Server  ERROR   TypeError: fetch failed
+[10:23:44.923] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:44.924] Server  ERROR   TypeError: fetch failed
+[10:23:44.925] Server  ERROR   TypeError: fetch failed
+[10:23:44.925] Server  ERROR   TypeError: fetch failed
+[10:23:44.969] Server  ERROR   ⨯ Error: failed to pipe response
+[10:23:44.970] Server  ERROR   TypeError: fetch failed
+[10:23:44.985] Server  ERROR   TypeError: fetch failed
+[10:23:44.986] Server  ERROR   TypeError: fetch failed
+[10:23:45.024] Server  ERROR   ⨯ Error: failed to pipe response
+[10:25:23.271] Server  ERROR   TypeError: fetch failed
+[10:25:23.272] Server  ERROR   TypeError: fetch failed
+[10:25:23.392] Server  ERROR   ⨯ Error: failed to pipe response
+[10:25:23.406] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:25:23.407] Server  ERROR   TypeError: fetch failed
+[10:25:23.408] Server  ERROR   TypeError: fetch failed
+[10:25:23.448] Server  ERROR   ⨯ Error: failed to pipe response
+[10:25:23.449] Server  ERROR   TypeError: fetch failed
+[10:25:54.729] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:25:54.741] Server  ERROR   TypeError: fetch failed
+[10:25:54.741] Server  ERROR   TypeError: fetch failed
+[10:25:54.811] Server  ERROR   ⨯ Error: failed to pipe response
+[10:25:54.812] Server  ERROR   TypeError: fetch failed
+[10:25:54.812] Server  ERROR   TypeError: fetch failed
+[10:25:54.813] Server  ERROR   TypeError: fetch failed
+[10:25:54.813] Server  ERROR   TypeError: fetch failed
+[10:25:54.854] Server  ERROR   ⨯ Error: failed to pipe response
+[10:25:54.907] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:25:54.908] Server  ERROR   TypeError: fetch failed
+[10:25:54.909] Server  ERROR   TypeError: fetch failed
+[10:25:54.989] Server  ERROR   ⨯ Error: failed to pipe response
+[10:25:54.991] Server  ERROR   TypeError: fetch failed
+[10:25:54.991] Browser LOG     ConverterPage render time: 59838.80ms
+[10:25:55.153] Browser LOG     ConverterPage render time: 160.20ms
+[10:25:59.967] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:25:59.971] Server  ERROR   TypeError: fetch failed
+[10:25:59.971] Server  ERROR   TypeError: fetch failed
+[10:26:00.038] Server  ERROR   ⨯ Error: failed to pipe response
+[10:26:00.039] Server  ERROR   TypeError: fetch failed
+[10:26:00.045] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:26:00.057] Server  ERROR   TypeError: fetch failed
+[10:26:00.057] Server  ERROR   TypeError: fetch failed
+[10:26:00.097] Server  ERROR   ⨯ Error: failed to pipe response
+[10:26:00.098] Server  ERROR   TypeError: fetch failed
+[10:26:00.098] Server  ERROR   TypeError: fetch failed
+[10:26:00.099] Server  ERROR   TypeError: fetch failed
+[10:26:00.168] Server  ERROR   ⨯ Error: failed to pipe response
+[10:27:37.366] Server  ERROR   TypeError: fetch failed
+[10:27:37.367] Server  ERROR   TypeError: fetch failed
+[10:27:37.444] Server  ERROR   ⨯ Error: failed to pipe response
+[10:27:37.454] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:27:37.456] Server  ERROR   TypeError: fetch failed
+[10:27:37.456] Server  ERROR   TypeError: fetch failed
+[10:27:37.512] Server  ERROR   ⨯ Error: failed to pipe response
+[10:27:37.513] Server  ERROR   TypeError: fetch failed
+[10:28:08.656] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:28:08.671] Server  ERROR   TypeError: fetch failed
+[10:28:08.672] Server  ERROR   TypeError: fetch failed
+[10:28:08.766] Server  ERROR   ⨯ Error: failed to pipe response
+[10:28:08.767] Server  ERROR   TypeError: fetch failed
+[10:28:08.767] Server  ERROR   TypeError: fetch failed
+[10:28:08.767] Server  ERROR   TypeError: fetch failed
+[10:28:08.768] Server  ERROR   TypeError: fetch failed
+[10:28:08.820] Server  ERROR   ⨯ Error: failed to pipe response
+[10:28:08.893] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:28:08.895] Server  ERROR   TypeError: fetch failed
+[10:28:08.895] Server  ERROR   TypeError: fetch failed
+[10:28:08.941] Server  ERROR   ⨯ Error: failed to pipe response
+[10:28:08.942] Server  ERROR   TypeError: fetch failed
+[10:28:08.943] Browser LOG     ConverterPage render time: 59885.70ms
+[10:28:09.104] Browser LOG     ConverterPage render time: 157.70ms
+[10:28:23.270] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:28:23.281] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:28:23.283] Server  ERROR   TypeError: fetch failed
+[10:28:23.284] Server  ERROR   TypeError: fetch failed
+[10:28:23.348] Server  ERROR   ⨯ Error: failed to pipe response
+[10:28:23.349] Server  ERROR   TypeError: fetch failed
+[10:28:23.349] Server  ERROR   TypeError: fetch failed
+[10:28:23.349] Server  ERROR   TypeError: fetch failed
+[10:28:23.387] Server  ERROR   ⨯ Error: failed to pipe response
+[10:28:23.388] Server  ERROR   TypeError: fetch failed
+[10:28:23.400] Server  ERROR   TypeError: fetch failed
+[10:28:23.401] Server  ERROR   TypeError: fetch failed
+[10:28:23.442] Server  ERROR   ⨯ Error: failed to pipe response
+[10:30:01.674] Server  ERROR   TypeError: fetch failed
+[10:30:01.675] Server  ERROR   TypeError: fetch failed
+[10:30:01.790] Server  ERROR   ⨯ Error: failed to pipe response
+[10:30:01.804] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:30:01.805] Server  ERROR   TypeError: fetch failed
+[10:30:01.805] Server  ERROR   TypeError: fetch failed
+[10:30:01.852] Server  ERROR   ⨯ Error: failed to pipe response
+[10:30:01.853] Server  ERROR   TypeError: fetch failed
+[10:30:33.170] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:30:33.173] Server  ERROR   TypeError: fetch failed
+[10:30:33.173] Server  ERROR   TypeError: fetch failed
+[10:30:33.248] Server  ERROR   ⨯ Error: failed to pipe response
+[10:30:33.249] Server  ERROR   TypeError: fetch failed
+[10:30:33.249] Server  ERROR   TypeError: fetch failed
+[10:30:33.257] Server  ERROR   TypeError: fetch failed
+[10:30:33.257] Server  ERROR   TypeError: fetch failed
+[10:30:33.300] Server  ERROR   ⨯ Error: failed to pipe response
+[10:30:33.336] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:30:33.338] Server  ERROR   TypeError: fetch failed
+[10:30:33.338] Server  ERROR   TypeError: fetch failed
+[10:30:33.407] Server  ERROR   ⨯ Error: failed to pipe response
+[10:30:33.408] Server  ERROR   TypeError: fetch failed
+[10:30:33.569] Browser LOG     ConverterPage render time: 59766.50ms
+[10:30:33.569] Browser LOG     ConverterPage render time: 147.10ms
+[10:32:16.816] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:32:16.822] Server  ERROR   TypeError: fetch failed
+[10:32:16.822] Server  ERROR   TypeError: fetch failed
+[10:32:16.928] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:16.929] Server  ERROR   TypeError: fetch failed
+[10:32:16.929] Server  ERROR   TypeError: fetch failed
+[10:32:16.974] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:16.975] Server  ERROR   TypeError: fetch failed
+[10:32:16.982] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:32:16.991] Server  ERROR   TypeError: fetch failed
+[10:32:16.991] Server  ERROR   TypeError: fetch failed
+[10:32:17.030] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:17.031] Server  ERROR   TypeError: fetch failed
+[10:32:17.063] Server  ERROR   TypeError: fetch failed
+[10:32:17.064] Server  ERROR   TypeError: fetch failed
+[10:32:17.211] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:17.228] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:32:17.231] Server  ERROR   TypeError: fetch failed
+[10:32:17.231] Server  ERROR   TypeError: fetch failed
+[10:32:17.313] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:17.314] Server  ERROR   TypeError: fetch failed
+[10:32:48.285] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:32:48.355] Server  ERROR   TypeError: fetch failed
+[10:32:48.356] Server  ERROR   TypeError: fetch failed
+[10:32:48.425] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:48.426] Server  ERROR   TypeError: fetch failed
+[10:32:48.427] Server  ERROR   TypeError: fetch failed
+[10:32:48.427] Server  ERROR   TypeError: fetch failed
+[10:32:48.427] Server  ERROR   TypeError: fetch failed
+[10:32:48.485] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:48.518] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:32:48.519] Server  ERROR   TypeError: fetch failed
+[10:32:48.519] Server  ERROR   TypeError: fetch failed
+[10:32:48.607] Server  ERROR   ⨯ Error: failed to pipe response
+[10:32:48.608] Server  ERROR   TypeError: fetch failed
+[10:32:48.608] Browser LOG     ConverterPage render time: 59968.20ms
+[10:32:48.769] Browser LOG     ConverterPage render time: 163.00ms
+[10:34:41.357] Server  ERROR   TypeError: fetch failed
+[10:34:41.357] Server  ERROR   TypeError: fetch failed
+[10:34:41.474] Server  ERROR   ⨯ Error: failed to pipe response
+[10:34:41.482] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:34:41.488] Server  ERROR   TypeError: fetch failed
+[10:34:41.489] Server  ERROR   TypeError: fetch failed
+[10:34:41.545] Server  ERROR   ⨯ Error: failed to pipe response
+[10:34:41.546] Server  ERROR   TypeError: fetch failed
+[10:34:41.552] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:34:41.554] Server  ERROR   TypeError: fetch failed
+[10:34:41.554] Server  ERROR   TypeError: fetch failed
+[10:34:41.594] Server  ERROR   ⨯ Error: failed to pipe response
+[10:34:41.595] Server  ERROR   TypeError: fetch failed
+[10:34:41.622] Server  ERROR   TypeError: fetch failed
+[10:34:41.622] Server  ERROR   TypeError: fetch failed
+[10:34:41.668] Server  ERROR   ⨯ Error: failed to pipe response
+[10:34:41.673] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:34:41.674] Server  ERROR   TypeError: fetch failed
+[10:34:41.674] Server  ERROR   TypeError: fetch failed
+[10:34:41.721] Server  ERROR   ⨯ Error: failed to pipe response
+[10:34:41.722] Server  ERROR   TypeError: fetch failed
+[10:35:12.767] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:35:12.781] Server  ERROR   TypeError: fetch failed
+[10:35:12.782] Server  ERROR   TypeError: fetch failed
+[10:35:12.840] Server  ERROR   ⨯ Error: failed to pipe response
+[10:35:12.841] Server  ERROR   TypeError: fetch failed
+[10:35:12.842] Server  ERROR   TypeError: fetch failed
+[10:35:12.842] Server  ERROR   TypeError: fetch failed
+[10:35:12.843] Server  ERROR   TypeError: fetch failed
+[10:35:12.890] Server  ERROR   ⨯ Error: failed to pipe response
+[10:35:12.938] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:35:12.940] Server  ERROR   TypeError: fetch failed
+[10:35:12.940] Server  ERROR   TypeError: fetch failed
+[10:35:13.016] Server  ERROR   ⨯ Error: failed to pipe response
+[10:35:13.019] Server  ERROR   TypeError: fetch failed
+[10:35:13.179] Browser LOG     ConverterPage render time: 59728.20ms
+[10:35:13.179] Browser LOG     ConverterPage render time: 152.90ms
+[10:36:28.172] Server  ERROR   TypeError: fetch failed
+[10:36:28.172] Server  ERROR   TypeError: fetch failed
+[10:36:28.271] Server  ERROR   ⨯ Error: failed to pipe response
+[10:36:28.280] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:36:28.283] Server  ERROR   TypeError: fetch failed
+[10:36:28.283] Server  ERROR   TypeError: fetch failed
+[10:36:28.331] Server  ERROR   ⨯ Error: failed to pipe response
+[10:36:28.332] Server  ERROR   TypeError: fetch failed
+[10:36:28.338] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:36:28.340] Server  ERROR   TypeError: fetch failed
+[10:36:28.340] Server  ERROR   TypeError: fetch failed
+[10:36:28.386] Server  ERROR   ⨯ Error: failed to pipe response
+[10:36:28.387] Server  ERROR   TypeError: fetch failed
+[10:36:28.408] Server  ERROR   TypeError: fetch failed
+[10:36:28.408] Server  ERROR   TypeError: fetch failed
+[10:36:28.445] Server  ERROR   ⨯ Error: failed to pipe response
+[10:36:28.450] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:36:28.451] Server  ERROR   TypeError: fetch failed
+[10:36:28.451] Server  ERROR   TypeError: fetch failed
+[10:36:28.494] Server  ERROR   ⨯ Error: failed to pipe response
+[10:36:28.496] Server  ERROR   TypeError: fetch failed
+[10:36:59.714] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:36:59.776] Server  ERROR   TypeError: fetch failed
+[10:36:59.777] Server  ERROR   TypeError: fetch failed
+[10:36:59.865] Server  ERROR   ⨯ Error: failed to pipe response
+[10:36:59.866] Server  ERROR   TypeError: fetch failed
+[10:36:59.866] Server  ERROR   TypeError: fetch failed
+[10:36:59.867] Server  ERROR   TypeError: fetch failed
+[10:36:59.867] Server  ERROR   TypeError: fetch failed
+[10:36:59.934] Server  ERROR   ⨯ Error: failed to pipe response
+[10:36:59.973] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:36:59.975] Server  ERROR   TypeError: fetch failed
+[10:36:59.975] Server  ERROR   TypeError: fetch failed
+[10:37:00.040] Server  ERROR   ⨯ Error: failed to pipe response
+[10:37:00.041] Server  ERROR   TypeError: fetch failed
+[10:37:00.202] Browser LOG     ConverterPage render time: 59973.70ms
+[10:37:00.202] Browser LOG     ConverterPage render time: 143.10ms
+[10:38:43.325] Server  ERROR   TypeError: fetch failed
+[10:38:43.325] Server  ERROR   TypeError: fetch failed
+[10:38:43.439] Server  ERROR   ⨯ Error: failed to pipe response
+[10:38:43.452] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:38:43.458] Server  ERROR   TypeError: fetch failed
+[10:38:43.458] Server  ERROR   TypeError: fetch failed
+[10:38:43.516] Server  ERROR   ⨯ Error: failed to pipe response
+[10:38:43.517] Server  ERROR   TypeError: fetch failed
+[10:38:43.526] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:38:43.528] Server  ERROR   TypeError: fetch failed
+[10:38:43.528] Server  ERROR   TypeError: fetch failed
+[10:38:43.568] Server  ERROR   ⨯ Error: failed to pipe response
+[10:38:43.568] Server  ERROR   TypeError: fetch failed
+[10:38:43.584] Server  ERROR   TypeError: fetch failed
+[10:38:43.584] Server  ERROR   TypeError: fetch failed
+[10:38:43.629] Server  ERROR   ⨯ Error: failed to pipe response
+[10:38:43.639] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:38:43.640] Server  ERROR   TypeError: fetch failed
+[10:38:43.640] Server  ERROR   TypeError: fetch failed
+[10:38:43.680] Server  ERROR   ⨯ Error: failed to pipe response
+[10:38:43.681] Server  ERROR   TypeError: fetch failed
+[10:39:14.809] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:39:14.827] Server  ERROR   TypeError: fetch failed
+[10:39:14.827] Server  ERROR   TypeError: fetch failed
+[10:39:14.928] Server  ERROR   ⨯ Error: failed to pipe response
+[10:39:14.933] Server  ERROR   TypeError: fetch failed
+[10:39:14.933] Server  ERROR   TypeError: fetch failed
+[10:39:14.933] Server  ERROR   TypeError: fetch failed
+[10:39:14.933] Server  ERROR   TypeError: fetch failed
+[10:39:14.972] Server  ERROR   ⨯ Error: failed to pipe response
+[10:39:15.038] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:39:15.044] Server  ERROR   TypeError: fetch failed
+[10:39:15.044] Server  ERROR   TypeError: fetch failed
+[10:39:15.088] Server  ERROR   ⨯ Error: failed to pipe response
+[10:39:15.089] Server  ERROR   TypeError: fetch failed
+[10:39:15.252] Browser LOG     ConverterPage render time: 59794.90ms
+[10:39:15.252] Browser LOG     ConverterPage render time: 138.30ms
+[10:40:59.164] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:40:59.171] Server  ERROR   TypeError: fetch failed
+[10:40:59.172] Server  ERROR   TypeError: fetch failed
+[10:40:59.293] Server  ERROR   ⨯ Error: failed to pipe response
+[10:40:59.296] Server  ERROR   TypeError: fetch failed
+[10:40:59.296] Server  ERROR   TypeError: fetch failed
+[10:40:59.351] Server  ERROR   ⨯ Error: failed to pipe response
+[10:40:59.353] Server  ERROR   TypeError: fetch failed
+[10:40:59.360] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:40:59.363] Server  ERROR   TypeError: fetch failed
+[10:40:59.363] Server  ERROR   TypeError: fetch failed
+[10:40:59.435] Server  ERROR   ⨯ Error: failed to pipe response
+[10:40:59.436] Server  ERROR   TypeError: fetch failed
+[10:40:59.457] Server  ERROR   TypeError: fetch failed
+[10:40:59.457] Server  ERROR   TypeError: fetch failed
+[10:40:59.534] Server  ERROR   ⨯ Error: failed to pipe response
+[10:40:59.555] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:40:59.574] Server  ERROR   TypeError: fetch failed
+[10:40:59.583] Server  ERROR   TypeError: fetch failed
+[10:40:59.760] Server  ERROR   ⨯ Error: failed to pipe response
+[10:40:59.763] Server  ERROR   TypeError: fetch failed
+[10:41:11.228] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:41:11.232] Server  ERROR   TypeError: fetch failed
+[10:41:11.233] Server  ERROR   TypeError: fetch failed
+[10:41:11.287] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:11.288] Server  ERROR   TypeError: fetch failed
+[10:41:11.288] Server  ERROR   TypeError: fetch failed
+[10:41:11.348] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:11.349] Server  ERROR   TypeError: fetch failed
+[10:41:11.349] Server  ERROR   TypeError: fetch failed
+[10:41:11.371] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:41:11.373] Server  ERROR   TypeError: fetch failed
+[10:41:11.373] Server  ERROR   TypeError: fetch failed
+[10:41:11.420] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:11.421] Server  ERROR   TypeError: fetch failed
+[10:41:11.597] Browser LOG     ConverterPage render time: 59882.90ms
+[10:41:11.597] Browser LOG     ConverterPage render time: 69.10ms
+[10:41:17.279] Server  ERROR   TypeError: fetch failed
+[10:41:17.280] Server  ERROR   TypeError: fetch failed
+[10:41:17.454] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:17.481] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:41:17.485] Server  ERROR   TypeError: fetch failed
+[10:41:17.485] Server  ERROR   TypeError: fetch failed
+[10:41:17.544] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:17.549] Server  ERROR   TypeError: fetch failed
+[10:41:17.568] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:41:17.585] Server  ERROR   TypeError: fetch failed
+[10:41:17.585] Server  ERROR   TypeError: fetch failed
+[10:41:17.634] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:17.636] Server  ERROR   TypeError: fetch failed
+[10:41:17.654] Server  ERROR   TypeError: fetch failed
+[10:41:17.654] Server  ERROR   TypeError: fetch failed
+[10:41:17.695] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:17.701] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:41:17.708] Server  ERROR   TypeError: fetch failed
+[10:41:17.708] Server  ERROR   TypeError: fetch failed
+[10:41:17.758] Server  ERROR   ⨯ Error: failed to pipe response
+[10:41:17.759] Server  ERROR   TypeError: fetch failed
+[10:42:11.300] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:15.898] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:15.911] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:17.206] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:17.304] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:17.375] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:17.560] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[10:42:18.070] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:18.087] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:18.162] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:18.589] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ClientPageRoot Component={{...}} serverProvidedParams={{...}}>
+      <ConverterPageComponent params={Promise} searchParams={Promise}>
+        <div className="min-h-scre...">
+          <HeaderComponent>
+          <ErrorBoundary>
+            <main className="flex-1">
+              <section className="relative o...">
+                <div>
+                <div className="container ...">
+                  <div>
+                  <OfflineBanner>
+                  <Card className="max-w-2xl ...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="p-4 sm:p-6...">
+                        <div data-slot="card-content" className="p-4 sm:p-6...">
+                          <div className="flex flex-...">
+                            <div className="flex items...">
+                              <div>
+                              <div className="min-w-0">
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <p className="text-xs text-muted-foreground mt-2">
++                                 rate.currentIsSource
+-                                 Current rate is the one you selected (Market or Official).
+                                ...
+                            ...
+                          ...
+              ...
+          ...
+
+[10:42:18.589] Browser LOG     ConverterPage render time: 8.30ms
+[10:42:18.589] Browser LOG     Header render time: 20.80ms
+[10:42:18.589] Browser LOG     Header render time: 56.70ms
+[10:42:18.589] Browser LOG     ConverterPage render time: 46.90ms
+[10:42:18.589] Browser LOG     ConverterPage render time: 73.60ms
+[10:42:18.589] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[10:42:18.589] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/converter","route":"/converter"}
+[10:42:18.589] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/converter","route":"/converter"}
+[10:42:18.589] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771457114001} /_vercel/insights/view
+[10:42:18.589] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771457114001} /_vercel/insights/view
+[10:42:18.589] Browser LOG     ConverterPage render time: 82.90ms
+[10:42:18.782] Browser LOG     ConverterPage render time: 235.00ms
+[10:42:19.232] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:19.289] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:42:19.587] Browser LOG     ConverterPage render time: 864.50ms
+[10:42:19.587] Browser LOG     ConverterPage render time: 115.60ms
+[10:43:11.321] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:43:15.767] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:43:15.794] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:43:18.475] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:43:18.519] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:43:21.389] Browser LOG     ConverterPage render time: 60818.80ms
+[10:43:21.389] Browser LOG     ConverterPage render time: 65.20ms
+[10:44:12.816] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:44:15.755] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:44:15.771] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:44:18.469] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:44:18.604] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:44:19.388] Browser LOG     ConverterPage render time: 58194.50ms
+[10:44:19.388] Browser LOG     ConverterPage render time: 89.60ms
+[10:45:11.273] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:45:15.763] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:45:15.778] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:45:18.461] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:45:18.588] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:45:19.388] Browser LOG     ConverterPage render time: 59892.40ms
+[10:45:19.388] Browser LOG     ConverterPage render time: 79.30ms
+[10:46:11.250] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:46:15.764] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:46:15.792] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:46:18.461] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:46:20.389] Browser LOG     ConverterPage render time: 61403.80ms
+[10:46:20.655] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:46:21.388] Browser LOG     ConverterPage render time: 689.00ms
+[10:47:11.226] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:47:15.763] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:47:15.830] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:47:18.563] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:47:18.622] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:47:23.392] Browser LOG     ConverterPage render time: 62105.30ms
+[10:47:23.392] Browser LOG     ConverterPage render time: 77.70ms
+[10:48:12.638] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:48:15.756] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:48:15.775] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:48:18.112] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:48:18.252] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:48:18.425] Browser LOG     ConverterPage render time: 55272.80ms
+[10:48:18.425] Browser LOG     ConverterPage render time: 96.60ms
+[10:49:11.254] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:49:15.758] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:49:15.775] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:49:18.134] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:49:18.145] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:49:18.402] Browser LOG     ConverterPage render time: 59903.00ms
+[10:49:18.402] Browser LOG     ConverterPage render time: 68.40ms
+[10:50:11.254] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:50:15.756] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:50:15.771] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:50:18.114] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:50:19.979] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:50:20.161] Browser LOG     ConverterPage render time: 61649.80ms
+[10:50:20.161] Browser LOG     ConverterPage render time: 107.30ms
+[10:51:01.196] Server  LOG     ✓ Compiled in 524ms
+[10:51:01.395] Browser LOG     ConverterPage render time: 41214.80ms
+[10:51:01.448] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:01.604] Browser LOG     ConverterPage render time: 223.20ms
+[10:51:03.781] Server  LOG     ✓ Compiled in 531ms
+[10:51:04.065] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:04.099] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:04.105] Browser LOG     ConverterPage render time: 2368.50ms
+[10:51:04.105] Browser LOG     Header render time: 525775.30ms
+[10:51:04.105] Browser LOG     ConverterPage render time: 47.40ms
+[10:51:04.265] Browser LOG     ConverterPage render time: 161.10ms
+[10:51:04.265] Browser LOG     ConverterPage render time: 36.00ms
+[10:51:04.378] Browser LOG     ConverterPage render time: 112.50ms
+[10:51:07.148] Server  LOG     ✓ Compiled in 121ms
+[10:51:07.320] Browser LOG     ConverterPage render time: 2939.30ms
+[10:51:10.651] Server  LOG     ✓ Compiled in 102ms
+[10:51:10.818] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:10.902] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:11.114] Browser LOG     ConverterPage render time: 3544.20ms
+[10:51:11.114] Browser LOG     Header render time: 6887.70ms
+[10:51:11.114] Browser LOG     ConverterPage render time: 34.20ms
+[10:51:11.114] Browser LOG     ConverterPage render time: 82.90ms
+[10:51:11.114] Browser LOG     ConverterPage render time: 111.10ms
+[10:51:11.199] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:11.230] Browser LOG     ConverterPage render time: 109.50ms
+[10:51:15.768] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:15.782] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:18.122] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:51:19.378] Browser LOG     ConverterPage render time: 8145.10ms
+[10:52:10.962] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:52:12.882] Browser LOG     ConverterPage render time: 53501.60ms
+[10:52:12.921] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:52:15.811] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:52:15.835] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:52:18.144] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:52:18.331] Browser LOG     ConverterPage render time: 5447.60ms
+[10:53:10.871] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:11.230] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:12.413] Browser LOG     ConverterPage render time: 54077.20ms
+[10:53:14.521] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:14.532] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:14.555] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:14.846] Browser LOG     Header render time: 1438783.60ms
+[10:53:14.846] Browser LOG     Header render time: 2.20ms
+[10:53:14.846] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771457770248} /_vercel/insights/view
+[10:53:14.905] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:15.759] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:15.773] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:18.112] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:18.313] Browser LOG     ConverterPage render time: 5898.70ms
+[10:53:52.383] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:52.397] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:52.405] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:53:52.577] Browser LOG     Header render time: 37858.70ms
+[10:53:52.577] Browser LOG     ConverterPage render time: 0.70ms
+[10:53:52.577] Browser LOG     Header render time: 1.30ms
+[10:53:52.577] Browser LOG     ConverterPage render time: 30.90ms
+[10:53:52.577] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771457808110} /_vercel/insights/view
+[10:53:52.577] Browser LOG     ConverterPage render time: 73.60ms
+[10:53:52.824] Browser LOG     ConverterPage render time: 245.20ms
+[10:53:55.345] Browser LOG     ConverterPage render time: 2449.90ms
+[10:53:55.345] Browser LOG     ConverterPage render time: 67.80ms
+[10:53:55.749] Browser LOG     ConverterPage render time: 401.90ms
+[10:53:56.908] Browser LOG     ConverterPage render time: 1082.40ms
+[10:53:56.908] Browser LOG     ConverterPage render time: 73.10ms
+[10:53:57.298] Browser LOG     ConverterPage render time: 388.00ms
+[10:54:06.131] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:54:06.325] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[10:54:06.585] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:54:06.597] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:54:06.968] Browser LOG     Header render time: 108.20ms
+[10:54:06.968] Browser LOG     ConverterPage render time: 107.20ms
+[10:54:06.968] Browser LOG     ConverterPage render time: 33.50ms
+[10:54:06.968] Browser LOG     ConverterPage render time: 60.20ms
+[10:54:06.968] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[10:54:06.968] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/converter","route":"/converter"}
+[10:54:06.968] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771457822510} /_vercel/insights/view
+[10:54:07.109] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:54:07.534] Browser LOG     ConverterPage render time: 254.10ms
+[10:54:07.534] Browser LOG     ConverterPage render time: 130.40ms
+[10:54:11.242] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:54:11.439] Browser LOG     ConverterPage render time: 14139.80ms

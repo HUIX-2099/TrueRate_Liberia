@@ -52,6 +52,7 @@ import { PlanInLRD } from "@/components/plan-in-lrd"
 import { RateTip } from "@/components/rate-tip"
 import { RateSourceSelector } from "@/components/rate-source-selector"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { getTranslation } from "@/lib/i18n/translations"
 
 // Multi-currency support
 const currencies = [
@@ -77,10 +78,16 @@ const ratesFromUSD: Record<string, number> = {
   XOF: 603,
 }
 
+const RATE_CURRENT_IS_SOURCE_KEY = "rate.currentIsSource"
+
 const ConverterPageComponent = () => {
   usePerformanceMonitor("ConverterPage")
 
   const { t } = useLanguage()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  // Use stable default (en) until mounted to avoid server/client hydration mismatch from language in localStorage
+  const currentIsSourceText = mounted ? t(RATE_CURRENT_IS_SOURCE_KEY) : getTranslation("en", RATE_CURRENT_IS_SOURCE_KEY)
   const [fromCurrency, setFromCurrency] = useState("USD")
   const [toCurrency, setToCurrency] = useState("LRD")
   const [amount, setAmount] = useState("100")
@@ -358,7 +365,7 @@ const ConverterPageComponent = () => {
                             </div>
                           )}
                           {!useCustomRate && isLiveRateReady && (
-                            <p className="text-xs text-muted-foreground mt-2">{t("rate.currentIsSource")}</p>
+                            <p className="text-xs text-muted-foreground mt-2">{currentIsSourceText}</p>
                           )}
                           <RateSourceAttribution
                             sources={rateSources}
