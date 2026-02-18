@@ -47,7 +47,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // One-line rate tips (education near converter/rate)
     'rateTip.strongerLrd': 'A stronger LRD means you need fewer LRD to buy 1 USD.',
     'rateTip.rateMeaning': 'The rate is how many LRD you need for 1 USD—lower number means LRD is stronger.',
-    'rateTip.marketVsOfficial': 'Market rate is what changers actually trade; we show it alongside the CBL official rate.',
+    'rateTip.marketVsOfficial': 'Market rate is what changers actually trade; we also show the CBL official rate.',
     'rateTip.oneNumber': 'One number, many uses: the same rate helps you convert, plan, and compare.',
     'rateTip.planWithLrd': 'Planning in LRD is easier when you know the rate—you can budget and hedge with confidence.',
     
@@ -225,7 +225,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'rateBrief.thisWeekDown': 'This week rate down {pct}% from last week.',
     'rateTip.strongerLrd': 'When LRD strong, you pay less LRD for 1 dollar.',
     'rateTip.rateMeaning': 'Rate = how much LRD for 1 USD. Small number = LRD strong.',
-    'rateTip.marketVsOfficial': 'Market rate what changer use; we show CBL official too.',
+    'rateTip.marketVsOfficial': 'Market rate is what changers use; we also show the CBL official rate.',
     'rateTip.oneNumber': 'Same rate for convert, plan, compare.',
     'rateTip.planWithLrd': 'When you know the rate you can plan in LRD with confidence.',
     'widget.bestRate': 'Best Rate Today-O!',
@@ -546,7 +546,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'rateBrief.thisWeekDown': 'This week rate down {pct}% vs last week.',
     'rateTip.strongerLrd': 'A stronger LRD means you need fewer LRD to buy 1 USD.',
     'rateTip.rateMeaning': 'The rate is how many LRD for 1 USD—lower means LRD stronger.',
-    'rateTip.marketVsOfficial': 'Market rate is what changers trade; we show CBL official too.',
+    'rateTip.marketVsOfficial': 'Market rate is what changers trade; we also show the CBL official rate.',
     'rateTip.oneNumber': 'One number for convert, plan, compare.',
     'rateTip.planWithLrd': 'Knowing the rate helps you plan in LRD with confidence.',
     'simple.mode': 'Laa-kaa Tɔɔ',

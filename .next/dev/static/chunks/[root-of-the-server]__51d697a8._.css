@@ -6792,6 +6792,14 @@
     background-color: var(--background);
   }
 
+  .data-\[state\=active\]\:bg-secondary[data-state="active"] {
+    background-color: var(--secondary);
+  }
+
+  .data-\[state\=active\]\:text-green-700[data-state="active"] {
+    color: var(--color-green-700);
+  }
+
   .data-\[state\=active\]\:shadow-sm[data-state="active"] {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a), 0 1px 2px -1px var(--tw-shadow-color, #0000001a);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -7224,6 +7232,19 @@
       .supports-\[backdrop-filter\]\:bg-background\/80 {
         background-color: color-mix(in oklab, var(--background) 80%, transparent);
       }
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:not-sr-only {
+      clip-path: none;
+      white-space: normal;
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      position: static;
+      overflow: visible;
     }
   }
 
@@ -8442,6 +8463,10 @@
 
   .dark\:data-\[state\=active\]\:text-foreground:is(.dark *)[data-state="active"] {
     color: var(--foreground);
+  }
+
+  .dark\:data-\[state\=active\]\:text-green-400:is(.dark *)[data-state="active"] {
+    color: var(--color-green-400);
   }
 
   .dark\:data-\[state\=checked\]\:bg-primary:is(.dark *)[data-state="checked"] {

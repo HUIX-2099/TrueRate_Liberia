@@ -15,7 +15,7 @@ const RATE_SOURCES_KEY = "truerate-live-sources"
 const RATE_CBL_KEY = "truerate-live-cbl"
 const RATE_CBL_LAST_UPDATED_KEY = "truerate-live-cbl-last-updated"
 const RATE_SOURCE_PREF_KEY = "truerate-rate-source"
-const DEFAULT_RATE = 192.5
+const DEFAULT_RATE = 185.72 // Market mid rate: main 185.72, Sell Rate 187.72 (effectiveRate + 2)
 const REFRESH_MS = 60_000 // Auto-update market and CBL rate every minute
 
 export type RateSourcePreference = "market" | "official"

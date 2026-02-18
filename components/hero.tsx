@@ -169,7 +169,7 @@ export function Hero() {
                     {cblLastUpdated ? <span className="ml-1 text-xs">· {(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}</span> : null}
                   </div>
                 </div>
-                <RateTip className="mt-3 justify-center" />
+                <RateTip className="mt-3 justify-center" excludeKeys={["rateTip.strongerLrd", "rateTip.marketVsOfficial"]} />
               </div>
 
               {/* Buy/Sell Rates: when Official (CBL) selected, show CBL buying/selling; else effectiveRate ± 2 */}
@@ -205,6 +205,7 @@ export function Hero() {
                   cblLastUpdated={cblLastUpdated}
                   compositeRate={rate ?? undefined}
                   compact={false}
+                  hideSources
                 />
                 <StaleRateWarning timestamp={timestamp} onRefresh={refresh} compact />
                 <RateFeedbackButtons rate={rate ?? undefined} compact />

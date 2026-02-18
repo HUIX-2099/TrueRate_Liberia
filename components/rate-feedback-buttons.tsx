@@ -149,22 +149,22 @@ export function RateFeedbackButtons({
   if (compact) {
     return (
       <TooltipProvider>
-        <div className={`flex flex-col gap-1 ${className}`}>
-          <div className="inline-flex items-center gap-1">
+        <div className={`flex flex-wrap items-center gap-2 ${className}`}>
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/30 p-0.5">
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  variant="ghost"
+                  variant={submitted === "confirm" ? "secondary" : "ghost"}
                   size="icon"
-                  className="h-8 w-8"
+                  className="h-7 w-7 rounded-full shrink-0"
                   onClick={() => sendFeedback("confirm")}
                   disabled={loading || submitted === "confirm"}
                   aria-label="Confirm this rate"
                 >
                   {submitted === "confirm" ? (
-                    <Check className="h-4 w-4 text-green-600" />
+                    <Check className="h-3.5 w-3.5 text-green-600 dark:text-green-400" />
                   ) : (
-                    <ThumbsUp className="h-4 w-4" />
+                    <ThumbsUp className="h-3.5 w-3.5" />
                   )}
                 </Button>
               </TooltipTrigger>
@@ -173,14 +173,14 @@ export function RateFeedbackButtons({
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  variant="ghost"
+                  variant={submitted === "flag" ? "secondary" : "ghost"}
                   size="icon"
-                  className="h-8 w-8"
+                  className="h-7 w-7 rounded-full shrink-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                   onClick={() => sendFeedback("flag")}
                   disabled={loading || submitted === "flag"}
-                  aria-label="Flag issue"
+                  aria-label="Flag incorrect rate"
                 >
-                  <Flag className="h-4 w-4" />
+                  <Flag className="h-3.5 w-3.5" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent>Flag incorrect rate</TooltipContent>

@@ -17,6 +17,8 @@ export interface RateSourceAttributionProps {
   compositeRate?: number
   /** Compact layout for small spaces */
   compact?: boolean
+  /** Hide the "Sources: …" line (e.g. on hero) */
+  hideSources?: boolean
   className?: string
 }
 
@@ -44,6 +46,7 @@ export function RateSourceAttribution({
   cblLastUpdated,
   compositeRate,
   compact = false,
+  hideSources = false,
   className = "",
 }: RateSourceAttributionProps) {
   const sourceLabel = sources.length === 0
@@ -79,24 +82,26 @@ export function RateSourceAttribution({
 
   return (
     <div className={`space-y-1 ${className}`}>
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs text-muted-foreground">Sources:</span>
-        {sources.length > 0 ? (
-          sources.length <= 2 ? (
-            sources.map((s) => (
-              <Badge key={s} variant="secondary" className="text-xs font-normal">
-                {s}
+      {!hideSources && (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs text-muted-foreground">Sources:</span>
+          {sources.length > 0 ? (
+            sources.length <= 2 ? (
+              sources.map((s) => (
+                <Badge key={s} variant="secondary" className="text-xs font-normal">
+                  {s}
+                </Badge>
+              ))
+            ) : (
+              <Badge variant="secondary" className="text-xs font-normal">
+                {sources.length} sources
               </Badge>
-            ))
+            )
           ) : (
-            <Badge variant="secondary" className="text-xs font-normal">
-              {sources.length} sources
-            </Badge>
-          )
-        ) : (
-          <span className="text-xs text-muted-foreground">Aggregated</span>
-        )}
-      </div>
+            <span className="text-xs text-muted-foreground">Aggregated</span>
+          )}
+        </div>
+      )}
       {spread != null && (
         <p className="text-xs text-muted-foreground">
           Spread: {spread >= 0 ? "+" : ""}{spread.toFixed(2)} LRD. The gap between official and what changers actually trade. We show both so you see the full picture.

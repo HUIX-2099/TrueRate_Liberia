@@ -42,9 +42,11 @@ if (EXCHANGE_RATE_API_KEY && EXCHANGE_RATE_API_KEY !== "demo") {
   })
 }
 
-const XE_USD_LRD_URL = "https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=LRD"
+/** Xe.com converter page — primary market source (mid-market rate). https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=LRD */
+const XE_USD_LRD_URL =
+  "https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=LRD"
 
-/** Fetch market rate from Xe.com converter page (mid-market rate). Source: https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=LRD */
+/** Fetch market rate from Xe.com converter page (mid-market rate). Uses the same URL as the public converter. */
 async function fetchMarketRateFromXe(): Promise<{ rate: number; source: string } | null> {
   try {
     const response = await fetch(XE_USD_LRD_URL, {
@@ -56,7 +58,11 @@ async function fetchMarketRateFromXe(): Promise<{ rate: number; source: string }
     })
     if (!response.ok) return null
     const html = await response.text()
-    const match = html.match(/1\.00\s*USD\s*=\s*([\d,.]+)\s*LRD/i) ?? html.match(/(\d{3,}\.?\d*)\s*LRD/i)
+    // Match "1.00 USD = 185.70965101 LRD" or table "185.71 LRD" (mid-market rate)
+    const match =
+      html.match(/1\.00\s*USD\s*=\s*([\d,.]+)\s*LRD/i) ??
+      html.match(/(18[0-9]\.[\d]+)\s*LRD/i) ??
+      html.match(/(\d{3,}\.?\d*)\s*LRD/i)
     if (!match?.[1]) return null
     const rate = Number.parseFloat(match[1].replace(/,/g, ""))
     if (!Number.isFinite(rate) || rate < 100 || rate > 300) return null
@@ -188,7 +194,7 @@ export async function getAggregatedRate(): Promise<{
   if (validResults.length === 0) {
     console.log("[v0] All market sources failed, using fallback rate")
     return {
-      rate: 179.0, // Fallback market rate
+      rate: 185.72, // Fallback market mid rate (Sell 187.72 = rate + 2)
       confidence: 0.7,
       sources: ["Market (indicative)"],
       timestamp: new Date().toISOString(),
