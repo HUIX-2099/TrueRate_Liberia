@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { PageTheme } from "@/components/page-theme"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -78,6 +79,7 @@ export default function StatusPage() {
   const overallLabel = overall === "ok" ? "All systems operational" : overall === "degraded" ? "Degraded" : "Outage"
 
   return (
+    <PageTheme theme="dark">
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="py-12 sm:py-14 md:py-24 flex-1 bg-background">
@@ -172,5 +174,6 @@ export default function StatusPage() {
       </main>
       <Footer />
     </div>
+    </PageTheme>
   )
 }

@@ -878,3 +878,972 @@ It can also happen if the client has a browser extension installed which messes 
 [05:58:35.823] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440091070} /_vercel/insights/view
 [05:58:35.829] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
 [05:58:35.834] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[05:58:51.257] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[05:59:02.690] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[05:59:30.164] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[05:59:30.186] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:59:30.332] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:59:30.332] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:59:30.332] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440145739}
+[05:59:31.483] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[05:59:35.060] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[05:59:51.254] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:00:32.882] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:00:51.220] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:00:58.715] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:00:58.848] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:00:58.861] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:00:59.010] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:00:59.106] Browser LOG     Header render time: 82.70ms
+[06:00:59.106] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:00:59.106] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[06:00:59.106] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440234513} /_vercel/insights/view
+[06:01:02.272] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:01:52.225] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:01:58.861] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:01:58.874] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:01:58.929] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:02:49.761] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:02:49.772] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:02:49.788] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:02:49.806] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:02:49.816] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:02:49.827] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:02:49.835] Browser LOG     Header render time: 110796.60ms
+[06:02:49.835] Browser LOG     Header render time: 2.40ms
+[06:02:49.835] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440345230} /_vercel/insights/view
+[06:02:58.900] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:03:35.175] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:03:49.810] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:04:00.078] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:04:35.176] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:04:49.821] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:04:58.892] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:36.518] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:49.754] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:53.183] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:53.189] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:53.200] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:53.334] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:53.338] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:53.383] Browser LOG     Header render time: 183426.90ms
+[06:05:53.383] Browser LOG     Header render time: 2.00ms
+[06:05:53.383] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440528655} /_vercel/insights/view
+[06:05:53.390] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:05:58.882] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:06:35.179] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:06:53.201] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:06:53.226] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:06:58.907] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:07:35.199] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:07:47.663] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:07:47.663] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:07:53.181] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:07:53.194] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:08:00.243] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:08:35.214] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:08:53.188] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:08:53.207] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:08:58.897] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:09:36.354] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:09:53.270] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:09:53.282] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:09:58.907] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:10:35.190] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:10:53.200] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:10:53.217] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:10:58.898] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:11:24.781] Browser LOG     Header render time: 331478.70ms
+[06:11:24.781] Browser LOG     Header render time: 5.50ms
+[06:11:24.781] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/tools color: rgb(120, 120, 120) color: inherit {"dp":"/tools","o":"http://localhost:3000/tools","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440860257} /_vercel/insights/view
+[06:11:31.402] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:11:31.413] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:11:31.483] Browser LOG     Header render time: 6718.10ms
+[06:11:31.483] Browser LOG     Header render time: 0.60ms
+[06:11:31.483] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/tools/remittance color: rgb(120, 120, 120) color: inherit {"dp":"/tools/remittance","o":"http://localhost:3000/tools/remittance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440866977} /_vercel/insights/view
+[06:11:35.184] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:11:59.966] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:26.529] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:12:26.529] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:12:28.042] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:28.060] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:28.137] Browser LOG     Header render time: 56650.60ms
+[06:12:28.137] Browser LOG     Header render time: 3.50ms
+[06:12:28.137] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/rates color: rgb(120, 120, 120) color: inherit {"dp":"/rates","o":"http://localhost:3000/rates","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440923631} /_vercel/insights/view
+[06:12:35.176] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:43.987] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:44.018] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:44.086] Browser LOG     Header render time: 15913.30ms
+[06:12:44.086] Browser LOG     Header render time: 1.50ms
+[06:12:44.086] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:3000/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440939547} /_vercel/insights/view
+[06:12:44.104] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:44.123] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:44.250] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:44.267] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:12:44.357] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:12:44.357] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:12:58.917] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:01.710] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:01.720] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:01.728] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:01.867] Browser LOG     Header render time: 17754.20ms
+[06:13:01.867] Browser LOG     Header render time: 1.80ms
+[06:13:01.867] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440957304} /_vercel/insights/view
+[06:13:01.917] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:03.845] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:03.866] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:10.943] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:10.965] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:10.991] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:10.997] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:11.005] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:11.006] Browser LOG     Header render time: 9187.50ms
+[06:13:11.006] Browser LOG     Header render time: 1.10ms
+[06:13:11.006] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440966496} /_vercel/insights/view
+[06:13:11.025] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:14.603] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:14.612] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:14.620] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:14.769] Browser LOG     Header render time: 3694.90ms
+[06:13:14.769] Browser LOG     Header render time: 1.10ms
+[06:13:14.769] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440970193} /_vercel/insights/view
+[06:13:14.775] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:14.780] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:14.784] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:35.185] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:38.435] Browser LOG     Header render time: 23720.10ms
+[06:13:38.435] Browser LOG     Header render time: 0.90ms
+[06:13:38.435] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/community color: rgb(120, 120, 120) color: inherit {"dp":"/community","o":"http://localhost:3000/community","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771440993915} /_vercel/insights/view
+[06:13:50.089] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:50.100] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:50.105] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:50.230] Browser LOG     Header render time: 11762.20ms
+[06:13:50.230] Browser LOG     Header render time: 1.30ms
+[06:13:50.230] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441005679} /_vercel/insights/view
+[06:13:50.273] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:50.282] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:50.287] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:13:58.887] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:14:36.460] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:14:50.096] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:14:50.109] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:14:58.913] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:15:35.198] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:15:50.107] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:15:50.124] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:15:58.906] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:16:35.210] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:16:50.134] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:16:50.155] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:17:00.171] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:17:35.217] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:17:50.100] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:17:50.116] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:17:58.906] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:18:36.569] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:18:50.155] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:18:50.172] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:18:58.888] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:19:35.249] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:19:50.194] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:19:50.220] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:19:58.969] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:28.337] Server  LOG     ✓ Compiled in 3.5s
+[06:20:28.437] Browser LOG     Header render time: 396545.90ms
+[06:20:28.437] Browser LOG     Header render time: 14.70ms
+[06:20:28.438] Browser LOG     Header render time: 3242405.40ms
+[06:20:28.438] Browser LOG     Header render time: 74.50ms
+[06:20:28.569] Server  LOG     ✓ Compiled in 0ms
+[06:20:28.748] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:28.999] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:29.025] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:30.559] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:30.567] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:20:34.929] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:34.988] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:35.098] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="page.tsx">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+              <HomePage params={Promise} searchParams={Promise}>
+                <div className="min-h-scre...">
+                  <HeaderComponent>
+                    <header className="sticky top...">
+                      <div className="container ...">
+                        <LinkComponent href="/" className="flex items..." aria-label="TrueRate L...">
+                          <a className="flex items..." aria-label="TrueRate L..." ref={function} ...>
+                            <div
++                             className="flex h-[98px] w-[128px] sm:h-[106px] sm:w-[144px] md:h-[106px] md:w-[160px] i..."
+-                             className="flex h-[108px] w-[138px] sm:h-[116px] sm:w-[154px] md:h-[116px] md:w-[170px] ..."
+                            >
+                        ...
+                    ...
+                  ...
+          ...
+        ...
+
+[06:20:35.098] Browser LOG     Header render time: 31.20ms
+[06:20:35.098] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:20:35.098] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[06:20:35.098] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441410505} /_vercel/insights/view
+[06:20:36.800] Browser LOG     Header render time: 8016.90ms
+[06:20:37.212] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:38.016] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:20:38.068] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:38.421] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[06:20:38.878] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:20:39.132] Browser LOG     Header render time: 97.90ms
+[06:20:39.132] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:20:39.132] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/community","route":"/community"}
+[06:20:39.132] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/community color: rgb(120, 120, 120) color: inherit {"dp":"/community","o":"http://localhost:3000/community","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441414464} /_vercel/insights/view
+[06:21:34.942] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:21:34.964] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:21:37.800] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:21:39.197] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:22:34.969] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:22:34.998] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:22:35.027] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:22:41.436] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:23:34.887] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:23:34.914] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:23:34.960] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:23:39.184] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:24:34.991] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:24:35.008] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:24:36.268] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:24:39.233] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:12.523] Browser LOG     Header render time: 277569.60ms
+[06:25:12.523] Browser LOG     Header render time: 3.90ms
+[06:25:12.523] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/tools color: rgb(120, 120, 120) color: inherit {"dp":"/tools","o":"http://localhost:3000/tools","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441688147} /_vercel/insights/view
+[06:25:34.892] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:38.777] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:38.782] Browser LOG     Header render time: 26267.10ms
+[06:25:38.782] Browser LOG     Header render time: 1.90ms
+[06:25:38.782] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/business color: rgb(120, 120, 120) color: inherit {"dp":"/business","o":"http://localhost:3000/business","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441714418} /_vercel/insights/view
+[06:25:38.858] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:39.696] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:39.703] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:39.709] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:39.836] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:40.077] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:40.096] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:40.661] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:50.548] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:50.554] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:50.564] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:50.803] Browser LOG     Header render time: 11862.70ms
+[06:25:50.803] Browser LOG     Header render time: 2.00ms
+[06:25:50.803] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441726284} /_vercel/insights/view
+[06:25:50.811] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:50.820] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:50.888] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:51.758] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:25:51.935] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:51.941] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:52.085] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:52.184] Browser LOG     Header render time: 102.10ms
+[06:25:52.184] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:25:52.184] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[06:25:52.184] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441727843} /_vercel/insights/view
+[06:25:53.890] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:25:56.338] Browser LOG     Header render time: 4191.60ms
+[06:25:56.338] Browser LOG     Header render time: 2.00ms
+[06:25:56.338] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/tools color: rgb(120, 120, 120) color: inherit {"dp":"/tools","o":"http://localhost:3000/tools","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441731969} /_vercel/insights/view
+[06:26:39.298] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:26:51.969] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:27:09.246] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:27:09.255] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:27:09.330] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:27:09.522] Browser LOG     Header render time: 73013.70ms
+[06:27:09.522] Browser LOG     Header render time: 1.80ms
+[06:27:09.522] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441804986} /_vercel/insights/view
+[06:27:09.873] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:27:10.567] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:27:10.578] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:27:52.061] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:28:01.368] Server  LOG     ✓ Compiled in 305ms
+[06:28:01.513] Browser LOG     Header render time: 52182.30ms
+[06:28:02.127] Browser LOG     Header render time: 442651.70ms
+[06:28:09.308] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:28:09.322] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:28:36.388] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:28:51.978] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:09.308] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:09.342] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:35.212] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:35.344] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:35.368] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:35.497] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:35.542] Browser LOG     Header render time: 93918.60ms
+[06:29:35.542] Browser LOG     ConverterPage render time: 1.60ms
+[06:29:35.542] Browser LOG     Header render time: 3.60ms
+[06:29:35.542] Browser LOG     ConverterPage render time: 35.50ms
+[06:29:35.542] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441951091} /_vercel/insights/view
+[06:29:35.542] Browser LOG     ConverterPage render time: 65.30ms
+[06:29:35.795] Browser LOG     ConverterPage render time: 247.80ms
+[06:29:36.299] Browser LOG     ConverterPage render time: 504.00ms
+[06:29:47.667] Browser LOG     ConverterPage render time: 11308.80ms
+[06:29:47.667] Browser LOG     ConverterPage render time: 54.50ms
+[06:29:48.046] Browser LOG     ConverterPage render time: 378.20ms
+[06:29:49.259] Browser LOG     ConverterPage render time: 1155.10ms
+[06:29:49.259] Browser LOG     ConverterPage render time: 54.30ms
+[06:29:49.629] Browser LOG     ConverterPage render time: 369.50ms
+[06:29:50.772] Browser LOG     ConverterPage render time: 1085.30ms
+[06:29:50.772] Browser LOG     ConverterPage render time: 53.80ms
+[06:29:51.162] Browser LOG     ConverterPage render time: 389.30ms
+[06:29:51.909] Browser LOG     ConverterPage render time: 686.80ms
+[06:29:51.909] Browser LOG     ConverterPage render time: 56.20ms
+[06:29:52.291] Browser LOG     ConverterPage render time: 380.90ms
+[06:29:53.429] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:29:54.265] Browser LOG     ConverterPage render time: 1969.60ms
+[06:30:23.659] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:30:23.669] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:30:23.680] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:30:23.772] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:30:23.831] Browser LOG     ConverterPage render time: 29475.90ms
+[06:30:23.831] Browser LOG     Header render time: 48301.20ms
+[06:30:23.831] Browser LOG     Header render time: 1.90ms
+[06:30:23.831] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771441999396} /_vercel/insights/view
+[06:30:23.838] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:30:23.935] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:30:35.207] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:30:51.988] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:31:17.239] Server  LOG     ✓ Compiled in 788ms
+[06:31:17.268] Browser LOG     Header render time: 53046.50ms
+[06:31:17.273] Browser LOG     Header render time: 195237.00ms
+[06:31:17.273] Browser LOG     Header render time: 128.30ms
+[06:31:19.139] Browser LOG     Header render time: 1254.70ms
+[06:31:20.474] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:31:23.760] Browser LOG     Header render time: 6860.40ms
+[06:31:23.807] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:31:23.856] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:31:52.039] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:31:54.183] Server  LOG     ✓ Compiled in 333ms
+[06:32:23.733] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:32:23.753] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:32:35.288] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:32:52.027] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:33:23.754] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:33:23.783] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:33:36.395] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:33:52.027] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:23.762] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:23.791] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:32.292] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:32.368] Browser LOG     Header render time: 188637.20ms
+[06:34:32.368] Browser LOG     Header render time: 3.40ms
+[06:34:32.368] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:3000/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771442247949} /_vercel/insights/view
+[06:34:32.430] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:32.443] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:32.479] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:32.558] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:32.604] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:32.667] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:34:32.667] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:34:33.147] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:34:33.147] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:34:35.204] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:34:54.381] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:35:30.036] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:35:30.036] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:35:30.729] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:35:30.729] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:35:34.221] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:35:34.221] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:35:35.232] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:35:51.978] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:36:36.410] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:36:51.966] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:37:35.227] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:37:53.272] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:38:35.261] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:38:52.100] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:39:36.584] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:39:52.037] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:40:35.241] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:40:53.187] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:41:35.262] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:41:52.039] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:42:36.499] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:42:52.037] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:43:35.276] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:43:53.128] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:44:35.272] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:44:42.921] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:44:43.179] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:44:43.186] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:44:43.211] Browser LOG     Header render time: 35.50ms
+[06:44:43.211] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:44:43.211] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/analytics","route":"/analytics"}
+[06:44:43.211] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:3000/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771442859003} /_vercel/insights/view
+[06:44:44.802] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:44:44.825] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:44:44.841] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:44:44.907] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:44:44.907] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:44:45.013] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:44:45.013] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:45:35.280] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:43.182] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:44.052] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:44.063] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:44.075] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:44.675] Browser LOG     Header render time: 60942.10ms
+[06:45:44.675] Browser LOG     Header render time: 2.00ms
+[06:45:44.675] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771442919929} /_vercel/insights/view
+[06:45:44.731] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:46.114] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:46.139] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:54.092] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:54.121] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:54.128] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:54.194] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:54.200] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:54.223] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:45:54.236] Browser LOG     Header render time: 10009.90ms
+[06:45:54.236] Browser LOG     Header render time: 1.50ms
+[06:45:54.236] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:3000/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771442929943} /_vercel/insights/view
+[06:45:54.236] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:45:54.236] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:45:55.286] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:45:55.286] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:46:35.237] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:46:43.180] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:08.794] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:08.810] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:08.846] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:09.044] Browser LOG     Header render time: 74722.70ms
+[06:47:09.044] Browser LOG     Header render time: 1.10ms
+[06:47:09.044] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771443004669} /_vercel/insights/view
+[06:47:09.109] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:10.038] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:10.092] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:35.264] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:36.911] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:36.930] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:36.969] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:37.088] Browser LOG     Header render time: 28070.80ms
+[06:47:37.088] Browser LOG     ConverterPage render time: 1.20ms
+[06:47:37.088] Browser LOG     Header render time: 2.60ms
+[06:47:37.088] Browser LOG     ConverterPage render time: 32.30ms
+[06:47:37.088] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771443032744} /_vercel/insights/view
+[06:47:37.088] Browser LOG     ConverterPage render time: 79.40ms
+[06:47:37.088] Browser LOG     ConverterPage render time: 19.20ms
+[06:47:37.306] Browser LOG     ConverterPage render time: 216.00ms
+[06:47:37.946] Browser LOG     ConverterPage render time: 638.00ms
+[06:47:43.211] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:43.378] Browser LOG     ConverterPage render time: 5431.10ms
+[06:47:47.717] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:47.725] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:47.730] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:47.859] Browser LOG     ConverterPage render time: 4362.20ms
+[06:47:47.859] Browser LOG     Header render time: 10787.20ms
+[06:47:47.859] Browser LOG     Header render time: 1.30ms
+[06:47:47.859] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771443043535} /_vercel/insights/view
+[06:47:47.968] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:47.974] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:47:47.980] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:48:37.198] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:48:43.146] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:48:47.694] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:48:47.708] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:49:35.237] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:49:44.526] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:49:47.688] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:49:47.707] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:50:35.287] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:50:38.800] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:50:38.824] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:50:38.839] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:50:39.020] Browser LOG     Header render time: 171129.70ms
+[06:50:39.020] Browser LOG     ConverterPage render time: 0.90ms
+[06:50:39.020] Browser LOG     Header render time: 1.30ms
+[06:50:39.020] Browser LOG     ConverterPage render time: 56.90ms
+[06:50:39.020] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771443214667} /_vercel/insights/view
+[06:50:39.020] Browser LOG     ConverterPage render time: 81.10ms
+[06:50:39.291] Browser LOG     ConverterPage render time: 269.30ms
+[06:50:43.098] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:50:43.301] Browser LOG     ConverterPage render time: 4009.30ms
+[06:51:36.464] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:51:38.819] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:51:39.025] Browser LOG     ConverterPage render time: 55721.70ms
+[06:51:43.143] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:51:43.403] Browser LOG     ConverterPage render time: 4311.70ms
+[06:52:35.289] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:52:38.822] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:52:41.272] Browser LOG     ConverterPage render time: 57931.50ms
+[06:52:43.133] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:52:43.327] Browser LOG     ConverterPage render time: 2054.50ms
+[06:53:35.275] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:53:38.823] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:53:39.029] Browser LOG     ConverterPage render time: 55700.00ms
+[06:53:44.987] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:53:46.221] Browser LOG     ConverterPage render time: 7191.00ms
+[06:54:35.280] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:54:38.826] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:54:39.032] Browser LOG     ConverterPage render time: 52809.10ms
+[06:54:43.158] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:54:43.338] Browser LOG     ConverterPage render time: 4304.50ms
+[06:55:36.412] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:55:38.822] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:55:39.038] Browser LOG     ConverterPage render time: 55698.00ms
+[06:55:43.097] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:55:43.308] Browser LOG     ConverterPage render time: 4269.00ms
+[06:56:35.260] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:56:38.869] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:56:43.163] Server  ERROR   TypeError: fetch failed
+[06:56:43.164] Server  ERROR   TypeError: fetch failed
+[06:56:43.291] Server  ERROR   ⨯ Error: failed to pipe response
+[06:56:43.306] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[06:56:43.307] Server  ERROR   TypeError: fetch failed
+[06:56:43.307] Server  ERROR   TypeError: fetch failed
+[06:56:43.357] Server  ERROR   ⨯ Error: failed to pipe response
+[06:56:43.362] Server  ERROR   TypeError: fetch failed
+[06:56:43.562] Browser LOG     ConverterPage render time: 60253.50ms
+[06:56:49.408] Server  ERROR   TypeError: fetch failed
+[06:56:49.409] Server  ERROR   TypeError: fetch failed
+[06:56:49.511] Server  ERROR   ⨯ Error: failed to pipe response
+[06:56:49.512] Server  ERROR   TypeError: fetch failed
+[06:56:49.691] Browser LOG     ConverterPage render time: 6126.30ms
+[07:01:50.658] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:02:01.006] Server  ERROR   TypeError: fetch failed
+[07:02:01.007] Server  ERROR   TypeError: fetch failed
+[07:02:01.205] Server  ERROR   ⨯ Error: failed to pipe response
+[07:02:01.409] Browser LOG     ConverterPage render time: 59890.70ms
+[07:02:02.131] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:02:04.083] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:02:04.291] Browser LOG     ConverterPage render time: 2880.80ms
+[07:02:47.084] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:02:50.637] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:02:50.836] Browser LOG     ConverterPage render time: 46542.20ms
+[07:02:54.931] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:02:55.132] Browser LOG     ConverterPage render time: 4294.40ms
+[07:03:48.630] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:03:50.632] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:03:50.825] Browser LOG     ConverterPage render time: 55691.80ms
+[07:03:54.916] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:03:55.112] Browser LOG     ConverterPage render time: 4284.50ms
+[07:04:47.098] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:04:50.808] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:04:53.668] Browser LOG     ConverterPage render time: 58553.30ms
+[07:04:55.468] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:04:55.668] Browser LOG     ConverterPage render time: 1982.80ms
+[07:05:20.444] Server  LOG     ✓ Compiled in 313ms
+[07:05:47.216] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:05:49.356] Server  LOG     ✓ Compiled in 379ms
+[07:05:49.507] Server  LOG     ✓ Compiled in 11ms
+[07:05:49.724] Browser LOG     Header render time: 659024.30ms
+[07:05:49.724] Browser LOG     ConverterPage render time: 54068.60ms
+[07:05:49.948] Browser LOG     Header render time: 1819130.50ms
+[07:05:50.636] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:05:50.831] Browser LOG     ConverterPage render time: 1102.60ms
+[07:05:50.999] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:05:56.153] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:05:57.439] Browser LOG     ConverterPage render time: 6608.60ms
+[07:06:50.672] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:06:50.879] Browser LOG     ConverterPage render time: 53436.40ms
+[07:06:52.100] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:06:52.110] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:06:52.127] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:06:52.399] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:06:52.415] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:06:52.545] Browser LOG     ConverterPage render time: 1300.70ms
+[07:06:52.545] Browser LOG     Header render time: 62457.80ms
+[07:06:52.545] Browser LOG     Header render time: 2.10ms
+[07:06:52.545] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444187973} /_vercel/insights/view
+[07:06:52.696] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:06:54.912] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:07:34.189] Browser LOG     Header render time: 41993.50ms
+[07:07:34.189] Browser LOG     Header render time: 0.50ms
+[07:07:34.189] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/docs#embed color: rgb(120, 120, 120) color: inherit {"dp":"/docs","o":"http://localhost:3000/docs#embed","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444229970} /_vercel/insights/view
+[07:07:48.316] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:07:54.913] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:08:00.226] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:08:00.264] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:08:00.279] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:08:00.393] Browser LOG     Header render time: 26114.60ms
+[07:08:00.393] Browser LOG     Header render time: 1.40ms
+[07:08:00.393] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444256088} /_vercel/insights/view
+[07:08:00.398] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:08:00.464] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:08:00.515] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:08:47.061] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:09:00.278] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:09:00.293] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:09:21.388] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:09:47.103] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:09:54.935] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:10:00.233] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:10:00.256] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:10:37.022] Server  LOG     ✓ Compiled in 601ms
+[07:10:45.949] Server  LOG     ✓ Compiled in 916ms
+[07:10:48.852] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:10:52.621] Server  LOG     ✓ Compiled in 103ms
+[07:10:54.979] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:10:58.618] Server  LOG     ✓ Compiled in 386ms
+[07:10:59.340] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:10:59.571] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:11:00.850] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+        <HomePage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main>
+            <Footer>
+              <footer className="border-t b...">
+                <div className="container ...">
+                  <div className="grid gap-8...">
+                    <div>
+                    <div>
+                    <div className="space-y-3">
+                      <h3>
+                      <ul className="space-y-2 ...">
+                        <li>
+                        <li>
+                        <li>
+                        <li>
+                          <LinkComponent href="/about" className="text-muted...">
+                            <a
+                              className="text-muted-foreground hover:text-foreground transition-colors"
+                              ref={function}
+                              onClick={function onClick}
+                              onMouseEnter={function onMouseEnter}
+                              onTouchStart={function onTouchStart}
++                             href="/about"
+-                             href="/docs#embed"
+                            >
++                             About Us
+-                             Embed Widget
+                    ...
+                  ...
+    ...
+
+[07:11:00.850] Browser LOG     Header render time: 6.40ms
+[07:11:00.850] Browser LOG     Header render time: 102.60ms
+[07:11:00.850] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:11:00.850] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:11:00.850] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:11:00.850] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444435926} /_vercel/insights/view
+[07:11:00.850] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444435927} /_vercel/insights/view
+[07:11:01.082] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:01.097] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:01.635] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:01.698] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:01.711] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:01.856] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:02.245] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:47.172] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:50.637] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:11:50.968] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:50.986] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:51.414] Browser LOG     Header render time: 33.80ms
+[07:11:51.414] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:11:51.414] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:11:51.414] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444486938} /_vercel/insights/view
+[07:11:53.114] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:11:53.279] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:53.291] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:53.493] Browser LOG     Header render time: 93.50ms
+[07:11:53.493] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:11:53.493] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:11:53.493] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444489278} /_vercel/insights/view
+[07:11:53.850] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:11:53.977] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:53.988] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:54.176] Browser LOG     Header render time: 76.80ms
+[07:11:54.176] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:11:54.176] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:11:54.176] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444489961} /_vercel/insights/view
+[07:11:54.793] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:55.008] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:55.518] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:11:55.696] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:06.789] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:06.805] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:06.812] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:07.037] Browser LOG     Header render time: 12732.10ms
+[07:12:07.037] Browser LOG     ConverterPage render time: 1.80ms
+[07:12:07.037] Browser LOG     Header render time: 3.30ms
+[07:12:07.037] Browser LOG     ConverterPage render time: 59.70ms
+[07:12:07.037] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444502664} /_vercel/insights/view
+[07:12:07.037] Browser LOG     ConverterPage render time: 93.90ms
+[07:12:07.258] Browser LOG     ConverterPage render time: 216.80ms
+[07:12:07.679] Browser LOG     ConverterPage render time: 420.40ms
+[07:12:39.490] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:39.500] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:39.559] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:39.704] Browser LOG     ConverterPage render time: 31887.90ms
+[07:12:39.704] Browser LOG     Header render time: 32688.10ms
+[07:12:39.704] Browser LOG     Header render time: 1.90ms
+[07:12:39.704] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444535358} /_vercel/insights/view
+[07:12:39.710] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:39.767] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:39.823] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:45.143] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:45.192] Browser LOG     Header render time: 5609.90ms
+[07:12:45.192] Browser LOG     Header render time: 1.20ms
+[07:12:45.192] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/analytics","o":"http://localhost:3000/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771444540972} /_vercel/insights/view
+[07:12:45.203] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:45.219] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:45.256] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:45.404] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:45.484] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:45.522] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[07:12:45.522] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[07:12:47.031] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:12:47.440] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[07:12:47.440] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[07:12:54.052] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:13:48.761] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:13:53.994] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:14:47.111] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:14:55.626] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:15:47.035] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:15:54.008] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:16:48.369] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:16:54.020] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:17:47.123] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:17:55.697] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:18:47.131] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:18:54.063] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:19:48.519] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:19:54.016] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:20:47.079] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:20:55.263] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:21:47.106] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:21:54.025] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:22:49.564] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:22:54.021] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:02.611] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:02.623] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:02.634] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:02.805] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:02.864] Browser LOG     Header render time: 617502.80ms
+[07:23:02.864] Browser LOG     Header render time: 1.60ms
+[07:23:02.864] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445158463} /_vercel/insights/view
+[07:23:02.874] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:02.929] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:07.852] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:07.858] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:08.042] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:08.372] Browser LOG     Header render time: 5230.60ms
+[07:23:08.372] Browser LOG     ConverterPage render time: 0.60ms
+[07:23:08.372] Browser LOG     Header render time: 1.20ms
+[07:23:08.372] Browser LOG     ConverterPage render time: 57.30ms
+[07:23:08.372] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445163697} /_vercel/insights/view
+[07:23:08.372] Browser LOG     ConverterPage render time: 108.40ms
+[07:23:08.378] Browser LOG     ConverterPage render time: 113.70ms
+[07:23:08.378] Browser LOG     ConverterPage render time: 88.60ms
+[07:23:09.112] Browser LOG     ConverterPage render time: 810.40ms
+[07:23:11.522] Browser LOG     ConverterPage render time: 2344.90ms
+[07:23:11.522] Browser LOG     ConverterPage render time: 55.00ms
+[07:23:11.903] Browser LOG     ConverterPage render time: 381.40ms
+[07:23:12.801] Browser LOG     ConverterPage render time: 838.30ms
+[07:23:12.801] Browser LOG     ConverterPage render time: 57.10ms
+[07:23:13.186] Browser LOG     ConverterPage render time: 385.20ms
+[07:23:13.760] Browser LOG     ConverterPage render time: 512.90ms
+[07:23:13.760] Browser LOG     ConverterPage render time: 57.30ms
+[07:23:14.142] Browser LOG     ConverterPage render time: 380.40ms
+[07:23:17.328] Browser LOG     ConverterPage render time: 3130.20ms
+[07:23:17.328] Browser LOG     ConverterPage render time: 53.50ms
+[07:23:17.719] Browser LOG     ConverterPage render time: 388.80ms
+[07:23:19.838] Browser LOG     ConverterPage render time: 2057.20ms
+[07:23:19.838] Browser LOG     ConverterPage render time: 59.80ms
+[07:23:20.225] Browser LOG     ConverterPage render time: 386.20ms
+[07:23:25.678] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:23:25.892] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:25.901] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:26.042] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:26.155] Browser LOG     Header render time: 93.30ms
+[07:23:26.155] Browser LOG     ConverterPage render time: 92.00ms
+[07:23:26.155] Browser LOG     ConverterPage render time: 12.30ms
+[07:23:26.155] Browser LOG     ConverterPage render time: 52.10ms
+[07:23:26.155] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:23:26.155] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/converter","route":"/converter"}
+[07:23:26.155] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445181889} /_vercel/insights/view
+[07:23:26.155] Browser LOG     ConverterPage render time: 45.20ms
+[07:23:26.419] Browser LOG     ConverterPage render time: 262.60ms
+[07:23:28.029] Browser LOG     ConverterPage render time: 1550.80ms
+[07:23:28.029] Browser LOG     ConverterPage render time: 55.50ms
+[07:23:28.418] Browser LOG     ConverterPage render time: 387.80ms
+[07:23:37.292] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:37.300] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:37.460] Browser LOG     ConverterPage render time: 8955.00ms
+[07:23:37.460] Browser LOG     Header render time: 11337.00ms
+[07:23:37.460] Browser LOG     Header render time: 2.00ms
+[07:23:37.460] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445193151} /_vercel/insights/view
+[07:23:37.576] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:37.591] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:40.189] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:40.214] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:23:47.312] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:25.960] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:37.332] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:37.345] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:47.046] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:55.556] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:55.596] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:55.624] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:55.642] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:24:55.646] Browser LOG     Header render time: 78208.30ms
+[07:24:55.646] Browser LOG     Header render time: 13.70ms
+[07:24:55.646] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/predictions color: rgb(120, 120, 120) color: inherit {"dp":"/predictions","o":"http://localhost:3000/predictions","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445271376} /_vercel/insights/view
+[07:25:12.986] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:25:12.996] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:25:13.101] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:25:13.312] Browser LOG     Header render time: 17442.80ms
+[07:25:13.312] Browser LOG     Header render time: 2.70ms
+[07:25:13.312] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445288826} /_vercel/insights/view
+[07:25:13.789] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:25:13.802] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:25:13.863] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:25:25.997] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:25:53.560] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:13.014] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:13.091] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:25.929] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:42.414] Browser LOG     Header render time: 89357.90ms
+[07:26:43.651] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:26:43.769] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:43.993] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:44.013] Browser LOG     Header render time: 87.80ms
+[07:26:44.013] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:26:44.013] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:26:44.013] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445379755} /_vercel/insights/view
+[07:26:44.025] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:45.757] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:45.765] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:45.805] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:45.934] Browser LOG     Header render time: 1874.60ms
+[07:26:45.934] Browser LOG     ConverterPage render time: 1.10ms
+[07:26:45.934] Browser LOG     Header render time: 2.30ms
+[07:26:45.934] Browser LOG     ConverterPage render time: 42.60ms
+[07:26:45.934] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445381588} /_vercel/insights/view
+[07:26:45.934] Browser LOG     ConverterPage render time: 49.90ms
+[07:26:45.934] Browser LOG     ConverterPage render time: 18.70ms
+[07:26:46.184] Browser LOG     ConverterPage render time: 247.40ms
+[07:26:47.031] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:49.042] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:26:51.809] Browser LOG     ConverterPage render time: 5554.60ms
+[07:26:51.809] Browser LOG     ConverterPage render time: 63.40ms
+[07:26:52.184] Browser LOG     ConverterPage render time: 377.50ms
+[07:26:53.147] Browser LOG     ConverterPage render time: 907.20ms
+[07:26:53.147] Browser LOG     ConverterPage render time: 54.00ms
+[07:26:53.534] Browser LOG     ConverterPage render time: 385.20ms
+[07:27:05.774] Browser LOG     ConverterPage render time: 12179.60ms
+[07:27:05.774] Browser LOG     ConverterPage render time: 58.60ms
+[07:27:06.160] Browser LOG     ConverterPage render time: 384.60ms
+[07:27:07.572] Browser LOG     ConverterPage render time: 1351.20ms
+[07:27:07.572] Browser LOG     ConverterPage render time: 57.40ms
+[07:27:07.965] Browser LOG     ConverterPage render time: 392.40ms
+[07:27:10.050] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:27:10.060] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:27:10.069] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:27:10.295] Browser LOG     ConverterPage render time: 2160.40ms
+[07:27:10.295] Browser LOG     Header render time: 24308.80ms
+[07:27:10.295] Browser LOG     Header render time: 1.60ms
+[07:27:10.295] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771445405901} /_vercel/insights/view
+[07:27:10.302] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:27:10.308] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:27:10.453] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD

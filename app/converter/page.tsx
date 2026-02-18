@@ -47,6 +47,7 @@ import { OfflineBanner } from "@/components/offline-banner"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { RateChangeAnimation } from "@/components/rate-change-animation"
 import { RateBrief } from "@/components/rate-brief"
+import { RateComparisonCallout } from "@/components/rate-comparison-callout"
 import { PlanInLRD } from "@/components/plan-in-lrd"
 import { RateTip } from "@/components/rate-tip"
 import { RateSourceSelector } from "@/components/rate-source-selector"
@@ -484,9 +485,19 @@ const ConverterPageComponent = () => {
                     </div>
                   </div>
                   {fromCurrency === "USD" && toCurrency === "LRD" && result && !Number.isNaN(parseFloat(result)) && (
-                    <p className="text-sm text-muted-foreground mt-2">
-                      Your {parseFloat(amount) || 0} USD is worth {toC.symbol}{parseFloat(result).toLocaleString()} today.
-                    </p>
+                    <>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        Your {parseFloat(amount) || 0} USD is worth {toC.symbol}{parseFloat(result).toLocaleString()} today.
+                      </p>
+                      {isLiveRateReady && (
+                        <RateComparisonCallout
+                          currentRate={liveRateValue}
+                          usdAmount={parseFloat(amount) || undefined}
+                          compact
+                          className="mt-2"
+                        />
+                      )}
+                    </>
                   )}
                   {fromCurrency === "LRD" && toCurrency === "USD" && result && !Number.isNaN(parseFloat(result)) && (
                     <p className="text-sm text-muted-foreground mt-2">

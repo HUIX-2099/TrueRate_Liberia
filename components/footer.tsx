@@ -121,6 +121,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/docs#embed" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Embed Widget
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
                   About Us
                 </Link>

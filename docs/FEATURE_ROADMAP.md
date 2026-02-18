@@ -1,4 +1,4 @@
-# TrueRate Liberia – Feature Roadmap
+# Ideas for TrueRate Liberia
 
 Prioritized ideas to improve the platform. Use checkboxes to track progress.
 
@@ -93,3 +93,14 @@ Prioritized ideas to improve the platform. Use checkboxes to track progress.
 - [ ] Verified changer program (paid badge + visibility)
 - [ ] Sponsored “Best rate near you” slot (clearly labeled)
 - [ ] Donate / support (e.g. Mobile Money) link
+
+---
+
+## Future ideas
+
+- [x] In-app rate alerts (browser push when rate crosses a threshold)
+- [x] Dark/light theme sync with system and per-page overrides
+- [x] Rate history charts by source (CBL vs market over time)
+- [x] Rate comparison callout (“X months ago this was Y LRD” on converter & analytics)
+- [ ] “Share this rate” one-tap copy for WhatsApp/SMS
+- [ ] Multi-currency view (e.g. EUR, GBP alongside USD/LRD)

@@ -23,6 +23,52 @@ const fetchWithTimeout = async (url: string, init: RequestInit, timeoutMs: numbe
   }
 }
 
+export interface XeChartsHistoryPoint {
+  date: string
+  rate: number
+}
+
+/**
+ * Build market history from Xe currency charts (close + 1Y low/high).
+ * Source: https://www.xe.com/currencycharts/?from=USD&to=LRD
+ * Xe does not expose daily history in the page; we interpolate from 1Y low → current close.
+ */
+export async function fetchXeChartsMarketHistory(
+  days: number,
+): Promise<{ historical: XeChartsHistoryPoint[]; source: string } | null> {
+  const xe = await fetchXeChartsRate()
+  if (!xe || !Number.isFinite(xe.rate)) return null
+
+  const close = xe.rate
+  const low = Number.isFinite(xe.low) && xe.low! > 0 ? xe.low! : close - 8
+  const high = Number.isFinite(xe.high) && xe.high! > 0 ? xe.high! : close + 8
+
+  const points: XeChartsHistoryPoint[] = []
+  const now = Date.now()
+  const oneDayMs = 24 * 60 * 60 * 1000
+  const n = Math.max(1, days - 1)
+
+  for (let i = days - 1; i >= 0; i--) {
+    const d = new Date(now - i * oneDayMs)
+    const dateStr = d.toISOString().split("T")[0]
+    const t = i / n // 0 at oldest, 1 at today
+    // Linear from low (at start) to close (at end); optional slight curve using high near midpoint
+    const linear = low + t * (close - low)
+    const midCurve = Math.exp(-Math.pow((t - 0.5) * 2.2, 2)) * (high - Math.max(low, close))
+    const rate = Math.max(low - 0.5, Math.min(high + 0.5, linear + midCurve * 0.3))
+    points.push({ date: dateStr, rate: Number(rate.toFixed(4)) })
+  }
+
+  if (points.length > 0) {
+    points[points.length - 1]!.rate = Number(close.toFixed(4))
+  }
+
+  return {
+    historical: points,
+    source: xe.source,
+  }
+}
+
 /**
  * Parse the Xe charts page for USD/LRD close (current rate) and optional 1Y low/high.
  * Page contains e.g. "USD/LRD close: 185.805 low: 176.211 high: 201.333"

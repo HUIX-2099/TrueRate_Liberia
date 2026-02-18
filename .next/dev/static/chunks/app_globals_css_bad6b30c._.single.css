@@ -1328,6 +1328,10 @@
     height: 300px;
   }
 
+  .h-\[320px\] {
+    height: 320px;
+  }
+
   .h-\[360px\] {
     height: 360px;
   }
@@ -3110,6 +3114,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-muted\/70 {
       background-color: color-mix(in oklab, var(--muted) 70%, transparent);
+    }
+  }
+
+  .bg-muted\/80 {
+    background-color: var(--muted);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-muted\/80 {
+      background-color: color-mix(in oklab, var(--muted) 80%, transparent);
     }
   }
 
@@ -7493,6 +7507,12 @@
   @media (min-width: 40rem) {
     .sm\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 

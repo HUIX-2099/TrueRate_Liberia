@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2, Database, Globe, Building2, Users, TrendingUp, Shield, Link2, BookOpen } from "lucide-react"
+import { CheckCircle2, Database, Globe, Building2, Users, TrendingUp, Shield, Link2, BookOpen, Code2 } from "lucide-react"
 
 export default function DocsPage() {
   return (
@@ -32,6 +32,8 @@ export default function DocsPage() {
                 <a href="#cbl-and-market" className="text-primary hover:underline font-medium">How TrueRate relates to the Central Bank of Liberia</a>
                 {" "}&middot;{" "}
                 <a href="#cbl-and-market" className="text-primary hover:underline font-medium">Why market and official rates differ</a>
+                {" "}&middot;{" "}
+                <a href="#embed" className="text-primary hover:underline font-medium">Embed widget on your site</a>
               </p>
             </div>
           </div>
@@ -511,6 +513,37 @@ export default function DocsPage() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Embed Widget */}
+        <section id="embed" className="py-12 sm:py-14 md:py-16 bg-muted/30 scroll-mt-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Code2 className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold">Embed the Rate on Your Site</h2>
+                  <p className="text-sm text-muted-foreground">Add a live USD/LRD rate widget to any website</p>
+                </div>
+              </div>
+              <Card className="border-border/60 shadow-sm">
+                <CardContent className="pt-6 space-y-4">
+                  <p className="text-sm text-muted-foreground">
+                    Copy and paste this snippet into your HTML. The widget will show the current rate and a link to TrueRate Liberia.
+                  </p>
+                  <pre className="rounded-lg bg-muted/80 p-4 text-sm overflow-x-auto font-mono">
+{`<script src="https://truerateliberia.com/widget.js"></script>
+<div data-truerate-widget></div>`}
+                  </pre>
+                  <p className="text-xs text-muted-foreground">
+                    <strong>Options:</strong> Add <code className="rounded bg-muted px-1">data-theme="light"</code>, <code className="rounded bg-muted px-1">data-theme="dark"</code>, or <code className="rounded bg-muted px-1">data-theme="auto"</code> for appearance. Use <code className="rounded bg-muted px-1">data-compact="true"</code> to hide the timestamp. For local dev, add <code className="rounded bg-muted px-1">data-base="http://localhost:3000"</code>.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>

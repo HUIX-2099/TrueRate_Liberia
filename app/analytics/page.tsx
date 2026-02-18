@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TrendingUp, TrendingDown, Activity, RefreshCw, Sparkles, Calendar, MapPin } from "lucide-react"
 import { RateHistoryExport } from "@/components/rate-history-export"
 import { RateBrief } from "@/components/rate-brief"
+import { RateComparisonCallout } from "@/components/rate-comparison-callout"
 import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 
@@ -27,6 +28,25 @@ const RateHistory = dynamic(() => import("@/components/rate-history").then((mod)
     </Card>
   ),
 })
+
+const RateHistoryBySource = dynamic(
+  () => import("@/components/rate-history-by-source").then((mod) => mod.RateHistoryBySource),
+  {
+    ssr: false,
+    loading: () => (
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Rate history by source</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="h-[320px] flex items-center justify-center text-muted-foreground">
+            Loading chart...
+          </div>
+        </CardContent>
+      </Card>
+    ),
+  },
+)
 
 export default function AnalyticsPage() {
   const [currentRate, setCurrentRate] = useState<number>(0)
@@ -161,6 +181,9 @@ export default function AnalyticsPage() {
                     {sourceCount} sources
                   </span>
                 </div>
+                {!loading && currentRate > 0 && (
+                  <RateComparisonCallout currentRate={currentRate} compact className="mt-2 pt-2 border-t border-border/60" />
+                )}
               </CardContent>
             </Card>
 
@@ -292,8 +315,9 @@ export default function AnalyticsPage() {
             </div>
           )}
 
-          <div className="max-w-6xl mx-auto mb-12">
+          <div className="max-w-6xl mx-auto mb-12 space-y-8">
             <RateHistory />
+            <RateHistoryBySource />
           </div>
 
           {/* Market Insights */}

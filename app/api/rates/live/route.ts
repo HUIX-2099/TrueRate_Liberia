@@ -1,6 +1,17 @@
 import { NextResponse } from "next/server"
 import { getAggregatedRate } from "@/lib/api/multi-source-rates"
 
+// CORS headers for embeddable widget (cross-origin fetch from partner sites)
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+}
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders })
+}
+
 export async function GET() {
   try {
     const aggregatedData = await getAggregatedRate()
@@ -111,7 +122,8 @@ export async function GET() {
 
     const marketRate = aggregatedData.rate
     const officialRate = aggregatedData.cblRate ?? null
-    return NextResponse.json({
+    return NextResponse.json(
+      {
       rate: marketRate,
       marketRate,
       officialRate,
@@ -135,12 +147,14 @@ export async function GET() {
       sources: aggregatedData.sources,
       timestamp: aggregatedData.timestamp,
       changers,
-    })
+    },
+    { headers: corsHeaders },
+    )
   } catch (error) {
     console.error("Best rate API error:", error)
     return NextResponse.json(
       { error: "Unable to fetch best rate" },
-      { status: 500 }
+      { status: 500, headers: corsHeaders },
     )
   }
 }

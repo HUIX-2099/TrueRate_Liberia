@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { ArrowLeftRight, Calculator } from "lucide-react"
+import { RateComparisonCallout } from "@/components/rate-comparison-callout"
 
 export function CurrencyConverter() {
   const { effectiveRate: currentRate } = useLiveRate()
@@ -173,9 +174,17 @@ export function CurrencyConverter() {
             </span>
           </div>
           {activeInput === "usd" && usdAmount && lrdAmount && currentRate > 0 && (
-            <p className="text-xs pt-1 border-t border-border/60 mt-1">
-              Your ${parseFloat(usdAmount) || 0} USD is worth L${(parseFloat(lrdAmount) || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })} today.
-            </p>
+            <>
+              <p className="text-xs pt-1 border-t border-border/60 mt-1">
+                Your ${parseFloat(usdAmount) || 0} USD is worth L${(parseFloat(lrdAmount) || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })} today.
+              </p>
+              <RateComparisonCallout
+                currentRate={currentRate}
+                usdAmount={parseFloat(usdAmount) || undefined}
+                compact
+                className="mt-2 pt-1"
+              />
+            </>
           )}
           {activeInput === "lrd" && lrdAmount && usdAmount && currentRate > 0 && (
             <p className="text-xs pt-1 border-t border-border/60 mt-1">
