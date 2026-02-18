@@ -51,6 +51,7 @@ import { RateComparisonCallout } from "@/components/rate-comparison-callout"
 import { PlanInLRD } from "@/components/plan-in-lrd"
 import { RateTip } from "@/components/rate-tip"
 import { RateSourceSelector } from "@/components/rate-source-selector"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 // Multi-currency support
 const currencies = [
@@ -79,6 +80,7 @@ const ratesFromUSD: Record<string, number> = {
 const ConverterPageComponent = () => {
   usePerformanceMonitor("ConverterPage")
 
+  const { t } = useLanguage()
   const [fromCurrency, setFromCurrency] = useState("USD")
   const [toCurrency, setToCurrency] = useState("LRD")
   const [amount, setAmount] = useState("100")
@@ -351,9 +353,12 @@ const ConverterPageComponent = () => {
                           </div>
                           {isLiveRateReady && (
                             <div className="text-xs text-muted-foreground mt-1 flex flex-wrap gap-x-4 gap-y-0.5">
-                              <span><span className="font-medium text-foreground">Official (CBL):</span> {contextCblRate != null && contextCblRate > 0 ? contextCblRate.toFixed(2) : "—"} LRD/USD</span>
                               <span><span className="font-medium text-foreground">Market:</span> {contextLrdRate != null ? contextLrdRate.toFixed(2) : "—"} LRD/USD</span>
+                              <span><span className="font-medium text-foreground">Official (CBL):</span> {contextCblRate != null && contextCblRate > 0 ? contextCblRate.toFixed(2) : "—"} LRD/USD</span>
                             </div>
+                          )}
+                          {!useCustomRate && isLiveRateReady && (
+                            <p className="text-xs text-muted-foreground mt-2">{t("rate.currentIsSource")}</p>
                           )}
                           <RateSourceAttribution
                             sources={rateSources}

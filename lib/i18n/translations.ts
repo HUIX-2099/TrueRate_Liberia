@@ -28,6 +28,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.title': 'The most accurate exchange rates in Liberia',
     'hero.subtitle': 'TrueRate aggregates data from 100+ trusted sources',
     'rate.current': 'Current Rate',
+    'rate.currentIsSource': 'Current rate is the one you selected (Market or Official).',
     'rate.buy': 'Buy Rate',
     'rate.sell': 'Sell Rate',
     'rate.best': "Today's Best Rate",
@@ -214,6 +215,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'rate.best': 'Best Rate Today',
     'rate.bestNearYou': 'Best rate by you',
     'rate.updated': 'Last time we check',
+    'rate.currentIsSource': 'The rate you see is the one you picked (Market or Official).',
 
     'rateBrief.trigger': 'Why the rate move?',
     'rateBrief.title': 'Why the rate move?',
@@ -374,6 +376,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'rate.best': 'Meilleur Taux du Jour',
     'rate.bestNearYou': 'Meilleur taux près de vous',
     'rate.updated': 'Dernière mise à jour',
+    'rate.currentIsSource': 'Le taux affiché est celui que vous avez choisi (Marché ou Officiel).',
 
     'rateBrief.trigger': 'Pourquoi le taux a bougé ?',
     'rateBrief.title': 'Pourquoi le taux a bougé ?',
@@ -536,6 +539,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'rate.best': 'Kpala Kɛlɛi',
     'rate.bestNearYou': 'Kpala kɛlɛi nɛɛ',
     'rate.updated': 'Kɛɛ yɛɛi',
+    'rate.currentIsSource': 'Kpala nɛɛ ma nɔɔ nɛɛ ma sɛɛ (Market kɛɛ Official).',
     'rateBrief.trigger': 'Why did the rate move?',
     'rateBrief.title': 'Why did the rate move?',
     'rateBrief.cbl': 'CBL policy sets official rate; market rate can differ.',

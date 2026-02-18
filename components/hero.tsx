@@ -11,11 +11,12 @@ import { RateSourceAttribution } from "@/components/rate-source-attribution"
 import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
 import { StaleRateWarning } from "@/components/stale-rate-warning"
 import { RateChangeAnimation } from "@/components/rate-change-animation"
-import { RateTip } from "@/components/rate-tip"
 import { RateSourceSelector } from "@/components/rate-source-selector"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Hero() {
   const router = useRouter()
+  const { t } = useLanguage()
   const { rate, loading, sources, timestamp, cblRate, cblBuying, cblSelling, cblLastUpdated, refresh, effectiveRate } = useLiveRate()
   const [trend, setTrend] = useState<'up' | 'down' | 'stable'>('up')
   const [changePercent, setChangePercent] = useState(0.8)
@@ -169,7 +170,6 @@ export function Hero() {
                     {cblLastUpdated ? <span className="ml-1 text-xs">· {(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}</span> : null}
                   </div>
                 </div>
-                <RateTip className="mt-3 justify-center" excludeKeys={["rateTip.strongerLrd", "rateTip.marketVsOfficial"]} />
               </div>
 
               {/* Buy/Sell Rates: when Official (CBL) selected, show CBL buying/selling; else effectiveRate ± 2 */}

@@ -12,6 +12,8 @@ import { MapPin, TrendingDown, TrendingUp } from "lucide-react"
 import { RateSourceAttribution } from "@/components/rate-source-attribution"
 import { RateHistoryExport } from "@/components/rate-history-export"
 import { StaleRateWarning } from "@/components/stale-rate-warning"
+import { useLanguage } from "@/lib/i18n/language-context"
+import { RateBrief } from "@/components/rate-brief"
 
 interface Changer {
   id: string
@@ -24,6 +26,7 @@ interface Changer {
 }
 
 export default function RatesPage() {
+  const { t } = useLanguage()
   const { rate: liveRate, refresh: refreshLiveRate } = useLiveRate()
   const [lastUpdate, setLastUpdate] = useState("Loading...")
   const [sourceCount, setSourceCount] = useState(0)
@@ -173,9 +176,10 @@ export default function RatesPage() {
                     <div className="text-5xl font-bold text-primary mb-1">{liveRate.toFixed(2)}</div>
                     <div className="text-sm text-muted-foreground font-medium">LRD per USD</div>
                     <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm mt-2 text-muted-foreground">
-                      <span><span className="font-medium text-foreground">Official (CBL):</span> {cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD{cblLastUpdated ? ` · ${(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}` : ""}</span>
                       <span><span className="font-medium text-foreground">Market:</span> {liveRate.toFixed(2)} LRD/USD</span>
+                      <span><span className="font-medium text-foreground">Official (CBL):</span> {cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD{cblLastUpdated ? ` · ${(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}` : ""}</span>
                     </div>
+                    <div className="flex justify-center mt-1"><RateBrief variant="inline" /></div>
                   </div>
                   <div className="pt-2 border-t border-border/40 space-y-2">
                     <RateSourceAttribution

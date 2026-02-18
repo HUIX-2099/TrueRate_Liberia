@@ -1847,3 +1847,1424 @@ https://react.dev/link/hydration-mismatch
 [07:27:10.302] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
 [07:27:10.308] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
 [07:27:10.453] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:27:43.833] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:27:48.302] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:28:10.227] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:28:10.248] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:28:43.922] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:28:47.072] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:29:10.191] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:29:10.222] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:29:43.887] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:29:47.009] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:30:10.196] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:30:10.219] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:30:52.815] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:30:53.858] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:31:10.124] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:31:10.208] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:31:43.884] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:31:47.044] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:32:10.196] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:32:10.222] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:32:43.877] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:32:47.020] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:33:10.182] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:33:10.205] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:34:02.746] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:34:05.999] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:34:10.144] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:34:10.163] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:34:43.907] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:34:47.152] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:35:10.194] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:35:10.229] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:35:20.702] Server  ERROR   TypeError: fetch failed
+[07:35:20.703] Server  ERROR   TypeError: fetch failed
+[07:35:20.867] Server  ERROR   ⨯ Error: failed to pipe response
+[07:35:20.869] Server  ERROR   TypeError: fetch failed
+[07:35:20.869] Server  ERROR   TypeError: fetch failed
+[07:35:20.945] Server  ERROR   ⨯ Error: failed to pipe response
+[07:35:20.952] Server  ERROR   TypeError: fetch failed
+[07:35:20.952] Server  ERROR   TypeError: fetch failed
+[07:35:54.372] Server  ERROR   TypeError: fetch failed
+[07:35:54.374] Server  ERROR   TypeError: fetch failed
+[07:35:54.539] Server  ERROR   ⨯ Error: failed to pipe response
+[07:35:54.646] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:35:57.334] Server  ERROR   TypeError: fetch failed
+[07:35:57.336] Server  ERROR   TypeError: fetch failed
+[07:35:57.492] Server  ERROR   ⨯ Error: failed to pipe response
+[07:35:57.550] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:36:04.859] Server  ERROR   TypeError: fetch failed
+[07:36:04.861] Server  ERROR   TypeError: fetch failed
+[07:36:05.009] Server  ERROR   ⨯ Error: failed to pipe response
+[07:36:10.248] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:36:10.262] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:36:43.874] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:36:47.043] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:37:10.093] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:37:10.134] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:37:47.953] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:37:53.001] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:38:10.059] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:38:10.082] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:38:43.855] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:38:47.031] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:39:10.181] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:39:10.206] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:39:47.034] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:40:10.173] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:40:10.213] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:40:13.309] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:40:43.890] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:40:47.015] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:41:10.182] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:41:10.218] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:41:45.459] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:41:47.006] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:42:10.148] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:42:10.175] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:42:43.865] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:42:49.250] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:43:10.085] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:43:10.153] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:43:43.898] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:43:47.012] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:44:10.188] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:44:10.207] Server  LOG     [v0] Market rate from Xe: 185.532 LRD/USD
+[07:44:43.881] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:44:47.001] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:45:10.190] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:45:10.215] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:45:45.926] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:45:47.009] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:46:10.079] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:46:10.113] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:46:43.868] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:47:03.668] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:47:10.069] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:47:10.110] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:47:43.853] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:47:47.018] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:48:10.224] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:48:10.245] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:48:43.869] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:48:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:49:10.169] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:49:10.182] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:49:45.729] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:49:47.002] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:50:10.080] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:50:10.099] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:50:43.803] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:50:48.578] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:51:10.066] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:51:10.097] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:51:43.864] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:51:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:52:10.170] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:52:10.186] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:52:20.683] Server  ERROR   TypeError: fetch failed
+[07:52:20.686] Server  ERROR   TypeError: fetch failed
+[07:52:20.816] Server  ERROR   ⨯ Error: failed to pipe response
+[07:52:20.820] Server  ERROR   TypeError: fetch failed
+[07:52:20.820] Server  ERROR   TypeError: fetch failed
+[07:52:20.885] Server  ERROR   ⨯ Error: failed to pipe response
+[07:52:20.886] Server  ERROR   TypeError: fetch failed
+[07:52:20.887] Server  ERROR   TypeError: fetch failed
+[07:52:47.660] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:52:51.588] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:53:10.095] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:53:10.145] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:53:43.885] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:53:47.030] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:54:10.156] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:54:10.169] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:54:43.879] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:54:47.055] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:55:10.151] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:55:10.230] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:55:52.839] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:55:53.079] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:56:10.059] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:56:10.078] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:56:43.849] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:56:47.028] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:57:10.169] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:57:10.191] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:57:43.892] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:57:47.039] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:58:10.159] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:58:10.176] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:58:47.632] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:59:01.289] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:59:10.119] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:59:10.139] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:59:43.859] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[07:59:47.075] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:00:10.174] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:00:10.207] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:00:43.872] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:00:47.010] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:01:10.158] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:01:10.183] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:01:45.306] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:01:47.012] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:02:10.178] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:02:10.194] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:02:43.883] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:02:50.115] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:03:10.188] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:03:10.226] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:03:43.859] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:03:47.019] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:04:10.145] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:04:10.161] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:04:43.938] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:04:47.127] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:05:10.142] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:05:10.170] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:05:45.648] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:05:47.004] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:06:10.158] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:06:10.177] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:06:43.863] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:06:48.886] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:07:10.090] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:07:10.183] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:07:43.858] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:07:47.004] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:08:10.173] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:08:10.210] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:08:43.872] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:08:47.017] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:09:10.152] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:09:10.165] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:09:45.942] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:09:47.018] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:10:10.157] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:10:10.209] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:10:43.849] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:10:50.752] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:11:10.081] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:11:10.120] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:11:43.867] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:11:47.122] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:12:10.207] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:12:10.237] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:12:43.871] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:12:47.053] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:13:10.098] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:13:10.132] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:13:45.559] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:13:47.032] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:14:10.179] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:14:10.212] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:14:43.942] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:14:59.321] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:15:10.073] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:15:10.089] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:15:43.856] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:15:47.044] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:16:10.208] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:16:10.222] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:16:43.869] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:16:47.011] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:17:10.189] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:17:10.220] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:17:54.231] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:17:58.853] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:18:10.077] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:18:10.101] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:18:43.883] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:18:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:19:10.163] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:19:10.194] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:19:43.883] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:19:47.014] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:20:10.172] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:20:10.191] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:20:45.435] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:20:47.008] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:21:10.081] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:21:10.112] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:21:43.856] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:21:51.685] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:22:10.081] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:22:10.101] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:22:43.849] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:22:47.025] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:23:10.099] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:23:10.145] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:23:43.871] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:23:47.013] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:24:10.160] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:24:10.179] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:24:47.476] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:24:49.535] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:25:10.063] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:25:10.075] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:25:43.852] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:25:47.013] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:26:10.173] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:26:10.206] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:26:43.819] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:26:47.022] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:27:10.082] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:27:10.113] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:28:10.090] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:28:10.122] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:28:20.380] Server  ERROR   TypeError: fetch failed
+[08:28:20.381] Server  ERROR   TypeError: fetch failed
+[08:28:20.510] Server  ERROR   ⨯ Error: failed to pipe response
+[08:28:20.512] Server  ERROR   TypeError: fetch failed
+[08:28:20.512] Server  ERROR   TypeError: fetch failed
+[08:28:20.580] Server  ERROR   ⨯ Error: failed to pipe response
+[08:28:20.581] Server  ERROR   TypeError: fetch failed
+[08:28:20.582] Server  ERROR   TypeError: fetch failed
+[08:28:45.578] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:28:46.082] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:28:46.993] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:29:07.223] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:29:10.173] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:29:10.186] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:29:43.822] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:29:47.010] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:30:10.160] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:30:10.175] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:30:43.874] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:30:47.003] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:31:10.139] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:31:10.153] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:31:45.899] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:31:47.018] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:32:10.144] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:32:10.163] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:32:43.857] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:33:02.238] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:33:10.072] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:33:10.108] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:33:43.858] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:33:47.015] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:34:10.172] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:34:10.203] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:34:43.871] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:34:47.024] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:35:10.152] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:35:10.181] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:35:54.349] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:35:54.459] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:36:10.090] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:36:10.158] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:36:43.927] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:36:47.023] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:37:10.171] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:37:10.197] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:37:43.863] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:37:47.001] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:38:10.153] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:38:10.169] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:38:45.825] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:38:47.005] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:39:10.196] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:39:10.375] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:39:43.901] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:39:48.821] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:40:10.138] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:40:10.155] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:40:43.890] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:40:47.025] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:41:10.167] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:41:10.181] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:41:43.885] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:41:47.029] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:42:10.117] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:42:10.131] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:42:45.294] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:42:46.998] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:43:10.062] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:43:10.083] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:43:43.869] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:43:50.826] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:44:10.205] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:44:10.224] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:44:43.929] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:44:47.042] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:45:10.167] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:45:10.199] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:45:43.867] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:45:47.012] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:46:10.164] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:46:10.186] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:46:46.578] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:46:47.006] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:47:10.284] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:47:10.343] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:47:43.941] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:47:48.560] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:48:10.120] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:48:10.140] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:48:20.751] Server  ERROR   TypeError: fetch failed
+[08:48:20.758] Server  ERROR   TypeError: fetch failed
+[08:48:20.928] Server  ERROR   ⨯ Error: failed to pipe response
+[08:48:20.932] Server  ERROR   TypeError: fetch failed
+[08:48:20.932] Server  ERROR   TypeError: fetch failed
+[08:48:20.999] Server  ERROR   ⨯ Error: failed to pipe response
+[08:48:43.862] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:48:47.013] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:49:10.127] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:49:10.148] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:49:43.812] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:49:47.062] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:50:10.118] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:50:10.160] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:50:45.233] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:50:47.006] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:51:10.161] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:51:10.184] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:51:43.887] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:51:49.713] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:52:10.064] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:52:10.075] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:52:43.891] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:52:47.010] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:53:10.141] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:53:10.165] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:53:43.888] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:53:47.045] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:54:10.154] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:54:10.179] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:54:51.315] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:54:53.336] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:55:10.138] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:55:10.155] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:55:43.875] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:55:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:56:10.149] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:56:10.165] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:56:43.837] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:56:47.022] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:57:10.194] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:57:10.217] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:57:43.919] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:57:50.907] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:58:10.192] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:58:10.235] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:58:43.859] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:58:47.033] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:58:54.373] Server  ERROR   TypeError: fetch failed
+[08:58:54.375] Server  ERROR   TypeError: fetch failed
+[08:58:54.496] Server  ERROR   ⨯ Error: failed to pipe response
+[08:59:10.112] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:59:10.205] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:59:43.859] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[08:59:47.050] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:00:10.119] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:00:10.148] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:00:54.582] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:00:54.942] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:01:10.060] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:01:10.079] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:01:43.876] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:01:47.025] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:01:57.393] Server  ERROR   TypeError: fetch failed
+[09:01:57.395] Server  ERROR   TypeError: fetch failed
+[09:01:57.538] Server  ERROR   ⨯ Error: failed to pipe response
+[09:02:10.136] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:02:10.154] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:02:43.802] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:02:47.024] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:03:10.197] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:03:10.208] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:03:45.776] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:03:47.140] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:04:10.177] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:04:10.221] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:04:43.940] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:04:48.896] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:05:10.148] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:05:10.166] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:05:43.866] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:05:47.097] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:06:10.189] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:06:10.224] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:06:43.846] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:06:47.008] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:07:10.159] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:07:10.175] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:07:52.858] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:07:53.140] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:08:10.061] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:08:10.101] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:08:43.883] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:08:47.073] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:09:10.160] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:09:10.186] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:09:43.888] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:09:47.053] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:10:10.171] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:10:10.210] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:10:49.531] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:10:49.808] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:11:10.065] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:11:10.111] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:11:43.872] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:11:47.028] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:12:10.091] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:12:10.136] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:12:43.868] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:12:47.021] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:13:10.149] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:13:10.165] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:13:54.715] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:14:03.481] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:14:10.151] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:14:10.169] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:14:43.881] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:14:47.037] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:15:10.178] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:15:10.195] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:15:43.873] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:15:47.026] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:16:10.150] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:16:10.167] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:16:47.476] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:16:50.058] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:17:10.085] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:17:10.160] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:17:43.859] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:17:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:18:10.164] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:18:10.197] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:18:43.873] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:18:47.042] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:19:10.182] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:19:10.200] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:19:50.753] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:19:55.381] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:20:10.063] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:20:10.082] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:20:43.876] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:20:47.022] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:21:10.177] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:21:10.208] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:21:43.857] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:21:47.012] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:22:10.143] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:22:10.160] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:22:59.644] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:23:01.607] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:23:10.060] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:23:10.138] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:23:43.869] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:23:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:24:10.201] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:24:10.225] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:24:43.881] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:24:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:25:10.162] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:25:10.177] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:25:46.458] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:25:47.028] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:26:10.105] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:26:10.175] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:26:43.860] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:26:51.227] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:27:10.064] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:27:10.079] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:27:43.861] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:27:46.995] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:28:10.142] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:28:10.161] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:28:43.857] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:28:47.016] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:29:10.167] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:29:10.182] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:29:48.512] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:29:53.192] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:30:10.160] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:30:10.195] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:30:43.944] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:30:47.214] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:31:10.155] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:31:10.171] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:31:43.873] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:31:47.018] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:32:10.155] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:32:10.177] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:32:48.025] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:32:50.124] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:33:10.156] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:33:10.168] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:33:43.804] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:33:47.095] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:34:10.162] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:34:10.182] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:34:43.870] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:34:47.017] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:35:10.159] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:35:10.172] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:35:46.962] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:35:47.002] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:36:10.129] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:36:10.165] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:36:43.875] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:37:09.943] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:37:10.061] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:37:10.091] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:37:43.859] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:37:47.036] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:38:10.195] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:38:10.212] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:38:43.855] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:38:47.024] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:38:54.354] Server  ERROR   TypeError: fetch failed
+[09:38:54.355] Server  ERROR   TypeError: fetch failed
+[09:38:54.494] Server  ERROR   ⨯ Error: failed to pipe response
+[09:38:57.335] Server  ERROR   TypeError: fetch failed
+[09:38:57.336] Server  ERROR   TypeError: fetch failed
+[09:38:57.442] Server  ERROR   ⨯ Error: failed to pipe response
+[09:39:10.116] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:39:10.148] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:39:20.628] Server  ERROR   TypeError: fetch failed
+[09:39:20.633] Server  ERROR   TypeError: fetch failed
+[09:39:20.783] Server  ERROR   ⨯ Error: failed to pipe response
+[09:39:20.785] Server  ERROR   TypeError: fetch failed
+[09:39:20.786] Server  ERROR   TypeError: fetch failed
+[09:39:20.840] Server  ERROR   ⨯ Error: failed to pipe response
+[09:39:43.841] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:39:59.764] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:40:10.129] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:40:10.146] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:40:43.878] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:40:47.005] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:41:10.106] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:41:10.199] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:41:47.021] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:41:52.728] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:42:10.171] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:42:10.182] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:42:43.888] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:42:47.006] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:43:10.170] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:43:10.187] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:43:43.862] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:43:47.024] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:44:10.164] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:44:10.190] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:44:57.358] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:44:57.679] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:45:10.142] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:45:10.156] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:45:43.865] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:45:47.025] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:46:10.164] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:46:10.183] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:46:43.876] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:46:47.003] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:47:10.062] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:47:10.076] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:47:52.360] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:47:53.099] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:48:10.113] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:48:10.166] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:48:43.860] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:48:47.002] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:49:10.068] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:49:10.093] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:49:43.874] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:49:47.021] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:50:10.164] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:50:10.179] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:50:49.461] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:50:50.002] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:51:10.195] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:51:10.208] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:51:43.839] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:51:47.045] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:52:10.172] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:52:10.193] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:52:20.685] Server  ERROR   TypeError: fetch failed
+[09:52:20.693] Server  ERROR   TypeError: fetch failed
+[09:52:20.840] Server  ERROR   ⨯ Error: failed to pipe response
+[09:52:20.844] Server  ERROR   TypeError: fetch failed
+[09:52:20.844] Server  ERROR   TypeError: fetch failed
+[09:52:20.903] Server  ERROR   ⨯ Error: failed to pipe response
+[09:52:20.904] Server  ERROR   TypeError: fetch failed
+[09:52:20.904] Server  ERROR   TypeError: fetch failed
+[09:52:48.666] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:52:50.304] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:53:10.171] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:53:10.202] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:53:43.831] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:53:47.107] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:54:10.088] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:54:10.119] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:54:43.850] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:54:47.044] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:55:10.196] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:55:10.221] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:55:46.264] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:55:47.004] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:00.270] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:05.878] Browser LOG     Header render time: 10216712.30ms
+[09:56:05.878] Browser ERROR   Route error: {"name":"ChunkLoadError"}
+[09:56:05.878] Browser ERROR   Route error: {"name":"ChunkLoadError"}
+[09:56:05.878] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454341632} /_vercel/insights/view
+[09:56:11.014] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:11.035] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:11.184] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[09:56:11.537] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:11.548] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:11.826] Browser LOG     Header render time: 119.10ms
+[09:56:11.835] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:21.955] Server  ERROR   TypeError: fetch failed
+[09:56:21.960] Server  ERROR   TypeError: fetch failed
+[09:56:22.122] Server  ERROR   ⨯ Error: failed to pipe response
+[09:56:22.205] Server  ERROR   [LiberiaMarket] Invest Liberia scrape failed TypeError: fetch failed
+[09:56:22.269] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[09:56:22.272] Server  ERROR   TypeError: fetch failed
+[09:56:22.272] Server  ERROR   TypeError: fetch failed
+[09:56:22.331] Server  ERROR   ⨯ Error: failed to pipe response
+[09:56:22.333] Server  ERROR   TypeError: fetch failed
+[09:56:22.333] Server  ERROR   TypeError: fetch failed
+[09:56:22.334] Server  ERROR   TypeError: fetch failed
+[09:56:22.334] Server  ERROR   TypeError: fetch failed
+[09:56:22.335] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[09:56:22.335] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[09:56:22.335] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454357992} /_vercel/insights/view
+[09:56:30.057] Server  ERROR   [v0] Xe (market) failed: TypeError: fetch failed
+[09:56:32.999] Browser LOG     Header render time: 21233.10ms
+[09:56:32.999] Browser LOG     Header render time: 0.90ms
+[09:56:32.999] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/forums color: rgb(120, 120, 120) color: inherit {"dp":"/forums","o":"http://localhost:3000/forums","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454368732} /_vercel/insights/view
+[09:56:39.397] Server  LOG     [v0] Market rate from ExchangeRate API: 186.33 LRD/USD
+[09:56:39.977] Server  LOG     [v0] Currency API (Fawaz Ahmed): 185.73220094 LRD per USD
+[09:56:40.118] Server  LOG     [v0] Open Exchange Rates: 186.326429 LRD per USD
+[09:56:40.155] Server  LOG     [v0] ExchangeRate API: 186.33 LRD per USD
+[09:56:40.159] Server  LOG     [v0] Market rate (median): 186.33 from 4 feeds: ExchangeRate API, Currency API (Fawaz Ahmed), Open Exchange Rates
+[09:56:44.019] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:56:57.329] Browser LOG     Header render time: 24333.90ms
+[09:56:57.329] Browser LOG     Header render time: 0.40ms
+[09:56:57.329] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/forums/thread/6 color: rgb(120, 120, 120) color: inherit {"dp":"/forums/thread/[id]","o":"http://localhost:3000/forums/thread/6","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454393068} /_vercel/insights/view
+[09:57:07.976] Browser LOG     Header render time: 10644.70ms
+[09:57:07.976] Browser LOG     Header render time: 1.00ms
+[09:57:07.976] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/auth/signin color: rgb(120, 120, 120) color: inherit {"dp":"/auth/signin","o":"http://localhost:3000/auth/signin","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454403715} /_vercel/insights/view
+[09:57:11.587] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:19.001] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:19.012] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:19.024] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:19.249] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:19.368] Browser LOG     Header render time: 11113.60ms
+[09:57:19.368] Browser LOG     Header render time: 2.40ms
+[09:57:19.368] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454414833} /_vercel/insights/view
+[09:57:19.382] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:19.541] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:29.560] Server  ERROR   TypeError: fetch failed
+[09:57:29.562] Server  ERROR   TypeError: fetch failed
+[09:57:29.652] Server  ERROR   ⨯ Error: failed to pipe response
+[09:57:29.653] Server  ERROR   TypeError: fetch failed
+[09:57:29.654] Server  ERROR   TypeError: fetch failed
+[09:57:29.705] Server  ERROR   ⨯ Error: failed to pipe response
+[09:57:29.706] Server  ERROR   TypeError: fetch failed
+[09:57:29.707] Server  ERROR   TypeError: fetch failed
+[09:57:29.751] Server  ERROR   ⨯ Error: failed to pipe response
+[09:57:29.805] Server  ERROR   [LiberiaMarket] Invest Liberia scrape failed TypeError: fetch failed
+[09:57:29.844] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[09:57:29.846] Server  ERROR   TypeError: fetch failed
+[09:57:29.846] Server  ERROR   TypeError: fetch failed
+[09:57:29.889] Server  ERROR   ⨯ Error: failed to pipe response
+[09:57:29.890] Server  ERROR   TypeError: fetch failed
+[09:57:29.891] Server  ERROR   TypeError: fetch failed
+[09:57:29.891] Server  ERROR   TypeError: fetch failed
+[09:57:29.892] Server  ERROR   TypeError: fetch failed
+[09:57:29.892] Server  ERROR   TypeError: fetch failed
+[09:57:29.892] Server  ERROR   TypeError: fetch failed
+[09:57:29.933] Server  ERROR   ⨯ Error: failed to pipe response
+[09:57:29.982] Server  ERROR   [LiberiaMarket] Invest Liberia scrape failed TypeError: fetch failed
+[09:57:30.025] Server  ERROR   [LiberiaMarketNews API] Error: TypeError: fetch failed
+[09:57:30.027] Server  ERROR   TypeError: fetch failed
+[09:57:30.027] Server  ERROR   TypeError: fetch failed
+[09:57:30.071] Server  ERROR   ⨯ Error: failed to pipe response
+[09:57:30.072] Server  ERROR   TypeError: fetch failed
+[09:57:30.073] Server  ERROR   TypeError: fetch failed
+[09:57:30.666] Browser LOG     Header render time: 11529.80ms
+[09:57:30.666] Browser LOG     ConverterPage render time: 1.30ms
+[09:57:30.666] Browser LOG     Header render time: 2.10ms
+[09:57:30.666] Browser LOG     ConverterPage render time: 37.10ms
+[09:57:30.666] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454426367} /_vercel/insights/view
+[09:57:30.702] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:30.717] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:30.782] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:31.005] Browser LOG     ConverterPage render time: 348.70ms
+[09:57:35.625] Browser LOG     ConverterPage render time: 4464.10ms
+[09:57:35.625] Browser LOG     ConverterPage render time: 42.70ms
+[09:57:35.625] Browser LOG     ConverterPage render time: 109.70ms
+[09:57:39.425] Browser LOG     ConverterPage render time: 3741.10ms
+[09:57:39.425] Browser LOG     ConverterPage render time: 55.10ms
+[09:57:39.818] Browser LOG     ConverterPage render time: 391.20ms
+[09:57:40.736] Browser LOG     ConverterPage render time: 860.00ms
+[09:57:40.736] Browser LOG     ConverterPage render time: 56.40ms
+[09:57:41.131] Browser LOG     ConverterPage render time: 393.50ms
+[09:57:47.055] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:47.072] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:57:47.099] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:10.381] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:10.444] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:11.549] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:11.745] Browser LOG     ConverterPage render time: 30594.50ms
+[09:58:14.834] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:14.853] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:14.952] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:14.964] Browser LOG     Header render time: 9064752.40ms
+[09:58:14.964] Browser LOG     ConverterPage render time: 1.50ms
+[09:58:14.964] Browser LOG     Header render time: 2.60ms
+[09:58:14.964] Browser LOG     ConverterPage render time: 59.00ms
+[09:58:14.964] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454470556} /_vercel/insights/view
+[09:58:15.347] Browser LOG     ConverterPage render time: 393.90ms
+[09:58:17.099] Browser LOG     ConverterPage render time: 1687.30ms
+[09:58:17.099] Browser LOG     ConverterPage render time: 61.50ms
+[09:58:30.626] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:30.808] Browser LOG     ConverterPage render time: 19076.60ms
+[09:58:51.800] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:58:51.998] Browser LOG     ConverterPage render time: 34897.70ms
+[09:59:11.646] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:59:11.841] Browser LOG     ConverterPage render time: 41032.40ms
+[09:59:14.830] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:59:15.052] Browser LOG     ConverterPage render time: 23051.60ms
+[09:59:30.625] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:59:32.978] Browser LOG     ConverterPage render time: 21135.60ms
+[09:59:43.885] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[09:59:44.066] Browser LOG     ConverterPage render time: 29010.50ms
+[10:00:07.989] Server  LOG     ✓ Compiled in 406ms
+[10:00:08.309] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:08.356] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:08.769] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:08.772] Browser LOG     ConverterPage render time: 24154.40ms
+[10:00:08.772] Browser LOG     Header render time: 113330.70ms
+[10:00:08.772] Browser LOG     ConverterPage render time: 1.40ms
+[10:00:08.772] Browser LOG     Header render time: 25.40ms
+[10:00:08.772] Browser LOG     ConverterPage render time: 75.10ms
+[10:00:08.772] Browser LOG     ConverterPage render time: 78.90ms
+[10:00:08.772] Browser LOG     ConverterPage render time: 343.50ms
+[10:00:08.773] Browser LOG     ConverterPage render time: 35269.30ms
+[10:00:08.773] Browser LOG     Header render time: 157632.80ms
+[10:00:08.773] Browser LOG     ConverterPage render time: 1.50ms
+[10:00:08.773] Browser LOG     Header render time: 23.90ms
+[10:00:08.773] Browser LOG     ConverterPage render time: 86.50ms
+[10:00:08.773] Browser LOG     ConverterPage render time: 99.90ms
+[10:00:08.796] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:08.902] Browser LOG     ConverterPage render time: 350.10ms
+[10:00:09.086] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:09.153] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:09.289] Server  LOG     ✓ Compiled in 195ms
+[10:00:09.531] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:09.591] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:09.691] Browser LOG     ConverterPage render time: 653.70ms
+[10:00:09.691] Browser LOG     Header render time: 1201.00ms
+[10:00:09.691] Browser LOG     ConverterPage render time: 1.10ms
+[10:00:09.691] Browser LOG     Header render time: 12.50ms
+[10:00:09.691] Browser LOG     ConverterPage render time: 101.10ms
+[10:00:09.691] Browser LOG     ConverterPage render time: 79.30ms
+[10:00:09.728] Browser LOG     ConverterPage render time: 753.30ms
+[10:00:09.728] Browser LOG     Header render time: 1258.40ms
+[10:00:09.728] Browser LOG     ConverterPage render time: 1.50ms
+[10:00:09.728] Browser LOG     Header render time: 15.30ms
+[10:00:09.728] Browser LOG     ConverterPage render time: 111.30ms
+[10:00:09.728] Browser LOG     ConverterPage render time: 78.50ms
+[10:00:10.052] Browser LOG     ConverterPage render time: 359.20ms
+[10:00:10.072] Browser LOG     ConverterPage render time: 340.10ms
+[10:00:23.319] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:23.549] Browser LOG     ConverterPage render time: 13456.40ms
+[10:00:23.784] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:23.796] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:23.817] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:23.871] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:24.063] Browser LOG     ConverterPage render time: 429.50ms
+[10:00:24.063] Browser LOG     ConverterPage render time: 58.50ms
+[10:00:24.063] Browser LOG     ConverterPage render time: 36.30ms
+[10:00:26.197] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:26.251] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:26.401] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:26.427] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:26.634] Browser LOG     ConverterPage render time: 16328.10ms
+[10:00:26.634] Browser LOG     ConverterPage render time: 114.50ms
+[10:00:26.634] Browser LOG     ConverterPage render time: 87.70ms
+[10:00:26.634] Browser LOG     ConverterPage render time: 41.60ms
+[10:00:37.158] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:42.681] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:46.246] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:00:47.373] Server  ERROR   TypeError: fetch failed
+[10:00:47.375] Server  ERROR   TypeError: fetch failed
+[10:00:47.538] Server  ERROR   ⨯ Error: failed to pipe response
+[10:00:47.771] Browser LOG     ConverterPage render time: 21136.00ms
+[10:00:48.327] Browser LOG     ConverterPage render time: 24264.20ms
+[10:01:09.485] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:09.527] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:09.608] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:09.627] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:09.780] Browser LOG     ConverterPage render time: 21916.20ms
+[10:01:09.780] Browser LOG     ConverterPage render time: 90.40ms
+[10:01:09.800] Browser LOG     ConverterPage render time: 21381.30ms
+[10:01:09.800] Browser LOG     ConverterPage render time: 83.70ms
+[10:01:16.484] Server  LOG     ✓ Compiled in 115ms
+[10:01:16.946] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:16.968] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:16.973] Browser LOG     ConverterPage render time: 6899.10ms
+[10:01:16.973] Browser LOG     Header render time: 67178.30ms
+[10:01:16.973] Browser LOG     ConverterPage render time: 4.90ms
+[10:01:16.973] Browser LOG     Header render time: 15.20ms
+[10:01:16.973] Browser LOG     ConverterPage render time: 74.10ms
+[10:01:16.973] Browser LOG     ConverterPage render time: 71.60ms
+[10:01:16.974] Browser LOG     ConverterPage render time: 6877.70ms
+[10:01:16.974] Browser LOG     Header render time: 67148.20ms
+[10:01:16.974] Browser LOG     ConverterPage render time: 2.10ms
+[10:01:16.974] Browser LOG     Header render time: 18.30ms
+[10:01:16.974] Browser LOG     ConverterPage render time: 68.10ms
+[10:01:16.978] Browser LOG     ConverterPage render time: 73.80ms
+[10:01:16.990] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.008] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.077] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.107] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.199] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.210] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.214] Browser LOG     ConverterPage render time: 236.50ms
+[10:01:17.214] Browser LOG     ConverterPage render time: 19.00ms
+[10:01:17.214] Browser LOG     ConverterPage render time: 52.50ms
+[10:01:17.214] Browser LOG     ConverterPage render time: 32.60ms
+[10:01:17.250] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.262] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:17.365] Browser LOG     ConverterPage render time: 254.80ms
+[10:01:17.365] Browser LOG     ConverterPage render time: 13.40ms
+[10:01:17.365] Browser LOG     ConverterPage render time: 40.30ms
+[10:01:17.365] Browser LOG     ConverterPage render time: 59.50ms
+[10:01:17.365] Browser LOG     ConverterPage render time: 98.60ms
+[10:01:17.365] Browser LOG     ConverterPage render time: 38.40ms
+[10:01:17.374] Browser LOG     ConverterPage render time: 116.30ms
+[10:01:17.374] Browser LOG     ConverterPage render time: 60.90ms
+[10:01:18.296] Server  LOG     ✓ Compiled in 110ms
+[10:01:18.410] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:18.465] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:18.633] Browser LOG     ConverterPage render time: 1083.90ms
+[10:01:18.633] Browser LOG     Header render time: 1759.70ms
+[10:01:18.633] Browser LOG     ConverterPage render time: 1.90ms
+[10:01:18.633] Browser LOG     Header render time: 10.50ms
+[10:01:18.633] Browser LOG     ConverterPage render time: 72.10ms
+[10:01:18.633] Browser LOG     ConverterPage render time: 70.10ms
+[10:01:18.657] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:18.670] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:18.779] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:18.816] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:18.818] Browser LOG     ConverterPage render time: 1075.60ms
+[10:01:18.818] Browser LOG     Header render time: 1737.40ms
+[10:01:18.818] Browser LOG     ConverterPage render time: 0.90ms
+[10:01:18.818] Browser LOG     Header render time: 7.80ms
+[10:01:18.818] Browser LOG     ConverterPage render time: 65.90ms
+[10:01:18.818] Browser LOG     ConverterPage render time: 77.10ms
+[10:01:18.818] Browser LOG     ConverterPage render time: 87.40ms
+[10:01:18.820] Browser LOG     ConverterPage render time: 171.70ms
+[10:01:18.820] Browser LOG     ConverterPage render time: 15.70ms
+[10:01:18.854] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:19.191] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:19.251] Browser LOG     ConverterPage render time: 217.90ms
+[10:01:19.251] Browser LOG     ConverterPage render time: 10.20ms
+[10:01:19.251] Browser LOG     ConverterPage render time: 10.00ms
+[10:01:19.251] Browser LOG     ConverterPage render time: 114.90ms
+[10:01:19.251] Browser LOG     ConverterPage render time: 67.50ms
+[10:01:19.264] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:19.305] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:19.476] Browser LOG     ConverterPage render time: 452.00ms
+[10:01:19.483] Browser LOG     ConverterPage render time: 310.80ms
+[10:01:19.483] Browser LOG     ConverterPage render time: 165.50ms
+[10:01:24.048] Server  LOG     ✓ Compiled in 187ms
+[10:01:24.212] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.218] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.247] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.258] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.448] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.484] Browser LOG     ConverterPage render time: 4731.80ms
+[10:01:24.484] Browser LOG     Header render time: 5740.50ms
+[10:01:24.484] Browser LOG     ConverterPage render time: 0.90ms
+[10:01:24.484] Browser LOG     Header render time: 12.40ms
+[10:01:24.484] Browser LOG     ConverterPage render time: 61.40ms
+[10:01:24.484] Browser LOG     ConverterPage render time: 69.80ms
+[10:01:24.484] Browser LOG     ConverterPage render time: 81.40ms
+[10:01:24.530] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.553] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.570] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.581] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.630] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:24.693] Browser LOG     ConverterPage render time: 4820.10ms
+[10:01:24.693] Browser LOG     Header render time: 5756.20ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 0.90ms
+[10:01:24.693] Browser LOG     Header render time: 21.00ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 60.50ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 69.40ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 100.60ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 86.40ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 99.20ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 13.30ms
+[10:01:24.693] Browser LOG     ConverterPage render time: 11.90ms
+[10:01:24.753] Browser LOG     ConverterPage render time: 184.90ms
+[10:01:24.753] Browser LOG     ConverterPage render time: 35.40ms
+[10:01:24.753] Browser LOG     ConverterPage render time: 19.20ms
+[10:01:24.753] Browser LOG     ConverterPage render time: 41.80ms
+[10:01:57.625] Server  LOG     ✓ Compiled in 305ms
+[10:01:57.802] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:57.821] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:01:57.846] Browser LOG     ConverterPage render time: 33151.60ms
+[10:01:57.887] Browser LOG     ConverterPage render time: 33133.40ms
+[10:02:10.078] Server  LOG     ✓ Compiled in 122ms
+[10:02:10.229] Browser LOG     ConverterPage render time: 12372.50ms
+[10:02:10.229] Browser LOG     Header render time: 45988.90ms
+[10:02:10.230] Browser ERROR   Route error: {}
+[10:02:10.230] Browser ERROR   Route error: {}
+[10:02:10.254] Browser LOG     ConverterPage render time: 12362.40ms
+[10:02:10.254] Browser LOG     Header render time: 46015.90ms
+[10:02:10.254] Browser ERROR   Route error: {}
+[10:02:10.254] Browser ERROR   Route error: {}
+[10:02:24.283] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:02:24.294] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:02:34.786] Server  ERROR   TypeError: fetch failed
+[10:02:34.789] Server  ERROR   TypeError: fetch failed
+[10:02:34.989] Server  ERROR   ⨯ Error: failed to pipe response
+[10:02:34.992] Server  ERROR   TypeError: fetch failed
+[10:02:34.992] Server  ERROR   TypeError: fetch failed
+[10:02:35.063] Server  ERROR   ⨯ Error: failed to pipe response
+[10:02:44.108] Server  LOG     ✓ Compiled in 312ms
+[10:02:44.517] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:02:44.596] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:02:44.603] Browser LOG     ConverterPage render time: 53.50ms
+[10:02:44.603] Browser LOG     ConverterPage render time: 154.80ms
+[10:02:44.666] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:02:44.675] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:02:44.899] Browser LOG     ConverterPage render time: 353.40ms
+[10:02:44.946] Browser LOG     ConverterPage render time: 364.40ms
+[10:02:59.252] Browser LOG     ConverterPage render time: 14211.50ms
+[10:02:59.253] Browser LOG     ConverterPage render time: 74.30ms
+[10:02:59.279] Browser LOG     ConverterPage render time: 14389.50ms
+[10:02:59.279] Browser LOG     ConverterPage render time: 100.70ms
+[10:03:08.551] Server  LOG     ✓ Compiled in 1022ms
+[10:03:09.889] Server  LOG     ✓ Compiled in 233ms
+[10:03:24.321] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:03:24.347] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:03:24.529] Browser LOG     ConverterPage render time: 25285.20ms
+[10:03:24.553] Browser LOG     ConverterPage render time: 25271.30ms
+[10:03:44.470] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:03:44.506] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:04:04.755] Browser LOG     ConverterPage render time: 40222.20ms
+[10:04:04.793] Browser LOG     ConverterPage render time: 40234.60ms
+[10:04:24.247] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:04:24.258] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:04:34.764] Server  ERROR   TypeError: fetch failed
+[10:04:34.771] Server  ERROR   TypeError: fetch failed
+[10:04:34.965] Server  ERROR   ⨯ Error: failed to pipe response
+[10:04:34.968] Server  ERROR   TypeError: fetch failed
+[10:04:34.968] Server  ERROR   TypeError: fetch failed
+[10:04:35.065] Server  ERROR   ⨯ Error: failed to pipe response
+[10:04:35.153] Browser LOG     ConverterPage render time: 30390.00ms
+[10:04:35.271] Browser LOG     ConverterPage render time: 30465.30ms
+[10:04:44.401] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:04:44.418] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:04:54.918] Server  ERROR   TypeError: fetch failed
+[10:04:54.920] Server  ERROR   TypeError: fetch failed
+[10:04:55.152] Server  ERROR   ⨯ Error: failed to pipe response
+[10:04:55.154] Server  ERROR   TypeError: fetch failed
+[10:04:55.155] Server  ERROR   TypeError: fetch failed
+[10:04:55.263] Server  ERROR   ⨯ Error: failed to pipe response
+[10:04:55.345] Browser LOG     ConverterPage render time: 20076.30ms
+[10:04:55.446] Browser LOG     ConverterPage render time: 20293.70ms
+[10:05:34.705] Server  ERROR   TypeError: fetch failed
+[10:05:34.706] Server  ERROR   TypeError: fetch failed
+[10:05:34.841] Server  ERROR   ⨯ Error: failed to pipe response
+[10:05:34.842] Server  ERROR   TypeError: fetch failed
+[10:05:34.842] Server  ERROR   TypeError: fetch failed
+[10:05:34.889] Server  ERROR   ⨯ Error: failed to pipe response
+[10:05:34.906] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:05:34.919] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:05:44.340] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:05:44.362] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:05:45.404] Server  ERROR   TypeError: fetch failed
+[10:05:45.405] Server  ERROR   TypeError: fetch failed
+[10:05:45.506] Server  ERROR   ⨯ Error: failed to pipe response
+[10:05:45.507] Server  ERROR   TypeError: fetch failed
+[10:05:45.507] Server  ERROR   TypeError: fetch failed
+[10:05:45.508] Server  ERROR   TypeError: fetch failed
+[10:05:45.562] Server  ERROR   ⨯ Error: failed to pipe response
+[10:05:45.563] Server  ERROR   TypeError: fetch failed
+[10:05:45.688] Browser LOG     ConverterPage render time: 50338.70ms
+[10:05:45.746] Browser LOG     ConverterPage render time: 50294.60ms
+[10:05:55.202] Browser LOG     ConverterPage render time: 9510.50ms
+[10:05:55.576] Browser LOG     ConverterPage render time: 9827.60ms
+[10:06:24.295] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:06:24.308] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:06:24.476] Browser LOG     ConverterPage render time: 28897.60ms
+[10:06:24.507] Browser LOG     ConverterPage render time: 29302.20ms
+[10:06:40.671] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[10:06:41.185] Browser LOG     Header render time: 151.80ms
+[10:06:41.185] Browser LOG     ConverterPage render time: 150.50ms
+[10:06:41.185] Browser LOG     ConverterPage render time: 22.50ms
+[10:06:41.262] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:06:41.341] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:06:41.540] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:06:41.544] Browser LOG     ConverterPage render time: 257.00ms
+[10:06:41.544] Browser LOG     ConverterPage render time: 53.90ms
+[10:06:41.544] Browser LOG     ConverterPage render time: 72.00ms
+[10:06:41.681] Browser LOG     ConverterPage render time: 155.60ms
+[10:06:41.681] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[10:06:41.681] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/converter","route":"/converter"}
+[10:06:41.681] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771454977335} /_vercel/insights/view
+[10:06:44.315] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:06:44.525] Browser LOG     ConverterPage render time: 20014.40ms
+[10:06:47.432] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:24.214] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:24.418] Browser LOG     ConverterPage render time: 39889.60ms
+[10:07:37.008] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:37.017] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:37.811] Browser LOG     ConverterPage render time: 55402.40ms
+[10:07:37.811] Browser LOG     Header render time: 55979.20ms
+[10:07:37.811] Browser LOG     Header render time: 2.00ms
+[10:07:37.811] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455032737} /_vercel/insights/view
+[10:07:37.830] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:37.930] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:37.940] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:40.897] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:44.311] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:07:46.469] Browser LOG     ConverterPage render time: 22048.90ms
+[10:08:01.226] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:01.236] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:01.316] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:01.375] Browser LOG     Header render time: 24212.80ms
+[10:08:01.375] Browser LOG     ConverterPage render time: 0.90ms
+[10:08:01.375] Browser LOG     Header render time: 1.50ms
+[10:08:01.375] Browser LOG     ConverterPage render time: 62.30ms
+[10:08:01.375] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455056954} /_vercel/insights/view
+[10:08:01.760] Browser LOG     ConverterPage render time: 393.20ms
+[10:08:02.940] Browser LOG     ConverterPage render time: 1116.10ms
+[10:08:02.940] Browser LOG     ConverterPage render time: 60.30ms
+[10:08:11.010] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:11.027] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:11.049] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:11.212] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:11.269] Browser LOG     ConverterPage render time: 8127.40ms
+[10:08:11.269] Browser LOG     Header render time: 9765.70ms
+[10:08:11.269] Browser LOG     Header render time: 1.20ms
+[10:08:11.269] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455066723} /_vercel/insights/view
+[10:08:11.278] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:11.336] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:16.250] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:16.269] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:16.447] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:16.689] Browser LOG     Header render time: 5216.00ms
+[10:08:16.689] Browser LOG     ConverterPage render time: 1.10ms
+[10:08:16.689] Browser LOG     Header render time: 14.80ms
+[10:08:16.689] Browser LOG     ConverterPage render time: 68.50ms
+[10:08:16.689] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455071956} /_vercel/insights/view
+[10:08:16.689] Browser LOG     ConverterPage render time: 97.00ms
+[10:08:16.689] Browser LOG     ConverterPage render time: 108.10ms
+[10:08:16.689] Browser LOG     ConverterPage render time: 104.90ms
+[10:08:24.269] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:24.476] Browser LOG     ConverterPage render time: 38002.30ms
+[10:08:41.040] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:41.214] Browser LOG     ConverterPage render time: 24524.00ms
+[10:08:44.308] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:08:44.521] Browser LOG     ConverterPage render time: 20043.50ms
+[10:09:16.289] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:09:25.859] Browser LOG     ConverterPage render time: 44643.50ms
+[10:09:30.252] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:09:30.460] Browser LOG     ConverterPage render time: 45938.60ms
+[10:09:41.012] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:09:41.205] Browser LOG     ConverterPage render time: 15342.90ms
+[10:09:44.351] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:09:44.575] Browser LOG     ConverterPage render time: 14111.70ms
+[10:10:10.456] Server  LOG     ✓ Compiled in 232ms
+[10:10:10.656] Browser LOG     ConverterPage render time: 26053.50ms
+[10:10:10.658] Browser LOG     ConverterPage render time: 29435.80ms
+[10:10:10.701] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:10.839] Browser LOG     ConverterPage render time: 189.10ms
+[10:10:24.271] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:24.431] Browser LOG     ConverterPage render time: 13788.10ms
+[10:10:42.980] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:45.386] Browser LOG     ConverterPage render time: 34546.60ms
+[10:10:46.254] Server  LOG     ✓ Compiled in 111ms
+[10:10:46.417] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:46.425] Browser LOG     ConverterPage render time: 21994.20ms
+[10:10:46.446] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:46.451] Browser LOG     ConverterPage render time: 1004.90ms
+[10:10:46.559] Browser LOG     ConverterPage render time: 161.60ms
+[10:10:46.593] Browser LOG     ConverterPage render time: 165.50ms
+[10:10:47.787] Server  LOG     ✓ Compiled in 99ms
+[10:10:53.576] Server  LOG     ✓ Compiled in 118ms
+[10:10:53.996] Browser LOG     ConverterPage render time: 7164.50ms
+[10:10:53.996] Browser LOG     Header render time: 157419.60ms
+[10:10:53.996] Browser LOG     ConverterPage render time: 1.60ms
+[10:10:53.996] Browser LOG     Header render time: 30.30ms
+[10:10:53.996] Browser LOG     ConverterPage render time: 51.30ms
+[10:10:53.996] Browser LOG     ConverterPage render time: 42.80ms
+[10:10:54.036] Browser LOG     ConverterPage render time: 7145.10ms
+[10:10:54.053] Browser LOG     Header render time: 489415.10ms
+[10:10:54.053] Browser LOG     ConverterPage render time: 1.30ms
+[10:10:54.053] Browser LOG     Header render time: 27.30ms
+[10:10:54.053] Browser LOG     ConverterPage render time: 50.90ms
+[10:10:54.053] Browser LOG     ConverterPage render time: 36.80ms
+[10:10:54.142] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.253] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.271] Browser LOG     ConverterPage render time: 347.90ms
+[10:10:54.287] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.300] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.333] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.396] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.421] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.456] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.462] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.506] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:54.580] Browser LOG     ConverterPage render time: 342.50ms
+[10:10:54.581] Browser LOG     ConverterPage render time: 55.00ms
+[10:10:54.581] Browser LOG     ConverterPage render time: 105.50ms
+[10:10:54.581] Browser LOG     ConverterPage render time: 78.20ms
+[10:10:54.581] Browser LOG     ConverterPage render time: 60.30ms
+[10:10:54.581] Browser LOG     ConverterPage render time: 67.00ms
+[10:10:54.618] Browser LOG     ConverterPage render time: 181.60ms
+[10:10:54.619] Browser LOG     ConverterPage render time: 23.20ms
+[10:10:54.619] Browser LOG     ConverterPage render time: 91.50ms
+[10:10:54.619] Browser LOG     ConverterPage render time: 43.30ms
+[10:10:54.619] Browser LOG     ConverterPage render time: 37.60ms
+[10:10:55.582] Server  LOG     ✓ Compiled in 132ms
+[10:10:55.977] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:55.993] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.006] Browser LOG     ConverterPage render time: 1154.90ms
+[10:10:56.006] Browser LOG     Header render time: 1978.00ms
+[10:10:56.006] Browser LOG     ConverterPage render time: 2.30ms
+[10:10:56.006] Browser LOG     Header render time: 17.00ms
+[10:10:56.006] Browser LOG     ConverterPage render time: 66.30ms
+[10:10:56.006] Browser LOG     ConverterPage render time: 68.50ms
+[10:10:56.006] Browser LOG     ConverterPage render time: 1129.00ms
+[10:10:56.006] Browser LOG     Header render time: 1964.30ms
+[10:10:56.006] Browser LOG     ConverterPage render time: 1.00ms
+[10:10:56.006] Browser LOG     Header render time: 11.80ms
+[10:10:56.006] Browser LOG     ConverterPage render time: 71.80ms
+[10:10:56.006] Browser LOG     ConverterPage render time: 63.90ms
+[10:10:56.051] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.071] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.109] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.198] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.226] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.230] Browser LOG     ConverterPage render time: 292.30ms
+[10:10:56.230] Browser LOG     ConverterPage render time: 12.00ms
+[10:10:56.230] Browser LOG     ConverterPage render time: 10.10ms
+[10:10:56.254] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.268] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.316] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:56.381] Browser LOG     ConverterPage render time: 225.40ms
+[10:10:56.381] Browser LOG     ConverterPage render time: 17.80ms
+[10:10:56.381] Browser LOG     ConverterPage render time: 64.10ms
+[10:10:56.381] Browser LOG     ConverterPage render time: 16.40ms
+[10:10:56.381] Browser LOG     ConverterPage render time: 81.70ms
+[10:10:56.381] Browser LOG     ConverterPage render time: 68.50ms
+[10:10:56.429] Browser LOG     ConverterPage render time: 120.20ms
+[10:10:56.429] Browser LOG     ConverterPage render time: 41.50ms
+[10:10:56.429] Browser LOG     ConverterPage render time: 40.90ms
+[10:10:57.995] Server  LOG     ✓ Compiled in 132ms
+[10:10:58.132] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:58.167] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:58.397] Browser LOG     ConverterPage render time: 1766.20ms
+[10:10:58.397] Browser LOG     Header render time: 2391.70ms
+[10:10:58.397] Browser LOG     ConverterPage render time: 1.00ms
+[10:10:58.397] Browser LOG     Header render time: 9.80ms
+[10:10:58.397] Browser LOG     ConverterPage render time: 71.80ms
+[10:10:58.397] Browser LOG     ConverterPage render time: 63.30ms
+[10:10:58.448] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:58.702] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:58.892] Browser LOG     ConverterPage render time: 1731.00ms
+[10:10:58.892] Browser LOG     Header render time: 2397.90ms
+[10:10:58.892] Browser LOG     ConverterPage render time: 0.90ms
+[10:10:58.892] Browser LOG     Header render time: 9.00ms
+[10:10:58.892] Browser LOG     ConverterPage render time: 101.00ms
+[10:10:58.892] Browser LOG     ConverterPage render time: 94.80ms
+[10:10:58.892] Browser LOG     ConverterPage render time: 71.70ms
+[10:10:58.892] Browser LOG     ConverterPage render time: 239.20ms
+[10:10:59.130] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.193] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.201] Browser LOG     ConverterPage render time: 332.30ms
+[10:10:59.201] Browser LOG     ConverterPage render time: 12.00ms
+[10:10:59.201] Browser LOG     ConverterPage render time: 205.80ms
+[10:10:59.213] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.235] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.288] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.316] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.490] Browser LOG     ConverterPage render time: 636.20ms
+[10:10:59.490] Browser LOG     ConverterPage render time: 89.60ms
+[10:10:59.490] Browser LOG     ConverterPage render time: 66.30ms
+[10:10:59.574] Browser LOG     ConverterPage render time: 538.10ms
+[10:10:59.574] Browser LOG     ConverterPage render time: 81.20ms
+[10:10:59.574] Browser LOG     ConverterPage render time: 92.90ms
+[10:10:59.650] Server  LOG     ✓ Compiled in 99ms
+[10:10:59.716] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.746] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.824] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.842] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:10:59.927] Browser LOG     ConverterPage render time: 195.50ms
+[10:10:59.927] Browser LOG     Header render time: 1610.40ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 0.80ms
+[10:10:59.927] Browser LOG     Header render time: 13.40ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 12.80ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 9.80ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 43.90ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 33.50ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 288.30ms
+[10:10:59.927] Browser LOG     Header render time: 1606.60ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 0.80ms
+[10:10:59.927] Browser LOG     Header render time: 7.20ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 16.50ms
+[10:10:59.927] Browser LOG     ConverterPage render time: 8.90ms
+[10:10:59.987] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:11:00.089] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:11:00.100] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:11:00.124] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:11:00.126] Browser LOG     ConverterPage render time: 122.30ms
+[10:11:00.126] Browser LOG     ConverterPage render time: 16.60ms
+[10:11:00.159] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:11:00.165] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:11:00.326] Browser LOG     ConverterPage render time: 216.00ms
+[10:11:00.326] Browser LOG     ConverterPage render time: 39.50ms
+[10:11:00.326] Browser LOG     ConverterPage render time: 42.10ms
+[10:11:00.326] Browser LOG     ConverterPage render time: 119.00ms
+[10:11:00.328] Browser LOG     ConverterPage render time: 169.50ms
+[10:11:00.328] Browser LOG     ConverterPage render time: 80.20ms
+[10:11:00.328] Browser LOG     ConverterPage render time: 22.20ms
+[10:11:00.328] Browser LOG     ConverterPage render time: 91.50ms
+[10:11:05.335] Browser LOG     ConverterPage render time: 4945.80ms
+[10:11:05.337] Browser LOG     ConverterPage render time: 58.70ms
+[10:11:05.707] Browser LOG     ConverterPage render time: 372.60ms
+[10:11:59.824] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:11:59.839] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:12:17.250] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:12:17.350] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:12:17.509] Browser LOG     ConverterPage render time: 77058.40ms
+[10:12:17.509] Browser LOG     ConverterPage render time: 114.80ms
+[10:12:17.514] Browser LOG     ConverterPage render time: 71695.20ms
+[10:12:17.514] Browser LOG     ConverterPage render time: 109.20ms
+[10:12:59.789] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:12:59.857] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:12:59.875] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:12:59.888] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:13:00.063] Browser LOG     ConverterPage render time: 42545.30ms
+[10:13:00.071] Browser LOG     ConverterPage render time: 42561.50ms
+[10:13:03.121] Browser LOG     ConverterPage render time: 3047.60ms
+[10:13:03.157] Browser LOG     ConverterPage render time: 3092.40ms
+[10:13:38.096] Server  LOG     ✓ Compiled in 292ms
+[10:13:44.844] Server  LOG     ✓ Compiled in 280ms
+[10:13:55.417] Browser LOG     ConverterPage render time: 52193.60ms
+[10:13:55.418] Browser LOG     ConverterPage render time: 57.60ms
+[10:13:55.795] Browser LOG     ConverterPage render time: 382.80ms
+[10:13:56.623] Browser LOG     ConverterPage render time: 771.00ms
+[10:13:56.623] Browser LOG     ConverterPage render time: 54.60ms
+[10:13:57.006] Browser LOG     ConverterPage render time: 382.10ms
+[10:13:59.852] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:13:59.871] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:12.895] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:12.904] Browser LOG     ConverterPage render time: 15898.20ms
+[10:14:13.077] Browser LOG     ConverterPage render time: 169.00ms
+[10:14:13.079] Browser LOG     ConverterPage render time: 69956.60ms
+[10:14:13.905] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:14.172] Browser LOG     ConverterPage render time: 1082.40ms
+[10:14:18.748] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:18.764] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:18.773] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:19.011] Browser LOG     ConverterPage render time: 5744.40ms
+[10:14:19.011] Browser LOG     Header render time: 199034.30ms
+[10:14:19.011] Browser LOG     Header render time: 3.60ms
+[10:14:19.011] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455434544} /_vercel/insights/view
+[10:14:19.022] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:19.027] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:19.081] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:30.304] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:30.314] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:30.321] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:30.513] Browser LOG     Header render time: 11554.60ms
+[10:14:30.513] Browser LOG     ConverterPage render time: 0.60ms
+[10:14:30.513] Browser LOG     Header render time: 1.40ms
+[10:14:30.513] Browser LOG     ConverterPage render time: 54.50ms
+[10:14:30.513] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455446101} /_vercel/insights/view
+[10:14:30.513] Browser LOG     ConverterPage render time: 71.10ms
+[10:14:30.785] Browser LOG     ConverterPage render time: 268.60ms
+[10:14:35.379] Browser LOG     ConverterPage render time: 4535.60ms
+[10:14:35.379] Browser LOG     ConverterPage render time: 56.50ms
+[10:14:35.777] Browser LOG     ConverterPage render time: 396.10ms
+[10:14:36.590] Browser LOG     ConverterPage render time: 737.90ms
+[10:14:36.590] Browser LOG     ConverterPage render time: 72.60ms
+[10:14:36.975] Browser LOG     ConverterPage render time: 383.50ms
+[10:14:58.433] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:58.473] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:58.532] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:58.535] Browser LOG     ConverterPage render time: 21488.00ms
+[10:14:58.535] Browser LOG     Header render time: 28077.30ms
+[10:14:58.535] Browser LOG     Header render time: 8.50ms
+[10:14:58.535] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455474189} /_vercel/insights/view
+[10:14:58.702] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:58.708] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:58.793] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:59.753] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:59.776] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:14:59.873] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:15:00.032] Browser LOG     ConverterPage render time: 45789.30ms
+[10:15:00.032] Browser LOG     ConverterPage render time: 72.50ms
+[10:15:23.266] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:15:23.276] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:15:23.287] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:15:23.410] Browser LOG     Header render time: 24860.00ms
+[10:15:23.410] Browser LOG     ConverterPage render time: 3.50ms
+[10:15:23.410] Browser LOG     Header render time: 4.10ms
+[10:15:23.410] Browser LOG     ConverterPage render time: 57.80ms
+[10:15:23.410] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455499052} /_vercel/insights/view
+[10:15:23.789] Browser LOG     ConverterPage render time: 388.80ms
+[10:15:25.830] Browser LOG     ConverterPage render time: 1987.30ms
+[10:15:25.830] Browser LOG     ConverterPage render time: 51.60ms
+[10:15:26.212] Browser LOG     ConverterPage render time: 379.90ms
+[10:15:27.641] Browser LOG     ConverterPage render time: 1370.10ms
+[10:15:27.641] Browser LOG     ConverterPage render time: 56.30ms
+[10:15:28.027] Browser LOG     ConverterPage render time: 385.50ms
+[10:15:28.662] Browser LOG     ConverterPage render time: 632.10ms
+[10:15:29.104] Browser LOG     ConverterPage render time: 442.20ms
+[10:15:29.538] Browser LOG     ConverterPage render time: 431.50ms
+[10:15:59.764] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:15:59.829] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:15:59.867] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:16:00.001] Browser LOG     ConverterPage render time: 30462.90ms
+[10:16:00.029] Browser LOG     ConverterPage render time: 59917.10ms
+[10:16:00.029] Browser LOG     ConverterPage render time: 76.10ms
+[10:16:13.943] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:16:13.967] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:16:13.980] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:16:13.991] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:16:14.132] Browser LOG     ConverterPage render time: 14003.70ms
+[10:16:14.132] Browser LOG     Header render time: 50665.80ms
+[10:16:14.132] Browser LOG     Header render time: 1.10ms
+[10:16:14.132] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455549723} /_vercel/insights/view
+[10:16:14.178] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:16:14.240] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:16:59.783] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:17:05.902] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:17:06.052] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:17:06.624] Browser LOG     ConverterPage render time: 66594.40ms
+[10:17:07.768] Browser LOG     ConverterPage render time: 1142.60ms
+[10:17:14.010] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:17:14.026] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:17:59.850] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:17:59.871] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:17:59.969] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:18:00.130] Browser LOG     ConverterPage render time: 52272.40ms
+[10:18:00.130] Browser LOG     ConverterPage render time: 86.40ms
+[10:18:04.368] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:18:04.528] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:18:04.548] Browser LOG     Header render time: 110354.80ms
+[10:18:04.548] Browser LOG     Header render time: 9.80ms
+[10:18:04.548] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/predictions color: rgb(120, 120, 120) color: inherit {"dp":"/predictions","o":"http://localhost:3000/predictions","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771455660090} /_vercel/insights/view
+[10:18:05.094] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:18:05.128] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:18:59.822] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:19:04.402] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:19:04.429] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:19:06.358] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:19:06.504] Server  LOG     [v0] Market rate from Xe: 185.594 LRD/USD
+[10:19:06.675] Browser LOG     ConverterPage render time: 66430.10ms
+[10:19:06.675] Browser LOG     ConverterPage render time: 112.20ms

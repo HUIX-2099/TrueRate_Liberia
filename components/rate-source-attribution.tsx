@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Info } from "lucide-react"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 export interface RateSourceAttributionProps {
   /** Source names (e.g. ["Central Bank of Liberia"] or ["ExchangeRate API", "Open Exchange Rates"]) */
@@ -49,6 +50,7 @@ export function RateSourceAttribution({
   hideSources = false,
   className = "",
 }: RateSourceAttributionProps) {
+  const { rateSource, cblRate: ctxCblRate, cblLastUpdated: ctxCblLastUpdated } = useLiveRate()
   const sourceLabel = sources.length === 0
     ? "Multiple sources"
     : sources.length === 1
@@ -56,14 +58,17 @@ export function RateSourceAttribution({
       : `${sources.length} sources`
 
   if (compact) {
+    const isOfficial = rateSource === "official" && ctxCblRate != null && ctxCblRate > 0
+    const displayLabel = isOfficial ? "Official (CBL)" : "Market"
+    const displayTime = isOfficial && ctxCblLastUpdated ? formatTime(ctxCblLastUpdated) : (timestamp ? formatTime(timestamp) : "")
     return (
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             <span className={`inline-flex items-center gap-1.5 text-xs text-muted-foreground cursor-help ${className}`}>
               <Info className="h-3.5 w-3.5" />
-              {sourceLabel}
-              {timestamp ? ` · ${formatTime(timestamp)}` : ""}
+              {displayLabel}
+              {displayTime ? ` · ${displayTime}` : ""}
             </span>
           </TooltipTrigger>
           <TooltipContent side="top" className="max-w-xs">
