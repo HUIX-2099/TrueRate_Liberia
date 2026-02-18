@@ -4,6 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Mobile: prevent horizontal overflow and reduce tap highlight */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
 :root {
   /* <CHANGE> Custom color palette for Liberian currency exchange platform */
   --background: oklch(0.99 0.005 105);

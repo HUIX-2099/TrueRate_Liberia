@@ -155,6 +155,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/forums/thread/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/forums/thread/[id]">> = Specific
+  const handler = {} as typeof import("../../../app/forums/thread/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/liberia-market/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/liberia-market">> = Specific

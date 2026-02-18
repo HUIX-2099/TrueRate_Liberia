@@ -163,13 +163,13 @@ export async function getAggregatedRate(): Promise<{
       cblSelling = Number(cblHomepage.selling.toFixed(4))
     }
   }
-  // Market rate: prefer Xe.com (mid-market), then aggregate other APIs.
+  // Market rate: prefer Xe.com (mid-market), then aggregate other APIs. Do not display "Xe" as source.
   const xeResult = await fetchMarketRateFromXe()
   if (xeResult) {
     return {
       rate: xeResult.rate,
       confidence: 1.0,
-      sources: [xeResult.source],
+      sources: ["Market"],
       timestamp: new Date().toISOString(),
       cblRate,
       cblLastUpdated,

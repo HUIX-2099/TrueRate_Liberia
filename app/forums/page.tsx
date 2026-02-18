@@ -1,477 +1,381 @@
 "use client"
 
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
+import { useSearchParams } from "next/navigation"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Label } from "@/components/ui/label"
 import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  DialogFooter,
 } from "@/components/ui/dialog"
-import { 
-  MessageSquare, TrendingUp, AlertTriangle, Star, 
-  ThumbsUp, MessageCircle, Clock, Plus, Search,
-  Flame, Pin, Shield, Users, Eye
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import {
+  MessageSquare,
+  PlusCircle,
+  TrendingUp,
+  ShieldAlert,
+  Lightbulb,
+  Newspaper,
+  Star,
+  MessageCircle,
+  Clock,
+  Filter,
 } from "lucide-react"
-import { useAuth } from "@/lib/auth/auth-context"
+import Link from "next/link"
+import { useLanguage } from "@/lib/i18n/language-context"
+import {
+  type ForumThread,
+  type ForumCategoryKey,
+  CATEGORY_KEYS,
+  categoryParamToKey,
+  loadUserThreads,
+  saveUserThreads,
+} from "@/lib/forum-data"
 
-interface ForumPost {
-  id: string
-  title: string
-  content: string
-  author: string
-  authorAvatar?: string
-  category: 'scams' | 'tips' | 'news' | 'reviews' | 'general'
-  createdAt: string
-  replies: number
-  views: number
-  likes: number
-  isPinned?: boolean
-  isHot?: boolean
-  tags: string[]
-}
-
-const mockPosts: ForumPost[] = [
-  {
-    id: '1',
-    title: '⚠️ WARNING: Fake $100 bills circulating in Red Light Market',
-    content: 'Be very careful when exchanging at Red Light today. Several traders have reported receiving counterfeit $100 notes...',
-    author: 'SafeTrader',
-    category: 'scams',
-    createdAt: '2024-12-05T08:30:00Z',
-    replies: 45,
-    views: 1250,
-    likes: 89,
-    isPinned: true,
-    isHot: true,
-    tags: ['Red Light', 'Counterfeit', 'Alert']
-  },
-  {
-    id: '2',
-    title: 'Best time of day to exchange? My findings after 6 months',
-    content: 'After tracking rates for 6 months, I found that rates are usually best between 10 AM and 12 PM...',
-    author: 'RateExpert',
-    category: 'tips',
-    createdAt: '2024-12-04T15:20:00Z',
-    replies: 32,
-    views: 890,
-    likes: 67,
-    isHot: true,
-    tags: ['Tips', 'Strategy', 'Timing']
-  },
-  {
-    id: '3',
-    title: 'CBL announces new forex regulations starting January 2025',
-    content: 'The Central Bank of Liberia has announced new foreign exchange regulations that will affect...',
-    author: 'NewsBot',
-    category: 'news',
-    createdAt: '2024-12-03T10:00:00Z',
-    replies: 28,
-    views: 2100,
-    likes: 45,
-    isPinned: true,
-    tags: ['CBL', 'Regulations', 'Official']
-  },
-  {
-    id: '4',
-    title: 'Review: Liberty Exchange on Broad Street - Very Professional!',
-    content: 'Just wanted to share my positive experience at Liberty Exchange. Fast service, good rates, and very trustworthy...',
-    author: 'HappyCustomer',
-    category: 'reviews',
-    createdAt: '2024-12-02T14:45:00Z',
-    replies: 12,
-    views: 456,
-    likes: 34,
-    tags: ['Review', 'Broad Street', 'Recommended']
-  },
-  {
-    id: '5',
-    title: 'Dollar dropping next week? What do you all think?',
-    content: 'Based on the predictions and some news I\'ve been reading, it seems like the dollar might drop...',
-    author: 'Trader101',
-    category: 'general',
-    createdAt: '2024-12-01T09:15:00Z',
-    replies: 67,
-    views: 780,
-    likes: 23,
-    isHot: true,
-    tags: ['Discussion', 'Predictions', 'Analysis']
-  },
+const CATEGORIES = [
+  { key: "forum.scamAlerts" as const, icon: ShieldAlert, color: "text-amber-600", bg: "bg-amber-500/10" },
+  { key: "forum.exchangeTips" as const, icon: Lightbulb, color: "text-emerald-600", bg: "bg-emerald-500/10" },
+  { key: "forum.marketNews" as const, icon: Newspaper, color: "text-blue-600", bg: "bg-blue-500/10" },
+  { key: "forum.changerReviews" as const, icon: Star, color: "text-violet-600", bg: "bg-violet-500/10" },
 ]
 
-const categories = [
-  { id: 'all', name: 'All Topics', icon: <MessageSquare className="h-4 w-4" /> },
-  { id: 'scams', name: 'Scam Alerts', icon: <AlertTriangle className="h-4 w-4" />, color: 'text-destructive' },
-  { id: 'tips', name: 'Exchange Tips', icon: <TrendingUp className="h-4 w-4" />, color: 'text-secondary' },
-  { id: 'news', name: 'Market News', icon: <Flame className="h-4 w-4" />, color: 'text-primary' },
-  { id: 'reviews', name: 'Changer Reviews', icon: <Star className="h-4 w-4" />, color: 'text-accent' },
-  { id: 'general', name: 'General', icon: <Users className="h-4 w-4" /> },
+const MOCK_THREADS: ForumThread[] = [
+  {
+    id: "1",
+    title: "Fake USD notes at Red Light — be careful",
+    excerpt:
+      "Someone tried to give me counterfeit $20s at a changer near the market. Check your bills before you leave.",
+    category: "forum.scamAlerts",
+    author: "Marie K.",
+    time: "2 hours ago",
+    replies: 12,
+  },
+  {
+    id: "2",
+    title: "Best time to change USD this week?",
+    excerpt: "Heard the rate might move. Should I change today or wait until Friday?",
+    category: "forum.exchangeTips",
+    author: "James T.",
+    time: "5 hours ago",
+    replies: 8,
+  },
+  {
+    id: "3",
+    title: "CBL rate update — Feb 18",
+    excerpt: "Central Bank just published the new buying/selling rates. Selling at 186.65 LRD per USD.",
+    category: "forum.marketNews",
+    author: "TrueRate",
+    time: "1 day ago",
+    replies: 24,
+  },
+  {
+    id: "4",
+    title: "Quick Cash Sinkor — honest and fast",
+    excerpt: "I've been using them for months. Rate is fair and they don't delay. Recommended.",
+    category: "forum.changerReviews",
+    author: "Abigail M.",
+    time: "1 day ago",
+    replies: 5,
+  },
+  {
+    id: "5",
+    title: "Waterside changer shorted me 500 LRD",
+    excerpt: "Double-count your money. I was short 500 LRD at a booth near the port. No receipt given.",
+    category: "forum.scamAlerts",
+    author: "Anonymous",
+    time: "2 days ago",
+    replies: 19,
+  },
+  {
+    id: "6",
+    title: "How to spot fake dollars — quick guide",
+    excerpt: "A few things I always check: watermark, security strip, and the texture. Sharing what works for me.",
+    category: "forum.exchangeTips",
+    author: "David S.",
+    time: "3 days ago",
+    replies: 31,
+  },
 ]
 
 export default function ForumsPage() {
-  const { user } = useAuth()
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [newPostOpen, setNewPostOpen] = useState(false)
-  const [newPost, setNewPost] = useState({ title: '', content: '', category: 'general' })
+  const { t } = useLanguage()
+  const searchParams = useSearchParams()
+  const categoryParam = searchParams.get("category")
+  const categoryFilter = categoryParamToKey(categoryParam)
 
-  const filteredPosts = mockPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
-    const matchesSearch = searchQuery === '' || 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.content.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
+  const [userThreads, setUserThreads] = useState<ForumThread[]>([])
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [newTitle, setNewTitle] = useState("")
+  const [newCategory, setNewCategory] = useState<ForumCategoryKey>("forum.exchangeTips")
+  const [newBody, setNewBody] = useState("")
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'scams': return 'bg-destructive/10 text-destructive border-destructive/30'
-      case 'tips': return 'bg-secondary/10 text-secondary border-secondary/30'
-      case 'news': return 'bg-primary/10 text-primary border-primary/30'
-      case 'reviews': return 'bg-accent/10 text-accent border-accent/30'
-      default: return 'bg-muted'
+  useEffect(() => {
+    setUserThreads(loadUserThreads())
+  }, [])
+
+  const allThreads = [...MOCK_THREADS, ...userThreads]
+  const filteredThreads = categoryFilter
+    ? allThreads.filter((thread) => thread.category === categoryFilter)
+    : allThreads
+
+  const handleSubmitTopic = useCallback(() => {
+    const title = newTitle.trim()
+    const body = newBody.trim()
+    if (!title) return
+    const excerpt = body ? (body.slice(0, 120) + (body.length > 120 ? "…" : "")) : title
+    const thread: ForumThread = {
+      id: Date.now().toString(),
+      title,
+      excerpt,
+      body: body || undefined,
+      category: newCategory,
+      author: "You",
+      time: "Just now",
+      replies: 0,
+      replyList: [],
     }
-  }
-
-  const formatTimeAgo = (dateString: string) => {
-    const date = new Date(dateString)
-    const now = new Date()
-    const diff = Math.floor((now.getTime() - date.getTime()) / 1000)
-    
-    if (diff < 60) return 'Just now'
-    if (diff < 3600) return `${Math.floor(diff / 60)}m ago`
-    if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`
-    return `${Math.floor(diff / 86400)}d ago`
-  }
+    const next = [...userThreads, thread]
+    setUserThreads(next)
+    saveUserThreads(next)
+    setNewTitle("")
+    setNewBody("")
+    setNewCategory("forum.exchangeTips")
+    setDialogOpen(false)
+  }, [newTitle, newBody, newCategory, userThreads])
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4">
+      <main className="flex-1 min-w-0">
+        {/* Hero */}
+        <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-4">
-                <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center">
-                  <MessageSquare className="h-8 w-8 text-primary" />
+                <div className="h-16 w-16 rounded-full bg-violet-500/20 flex items-center justify-center">
+                  <MessageSquare className="h-8 w-8 text-violet-500" />
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-                <Badge className="mb-2">Community Forums</Badge>
-                <Badge className="bg-primary/10 text-primary">5K+ Members</Badge>
-                <Badge variant="secondary">Real Discussions</Badge>
-                <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Safe Community</Badge>
+                <Badge variant="secondary">{t("forum.categories")}</Badge>
+                <Badge className="bg-primary/10 text-primary">Community</Badge>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                  Discussion Forums
+                  {t("forum.title")}
                 </span>
               </h1>
-              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
-                Share tips, report scams, discuss market trends, and connect with fellow Liberians
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-2xl mx-auto mb-6">
+                Discuss rates, share tips, report scams, and read changer reviews. Built for the Liberia exchange
+                community.
               </p>
+              <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                <DialogTrigger asChild>
+                  <Button size="lg" className="gap-2">
+                    <PlusCircle className="h-5 w-5" />
+                    {t("forum.newTopic")}
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-lg sm:text-xl">{t("forum.newTopic")}</DialogTitle>
+                    <DialogDescription>Add a title, pick a category, and write your post.</DialogDescription>
+                  </DialogHeader>
+                  <div className="grid gap-4 py-4">
+                    <div className="grid gap-2">
+                      <Label htmlFor="topic-title">Title</Label>
+                      <Input
+                        id="topic-title"
+                        placeholder="e.g. Fake bills at Red Light market"
+                        value={newTitle}
+                        onChange={(e) => setNewTitle(e.target.value)}
+                      />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label>Category</Label>
+                      <Select
+                        value={newCategory}
+                        onValueChange={(v) => setNewCategory(v as ForumCategoryKey)}
+                      >
+                        <SelectTrigger className="w-full">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {CATEGORY_KEYS.map((key) => (
+                            <SelectItem key={key} value={key}>
+                              {t(key)}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="grid gap-2">
+                      <Label htmlFor="topic-body">Message (optional)</Label>
+                      <Textarea
+                        id="topic-body"
+                        placeholder="Share details..."
+                        rows={4}
+                        value={newBody}
+                        onChange={(e) => setNewBody(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <DialogFooter>
+                    <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>
+                      Cancel
+                    </Button>
+                    <Button type="button" onClick={handleSubmitTopic} disabled={!newTitle.trim()}>
+                      Post topic
+                    </Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </section>
 
-        {/* Forum Content */}
-        <section className="py-6 sm:py-8">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 space-y-3">
-                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-                  <Badge variant="outline">Active Discussions</Badge>
-                  <Badge className="bg-primary/10 text-primary">Community Driven</Badge>
-                  <Badge variant="secondary">Knowledge Sharing</Badge>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-balance">
-                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                    Join the Conversation
-                  </span>
+        {/* Trending discussions */}
+        <section className="py-8 sm:py-12 bg-background">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto min-w-0">
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                <h2 className="text-xl font-semibold flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-primary" />
+                  {categoryFilter ? t(categoryFilter) : t("forum.trending")}
                 </h2>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  Connect with fellow Liberians, share insights, and stay informed
-                </p>
+                {categoryFilter && (
+                  <Button asChild variant="outline" size="sm" className="gap-1">
+                    <Link href="/forums">
+                      <Filter className="h-4 w-4" />
+                      Show all
+                    </Link>
+                  </Button>
+                )}
               </div>
-              {/* Search and New Post */}
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
-                <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    placeholder="Search discussions..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10"
-                  />
-                </div>
-                <Dialog open={newPostOpen} onOpenChange={setNewPostOpen}>
-                  <DialogTrigger asChild>
-                    <Button className="gap-2">
-                      <Plus className="h-4 w-4" />
-                      Start New Topic
+              {filteredThreads.length === 0 ? (
+                <Card className="border-border/60">
+                  <CardContent className="py-12 text-center">
+                    <p className="text-muted-foreground">No discussions in this category yet. Start one above.</p>
+                    <Button className="mt-4 gap-2" onClick={() => setDialogOpen(true)}>
+                      <PlusCircle className="h-4 w-4" />
+                      {t("forum.newTopic")}
                     </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-lg">
-                    <DialogHeader>
-                      <DialogTitle>Start New Discussion</DialogTitle>
-                      <DialogDescription>
-                        Share your knowledge, ask questions, or alert the community
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="space-y-4 py-4">
-                      <div>
-                        <label className="text-sm font-medium mb-2 block">Category</label>
-                        <select 
-                          className="w-full p-2 border rounded-md"
-                          value={newPost.category}
-                          onChange={(e) => setNewPost(prev => ({ ...prev, category: e.target.value }))}
-                        >
-                          {categories.filter(c => c.id !== 'all').map(cat => (
-                            <option key={cat.id} value={cat.id}>{cat.name}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium mb-2 block">Title</label>
-                        <Input
-                          placeholder="Enter a descriptive title..."
-                          value={newPost.title}
-                          onChange={(e) => setNewPost(prev => ({ ...prev, title: e.target.value }))}
-                        />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium mb-2 block">Content</label>
-                        <Textarea
-                          placeholder="Share your thoughts, questions, or information..."
-                          value={newPost.content}
-                          onChange={(e) => setNewPost(prev => ({ ...prev, content: e.target.value }))}
-                          rows={5}
-                        />
-                      </div>
-                    </div>
-                    <DialogFooter>
-                      <Button variant="outline" onClick={() => setNewPostOpen(false)}>
-                        Cancel
-                      </Button>
-                      <Button onClick={() => {
-                        // In production, this would save to database
-                        alert('Post created! (Demo)')
-                        setNewPostOpen(false)
-                        setNewPost({ title: '', content: '', category: 'general' })
-                      }}>
-                        Post Discussion
-                      </Button>
-                    </DialogFooter>
-                  </DialogContent>
-                </Dialog>
-              </div>
-
-              <div className="grid md:grid-cols-4 gap-6">
-                {/* Categories Sidebar */}
-                <div className="md:col-span-1">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-lg">Categories</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-1 p-0 pb-4">
-                      {categories.map(cat => (
-                        <button
-                          key={cat.id}
-                          className={`w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors ${
-                            selectedCategory === cat.id 
-                              ? 'bg-primary/10 text-primary border-l-2 border-primary' 
-                              : 'hover:bg-muted'
-                          }`}
-                          onClick={() => setSelectedCategory(cat.id)}
-                        >
-                          <span className={cat.color}>{cat.icon}</span>
-                          <span className="text-sm font-medium">{cat.name}</span>
-                        </button>
-                      ))}
-                    </CardContent>
-                  </Card>
-
-                  {/* Forum Stats */}
-                  <Card className="mt-4 border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
-                    <CardHeader className="pb-4">
-                      <CardTitle className="text-lg text-primary flex items-center gap-2">
-                        <div className="h-6 w-6 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <Users className="h-4 w-4" />
-                        </div>
-                        Forum Stats
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-muted-foreground">Total Topics</span>
-                          <span className="font-semibold text-primary">1,234</span>
-                        </div>
-                      </div>
-                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-muted-foreground">Total Replies</span>
-                          <span className="font-semibold text-secondary">8,567</span>
-                        </div>
-                      </div>
-                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-muted-foreground">Members</span>
-                          <span className="font-semibold text-amber-600">5,678</span>
-                        </div>
-                      </div>
-                      <div className="p-3 bg-background/80 rounded-lg border border-border/40">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-muted-foreground">Online Now</span>
-                          <span className="font-semibold text-green-600">127</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Posts List */}
-                <div className="md:col-span-3 space-y-4">
-                  {/* Pinned Posts */}
-                  {filteredPosts.filter(p => p.isPinned).length > 0 && (
-                    <div className="space-y-2 mb-6">
-                      <h3 className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
-                        <Pin className="h-4 w-4" />
-                        Pinned
-                      </h3>
-                      {filteredPosts.filter(p => p.isPinned).map(post => (
-                        <Card key={post.id} className="border-primary/30 bg-primary/5">
-                          <CardContent className="p-4">
-                            <div className="flex items-start gap-4">
-                              <Avatar>
-                                <AvatarFallback>{post.author[0]}</AvatarFallback>
-                              </Avatar>
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <Badge variant="outline" className={`${getCategoryColor(post.category)} text-xs`}>
-                                    {categories.find(c => c.id === post.category)?.name}
-                                  </Badge>
-                                  {post.isHot && (
-                                    <Badge variant="destructive" className="text-xs gap-1">
-                                      <Flame className="h-3 w-3" />
-                                      Hot
-                                    </Badge>
-                                  )}
-                                </div>
-                                <h3 className="font-semibold mb-1 hover:text-primary cursor-pointer">
-                                  {post.title}
-                                </h3>
-                                <p className="text-sm text-muted-foreground line-clamp-2">
-                                  {post.content}
-                                </p>
-                                <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
-                                  <span>{post.author}</span>
-                                  <span className="flex items-center gap-1">
-                                    <Clock className="h-3 w-3" />
-                                    {formatTimeAgo(post.createdAt)}
-                                  </span>
-                                  <span className="flex items-center gap-1">
-                                    <MessageCircle className="h-3 w-3" />
-                                    {post.replies}
-                                  </span>
-                                  <span className="flex items-center gap-1">
-                                    <Eye className="h-3 w-3" />
-                                    {post.views}
-                                  </span>
-                                  <span className="flex items-center gap-1">
-                                    <ThumbsUp className="h-3 w-3" />
-                                    {post.likes}
-                                  </span>
-                                </div>
-                              </div>
+                  </CardContent>
+                </Card>
+              ) : (
+                <div className="space-y-4">
+                  {filteredThreads.map((thread) => (
+                    <Card
+                      key={thread.id}
+                      className="border-border/60 shadow-sm hover:shadow-md transition-all hover:border-primary/20 overflow-hidden"
+                    >
+                      <CardContent className="p-3 sm:p-6">
+                        <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                          <Avatar className="h-9 w-9 sm:h-10 sm:w-10 shrink-0">
+                            <AvatarFallback>
+                              {thread.author
+                                .split(" ")
+                                .map((n) => n[0])
+                                .join("")
+                                .slice(0, 2)
+                                .toUpperCase()}
+                            </AvatarFallback>
+                          </Avatar>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex flex-wrap items-center gap-2 mb-1">
+                              <Badge variant="outline" className="text-xs font-normal">
+                                {t(thread.category)}
+                              </Badge>
+                              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                                <Clock className="h-3 w-3" />
+                                {thread.time}
+                              </span>
+                              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                                <MessageCircle className="h-3 w-3" />
+                                {thread.replies} replies
+                              </span>
                             </div>
-                          </CardContent>
-                        </Card>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Regular Posts */}
-                  <div className="space-y-2">
-                    <h3 className="text-sm font-semibold text-muted-foreground">
-                      Recent Discussions
-                    </h3>
-                    {filteredPosts.filter(p => !p.isPinned).map(post => (
-                      <Card key={post.id} className="hover:border-muted-foreground/50 transition-colors cursor-pointer">
-                        <CardContent className="p-4">
-                          <div className="flex items-start gap-4">
-                            <Avatar>
-                              <AvatarFallback>{post.author[0]}</AvatarFallback>
-                            </Avatar>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-1">
-                                <Badge variant="outline" className={`${getCategoryColor(post.category)} text-xs`}>
-                                  {categories.find(c => c.id === post.category)?.name}
-                                </Badge>
-                                {post.isHot && (
-                                  <Badge variant="destructive" className="text-xs gap-1">
-                                    <Flame className="h-3 w-3" />
-                                    Hot
-                                  </Badge>
-                                )}
-                              </div>
-                              <h3 className="font-semibold mb-1 hover:text-primary">
-                                {post.title}
-                              </h3>
-                              <p className="text-sm text-muted-foreground line-clamp-2">
-                                {post.content}
-                              </p>
-                              <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
-                                <span>{post.author}</span>
-                                <span className="flex items-center gap-1">
-                                  <Clock className="h-3 w-3" />
-                                  {formatTimeAgo(post.createdAt)}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <MessageCircle className="h-3 w-3" />
-                                  {post.replies}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <Eye className="h-3 w-3" />
-                                  {post.views}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <ThumbsUp className="h-3 w-3" />
-                                  {post.likes}
-                                </span>
-                              </div>
-                            </div>
+                            <h3 className="font-semibold text-base mb-1 line-clamp-1">{thread.title}</h3>
+                            <p className="text-sm text-muted-foreground line-clamp-2">{thread.excerpt}</p>
+                            <p className="text-xs text-muted-foreground mt-2">{thread.author}</p>
                           </div>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-
-                  {filteredPosts.length === 0 && (
-                    <Card>
-                      <CardContent className="p-8 text-center">
-                        <MessageSquare className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                        <h3 className="font-semibold mb-2">No discussions found</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Be the first to start a discussion in this category!
-                        </p>
+                          <Button asChild size="sm" variant="outline" className="shrink-0 w-full sm:w-auto min-h-9 touch-manipulation">
+                            <Link href={`/forums/thread/${thread.id}`}>View</Link>
+                          </Button>
+                        </div>
                       </CardContent>
                     </Card>
-                  )}
+                  ))}
                 </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* Categories */}
+        <section className="py-8 sm:py-12 bg-muted/30" id="categories">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto min-w-0">
+              <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">{t("forum.categories")}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                {CATEGORIES.map(({ key, icon: Icon, color, bg }) => (
+                  <Link key={key} href={`/forums?category=${key.replace("forum.", "")}`} className="min-w-0">
+                    <Card className="h-full border-border/60 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+                      <CardContent className="p-4 sm:p-6 flex items-center gap-3 sm:gap-4">
+                        <div className={`flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl ${bg}`}>
+                          <Icon className={`h-6 w-6 ${color}`} />
+                        </div>
+                        <div className="min-w-0">
+                          <CardTitle className="text-sm sm:text-base truncate">{t(key)}</CardTitle>
+                          <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">View and join discussions</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-8 sm:py-12 bg-background">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-2xl mx-auto text-center min-w-0">
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card">
+                <CardHeader>
+                  <CardTitle className="text-lg">Have something to share?</CardTitle>
+                  <p className="text-sm text-muted-foreground">
+                    Post a scam alert, exchange tip, or review to help others get fair rates.
+                  </p>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <Button asChild className="gap-2">
+                    <Link href="/community">
+                      <MessageSquare className="h-4 w-4" />
+                      Go to Community Hub
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -480,11 +384,3 @@ export default function ForumsPage() {
     </div>
   )
 }
-
-
-
-
-
-
-
-

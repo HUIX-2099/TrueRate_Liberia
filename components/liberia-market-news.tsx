@@ -123,7 +123,53 @@ const fetchFeed = async (source: string, url: string): Promise<LiberiaNewsItem[]
       tags: extractTags(title, excerpt),
     }
   })
-  return items.filter((item) => matchesKeywords(item.title, item.excerpt))
+  return items
+}
+
+const CBL_NEWS_PRESS_URL = "https://www.cbl.org.lr/media/news-press-release"
+const CBL_BASE = "https://www.cbl.org.lr"
+const DATE_LIKE = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+\w+\s+\d{1,2},\s+\d{4}$/
+
+const fetchCblNewsPressReleases = async (): Promise<LiberiaNewsItem[]> => {
+  try {
+    const res = await fetch(CBL_NEWS_PRESS_URL, {
+      next: { revalidate: 3600 },
+      headers: { "User-Agent": "TrueRateLiberiaBot/1.0" },
+    })
+    if (!res.ok) return []
+    const html = await res.text()
+    const { load } = await import("cheerio")
+    const $ = load(html)
+    const seen = new Set<string>()
+    const items: LiberiaNewsItem[] = []
+    $('a[href*="/media/press-releases/"], a[href*="/media/features-articles/"]').each((_, el) => {
+      const href = $(el).attr("href") ?? ""
+      const title = $(el).text().trim()
+      const url = href.startsWith("http") ? href : new URL(href, CBL_BASE).href
+      if (title.length <= 10 || seen.has(url)) return
+      seen.add(url)
+      let publishedAt = new Date()
+      const $el = $(el)
+      const prevText = $el.parent().prev().text().trim()
+      if (DATE_LIKE.test(prevText)) {
+        const d = new Date(prevText)
+        if (!Number.isNaN(d.getTime())) publishedAt = d
+      }
+      items.push({
+        id: `cbl-news-${url}`,
+        title,
+        excerpt: "Central Bank of Liberia news and press release.",
+        url,
+        source: "CBL News",
+        publishedAt,
+        tags: extractTags(title, "Central Bank of Liberia news and press release."),
+      })
+    })
+    return items.slice(0, 20)
+  } catch (error) {
+    console.error("[LiberiaMarket] CBL news/press-release scrape failed", error)
+    return []
+  }
 }
 
 const fetchCblNews = async (): Promise<LiberiaNewsItem[]> => {
@@ -152,7 +198,7 @@ const fetchCblNews = async (): Promise<LiberiaNewsItem[]> => {
       publishedAt: new Date(),
       tags: extractTags(link.title, "Central Bank of Liberia update."),
     }))
-    return items.filter((item) => matchesKeywords(item.title, item.excerpt))
+    return items
   } catch (error) {
     console.error("[LiberiaMarket] CBL scrape failed", error)
     return []
@@ -186,7 +232,7 @@ const fetchInvestLiberia = async (): Promise<LiberiaNewsItem[]> => {
         publishedAt: new Date(),
         tags: extractTags(item.title, "Liberia National Investment Commission update."),
       }))
-    return items.filter((item) => matchesKeywords(item.title, item.excerpt))
+    return items
   } catch (error) {
     console.error("[LiberiaMarket] Invest Liberia scrape failed", error)
     return []
@@ -197,6 +243,7 @@ export const fetchLiberiaNews = async (): Promise<LiberiaNewsItem[]> => {
   const results = await Promise.all([
     ...FEEDS.map((feed) => fetchFeed(feed.source, feed.url)),
     fetchCblNews(),
+    fetchCblNewsPressReleases(),
     fetchInvestLiberia(),
   ])
   const merged = results.flat()

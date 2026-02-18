@@ -159,7 +159,7 @@ const HeaderComponent = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
       <div className="container mx-auto flex h-16 md:h-[72px] items-center justify-between px-4 gap-3">
           <Link href="/" className="flex items-center min-w-0" aria-label="TrueRate Liberia home">
-            <div className="flex h-[98px] w-[128px] sm:h-[106px] sm:w-[144px] md:h-[106px] md:w-[160px] items-center justify-center overflow-hidden">
+            <div className="flex h-[108px] w-[138px] sm:h-[116px] sm:w-[154px] md:h-[116px] md:w-[170px] items-center justify-center overflow-hidden">
               <Image
                 src="/truerate-logo.png"
                 alt="TrueRate logo"
