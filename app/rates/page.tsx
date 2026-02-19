@@ -8,10 +8,13 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { MapPin, TrendingDown, TrendingUp } from "lucide-react"
+import { MapPin, TrendingDown, TrendingUp, ArrowRight } from "lucide-react"
 import { RateSourceAttribution } from "@/components/rate-source-attribution"
 import { RateHistoryExport } from "@/components/rate-history-export"
 import { StaleRateWarning } from "@/components/stale-rate-warning"
+import { RateSourceSelector } from "@/components/rate-source-selector"
+import { RateChangeAnimation } from "@/components/rate-change-animation"
+import { RateFeedbackButtons } from "@/components/rate-feedback-buttons"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { RateBrief } from "@/components/rate-brief"
 
@@ -27,16 +30,38 @@ interface Changer {
 
 export default function RatesPage() {
   const { t } = useLanguage()
-  const { rate: liveRate, refresh: refreshLiveRate } = useLiveRate()
-  const [lastUpdate, setLastUpdate] = useState("Loading...")
+  const {
+    rate: liveRate,
+    loading: rateLoading,
+    sources: rateSources,
+    timestamp: rateTimestamp,
+    cblRate,
+    cblBuying,
+    cblSelling,
+    cblLastUpdated,
+    refresh: refreshLiveRate,
+    effectiveRate,
+  } = useLiveRate()
   const [sourceCount, setSourceCount] = useState(0)
-  const [rateSources, setRateSources] = useState<string[]>([])
-  const [rateTimestamp, setRateTimestamp] = useState("")
-  const [cblRate, setCblRate] = useState<number | null>(null)
-  const [cblLastUpdated, setCblLastUpdated] = useState<string | null>(null)
   const [changers, setChangers] = useState<Changer[]>([])
   const [recentRates, setRecentRates] = useState<number[]>([])
   const [previousDayRate, setPreviousDayRate] = useState<number | null>(null)
+
+  const lastUpdate = rateLoading
+    ? "Loading…"
+    : rateTimestamp
+      ? (() => {
+          try {
+            const d = new Date(rateTimestamp)
+            const diff = (Date.now() - d.getTime()) / 60_000
+            if (diff < 1) return "Just now"
+            if (diff < 60) return `${Math.floor(diff)}m ago`
+            return d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })
+          } catch {
+            return "Just now"
+          }
+        })()
+      : "Just now"
 
   useEffect(() => {
     const fetchChangers = async () => {
@@ -47,16 +72,8 @@ export default function RatesPage() {
           setSourceCount(data.changers.length)
           setChangers(data.changers)
         }
-        if (Array.isArray(data?.sources)) setRateSources(data.sources)
-        else if (Array.isArray(data?.market?.sources)) setRateSources(data.market.sources)
-        if (typeof data?.timestamp === "string") setRateTimestamp(data.timestamp)
-        if (typeof data?.cblRate === "number") setCblRate(data.cblRate)
-        if (typeof data?.cblLastUpdated === "string") setCblLastUpdated(data.cblLastUpdated)
-        else setCblLastUpdated(null)
-        setLastUpdate(new Date().toLocaleTimeString())
       } catch (error) {
-        console.error("[Rates] Failed to fetch rate", error)
-        setLastUpdate("Recently")
+        console.error("[Rates] Failed to fetch changers", error)
       }
     }
     fetchChangers()
@@ -166,54 +183,95 @@ export default function RatesPage() {
         <section className="py-10 sm:py-12 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
-              <Card className="border-primary/30 shadow-sm">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Current USD/LRD</CardTitle>
-                  <CardDescription>Updated {lastUpdate}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="text-center">
-                    <div className="text-5xl font-bold text-primary mb-1">{liveRate.toFixed(2)}</div>
-                    <div className="text-sm text-muted-foreground font-medium">LRD per USD</div>
-                    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm mt-2 text-muted-foreground">
-                      <span><span className="font-medium text-foreground">Market:</span> {liveRate.toFixed(2)} LRD/USD</span>
-                      <span><span className="font-medium text-foreground">Official (CBL):</span> {cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD{cblLastUpdated ? ` · ${(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}` : ""}</span>
-                    </div>
-                    <div className="flex justify-center mt-1"><RateBrief variant="inline" /></div>
+              {/* Main rate card – same layout as hero */}
+              <div className="relative rounded-3xl border border-border/50 bg-card/80 backdrop-blur-xl p-8 shadow-2xl">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2">
+                    <Badge variant="secondary" className="px-3 py-1">
+                      <span className="relative flex h-2 w-2 mr-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                      </span>
+                      Live Rate
+                    </Badge>
+                    {sourceCount > 0 && (
+                      <span className="text-sm text-muted-foreground">· {sourceCount} changers</span>
+                    )}
                   </div>
-                  <div className="pt-2 border-t border-border/40 space-y-2">
-                    <RateSourceAttribution
-                      sources={rateSources}
-                      timestamp={rateTimestamp}
-                      cblRate={cblRate}
-                      cblLastUpdated={cblLastUpdated}
-                      compositeRate={liveRate}
-                      compact={false}
-                    />
-                    <StaleRateWarning timestamp={rateTimestamp} onRefresh={refreshLiveRate} compact />
-                  </div>
-                  <div className="grid grid-cols-3 gap-2 text-xs">
-                    <div className="rounded-lg border border-border/60 px-3 py-2 text-center bg-muted/20">
-                      <div className="text-muted-foreground">Changers</div>
-                      <div className="font-semibold text-foreground">
-                        {sourceCount ? `${sourceCount}` : "..."}
-                      </div>
-                    </div>
-                    <div className="rounded-lg border border-border/60 px-3 py-2 text-center bg-green-50 dark:bg-green-950/20">
-                      <div className="text-muted-foreground">Buy</div>
-                      <div className="font-semibold text-green-700 dark:text-green-400">
-                        {Math.max(liveRate - 1.5, 0).toFixed(2)}
-                      </div>
-                    </div>
-                    <div className="rounded-lg border border-border/60 px-3 py-2 text-center bg-blue-50 dark:bg-blue-950/20">
-                      <div className="text-muted-foreground">Sell</div>
-                      <div className="font-semibold text-blue-700 dark:text-blue-400">
-                        {(liveRate + 1.5).toFixed(2)}
-                      </div>
+                  <span className="text-sm font-semibold text-muted-foreground">{lastUpdate}</span>
+                </div>
+
+                <div className="text-center mb-8">
+                  <div className="flex flex-col items-center gap-2 mb-2">
+                    <RateSourceSelector variant="pills" className="mb-1" />
+                    <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
+                      <RateChangeAnimation rate={effectiveRate ?? 0}>
+                        {effectiveRate ? effectiveRate.toFixed(2) : "—"}
+                      </RateChangeAnimation>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="text-lg text-muted-foreground mt-2">LRD per 1 USD</div>
+                  <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm mt-3">
+                    <div className="rounded-lg bg-muted/50 px-3 py-1.5 text-muted-foreground">
+                      <span className="font-medium text-foreground">Market rate</span>
+                      <span className="ml-1.5">{liveRate != null && liveRate > 0 ? liveRate.toFixed(2) : "—"} LRD/USD</span>
+                    </div>
+                    <div className="rounded-lg bg-muted/50 px-3 py-1.5 text-muted-foreground">
+                      <span className="font-medium text-foreground">Official (CBL)</span>
+                      <span className="ml-1.5">{cblRate != null && cblRate > 0 ? cblRate.toFixed(2) : "—"} LRD/USD</span>
+                      {cblLastUpdated ? <span className="ml-1 text-xs">· {(() => { try { return new Date(cblLastUpdated).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) } catch { return "" } })()}</span> : null}
+                    </div>
+                  </div>
+                  <div className="flex justify-center mt-2"><RateBrief variant="inline" /></div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl bg-secondary/10 p-4 text-center">
+                    <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">Buy Rate</div>
+                    <div className="text-2xl font-bold text-secondary">
+                      {cblBuying != null && cblRate != null && effectiveRate === cblRate
+                        ? cblBuying.toFixed(2)
+                        : effectiveRate
+                          ? (effectiveRate - 2).toFixed(2)
+                          : "—"}
+                    </div>
+                  </div>
+                  <div className="rounded-2xl bg-destructive/10 p-4 text-center">
+                    <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">Sell Rate</div>
+                    <div className="text-2xl font-bold text-destructive">
+                      {(cblSelling != null && cblRate != null && effectiveRate === cblRate)
+                        ? cblSelling.toFixed(2)
+                        : effectiveRate
+                          ? (effectiveRate + 2).toFixed(2)
+                          : "—"}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-border/50 flex flex-col gap-3">
+                  <RateSourceAttribution
+                    sources={rateSources}
+                    timestamp={rateTimestamp}
+                    cblRate={cblRate}
+                    cblLastUpdated={cblLastUpdated}
+                    compositeRate={liveRate ?? undefined}
+                    compact={false}
+                    hideSources
+                  />
+                  <StaleRateWarning timestamp={rateTimestamp} onRefresh={refreshLiveRate} compact />
+                  <RateFeedbackButtons rate={liveRate ?? undefined} compact />
+                  <Link href="/analytics" className="block">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="h-8 px-3 text-xs sm:h-9 sm:px-4 sm:text-sm w-full sm:w-auto shrink-0"
+                      aria-label="View rate history"
+                    >
+                      View History <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
 
               <Card className="border-border/60 shadow-sm">
                 <CardHeader>

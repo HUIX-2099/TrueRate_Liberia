@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { 
   ArrowRight, TrendingUp, MapPin, Calculator, Shield, 
-  Briefcase, MessageSquare, Users, Gift, Brain, Crown, Bell, Zap
+  Briefcase, MessageSquare, Users, Gift, Brain, Crown, Bell
 } from "lucide-react"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
@@ -69,12 +69,6 @@ export default function HomePage() {
                     <Link href="/map">
                       <MapPin className="h-4 w-4" />
                       Map
-                    </Link>
-                  </Button>
-                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
-                    <Link href="/rates">
-                      <Zap className="h-4 w-4" />
-                      All rates
                     </Link>
                   </Button>
                 </div>

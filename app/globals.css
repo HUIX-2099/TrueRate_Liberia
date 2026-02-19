@@ -209,14 +209,7 @@
 .dark [data-chart] .recharts-cartesian-axis-tick text {
   fill: var(--foreground);
 }
-.dark [data-slot="chart"] .recharts-curve,
-.dark [data-chart] .recharts-curve {
-  stroke: var(--primary);
-}
-.dark [data-slot="chart"] .recharts-line,
-.dark [data-chart] .recharts-line {
-  stroke: var(--primary);
-}
+/* Line/curve stroke is set per-series on each chart; do not override so multi-series charts (e.g. CBL vs Market) keep distinct colors. */
 .dark [data-slot="chart"] .recharts-area,
 .dark [data-chart] .recharts-area {
   fill: var(--primary);

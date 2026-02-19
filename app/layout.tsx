@@ -168,6 +168,7 @@ export default function RootLayout({
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/api/rates/live" as="fetch" crossOrigin="anonymous" />
         <link rel="preload" href="/icons/logo-192.png" as="image" />
+        <link rel="preload" href="/images/tribes-map.png" as="image" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         {/* Preconnect to external APIs */}

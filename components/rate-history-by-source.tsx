@@ -92,7 +92,10 @@ export function RateHistoryBySource() {
     },
     market: {
       label: "Market",
-      color: "var(--chart-1)",
+      theme: {
+        light: "var(--chart-1)",
+        dark: "oklch(0.7 0.18 145)",
+      },
     },
   }
 
@@ -211,7 +214,7 @@ export function RateHistoryBySource() {
                       type="monotone"
                       dataKey="market"
                       name="market"
-                      stroke="var(--chart-1)"
+                      stroke="var(--color-market)"
                       strokeWidth={2}
                       dot={false}
                       connectNulls

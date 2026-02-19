@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { MapPin, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
 interface RegionalItem {
@@ -38,61 +39,72 @@ export function RegionalBreakdownWidget() {
 
   if (loading) {
     return (
-      <Card className="border-border/60">
-        <CardContent className="py-12">
-          <div className="h-32 bg-muted/50 rounded-lg animate-pulse" />
+      <Card className="rounded-xl border-border/60 shadow-sm">
+        <CardContent className="py-10">
+          <div className="flex gap-4">
+            <div className="flex-1 h-20 rounded-lg bg-muted/50 animate-pulse" />
+            <div className="flex-1 h-32 rounded-lg bg-muted/50 animate-pulse" />
+          </div>
         </CardContent>
       </Card>
     )
   }
 
   return (
-    <Card className="border-border/60 overflow-hidden">
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <MapPin className="h-5 w-5 text-primary" />
+    <Card className="rounded-xl border-border/60 shadow-sm overflow-hidden">
+      <CardHeader className="pb-4">
+        <CardTitle className="flex items-center gap-2.5 text-lg font-semibold">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+            <MapPin className="h-4.5 w-4.5 text-primary" />
+          </div>
           Regional breakdown
         </CardTitle>
-        <CardDescription>
+        <CardDescription className="text-sm leading-relaxed">
           Average USD/LRD rate by region. Monrovia (Montserrado) vs upcountry counties.
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="grid gap-6 sm:grid-cols-2">
-          <div>
-            <div className="text-xs font-medium text-muted-foreground mb-2">Monrovia vs Upcountry</div>
+      <CardContent className="space-y-6">
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div className="space-y-3">
+            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Monrovia vs Upcountry</p>
             <div className="space-y-2">
               {regional.map((r) => (
                 <div
                   key={r.region}
-                  className="flex items-center justify-between gap-2 p-3 rounded-lg bg-muted/50 border border-border/40"
+                  className="flex items-center justify-between gap-3 rounded-lg border border-border/50 bg-muted/30 px-4 py-3"
                 >
-                  <span className="font-medium">{r.region}</span>
-                  <span className="font-mono font-semibold text-primary">{r.avgRate.toFixed(2)} LRD</span>
-                  <Badge variant="secondary" className="text-xs shrink-0">
+                  <span className="font-medium text-foreground">{r.region}</span>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="font-mono text-base font-semibold tabular-nums text-foreground">{r.avgRate.toFixed(2)}</span>
+                    <span className="text-xs text-muted-foreground">LRD</span>
+                  </div>
+                  <Badge variant="secondary" className="text-xs font-normal shrink-0">
                     {r.count}
                   </Badge>
                 </div>
               ))}
             </div>
           </div>
-          <div>
-            <div className="text-xs font-medium text-muted-foreground mb-2">By county</div>
-            <div className="space-y-1.5 max-h-[180px] overflow-y-auto">
+          <div className="space-y-3">
+            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">By county</p>
+            <div className="rounded-lg border border-border/50 bg-muted/20 divide-y divide-border/50 max-h-[200px] overflow-y-auto">
               {byCounty.slice(0, 8).map((c) => (
-                <div key={c.county} className="flex items-center justify-between py-2 text-sm border-b border-border/40 last:border-0">
-                  <span>{c.county}</span>
-                  <span className="font-mono text-muted-foreground">{c.avgRate.toFixed(2)}</span>
+                <div
+                  key={c.county}
+                  className="flex items-center justify-between gap-3 px-3 py-2.5 text-sm hover:bg-muted/40 transition-colors"
+                >
+                  <span className="font-medium text-foreground">{c.county}</span>
+                  <span className="font-mono tabular-nums text-muted-foreground">{c.avgRate.toFixed(2)}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <Link
-          href="/analytics"
-          className="inline-block mt-4 text-sm font-medium text-primary hover:underline"
-        >
-          View full analytics →
+        <Link href="/analytics" className="inline-block">
+          <Button variant="ghost" size="sm" className="gap-1.5 text-primary hover:text-primary hover:bg-primary/10 -ml-2">
+            View full analytics
+            <ChevronRight className="h-4 w-4" />
+          </Button>
         </Link>
       </CardContent>
     </Card>

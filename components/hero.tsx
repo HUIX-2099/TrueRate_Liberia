@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, TrendingUp, TrendingDown, Zap, Shield, Globe, Volume2 } from "lucide-react"
+import { ArrowRight, TrendingUp, TrendingDown, Zap, Shield, Globe } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
@@ -34,6 +34,21 @@ export function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Liberia ethnic/language map — integrated with gradient overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
+          <img
+            src="/images/tribes-map.png"
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover object-center opacity-[0.18] dark:opacity-[0.22]"
+            fetchPriority="high"
+            decoding="async"
+          />
+          {/* Soft gradient so map fades into background and content stays readable */}
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/50 to-background/90"
+            aria-hidden
+          />
+        </div>
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute top-1/2 -left-20 h-60 w-60 rounded-full bg-secondary/10 blur-3xl" />
         <div className="absolute bottom-0 right-1/4 h-40 w-40 rounded-full bg-accent/10 blur-2xl" />
@@ -81,12 +96,6 @@ export function Hero() {
                 <Link href="/predictions">
                   <TrendingUp className="h-5 w-5" />
                   View Predictions
-                </Link>
-              </Button>
-              <Button size="lg" variant="secondary" className="gap-2 h-14 px-8 text-lg border border-secondary/30" asChild>
-                <Link href="/voice">
-                  <Volume2 className="h-5 w-5" />
-                  Simple mode
                 </Link>
               </Button>
             </div>
