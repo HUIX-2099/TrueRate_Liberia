@@ -262,3 +262,21 @@
 [00:50:21.146] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
 [00:50:21.183] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
 [00:50:48.029] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:51:21.134] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:51:21.153] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:51:45.797] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:52:21.172] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:52:21.186] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:52:31.680] Server  ERROR   TypeError: fetch failed
+[00:52:31.681] Server  ERROR   TypeError: fetch failed
+[00:52:31.770] Server  ERROR   ⨯ Error: failed to pipe response
+[00:52:47.434] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:53:21.122] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:53:21.154] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:53:45.841] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:54:21.174] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:54:21.190] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:54:31.666] Server  ERROR   TypeError: fetch failed
+[00:54:31.667] Server  ERROR   TypeError: fetch failed
+[00:54:31.765] Server  ERROR   ⨯ Error: failed to pipe response
+[00:54:45.793] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
