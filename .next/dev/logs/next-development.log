@@ -280,3 +280,2573 @@
 [00:54:31.667] Server  ERROR   TypeError: fetch failed
 [00:54:31.765] Server  ERROR   ⨯ Error: failed to pipe response
 [00:54:45.793] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:55:21.303] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:55:21.311] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:55:47.872] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:57:03.267] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:57:03.281] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:57:07.088] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:57:34.368] Server  ERROR   TypeError: fetch failed
+[00:57:34.369] Server  ERROR   TypeError: fetch failed
+[00:57:34.459] Server  ERROR   ⨯ Error: failed to pipe response
+[00:58:03.250] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:58:03.261] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:58:03.284] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:59:03.250] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:59:03.264] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[00:59:05.654] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:00:03.276] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:00:03.286] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:00:03.318] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:01:03.300] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:01:03.312] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:01:05.247] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:01:57.287] Browser ERROR   Google Maps JavaScript API error: ApiProjectMapError
+https://developers.google.com/maps/documentation/javascript/error-messages#api-project-map-error
+[01:02:01.844] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:02:01.960] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:02.023] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:02.140] Browser LOG     Header render time: 41.30ms
+[01:02:02.140] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:02:02.140] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/map","route":"/map"}
+[01:02:02.140] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/map color: rgb(120, 120, 120) color: inherit {"dp":"/map","o":"http://localhost:3000/map","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516367232} /_vercel/insights/view
+[01:02:03.238] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:03.248] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:03.263] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:03.879] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:03.898] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:09.258] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:09.271] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:09.280] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:09.466] Browser LOG     Header render time: 7247.10ms
+[01:02:09.466] Browser LOG     Header render time: 2.50ms
+[01:02:09.466] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516374434} /_vercel/insights/view
+[01:02:09.514] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:09.528] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:02:09.536] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:03:02.023] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:03:03.229] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:03:03.239] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:03:03.263] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:03:09.271] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:03:09.284] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:04:02.027] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:04:03.241] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:04:03.257] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:04:03.276] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:04:09.278] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:04:09.289] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:05:03.247] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:05:03.258] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:05:03.647] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:05:05.012] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:05:09.270] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:05:09.281] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:06:02.016] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:06:03.227] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:06:03.238] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:06:03.264] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:06:09.311] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:06:09.329] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:02.013] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:03.226] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:03.239] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:03.262] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:09.277] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:09.308] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:47.888] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:47.899] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:47.938] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:47.950] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:47.999] Browser LOG     Header render time: 338608.80ms
+[01:07:47.999] Browser LOG     Header render time: 17.30ms
+[01:07:47.999] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/predictions color: rgb(120, 120, 120) color: inherit {"dp":"/predictions","o":"http://localhost:3000/predictions","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516713067} /_vercel/insights/view
+[01:07:59.951] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:59.960] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:07:59.968] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:00.120] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:00.165] Browser LOG     Header render time: 12063.90ms
+[01:08:00.166] Browser LOG     Header render time: 1.60ms
+[01:08:00.166] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516725136} /_vercel/insights/view
+[01:08:00.170] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:00.201] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:01.975] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:02.670] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:08:02.670] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:08:03.227] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:03.236] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:03.261] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:16.459] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:16.476] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:08:16.514] Browser LOG     Header render time: 16464.00ms
+[01:08:16.514] Browser LOG     Header render time: 0.90ms
+[01:08:16.514] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516741603} /_vercel/insights/view
+[01:09:03.237] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:03.248] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:03.690] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:04.907] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:30.698] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:30.705] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:30.713] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:30.805] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:30.883] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:09:30.906] Browser LOG     Header render time: 74264.00ms
+[01:09:30.906] Browser LOG     Header render time: 1.50ms
+[01:09:30.907] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516815871} /_vercel/insights/view
+[01:09:30.913] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:01.999] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:03.250] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:03.264] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:03.287] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:30.733] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:30.743] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:56.683] Browser LOG     Header render time: 84200.70ms
+[01:10:56.683] Browser LOG     Header render time: 3.60ms
+[01:10:56.683] Browser LOG     Header render time: 70.30ms
+[01:10:56.683] Browser LOG     Header render time: 1261307.20ms
+[01:10:56.683] Browser LOG     Header render time: 8.40ms
+[01:10:56.683] Browser LOG     Header render time: 127.50ms
+[01:10:58.938] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:10:59.321] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:00.060] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:00.156] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:00.210] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:00.274] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:00.435] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:00.481] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:00.512] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:01.339] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:03.052] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:03.064] Browser LOG     Header render time: 29.00ms
+[01:11:03.088] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:03.161] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:11:03.162] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:11:03.162] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516908228} /_vercel/insights/view
+[01:11:04.410] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:05.064] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:05.126] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[01:11:05.193] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:06.418] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:06.426] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:06.609] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:07.217] Browser LOG     Header render time: 66.00ms
+[01:11:07.217] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:11:07.217] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:11:07.217] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516911792} /_vercel/insights/view
+[01:11:29.124] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.140] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.142] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.143] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.253] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.255] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.255] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.256] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.257] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.258] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.258] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.303] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.306] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.307] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.314] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.317] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.323] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.325] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.328] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.332] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.346] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.348] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.351] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.356] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.368] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.368] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.369] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.369] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.370] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.371] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.373] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.375] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.382] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.384] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.384] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.385] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.390] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.399] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.401] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.405] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.416] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.416] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.417] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.418] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.425] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.426] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.426] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.427] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.427] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.428] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.459] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.460] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.461] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.462] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.463] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.464] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.465] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.465] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.466] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.470] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.474] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.475] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.476] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.476] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.477] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.479] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.480] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.483] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.486] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.487] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.488] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.488] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.489] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.490] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.490] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.490] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.491] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.491] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.491] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.491] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.492] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.492] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.492] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.493] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.493] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.493] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.494] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.497] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.500] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.501] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.504] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.507] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.515] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.516] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.517] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.518] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.521] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.523] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.525] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.526] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.533] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.534] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.534] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:29.535] Server  ERROR   ⨯ ./components/providers.tsx:13:1
+Module not found: Can't resolve '@/components/theme-color-loader'
+  11 | import { ErrorBoundary } from "@/components/error-boundary"
+  12 | import { StructuredData } from "@/components/structured-data"
+> 13 | import { ThemeColorLoader } from "@/components/theme-color-loader"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { LiveRateProvider } from "@/lib/live-rate-context"
+  15 | import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
+  16 |
+
+Import map: aliased to relative './components/theme-color-loader' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/providers.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:30.374] Server  LOG     ✓ Compiled in 1708ms
+[01:11:30.638] Browser ERROR   uncaughtError: ReferenceError: ThemeColorLoader is not defined
+[01:11:30.638] Browser LOG     Header render time: 27434.60ms
+[01:11:30.638] Browser ERROR   Global error: {}
+[01:11:30.638] Browser ERROR   Global error: {}
+[01:11:31.159] Server  ERROR   ⨯ ReferenceError: ThemeColorLoader is not defined
+[01:11:31.323] Browser ERROR   uncaughtError: ReferenceError: ThemeColorLoader is not defined
+[01:11:31.323] Browser LOG     Header render time: 23923.10ms
+[01:11:31.323] Browser ERROR   Global error: {}
+[01:11:31.323] Browser ERROR   Global error: {}
+[01:11:31.360] Server  ERROR   ⨯ ReferenceError: ThemeColorLoader is not defined
+[01:11:32.540] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:11:32.540] Browser LOG     Header render time: 57.20ms
+[01:11:32.540] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516937183} /_vercel/insights/view
+[01:11:32.540] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:11:32.540] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:11:32.541] Browser LOG     Header render time: 81.30ms
+[01:11:32.541] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516937199} /_vercel/insights/view
+[01:11:32.541] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:11:32.683] Browser LOG     Header render time: 504.80ms
+[01:11:32.754] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:32.757] Server  LOG     ✓ Compiled in 1ms
+[01:11:32.775] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:33.033] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:33.094] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:33.103] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:33.110] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:33.287] Browser LOG     Header render time: 478.80ms
+[01:11:34.311] Server  LOG     ✓ Compiled in 603ms
+[01:11:35.915] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:36.256] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:37.013] Browser LOG     Header render time: 116.70ms
+[01:11:37.013] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:11:37.013] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:11:37.013] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516941407} /_vercel/insights/view
+[01:11:37.406] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:37.418] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:37.436] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:38.010] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:38.152] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:38.181] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:38.405] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:38.961] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[01:11:39.494] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:39.503] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:39.694] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:11:40.254] Browser LOG     Header render time: 78.10ms
+[01:11:40.254] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:11:40.254] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:11:40.254] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771516944829} /_vercel/insights/view
+[01:12:36.170] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:12:36.190] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:12:36.219] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:12:40.249] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:12:40.265] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:12:42.096] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:13:36.123] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:13:36.139] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:13:36.166] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:13:40.242] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:13:40.260] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:13:40.284] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:14:36.149] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:14:36.161] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:14:38.866] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:14:40.235] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:14:40.250] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:14:40.274] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:36.075] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:36.090] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:36.112] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:40.291] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:40.304] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:41.992] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:44.614] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:15:44.726] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:44.736] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:44.956] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:15:44.982] Browser LOG     Header render time: 91.40ms
+[01:15:44.982] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:15:44.982] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:15:44.982] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771517190085} /_vercel/insights/view
+[01:15:46.474] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:16:40.302] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:16:40.321] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:16:40.339] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:16:44.733] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:16:44.745] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:16:44.800] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:17:40.312] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:17:40.327] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:17:42.330] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:17:44.740] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:17:44.751] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:17:44.793] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:17:48.208] Server  LOG     ✓ Compiled in 388ms
+[01:17:49.396] Server  LOG     ✓ Compiled in 330ms
+[01:17:54.077] Server  LOG     ✓ Compiled in 299ms
+[01:17:54.826] Server  LOG     ✓ Compiled in 251ms
+[01:18:32.061] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:32.178] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:18:32.187] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:18:32.365] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:18:32.426] Browser LOG     Header render time: 96.50ms
+[01:18:32.426] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:18:32.426] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:18:32.426] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771517357529} /_vercel/insights/view
+[01:18:34.727] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:03.271] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:03.283] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:03.329] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:22.025] Server  LOG     ✓ Compiled in 294ms
+[01:19:22.655] Server  LOG     ✓ Compiled in 253ms
+[01:19:27.961] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:27.969] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:27.978] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:28.175] Browser LOG     Header render time: 55681.40ms
+[01:19:28.175] Browser LOG     ConverterPage render time: 1.10ms
+[01:19:28.175] Browser LOG     Header render time: 1.90ms
+[01:19:28.175] Browser LOG     ConverterPage render time: 40.00ms
+[01:19:28.175] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/converter color: rgb(120, 120, 120) color: inherit {"dp":"/converter","o":"http://localhost:3000/converter","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771517413148} /_vercel/insights/view
+[01:19:28.175] Browser LOG     ConverterPage render time: 85.40ms
+[01:19:28.405] Browser LOG     ConverterPage render time: 228.10ms
+[01:19:28.868] Browser LOG     ConverterPage render time: 462.10ms
+[01:19:32.190] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:32.389] Browser LOG     ConverterPage render time: 3518.60ms
+[01:19:37.308] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:37.321] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:37.334] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:37.465] Browser LOG     ConverterPage render time: 4998.00ms
+[01:19:37.465] Browser LOG     Header render time: 9343.10ms
+[01:19:37.465] Browser LOG     Header render time: 1.50ms
+[01:19:37.465] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771517422496} /_vercel/insights/view
+[01:19:37.472] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:39.572] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:39.581] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:44.590] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:44.645] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:19:44.717] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:32.321] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:33.528] Server  LOG     ✓ Compiled in 1106ms
+[01:20:37.359] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:37.373] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:39.556] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:39.633] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:39.653] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:55.248] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:55.363] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:20:55.511] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:55.526] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:20:55.953] Browser LOG     Header render time: 86.90ms
+[01:20:55.953] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:20:55.953] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:20:55.953] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771517500876} /_vercel/insights/view
+[01:20:57.923] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:21:12.186] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:21:12.286] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:21:12.292] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:21:12.418] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:21:12.531] Browser LOG     Header render time: 72.30ms
+[01:21:12.531] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:21:12.531] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:21:12.531] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771517517637} /_vercel/insights/view
+[01:21:16.421] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:21:32.238] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:21:35.297] Server  LOG     ✓ Compiled in 274ms
+[01:21:37.350] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:21:37.367] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:22:08.178] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:22:08.329] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:22:08.338] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:22:08.473] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:22:08.555] Browser LOG     Header render time: 75.80ms
+[01:22:08.555] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:22:08.555] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:22:08.555] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771517573662} /_vercel/insights/view
+[01:22:16.286] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:22:32.235] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:22:38.215] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:22:38.234] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:23:08.374] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:23:08.413] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:23:08.433] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:23:28.288] Server  LOG     ✓ Compiled in 351ms
+[01:23:28.804] Server  LOG     ✓ Compiled in 259ms
+[01:23:34.007] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:23:37.315] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:23:37.326] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:23:39.889] Server  LOG     ✓ Compiled in 313ms
+[01:23:40.508] Server  LOG     ✓ Compiled in 247ms
+[01:24:08.397] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:24:08.417] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:24:08.481] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:24:32.467] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:24:37.369] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:24:37.391] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:25:08.396] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:25:08.425] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:25:08.477] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:25:32.330] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:25:37.384] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:25:37.405] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:26:08.414] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:26:08.453] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:26:10.239] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:26:32.253] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:26:37.328] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:26:37.354] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:08.479] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:08.520] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:08.531] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:33.975] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:37.444] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:37.466] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:38.277] Browser LOG     Header render time: 480884.90ms
+[01:27:38.305] Browser LOG     Header render time: 329814.90ms
+[01:27:40.533] Server  LOG     ✓ Compiled in 180ms
+[01:27:41.922] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:41.930] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:27:41.932] Browser LOG     Header render time: 3625.90ms
+[01:27:41.970] Browser LOG     Header render time: 3691.40ms
+[01:27:47.104] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:27:47.105] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:28:07.759] Server  LOG     ✓ Compiled in 209ms
+[01:28:08.371] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:28:08.388] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:28:08.421] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:28:32.230] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:28:37.429] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:28:37.447] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:29:08.421] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:29:08.437] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD
+[01:29:08.476] Server  LOG     [v0] Market rate from Xe: 186.126 LRD/USD

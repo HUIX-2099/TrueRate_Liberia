@@ -14,7 +14,7 @@
 
 :root {
   /* <CHANGE> Custom color palette for Liberian currency exchange platform */
-  --background: oklch(0.99 0.005 105);
+  --background: oklch(1 0.006 95);
   --foreground: oklch(0.18 0.02 260);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.18 0.02 260);
@@ -39,7 +39,7 @@
   --chart-4: oklch(0.45 0.12 300);
   --chart-5: oklch(0.55 0.2 40);
   --radius: 0.75rem;
-  --sidebar: oklch(0.99 0.005 105);
+  --sidebar: oklch(1 0.006 95);
   --sidebar-foreground: oklch(0.18 0.02 260);
   --sidebar-primary: oklch(0.35 0.08 260);
   --sidebar-primary-foreground: oklch(0.99 0.005 105);
@@ -51,7 +51,7 @@
 
 .dark {
   /* <CHANGE> Dark mode colors for better contrast */
-  --background: oklch(0.15 0.02 260);
+  --background: oklch(0.12 0.02 260);
   --foreground: oklch(0.97 0.005 105);
   --card: oklch(0.18 0.02 260);
   --card-foreground: oklch(0.97 0.005 105);
@@ -75,7 +75,7 @@
   --chart-3: oklch(0.72 0.12 85);
   --chart-4: oklch(0.65 0.12 300);
   --chart-5: oklch(0.65 0.2 40);
-  --sidebar: oklch(0.18 0.02 260);
+  --sidebar: oklch(0.14 0.02 260);
   --sidebar-foreground: oklch(0.97 0.005 105);
   --sidebar-primary: oklch(0.75 0.08 260);
   --sidebar-primary-foreground: oklch(0.15 0.02 260);

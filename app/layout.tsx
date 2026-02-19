@@ -114,13 +114,15 @@ export const metadata: Metadata = {
   // Category
   category: "Finance",
   
-  // Icons - dark/light variants; media-specific links are in <head> below
+  // Icons - dark/light favicons via media; fallback for browsers that ignore media
   icons: {
     icon: [
-      { url: "/icons/logo-512.png", type: "image/png", sizes: "512x512" },
-      { url: "/icons/logo-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icons/logo-48.png", type: "image/png", sizes: "48x48", media: "(prefers-color-scheme: dark)" },
+      { url: "/icons/logo-192.png", type: "image/png", sizes: "192x192", media: "(prefers-color-scheme: dark)" },
+      { url: "/icons/logo-48-light.png", type: "image/png", sizes: "48x48", media: "(prefers-color-scheme: light)" },
+      { url: "/icons/logo-192-light.png", type: "image/png", sizes: "192x192", media: "(prefers-color-scheme: light)" },
       { url: "/icons/logo-48.png", type: "image/png", sizes: "48x48" },
-      { url: "/icons/logo-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icons/logo-512.png", type: "image/png", sizes: "512x512" },
     ],
     apple: [
       { url: "/icons/logo-180.png", sizes: "180x180", type: "image/png" },
@@ -156,14 +158,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Favicon: dark mode (light icon on dark) */}
-        <link rel="icon" href="https://truerateliberia.com/icons/logo-48.png" type="image/png" sizes="48x48" media="(prefers-color-scheme: dark)" />
-        <link rel="icon" href="https://truerateliberia.com/icons/logo-192.png" type="image/png" sizes="192x192" media="(prefers-color-scheme: dark)" />
-        {/* Favicon: light mode (dark icon on light) */}
-        <link rel="icon" href="https://truerateliberia.com/icons/logo-48-light.png" type="image/png" sizes="48x48" media="(prefers-color-scheme: light)" />
-        <link rel="icon" href="https://truerateliberia.com/icons/logo-192-light.png" type="image/png" sizes="192x192" media="(prefers-color-scheme: light)" />
-        {/* Fallback for browsers that don't support media on icon */}
-        <link rel="icon" href="https://truerateliberia.com/icons/logo-48.png" type="image/png" sizes="48x48" />
         {/* Preload critical resources */}
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/api/rates/live" as="fetch" crossOrigin="anonymous" />

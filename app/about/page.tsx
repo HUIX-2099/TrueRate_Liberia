@@ -225,6 +225,40 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Favicon display: dark & light */}
+        <section className="py-12 sm:py-14 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <Badge variant="outline">Brand</Badge>
+                <Badge className="bg-primary/10 text-primary">Favicon</Badge>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-balance">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                  Dark &amp; Light Favicon
+                </span>
+              </h2>
+              <p className="text-sm text-muted-foreground mb-8">
+                Tab and bookmark icon for dark and light mode
+              </p>
+              <div className="flex flex-wrap items-end justify-center gap-10 sm:gap-16">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="rounded-2xl bg-zinc-900 p-6 flex items-center justify-center shadow-inner">
+                    <img src="/icons/logo-192.png" alt="Dark mode favicon" width={96} height={96} className="w-24 h-24 object-contain" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Dark</span>
+                </div>
+                <div className="flex flex-col items-center gap-3">
+                  <div className="rounded-2xl bg-white border border-border p-6 flex items-center justify-center shadow-inner">
+                    <img src="/icons/logo-192-light.png" alt="Light mode favicon" width={96} height={96} className="w-24 h-24 object-contain" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Light</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Team */}
         <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
