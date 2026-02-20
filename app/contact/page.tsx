@@ -50,7 +50,7 @@ export default function ContactPage() {
       <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
         <section className="py-10 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw] xl:max-w-none">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <span className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">

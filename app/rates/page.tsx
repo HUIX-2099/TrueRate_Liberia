@@ -163,7 +163,7 @@ export default function RatesPage() {
       <Header />
       <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw] xl:max-w-none">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <Badge variant="outline">Live Rates</Badge>

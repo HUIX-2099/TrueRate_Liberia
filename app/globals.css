@@ -10,6 +10,8 @@
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    /* Respect system light/dark so app displays in user's theme from first paint */
+    color-scheme: light dark;
   }
   /* Clear focus ring for keyboard users */
   :focus-visible {
@@ -156,10 +158,22 @@
   main {
     padding-bottom: env(safe-area-inset-bottom);
   }
-  /* Mobile: ensure containers don't cause horizontal scroll */
+  /* Container: full width on mobile, capped and centered on desktop */
   .container {
     width: 100%;
     box-sizing: border-box;
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 80rem; /* 1280px */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 90rem; /* 1440px */
+    }
   }
   table {
     width: 100%;

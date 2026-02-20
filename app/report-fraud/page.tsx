@@ -70,7 +70,7 @@ export default function ReportFraudPage() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="py-10 sm:py-14 md:py-16 flex-1 flex items-center justify-center bg-gradient-to-b from-muted/40 to-background pb-20 md:pb-0 overflow-x-hidden px-4">
-          <div className="container mx-auto w-full max-w-[100vw]">
+          <div className="container mx-auto w-full max-w-[100vw] xl:max-w-none">
             <Card className="max-w-2xl mx-auto text-center border-border/60 shadow-sm">
               <CardHeader>
                 <div className="flex justify-center mb-4">

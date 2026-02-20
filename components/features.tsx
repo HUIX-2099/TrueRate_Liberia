@@ -38,7 +38,7 @@ const features = [
 export function Features() {
   return (
     <section className="py-10 sm:py-14 md:py-24 bg-muted/30 overflow-x-hidden">
-      <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[100vw] xl:max-w-none">
         <div className="text-center mb-8 sm:mb-12 space-y-2">
           <Badge variant="outline" className="mx-auto w-fit">Safety tools</Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">

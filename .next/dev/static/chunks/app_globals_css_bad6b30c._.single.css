@@ -538,6 +538,20 @@
     width: 100%;
   }
 
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 90rem;
+    }
+  }
+
   table {
     width: 100%;
     display: block;
@@ -7358,18 +7372,6 @@
   }
 
   @media (min-width: 480px) {
-    .min-\[480px\]\:h-12 {
-      height: calc(var(--spacing) * 12);
-    }
-  }
-
-  @media (min-width: 480px) {
-    .min-\[480px\]\:w-\[120px\] {
-      width: 120px;
-    }
-  }
-
-  @media (min-width: 480px) {
     .min-\[480px\]\:text-3xl {
       font-size: var(--text-3xl);
       line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -7504,12 +7506,6 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:h-\[72px\] {
-      height: 72px;
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:h-\[116px\] {
       height: 116px;
     }
@@ -7566,12 +7562,6 @@
   @media (min-width: 40rem) {
     .sm\:w-96 {
       width: calc(var(--spacing) * 96);
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:w-\[130px\] {
-      width: 130px;
     }
   }
 
@@ -8027,12 +8017,6 @@
   }
 
   @media (min-width: 48rem) {
-    .md\:h-\[90px\] {
-      height: 90px;
-    }
-  }
-
-  @media (min-width: 48rem) {
     .md\:h-\[116px\] {
       height: 116px;
     }
@@ -8041,12 +8025,6 @@
   @media (min-width: 48rem) {
     .md\:h-\[500px\] {
       height: 500px;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:w-\[150px\] {
-      width: 150px;
     }
   }
 
@@ -8366,20 +8344,8 @@
   }
 
   @media (min-width: 64rem) {
-    .lg\:h-\[100px\] {
-      height: 100px;
-    }
-  }
-
-  @media (min-width: 64rem) {
     .lg\:h-\[600px\] {
       height: 600px;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:w-\[170px\] {
-      width: 170px;
     }
   }
 
@@ -8450,8 +8416,20 @@
   }
 
   @media (min-width: 64rem) {
+    .lg\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+
+  @media (min-width: 64rem) {
     .lg\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:px-10 {
+      padding-inline: calc(var(--spacing) * 10);
     }
   }
 
@@ -8510,6 +8488,30 @@
   @media (min-width: 80rem) {
     .xl\:px-3 {
       padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:px-8 {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:px-10 {
+      padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:px-12 {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:px-16 {
+      padding-inline: calc(var(--spacing) * 16);
     }
   }
 

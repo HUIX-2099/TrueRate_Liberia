@@ -35,7 +35,7 @@ export default function HomePage() {
 
         {/* Regional breakdown + Quick Tools */}
         <section className="py-10 sm:py-14 md:py-16 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[100vw] xl:max-w-none">
             <div className="max-w-4xl mx-auto space-y-4">
               <div className="text-center space-y-3">
                 <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
@@ -80,7 +80,7 @@ export default function HomePage() {
 
         {/* Quick Access Cards */}
         <section className="py-10 sm:py-14 md:py-20 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 max-w-[100vw] xl:max-w-none">
             <div className="text-center mb-10 sm:mb-12 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">Essential Tools</Badge>
@@ -257,7 +257,7 @@ export default function HomePage() {
 
         {/* Market Leaderboard Section */}
         <section className="py-10 sm:py-14 md:py-16 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 max-w-[100vw] xl:max-w-none">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-6 sm:mb-8 space-y-3">
                 <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
@@ -284,7 +284,7 @@ export default function HomePage() {
 
         {/* Liberia Market Insights Section */}
         <section className="py-10 sm:py-14 md:py-16 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 max-w-[100vw] xl:max-w-none">
             <div className="text-center mb-8 sm:mb-12 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">For Liberians</Badge>
@@ -336,7 +336,7 @@ export default function HomePage() {
 
         {/* Referral CTA */}
         <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-r from-secondary/10 via-primary/5 to-accent/10">
-          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[100vw] xl:max-w-none">
             <div className="max-w-5xl mx-auto rounded-xl sm:rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card/90 to-secondary/5 px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left shadow-sm backdrop-blur-sm">
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center shadow-sm">
@@ -378,7 +378,7 @@ export default function HomePage() {
             <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
             <div className="absolute bottom-0 left-1/4 h-40 w-40 rounded-full bg-white/5 blur-2xl" />
           </div>
-          <div className="container relative mx-auto px-4 sm:px-6 max-w-[100vw] text-center">
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[100vw] xl:max-w-none text-center">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
               <Badge
                 variant="secondary"

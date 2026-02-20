@@ -158,6 +158,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Set .dark on <html> from system preference or saved theme before first paint */}
+        <script
+          id="theme-init"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var key='truerate-theme';var s;try{s=localStorage.getItem(key);}catch(e){s=null;}var theme=s||'system';var isDark=theme==='dark'||(theme==='system'&&typeof window!=='undefined'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',isDark);})();`,
+          }}
+        />
         {/* Preload critical resources */}
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/api/rates/live" as="fetch" crossOrigin="anonymous" />

@@ -126,7 +126,7 @@ export default function AnalyticsPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="py-10 sm:py-14 md:py-24 flex-1 bg-background pb-20 md:pb-0 overflow-x-hidden">
-        <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+        <div className="container mx-auto px-4 sm:px-6 max-w-[100vw] xl:max-w-none">
           <div className="text-center mb-8 sm:mb-12 space-y-4">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
               <Badge variant="outline" className="gap-2">

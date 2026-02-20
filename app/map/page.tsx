@@ -353,7 +353,7 @@ export default function MapPage() {
       <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
         <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw] xl:max-w-none">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <Badge className="mb-2">Interactive Map</Badge>
@@ -375,7 +375,7 @@ export default function MapPage() {
 
         {/* Google Map */}
         <section className="py-6 sm:py-8 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw] xl:max-w-none">
             <div className="max-w-6xl mx-auto min-w-0">
               <Card className="overflow-hidden border-border/60 shadow-sm">
                 <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

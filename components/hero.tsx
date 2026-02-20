@@ -39,7 +39,7 @@ export function Hero() {
         <div className="absolute bottom-0 right-1/4 h-40 w-40 rounded-full bg-accent/10 blur-2xl" />
       </div>
 
-      <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10 sm:py-14 md:py-20 lg:py-28 max-w-[100vw] overflow-hidden">
+      <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-10 sm:py-14 md:py-20 lg:py-28 max-w-[100vw] xl:max-w-none overflow-hidden">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-8">

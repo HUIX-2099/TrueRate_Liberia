@@ -295,7 +295,7 @@ const ConverterPageComponent = () => {
             <div className="absolute bottom-0 left-1/4 h-40 w-40 rounded-full bg-secondary/10 blur-2xl" />
           </div>
 
-          <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 max-w-[100vw]">
+          <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 max-w-[100vw] xl:max-w-none">
             <div className="text-center mb-8">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <Badge className="gap-2" variant="secondary">
@@ -557,7 +557,7 @@ const ConverterPageComponent = () => {
 
         {/* Features Section */}
         <section className="py-10 sm:py-14 md:py-16">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw] xl:max-w-none">
             <div className="text-center mb-10 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">Essential Tools</Badge>
@@ -574,7 +574,7 @@ const ConverterPageComponent = () => {
               </p>
             </div>
             <Tabs defaultValue="tools" className="space-y-8">
-              <TabsList className="w-full max-w-[100vw] justify-start overflow-x-auto flex-nowrap -mx-1 px-1">
+              <TabsList className="w-full max-w-[100vw] xl:max-w-none justify-start overflow-x-auto flex-nowrap -mx-1 px-1">
                 <TabsTrigger value="tools" className="gap-2">
                   <Calculator className="h-4 w-4" />
                   Quick Tools
@@ -961,7 +961,7 @@ const ConverterPageComponent = () => {
 
         {/* Rate Highlights */}
         <section className="py-10 sm:py-12 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw] xl:max-w-none">
             <div className="max-w-4xl mx-auto text-center mb-8 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">Market Overview</Badge>
