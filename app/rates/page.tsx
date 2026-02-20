@@ -161,9 +161,9 @@ export default function RatesPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
-        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
+        <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <Badge variant="outline">Live Rates</Badge>
@@ -172,7 +172,7 @@ export default function RatesPage() {
                   {sourceCount ? `${sourceCount} changers` : "Loading sources"}
                 </Badge>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">USD to LRD Live Rate</span></h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-balance"><span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">USD to LRD Live Rate</span></h1>
               <p className="text-base sm:text-lg text-muted-foreground text-pretty">
                 Real-time updates from verified changers across Liberia.
               </p>
@@ -184,7 +184,7 @@ export default function RatesPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
               {/* Main rate card – same layout as hero */}
-              <div className="relative rounded-3xl border border-border/50 bg-card/80 backdrop-blur-xl p-8 shadow-2xl">
+              <div className="relative rounded-2xl sm:rounded-3xl border border-border/50 bg-card/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2">
                     <Badge variant="secondary" className="px-3 py-1">
@@ -204,7 +204,7 @@ export default function RatesPage() {
                 <div className="text-center mb-8">
                   <div className="flex flex-col items-center gap-2 mb-2">
                     <RateSourceSelector variant="pills" className="mb-1" />
-                    <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
+                    <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight">
                       <RateChangeAnimation rate={effectiveRate ?? 0}>
                         {effectiveRate ? effectiveRate.toFixed(2) : "—"}
                       </RateChangeAnimation>

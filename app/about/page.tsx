@@ -8,10 +8,10 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
-        <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4">
+        <section className="py-10 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <Badge className="mb-2">About TrueRate Liberia</Badge>
@@ -19,7 +19,7 @@ export default function AboutPage() {
                 <Badge variant="secondary">Liberian-Owned</Badge>
                 <Badge className="bg-secondary/10 text-secondary">Community-Driven</Badge>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                   Empowering Liberians with Transparent Exchange Rate Information
                 </span>
@@ -204,22 +204,22 @@ export default function AboutPage() {
                 Real numbers showing how we're making a difference
               </p>
             </div>
-            <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto text-center">
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">50K+</div>
-                <div className="text-primary-foreground/80">Monthly Users</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">50K+</div>
+                <div className="text-primary-foreground/80 text-sm sm:text-base">Monthly Users</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">15+</div>
-                <div className="text-primary-foreground/80">Verified Changers</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">15+</div>
+                <div className="text-primary-foreground/80 text-sm sm:text-base">Verified Changers</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">98%</div>
-                <div className="text-primary-foreground/80">Rate Accuracy</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">98%</div>
+                <div className="text-primary-foreground/80 text-sm sm:text-base">Rate Accuracy</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">$2M+</div>
-                <div className="text-primary-foreground/80">Saved from Fraud</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">$2M+</div>
+                <div className="text-primary-foreground/80 text-sm sm:text-base">Saved from Fraud</div>
               </div>
             </div>
           </div>

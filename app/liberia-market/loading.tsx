@@ -4,7 +4,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 export default function Loading() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         <section className="py-12 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <Skeleton className="h-8 w-48 mb-4" />

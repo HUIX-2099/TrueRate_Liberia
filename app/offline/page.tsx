@@ -11,7 +11,7 @@ export default function OfflinePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="py-12 sm:py-14 md:py-16 flex-1 flex items-center justify-center px-4 text-center">
+      <main className="py-10 sm:py-14 md:py-16 flex-1 flex items-center justify-center px-4 text-center pb-20 md:pb-0 overflow-x-hidden">
         <div className="max-w-lg">
           <div className="flex justify-center mb-6">
             <div className="h-20 w-20 rounded-full bg-destructive/20 flex items-center justify-center">

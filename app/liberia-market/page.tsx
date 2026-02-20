@@ -65,7 +65,7 @@ export default async function LiberiaMarketPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">

@@ -47,10 +47,10 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
-        <section className="py-12 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4">
+        <section className="py-10 sm:py-14 md:py-24 bg-gradient-to-b from-primary/10 to-background">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <span className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   Free Help
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                   Get in Touch
                 </span>
@@ -79,7 +79,7 @@ export default function ContactPage() {
         {/* Contact Methods */}
         <section className="py-12 sm:py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
               <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm hover:shadow-md transition-all">
                 <CardHeader className="pb-3">
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
@@ -156,7 +156,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="name">Full Name *</Label>
                         <Input

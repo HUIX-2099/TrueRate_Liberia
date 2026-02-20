@@ -50,7 +50,7 @@ export default function SignInPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="py-12 sm:py-14 md:py-16 flex-1 flex items-center justify-center bg-gradient-to-b from-muted/40 to-background">
+      <main className="py-10 sm:py-14 md:py-16 flex-1 flex items-center justify-center bg-gradient-to-b from-muted/40 to-background pb-20 md:pb-0 overflow-x-hidden px-4">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 items-center max-w-5xl mx-auto">
             <div className="space-y-6 text-center md:text-left">

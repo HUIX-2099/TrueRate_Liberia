@@ -34,32 +34,17 @@ export function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Liberia ethnic/language map — integrated with gradient overlay */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
-          <img
-            src="/images/tribes-map.png"
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center opacity-[0.18] dark:opacity-[0.22]"
-            fetchPriority="high"
-            decoding="async"
-          />
-          {/* Soft gradient so map fades into background and content stays readable */}
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/50 to-background/90"
-            aria-hidden
-          />
-        </div>
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute top-1/2 -left-20 h-60 w-60 rounded-full bg-secondary/10 blur-3xl" />
         <div className="absolute bottom-0 right-1/4 h-40 w-40 rounded-full bg-accent/10 blur-2xl" />
       </div>
 
-      <div className="container relative mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-16 md:py-24 lg:py-32">
+      <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10 sm:py-14 md:py-20 lg:py-28 max-w-[100vw] overflow-hidden">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-8">
             {/* Live Badge */}
-            <div className="inline-flex items-center gap-3 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-5 py-2 text-sm w-fit shadow-lg">
+            <div className="inline-flex items-center gap-3 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-5 py-2.5 text-sm w-fit shadow-md">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
@@ -70,7 +55,7 @@ export function Hero() {
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-balance leading-[1.1]">
+              <h1 className="text-2xl min-[480px]:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-balance leading-[1.15]">
                 The most accurate{" "}
                 <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
                   exchange rates
@@ -137,7 +122,7 @@ export function Hero() {
           {/* Right - Rate Card */}
           <div className="relative lg:ml-auto w-full max-w-md mx-auto lg:mx-0">
             {/* Main Card */}
-            <div className="relative rounded-3xl border border-border/50 bg-card/80 backdrop-blur-xl p-8 shadow-2xl">
+            <div className="relative rounded-2xl sm:rounded-3xl border border-border/50 bg-card/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 shadow-xl shadow-primary/5 ring-1 ring-black/5 dark:ring-white/5">
               {/* Card Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-2">
@@ -161,7 +146,7 @@ export function Hero() {
               <div className="text-center mb-8">
                 <div className="flex flex-col items-center gap-2 mb-2">
                   <RateSourceSelector variant="pills" className="mb-1" />
-                  <div className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">
+                  <div className="text-4xl min-[480px]:text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight">
                     <RateChangeAnimation rate={effectiveRate ?? 0}>
                       {effectiveRate ? effectiveRate.toFixed(2) : "—"}
                     </RateChangeAnimation>

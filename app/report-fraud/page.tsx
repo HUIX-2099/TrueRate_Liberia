@@ -69,8 +69,8 @@ export default function ReportFraudPage() {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="py-12 sm:py-14 md:py-16 flex-1 flex items-center justify-center bg-gradient-to-b from-muted/40 to-background">
-          <div className="container mx-auto px-4">
+        <main className="py-10 sm:py-14 md:py-16 flex-1 flex items-center justify-center bg-gradient-to-b from-muted/40 to-background pb-20 md:pb-0 overflow-x-hidden px-4">
+          <div className="container mx-auto w-full max-w-[100vw]">
             <Card className="max-w-2xl mx-auto text-center border-border/60 shadow-sm">
               <CardHeader>
                 <div className="flex justify-center mb-4">
@@ -109,7 +109,7 @@ export default function ReportFraudPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-destructive/10 to-background">
           <div className="container mx-auto px-4">

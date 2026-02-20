@@ -37,9 +37,9 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-10 sm:mb-12 space-y-2">
+    <section className="py-10 sm:py-14 md:py-24 bg-muted/30 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+        <div className="text-center mb-8 sm:mb-12 space-y-2">
           <Badge variant="outline" className="mx-auto w-fit">Safety tools</Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
             Everything you need to exchange safely
@@ -49,11 +49,11 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-4 sm:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="border-border/60 bg-background/70 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              className="border-border/60 bg-background/70 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-primary/10"
             >
               <CardHeader className="text-center md:text-left">
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 mb-4 mx-auto md:mx-0">

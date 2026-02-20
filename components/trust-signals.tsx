@@ -13,10 +13,10 @@ const trustPoints = [
 
 export function TrustSignals() {
   return (
-    <section className="py-12 sm:py-14 md:py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <Card className="max-w-5xl mx-auto border-border/60 bg-primary/5 shadow-sm">
-          <CardContent className="pt-8 px-4 sm:px-6">
+    <section className="py-10 sm:py-14 md:py-24 bg-background overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+        <Card className="max-w-5xl mx-auto border-border/60 bg-primary/5 shadow-sm rounded-xl sm:rounded-2xl overflow-hidden">
+          <CardContent className="pt-6 sm:pt-8 px-4 sm:px-6 pb-6 sm:pb-8">
             <div className="text-center mb-8 space-y-2">
               <Badge variant="outline" className="mx-auto w-fit">Trust & transparency</Badge>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
@@ -26,11 +26,11 @@ export function TrustSignals() {
                 We’re committed to transparency and fair exchange rates.
               </p>
             </div>
-            <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
+            <div className="grid gap-3 sm:gap-4 grid-cols-1 md:grid-cols-2">
               {trustPoints.map((point, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-3 rounded-xl border border-border/60 bg-background/70 px-4 py-3 text-left"
+                  className="flex items-start gap-3 rounded-xl border border-border/60 bg-background/80 px-4 py-3.5 text-left transition-colors hover:border-primary/20"
                 >
                   <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
                   <span className="text-sm sm:text-base text-foreground leading-relaxed">{point}</span>

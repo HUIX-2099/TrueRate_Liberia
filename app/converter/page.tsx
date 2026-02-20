@@ -287,7 +287,7 @@ const ConverterPageComponent = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <ErrorBoundary>
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-background via-background to-primary/5">
           <div className="absolute inset-0 overflow-hidden">
@@ -295,7 +295,7 @@ const ConverterPageComponent = () => {
             <div className="absolute bottom-0 left-1/4 h-40 w-40 rounded-full bg-secondary/10 blur-2xl" />
           </div>
 
-          <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-6 sm:py-8 md:py-12">
+          <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 max-w-[100vw]">
             <div className="text-center mb-8">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <Badge className="gap-2" variant="secondary">
@@ -306,7 +306,7 @@ const ConverterPageComponent = () => {
                 <Badge variant="secondary">7 Currencies</Badge>
                 <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">No Fees</Badge>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-balance">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                   Currency Converter
                 </span>
@@ -556,8 +556,8 @@ const ConverterPageComponent = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 sm:py-14 md:py-16">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <section className="py-10 sm:py-14 md:py-16">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
             <div className="text-center mb-10 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">Essential Tools</Badge>
@@ -574,7 +574,7 @@ const ConverterPageComponent = () => {
               </p>
             </div>
             <Tabs defaultValue="tools" className="space-y-8">
-              <TabsList className="w-full justify-start overflow-x-auto flex-nowrap">
+              <TabsList className="w-full max-w-[100vw] justify-start overflow-x-auto flex-nowrap -mx-1 px-1">
                 <TabsTrigger value="tools" className="gap-2">
                   <Calculator className="h-4 w-4" />
                   Quick Tools
@@ -961,7 +961,7 @@ const ConverterPageComponent = () => {
 
         {/* Rate Highlights */}
         <section className="py-10 sm:py-12 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
             <div className="max-w-4xl mx-auto text-center mb-8 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">Market Overview</Badge>
@@ -977,7 +977,7 @@ const ConverterPageComponent = () => {
                 Quick context around today's USD/LRD market activity and key insights.
               </p>
             </div>
-            <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-3">
+            <div className="max-w-4xl mx-auto grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-3">
               <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
                 <CardHeader className="pb-3">
                   <div className="flex items-center gap-2 mb-1">

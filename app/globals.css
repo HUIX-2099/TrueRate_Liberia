@@ -9,6 +9,16 @@
   html {
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  /* Clear focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: oklch(0.35 0.08 260 / 0.2);
+    color: var(--foreground);
   }
 }
 
@@ -146,6 +156,11 @@
   main {
     padding-bottom: env(safe-area-inset-bottom);
   }
+  /* Mobile: ensure containers don't cause horizontal scroll */
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
   table {
     width: 100%;
     display: block;
@@ -168,6 +183,9 @@
   select,
   textarea {
     touch-action: manipulation;
+  }
+  a:not([class*="underline"]) {
+    transition: color 0.2s ease, opacity 0.2s ease;
   }
   input,
   select,

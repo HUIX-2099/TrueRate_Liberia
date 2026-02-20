@@ -164,7 +164,7 @@ export function ForumsContent() {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
-      <main className="flex-1 min-w-0">
+      <main className="flex-1 min-w-0 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero */}
         <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4 sm:px-6">

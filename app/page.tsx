@@ -30,12 +30,12 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         <Hero />
 
         {/* Regional breakdown + Quick Tools */}
-        <section className="py-8 sm:py-10 md:py-14 bg-background">
-          <div className="container mx-auto px-4">
+        <section className="py-10 sm:py-14 md:py-16 bg-background">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
             <div className="max-w-4xl mx-auto space-y-4">
               <div className="text-center space-y-3">
                 <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
@@ -79,8 +79,8 @@ export default function HomePage() {
         </section>
 
         {/* Quick Access Cards */}
-        <section className="py-14 sm:py-16 md:py-20 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <section className="py-10 sm:py-14 md:py-20 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
             <div className="text-center mb-10 sm:mb-12 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">Essential Tools</Badge>
@@ -97,8 +97,8 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-              <Link href="/converter">
-                <Card className="group h-full border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/converter" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-border/60 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
@@ -113,12 +113,12 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/analytics">
-                <Card className="group h-full border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/analytics" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-border/60 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10">
-                        <TrendingUp className="h-6 w-6 text-blue-500" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                        <TrendingUp className="h-6 w-6 text-primary" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-2">Rate Analytics</h3>
@@ -129,8 +129,8 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/predictions">
-                <Card className="group h-full border-amber-500/30 bg-gradient-to-br from-amber-500/5 to-background shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/predictions" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-amber-500/30 bg-gradient-to-br from-amber-500/5 to-background shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10">
@@ -148,8 +148,8 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/business">
-                <Card className="group h-full border-primary/30 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/business" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-primary/30 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
@@ -167,12 +167,12 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/map">
-                <Card className="group h-full border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/map" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-border/60 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10">
-                        <MapPin className="h-6 w-6 text-green-500" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10">
+                        <MapPin className="h-6 w-6 text-secondary" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-2">Find Changers</h3>
@@ -183,12 +183,12 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/forums">
-                <Card className="group h-full border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/forums" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-border/60 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10">
-                        <MessageSquare className="h-6 w-6 text-violet-500" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                        <MessageSquare className="h-6 w-6 text-primary" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
@@ -202,12 +202,12 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/community">
-                <Card className="group h-full border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/community" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-border/60 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500/10">
-                        <Users className="h-6 w-6 text-pink-500" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                        <Users className="h-6 w-6 text-primary" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg mb-2">Community</h3>
@@ -218,8 +218,8 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/report-fraud">
-                <Card className="group h-full border-border/60 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/report-fraud" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-border/60 shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-destructive/30">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-destructive/10">
@@ -234,8 +234,8 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              <Link href="/voice">
-                <Card className="group h-full border-border/60 bg-gradient-to-br from-secondary/10 to-background shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href="/voice" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-2xl">
+                <Card className="group h-full border-border/60 bg-gradient-to-br from-secondary/10 to-background shadow-sm rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-secondary/30">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10">
@@ -256,10 +256,10 @@ export default function HomePage() {
         </section>
 
         {/* Market Leaderboard Section */}
-        <section className="py-12 sm:py-14 md:py-16 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <section className="py-10 sm:py-14 md:py-16 bg-background">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 space-y-3">
+              <div className="text-center mb-6 sm:mb-8 space-y-3">
                 <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                   <Badge variant="outline">Live Leaderboard</Badge>
                   <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400 animate-pulse">Real-time</Badge>
@@ -283,9 +283,9 @@ export default function HomePage() {
         </section>
 
         {/* Liberia Market Insights Section */}
-        <section className="py-12 sm:py-14 md:py-16 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8">
-            <div className="text-center mb-10 sm:mb-12 space-y-3">
+        <section className="py-10 sm:py-14 md:py-16 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-[100vw]">
+            <div className="text-center mb-8 sm:mb-12 space-y-3">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
                 <Badge variant="outline">For Liberians</Badge>
                 <Badge className="bg-primary/10 text-primary">Essential Data</Badge>
@@ -317,8 +317,8 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              <div className="lg:col-span-2">
+            <div className="grid gap-6 lg:grid-cols-3 max-w-6xl mx-auto">
+              <div className="min-w-0 lg:col-span-2">
                 <PriceIndex rate={liveRate} />
               </div>
               <div className="space-y-6">
@@ -335,9 +335,9 @@ export default function HomePage() {
         <TrustSignals />
 
         {/* Referral CTA */}
-        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-secondary/10 via-primary/5 to-accent/10">
-          <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-5xl mx-auto rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card/90 to-secondary/5 px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-sm backdrop-blur-sm">
+        <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-r from-secondary/10 via-primary/5 to-accent/10">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+            <div className="max-w-5xl mx-auto rounded-xl sm:rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card/90 to-secondary/5 px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left shadow-sm backdrop-blur-sm">
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center shadow-sm">
                   <Gift className="h-8 w-8 text-secondary" />
@@ -373,12 +373,12 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-18 md:py-24 bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
             <div className="absolute bottom-0 left-1/4 h-40 w-40 rounded-full bg-white/5 blur-2xl" />
           </div>
-          <div className="container relative mx-auto px-4 sm:px-6 text-center">
+          <div className="container relative mx-auto px-4 sm:px-6 max-w-[100vw] text-center">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
               <Badge
                 variant="secondary"

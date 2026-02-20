@@ -110,7 +110,7 @@ export default function ThreadPage() {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
-      <main className="flex-1 py-6 sm:py-10 min-w-0">
+      <main className="flex-1 py-6 sm:py-10 min-w-0 pb-20 md:pb-0 overflow-x-hidden">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl min-w-0">
           <Button asChild variant="ghost" size="sm" className="mb-4 sm:mb-6 gap-1 min-h-9 touch-manipulation">
             <Link href="/forums">

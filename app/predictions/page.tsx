@@ -120,7 +120,7 @@ export default function PredictionsPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <ErrorBoundary>
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-background via-background to-primary/5">
           <div className="absolute inset-0 overflow-hidden">

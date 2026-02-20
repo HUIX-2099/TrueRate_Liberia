@@ -48,7 +48,6 @@ const HeaderComponent = () => {
   // Memoize mobile menu items
   const mobileMenuItems = useMemo(() => [
     { href: "/auth/signin", label: "Sign In", icon: LogIn, description: "Access your dashboard" },
-    { href: "/rates", label: "Rates", icon: TrendingUp, description: "Live USD/LRD updates" },
     { href: "/converter", label: "Converter", icon: Calculator, description: "Convert USD ↔ LRD" },
     { href: "/analytics", label: "Analytics / Charts", icon: Activity, description: "Trends and history" },
     { href: "/price-index", label: "Price Index", icon: ShoppingCart, description: "Everyday cost tracking" },
@@ -157,7 +156,7 @@ const HeaderComponent = () => {
   return (
     <>
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
-      <div className="container mx-auto flex h-16 md:h-[72px] items-center justify-between px-4 gap-3">
+      <div className="container mx-auto flex h-14 sm:h-16 md:h-[72px] items-center justify-between px-3 sm:px-4 gap-2 sm:gap-3 max-w-[100vw]">
           <Link href="/" className="flex items-center min-w-0" aria-label="TrueRate Liberia home">
             <div className="flex h-[108px] w-[138px] sm:h-[116px] sm:w-[154px] md:h-[116px] md:w-[170px] items-center justify-center overflow-hidden">
               <Image

@@ -350,10 +350,10 @@ export default function MapPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <ErrorBoundary>
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
-        <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4">
+        <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
                 <Badge className="mb-2">Interactive Map</Badge>
@@ -361,7 +361,7 @@ export default function MapPage() {
                 <Badge variant="secondary">All Counties</Badge>
                 <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Location-Based</Badge>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                   Exchange Rates Across Liberia
                 </span>
@@ -375,8 +375,8 @@ export default function MapPage() {
 
         {/* Google Map */}
         <section className="py-6 sm:py-8 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+            <div className="max-w-6xl mx-auto min-w-0">
               <Card className="overflow-hidden border-border/60 shadow-sm">
                 <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
@@ -403,7 +403,7 @@ export default function MapPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={submitReport} className="flex flex-col sm:flex-row gap-4">
+                  <form onSubmit={submitReport} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <div className="flex-1 space-y-2">
                       <Label htmlFor="report-rate">Rate (LRD per 1 USD)</Label>
                       <Input
@@ -634,7 +634,7 @@ export default function MapPage() {
                 Comprehensive snapshot across verified locations to help you compare and make informed decisions.
               </p>
             </div>
-            <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-3">
+            <div className="max-w-4xl mx-auto grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
               <Card className="border-green-200 bg-green-50/50 dark:bg-green-950/20 shadow-sm">
                 <CardHeader className="pb-3">
                   <div className="flex items-center gap-2 mb-1">

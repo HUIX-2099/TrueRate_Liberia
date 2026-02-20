@@ -125,9 +125,9 @@ export default function AnalyticsPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="py-12 sm:py-14 md:py-24 flex-1 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 space-y-4">
+      <main className="py-10 sm:py-14 md:py-24 flex-1 bg-background pb-20 md:pb-0 overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
+          <div className="text-center mb-8 sm:mb-12 space-y-4">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
               <Badge variant="outline" className="gap-2">
                 <Sparkles className="h-3.5 w-3.5" />
@@ -165,7 +165,7 @@ export default function AnalyticsPage() {
           </div>
 
           {/* Key Metrics */}
-          <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto mb-12">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto mb-8 sm:mb-12">
             <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
                 <CardTitle className="text-sm font-medium text-primary">Current Rate</CardTitle>
@@ -336,7 +336,7 @@ export default function AnalyticsPage() {
               <p className="text-sm text-muted-foreground">AI-powered analysis and market insights</p>
             </div>
             <Tabs defaultValue="summary">
-              <TabsList className="grid w-full grid-cols-3 shadow-sm">
+              <TabsList className="grid w-full grid-cols-3 gap-1 shadow-sm min-w-0">
                 <TabsTrigger value="summary">Summary</TabsTrigger>
                 <TabsTrigger value="patterns">Patterns</TabsTrigger>
                 <TabsTrigger value="quality">Data Quality</TabsTrigger>

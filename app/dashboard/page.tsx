@@ -38,7 +38,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 bg-muted/30">
+      <main className="flex-1 bg-muted/30 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
         <section className="py-10 sm:py-12 bg-gradient-to-b from-primary/10 to-transparent">
           <div className="container mx-auto px-4">

@@ -54,7 +54,7 @@ export default function InflationTrackerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         {/* Hero Section */}
         <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">

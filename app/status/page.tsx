@@ -82,7 +82,7 @@ export default function StatusPage() {
     <PageTheme theme="dark">
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="py-12 sm:py-14 md:py-24 flex-1 bg-background">
+      <main className="py-10 sm:py-14 md:py-24 flex-1 bg-background pb-20 md:pb-0 overflow-x-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto space-y-6">
             <div className="text-center mb-8">
