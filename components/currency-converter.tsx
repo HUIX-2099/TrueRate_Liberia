@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { ArrowLeftRight, Calculator } from "lucide-react"
 import { RateComparisonCallout } from "@/components/rate-comparison-callout"
+import { CurrencyIconOnly } from "@/components/currency-icon"
 
 export function CurrencyConverter() {
   const { effectiveRate: currentRate } = useLiveRate()
@@ -105,8 +106,10 @@ export function CurrencyConverter() {
       <CardContent className="space-y-6">
         <div className="space-y-2">
           <Label htmlFor="usd-input">US Dollar (USD)</Label>
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
+          <div className="relative flex items-center">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none">
+              <CurrencyIconOnly code="USD" size="sm" />
+            </span>
             <Input
               id="usd-input"
               type="text"
@@ -114,7 +117,7 @@ export function CurrencyConverter() {
               placeholder="0.00"
               value={usdAmount}
               onChange={(e) => handleUsdChange(e.target.value)}
-              className="pl-8 text-lg font-semibold"
+              className="pl-11 text-lg font-semibold"
             />
           </div>
         </div>
@@ -127,8 +130,10 @@ export function CurrencyConverter() {
 
         <div className="space-y-2">
           <Label htmlFor="lrd-input">Liberian Dollar (LRD)</Label>
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">L$</span>
+          <div className="relative flex items-center">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none">
+              <CurrencyIconOnly code="LRD" size="sm" />
+            </span>
             <Input
               id="lrd-input"
               type="text"
@@ -136,7 +141,7 @@ export function CurrencyConverter() {
               placeholder="0.00"
               value={lrdAmount}
               onChange={(e) => handleLrdChange(e.target.value)}
-              className="pl-8 text-lg font-semibold"
+              className="pl-11 text-lg font-semibold"
             />
           </div>
         </div>

@@ -1,8 +1,8 @@
 import Parser from "rss-parser"
-import { formatDistanceToNow, format } from "date-fns"
+import { formatDistanceToNow } from "date-fns"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { AlertCircle, ExternalLink, Flame } from "lucide-react"
+import { AlertCircle } from "lucide-react"
+import { LiberiaMarketNewsAuto, type LiberiaNewsItemClient } from "@/components/liberia-market-news-auto"
 
 export interface LiberiaNewsItem {
   id: string
@@ -71,6 +71,15 @@ const FEEDS = [
   },
 ]
 
+/** Display names for the "News sources" section on the page */
+export const NEWS_OUTLET_LABELS = [
+  "FrontPageAfrica (economy & general)",
+  "allAfrica (Liberia business & headlines)",
+  "New Dawn Liberia",
+  "Central Bank of Liberia (CBL) — news & press releases",
+  "Invest Liberia (National Investment Commission)",
+]
+
 const parser = new Parser()
 
 const normalizeText = (value: string) => value.toLowerCase().replace(/\s+/g, " ").trim()
@@ -98,32 +107,36 @@ const toDate = (value?: string) => {
 }
 
 const fetchFeed = async (source: string, url: string): Promise<LiberiaNewsItem[]> => {
-  // Cache each feed for 1 hour to stay fresh without overloading sources.
-  const res = await fetch(url, {
-    next: { revalidate: 3600 },
-    headers: {
-      "User-Agent": "TrueRateLiberiaBot/1.0",
-      Accept: "application/rss+xml, application/xml;q=0.9, text/xml;q=0.8",
-    },
-  })
-  if (!res.ok) return []
-  const xml = await res.text()
-  const feed = await parser.parseString(xml)
-  const items = (feed.items ?? []).map((item) => {
-    const title = item.title ?? "Untitled"
-    const excerpt = formatExcerpt(item.contentSnippet ?? item.content ?? "")
-    const publishedAt = toDate(item.isoDate ?? item.pubDate)
-    return {
-      id: `${source}-${item.guid ?? item.link ?? title}`,
-      title,
-      excerpt,
-      url: item.link ?? url,
-      source,
-      publishedAt,
-      tags: extractTags(title, excerpt),
-    }
-  })
-  return items
+  try {
+    const res = await fetch(url, {
+      next: { revalidate: 3600 },
+      headers: {
+        "User-Agent": "TrueRateLiberiaBot/1.0 (Liberia market news)",
+        Accept: "application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, application/rdf+xml;q=0.7",
+      },
+    })
+    if (!res.ok) return []
+    const xml = await res.text()
+    const feed = await parser.parseString(xml)
+    const items = (feed.items ?? []).map((item) => {
+      const title = item.title ?? "Untitled"
+      const excerpt = formatExcerpt(item.contentSnippet ?? item.content ?? "")
+      const publishedAt = toDate(item.isoDate ?? item.pubDate)
+      return {
+        id: `${source}-${item.guid ?? item.link ?? title}`,
+        title,
+        excerpt,
+        url: item.link ?? url,
+        source,
+        publishedAt,
+        tags: extractTags(title, excerpt),
+      }
+    })
+    return items
+  } catch (error) {
+    console.warn(`[LiberiaMarketNews] Feed failed: ${source}`, error)
+    return []
+  }
 }
 
 const CBL_NEWS_PRESS_URL = "https://www.cbl.org.lr/media/news-press-release"
@@ -240,13 +253,15 @@ const fetchInvestLiberia = async (): Promise<LiberiaNewsItem[]> => {
 }
 
 export const fetchLiberiaNews = async (): Promise<LiberiaNewsItem[]> => {
-  const results = await Promise.all([
+  const results = await Promise.allSettled([
     ...FEEDS.map((feed) => fetchFeed(feed.source, feed.url)),
     fetchCblNews(),
     fetchCblNewsPressReleases(),
     fetchInvestLiberia(),
   ])
-  const merged = results.flat()
+  const merged = results
+    .filter((r): r is PromiseFulfilledResult<LiberiaNewsItem[]> => r.status === "fulfilled")
+    .flatMap((r) => r.value)
   const unique = new Map<string, LiberiaNewsItem>()
   for (const item of merged) {
     if (!unique.has(item.url)) unique.set(item.url, item)
@@ -300,65 +315,16 @@ export async function LiberiaMarketNews() {
     )
   }
 
-  return (
-    <div className="space-y-6">
-      {movers.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Flame className="h-5 w-5 text-amber-500" />
-              Market Movers
-            </CardTitle>
-            <CardDescription>Top commodities mentioned across today’s headlines.</CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-wrap gap-2">
-            {movers.map((mover) => (
-              <Badge key={mover.keyword} variant="secondary">
-                {mover.keyword} • {mover.count}
-              </Badge>
-            ))}
-          </CardContent>
-        </Card>
-      )}
+  const initialItems: LiberiaNewsItemClient[] = items.map((item) => ({
+    id: item.id,
+    title: item.title,
+    source: item.source,
+    time: formatDistanceToNow(item.publishedAt, { addSuffix: true }),
+    publishedAt: item.publishedAt.toISOString(),
+    summary: item.excerpt,
+    url: item.url,
+    tags: item.tags,
+  }))
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((item) => (
-          <Card key={item.id} className="h-full">
-            <CardHeader>
-              <div className="flex items-start justify-between gap-3">
-                <CardTitle className="text-base leading-snug">{item.title}</CardTitle>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${item.title}`}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
-              <CardDescription className="text-xs">
-                {item.source} •{" "}
-                {formatDistanceToNow(item.publishedAt, { addSuffix: true })}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground mb-4">{item.excerpt}</p>
-              <div className="flex flex-wrap gap-2">
-                {item.tags.map((tag) => (
-                  <Badge key={`${item.id}-${tag}`} variant="outline">
-                    {tag}
-                  </Badge>
-                ))}
-                <Badge variant="outline">
-                  {format(item.publishedAt, "MMM d, yyyy")}
-                </Badge>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-
-    </div>
-  )
+  return <LiberiaMarketNewsAuto initialItems={initialItems} />
 }

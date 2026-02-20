@@ -129,23 +129,23 @@ const HeaderComponent = () => {
         href={item.href}
         aria-label={item.label}
         aria-current={isActive ? "page" : undefined}
-        className={`relative flex flex-col items-center justify-center gap-1 rounded-xl py-2 px-1 min-h-[44px] transition-all duration-200 ease-out ${
+        className={`relative flex flex-col items-center justify-center gap-0.5 rounded-lg py-1.5 px-0.5 min-h-[40px] transition-all duration-200 ease-out ${
           isActive
             ? "text-primary"
             : "text-muted-foreground active:scale-95"
         }`}
       >
         <span
-          className={`relative flex h-8 w-8 items-center justify-center rounded-full transition-colors ${
+          className={`relative flex h-6 w-6 items-center justify-center rounded-full transition-colors ${
             isActive ? "bg-primary/15 text-primary" : "hover:bg-muted/60"
           }`}
         >
-          <item.icon className={`h-[22px] w-[22px] ${isActive ? "drop-shadow-sm" : ""}`} />
+          <item.icon className={`h-[18px] w-[18px] ${isActive ? "drop-shadow-sm" : ""}`} />
           {isActive && (
-            <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary" />
+            <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-0.5 h-0.5 rounded-full bg-primary" />
           )}
         </span>
-        <span className={`text-[10px] font-medium tracking-wide ${isActive ? "text-primary" : "text-muted-foreground"}`}>
+        <span className={`text-[9px] font-medium tracking-wide leading-tight ${isActive ? "text-primary" : "text-muted-foreground"}`}>
           {item.label}
         </span>
       </Link>
@@ -256,11 +256,11 @@ const HeaderComponent = () => {
       </header>
 
       <nav
-        className="fixed bottom-0 left-0 right-0 z-40 flex justify-center px-4 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] md:hidden pointer-events-none"
+        className="fixed bottom-0 left-0 right-0 z-40 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+0.25rem)] md:hidden pointer-events-none"
         aria-label="Primary"
       >
-        <div className="pointer-events-auto mx-auto w-full max-w-[min(380px,calc(100vw-1.5rem))] rounded-2xl border border-border/80 bg-background/98 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.12),0_2px_8px_-2px_rgba(0,0,0,0.06)] backdrop-blur-xl">
-          <div className="mx-auto grid grid-cols-4 gap-1 p-2">
+        <div className="pointer-events-auto mx-auto w-full max-w-[min(320px,calc(100vw-1rem))] rounded-xl border border-border/70 bg-background/98 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.1)] backdrop-blur-xl">
+          <div className="mx-auto grid grid-cols-4 gap-0.5 p-1.5">
             {bottomNavItems.map((item) => (
               <BottomNavItem key={item.href} item={item} />
             ))}

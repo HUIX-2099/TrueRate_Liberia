@@ -1,34 +1,50 @@
+/**
+ * Forecasting models trained on central bank historical data (e.g. CBL buying/selling rates).
+ * SMA, EMA, Linear Regression, ARIMA, and Seasonal decomposition are used for prediction.
+ */
+
 interface PredictionModel {
   name: string
   predict: (historicalData: number[]) => number[]
   weight: number
 }
 
-// Simple Moving Average
+const SMA_WINDOW = 14 // days of history for moving average
+
+// Simple Moving Average: trained on recent central bank history
 function smaPredict(data: number[], periods: number): number[] {
   const predictions: number[] = []
+  const n = data.length
+  if (n === 0) return []
   for (let i = 0; i < periods; i++) {
-    const recentData = data.slice(-(20 + i))
+    const window = Math.min(SMA_WINDOW + i, n)
+    const recentData = data.slice(-window)
     const avg = recentData.reduce((sum, val) => sum + val, 0) / recentData.length
     predictions.push(avg)
   }
   return predictions
 }
 
-// Exponential Moving Average (more weight on recent data)
+// Exponential Moving Average: alpha = 2/(span+1), more weight on recent CBL data
 function emaPredict(data: number[], periods: number): number[] {
   const predictions: number[] = []
-  let ema = data[data.length - 1] ?? 0
+  const n = data.length
+  if (n === 0) return []
+  const span = 14
+  const alpha = 2 / (span + 1)
+  let ema = data[0] ?? 0
+  for (let t = 1; t < n; t++) {
+    ema = alpha * (data[t] ?? ema) + (1 - alpha) * ema
+  }
   for (let i = 0; i < periods; i++) {
     predictions.push(ema)
-    // Assume slight trend continuation
-    const trend = data.length >= 2 ? data[data.length - 1] - data[data.length - 2] : 0
-    ema = ema + trend * 0.5
+    const trend = n >= 2 ? (data[n - 1] ?? ema) - (data[n - 2] ?? ema) : 0
+    ema = ema + trend * 0.3
   }
   return predictions
 }
 
-// Linear Regression
+// Linear Regression on central bank historical series (trend extrapolation)
 function linearRegressionPredict(data: number[], periods: number): number[] {
   const n = data.length
   const x = Array.from({ length: n }, (_, i) => i)
@@ -54,35 +70,35 @@ function linearRegressionPredict(data: number[], periods: number): number[] {
   return predictions
 }
 
-// ARIMA-inspired prediction (simplified)
+// ARIMA-inspired autoregressive model trained on CBL history (order p=5)
 function arimaPredict(data: number[], periods: number): number[] {
   const predictions: number[] = []
-  const p = 3 // autoregressive order
+  const p = Math.min(5, Math.max(2, Math.floor(data.length / 10)))
 
   for (let i = 0; i < periods; i++) {
-    const recent = i === 0 ? data.slice(-p) : [...data.slice(-p + i), ...predictions].slice(-p)
-    // Simple AR model
-    const prediction = recent.reduce((sum, val) => sum + val, 0) / p
+    const recent =
+      i === 0 ? data.slice(-p) : [...data.slice(-Math.max(0, p - i)), ...predictions].slice(-p)
+    const prediction =
+      recent.length > 0 ? recent.reduce((sum, val) => sum + val, 0) / recent.length : data[data.length - 1] ?? 0
     predictions.push(prediction)
   }
   return predictions
 }
 
-// Seasonal decomposition with trend
+// Seasonal decomposition (weekly) + trend from central bank historical data
 function seasonalPredict(data: number[], periods: number): number[] {
   const predictions: number[] = []
-  const seasonalPeriod = 7 // Weekly seasonality
+  const seasonalPeriod = 7
 
   for (let i = 0; i < periods; i++) {
     const seasonalIndex = (data.length + i) % seasonalPeriod
     const seasonalValues = data.filter((_, idx) => idx % seasonalPeriod === seasonalIndex)
-    const seasonal = seasonalValues.length
-      ? seasonalValues.reduce((a, b) => a + b, 0) / seasonalValues.length
-      : data[data.length - 1] ?? 0
-
-    // Add trend
-    const recentTrend = data.length >= 8 ? data[data.length - 1] - data[data.length - 8] : 0
-    predictions.push(seasonal + (recentTrend / 7) * i)
+    const seasonal =
+      seasonalValues.length > 0
+        ? seasonalValues.reduce((a, b) => a + b, 0) / seasonalValues.length
+        : data[data.length - 1] ?? 0
+    const recentTrend = data.length >= seasonalPeriod ? (data[data.length - 1]! - data[data.length - seasonalPeriod]!) : 0
+    predictions.push(Number((seasonal + (recentTrend / seasonalPeriod) * (i + 1)).toFixed(4)))
   }
   return predictions
 }

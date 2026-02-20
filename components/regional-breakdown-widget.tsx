@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { MapPin, ChevronRight } from "lucide-react"
 import Link from "next/link"
+import { CountyFlag } from "@/lib/county-flags"
 
 interface RegionalItem {
   region: string
@@ -39,22 +39,25 @@ export function RegionalBreakdownWidget() {
 
   if (loading) {
     return (
-      <Card className="rounded-xl border-border/60 shadow-sm">
+      <Card className="rounded-md border-border/60 shadow-sm">
         <CardContent className="py-10">
           <div className="flex gap-4">
-            <div className="flex-1 h-20 rounded-lg bg-muted/50 animate-pulse" />
-            <div className="flex-1 h-32 rounded-lg bg-muted/50 animate-pulse" />
+            <div className="flex-1 h-20 rounded-md bg-muted/50 animate-pulse" />
+            <div className="flex-1 h-32 rounded-md bg-muted/50 animate-pulse" />
           </div>
         </CardContent>
       </Card>
     )
   }
 
+  const monrovia = regional.find((r) => r.region === "Monrovia")
+  const upcountry = regional.find((r) => r.region === "Upcountry")
+
   return (
-    <Card className="rounded-xl border-border/60 shadow-sm overflow-hidden">
+    <Card className="rounded-md border-border/60 shadow-sm overflow-hidden">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2.5 text-lg font-semibold">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary/10">
             <MapPin className="h-4.5 w-4.5 text-primary" />
           </div>
           Regional breakdown
@@ -64,42 +67,49 @@ export function RegionalBreakdownWidget() {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid gap-5 sm:grid-cols-2">
-          <div className="space-y-3">
-            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Monrovia vs Upcountry</p>
-            <div className="space-y-2">
-              {regional.map((r) => (
-                <div
-                  key={r.region}
-                  className="flex items-center justify-between gap-3 rounded-lg border border-border/50 bg-muted/30 px-4 py-3"
-                >
-                  <span className="font-medium text-foreground">{r.region}</span>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className="font-mono text-base font-semibold tabular-nums text-foreground">{r.avgRate.toFixed(2)}</span>
-                    <span className="text-xs text-muted-foreground">LRD</span>
-                  </div>
-                  <Badge variant="secondary" className="text-xs font-normal shrink-0">
-                    {r.count}
-                  </Badge>
-                </div>
-              ))}
+        {/* Monrovia vs Upcountry */}
+        <div>
+          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-3">Monrovia vs Upcountry</p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-md border border-border/50 bg-muted/30 p-4 text-center">
+              <p className="text-sm font-medium text-foreground mb-2">Monrovia</p>
+              <p className="text-2xl font-bold font-mono tabular-nums text-foreground">
+                {(monrovia ?? regional[0])?.avgRate.toFixed(2) ?? "—"}
+              </p>
+              <p className="text-xs text-muted-foreground">LRD</p>
+              <p className="text-xs text-muted-foreground mt-1">{(monrovia ?? regional[0])?.count ?? 0}</p>
             </div>
-          </div>
-          <div className="space-y-3">
-            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">By county</p>
-            <div className="rounded-lg border border-border/50 bg-muted/20 divide-y divide-border/50 max-h-[200px] overflow-y-auto">
-              {byCounty.slice(0, 8).map((c) => (
-                <div
-                  key={c.county}
-                  className="flex items-center justify-between gap-3 px-3 py-2.5 text-sm hover:bg-muted/40 transition-colors"
-                >
-                  <span className="font-medium text-foreground">{c.county}</span>
-                  <span className="font-mono tabular-nums text-muted-foreground">{c.avgRate.toFixed(2)}</span>
-                </div>
-              ))}
+            <div className="rounded-md border border-border/50 bg-muted/30 p-4 text-center">
+              <p className="text-sm font-medium text-foreground mb-2">Upcountry</p>
+              <p className="text-2xl font-bold font-mono tabular-nums text-foreground">
+                {(upcountry ?? regional[1])?.avgRate.toFixed(2) ?? "—"}
+              </p>
+              <p className="text-xs text-muted-foreground">LRD</p>
+              <p className="text-xs text-muted-foreground mt-1">{(upcountry ?? regional[1])?.count ?? 0}</p>
             </div>
           </div>
         </div>
+
+        {/* By county */}
+        <div>
+          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-3">By county</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {byCounty.slice(0, 10).map((c) => (
+              <div
+                key={c.county}
+                className="rounded-md border border-border/50 bg-muted/30 p-3 text-center"
+              >
+                <div className="flex justify-center mb-2">
+                  <CountyFlag county={c.county} className="h-7 w-9 rounded shadow-sm" />
+                </div>
+                <p className="text-lg font-bold font-mono tabular-nums text-foreground">{c.avgRate.toFixed(2)}</p>
+                <p className="text-xs text-muted-foreground">LRD</p>
+                <p className="text-sm font-medium text-foreground mt-1.5">{c.county}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <Link href="/analytics" className="inline-block">
           <Button variant="ghost" size="sm" className="gap-1.5 text-primary hover:text-primary hover:bg-primary/10 -ml-2">
             View full analytics

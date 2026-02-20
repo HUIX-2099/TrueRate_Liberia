@@ -8,7 +8,9 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
+import { CurrencyIcon } from "@/components/currency-icon"
 import {
   ArrowUpDown,
   Copy,
@@ -422,17 +424,28 @@ const ConverterPageComponent = () => {
                 <div className="space-y-3 mb-4">
                   <Label className="text-sm font-medium">You Have</Label>
                   <div className="flex flex-col sm:flex-row gap-2">
-                    <select
-                      value={fromCurrency}
-                      onChange={(e) => setFromCurrency(e.target.value)}
-                      className="w-full sm:w-40 rounded-xl border border-input bg-background px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                      {currencies.map((c) => (
-                        <option key={c.code} value={c.code}>
-                          {c.flag} {c.code}
-                        </option>
-                      ))}
-                    </select>
+                    <Select value={fromCurrency} onValueChange={setFromCurrency}>
+                      <SelectTrigger className="w-full sm:w-44 h-12 rounded-xl gap-2">
+                        <SelectValue>
+                          <span className="flex items-center gap-2">
+                            <CurrencyIcon code={fromCurrency} flag={fromC.flag} size="default" />
+                            <span>{fromC.code}</span>
+                            <span className="text-muted-foreground hidden sm:inline">· {fromC.name}</span>
+                          </span>
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent>
+                        {currencies.map((c) => (
+                          <SelectItem key={c.code} value={c.code}>
+                            <span className="flex items-center gap-2">
+                              <CurrencyIcon code={c.code} flag={c.flag} size="default" />
+                              <span>{c.code}</span>
+                              <span className="text-muted-foreground">· {c.name}</span>
+                            </span>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                     <Input
                       type="number"
                       inputMode="decimal"
@@ -476,23 +489,35 @@ const ConverterPageComponent = () => {
                 <div className="space-y-3 mb-6">
                   <Label className="text-sm font-medium">{toCurrency === "LRD" ? "Amount in LRD" : "You Get"}</Label>
                   <div className="flex flex-col sm:flex-row gap-2">
-                    <select
-                      value={toCurrency}
-                      onChange={(e) => setToCurrency(e.target.value)}
-                      className="w-full sm:w-40 rounded-xl border border-input bg-background px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                      {currencies.map((c) => (
-                        <option key={c.code} value={c.code}>
-                          {c.flag} {c.code}
-                        </option>
-                      ))}
-                    </select>
+                    <Select value={toCurrency} onValueChange={setToCurrency}>
+                      <SelectTrigger className="w-full sm:w-44 h-12 rounded-xl gap-2">
+                        <SelectValue>
+                          <span className="flex items-center gap-2">
+                            <CurrencyIcon code={toCurrency} flag={toC.flag} size="default" />
+                            <span>{toC.code}</span>
+                            <span className="text-muted-foreground hidden sm:inline">· {toC.name}</span>
+                          </span>
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent>
+                        {currencies.map((c) => (
+                          <SelectItem key={c.code} value={c.code}>
+                            <span className="flex items-center gap-2">
+                              <CurrencyIcon code={c.code} flag={c.flag} size="default" />
+                              <span>{c.code}</span>
+                              <span className="text-muted-foreground">· {c.name}</span>
+                            </span>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                     <div className="flex-1 relative">
-                      <div className="h-12 rounded-xl bg-muted border border-input px-4 flex items-center">
+                      <div className="h-12 rounded-xl bg-muted border border-input px-4 flex items-center gap-2">
+                        <CurrencyIcon code={toCurrency} flag={toC.flag} size="sm" />
                         <span className="text-xl font-bold text-foreground">
                           {result ? parseFloat(result).toLocaleString() : "—"}
                         </span>
-                        <span className="ml-2 text-muted-foreground">{toCurrency}</span>
+                        <span className="ml-1 text-muted-foreground text-sm">{toCurrency}</span>
                       </div>
                     </div>
                   </div>

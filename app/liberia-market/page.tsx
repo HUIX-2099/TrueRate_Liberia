@@ -2,10 +2,11 @@ import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { MarketSnapshot } from "@/components/market-snapshot"
-import { LiberiaMarketNews } from "@/components/liberia-market-news"
+import { LiberiaMarketNews, NEWS_OUTLET_LABELS } from "@/components/liberia-market-news"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { fetchJson } from "@/lib/api/fetch-json"
+import { Newspaper } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Liberia Market News | TrueRate Liberia",
@@ -81,7 +82,7 @@ export default async function LiberiaMarketPage() {
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
-                Live exchange rate snapshot and verified Liberia business headlines — refreshed hourly for accuracy.
+                We fetch headlines from news outlets that influence the Liberian dollar and economy — refreshed hourly.
               </p>
             </div>
           </div>
@@ -101,7 +102,7 @@ export default async function LiberiaMarketPage() {
                 </span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground">
-                Liberia FX Pulse — curated business & economy headlines ranked by impact on USD/LRD
+                Headlines from outlets that move the Liberian dollar and economy, ranked by relevance to USD/LRD.
               </p>
             </div>
             <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
@@ -113,28 +114,37 @@ export default async function LiberiaMarketPage() {
                 <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-sm">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-primary flex items-center gap-2">
+                      <Newspaper className="h-5 w-5" />
+                      News Outlets We Use
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground space-y-3">
+                    <p>
+                      Headlines are fetched from outlets that influence the Liberian dollar and economy:
+                    </p>
+                    <ul className="space-y-1.5 list-disc list-inside">
+                      {NEWS_OUTLET_LABELS.map((label) => (
+                        <li key={label}>{label}</li>
+                      ))}
+                    </ul>
+                    <div className="bg-muted/50 p-3 rounded-lg text-xs">
+                      <span className="font-medium text-foreground">Refresh:</span> Every 1–2 hours (ISR) to stay within rate limits.
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border-border/60 shadow-sm">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="flex items-center gap-2 text-base">
                       <div className="h-6 w-6 rounded-lg bg-primary/10 flex items-center justify-center">
                         <span className="text-xs font-bold text-primary">✓</span>
                       </div>
                       How We Curate
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="text-sm text-muted-foreground space-y-4">
-                    <div className="space-y-3">
-                      <p>
-                        Sources prioritize Liberian institutions and reputable outlets. We only keep items relevant to
-                        markets, currency, trade, and investment.
-                      </p>
-                      <div className="bg-muted/50 p-3 rounded-lg">
-                        <div className="flex items-center gap-2 text-xs font-medium text-primary mb-1">
-                          <span className="w-2 h-2 rounded-full bg-primary"></span>
-                          Refresh Cadence
-                        </div>
-                        <p className="text-xs">
-                          Every 1–2 hours using Next.js ISR to avoid rate limits while staying current.
-                        </p>
-                      </div>
-                    </div>
+                  <CardContent className="text-sm text-muted-foreground space-y-2">
+                    <p>
+                      We keep only items relevant to markets, currency, trade, and investment. FX-related terms (rates, CBL, remittance, inflation) get higher rank.
+                    </p>
                   </CardContent>
                 </Card>
               </div>

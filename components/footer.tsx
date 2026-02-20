@@ -8,7 +8,7 @@ import { InstallPromptButton } from "@/components/pwa/install-prompt-button"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/60 bg-muted/30 backdrop-blur-sm overflow-x-hidden">
+    <footer id="site-footer" className="border-t border-border/60 bg-muted/30 backdrop-blur-sm overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-10 sm:py-14 md:py-16 max-w-[100vw] xl:max-w-none">
         <div className="grid gap-8 sm:gap-10 md:gap-12 lg:gap-14 grid-cols-1 lg:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
           <div className="space-y-4">

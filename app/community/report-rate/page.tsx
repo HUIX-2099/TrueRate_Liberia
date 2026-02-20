@@ -119,6 +119,7 @@ export default function ReportRatePage() {
                             <SelectItem value="nimba">Nimba</SelectItem>
                             <SelectItem value="margibi">Margibi</SelectItem>
                             <SelectItem value="maryland">Maryland</SelectItem>
+                            <SelectItem value="gbarpolu">Gbarpolu</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>

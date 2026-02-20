@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Providers } from "@/components/providers"
+import { ScrollToTop } from "@/components/scroll-to-top"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -180,6 +181,7 @@ export default function RootLayout({
         <Providers>
           {children}
         </Providers>
+        <ScrollToTop />
         <Analytics />
       </body>
     </html>

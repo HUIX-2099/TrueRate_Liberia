@@ -344,6 +344,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/api/inflation/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/inflation">> = Specific
+  const handler = {} as typeof import("../../../app/api/inflation/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/api/liberia-cpi/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/liberia-cpi">> = Specific

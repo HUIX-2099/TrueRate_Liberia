@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TrendingUp, TrendingDown, Activity, RefreshCw, Sparkles, Calendar, MapPin } from "lucide-react"
+import { CountyFlag } from "@/lib/county-flags"
 import { RateHistoryExport } from "@/components/rate-history-export"
 import { RateBrief } from "@/components/rate-brief"
 import { RateComparisonCallout } from "@/components/rate-comparison-callout"
@@ -178,7 +179,7 @@ export default function AnalyticsPage() {
                 </div>
                 <div className="text-xs">
                   <span className="rounded-full border border-primary/30 bg-primary/5 px-2 py-0.5 text-primary">
-                    {sourceCount} sources
+                    {sourceCount === 1 ? "Market" : sourceCount ? `${sourceCount} sources` : "—"}
                   </span>
                 </div>
                 {!loading && currentRate > 0 && (
@@ -277,39 +278,50 @@ export default function AnalyticsPage() {
           {(regional.length > 0 || byCounty.length > 0) && (
             <div className="max-w-5xl mx-auto mb-12">
               <Card className="border-border/60 shadow-sm">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
-                  <CardTitle className="text-sm font-medium flex items-center gap-2">
-                    <MapPin className="h-4 w-4" />
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-base font-semibold flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-primary" />
                     Regional breakdown
                   </CardTitle>
+                  <p className="text-sm text-muted-foreground">Average USD/LRD rate by region. Monrovia (Montserrado) vs upcountry counties.</p>
                 </CardHeader>
-                <CardContent>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div>
-                      <div className="text-xs font-medium text-muted-foreground mb-2">Monrovia vs Upcountry</div>
-                      <div className="space-y-2">
-                        {regional.map((r) => (
-                          <div key={r.region} className="flex items-center justify-between gap-2 p-2 rounded-lg bg-muted/50 border border-border/40">
-                            <span className="text-sm font-medium">{r.region}</span>
-                            <span className="text-sm font-mono font-semibold">{r.avgRate.toFixed(2)} LRD</span>
-                            <span className="text-xs text-muted-foreground shrink-0">({r.count})</span>
-                          </div>
-                        ))}
+                <CardContent className="space-y-6">
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-3">Monrovia vs Upcountry</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="rounded-xl border border-border/50 bg-muted/30 p-4 text-center">
+                        <p className="text-sm font-medium text-foreground mb-2">Monrovia</p>
+                        <p className="text-2xl font-bold font-mono tabular-nums text-foreground">
+                          {regional.find((r) => r.region === "Monrovia")?.avgRate.toFixed(2) ?? regional[0]?.avgRate.toFixed(2) ?? "—"}
+                        </p>
+                        <p className="text-xs text-muted-foreground">LRD</p>
+                        <p className="text-xs text-muted-foreground mt-1">{regional.find((r) => r.region === "Monrovia")?.count ?? regional[0]?.count ?? 0}</p>
                       </div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-medium text-muted-foreground mb-2">By county</div>
-                      <div className="space-y-2 max-h-[200px] overflow-y-auto">
-                        {byCounty.slice(0, 8).map((c) => (
-                          <div key={c.county} className="flex items-center justify-between py-1.5 text-sm">
-                            <span>{c.county}</span>
-                            <span className="font-mono text-muted-foreground">{c.avgRate.toFixed(2)}</span>
-                          </div>
-                        ))}
+                      <div className="rounded-xl border border-border/50 bg-muted/30 p-4 text-center">
+                        <p className="text-sm font-medium text-foreground mb-2">Upcountry</p>
+                        <p className="text-2xl font-bold font-mono tabular-nums text-foreground">
+                          {regional.find((r) => r.region === "Upcountry")?.avgRate.toFixed(2) ?? regional[1]?.avgRate.toFixed(2) ?? "—"}
+                        </p>
+                        <p className="text-xs text-muted-foreground">LRD</p>
+                        <p className="text-xs text-muted-foreground mt-1">{regional.find((r) => r.region === "Upcountry")?.count ?? regional[1]?.count ?? 0}</p>
                       </div>
                     </div>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-3">Average rates by region; Monrovia (Montserrado) vs upcountry counties.</p>
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-3">By county</p>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                      {byCounty.slice(0, 10).map((c) => (
+                        <div key={c.county} className="rounded-xl border border-border/50 bg-muted/30 p-3 text-center">
+                          <div className="flex justify-center mb-2">
+                            <CountyFlag county={c.county} className="h-7 w-9 rounded-sm shadow-sm" />
+                          </div>
+                          <p className="text-lg font-bold font-mono tabular-nums text-foreground">{c.avgRate.toFixed(2)}</p>
+                          <p className="text-xs text-muted-foreground">LRD</p>
+                          <p className="text-sm font-medium text-foreground mt-1.5">{c.county}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>

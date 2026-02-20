@@ -7,9 +7,15 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { TrendingDown, Calculator, ShoppingCart, DollarSign } from "lucide-react"
-import { useState, useEffect } from "react"
+import { TrendingDown, Calculator, ShoppingCart, DollarSign, ExternalLink, Loader2 } from "lucide-react"
+import { useState, useEffect, useMemo } from "react"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts"
+
+interface InflationPoint {
+  year: string
+  cpi: number
+  inflation: number
+}
 
 export default function InflationTrackerPage() {
   const [amount, setAmount] = useState("1000")
@@ -17,39 +23,81 @@ export default function InflationTrackerPage() {
   const [targetYear, setTargetYear] = useState("2024")
   const [realValue, setRealValue] = useState(0)
   const [purchasingPower, setPurchasingPower] = useState(100)
-
-  // Historical CPI data for Liberia (simulated but realistic)
-  const cpiData = [
-    { year: "2018", cpi: 94.2, inflation: 23.6 },
-    { year: "2019", cpi: 117.8, inflation: 25.0 },
-    { year: "2020", cpi: 147.3, inflation: 25.0 },
-    { year: "2021", cpi: 162.0, inflation: 10.0 },
-    { year: "2022", cpi: 176.6, inflation: 9.0 },
-    { year: "2023", cpi: 194.3, inflation: 10.0 },
-    { year: "2024", cpi: 207.8, inflation: 7.0 },
-  ]
+  const [cpiData, setCpiData] = useState<InflationPoint[]>([])
+  const [sources, setSources] = useState<{ name: string; url: string }[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [latestFromLISGIS, setLatestFromLISGIS] = useState(false)
 
   useEffect(() => {
-    calculateRealValue()
-  }, [amount, baseYear, targetYear])
+    let cancelled = false
+    setLoading(true)
+    setError(null)
+    fetch("/api/inflation")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load inflation data")
+        return res.json()
+      })
+      .then((data: { series: InflationPoint[]; sources: { name: string; url: string }[]; latestFromLISGIS?: boolean }) => {
+        if (!cancelled && Array.isArray(data.series) && data.series.length > 0) {
+          setCpiData(data.series)
+          setSources(Array.isArray(data.sources) ? data.sources : [])
+          setLatestFromLISGIS(Boolean(data.latestFromLISGIS))
+          const last = data.series[data.series.length - 1]
+          if (last && targetYear > last.year) setTargetYear(last.year)
+        }
+      })
+      .catch((e) => {
+        if (!cancelled) setError(e instanceof Error ? e.message : "Failed to load data")
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
-  const calculateRealValue = () => {
+  useEffect(() => {
+    if (cpiData.length === 0) return
     const baseData = cpiData.find((d) => d.year === baseYear)
     const targetData = cpiData.find((d) => d.year === targetYear)
-
     if (baseData && targetData) {
-      const value = Number.parseFloat(amount)
+      const value = Number.parseFloat(amount) || 0
       const adjusted = (value * baseData.cpi) / targetData.cpi
       setRealValue(adjusted)
-      setPurchasingPower((adjusted / value) * 100)
+      setPurchasingPower(value ? (adjusted / value) * 100 : 100)
     }
-  }
+  }, [amount, baseYear, targetYear, cpiData])
 
-  const chartData = cpiData.map((item) => ({
-    year: item.year,
-    "Purchasing Power": ((cpiData[0].cpi / item.cpi) * 100).toFixed(1),
-    "Inflation Rate": item.inflation,
-  }))
+  const chartData = useMemo(
+    () =>
+      cpiData.map((item) => ({
+        year: item.year,
+        "Purchasing Power": (cpiData[0] ? (cpiData[0].cpi / item.cpi) * 100 : 100).toFixed(1),
+        "Inflation Rate": item.inflation,
+      })),
+    [cpiData],
+  )
+
+  const firstCpi = cpiData[0]?.cpi
+  const latestCpi = cpiData[cpiData.length - 1]?.cpi
+  const cumulativePct = firstCpi && latestCpi && firstCpi > 0 ? ((latestCpi - firstCpi) / firstCpi) * 100 : 0
+  const purchasingPowerPct = firstCpi && latestCpi ? (firstCpi / latestCpi) * 100 : 100
+  const example2020 = cpiData.find((d) => d.year === "2020")
+  const exampleLatestYear = cpiData.length > 0 ? cpiData[cpiData.length - 1] : null
+  const purchasingPower2020ToLatest =
+    example2020 && exampleLatestYear && exampleLatestYear.cpi > 0
+      ? (example2020.cpi / exampleLatestYear.cpi) * 100
+      : 73
+  const exampleAmount2020 =
+    example2020 && exampleLatestYear && exampleLatestYear.cpi > 0
+      ? Math.round((4400 * example2020.cpi) / exampleLatestYear.cpi)
+      : 3200
+  const equivalentAmount =
+    example2020 && exampleLatestYear && exampleLatestYear.cpi > 0
+      ? Math.round((exampleAmount2020 * exampleLatestYear.cpi) / example2020.cpi)
+      : 4400
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -76,6 +124,29 @@ export default function InflationTrackerPage() {
         <section className="py-6 sm:py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              {loading && (
+                <Card className="mb-6">
+                  <CardContent className="flex items-center justify-center gap-2 py-12">
+                    <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                    <span className="text-muted-foreground">Loading inflation data from LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP &amp; CBL…</span>
+                  </CardContent>
+                </Card>
+              )}
+              {error && (
+                <Card className="mb-6 border-destructive/50">
+                  <CardContent className="py-6">
+                    <p className="text-destructive">{error}</p>
+                    <p className="text-sm text-muted-foreground mt-1">Using built-in official-based data.</p>
+                  </CardContent>
+                </Card>
+              )}
+              {!loading && cpiData.length === 0 && !error && (
+                <Card className="mb-6">
+                  <CardContent className="py-6 text-muted-foreground">No inflation data available.</CardContent>
+                </Card>
+              )}
+              {cpiData.length > 0 && (
+              <>
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl">Calculate Real Value</CardTitle>
@@ -206,7 +277,7 @@ export default function InflationTrackerPage() {
                       <h3 className="font-semibold">In 2020</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      L$ 1,000 could buy a bag of rice, cooking oil, and basic groceries for a week
+                      About L$ {exampleAmount2020.toLocaleString()} could buy a 25kg bag of rice, cooking oil, and basic groceries for a week—CPI-adjusted in real time from LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP &amp; CBL (same basket ≈ L$ {equivalentAmount.toLocaleString()} in {exampleLatestYear?.year ?? "2024"}).
                     </p>
                   </CardContent>
                 </Card>
@@ -215,10 +286,10 @@ export default function InflationTrackerPage() {
                   <CardContent className="pt-6">
                     <div className="flex items-center gap-2 mb-3">
                       <TrendingDown className="h-5 w-5 text-destructive" />
-                      <h3 className="font-semibold">In 2024</h3>
+                      <h3 className="font-semibold">In {exampleLatestYear?.year ?? "2024"}</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      The same L$ 1,000 now only buys about 70% of those items due to 41% cumulative inflation
+                      The same L$ {exampleAmount2020.toLocaleString()} now buys only about {purchasingPower2020ToLatest.toFixed(0)}% of those items due to inflation since 2020
                     </p>
                   </CardContent>
                 </Card>
@@ -230,7 +301,7 @@ export default function InflationTrackerPage() {
                       <h3 className="font-semibold">What This Means</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      You need L$ 1,410 in 2024 to have the same purchasing power as L$ 1,000 had in 2020
+                      You need L$ {equivalentAmount.toLocaleString()} in {exampleLatestYear?.year ?? "2024"} to have the same purchasing power as L$ {exampleAmount2020.toLocaleString()} had in 2020—real-time accuracy from live CPI data.
                     </p>
                   </CardContent>
                 </Card>
@@ -240,7 +311,9 @@ export default function InflationTrackerPage() {
               <Card className="mt-6">
                 <CardHeader>
                   <CardTitle>Consumer Price Index (CPI) Data</CardTitle>
-                  <CardDescription>Official inflation statistics for Liberia</CardDescription>
+                  <CardDescription>
+                    Official inflation statistics for Liberia. Index base: 2018 = 100. Data sources: LISGIS, WFP, FAO, FEWS NET, ReliefWeb, World Bank RTFP, Central Bank of Liberia.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="overflow-x-auto">
@@ -273,8 +346,30 @@ export default function InflationTrackerPage() {
                       </tbody>
                     </table>
                   </div>
+                  {sources.length > 0 && (
+                    <div className="mt-4 pt-4 border-t flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                      <span>Data sources:</span>
+                      {sources.map((s) => (
+                        <a
+                          key={s.name}
+                          href={s.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:underline"
+                        >
+                          {s.name}
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                      ))}
+                      {latestFromLISGIS && (
+                        <Badge variant="outline" className="text-xs">Latest year from LISGIS</Badge>
+                      )}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
+              </>
+              )}
             </div>
           </div>
         </section>

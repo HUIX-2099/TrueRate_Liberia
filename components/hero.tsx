@@ -33,13 +33,13 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
       {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute top-1/2 -left-20 h-60 w-60 rounded-full bg-secondary/10 blur-3xl" />
         <div className="absolute bottom-0 right-1/4 h-40 w-40 rounded-full bg-accent/10 blur-2xl" />
       </div>
 
-      <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-10 sm:py-14 md:py-20 lg:py-28 max-w-[100vw] xl:max-w-none overflow-hidden">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-10 sm:py-14 md:py-20 lg:py-28 max-w-[100vw] xl:max-w-none overflow-hidden">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-8">

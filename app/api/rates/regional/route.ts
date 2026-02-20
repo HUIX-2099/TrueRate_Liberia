@@ -67,6 +67,7 @@ export async function GET() {
       { county: "Lofa", region: "Upcountry", avgRate: baseRate - 3, count: 1 },
       { county: "Margibi", region: "Upcountry", avgRate: baseRate - 1.5, count: 1 },
       { county: "Maryland", region: "Upcountry", avgRate: baseRate - 3.5, count: 1 },
+      { county: "Gbarpolu", region: "Upcountry", avgRate: baseRate - 2, count: 1 },
     ]
 
     return NextResponse.json({
@@ -85,6 +86,7 @@ export async function GET() {
         { county: "Montserrado", region: "Monrovia", avgRate: baseRate, count: 5 },
         { county: "Grand Bassa", region: "Upcountry", avgRate: baseRate - 1, count: 1 },
         { county: "Bong", region: "Upcountry", avgRate: baseRate - 2.5, count: 1 },
+        { county: "Gbarpolu", region: "Upcountry", avgRate: baseRate - 2, count: 1 },
       ],
       timestamp: new Date().toISOString(),
     })
