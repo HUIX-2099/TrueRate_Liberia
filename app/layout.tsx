@@ -166,6 +166,14 @@ export default function RootLayout({
             __html: `(function(){var key='truerate-theme';var s;try{s=localStorage.getItem(key);}catch(e){s=null;}var theme=s||'system';var isDark=theme==='dark'||(theme==='system'&&typeof window!=='undefined'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',isDark);})();`,
           }}
         />
+        {/* Theme-aware favicon: same logic as theme (system preference or saved theme) */}
+        <link rel="icon" id="theme-favicon" href="/icons/logo-48.png" type="image/png" sizes="48x48" />
+        <script
+          id="favicon-theme"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var key='truerate-theme';var dark='/icons/logo-48.png';var light='/icons/logo-48-light.png';function apply(){var s;try{s=localStorage.getItem(key);}catch(e){s=null;}var theme=s||'system';var isDark=theme==='dark'||(theme==='system'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);var el=document.getElementById('theme-favicon');if(el)el.href=isDark?dark:light;}function run(){apply();if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',apply);}window.addEventListener('storage',function(e){if(e.key===key)apply();});window.addEventListener('truerate-theme-change',apply);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();`,
+          }}
+        />
         {/* Preload critical resources */}
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/api/rates/live" as="fetch" crossOrigin="anonymous" />

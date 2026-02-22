@@ -38,15 +38,15 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => { setTheme("light"); window.dispatchEvent(new Event("truerate-theme-change")); }}>
           <Sun className="mr-2 h-4 w-4" />
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => { setTheme("dark"); window.dispatchEvent(new Event("truerate-theme-change")); }}>
           <Moon className="mr-2 h-4 w-4" />
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => { setTheme("system"); window.dispatchEvent(new Event("truerate-theme-change")); }}>
           <Monitor className="mr-2 h-4 w-4" />
           System
         </DropdownMenuItem>
@@ -70,6 +70,7 @@ export function ThemeToggleSimple() {
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark")
+    window.dispatchEvent(new Event("truerate-theme-change"))
   }
 
   return (

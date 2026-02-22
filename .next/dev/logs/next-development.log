@@ -43075,3 +43075,45 @@ https://react.dev/link/hydration-mismatch
 [66:00:39.623] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [66:00:39.668] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [66:00:39.744] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:01:07.684] Browser LOG     Header render time: 112665.80ms
+[66:01:12.695] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:01:12.744] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:01:13.968] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:01:39.551] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:01:39.609] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:01:39.754] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:02:12.655] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:02:12.720] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:02:18.016] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:02:39.579] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:02:39.602] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:02:39.670] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:03:12.665] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:03:12.714] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:03:12.815] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:03:39.632] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:03:39.659] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:03:41.081] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:03:57.086] Server  LOG     ✓ Compiled in 380ms
+[66:04:00.468] Browser LOG     Header render time: 283279.50ms
+[66:04:02.204] Server  LOG     ✓ Compiled in 9ms
+[66:04:03.616] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:04:03.676] Browser LOG     Header render time: 175992.50ms
+[66:04:12.559] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:04:12.611] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:04:12.690] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:04:39.582] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:04:39.608] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:04:42.027] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:05:12.558] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:05:12.663] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:05:12.753] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:05:39.654] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:05:39.690] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:05:40.926] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:06:12.557] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:06:12.656] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:06:12.721] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:06:39.615] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:06:39.792] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[66:06:44.569] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
