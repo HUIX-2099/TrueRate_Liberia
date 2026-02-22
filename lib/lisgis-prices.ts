@@ -29,12 +29,57 @@ const COMMODITY_MATCHES: Array<{
 }> = [
   { key: "rice-thai", name: "25kg Rice (Thai)", category: "food", icon: "wheat", keywords: ["rice", "thai", "imported"] },
   { key: "rice-local", name: "25kg Rice (Local)", category: "food", icon: "wheat", keywords: ["rice", "local"] },
+  { key: "palm-oil", name: "Palm Oil (gallon)", category: "food", icon: "oil", keywords: ["palm", "oil"] },
+  { key: "sugar", name: "Sugar (1kg)", category: "food", icon: "sugar", keywords: ["sugar"] },
+  { key: "flour", name: "Flour (25kg)", category: "food", icon: "wheat", keywords: ["flour"] },
+  { key: "bread", name: "Bread (loaf)", category: "food", icon: "bread", keywords: ["bread"] },
+  { key: "chicken", name: "Chicken (1kg)", category: "food", icon: "chicken", keywords: ["chicken"] },
+  { key: "fish", name: "Fish (1kg)", category: "food", icon: "fish", keywords: ["fish"] },
+  { key: "eggs", name: "Eggs (tray)", category: "food", icon: "egg", keywords: ["egg"] },
+  { key: "onions", name: "Onions (1kg)", category: "food", icon: "food", keywords: ["onion"] },
+  { key: "cassava", name: "Cassava (kg)", category: "food", icon: "food", keywords: ["cassava"] },
+  { key: "tomato", name: "Tomato (1kg)", category: "food", icon: "tomato", keywords: ["tomato"] },
+  { key: "pepper", name: "Pepper (1kg)", category: "food", icon: "pepper", keywords: ["pepper", "chili"] },
+  { key: "plantain", name: "Plantain (bunch)", category: "food", icon: "plantain", keywords: ["plantain"] },
+  { key: "beans", name: "Beans (1kg)", category: "food", icon: "wheat", keywords: ["bean"] },
+  { key: "beef", name: "Beef (1kg)", category: "food", icon: "beef", keywords: ["beef", "meat"] },
+  { key: "milk", name: "Milk (1L)", category: "food", icon: "milk", keywords: ["milk"] },
+  { key: "potato", name: "Potato (1kg)", category: "food", icon: "potato", keywords: ["potato"] },
+  { key: "stock-cubes", name: "Stock Cubes (pack)", category: "food", icon: "food", keywords: ["stock", "maggi", "cube", "bouillon"] },
+  { key: "spaghetti", name: "Spaghetti (500g)", category: "food", icon: "wheat", keywords: ["spaghetti", "pasta", "noodle"] },
+  { key: "sardines", name: "Sardines (tin)", category: "food", icon: "fish", keywords: ["sardine", "tin", "canned"] },
+  { key: "greens", name: "Greens (bundle)", category: "food", icon: "greens", keywords: ["greens", "leafy", "potato greens", "collard"] },
+  { key: "sweet-potato", name: "Sweet Potato (kg)", category: "food", icon: "potato", keywords: ["sweet", "potato"] },
   { key: "gas", name: "Gallon of Gas", category: "fuel", icon: "fuel", keywords: ["gas", "petrol", "gasoline"] },
   { key: "diesel", name: "Gallon of Diesel", category: "fuel", icon: "fuel", keywords: ["diesel"] },
+  { key: "kerosene", name: "Kerosene (gallon)", category: "fuel", icon: "fuel", keywords: ["kerosene"] },
+  { key: "cooking-gas", name: "Cooking Gas (14kg)", category: "fuel", icon: "gas", keywords: ["lpg"] },
+  { key: "charcoal", name: "Charcoal (bag)", category: "fuel", icon: "charcoal", keywords: ["charcoal"] },
   { key: "cement", name: "Cement (50kg)", category: "construction", icon: "cement", keywords: ["cement"] },
   { key: "steel", name: "Steel Rods (bundle)", category: "construction", icon: "steel", keywords: ["steel"] },
-  { key: "palm-oil", name: "Palm Oil (gallon)", category: "food", icon: "oil", keywords: ["palm", "oil"] },
-  { key: "cooking-gas", name: "Cooking Gas (14kg)", category: "fuel", icon: "gas", keywords: ["lpg"] },
+  { key: "nails", name: "Nails (1kg)", category: "construction", icon: "steel", keywords: ["nail"] },
+  { key: "paint", name: "Paint (gallon)", category: "construction", icon: "paint", keywords: ["paint"] },
+  { key: "plywood", name: "Plywood (sheet)", category: "construction", icon: "plywood", keywords: ["plywood", "ply"] },
+  { key: "sand", name: "Sand (bag)", category: "construction", icon: "sand", keywords: ["sand"] },
+  { key: "roofing-sheet", name: "Roofing Sheet (zinc)", category: "construction", icon: "steel", keywords: ["roof", "zinc", "corrugated"] },
+  { key: "binding-wire", name: "Binding Wire (roll)", category: "construction", icon: "steel", keywords: ["wire", "binding"] },
+  { key: "door", name: "Door (standard)", category: "construction", icon: "door", keywords: ["door"] },
+  { key: "window", name: "Window (standard)", category: "construction", icon: "door", keywords: ["window"] },
+  { key: "paint-brush", name: "Paint Brush", category: "construction", icon: "paint", keywords: ["brush", "paint"] },
+  { key: "gravel", name: "Gravel (bag)", category: "construction", icon: "sand", keywords: ["gravel", "stone"] },
+  { key: "soap", name: "Laundry Soap (bar)", category: "household", icon: "soap", keywords: ["soap", "laundry"] },
+  { key: "salt", name: "Salt (1kg)", category: "household", icon: "salt", keywords: ["salt"] },
+  { key: "toilet-soap", name: "Toilet Soap (bar)", category: "household", icon: "soap", keywords: ["toilet", "soap", "bath"] },
+  { key: "toothpaste", name: "Toothpaste (tube)", category: "household", icon: "toothpaste", keywords: ["toothpaste"] },
+  { key: "matches", name: "Matches (box)", category: "household", icon: "matches", keywords: ["match"] },
+  { key: "candles", name: "Candles (pack)", category: "household", icon: "candles", keywords: ["candle"] },
+  { key: "mosquito-coil", name: "Mosquito Coil (pack)", category: "household", icon: "mosquito", keywords: ["mosquito"] },
+  { key: "bleach", name: "Bleach (bottle)", category: "household", icon: "bleach", keywords: ["bleach"] },
+  { key: "washing-powder", name: "Washing Powder (1kg)", category: "household", icon: "soap", keywords: ["washing", "powder", "detergent"] },
+  { key: "toilet-paper", name: "Toilet Paper (roll)", category: "household", icon: "toilet-paper", keywords: ["toilet", "paper", "tissue"] },
+  { key: "sanitary-pads", name: "Sanitary Pads (pack)", category: "household", icon: "sanitary", keywords: ["sanitary", "pad", "napkin"] },
+  { key: "batteries", name: "Batteries (pack of 4)", category: "household", icon: "batteries", keywords: ["batter"] },
+  { key: "plastic-bucket", name: "Plastic Bucket", category: "household", icon: "bucket", keywords: ["bucket", "pail"] },
 ]
 
 const parseNumber = (value: unknown): number | null => {
@@ -46,18 +91,21 @@ const parseNumber = (value: unknown): number | null => {
   return null
 }
 
-/** Extract numeric values from a row (excluding very small or index-like numbers). */
+/** Minimum LRD value to treat as a commodity price (avoids CPI index base 100). */
+const MIN_LRD_PRICE = 500
+
+/** Extract numeric values from a row (excluding CPI index-like numbers). */
 function extractPriceFromRow(row: unknown[]): { price: number; change: number | null } {
   const nums = row
     .map((cell) => parseNumber(cell))
     .filter((n): n is number => n !== null && n > 0)
 
-  // Prices in LRD: typically 100–500000. CPI indices are 100–1000. Inflation % is -20 to 50.
-  const prices = nums.filter((n) => n >= 50 && n <= 1_000_000)
+  // Prices in LRD: essential goods are typically 500–500000. CPI indices are 100–1000; exclude index-like values.
+  const prices = nums.filter((n) => n >= MIN_LRD_PRICE && n <= 1_000_000)
   const changes = nums.filter((n) => n >= -50 && n <= 100 && Math.abs(n) < 50)
 
   return {
-    price: prices[0] ?? nums[0] ?? 0,
+    price: prices[0] ?? 0,
     change: changes.length > 0 ? changes[0] : null,
   }
 }
@@ -96,7 +144,7 @@ export function extractCommodityPrices(rows: unknown[][]): LisgisPriceItem[] {
       }
 
       const { price, change } = extractPriceFromRow(row)
-      if (price > 0) {
+      if (price >= MIN_LRD_PRICE) {
         found.set(item.key, {
           key: item.key,
           name: item.name,

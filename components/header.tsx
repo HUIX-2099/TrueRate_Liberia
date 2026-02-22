@@ -5,22 +5,15 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
-  Activity,
   ArrowLeftRight,
   BellRing,
-  Calculator,
-  Crown,
-  LogIn,
   MapPin,
   MapPinned,
   Menu,
-  MessageSquare,
-  Newspaper,
   Shield,
-  ShoppingCart,
   TrendingUp,
-  Users,
 } from "lucide-react"
+import { NAVIGATION_ITEMS, MOBILE_MENU_ITEMS, BOTTOM_NAV_ITEMS } from "@/lib/site-navigation"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { useAuth } from "@/lib/auth/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
@@ -35,34 +28,9 @@ const HeaderComponent = () => {
 
   usePerformanceMonitor("Header")
 
-  // Memoize navigation items to prevent unnecessary re-renders
-  const navigationItems = useMemo(() => [
-    { href: "/converter", label: "Converter", icon: Calculator, description: "Convert currencies" },
-    { href: "/analytics", label: "Analytics", icon: Activity, description: "Market insights" },
-    { href: "/predictions", label: "AI Forecasts", icon: Crown, description: "ML predictions" },
-    { href: "/business", label: "Business", icon: ShoppingCart, description: "Enterprise tools" },
-    { href: "/forums", label: "Forums", icon: MessageSquare, description: "Community discussions" },
-    { href: "/community", label: "Community", icon: Users, description: "Rate reports & badges" },
-  ], [])
-
-  // Memoize mobile menu items
-  const mobileMenuItems = useMemo(() => [
-    { href: "/auth/signin", label: "Sign In", icon: LogIn, description: "Access your dashboard" },
-    { href: "/converter", label: "Converter", icon: Calculator, description: "Convert USD ↔ LRD" },
-    { href: "/analytics", label: "Analytics / Charts", icon: Activity, description: "Trends and history" },
-    { href: "/price-index", label: "Price Index", icon: ShoppingCart, description: "Everyday cost tracking" },
-    { href: "/map", label: "Find Changers", icon: MapPin, description: "Map of local rates" },
-    { href: "/liberia-market", label: "News", icon: Newspaper, description: "Liberia market updates" },
-    { href: "/community", label: "Community", icon: Users, description: "Reports and reviews" },
-  ], [])
-
-  // Memoize bottom navigation items
-  const bottomNavItems = useMemo(() => [
-    { href: "/rates", label: "Rates", icon: TrendingUp },
-    { href: "/converter", label: "Converter", icon: ArrowLeftRight },
-    { href: "/map", label: "Map", icon: MapPinned },
-    { href: "/tools", label: "Alerts", icon: BellRing },
-  ], [])
+  const navigationItems = NAVIGATION_ITEMS
+  const mobileMenuItems = MOBILE_MENU_ITEMS
+  const bottomNavItems = BOTTOM_NAV_ITEMS
 
   // Memoize user avatar initials
   const userInitials = useMemo(() =>
@@ -74,9 +42,15 @@ const HeaderComponent = () => {
     [user?.name]
   )
 
+  const isPathActive = useCallback((href: string) => {
+    const path = pathname.replace(/\/$/, "") || "/"
+    const base = href.replace(/\/$/, "") || "/"
+    return path === base
+  }, [pathname])
+
   // Enhanced nav link component with icons and active states
   const NavLink = memo(({ item }: { item: typeof navigationItems[0] }) => {
-    const isActive = pathname === item.href
+    const isActive = isPathActive(item.href)
 
     return (
       <Link
@@ -104,7 +78,7 @@ const HeaderComponent = () => {
 
   // Optimized mobile menu item component
   const MobileMenuItem = memo(({ item }: { item: typeof mobileMenuItems[0] }) => {
-    const isActive = pathname === item.href
+    const isActive = isPathActive(item.href)
     return (
       <Link
         href={item.href}
@@ -128,7 +102,7 @@ const HeaderComponent = () => {
 
   // Optimized bottom nav item component
   const BottomNavItem = memo(({ item }: { item: typeof bottomNavItems[0] }) => {
-    const isActive = pathname === item.href
+    const isActive = isPathActive(item.href)
     return (
       <Link
         href={item.href}
@@ -272,7 +246,7 @@ const HeaderComponent = () => {
         aria-label="Primary"
       >
         <div className="pointer-events-auto mx-auto w-full max-w-[min(320px,calc(100vw-1rem))] rounded-xl border border-border/70 bg-background/98 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.1)] backdrop-blur-xl">
-          <div className="mx-auto grid grid-cols-4 gap-0.5 p-1.5">
+          <div className="mx-auto grid grid-cols-5 gap-0.5 p-1.5">
             {bottomNavItems.map((item) => (
               <BottomNavItem key={item.href} item={item} />
             ))}

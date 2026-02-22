@@ -32,6 +32,20 @@ import {
   ArrowRight,
   CheckCircle2,
   Send,
+  Fish,
+  Egg,
+  Beef,
+  Candy,
+  UtensilsCrossed,
+  Sparkles,
+  Battery,
+  Bug,
+  Package,
+  Paintbrush,
+  Carrot,
+  Apple,
+  Leaf,
+  Milk,
 } from "lucide-react"
 
 interface PriceItem {
@@ -52,17 +66,80 @@ interface NewsItem {
   url: string
 }
 
+// Essential goods only (homepage): staple food, fuel, one build item, one household
+const ESSENTIAL_PRICE_NAMES = new Set([
+  "25kg Rice (Thai)",
+  "25kg Rice (Local)",
+  "Palm Oil (gallon)",
+  "Sugar (1kg)",
+  "Bread (loaf)",
+  "Chicken (1kg)",
+  "Fish (1kg)",
+  "Eggs (tray)",
+  "Gallon of Gas",
+  "Gallon of Diesel",
+  "Cooking Gas (14kg)",
+  "Cement (50kg)",
+  "Laundry Soap (bar)",
+  "Salt (1kg)",
+])
+
 // Market Price Index
-export function PriceIndex({ rate }: { rate: number }) {
+export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?: "full" | "essential" }) {
   const prices: PriceItem[] = [
-    { name: "25kg Rice (Thai)", icon: <Wheat className="h-4 w-4" />, priceUSD: 14, priceLRD: 14 * rate, change: 2.5, category: "food" },
-    { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 15, priceLRD: 15 * rate, change: 1.8, category: "food" },
-    { name: "Gallon of Gas", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.02, priceLRD: 4.02 * rate, change: -0.5, category: "fuel" },
-    { name: "Gallon of Diesel", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.33, priceLRD: 4.33 * rate, change: 0.3, category: "fuel" },
-    { name: "Cement (50kg)", icon: <BrickWall className="h-4 w-4" />, priceUSD: 8, priceLRD: 8 * rate, change: 1.2, category: "construction" },
-    { name: "Steel Rods (bundle)", icon: <Construction className="h-4 w-4" />, priceUSD: 400, priceLRD: 400 * rate, change: 3.5, category: "construction" },
-    { name: "Palm Oil (gallon)", icon: <Droplet className="h-4 w-4" />, priceUSD: 1000 / rate, priceLRD: 1000, change: -1.0, category: "food" },
-    { name: "Cooking Gas (14kg)", icon: <Flame className="h-4 w-4" />, priceUSD: 20, priceLRD: 20 * rate, change: 0, category: "fuel" },
+    { name: "25kg Rice (Thai)", icon: <Wheat className="h-4 w-4" />, priceUSD: 10.5, priceLRD: 10.5 * rate, change: -5, category: "food" },
+    { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 11, priceLRD: 11 * rate, change: -4.5, category: "food" },
+    { name: "Palm Oil (gallon)", icon: <Droplet className="h-4 w-4" />, priceUSD: 1050 / rate, priceLRD: 1050, change: -1.5, category: "food" },
+    { name: "Sugar (1kg)", icon: <Candy className="h-4 w-4" />, priceUSD: 1.2, priceLRD: 1.2 * rate, change: 0.5, category: "food" },
+    { name: "Flour (25kg)", icon: <Wheat className="h-4 w-4" />, priceUSD: 12, priceLRD: 12 * rate, change: 1.2, category: "food" },
+    { name: "Bread (loaf)", icon: <UtensilsCrossed className="h-4 w-4" />, priceUSD: 0.9, priceLRD: 0.9 * rate, change: -0.3, category: "food" },
+    { name: "Chicken (1kg)", icon: <Beef className="h-4 w-4" />, priceUSD: 3.5, priceLRD: 3.5 * rate, change: 2, category: "food" },
+    { name: "Fish (1kg)", icon: <Fish className="h-4 w-4" />, priceUSD: 4, priceLRD: 4 * rate, change: 1, category: "food" },
+    { name: "Eggs (tray)", icon: <Egg className="h-4 w-4" />, priceUSD: 2.2, priceLRD: 2.2 * rate, change: 0.8, category: "food" },
+    { name: "Onions (1kg)", icon: <UtensilsCrossed className="h-4 w-4" />, priceUSD: 1, priceLRD: 1 * rate, change: -0.5, category: "food" },
+    { name: "Cassava (kg)", icon: <UtensilsCrossed className="h-4 w-4" />, priceUSD: 0.4, priceLRD: 0.4 * rate, change: 0.2, category: "food" },
+    { name: "Tomato (1kg)", icon: <Carrot className="h-4 w-4" />, priceUSD: 1.2, priceLRD: 1.2 * rate, change: 0.3, category: "food" },
+    { name: "Pepper (1kg)", icon: <Carrot className="h-4 w-4" />, priceUSD: 1.5, priceLRD: 1.5 * rate, change: 0.2, category: "food" },
+    { name: "Plantain (bunch)", icon: <Apple className="h-4 w-4" />, priceUSD: 1.8, priceLRD: 1.8 * rate, change: 0.5, category: "food" },
+    { name: "Beans (1kg)", icon: <Wheat className="h-4 w-4" />, priceUSD: 2, priceLRD: 2 * rate, change: 0.5, category: "food" },
+    { name: "Beef (1kg)", icon: <Beef className="h-4 w-4" />, priceUSD: 5, priceLRD: 5 * rate, change: 1.5, category: "food" },
+    { name: "Milk (1L)", icon: <Milk className="h-4 w-4" />, priceUSD: 2.5, priceLRD: 2.5 * rate, change: 0.3, category: "food" },
+    { name: "Potato (1kg)", icon: <Carrot className="h-4 w-4" />, priceUSD: 1, priceLRD: 1 * rate, change: -0.2, category: "food" },
+    { name: "Stock Cubes (pack)", icon: <Package className="h-4 w-4" />, priceUSD: 0.8, priceLRD: 0.8 * rate, change: 0.1, category: "food" },
+    { name: "Spaghetti (500g)", icon: <Wheat className="h-4 w-4" />, priceUSD: 1, priceLRD: 1 * rate, change: 0.2, category: "food" },
+    { name: "Sardines (tin)", icon: <Fish className="h-4 w-4" />, priceUSD: 1.2, priceLRD: 1.2 * rate, change: 0.3, category: "food" },
+    { name: "Greens (bundle)", icon: <Leaf className="h-4 w-4" />, priceUSD: 0.5, priceLRD: 0.5 * rate, change: 0.2, category: "food" },
+    { name: "Sweet Potato (kg)", icon: <Carrot className="h-4 w-4" />, priceUSD: 0.5, priceLRD: 0.5 * rate, change: 0.1, category: "food" },
+    { name: "Gallon of Gas", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.15, priceLRD: 4.15 * rate, change: -0.5, category: "fuel" },
+    { name: "Gallon of Diesel", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.45, priceLRD: 4.45 * rate, change: 0.2, category: "fuel" },
+    { name: "Kerosene (gallon)", icon: <Fuel className="h-4 w-4" />, priceUSD: 2.8, priceLRD: 2.8 * rate, change: 0.5, category: "fuel" },
+    { name: "Cooking Gas (14kg)", icon: <Flame className="h-4 w-4" />, priceUSD: 21, priceLRD: 21 * rate, change: 0.5, category: "fuel" },
+    { name: "Charcoal (bag)", icon: <Flame className="h-4 w-4" />, priceUSD: 8, priceLRD: 8 * rate, change: 1.5, category: "fuel" },
+    { name: "Cement (50kg)", icon: <BrickWall className="h-4 w-4" />, priceUSD: 8.5, priceLRD: 8.5 * rate, change: 1, category: "construction" },
+    { name: "Steel Rods (bundle)", icon: <Construction className="h-4 w-4" />, priceUSD: 385, priceLRD: 385 * rate, change: 2, category: "construction" },
+    { name: "Nails (1kg)", icon: <Construction className="h-4 w-4" />, priceUSD: 2.5, priceLRD: 2.5 * rate, change: 0.5, category: "construction" },
+    { name: "Paint (gallon)", icon: <Paintbrush className="h-4 w-4" />, priceUSD: 25, priceLRD: 25 * rate, change: 1, category: "construction" },
+    { name: "Plywood (sheet)", icon: <Package className="h-4 w-4" />, priceUSD: 35, priceLRD: 35 * rate, change: 1.5, category: "construction" },
+    { name: "Sand (bag)", icon: <BrickWall className="h-4 w-4" />, priceUSD: 3, priceLRD: 3 * rate, change: 0.5, category: "construction" },
+    { name: "Roofing Sheet (zinc)", icon: <Construction className="h-4 w-4" />, priceUSD: 28, priceLRD: 28 * rate, change: 2, category: "construction" },
+    { name: "Binding Wire (roll)", icon: <Construction className="h-4 w-4" />, priceUSD: 18, priceLRD: 18 * rate, change: 0.8, category: "construction" },
+    { name: "Door (standard)", icon: <Building className="h-4 w-4" />, priceUSD: 85, priceLRD: 85 * rate, change: 1, category: "construction" },
+    { name: "Window (standard)", icon: <Building className="h-4 w-4" />, priceUSD: 55, priceLRD: 55 * rate, change: 0.5, category: "construction" },
+    { name: "Paint Brush", icon: <Paintbrush className="h-4 w-4" />, priceUSD: 2, priceLRD: 2 * rate, change: 0, category: "construction" },
+    { name: "Gravel (bag)", icon: <BrickWall className="h-4 w-4" />, priceUSD: 4, priceLRD: 4 * rate, change: 0.5, category: "construction" },
+    { name: "Laundry Soap (bar)", icon: <Sparkles className="h-4 w-4" />, priceUSD: 0.5, priceLRD: 0.5 * rate, change: 0, category: "household" },
+    { name: "Salt (1kg)", icon: <Droplet className="h-4 w-4" />, priceUSD: 0.6, priceLRD: 0.6 * rate, change: -0.2, category: "household" },
+    { name: "Toilet Soap (bar)", icon: <Sparkles className="h-4 w-4" />, priceUSD: 0.4, priceLRD: 0.4 * rate, change: 0.2, category: "household" },
+    { name: "Toothpaste (tube)", icon: <Sparkles className="h-4 w-4" />, priceUSD: 1.5, priceLRD: 1.5 * rate, change: 0.5, category: "household" },
+    { name: "Matches (box)", icon: <Flame className="h-4 w-4" />, priceUSD: 0.15, priceLRD: 0.15 * rate, change: 0, category: "household" },
+    { name: "Candles (pack)", icon: <Flame className="h-4 w-4" />, priceUSD: 0.8, priceLRD: 0.8 * rate, change: 0.3, category: "household" },
+    { name: "Mosquito Coil (pack)", icon: <Bug className="h-4 w-4" />, priceUSD: 1, priceLRD: 1 * rate, change: 0.2, category: "household" },
+    { name: "Bleach (bottle)", icon: <Droplet className="h-4 w-4" />, priceUSD: 1.2, priceLRD: 1.2 * rate, change: 0, category: "household" },
+    { name: "Washing Powder (1kg)", icon: <Sparkles className="h-4 w-4" />, priceUSD: 2.5, priceLRD: 2.5 * rate, change: 0.5, category: "household" },
+    { name: "Toilet Paper (roll)", icon: <Package className="h-4 w-4" />, priceUSD: 0.7, priceLRD: 0.7 * rate, change: 0.1, category: "household" },
+    { name: "Sanitary Pads (pack)", icon: <Package className="h-4 w-4" />, priceUSD: 2, priceLRD: 2 * rate, change: 0.5, category: "household" },
+    { name: "Batteries (pack of 4)", icon: <Battery className="h-4 w-4" />, priceUSD: 1.5, priceLRD: 1.5 * rate, change: 0.3, category: "household" },
+    { name: "Plastic Bucket", icon: <Package className="h-4 w-4" />, priceUSD: 3, priceLRD: 3 * rate, change: 0.5, category: "household" },
   ]
 
   const [items, setItems] = useState<PriceItem[]>([])
@@ -88,6 +165,43 @@ export function PriceIndex({ rate }: { rate: number }) {
           steel: <Construction className="h-4 w-4" />,
           oil: <Droplet className="h-4 w-4" />,
           gas: <Flame className="h-4 w-4" />,
+          paint: <Paintbrush className="h-4 w-4" />,
+          plywood: <Package className="h-4 w-4" />,
+          sand: <BrickWall className="h-4 w-4" />,
+          door: <Building className="h-4 w-4" />,
+          "roofing-sheet": <Construction className="h-4 w-4" />,
+          "binding-wire": <Construction className="h-4 w-4" />,
+          "paint-brush": <Paintbrush className="h-4 w-4" />,
+          gravel: <BrickWall className="h-4 w-4" />,
+          sugar: <Candy className="h-4 w-4" />,
+          bread: <UtensilsCrossed className="h-4 w-4" />,
+          chicken: <Beef className="h-4 w-4" />,
+          fish: <Fish className="h-4 w-4" />,
+          egg: <Egg className="h-4 w-4" />,
+          food: <UtensilsCrossed className="h-4 w-4" />,
+          tomato: <Carrot className="h-4 w-4" />,
+          pepper: <Carrot className="h-4 w-4" />,
+          plantain: <Apple className="h-4 w-4" />,
+          beef: <Beef className="h-4 w-4" />,
+          milk: <Milk className="h-4 w-4" />,
+          potato: <Carrot className="h-4 w-4" />,
+          greens: <Leaf className="h-4 w-4" />,
+          "stock-cubes": <Package className="h-4 w-4" />,
+          spaghetti: <Wheat className="h-4 w-4" />,
+          sardines: <Fish className="h-4 w-4" />,
+          "sweet-potato": <Carrot className="h-4 w-4" />,
+          charcoal: <Flame className="h-4 w-4" />,
+          soap: <Sparkles className="h-4 w-4" />,
+          salt: <Droplet className="h-4 w-4" />,
+          toothpaste: <Sparkles className="h-4 w-4" />,
+          matches: <Flame className="h-4 w-4" />,
+          candles: <Flame className="h-4 w-4" />,
+          mosquito: <Bug className="h-4 w-4" />,
+          bleach: <Droplet className="h-4 w-4" />,
+          "toilet-paper": <Package className="h-4 w-4" />,
+          sanitary: <Package className="h-4 w-4" />,
+          batteries: <Battery className="h-4 w-4" />,
+          bucket: <Package className="h-4 w-4" />,
         }
 
         const mapped = data.items.map((item: any) => ({
@@ -128,9 +242,11 @@ export function PriceIndex({ rate }: { rate: number }) {
     }
   }, [])
 
-  const filteredPrices = filter === "all" 
-    ? items 
-    : items.filter(p => p.category === filter)
+  const filteredItems = filter === "all" ? items : items.filter((p) => p.category === filter)
+  const filteredPrices =
+    variant === "essential"
+      ? filteredItems.filter((p) => ESSENTIAL_PRICE_NAMES.has(p.name))
+      : filteredItems
 
   return (
     <Card className="border-border/60 shadow-sm">
@@ -164,14 +280,20 @@ export function PriceIndex({ rate }: { rate: number }) {
         )}
       </CardHeader>
       <CardContent>
-        <Tabs value={filter} onValueChange={setFilter} className="mb-4">
-          <TabsList className="w-full flex flex-nowrap overflow-x-auto gap-2">
-            <TabsTrigger value="all" className="whitespace-nowrap">All</TabsTrigger>
-            <TabsTrigger value="food" className="whitespace-nowrap">Food</TabsTrigger>
-            <TabsTrigger value="fuel" className="whitespace-nowrap">Fuel</TabsTrigger>
-            <TabsTrigger value="construction" className="whitespace-nowrap">Build</TabsTrigger>
-          </TabsList>
-        </Tabs>
+        {variant === "full" && (
+          <Tabs value={filter} onValueChange={setFilter} className="mb-4">
+            <TabsList className="w-full flex flex-nowrap overflow-x-auto gap-2">
+              <TabsTrigger value="all" className="whitespace-nowrap">All</TabsTrigger>
+              <TabsTrigger value="food" className="whitespace-nowrap">Food</TabsTrigger>
+              <TabsTrigger value="fuel" className="whitespace-nowrap">Fuel</TabsTrigger>
+              <TabsTrigger value="construction" className="whitespace-nowrap">Build</TabsTrigger>
+              <TabsTrigger value="household" className="whitespace-nowrap">Household</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        )}
+        {variant === "essential" && (
+          <p className="text-xs text-muted-foreground mb-4">Essential goods only — see full index for all items.</p>
+        )}
         
         <div className="space-y-2">
           {loading
@@ -221,6 +343,16 @@ export function PriceIndex({ rate }: { rate: number }) {
                 </div>
               ))}
         </div>
+        {variant === "essential" && (
+          <div className="mt-4 pt-4 border-t border-border/60">
+            <Link
+              href="/price-index"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+            >
+              View full Price Index <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        )}
       </CardContent>
     </Card>
   )

@@ -251,3 +251,29 @@
 .dark [data-chart] .recharts-tooltip-wrapper {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
 }
+
+/* Forums: subtle icon float and glow */
+@keyframes forum-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes forum-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+.animate-forum-float {
+  animation: forum-float 3s ease-in-out infinite;
+}
+.animate-forum-glow {
+  animation: forum-glow 2.5s ease-in-out infinite;
+}
+
+/* Forums: staggered card entrance */
+@keyframes forum-card-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.forum-card-in {
+  opacity: 0;
+  animation: forum-card-in 0.5s ease-out forwards;
+}

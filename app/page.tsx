@@ -299,6 +299,11 @@ export default function HomePage() {
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Real-time prices of essential goods and market intelligence for informed decisions
               </p>
+              <Button asChild variant="outline" size="sm" className="mt-2 rounded-full border-primary/40 text-primary hover:bg-primary/10">
+                <Link href="/price-index" className="flex items-center gap-1.5">
+                  View full Price Index <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </Button>
               <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
                 <span className="rounded-full border border-primary/40 bg-primary/15 px-3 py-1 text-primary font-semibold shadow-sm">
                   Live prices
@@ -319,7 +324,7 @@ export default function HomePage() {
             </div>
             <div className="grid gap-6 lg:grid-cols-3 max-w-6xl mx-auto">
               <div className="min-w-0 lg:col-span-2">
-                <PriceIndex rate={liveRate} />
+                <PriceIndex rate={liveRate} variant="essential" />
               </div>
               <div className="space-y-6">
                 <InflationTracker />
