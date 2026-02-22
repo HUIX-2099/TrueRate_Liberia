@@ -69,8 +69,8 @@ export function DevDisclaimer() {
           </p>
 
           <p>
-            The platform aggregates data from Liberian government institutions and international APIs to provide
-            accurate, real-time USD/LRD exchange rates for information purposes only.
+            The platform aggregates data from Liberian government institutions including the Central Bank, licensed
+            changers, and international APIs to deliver real-time USD/LRD rates with AI-powered predictions.
           </p>
 
           <div className="mt-4 p-3 rounded-lg bg-muted">
