@@ -723,3 +723,7 @@ Expected '</', got 'jsx text'
 [01:03:50.940] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771758108718} /_vercel/insights/view
 [01:03:50.993] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [01:03:51.046] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:04:10.402] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:04:10.437] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:04:10.631] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:04:13.588] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
