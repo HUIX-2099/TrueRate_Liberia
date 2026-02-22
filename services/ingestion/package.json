@@ -1,0 +1,30 @@
+{
+  "name": "@truerate/ingestion",
+  "version": "1.0.0",
+  "description": "Data ingestion service for Ministry of Commerce Liberia (commodity prices, import statistics)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "sync": "ts-node src/index.ts --once",
+    "sync:commodity": "ts-node src/index.ts --once --commodity",
+    "sync:imports": "ts-node src/index.ts --once --imports"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "node-cron": "^3.0.3",
+    "pg": "^8.13.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/pg": "^8.11.6",
+    "typescript": "^5.6.3",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

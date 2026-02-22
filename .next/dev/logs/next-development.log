@@ -3119,3 +3119,1281 @@ https://react.dev/link/hydration-mismatch
 [04:15:58.930] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [04:15:58.953] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [04:15:58.981] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:16:52.107] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:16:52.120] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:16:58.961] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:16:59.000] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:16:59.008] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:17:19.179] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:17:19.274] Browser LOG     Header render time: 87129.60ms
+[04:17:19.274] Browser LOG     Header render time: 1.00ms
+[04:17:19.274] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769717180} /_vercel/insights/view
+[04:17:19.289] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:17:36.544] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:17:36.751] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:17:37.149] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:17:37.526] Browser LOG     Header render time: 42.30ms
+[04:17:37.526] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:17:37.526] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:17:37.526] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769735041} /_vercel/insights/view
+[04:17:37.617] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:00.045] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:00.063] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:00.486] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:19.442] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:37.403] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:37.637] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:58.963] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:18:58.983] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:19:19.491] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:19:33.450] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:19:37.408] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:19:37.633] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:19:59.091] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:19:59.123] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:20:19.506] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:20:36.389] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:20:37.421] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:20:37.620] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:20:58.975] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:20:58.991] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:21:19.427] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:21:33.478] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:21:37.405] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:21:37.605] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:00.157] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:00.175] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:19.489] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:33.414] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:37.402] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:37.640] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:58.908] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:22:58.927] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:23:19.474] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:23:33.504] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:23:37.410] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:23:37.586] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:23:58.921] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:23:58.983] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:24:33.496] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:24:34.717] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:24:59.000] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:24:59.041] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:25:33.491] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:25:33.700] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:25:33.807] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:25:33.861] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:00.622] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:00.710] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:33.468] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:33.615] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:33.710] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:33.714] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:58.919] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:26:58.925] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:27:33.489] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:27:33.732] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:27:35.657] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:27:35.753] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:27:58.978] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:27:58.994] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:28:33.475] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:28:34.134] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:28:34.293] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:28:34.337] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:00.288] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:00.300] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:33.480] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:33.684] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:33.825] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:33.872] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:58.970] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:29:58.995] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:23.107] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:23.118] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:23.128] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:23.496] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[04:30:23.496] Browser LOG     Header render time: 1104241.60ms
+[04:30:23.496] Browser LOG     Header render time: 3.90ms
+[04:30:23.496] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771770501162} /_vercel/insights/view
+[04:30:23.505] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:24.941] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:24.963] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:33.467] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:33.654] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:33.768] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:33.816] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:58.935] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:30:58.968] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:23.174] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:23.188] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:33.493] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:33.643] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:34.733] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:34.885] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:58.926] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:31:58.933] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:32:23.186] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:32:23.209] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:32:33.493] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:32:33.691] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:32:33.826] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:32:33.880] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:00.132] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:00.313] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:23.164] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:23.208] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:33.472] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:33.678] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:33.794] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:33.804] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:58.927] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:33:58.937] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:23.148] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:23.168] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:33.494] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:33.668] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:33.778] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:33.792] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:58.946] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:34:58.954] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:23.163] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:23.178] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:33.444] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:34.015] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:35.128] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:35.210] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:58.961] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:35:58.978] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:36:23.136] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:36:23.225] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:36:33.461] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:36:33.694] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:36:33.867] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:36:33.888] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:00.389] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:00.439] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:23.180] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:23.198] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:33.534] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:33.706] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:33.863] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:33.905] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:58.932] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:37:58.976] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:23.192] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:23.237] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:33.455] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:33.652] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:33.788] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:33.837] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:58.997] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:38:59.011] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:23.206] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:23.280] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:33.812] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:34.144] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:35.640] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:35.902] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:58.960] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:39:59.010] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:40:23.178] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:40:23.217] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:40:33.493] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:40:33.679] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:40:33.833] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:40:34.009] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:02.361] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:02.399] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:23.182] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:23.195] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:33.552] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:33.750] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:33.857] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:33.868] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:58.914] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:41:58.975] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:23.243] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:23.271] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:33.486] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:33.687] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:34.265] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:34.275] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:59.142] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:42:59.270] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:23.219] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:23.425] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:33.583] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:34.005] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:34.931] Server  LOG     ✓ Compiled in 537ms
+[04:43:35.333] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:35.341] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:58.952] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:43:58.963] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:44:23.179] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:44:23.220] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:44:33.515] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:44:33.717] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:44:33.736] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:44:33.854] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:00.078] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:00.152] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:23.233] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:23.252] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:33.661] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:34.535] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:34.839] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:34.891] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:58.969] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:45:59.006] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:23.219] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:23.239] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:33.586] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:34.731] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:34.750] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:36.481] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:58.947] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:46:58.995] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:23.178] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:23.195] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:33.756] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:34.575] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:36.342] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:36.511] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:58.933] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:47:58.943] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:48:23.209] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:48:23.233] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:48:33.525] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:48:33.720] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:48:33.865] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:48:34.014] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:00.213] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:00.233] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:23.269] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:23.358] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:33.484] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:33.693] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:33.817] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:33.874] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:49:58.223] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[04:49:58.224] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[04:49:58.224] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[04:49:58.390] Browser LOG     Header render time: 1175194.30ms
+[04:49:59.917] Server  LOG     ✓ Compiled in 1375ms
+[04:50:06.217] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:50:06.544] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:09.235] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:09.391] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:50:09.550] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:10.116] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:10.721] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[04:50:13.344] Browser LOG     Header render time: 1954923.20ms
+[04:50:13.344] Browser LOG     Header render time: 5.70ms
+[04:50:13.852] Browser LOG     Header render time: 961.60ms
+[04:50:13.852] Browser LOG     Header render time: 1.30ms
+[04:50:13.852] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[04:50:13.852] Browser LOG     Header render time: 69.60ms
+[04:50:13.852] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:50:13.852] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:50:13.852] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771771691116} /_vercel/insights/view
+[04:50:14.570] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:14.689] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:50:15.928] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:16.849] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:17.683] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:18.334] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:18.965] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:20.516] Browser LOG     Header render time: 53.60ms
+[04:50:20.516] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:50:20.516] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:50:20.516] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771771698216} /_vercel/insights/view
+[04:50:20.740] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:21.739] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:23.444] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:23.461] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:30.816] Browser LOG     Header render time: 303.20ms
+[04:50:30.817] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:50:30.817] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:50:30.817] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771771707935} /_vercel/insights/view
+[04:50:30.820] Browser LOG     Header render time: 9845.30ms
+[04:50:30.820] Browser LOG     Header render time: 4.90ms
+[04:50:30.821] Browser LOG     Header render time: 17173.20ms
+[04:50:30.821] Browser LOG     Header render time: 6.30ms
+[04:50:35.547] Browser LOG     Header render time: 4168.50ms
+[04:50:35.616] Browser LOG     Header render time: 4314.10ms
+[04:50:35.616] Browser LOG     Header render time: 4.30ms
+[04:50:35.616] Browser LOG     Header render time: 4133.70ms
+[04:50:35.616] Browser LOG     Header render time: 5.90ms
+[04:50:36.616] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:38.267] Server  LOG     ✓ Finished writing to filesystem cache in 10.4s
+[04:50:39.739] Browser LOG     Header render time: 5735.80ms
+[04:50:39.741] Browser LOG     Header render time: 4825.40ms
+[04:50:39.741] Browser LOG     Header render time: 3.20ms
+[04:50:39.742] Browser LOG     Header render time: 4774.80ms
+[04:50:39.742] Browser LOG     Header render time: 3.00ms
+[04:50:40.493] Server  LOG     ✓ Compiled in 1489ms
+[04:50:42.005] Server  LOG     ✓ Compiled in 8ms
+[04:50:42.121] Browser LOG     Header render time: 1624.90ms
+[04:50:42.121] Browser LOG     Header render time: 3.50ms
+[04:50:42.122] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[04:50:42.123] Browser LOG     Header render time: 43604.70ms
+[04:50:42.123] Browser LOG     Header render time: 1630.70ms
+[04:50:42.123] Browser LOG     Header render time: 1.60ms
+[04:50:42.123] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[04:50:42.123] Browser LOG     Header render time: 1624.30ms
+[04:50:42.123] Browser LOG     Header render time: 1087.00ms
+[04:50:44.503] Browser LOG     Header render time: 1705.40ms
+[04:50:44.504] Browser LOG     Header render time: 2862.60ms
+[04:50:44.504] Browser LOG     Header render time: 2.60ms
+[04:50:44.504] Browser LOG     Header render time: 2854.50ms
+[04:50:44.504] Browser LOG     Header render time: 3.00ms
+[04:50:44.810] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:50:45.562] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:46.149] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:46.572] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:50:47.065] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:47.137] Browser LOG     Header render time: 218.40ms
+[04:50:47.137] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:50:47.137] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:50:47.137] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771771724989} /_vercel/insights/view
+[04:50:47.674] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:48.875] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:50.667] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:50:51.425] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:51.440] Browser LOG     Header render time: 44.30ms
+[04:50:51.440] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:50:51.440] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:50:51.440] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771771729354} /_vercel/insights/view
+[04:50:57.641] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:50:58.686] Browser LOG     Header render time: 46.30ms
+[04:50:58.686] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:50:58.686] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:50:58.686] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771771735665} /_vercel/insights/view
+[04:51:00.148] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:00.461] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:03.190] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:03.627] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:05.686] Server  LOG     ✓ Finished writing to filesystem cache in 11.2s
+[04:51:16.881] Server  LOG     ✓ Finished filesystem cache database compaction in 12.2s
+[04:51:30.227] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:30.371] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:32.596] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:46.434] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:46.461] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:46.766] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:51.632] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:52.004] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:58.437] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:51:58.752] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:29.141] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:29.170] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:29.385] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:47.108] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:47.123] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:48.620] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:51.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:51.908] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:58.466] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:52:58.702] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:29.151] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:29.185] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:29.416] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:46.432] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:46.448] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:46.654] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:52.042] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:53.578] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:53:56.911] Browser LOG     Header render time: 190253.20ms
+[04:53:57.285] Browser LOG     Header render time: 360.40ms
+[04:53:57.624] Browser LOG     Header render time: 185666.80ms
+[04:53:57.624] Browser LOG     Header render time: 3.60ms
+[04:53:57.624] Browser LOG     Header render time: 465.50ms
+[04:53:57.624] Browser LOG     Header render time: 4.50ms
+[04:53:57.629] Browser LOG     Header render time: 179312.40ms
+[04:53:57.629] Browser LOG     Header render time: 6.40ms
+[04:53:57.629] Browser LOG     Header render time: 470.60ms
+[04:53:57.629] Browser LOG     Header render time: 1.90ms
+[04:53:57.650] Browser LOG     Header render time: 193708.80ms
+[04:53:57.729] Browser LOG     Header render time: 450.60ms
+[04:53:57.811] Browser LOG     Header render time: 302.40ms
+[04:53:58.205] Browser LOG     Header render time: 443.30ms
+[04:53:58.237] Browser LOG     Header render time: 433.20ms
+[04:53:58.398] Browser LOG     Header render time: 316.60ms
+[04:53:58.398] Browser LOG     Header render time: 0.90ms
+[04:53:58.398] Browser LOG     Header render time: 331.80ms
+[04:53:58.398] Browser LOG     Header render time: 1.30ms
+[04:53:58.398] Browser LOG     Header render time: 220.80ms
+[04:53:58.398] Browser LOG     Header render time: 1.90ms
+[04:53:58.398] Browser LOG     Header render time: 328.40ms
+[04:53:58.398] Browser LOG     Header render time: 1.10ms
+[04:53:58.398] Browser LOG     Header render time: 331.20ms
+[04:53:58.398] Browser LOG     Header render time: 2.90ms
+[04:53:58.399] Browser LOG     Header render time: 210.30ms
+[04:53:58.399] Browser LOG     Header render time: 4.20ms
+[04:53:58.472] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:54:10.387] Server  LOG     ✓ Compiled in 14.8s
+[04:54:11.872] Browser LOG     Header render time: 13615.40ms
+[04:54:11.874] Browser LOG     Header render time: 13577.00ms
+[04:54:13.341] Browser LOG     Header render time: 13303.80ms
+[04:54:13.341] Browser LOG     Header render time: 7.30ms
+[04:54:13.342] Browser LOG     Header render time: 13308.30ms
+[04:54:13.342] Browser LOG     Header render time: 5.70ms
+[04:54:31.543] Server  LOG     ✓ Finished writing to filesystem cache in 19.5s
+[04:54:44.730] Server  LOG     ✓ Finished filesystem cache database compaction in 10.4s
+[04:54:53.625] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:54:55.028] Server  LOG     ✓ Finished filesystem cache database compaction in 15.8s
+[04:54:55.910] Server  LOG     ✓ Finished writing to filesystem cache in 12.5s
+[04:54:59.121] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:54:59.134] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:55:01.842] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:55:03.704] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:55:29.351] Server  LOG     ✓ Compiled in 19.1s
+[04:55:29.364] Server  LOG     ✓ Finished filesystem cache database compaction in 33.0s
+[04:55:29.365] Server  LOG     ✓ Finished writing to filesystem cache in 25.0s
+[04:55:29.419] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[04:55:29.420] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[04:55:29.421] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[04:55:38.942] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:55:53.365] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:55:53.365] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:55:53.365] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772026419} /_vercel/insights/view
+[04:56:12.466] Server  LOG     ○ Compiling /rates ...
+[04:56:14.042] Server  LOG     ✓ Finished writing to filesystem cache in 38.6s
+[04:56:30.199] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:56:31.349] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:56:31.793] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:56:36.995] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:17.453] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:18.579] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:41.921] Browser LOG     Header render time: 498.00ms
+[04:57:41.921] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:57:41.921] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:57:41.921] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772139808} /_vercel/insights/view
+[04:57:41.988] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:42.121] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:44.382] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:46.454] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:47.297] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:47.347] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:48.608] Browser LOG     Header render time: 191.70ms
+[04:57:48.609] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:57:48.609] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:57:48.609] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772144977} /_vercel/insights/view
+[04:57:48.710] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:48.770] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:48.806] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:49.722] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:57:49.940] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:02.072] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[04:58:04.120] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:04.953] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:04.995] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:05.207] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:06.853] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:10.313] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <PriceIndexPage>
+      <div className="min-h-scre...">
+        ...
+          <div className="container ...">
+            <LinkComponent>
+            <nav>
+            <div className="flex items...">
+              <ThemeToggle>
+              <Button>
+              <LinkComponent>
+              <Sheet>
+                <Dialog data-slot="sheet">
+                  <DialogProvider scope={undefined} triggerRef={{current:null}} contentRef={{current:null}} ...>
+                    <SheetTrigger asChild={true}>
+                      <DialogTrigger data-slot="sheet-trigger" asChild={true}>
+                        <Primitive.button type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                          <Slot type="button" aria-haspopup="dialog" aria-expanded={false} aria-controls="radix-_R_2..." ...>
+                            <SlotClone type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                              <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu" ...>
+                                <button
+                                  data-slot="sheet-trigger"
+                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
+                                  aria-label="Open menu"
+                                  type="button"
+                                  aria-haspopup="dialog"
+                                  aria-expanded={false}
++                                 aria-controls="radix-_R_2dinebnb6lb_"
+-                                 aria-controls="radix-_R_9linebnb6lb_"
+                                  data-state="closed"
+                                  onClick={function handleEvent}
+                                  ref={function}
+                                >
+                    ...
+        ...
+
+[04:58:10.313] Browser LOG     Header render time: 109.90ms
+[04:58:10.313] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:58:10.313] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:58:10.313] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772164950} /_vercel/insights/view
+[04:58:10.520] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:11.133] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[04:58:24.670] Server  LOG     ✓ Compiled in 892ms
+[04:58:25.090] Browser LOG     Header render time: 38417.00ms
+[04:58:26.288] Browser LOG     Header render time: 44011.20ms
+[04:58:30.850] Browser LOG     Header render time: 1850.60ms
+[04:58:30.851] Browser LOG     Header render time: 2825.80ms
+[04:58:30.851] Browser LOG     Header render time: 17839.00ms
+[04:58:30.851] Browser LOG     Header render time: 7.30ms
+[04:58:30.851] Browser LOG     Header render time: 396.00ms
+[04:58:30.851] Browser LOG     Header render time: 4.00ms
+[04:58:30.851] Browser LOG     Header render time: 3579.00ms
+[04:58:30.851] Browser LOG     Header render time: 2.70ms
+[04:58:32.758] Server  LOG     ✓ Finished filesystem cache database compaction in 13.6s
+[04:58:36.414] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:58:37.543] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:39.382] Browser LOG     Header render time: 61.40ms
+[04:58:39.382] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:58:39.382] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[04:58:39.382] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772197133} /_vercel/insights/view
+[04:58:41.329] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:42.571] Server  LOG     ✓ Finished writing to filesystem cache in 14.2s
+[04:58:42.998] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:43.098] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:43.737] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:43.777] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:46.601] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:46.653] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:47.026] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:58:59.193] Browser LOG     Header render time: 31460.00ms
+[04:58:59.205] Browser LOG     Header render time: 31046.60ms
+[04:59:02.110] Browser LOG     Header render time: 31517.30ms
+[04:59:02.110] Browser LOG     Header render time: 5.60ms
+[04:59:02.110] Browser LOG     Header render time: 958.70ms
+[04:59:02.110] Browser LOG     Header render time: 3.20ms
+[04:59:02.115] Browser LOG     Header render time: 2109.40ms
+[04:59:02.121] Browser LOG     Header render time: 21432.90ms
+[04:59:02.122] Browser LOG     Header render time: 6.80ms
+[04:59:02.122] Browser LOG     Header render time: 705.20ms
+[04:59:02.122] Browser LOG     Header render time: 1.50ms
+[04:59:02.122] Browser LOG     Header render time: 2856.20ms
+[04:59:16.466] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:18.109] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:26.094] Server  LOG     ✓ Finished filesystem cache database compaction in 11.2s
+[04:59:39.630] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:40.321] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:40.824] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:40.838] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:41.075] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:50.276] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:50.309] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:59:51.894] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:07.491] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:07.825] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:39.457] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:40.071] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:41.345] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:41.821] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:45.157] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:46.402] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:46.413] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:00:46.793] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:07.492] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:08.954] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:39.578] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:39.761] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:40.728] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:40.747] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:40.935] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:46.712] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:46.772] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:01:47.501] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:07.466] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:08.062] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:39.724] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:40.761] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:40.779] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:41.857] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:42.315] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:46.410] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:46.449] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:02:46.741] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:03:08.643] Browser LOG     Header render time: 247032.10ms
+[05:03:08.646] Browser LOG     Header render time: 247095.80ms
+[05:03:08.646] Browser LOG     Header render time: 2.40ms
+[05:03:08.651] Browser LOG     Header render time: 247137.20ms
+[05:03:08.653] Browser LOG     Header render time: 2.10ms
+[05:03:08.656] Browser LOG     Header render time: 247179.50ms
+[05:03:11.106] Browser LOG     Header render time: 2789.20ms
+[05:03:12.053] Browser LOG     Header render time: 3536.30ms
+[05:03:16.160] Server  LOG     ✓ Compiled in 4.8s
+[05:03:16.174] Browser LOG     Header render time: 4033.40ms
+[05:03:16.174] Browser LOG     Header render time: 1.90ms
+[05:03:16.176] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[05:03:16.176] Browser LOG     Header render time: 679.30ms
+[05:03:16.176] Browser LOG     Header render time: 2.20ms
+[05:03:16.248] Browser LOG     Header render time: 878.70ms
+[05:03:16.248] Browser LOG     Header render time: 398.90ms
+[05:03:16.249] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[05:03:16.249] Browser LOG     Header render time: 4807.20ms
+[05:03:16.249] Browser LOG     Header render time: 1.20ms
+[05:03:16.249] Browser LOG     Header render time: 1832.50ms
+[05:03:16.249] Browser LOG     Header render time: 210.00ms
+[05:03:22.863] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:03:25.429] Server  LOG     ✓ Finished writing to filesystem cache in 10.9s
+[05:03:27.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:03:39.074] Server  LOG     ✓ Finished filesystem cache database compaction in 13.0s
+[05:03:53.857] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:03:56.713] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.994] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.998] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:03:57.999] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:04:00.557] Browser LOG     Header render time: 46778.10ms
+[05:04:00.560] Browser LOG     Header render time: 47077.70ms
+[05:04:01.386] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[05:04:01.386] Browser LOG     Header render time: 96.80ms
+[05:04:01.386] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:04:01.386] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[05:04:01.386] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772518389} /_vercel/insights/view
+[05:04:02.702] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:05.331] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:05.357] Browser LOG     Header render time: 5192.00ms
+[05:04:05.357] Browser LOG     Header render time: 4823.20ms
+[05:04:05.419] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[05:04:05.419] Browser LOG     Header render time: 4812.40ms
+[05:04:05.419] Browser LOG     Header render time: 7.00ms
+[05:04:05.559] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:14.872] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:15.015] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:17.978] Browser LOG     Header render time: 54.30ms
+[05:04:17.978] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:04:17.978] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/price-index","route":"/price-index"}
+[05:04:17.978] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772533887} /_vercel/insights/view
+[05:04:41.877] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:43.928] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:44.673] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:46.451] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:46.482] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:04:46.839] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:19.489] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:20.307] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:24.514] Server  LOG     ○ Compiling /liberia-market ...
+[05:05:33.507] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[05:05:33.507] Browser LOG     Header render time: 87989.20ms
+[05:05:33.507] Browser LOG     Header render time: 11.00ms
+[05:05:33.507] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772611094} /_vercel/insights/view
+[05:05:33.694] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:33.973] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:38.362] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:47.906] Browser LOG     Header render time: 14423.70ms
+[05:05:47.907] Browser LOG     Header render time: 20.70ms
+[05:05:47.908] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771772625544} /_vercel/insights/view
+[05:05:48.589] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:58.439] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:59.375] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:59.630] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:05:59.729] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:04.392] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:04.694] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:04.976] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:05.005] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:05.390] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:05.665] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:05.745] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:06.183] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:06.244] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:06.304] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:06.429] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:06.710] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:06.969] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:16.437] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:16.861] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:40.783] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:40.823] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:42.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:46.397] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:47.630] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:06:47.673] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:00.463] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:07.654] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:16.447] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:16.789] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:40.939] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:41.017] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:41.346] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:47.545] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:47.592] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:07:47.882] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:00.538] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:00.910] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:16.480] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:16.824] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:40.789] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:40.825] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:41.138] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:46.486] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:47.542] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:08:47.674] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:00.669] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:02.134] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:16.511] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:16.994] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:40.812] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:40.841] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:41.168] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:46.465] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:47.514] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:09:47.549] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:00.493] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:00.846] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:16.482] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:23.822] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:40.776] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:40.811] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:41.131] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:46.536] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:47.525] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:10:47.578] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:33.493] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:33.883] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:36.491] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:37.993] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:40.736] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:40.780] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:45.364] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:46.455] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:47.553] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:11:47.564] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:33.495] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:33.783] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:33.966] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:34.004] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:40.763] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:40.787] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:42.840] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:46.434] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:47.528] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:12:47.557] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:33.489] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:33.817] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:34.003] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:34.036] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:40.789] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:40.820] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:41.030] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:47.540] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:47.578] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:13:59.121] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:33.533] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:33.984] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:38.474] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:38.752] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:40.847] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:40.944] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:41.196] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:46.458] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:47.512] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:14:47.542] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:33.500] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:33.821] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:35.867] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:36.047] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:40.750] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:40.779] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:41.025] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:46.467] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:47.507] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:15:47.531] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:33.576] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:33.873] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:34.023] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:34.038] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:40.767] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:40.787] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:42.422] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:46.445] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:47.518] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:16:47.541] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:33.503] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:34.139] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:34.475] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:34.523] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:40.755] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:40.862] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:41.028] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:47.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:47.547] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:17:48.079] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:33.471] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:33.784] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:33.952] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:34.011] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:40.754] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:40.778] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:41.022] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:46.469] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:47.505] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:18:47.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:33.487] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:33.799] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:35.105] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:35.467] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:40.778] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:40.985] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:44.868] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:46.480] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:47.519] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:19:47.547] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:33.535] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:33.918] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:34.099] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:34.141] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:40.818] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:40.915] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:42.375] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:46.492] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:47.517] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:20:47.549] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:33.586] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:33.887] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:33.897] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:34.051] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:40.788] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:40.814] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:41.052] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:47.535] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:47.565] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:21:48.079] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:33.578] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:34.325] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:37.314] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:37.350] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:40.772] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:40.798] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:41.084] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:46.462] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:47.518] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:22:47.531] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:33.493] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:33.793] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:35.342] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:35.497] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:40.720] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:40.736] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:41.002] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:46.414] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:47.521] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:23:47.541] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:33.473] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:33.763] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:33.905] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:33.947] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:40.778] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:40.800] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:43.268] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:46.433] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:47.513] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:24:47.551] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:33.665] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:34.098] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:34.110] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:34.311] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:40.793] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:40.811] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:41.048] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:47.520] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:47.546] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:25:47.841] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:33.575] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:33.930] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:34.086] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:34.129] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:40.816] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:40.860] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:41.134] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:46.459] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:47.513] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:26:47.543] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:33.510] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:33.790] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:35.264] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:35.483] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:40.743] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:40.927] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:43.196] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:46.438] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:47.513] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:27:47.538] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:33.475] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:33.749] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:33.892] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:33.927] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:40.765] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:40.782] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:42.339] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:46.458] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:47.509] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:28:47.528] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:33.470] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:33.761] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:33.913] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:33.946] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:40.744] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:40.776] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:41.046] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:47.524] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:47.551] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:29:48.182] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:33.470] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:33.757] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:36.508] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:36.724] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:40.766] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:40.783] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:41.100] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:46.444] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:47.510] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:30:47.531] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:33.480] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:33.724] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:35.162] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:35.207] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:40.718] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:40.731] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:40.906] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:46.399] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:47.522] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:31:47.575] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:33.478] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:33.787] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:33.932] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:33.965] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:40.770] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:40.791] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:42.332] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:46.448] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:47.518] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:32:47.544] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:33.470] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:33.780] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:33.928] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:33.937] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:40.753] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:40.771] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:41.008] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:47.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:47.556] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:33:47.906] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:33.542] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:33.768] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:33.914] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:33.963] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:40.733] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:40.757] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:40.968] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:46.411] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:47.512] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:34:47.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:33.479] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:33.806] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:35.237] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:35.285] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:40.737] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:40.850] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:43.162] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:46.436] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:47.510] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:35:47.528] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:33.475] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:33.720] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:33.844] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:33.893] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:41.483] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:41.500] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:43.240] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:46.462] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:48.420] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[05:36:48.438] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
