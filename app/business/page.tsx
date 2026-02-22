@@ -68,11 +68,11 @@ export default function BusinessDashboardPage() {
                   <Briefcase className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-                <Badge variant="outline">For Businesses</Badge>
-                <Badge className="bg-primary/10 text-primary">Premium Tools</Badge>
-                <Badge variant="secondary">Save Money</Badge>
-                <Badge className="bg-secondary/10 text-secondary">Increase Profits</Badge>
+              <div className="flex overflow-x-auto justify-center gap-2 mb-4 py-1 -mx-2 px-2 [scrollbar-width:none] [-webkit-overflow-scrolling:touch] md:overflow-visible md:flex-wrap">
+                <Badge variant="outline" className="shrink-0">For Businesses</Badge>
+                <Badge className="bg-primary/10 text-primary shrink-0">Premium Tools</Badge>
+                <Badge variant="secondary" className="shrink-0">Save Money</Badge>
+                <Badge className="bg-secondary/10 text-secondary shrink-0">Increase Profits</Badge>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
@@ -82,20 +82,20 @@ export default function BusinessDashboardPage() {
               <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
                 Professional tools for importers, exporters, and business owners to maximize profits and minimize risk
               </p>
-              <div className="flex justify-center gap-3 mt-6 flex-wrap">
-                <Badge variant="secondary" className="text-sm gap-1">
+              <div className="flex overflow-x-auto justify-center gap-3 mt-6 py-1 -mx-2 px-2 [scrollbar-width:none] [-webkit-overflow-scrolling:touch] md:overflow-visible md:flex-wrap">
+                <Badge variant="secondary" className="text-sm gap-1 shrink-0">
                   <Zap className="h-3 w-3" />
                   Premium Tier
                 </Badge>
-                <Badge variant="secondary" className="text-sm gap-1">
+                <Badge variant="secondary" className="text-sm gap-1 shrink-0">
                   <TrendingUp className="h-3 w-3" />
                   30-Day Forecasts
                 </Badge>
-                <Badge variant="secondary" className="text-sm gap-1">
+                <Badge variant="secondary" className="text-sm gap-1 shrink-0">
                   <Calendar className="h-3 w-3" />
                   Changer Booking
                 </Badge>
-                <Badge variant="secondary" className="text-sm gap-1">
+                <Badge variant="secondary" className="text-sm gap-1 shrink-0">
                   <DollarSign className="h-3 w-3" />
                   API Access
                 </Badge>
@@ -105,10 +105,10 @@ export default function BusinessDashboardPage() {
         </section>
 
         <section className="py-6 sm:py-8 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 space-y-3">
-                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-6xl mx-auto min-w-0">
+              <div className="text-center mb-6 sm:mb-8 space-y-3">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-2 px-1">
                   <Badge variant="outline">Business Tools</Badge>
                   <Badge className="bg-primary/10 text-primary">AI-Powered</Badge>
                   <Badge variant="secondary">Professional Grade</Badge>
@@ -123,12 +123,12 @@ export default function BusinessDashboardPage() {
                 </p>
               </div>
               <Tabs defaultValue="tools" className="w-full">
-                <TabsList className="grid w-full grid-cols-5">
-                  <TabsTrigger value="tools">Smart Tools</TabsTrigger>
-                  <TabsTrigger value="booking">Book Changer</TabsTrigger>
-                  <TabsTrigger value="alerts">Alerts</TabsTrigger>
-                  <TabsTrigger value="reports">Reports</TabsTrigger>
-                  <TabsTrigger value="api">API Access</TabsTrigger>
+                <TabsList className="flex md:grid md:grid-cols-5 flex-nowrap overflow-x-auto w-full max-w-full gap-1 p-1.5 rounded-lg bg-muted/80 [scrollbar-width:none] [-webkit-overflow-scrolling:touch] md:overflow-visible">
+                  <TabsTrigger value="tools" className="shrink-0 md:shrink">Smart Tools</TabsTrigger>
+                  <TabsTrigger value="booking" className="shrink-0 md:shrink">Book Changer</TabsTrigger>
+                  <TabsTrigger value="alerts" className="shrink-0 md:shrink">Alerts</TabsTrigger>
+                  <TabsTrigger value="reports" className="shrink-0 md:shrink">Reports</TabsTrigger>
+                  <TabsTrigger value="api" className="shrink-0 md:shrink">API Access</TabsTrigger>
                 </TabsList>
 
                 {/* Smart Tools Tab - Phase 1 Features */}
@@ -172,7 +172,7 @@ export default function BusinessDashboardPage() {
                       </CardHeader>
                       <CardContent>
                         <div className="space-y-4">
-                          <div className="grid md:grid-cols-3 gap-4">
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div>
                               <label className="text-sm font-medium">Target Rate</label>
                               <Input type="number" placeholder="180.00" />
@@ -206,14 +206,14 @@ export default function BusinessDashboardPage() {
                                 { rate: 195, type: "Below", active: true },
                                 { rate: 205, type: "Above", active: true },
                               ].map((alert, i) => (
-                                <div key={i} className="flex items-center justify-between p-3 border rounded-lg">
-                                  <div>
+                                <div key={i} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 border rounded-lg">
+                                  <div className="min-w-0">
                                     <div className="font-medium">
                                       Alert when rate is {alert.type.toLowerCase()} {alert.rate} LRD
                                     </div>
                                     <div className="text-sm text-muted-foreground">Push + SMS notification</div>
                                   </div>
-                                  <div className="flex items-center gap-2">
+                                  <div className="flex items-center gap-2 shrink-0">
                                     <Badge variant={alert.active ? "secondary" : "outline"}>
                                       {alert.active ? "Active" : "Paused"}
                                     </Badge>
@@ -250,25 +250,34 @@ export default function BusinessDashboardPage() {
                           <Badge variant="secondary">Live</Badge>
                         </div>
 
-                        <div className="border rounded-lg p-4">
-                          <div className="grid grid-cols-3 gap-4 mb-2 font-semibold text-sm">
-                            <div>Amount (USD)</div>
-                            <div>Amount (LRD)</div>
-                            <div>Description</div>
+                        <div className="border rounded-lg p-4 overflow-x-auto">
+                          <div className="grid grid-cols-1 min-[500px]:grid-cols-3 gap-3 sm:gap-4 mb-2 font-semibold text-sm">
+                            <div className="hidden min-[500px]:block">Amount (USD)</div>
+                            <div className="hidden min-[500px]:block">Amount (LRD)</div>
+                            <div className="hidden min-[500px]:block">Description</div>
                           </div>
                           {[1, 2, 3, 4, 5].map((i) => (
-                            <div key={i} className="grid grid-cols-3 gap-4 mb-3">
-                              <Input type="number" placeholder="0.00" />
-                              <Input type="number" placeholder="0.00" disabled />
-                              <Input placeholder="Invoice #, Item, etc." />
+                            <div key={i} className="grid grid-cols-1 min-[500px]:grid-cols-3 gap-3 sm:gap-4 mb-3 p-2 min-[500px]:p-0 min-[500px]:mb-3 rounded-lg min-[500px]:rounded-none bg-muted/30 min-[500px]:bg-transparent">
+                              <div className="min-[500px]:contents">
+                                <label className="min-[500px]:hidden text-xs font-medium text-muted-foreground">Amount (USD)</label>
+                                <Input type="number" placeholder="0.00" />
+                              </div>
+                              <div className="min-[500px]:contents">
+                                <label className="min-[500px]:hidden text-xs font-medium text-muted-foreground">Amount (LRD)</label>
+                                <Input type="number" placeholder="0.00" disabled />
+                              </div>
+                              <div className="min-[500px]:contents">
+                                <label className="min-[500px]:hidden text-xs font-medium text-muted-foreground">Description</label>
+                                <Input placeholder="Invoice #, Item, etc." />
+                              </div>
                             </div>
                           ))}
-                          <Button variant="outline" size="sm" className="mt-2 bg-transparent">
+                          <Button variant="outline" size="sm" className="mt-2 bg-transparent w-full sm:w-auto">
                             + Add Row
                           </Button>
                         </div>
 
-                        <div className="flex justify-end gap-2">
+                        <div className="flex flex-col-reverse sm:flex-row justify-end gap-2">
                           <Button variant="outline">
                             <Download className="h-4 w-4 mr-2" />
                             Export CSV
@@ -289,7 +298,7 @@ export default function BusinessDashboardPage() {
                       <CardDescription>Generate PDF and CSV reports for accounting and analysis</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <Card className="border-dashed border-border/60">
                           <CardContent className="pt-6 text-center">
                             <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-3" />
@@ -399,7 +408,7 @@ export default function BusinessDashboardPage() {
 
                         <div>
                           <h3 className="font-semibold mb-3">API Features</h3>
-                          <div className="grid md:grid-cols-2 gap-3">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {[
                               "Real-time exchange rates (1-minute updates)",
                               "30-day AI predictions",
@@ -438,14 +447,14 @@ export default function BusinessDashboardPage() {
                           </div>
                         </div>
 
-                        <div className="flex gap-2">
-                          <Button asChild>
+                        <div className="flex flex-col sm:flex-row gap-2">
+                          <Button asChild className="w-full sm:w-auto">
                             <Link href="/docs#api">
                               <FileText className="h-4 w-4 mr-2" />
                               API documentation
                             </Link>
                           </Button>
-                          <Button variant="outline" asChild>
+                          <Button variant="outline" asChild className="w-full sm:w-auto">
                             <Link href="/contact">Contact Sales</Link>
                           </Button>
                         </div>
@@ -472,7 +481,7 @@ export default function BusinessDashboardPage() {
                     Start free, upgrade when you need more power
                   </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl md:max-w-none mx-auto">
                 {/* Free Tier */}
                 <Card className="border-border/60 shadow-sm bg-gradient-to-br from-card to-muted/20">
                   <CardHeader className="pb-4">

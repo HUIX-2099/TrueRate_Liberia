@@ -82,5 +82,6 @@ export async function GET(request: Request) {
     status: overall,
     checks,
     timestamp: new Date().toISOString(),
+    links: { moc: "/api/health/moc" },
   })
 }

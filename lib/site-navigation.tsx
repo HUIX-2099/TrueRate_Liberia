@@ -8,6 +8,7 @@ import {
   BellRing,
   Calculator,
   Crown,
+  LayoutDashboard,
   LogIn,
   MapPin,
   MapPinned,
@@ -37,17 +38,18 @@ export interface BottomNavItem {
  */
 export const NAVIGATION_ITEMS: NavItem[] = [
   { href: "/converter", label: "Converter", icon: Calculator, description: "Convert currencies" },
+  { href: "/market-intelligence", label: "Market Intelligence", icon: LayoutDashboard, description: "Commodity prices, risk, COL" },
   { href: "/price-index", label: "Price Index", icon: BarChart3, description: "Essential goods & services" },
   { href: "/analytics", label: "Analytics", icon: Activity, description: "Market insights" },
   { href: "/predictions", label: "AI Forecasts", icon: Crown, description: "ML predictions" },
   { href: "/business", label: "Business", icon: ShoppingCart, description: "Enterprise tools" },
   { href: "/forums", label: "Forums", icon: MessageSquare, description: "Community discussions" },
-  { href: "/community", label: "Community", icon: Users, description: "Rate reports & badges" },
 ]
 
 export const MOBILE_MENU_ITEMS: NavItem[] = [
   { href: "/auth/signin", label: "Sign In", icon: LogIn, description: "Access your dashboard" },
   { href: "/converter", label: "Converter", icon: Calculator, description: "Convert USD ↔ LRD" },
+  { href: "/market-intelligence", label: "Market Intelligence", icon: LayoutDashboard, description: "Commodity, risk, COL dashboard" },
   { href: "/analytics", label: "Analytics / Charts", icon: Activity, description: "Trends and history" },
   { href: "/price-index", label: "Price Index", icon: ShoppingCart, description: "Everyday cost tracking" },
   { href: "/map", label: "Find Changers", icon: MapPin, description: "Map of local rates" },

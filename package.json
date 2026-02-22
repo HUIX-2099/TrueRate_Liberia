@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "favicon": "node scripts/generate-favicon.js"
+    "favicon": "node scripts/generate-favicon.js",
+    "test:integration": "node --test tests/integration/moc-api.test.mjs"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^2.0.2",
