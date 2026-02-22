@@ -8,6 +8,7 @@ import {
   useState,
   type ReactNode,
 } from "react"
+import { clearFetchCache } from "@/lib/utils"
 
 const RATE_STORAGE_KEY = "truerate-live-rate"
 const RATE_TIMESTAMP_KEY = "truerate-live-rate-ts"
@@ -90,10 +91,27 @@ function writeCachedRate(rate: number, meta?: { sources: string[]; timestamp: st
   }
 }
 
+/** Clear all truerate-* keys from localStorage (rate, timestamp, sources, CBL, recent rates, etc.) then fetch fresh data */
+export function clearRateStorage(): void {
+  if (typeof window === "undefined") return
+  try {
+    const keys: string[] = []
+    for (let i = 0; i < window.localStorage.length; i++) {
+      const key = window.localStorage.key(i)
+      if (key?.startsWith("truerate-")) keys.push(key)
+    }
+    keys.forEach((k) => window.localStorage.removeItem(k))
+  } catch {
+    // ignore
+  }
+}
+
 export interface LiveRateContextValue {
   rate: number
   loading: boolean
   refresh: () => Promise<void>
+  /** Clear all rate-related caches (localStorage) then refresh to load recent data */
+  clearRateCache: () => Promise<void>
   /** Where the rate comes from (e.g. Central Bank of Liberia, ExchangeRate API) */
   sources: string[]
   /** ISO timestamp of last successful fetch */
@@ -193,6 +211,12 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
+  const clearRateCache = useCallback(async () => {
+    clearRateStorage()
+    clearFetchCache()
+    await refresh()
+  }, [refresh])
+
   useEffect(() => {
     setRate(readCachedRate())
     setMeta(readCachedMeta())
@@ -205,6 +229,7 @@ export function LiveRateProvider({ children }: { children: ReactNode }) {
     rate,
     loading,
     refresh,
+    clearRateCache,
     sources: meta.sources,
     timestamp: meta.timestamp,
     cblRate: meta.cblRate,
@@ -230,6 +255,7 @@ export function useLiveRate(): LiveRateContextValue {
       rate: fallbackRate,
       loading: true,
       refresh: async () => {},
+      clearRateCache: async () => {},
       sources: cached.sources,
       timestamp: cached.timestamp,
       cblRate: cached.cblRate,

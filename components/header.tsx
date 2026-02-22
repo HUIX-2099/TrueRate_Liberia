@@ -21,7 +21,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { useAuth } from "@/lib/auth/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { LiveUpdateIndicator } from "@/components/live-update-indicator"
@@ -103,22 +103,27 @@ const HeaderComponent = () => {
   NavLink.displayName = "NavLink"
 
   // Optimized mobile menu item component
-  const MobileMenuItem = memo(({ item }: { item: typeof mobileMenuItems[0] }) => (
-    <Link
-      href={item.href}
-      className="w-full max-w-sm rounded-xl border border-border/60 bg-background/80 px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-sm"
-    >
-      <div className="flex items-start gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-          <item.icon className="h-4 w-4 text-primary" />
+  const MobileMenuItem = memo(({ item }: { item: typeof mobileMenuItems[0] }) => {
+    const isActive = pathname === item.href
+    return (
+      <Link
+        href={item.href}
+        className={`w-full rounded-xl border px-3 py-2.5 transition-all duration-200 flex items-center gap-3 ${
+          isActive
+            ? "border-primary/40 bg-primary/5 shadow-sm"
+            : "border-border/50 bg-muted/30 hover:border-primary/30 hover:bg-muted/50 active:scale-[0.99]"
+        }`}
+      >
+        <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${isActive ? "bg-primary/15" : "bg-background/80"}`}>
+          <item.icon className={`h-5 w-5 ${isActive ? "text-primary" : "text-muted-foreground"}`} />
         </div>
-        <div className="text-left">
-          <div className="text-sm font-semibold text-foreground">{item.label}</div>
-          <div className="text-[11px] text-muted-foreground">{item.description}</div>
+        <div className="min-w-0 flex-1 text-left">
+          <div className={`text-sm font-semibold ${isActive ? "text-primary" : "text-foreground"}`}>{item.label}</div>
+          <div className="text-[11px] text-muted-foreground truncate">{item.description}</div>
         </div>
-      </div>
-    </Link>
-  ))
+      </Link>
+    )
+  })
   MobileMenuItem.displayName = "MobileMenuItem"
 
   // Optimized bottom nav item component
@@ -219,32 +224,39 @@ const HeaderComponent = () => {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right">
-                <div className="mt-3 space-y-4 max-h-[calc(100vh-5rem)] overflow-y-auto pr-1">
-                  <div className="rounded-xl border border-border/60 bg-background/70 px-3 py-2 text-left shadow-sm">
-                    <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                      Quick access
+              <SheetContent side="right" className="flex flex-col p-0 w-[min(100vw-2rem,320px)] sm:max-w-[320px]">
+                <SheetHeader className="border-b border-border/60 px-4 pr-12 py-4 text-left space-y-0">
+                  <SheetTitle className="text-base font-semibold">Quick Access</SheetTitle>
+                  <p className="text-xs text-muted-foreground">Rates, tools & community</p>
+                </SheetHeader>
+                <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+                  {user && (
+                    <div className="rounded-xl border border-border/50 bg-muted/30 px-3 py-2.5 flex items-center gap-3 mb-2">
+                      <Avatar className="h-9 w-9">
+                        <AvatarFallback className="text-xs bg-primary text-primary-foreground">
+                          {userInitials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className="min-w-0">
+                        <div className="text-sm font-medium text-foreground truncate">{user.name ?? "Account"}</div>
+                        <Link href="/dashboard" className="text-[11px] text-primary font-medium">Go to dashboard →</Link>
+                      </div>
                     </div>
-                    <div className="text-xs text-muted-foreground mt-1">
-                      Navigate rates, tools, and community updates.
-                    </div>
-                  </div>
-                  <nav className="flex flex-col items-center text-center gap-2">
+                  )}
+                  <nav className="flex flex-col gap-2" aria-label="Quick access">
                     {mobileMenuItems.map((item) => (
                       <MobileMenuItem key={item.href} item={item} />
                     ))}
                     <Link
                       href="/report-fraud"
-                      className="w-full max-w-sm rounded-xl border border-destructive/20 bg-destructive/5 px-3 py-2.5 transition-all hover:bg-destructive/10 hover:shadow-sm"
+                      className="w-full rounded-xl border border-destructive/30 bg-destructive/5 px-3 py-2.5 transition-all duration-200 flex items-center gap-3 hover:bg-destructive/10 hover:border-destructive/40 active:scale-[0.99]"
                     >
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-destructive/10">
-                          <Shield className="h-4 w-4 text-destructive" />
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-destructive">Report Fraud</div>
-                          <div className="text-[11px] text-muted-foreground">Help keep the community safe</div>
-                        </div>
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10">
+                        <Shield className="h-5 w-5 text-destructive" />
+                      </div>
+                      <div className="min-w-0 flex-1 text-left">
+                        <div className="text-sm font-semibold text-destructive">Report Fraud</div>
+                        <div className="text-[11px] text-muted-foreground">Help keep the community safe</div>
                       </div>
                     </Link>
                   </nav>

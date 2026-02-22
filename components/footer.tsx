@@ -5,6 +5,7 @@ import { Facebook, Mail, Phone, Twitter } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { InstallPromptButton } from "@/components/pwa/install-prompt-button"
+import { ClearCacheButton } from "@/components/clear-cache-button"
 
 export function Footer() {
   return (
@@ -58,24 +59,26 @@ export function Footer() {
                 <Facebook className="h-4 w-4" />
               </a>
             </div>
-            <p className="text-xs text-muted-foreground mt-2">
-              Designed and Developed by
+            <p className="mt-3 text-xs text-muted-foreground">
+              <span className="tracking-wide uppercase text-[0.65rem] text-muted-foreground/80">
+                Designed &amp; Developed by
+              </span>
               <br />
-              <span className="text-sm font-medium text-foreground inline-block">
+              <span className="inline-flex flex-wrap items-baseline gap-x-0.5 gap-y-1 mt-1 rounded-md border border-border/50 bg-muted/30 px-2.5 py-1.5 text-sm">
                 <a
                   href="https://huix-2099.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline font-semibold"
+                  className="text-primary font-semibold hover:underline decoration-primary/60 underline-offset-2 transition-colors hover:text-primary/90"
                 >
                   Moses J. Sackey
                 </a>
-                <span className="text-muted-foreground/80 mx-1"> · </span>
+                <span className="text-muted-foreground/60 select-none" aria-hidden="true">·</span>
                 <a
                   href="https://huix-2099.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline font-semibold"
+                  className="text-primary font-semibold hover:underline decoration-primary/60 underline-offset-2 transition-colors hover:text-primary/90"
                 >
                   Victor E. Coleman
                 </a>
@@ -161,7 +164,7 @@ export function Footer() {
               </div>
               <div className="flex items-center justify-center md:justify-start gap-2">
                 <Mail className="h-4 w-4" />
-                info@truerate.lr
+                <a href="mailto:info@truerateliberia.com" className="hover:underline">info@truerateliberia.com</a>
               </div>
               <div className="text-center md:text-left">Online-only for now</div>
             </div>
@@ -184,7 +187,8 @@ export function Footer() {
               • A Liberian Future-Tech Startup
             </p>
           </div>
-          <div className="flex gap-6 text-sm justify-center md:justify-end">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm justify-center md:justify-end">
+            <ClearCacheButton />
             <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors hover:underline underline-offset-2">
               Privacy Policy
             </Link>

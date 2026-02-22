@@ -27,3 +27,8 @@ export async function cachedFetch(
 
   return data
 }
+
+/** Clear in-memory fetch cache so next cachedFetch calls get fresh data */
+export function clearFetchCache(): void {
+  cache.clear()
+}

@@ -66,14 +66,27 @@ export function InstallPromptButton({ label = "Request App Access" }: { label?: 
   }
 
   return (
-    <Button
-      size="sm"
-      variant="outline"
-      className="mt-3 w-full"
-      onClick={handleClick}
-      aria-label={label}
-    >
-      {label}
-    </Button>
+    <div className="mt-3 space-y-2">
+      {available ? (
+        <>
+          <Button
+            size="sm"
+            variant="outline"
+            className="w-full"
+            onClick={handleClick}
+            aria-label={label}
+          >
+            {label}
+          </Button>
+          <p className="text-xs text-muted-foreground">
+            Opens your browser&apos;s Add to Home Screen dialog.
+          </p>
+        </>
+      ) : (
+        <p className="text-xs text-muted-foreground">
+          Add to Home Screen: use your browser menu (e.g. Share → Add to Home Screen) when the option appears.
+        </p>
+      )}
+    </div>
   )
 }

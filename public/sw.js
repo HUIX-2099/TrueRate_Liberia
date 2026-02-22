@@ -1,7 +1,7 @@
 /* Performance-optimized service worker for TrueRate Liberia */
-const CACHE_NAME = "truerate-cache-v3"
-const STATIC_CACHE = "truerate-static-v1"
-const API_CACHE = "truerate-api-v1"
+const CACHE_NAME = "truerate-cache-v4"
+const STATIC_CACHE = "truerate-static-v2"
+const API_CACHE = "truerate-api-v2"
 
 // Cache different types of resources with different strategies
 const PRECACHE = [
