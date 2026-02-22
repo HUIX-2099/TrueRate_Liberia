@@ -49,7 +49,7 @@ export function DevDisclaimer() {
 
         <div className="space-y-3 text-sm text-muted-foreground">
           <p>
-            <strong className="text-foreground">TrueRate-Liberia</strong> is an independent initiative of{" "}
+            <strong className="text-foreground">TrueRate Liberia</strong> is an independent initiative of{" "}
             <a
               href="https://huix-2099.vercel.app"
               target="_blank"
@@ -62,23 +62,27 @@ export function DevDisclaimer() {
           </p>
 
           <p>
-            TrueRate is pursuing designation as a{" "}
-            <strong className="text-foreground">Central Bank Market Intelligence Partner</strong>. Such a partnership would
-            support the Central Bank of Liberia with aggregated market data and real-time USD/LRD intelligence, contributing
-            to greater transparency and informed policy. No such designation has been granted to date.
+            TrueRate is currently pursuing designation as a{" "}
+            <strong className="text-foreground">Central Bank Market Intelligence Partner</strong>. No such designation or
+            official endorsement has been granted by the Central Bank of Liberia.
           </p>
 
           <p>
-            The platform aggregates data from Liberian government institutions including the Central Bank, licensed
-            changers, and international APIs to deliver real-time USD/LRD rates with AI-powered predictions.
+            The platform aggregates exchange rate data from publicly available sources, including Liberian government
+            institutions, licensed foreign exchange dealers, and international APIs, and provides AI-generated predictions
+            for informational purposes only.
           </p>
 
-          <div className="mt-4 p-3 rounded-lg bg-muted">
-            <p className="text-xs text-foreground">
-              <strong>Note:</strong> Exchange rates are for reference only. Users are advised to verify rates with their
-              chosen money changer prior to conducting any transaction.
-            </p>
-          </div>
+          <p>
+            Exchange rates displayed on this platform are indicative and subject to change. Users are advised to
+            independently verify rates with their selected financial institution or money changer before conducting any
+            transaction.
+          </p>
+
+          <p>
+            TrueRate Liberia accepts no liability for financial decisions or transactions made based on the information
+            provided.
+          </p>
 
           <p className="text-xs text-muted-foreground pt-2 border-t border-border/50">
             Designed and developed by <strong className="text-foreground">Moses J. Sackey</strong>,{" "}
