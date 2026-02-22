@@ -1,13 +1,9 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Providers } from "@/components/providers"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import "./globals.css"
-
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   // Primary Meta Tags
@@ -184,6 +180,11 @@ export default function RootLayout({
         {/* Preconnect to external APIs */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* Google Fonts: Inter (sans) + JetBrains Mono (mono) */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap"
+        />
       </head>
       <body className="font-sans antialiased pb-16 md:pb-0 overflow-x-hidden min-h-screen">
         <Providers>
