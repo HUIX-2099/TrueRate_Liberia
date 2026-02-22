@@ -77,6 +77,21 @@ export function DevDisclaimer() {
               changer before transactions.
             </p>
           </div>
+
+          <p className="text-xs text-muted-foreground pt-2 border-t border-border/50">
+            Designed & Developed by <strong className="text-foreground">Moses J. Sackey</strong>,{" "}
+            <strong className="text-foreground">Victor E. Coleman</strong>
+            <br />
+            Powered by{" "}
+            <a
+              href="https://huix-2099.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              HUIX-2099
+            </a>
+          </p>
         </div>
 
         <Button onClick={handleClose} className="w-full">

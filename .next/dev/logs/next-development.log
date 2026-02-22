@@ -1211,3 +1211,1097 @@ https://react.dev/link/hydration-mismatch
 [01:38:15.589] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [01:38:15.603] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [01:38:15.779] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:38:42.673] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:38:42.871] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:38:55.621] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:39:08.280] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:39:15.706] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:39:15.725] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:39:15.931] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:39:42.705] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:39:42.730] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:39:57.265] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:08.006] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:13.339] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:40:13.339] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:40:15.654] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:15.673] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:15.852] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:25.423] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:25.648] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:40:25.930] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:25.955] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:26.389] Browser LOG     Header render time: 153.60ms
+[01:40:26.477] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:40:26.477] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:40:26.477] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771760304160} /_vercel/insights/view
+[01:40:26.488] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:42.638] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:42.677] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:40:55.552] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:41:10.123] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:41:26.533] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:41:26.764] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:41:26.773] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:41:43.463] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:41:43.474] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:57:44.859] Server  ERROR   TypeError: fetch failed
+[01:57:44.861] Server  ERROR   TypeError: fetch failed
+[01:57:45.021] Server  ERROR   ⨯ Error: failed to pipe response
+[01:57:45.039] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:57:45.040] Server  ERROR   TypeError: fetch failed
+[01:57:45.040] Server  ERROR   TypeError: fetch failed
+[01:57:45.115] Server  ERROR   ⨯ Error: failed to pipe response
+[01:57:45.116] Server  ERROR   TypeError: fetch failed
+[01:57:56.799] Server  ERROR   TypeError: fetch failed
+[01:57:56.800] Server  ERROR   TypeError: fetch failed
+[01:57:56.896] Server  ERROR   ⨯ Error: failed to pipe response
+[01:57:56.913] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:57:56.915] Server  ERROR   TypeError: fetch failed
+[01:57:56.915] Server  ERROR   TypeError: fetch failed
+[01:57:56.956] Server  ERROR   ⨯ Error: failed to pipe response
+[01:57:56.958] Server  ERROR   TypeError: fetch failed
+[01:58:14.809] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:58:14.820] Server  ERROR   TypeError: fetch failed
+[01:58:14.820] Server  ERROR   TypeError: fetch failed
+[01:58:14.915] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:14.917] Server  ERROR   TypeError: fetch failed
+[01:58:14.927] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:58:15.198] Server  ERROR   TypeError: fetch failed
+[01:58:15.199] Server  ERROR   TypeError: fetch failed
+[01:58:15.325] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:15.326] Server  ERROR   TypeError: fetch failed
+[01:58:15.327] Server  ERROR   TypeError: fetch failed
+[01:58:15.327] Server  ERROR   TypeError: fetch failed
+[01:58:15.423] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:15.439] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:58:15.440] Server  ERROR   TypeError: fetch failed
+[01:58:15.440] Server  ERROR   TypeError: fetch failed
+[01:58:15.480] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:15.481] Server  ERROR   TypeError: fetch failed
+[01:58:31.735] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:58:31.742] Server  ERROR   TypeError: fetch failed
+[01:58:31.743] Server  ERROR   TypeError: fetch failed
+[01:58:31.843] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:31.845] Server  ERROR   TypeError: fetch failed
+[01:58:31.857] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:58:31.934] Server  ERROR   TypeError: fetch failed
+[01:58:31.934] Server  ERROR   TypeError: fetch failed
+[01:58:31.974] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:31.974] Server  ERROR   TypeError: fetch failed
+[01:58:45.702] Server  ERROR   TypeError: fetch failed
+[01:58:45.703] Server  ERROR   TypeError: fetch failed
+[01:58:45.772] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:45.782] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:58:45.783] Server  ERROR   TypeError: fetch failed
+[01:58:45.783] Server  ERROR   TypeError: fetch failed
+[01:58:45.823] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:45.824] Server  ERROR   TypeError: fetch failed
+[01:58:56.744] Server  ERROR   TypeError: fetch failed
+[01:58:56.745] Server  ERROR   TypeError: fetch failed
+[01:58:56.811] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:56.824] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[01:58:56.825] Server  ERROR   TypeError: fetch failed
+[01:58:56.826] Server  ERROR   TypeError: fetch failed
+[01:58:56.861] Server  ERROR   ⨯ Error: failed to pipe response
+[01:58:56.863] Server  ERROR   TypeError: fetch failed
+[02:15:01.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:15:01.656] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:15:01.662] Server  ERROR   TypeError: fetch failed
+[02:15:01.662] Server  ERROR   TypeError: fetch failed
+[02:15:01.707] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:01.708] Server  ERROR   TypeError: fetch failed
+[02:15:01.708] Server  ERROR   TypeError: fetch failed
+[02:15:01.755] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:01.756] Server  ERROR   TypeError: fetch failed
+[02:15:01.756] Server  ERROR   TypeError: fetch failed
+[02:15:01.756] Server  ERROR   TypeError: fetch failed
+[02:15:01.798] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:01.799] Server  ERROR   TypeError: fetch failed
+[02:15:01.821] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:15:01.825] Server  ERROR   TypeError: fetch failed
+[02:15:01.825] Server  ERROR   TypeError: fetch failed
+[02:15:01.902] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:01.903] Server  ERROR   TypeError: fetch failed
+[02:15:32.448] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:15:32.474] Server  ERROR   TypeError: fetch failed
+[02:15:32.476] Server  ERROR   TypeError: fetch failed
+[02:15:32.575] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:32.581] Server  ERROR   TypeError: fetch failed
+[02:15:32.593] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:15:32.704] Server  ERROR   TypeError: fetch failed
+[02:15:32.704] Server  ERROR   TypeError: fetch failed
+[02:15:32.741] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:32.742] Server  ERROR   TypeError: fetch failed
+[02:15:32.754] Server  ERROR   TypeError: fetch failed
+[02:15:32.755] Server  ERROR   TypeError: fetch failed
+[02:15:32.794] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:32.804] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:15:32.806] Server  ERROR   TypeError: fetch failed
+[02:15:32.806] Server  ERROR   TypeError: fetch failed
+[02:15:32.842] Server  ERROR   ⨯ Error: failed to pipe response
+[02:15:32.843] Server  ERROR   TypeError: fetch failed
+[02:30:44.504] Server  ERROR   TypeError: fetch failed
+[02:30:44.505] Server  ERROR   TypeError: fetch failed
+[02:30:44.590] Server  ERROR   ⨯ Error: failed to pipe response
+[02:30:44.606] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:30:44.607] Server  ERROR   TypeError: fetch failed
+[02:30:44.607] Server  ERROR   TypeError: fetch failed
+[02:30:44.646] Server  ERROR   ⨯ Error: failed to pipe response
+[02:30:44.647] Server  ERROR   TypeError: fetch failed
+[02:31:02.426] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:31:02.439] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:31:02.545] Server  ERROR   TypeError: fetch failed
+[02:31:02.545] Server  ERROR   TypeError: fetch failed
+[02:31:02.581] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:02.582] Server  ERROR   TypeError: fetch failed
+[02:31:02.582] Server  ERROR   TypeError: fetch failed
+[02:31:02.583] Server  ERROR   TypeError: fetch failed
+[02:31:02.624] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:02.625] Server  ERROR   TypeError: fetch failed
+[02:31:02.625] Server  ERROR   TypeError: fetch failed
+[02:31:02.626] Server  ERROR   TypeError: fetch failed
+[02:31:02.667] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:02.715] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:31:02.717] Server  ERROR   TypeError: fetch failed
+[02:31:02.717] Server  ERROR   TypeError: fetch failed
+[02:31:02.789] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:02.790] Server  ERROR   TypeError: fetch failed
+[02:31:33.474] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:31:33.479] Server  ERROR   TypeError: fetch failed
+[02:31:33.481] Server  ERROR   TypeError: fetch failed
+[02:31:33.559] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:33.560] Server  ERROR   TypeError: fetch failed
+[02:31:33.571] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:31:33.673] Server  ERROR   TypeError: fetch failed
+[02:31:33.674] Server  ERROR   TypeError: fetch failed
+[02:31:33.712] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:33.713] Server  ERROR   TypeError: fetch failed
+[02:31:33.720] Server  ERROR   TypeError: fetch failed
+[02:31:33.720] Server  ERROR   TypeError: fetch failed
+[02:31:33.769] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:33.783] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:31:33.784] Server  ERROR   TypeError: fetch failed
+[02:31:33.784] Server  ERROR   TypeError: fetch failed
+[02:31:33.833] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:33.835] Server  ERROR   TypeError: fetch failed
+[02:31:44.448] Server  ERROR   TypeError: fetch failed
+[02:31:44.448] Server  ERROR   TypeError: fetch failed
+[02:31:44.513] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:44.526] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:31:44.527] Server  ERROR   TypeError: fetch failed
+[02:31:44.528] Server  ERROR   TypeError: fetch failed
+[02:31:44.569] Server  ERROR   ⨯ Error: failed to pipe response
+[02:31:44.570] Server  ERROR   TypeError: fetch failed
+[02:32:02.407] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:32:02.421] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:32:02.511] Server  ERROR   TypeError: fetch failed
+[02:32:02.511] Server  ERROR   TypeError: fetch failed
+[02:32:02.552] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:02.553] Server  ERROR   TypeError: fetch failed
+[02:32:02.554] Server  ERROR   TypeError: fetch failed
+[02:32:02.554] Server  ERROR   TypeError: fetch failed
+[02:32:02.596] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:02.597] Server  ERROR   TypeError: fetch failed
+[02:32:02.615] Server  ERROR   TypeError: fetch failed
+[02:32:02.622] Server  ERROR   TypeError: fetch failed
+[02:32:02.701] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:02.725] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:32:02.727] Server  ERROR   TypeError: fetch failed
+[02:32:02.727] Server  ERROR   TypeError: fetch failed
+[02:32:02.810] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:02.812] Server  ERROR   TypeError: fetch failed
+[02:32:33.589] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:32:33.635] Server  ERROR   TypeError: fetch failed
+[02:32:33.638] Server  ERROR   TypeError: fetch failed
+[02:32:33.751] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:33.755] Server  ERROR   TypeError: fetch failed
+[02:32:33.763] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:32:33.865] Server  ERROR   TypeError: fetch failed
+[02:32:33.865] Server  ERROR   TypeError: fetch failed
+[02:32:33.901] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:33.903] Server  ERROR   TypeError: fetch failed
+[02:32:33.912] Server  ERROR   TypeError: fetch failed
+[02:32:33.913] Server  ERROR   TypeError: fetch failed
+[02:32:33.961] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:33.974] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:32:33.975] Server  ERROR   TypeError: fetch failed
+[02:32:33.975] Server  ERROR   TypeError: fetch failed
+[02:32:34.012] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:34.014] Server  ERROR   TypeError: fetch failed
+[02:32:44.466] Server  ERROR   TypeError: fetch failed
+[02:32:44.467] Server  ERROR   TypeError: fetch failed
+[02:32:44.571] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:44.584] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:32:44.585] Server  ERROR   TypeError: fetch failed
+[02:32:44.585] Server  ERROR   TypeError: fetch failed
+[02:32:44.622] Server  ERROR   ⨯ Error: failed to pipe response
+[02:32:44.623] Server  ERROR   TypeError: fetch failed
+[02:33:02.408] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:33:02.421] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:33:02.505] Server  ERROR   TypeError: fetch failed
+[02:33:02.505] Server  ERROR   TypeError: fetch failed
+[02:33:02.545] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:02.547] Server  ERROR   TypeError: fetch failed
+[02:33:02.547] Server  ERROR   TypeError: fetch failed
+[02:33:02.547] Server  ERROR   TypeError: fetch failed
+[02:33:02.592] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:02.593] Server  ERROR   TypeError: fetch failed
+[02:33:02.594] Server  ERROR   TypeError: fetch failed
+[02:33:02.594] Server  ERROR   TypeError: fetch failed
+[02:33:02.633] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:02.675] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:33:02.677] Server  ERROR   TypeError: fetch failed
+[02:33:02.677] Server  ERROR   TypeError: fetch failed
+[02:33:02.753] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:02.754] Server  ERROR   TypeError: fetch failed
+[02:33:33.437] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:33:33.455] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:33:33.580] Server  ERROR   TypeError: fetch failed
+[02:33:33.580] Server  ERROR   TypeError: fetch failed
+[02:33:33.618] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:33.619] Server  ERROR   TypeError: fetch failed
+[02:33:33.620] Server  ERROR   TypeError: fetch failed
+[02:33:33.620] Server  ERROR   TypeError: fetch failed
+[02:33:33.685] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:33.686] Server  ERROR   TypeError: fetch failed
+[02:33:33.698] Server  ERROR   TypeError: fetch failed
+[02:33:33.698] Server  ERROR   TypeError: fetch failed
+[02:33:33.747] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:33.754] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:33:33.755] Server  ERROR   TypeError: fetch failed
+[02:33:33.755] Server  ERROR   TypeError: fetch failed
+[02:33:33.797] Server  ERROR   ⨯ Error: failed to pipe response
+[02:33:33.798] Server  ERROR   TypeError: fetch failed
+[02:34:33.487] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:34:33.499] Server  ERROR   TypeError: fetch failed
+[02:34:33.500] Server  ERROR   TypeError: fetch failed
+[02:34:33.590] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:33.592] Server  ERROR   TypeError: fetch failed
+[02:34:33.599] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:34:33.695] Server  ERROR   TypeError: fetch failed
+[02:34:33.695] Server  ERROR   TypeError: fetch failed
+[02:34:33.738] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:33.739] Server  ERROR   TypeError: fetch failed
+[02:34:33.746] Server  ERROR   TypeError: fetch failed
+[02:34:33.746] Server  ERROR   TypeError: fetch failed
+[02:34:33.788] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:33.795] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:34:33.797] Server  ERROR   TypeError: fetch failed
+[02:34:33.798] Server  ERROR   TypeError: fetch failed
+[02:34:33.835] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:33.835] Server  ERROR   TypeError: fetch failed
+[02:34:33.844] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:34:33.959] Server  ERROR   TypeError: fetch failed
+[02:34:33.959] Server  ERROR   TypeError: fetch failed
+[02:34:34.023] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:34.024] Server  ERROR   TypeError: fetch failed
+[02:34:34.037] Server  ERROR   TypeError: fetch failed
+[02:34:34.038] Server  ERROR   TypeError: fetch failed
+[02:34:34.102] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:34.107] Server  ERROR   TypeError: fetch failed
+[02:34:34.108] Server  ERROR   TypeError: fetch failed
+[02:34:34.156] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:34.161] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:34:34.162] Server  ERROR   TypeError: fetch failed
+[02:34:34.163] Server  ERROR   TypeError: fetch failed
+[02:34:34.199] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:34.200] Server  ERROR   TypeError: fetch failed
+[02:34:34.210] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:34:34.211] Server  ERROR   TypeError: fetch failed
+[02:34:34.212] Server  ERROR   TypeError: fetch failed
+[02:34:34.254] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:34.255] Server  ERROR   TypeError: fetch failed
+[02:34:34.260] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:34:34.262] Server  ERROR   TypeError: fetch failed
+[02:34:34.262] Server  ERROR   TypeError: fetch failed
+[02:34:34.300] Server  ERROR   ⨯ Error: failed to pipe response
+[02:34:34.302] Server  ERROR   TypeError: fetch failed
+[02:35:33.471] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:35:33.491] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:35:33.683] Server  ERROR   TypeError: fetch failed
+[02:35:33.683] Server  ERROR   TypeError: fetch failed
+[02:35:33.735] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:33.739] Server  ERROR   TypeError: fetch failed
+[02:35:33.739] Server  ERROR   TypeError: fetch failed
+[02:35:33.739] Server  ERROR   TypeError: fetch failed
+[02:35:33.787] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:33.790] Server  ERROR   TypeError: fetch failed
+[02:35:33.801] Server  ERROR   TypeError: fetch failed
+[02:35:33.801] Server  ERROR   TypeError: fetch failed
+[02:35:33.848] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:33.862] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:35:33.864] Server  ERROR   TypeError: fetch failed
+[02:35:33.865] Server  ERROR   TypeError: fetch failed
+[02:35:33.908] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:33.909] Server  ERROR   TypeError: fetch failed
+[02:35:33.915] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:35:33.983] Server  ERROR   TypeError: fetch failed
+[02:35:33.983] Server  ERROR   TypeError: fetch failed
+[02:35:34.020] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:34.020] Server  ERROR   TypeError: fetch failed
+[02:35:34.028] Server  ERROR   TypeError: fetch failed
+[02:35:34.029] Server  ERROR   TypeError: fetch failed
+[02:35:34.067] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:34.068] Server  ERROR   TypeError: fetch failed
+[02:35:34.068] Server  ERROR   TypeError: fetch failed
+[02:35:34.110] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:34.116] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:35:34.118] Server  ERROR   TypeError: fetch failed
+[02:35:34.118] Server  ERROR   TypeError: fetch failed
+[02:35:34.154] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:34.155] Server  ERROR   TypeError: fetch failed
+[02:35:34.219] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:35:34.228] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:35:34.230] Server  ERROR   TypeError: fetch failed
+[02:35:34.230] Server  ERROR   TypeError: fetch failed
+[02:35:34.299] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:34.300] Server  ERROR   TypeError: fetch failed
+[02:35:34.301] Server  ERROR   TypeError: fetch failed
+[02:35:34.303] Server  ERROR   TypeError: fetch failed
+[02:35:34.419] Server  ERROR   ⨯ Error: failed to pipe response
+[02:35:34.422] Server  ERROR   TypeError: fetch failed
+[02:36:33.450] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:36:33.461] Server  ERROR   TypeError: fetch failed
+[02:36:33.461] Server  ERROR   TypeError: fetch failed
+[02:36:33.557] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:33.559] Server  ERROR   TypeError: fetch failed
+[02:36:33.565] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:36:33.676] Server  ERROR   TypeError: fetch failed
+[02:36:33.676] Server  ERROR   TypeError: fetch failed
+[02:36:33.712] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:33.713] Server  ERROR   TypeError: fetch failed
+[02:36:33.714] Server  ERROR   TypeError: fetch failed
+[02:36:33.714] Server  ERROR   TypeError: fetch failed
+[02:36:33.753] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:33.764] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:36:33.770] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:36:33.837] Server  ERROR   TypeError: fetch failed
+[02:36:33.837] Server  ERROR   TypeError: fetch failed
+[02:36:33.873] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:33.874] Server  ERROR   TypeError: fetch failed
+[02:36:33.874] Server  ERROR   TypeError: fetch failed
+[02:36:33.874] Server  ERROR   TypeError: fetch failed
+[02:36:33.916] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:33.917] Server  ERROR   TypeError: fetch failed
+[02:36:33.925] Server  ERROR   TypeError: fetch failed
+[02:36:33.925] Server  ERROR   TypeError: fetch failed
+[02:36:33.964] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:33.965] Server  ERROR   TypeError: fetch failed
+[02:36:33.965] Server  ERROR   TypeError: fetch failed
+[02:36:34.007] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:34.011] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:36:34.014] Server  ERROR   TypeError: fetch failed
+[02:36:34.015] Server  ERROR   TypeError: fetch failed
+[02:36:34.080] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:34.081] Server  ERROR   TypeError: fetch failed
+[02:36:34.096] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:36:34.109] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:36:34.114] Server  ERROR   TypeError: fetch failed
+[02:36:34.115] Server  ERROR   TypeError: fetch failed
+[02:36:34.188] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:34.192] Server  ERROR   TypeError: fetch failed
+[02:36:34.192] Server  ERROR   TypeError: fetch failed
+[02:36:34.193] Server  ERROR   TypeError: fetch failed
+[02:36:34.255] Server  ERROR   ⨯ Error: failed to pipe response
+[02:36:34.256] Server  ERROR   TypeError: fetch failed
+[02:37:33.489] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:37:33.518] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:37:33.713] Server  ERROR   TypeError: fetch failed
+[02:37:33.713] Server  ERROR   TypeError: fetch failed
+[02:37:33.760] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:33.761] Server  ERROR   TypeError: fetch failed
+[02:37:33.761] Server  ERROR   TypeError: fetch failed
+[02:37:33.761] Server  ERROR   TypeError: fetch failed
+[02:37:33.802] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:33.803] Server  ERROR   TypeError: fetch failed
+[02:37:33.810] Server  ERROR   TypeError: fetch failed
+[02:37:33.810] Server  ERROR   TypeError: fetch failed
+[02:37:33.857] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:33.862] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:37:33.867] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:37:33.932] Server  ERROR   TypeError: fetch failed
+[02:37:33.932] Server  ERROR   TypeError: fetch failed
+[02:37:33.967] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:33.968] Server  ERROR   TypeError: fetch failed
+[02:37:33.968] Server  ERROR   TypeError: fetch failed
+[02:37:33.968] Server  ERROR   TypeError: fetch failed
+[02:37:34.013] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:34.014] Server  ERROR   TypeError: fetch failed
+[02:37:34.022] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:37:34.023] Server  ERROR   TypeError: fetch failed
+[02:37:34.023] Server  ERROR   TypeError: fetch failed
+[02:37:34.061] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:34.062] Server  ERROR   TypeError: fetch failed
+[02:37:34.062] Server  ERROR   TypeError: fetch failed
+[02:37:34.106] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:34.107] Server  ERROR   TypeError: fetch failed
+[02:37:34.111] Server  ERROR   TypeError: fetch failed
+[02:37:34.112] Server  ERROR   TypeError: fetch failed
+[02:37:34.152] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:34.157] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:37:34.169] Server  ERROR   TypeError: fetch failed
+[02:37:34.175] Server  ERROR   TypeError: fetch failed
+[02:37:34.250] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:34.251] Server  ERROR   TypeError: fetch failed
+[02:37:34.262] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:37:34.264] Server  ERROR   TypeError: fetch failed
+[02:37:34.265] Server  ERROR   TypeError: fetch failed
+[02:37:34.335] Server  ERROR   ⨯ Error: failed to pipe response
+[02:37:34.338] Server  ERROR   TypeError: fetch failed
+[02:38:33.510] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:38:33.524] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:38:33.673] Server  ERROR   TypeError: fetch failed
+[02:38:33.673] Server  ERROR   TypeError: fetch failed
+[02:38:33.739] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:33.740] Server  ERROR   TypeError: fetch failed
+[02:38:33.740] Server  ERROR   TypeError: fetch failed
+[02:38:33.740] Server  ERROR   TypeError: fetch failed
+[02:38:33.789] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:33.790] Server  ERROR   TypeError: fetch failed
+[02:38:33.799] Server  ERROR   TypeError: fetch failed
+[02:38:33.799] Server  ERROR   TypeError: fetch failed
+[02:38:33.842] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:33.852] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:38:33.853] Server  ERROR   TypeError: fetch failed
+[02:38:33.853] Server  ERROR   TypeError: fetch failed
+[02:38:33.891] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:33.892] Server  ERROR   TypeError: fetch failed
+[02:38:33.897] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:38:33.965] Server  ERROR   TypeError: fetch failed
+[02:38:33.965] Server  ERROR   TypeError: fetch failed
+[02:38:34.001] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:34.002] Server  ERROR   TypeError: fetch failed
+[02:38:34.011] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:38:34.012] Server  ERROR   TypeError: fetch failed
+[02:38:34.012] Server  ERROR   TypeError: fetch failed
+[02:38:34.051] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:34.052] Server  ERROR   TypeError: fetch failed
+[02:38:34.052] Server  ERROR   TypeError: fetch failed
+[02:38:34.095] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:34.096] Server  ERROR   TypeError: fetch failed
+[02:38:34.105] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:38:34.107] Server  ERROR   TypeError: fetch failed
+[02:38:34.107] Server  ERROR   TypeError: fetch failed
+[02:38:34.151] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:34.151] Server  ERROR   TypeError: fetch failed
+[02:38:34.152] Server  ERROR   TypeError: fetch failed
+[02:38:34.205] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:34.206] Server  ERROR   TypeError: fetch failed
+[02:38:34.219] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:38:34.220] Server  ERROR   TypeError: fetch failed
+[02:38:34.220] Server  ERROR   TypeError: fetch failed
+[02:38:34.305] Server  ERROR   ⨯ Error: failed to pipe response
+[02:38:34.308] Server  ERROR   TypeError: fetch failed
+[02:39:33.468] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:39:33.481] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:39:33.594] Server  ERROR   TypeError: fetch failed
+[02:39:33.594] Server  ERROR   TypeError: fetch failed
+[02:39:33.647] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:33.648] Server  ERROR   TypeError: fetch failed
+[02:39:33.648] Server  ERROR   TypeError: fetch failed
+[02:39:33.648] Server  ERROR   TypeError: fetch failed
+[02:39:33.695] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:33.696] Server  ERROR   TypeError: fetch failed
+[02:39:33.702] Server  ERROR   TypeError: fetch failed
+[02:39:33.702] Server  ERROR   TypeError: fetch failed
+[02:39:33.743] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:33.754] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:39:33.756] Server  ERROR   TypeError: fetch failed
+[02:39:33.756] Server  ERROR   TypeError: fetch failed
+[02:39:33.797] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:33.797] Server  ERROR   TypeError: fetch failed
+[02:39:33.802] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:39:33.868] Server  ERROR   TypeError: fetch failed
+[02:39:33.869] Server  ERROR   TypeError: fetch failed
+[02:39:33.904] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:33.905] Server  ERROR   TypeError: fetch failed
+[02:39:33.912] Server  ERROR   TypeError: fetch failed
+[02:39:33.912] Server  ERROR   TypeError: fetch failed
+[02:39:33.953] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:33.953] Server  ERROR   TypeError: fetch failed
+[02:39:33.953] Server  ERROR   TypeError: fetch failed
+[02:39:33.993] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:33.998] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:39:33.999] Server  ERROR   TypeError: fetch failed
+[02:39:33.999] Server  ERROR   TypeError: fetch failed
+[02:39:34.035] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:34.036] Server  ERROR   TypeError: fetch failed
+[02:39:34.063] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:39:34.065] Server  ERROR   TypeError: fetch failed
+[02:39:34.065] Server  ERROR   TypeError: fetch failed
+[02:39:34.135] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:34.138] Server  ERROR   TypeError: fetch failed
+[02:39:34.147] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:39:34.150] Server  ERROR   TypeError: fetch failed
+[02:39:34.150] Server  ERROR   TypeError: fetch failed
+[02:39:34.211] Server  ERROR   ⨯ Error: failed to pipe response
+[02:39:34.212] Server  ERROR   TypeError: fetch failed
+[02:40:33.490] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:40:33.503] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:40:33.649] Server  ERROR   TypeError: fetch failed
+[02:40:33.649] Server  ERROR   TypeError: fetch failed
+[02:40:33.741] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:33.743] Server  ERROR   TypeError: fetch failed
+[02:40:33.744] Server  ERROR   TypeError: fetch failed
+[02:40:33.744] Server  ERROR   TypeError: fetch failed
+[02:40:33.792] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:33.794] Server  ERROR   TypeError: fetch failed
+[02:40:33.800] Server  ERROR   TypeError: fetch failed
+[02:40:33.800] Server  ERROR   TypeError: fetch failed
+[02:40:33.840] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:33.852] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:40:33.854] Server  ERROR   TypeError: fetch failed
+[02:40:33.854] Server  ERROR   TypeError: fetch failed
+[02:40:33.892] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:33.893] Server  ERROR   TypeError: fetch failed
+[02:40:33.897] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:40:33.967] Server  ERROR   TypeError: fetch failed
+[02:40:33.967] Server  ERROR   TypeError: fetch failed
+[02:40:34.004] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:34.005] Server  ERROR   TypeError: fetch failed
+[02:40:34.013] Server  ERROR   TypeError: fetch failed
+[02:40:34.013] Server  ERROR   TypeError: fetch failed
+[02:40:34.051] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:34.056] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:40:34.061] Server  ERROR   TypeError: fetch failed
+[02:40:34.061] Server  ERROR   TypeError: fetch failed
+[02:40:34.099] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:34.100] Server  ERROR   TypeError: fetch failed
+[02:40:34.100] Server  ERROR   TypeError: fetch failed
+[02:40:34.136] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:34.137] Server  ERROR   TypeError: fetch failed
+[02:40:34.162] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:40:34.164] Server  ERROR   TypeError: fetch failed
+[02:40:34.164] Server  ERROR   TypeError: fetch failed
+[02:40:34.248] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:34.253] Server  ERROR   TypeError: fetch failed
+[02:40:34.263] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:40:34.268] Server  ERROR   TypeError: fetch failed
+[02:40:34.269] Server  ERROR   TypeError: fetch failed
+[02:40:34.345] Server  ERROR   ⨯ Error: failed to pipe response
+[02:40:34.347] Server  ERROR   TypeError: fetch failed
+[02:41:33.489] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:41:33.503] Server  ERROR   TypeError: fetch failed
+[02:41:33.503] Server  ERROR   TypeError: fetch failed
+[02:41:33.591] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:33.593] Server  ERROR   TypeError: fetch failed
+[02:41:33.602] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:41:33.722] Server  ERROR   TypeError: fetch failed
+[02:41:33.722] Server  ERROR   TypeError: fetch failed
+[02:41:33.770] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:33.771] Server  ERROR   TypeError: fetch failed
+[02:41:33.776] Server  ERROR   TypeError: fetch failed
+[02:41:33.776] Server  ERROR   TypeError: fetch failed
+[02:41:33.819] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:33.824] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:41:33.825] Server  ERROR   TypeError: fetch failed
+[02:41:33.825] Server  ERROR   TypeError: fetch failed
+[02:41:33.861] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:33.862] Server  ERROR   TypeError: fetch failed
+[02:41:33.875] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:41:33.939] Server  ERROR   TypeError: fetch failed
+[02:41:33.939] Server  ERROR   TypeError: fetch failed
+[02:41:33.979] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:33.980] Server  ERROR   TypeError: fetch failed
+[02:41:33.991] Server  ERROR   TypeError: fetch failed
+[02:41:33.992] Server  ERROR   TypeError: fetch failed
+[02:41:34.030] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:34.041] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:41:34.042] Server  ERROR   TypeError: fetch failed
+[02:41:34.043] Server  ERROR   TypeError: fetch failed
+[02:41:34.079] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:34.080] Server  ERROR   TypeError: fetch failed
+[02:41:34.080] Server  ERROR   TypeError: fetch failed
+[02:41:34.123] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:34.124] Server  ERROR   TypeError: fetch failed
+[02:41:34.132] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:41:34.133] Server  ERROR   TypeError: fetch failed
+[02:41:34.133] Server  ERROR   TypeError: fetch failed
+[02:41:34.171] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:34.172] Server  ERROR   TypeError: fetch failed
+[02:41:34.183] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:41:34.194] Server  ERROR   TypeError: fetch failed
+[02:41:34.195] Server  ERROR   TypeError: fetch failed
+[02:41:34.290] Server  ERROR   ⨯ Error: failed to pipe response
+[02:41:34.293] Server  ERROR   TypeError: fetch failed
+[02:42:33.479] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:42:33.496] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:42:33.651] Server  ERROR   TypeError: fetch failed
+[02:42:33.652] Server  ERROR   TypeError: fetch failed
+[02:42:33.708] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:33.709] Server  ERROR   TypeError: fetch failed
+[02:42:33.709] Server  ERROR   TypeError: fetch failed
+[02:42:33.709] Server  ERROR   TypeError: fetch failed
+[02:42:33.754] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:33.755] Server  ERROR   TypeError: fetch failed
+[02:42:33.761] Server  ERROR   TypeError: fetch failed
+[02:42:33.761] Server  ERROR   TypeError: fetch failed
+[02:42:33.801] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:33.812] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:42:33.813] Server  ERROR   TypeError: fetch failed
+[02:42:33.813] Server  ERROR   TypeError: fetch failed
+[02:42:33.850] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:33.851] Server  ERROR   TypeError: fetch failed
+[02:42:33.858] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:42:33.927] Server  ERROR   TypeError: fetch failed
+[02:42:33.928] Server  ERROR   TypeError: fetch failed
+[02:42:33.963] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:33.964] Server  ERROR   TypeError: fetch failed
+[02:42:33.971] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:42:33.972] Server  ERROR   TypeError: fetch failed
+[02:42:33.972] Server  ERROR   TypeError: fetch failed
+[02:42:34.011] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:34.012] Server  ERROR   TypeError: fetch failed
+[02:42:34.012] Server  ERROR   TypeError: fetch failed
+[02:42:34.051] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:34.052] Server  ERROR   TypeError: fetch failed
+[02:42:34.062] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:42:34.067] Server  ERROR   TypeError: fetch failed
+[02:42:34.067] Server  ERROR   TypeError: fetch failed
+[02:42:34.142] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:34.143] Server  ERROR   TypeError: fetch failed
+[02:42:34.143] Server  ERROR   TypeError: fetch failed
+[02:42:34.222] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:34.223] Server  ERROR   TypeError: fetch failed
+[02:42:34.232] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:42:34.233] Server  ERROR   TypeError: fetch failed
+[02:42:34.234] Server  ERROR   TypeError: fetch failed
+[02:42:34.308] Server  ERROR   ⨯ Error: failed to pipe response
+[02:42:34.311] Server  ERROR   TypeError: fetch failed
+[02:43:33.499] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:43:33.542] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:43:33.691] Server  ERROR   TypeError: fetch failed
+[02:43:33.691] Server  ERROR   TypeError: fetch failed
+[02:43:33.742] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:33.743] Server  ERROR   TypeError: fetch failed
+[02:43:33.743] Server  ERROR   TypeError: fetch failed
+[02:43:33.743] Server  ERROR   TypeError: fetch failed
+[02:43:33.787] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:33.788] Server  ERROR   TypeError: fetch failed
+[02:43:33.796] Server  ERROR   TypeError: fetch failed
+[02:43:33.797] Server  ERROR   TypeError: fetch failed
+[02:43:33.834] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:33.846] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:43:33.847] Server  ERROR   TypeError: fetch failed
+[02:43:33.847] Server  ERROR   TypeError: fetch failed
+[02:43:33.891] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:33.891] Server  ERROR   TypeError: fetch failed
+[02:43:33.896] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:43:33.964] Server  ERROR   TypeError: fetch failed
+[02:43:33.964] Server  ERROR   TypeError: fetch failed
+[02:43:34.000] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:34.001] Server  ERROR   TypeError: fetch failed
+[02:43:34.008] Server  ERROR   TypeError: fetch failed
+[02:43:34.008] Server  ERROR   TypeError: fetch failed
+[02:43:34.046] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:34.047] Server  ERROR   TypeError: fetch failed
+[02:43:34.047] Server  ERROR   TypeError: fetch failed
+[02:43:34.090] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:34.095] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:43:34.096] Server  ERROR   TypeError: fetch failed
+[02:43:34.096] Server  ERROR   TypeError: fetch failed
+[02:43:34.132] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:34.133] Server  ERROR   TypeError: fetch failed
+[02:43:34.156] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:43:34.162] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:43:34.164] Server  ERROR   TypeError: fetch failed
+[02:43:34.164] Server  ERROR   TypeError: fetch failed
+[02:43:34.240] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:34.242] Server  ERROR   TypeError: fetch failed
+[02:43:34.243] Server  ERROR   TypeError: fetch failed
+[02:43:34.248] Server  ERROR   TypeError: fetch failed
+[02:43:34.333] Server  ERROR   ⨯ Error: failed to pipe response
+[02:43:34.336] Server  ERROR   TypeError: fetch failed
+[02:44:33.491] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:44:33.501] Server  ERROR   TypeError: fetch failed
+[02:44:33.501] Server  ERROR   TypeError: fetch failed
+[02:44:33.588] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:33.590] Server  ERROR   TypeError: fetch failed
+[02:44:33.597] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:44:33.706] Server  ERROR   TypeError: fetch failed
+[02:44:33.706] Server  ERROR   TypeError: fetch failed
+[02:44:33.752] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:33.753] Server  ERROR   TypeError: fetch failed
+[02:44:33.764] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:44:33.765] Server  ERROR   TypeError: fetch failed
+[02:44:33.765] Server  ERROR   TypeError: fetch failed
+[02:44:33.807] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:33.808] Server  ERROR   TypeError: fetch failed
+[02:44:33.811] Server  ERROR   TypeError: fetch failed
+[02:44:33.847] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:33.848] Server  ERROR   TypeError: fetch failed
+[02:44:33.852] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:44:33.921] Server  ERROR   TypeError: fetch failed
+[02:44:33.921] Server  ERROR   TypeError: fetch failed
+[02:44:33.959] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:33.959] Server  ERROR   TypeError: fetch failed
+[02:44:33.967] Server  ERROR   TypeError: fetch failed
+[02:44:33.967] Server  ERROR   TypeError: fetch failed
+[02:44:34.004] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:34.009] Server  ERROR   TypeError: fetch failed
+[02:44:34.009] Server  ERROR   TypeError: fetch failed
+[02:44:34.049] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:34.053] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:44:34.054] Server  ERROR   TypeError: fetch failed
+[02:44:34.055] Server  ERROR   TypeError: fetch failed
+[02:44:34.090] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:34.091] Server  ERROR   TypeError: fetch failed
+[02:44:34.096] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:44:34.097] Server  ERROR   TypeError: fetch failed
+[02:44:34.097] Server  ERROR   TypeError: fetch failed
+[02:44:34.136] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:34.137] Server  ERROR   TypeError: fetch failed
+[02:44:34.149] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:44:34.151] Server  ERROR   TypeError: fetch failed
+[02:44:34.151] Server  ERROR   TypeError: fetch failed
+[02:44:34.197] Server  ERROR   ⨯ Error: failed to pipe response
+[02:44:34.200] Server  ERROR   TypeError: fetch failed
+[02:45:33.474] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:45:33.484] Server  ERROR   TypeError: fetch failed
+[02:45:33.484] Server  ERROR   TypeError: fetch failed
+[02:45:33.579] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:33.581] Server  ERROR   TypeError: fetch failed
+[02:45:33.592] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:45:33.697] Server  ERROR   TypeError: fetch failed
+[02:45:33.697] Server  ERROR   TypeError: fetch failed
+[02:45:33.743] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:33.744] Server  ERROR   TypeError: fetch failed
+[02:45:33.749] Server  ERROR   TypeError: fetch failed
+[02:45:33.750] Server  ERROR   TypeError: fetch failed
+[02:45:33.792] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:33.796] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:45:33.798] Server  ERROR   TypeError: fetch failed
+[02:45:33.798] Server  ERROR   TypeError: fetch failed
+[02:45:33.838] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:33.838] Server  ERROR   TypeError: fetch failed
+[02:45:33.847] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:45:33.920] Server  ERROR   TypeError: fetch failed
+[02:45:33.920] Server  ERROR   TypeError: fetch failed
+[02:45:33.963] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:33.964] Server  ERROR   TypeError: fetch failed
+[02:45:33.979] Server  ERROR   TypeError: fetch failed
+[02:45:33.979] Server  ERROR   TypeError: fetch failed
+[02:45:34.017] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:34.018] Server  ERROR   TypeError: fetch failed
+[02:45:34.018] Server  ERROR   TypeError: fetch failed
+[02:45:34.055] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:34.064] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:45:34.066] Server  ERROR   TypeError: fetch failed
+[02:45:34.066] Server  ERROR   TypeError: fetch failed
+[02:45:34.102] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:34.103] Server  ERROR   TypeError: fetch failed
+[02:45:34.124] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:45:34.137] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:45:34.140] Server  ERROR   TypeError: fetch failed
+[02:45:34.141] Server  ERROR   TypeError: fetch failed
+[02:45:34.236] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:34.240] Server  ERROR   TypeError: fetch failed
+[02:45:34.241] Server  ERROR   TypeError: fetch failed
+[02:45:34.241] Server  ERROR   TypeError: fetch failed
+[02:45:34.337] Server  ERROR   ⨯ Error: failed to pipe response
+[02:45:34.340] Server  ERROR   TypeError: fetch failed
+[02:46:33.503] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:46:33.517] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:46:33.644] Server  ERROR   TypeError: fetch failed
+[02:46:33.644] Server  ERROR   TypeError: fetch failed
+[02:46:33.701] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:33.702] Server  ERROR   TypeError: fetch failed
+[02:46:33.703] Server  ERROR   TypeError: fetch failed
+[02:46:33.703] Server  ERROR   TypeError: fetch failed
+[02:46:33.744] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:33.745] Server  ERROR   TypeError: fetch failed
+[02:46:33.751] Server  ERROR   TypeError: fetch failed
+[02:46:33.752] Server  ERROR   TypeError: fetch failed
+[02:46:33.793] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:33.799] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:46:33.804] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:46:33.869] Server  ERROR   TypeError: fetch failed
+[02:46:33.869] Server  ERROR   TypeError: fetch failed
+[02:46:33.905] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:33.906] Server  ERROR   TypeError: fetch failed
+[02:46:33.906] Server  ERROR   TypeError: fetch failed
+[02:46:33.907] Server  ERROR   TypeError: fetch failed
+[02:46:33.947] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:33.948] Server  ERROR   TypeError: fetch failed
+[02:46:33.956] Server  ERROR   TypeError: fetch failed
+[02:46:33.956] Server  ERROR   TypeError: fetch failed
+[02:46:33.993] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:33.994] Server  ERROR   TypeError: fetch failed
+[02:46:33.994] Server  ERROR   TypeError: fetch failed
+[02:46:34.034] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:34.052] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:46:34.053] Server  ERROR   TypeError: fetch failed
+[02:46:34.054] Server  ERROR   TypeError: fetch failed
+[02:46:34.114] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:34.115] Server  ERROR   TypeError: fetch failed
+[02:46:34.128] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:46:34.129] Server  ERROR   TypeError: fetch failed
+[02:46:34.130] Server  ERROR   TypeError: fetch failed
+[02:46:34.202] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:34.203] Server  ERROR   TypeError: fetch failed
+[02:46:34.210] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:46:34.216] Server  ERROR   TypeError: fetch failed
+[02:46:34.216] Server  ERROR   TypeError: fetch failed
+[02:46:34.305] Server  ERROR   ⨯ Error: failed to pipe response
+[02:46:34.308] Server  ERROR   TypeError: fetch failed
+[02:47:33.455] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:47:33.487] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:47:33.626] Server  ERROR   TypeError: fetch failed
+[02:47:33.626] Server  ERROR   TypeError: fetch failed
+[02:47:33.679] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:33.680] Server  ERROR   TypeError: fetch failed
+[02:47:33.680] Server  ERROR   TypeError: fetch failed
+[02:47:33.680] Server  ERROR   TypeError: fetch failed
+[02:47:33.719] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:33.720] Server  ERROR   TypeError: fetch failed
+[02:47:33.730] Server  ERROR   TypeError: fetch failed
+[02:47:33.730] Server  ERROR   TypeError: fetch failed
+[02:47:33.768] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:33.776] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:47:33.778] Server  ERROR   TypeError: fetch failed
+[02:47:33.778] Server  ERROR   TypeError: fetch failed
+[02:47:33.826] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:33.826] Server  ERROR   TypeError: fetch failed
+[02:47:33.832] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:47:33.901] Server  ERROR   TypeError: fetch failed
+[02:47:33.901] Server  ERROR   TypeError: fetch failed
+[02:47:33.938] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:33.939] Server  ERROR   TypeError: fetch failed
+[02:47:33.946] Server  ERROR   TypeError: fetch failed
+[02:47:33.946] Server  ERROR   TypeError: fetch failed
+[02:47:33.983] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:33.988] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:47:33.998] Server  ERROR   TypeError: fetch failed
+[02:47:33.998] Server  ERROR   TypeError: fetch failed
+[02:47:34.035] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:34.036] Server  ERROR   TypeError: fetch failed
+[02:47:34.036] Server  ERROR   TypeError: fetch failed
+[02:47:34.071] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:34.072] Server  ERROR   TypeError: fetch failed
+[02:47:34.103] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:47:34.105] Server  ERROR   TypeError: fetch failed
+[02:47:34.106] Server  ERROR   TypeError: fetch failed
+[02:47:34.183] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:34.184] Server  ERROR   TypeError: fetch failed
+[02:47:34.191] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:47:34.198] Server  ERROR   TypeError: fetch failed
+[02:47:34.198] Server  ERROR   TypeError: fetch failed
+[02:47:34.276] Server  ERROR   ⨯ Error: failed to pipe response
+[02:47:34.277] Server  ERROR   TypeError: fetch failed
+[02:48:33.512] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:33.529] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:33.640] Server  ERROR   TypeError: fetch failed
+[02:48:33.640] Server  ERROR   TypeError: fetch failed
+[02:48:33.697] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:33.698] Server  ERROR   TypeError: fetch failed
+[02:48:33.699] Server  ERROR   TypeError: fetch failed
+[02:48:33.701] Server  ERROR   TypeError: fetch failed
+[02:48:33.743] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:33.744] Server  ERROR   TypeError: fetch failed
+[02:48:33.751] Server  ERROR   TypeError: fetch failed
+[02:48:33.751] Server  ERROR   TypeError: fetch failed
+[02:48:33.796] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:33.812] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:33.813] Server  ERROR   TypeError: fetch failed
+[02:48:33.813] Server  ERROR   TypeError: fetch failed
+[02:48:33.853] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:33.854] Server  ERROR   TypeError: fetch failed
+[02:48:33.858] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:33.924] Server  ERROR   TypeError: fetch failed
+[02:48:33.924] Server  ERROR   TypeError: fetch failed
+[02:48:33.959] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:33.960] Server  ERROR   TypeError: fetch failed
+[02:48:33.967] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:33.968] Server  ERROR   TypeError: fetch failed
+[02:48:33.968] Server  ERROR   TypeError: fetch failed
+[02:48:34.007] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:34.008] Server  ERROR   TypeError: fetch failed
+[02:48:34.008] Server  ERROR   TypeError: fetch failed
+[02:48:34.048] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:34.049] Server  ERROR   TypeError: fetch failed
+[02:48:34.054] Server  ERROR   TypeError: fetch failed
+[02:48:34.054] Server  ERROR   TypeError: fetch failed
+[02:48:34.093] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:34.099] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:34.115] Server  ERROR   TypeError: fetch failed
+[02:48:34.115] Server  ERROR   TypeError: fetch failed
+[02:48:34.183] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:34.184] Server  ERROR   TypeError: fetch failed
+[02:48:34.193] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:34.196] Server  ERROR   TypeError: fetch failed
+[02:48:34.196] Server  ERROR   TypeError: fetch failed
+[02:48:34.271] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:34.272] Server  ERROR   TypeError: fetch failed
+[02:48:57.331] Server  ERROR   TypeError: fetch failed
+[02:48:57.333] Server  ERROR   TypeError: fetch failed
+[02:48:57.442] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:57.460] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:48:57.461] Server  ERROR   TypeError: fetch failed
+[02:48:57.462] Server  ERROR   TypeError: fetch failed
+[02:48:57.559] Server  ERROR   ⨯ Error: failed to pipe response
+[02:48:57.563] Server  ERROR   TypeError: fetch failed
+[02:49:19.323] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:49:19.678] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:49:19.694] Server  ERROR   TypeError: fetch failed
+[02:49:19.694] Server  ERROR   TypeError: fetch failed
+[02:49:19.773] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:19.780] Server  ERROR   TypeError: fetch failed
+[02:49:19.780] Server  ERROR   TypeError: fetch failed
+[02:49:19.782] Server  ERROR   TypeError: fetch failed
+[02:49:19.892] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:19.900] Server  ERROR   TypeError: fetch failed
+[02:49:31.701] Server  ERROR   TypeError: fetch failed
+[02:49:31.702] Server  ERROR   TypeError: fetch failed
+[02:49:31.794] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:31.819] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:49:31.823] Server  ERROR   TypeError: fetch failed
+[02:49:31.823] Server  ERROR   TypeError: fetch failed
+[02:49:31.876] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:31.878] Server  ERROR   TypeError: fetch failed
+[02:49:33.492] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:49:33.505] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:49:33.619] Server  ERROR   TypeError: fetch failed
+[02:49:33.620] Server  ERROR   TypeError: fetch failed
+[02:49:33.665] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:33.666] Server  ERROR   TypeError: fetch failed
+[02:49:33.666] Server  ERROR   TypeError: fetch failed
+[02:49:33.667] Server  ERROR   TypeError: fetch failed
+[02:49:33.718] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:33.719] Server  ERROR   TypeError: fetch failed
+[02:49:33.722] Server  ERROR   TypeError: fetch failed
+[02:49:33.722] Server  ERROR   TypeError: fetch failed
+[02:49:33.771] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:33.851] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:49:33.855] Server  ERROR   TypeError: fetch failed
+[02:49:33.856] Server  ERROR   TypeError: fetch failed
+[02:49:33.946] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:33.948] Server  ERROR   TypeError: fetch failed
+[02:49:44.030] Server  ERROR   TypeError: fetch failed
+[02:49:44.031] Server  ERROR   TypeError: fetch failed
+[02:49:44.122] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:44.150] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:49:44.151] Server  ERROR   TypeError: fetch failed
+[02:49:44.152] Server  ERROR   TypeError: fetch failed
+[02:49:44.214] Server  ERROR   ⨯ Error: failed to pipe response
+[02:49:44.215] Server  ERROR   TypeError: fetch failed
+[02:50:18.758] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:50:18.982] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:50:31.673] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:50:33.453] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:50:33.486] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:50:33.823] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:50:44.088] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:51:18.742] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:51:18.909] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:51:33.434] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:51:33.467] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:51:33.645] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:51:35.173] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:51:44.458] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:52:19.423] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:52:19.466] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:52:31.853] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:52:33.505] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:52:33.556] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:52:33.825] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:52:45.677] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:53:18.729] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:53:18.923] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:53:31.587] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:53:33.443] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:53:33.471] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:53:33.632] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:53:44.021] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:54:18.670] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:54:18.685] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:54:31.610] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:54:33.412] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:54:33.431] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:54:33.590] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:54:44.055] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:55:18.671] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:55:18.686] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:55:33.418] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:55:33.433] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:55:35.645] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:55:44.007] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:55:45.635] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:56:18.640] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:56:18.690] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:56:31.619] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:56:33.420] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:56:33.437] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:56:33.587] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:56:44.059] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:57:18.716] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:57:18.871] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:57:31.652] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:57:33.449] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:57:33.466] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:57:33.614] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:57:44.066] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:58:18.633] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:58:18.727] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:58:33.126] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:58:33.441] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:58:33.458] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:58:33.599] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:58:44.042] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:59:18.696] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:59:18.734] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:59:31.616] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:59:33.412] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:59:33.433] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:59:33.593] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[02:59:45.466] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:00:18.683] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:00:18.695] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:00:31.605] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:00:33.414] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:00:33.448] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:00:33.599] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:00:44.093] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:01:18.668] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:01:18.683] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:01:31.607] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:01:33.418] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:01:33.431] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:01:33.604] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:01:44.032] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:02:18.665] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:02:18.684] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:02:33.425] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:02:33.448] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:02:33.458] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:02:33.570] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:02:44.031] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:03:18.730] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:03:19.107] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:03:31.632] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:03:33.429] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:03:33.455] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:03:33.608] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:03:46.380] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:04:18.687] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:04:18.832] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:04:31.615] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:04:33.421] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:04:33.452] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:04:33.580] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:04:44.021] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:05:18.682] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:05:18.699] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:05:31.561] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:05:33.408] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:05:33.432] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:05:33.589] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:05:44.023] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:06:14.686] Server  LOG     ✓ Compiled in 1030ms
+[03:06:18.664] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:06:18.680] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:06:32.880] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:06:33.437] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:06:33.456] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:06:33.597] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:06:44.011] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
