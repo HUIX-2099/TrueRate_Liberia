@@ -324,7 +324,7 @@ export default function HomePage() {
             </div>
             <div className="grid gap-6 lg:grid-cols-3 max-w-6xl mx-auto">
               <div className="min-w-0 lg:col-span-2">
-                <PriceIndex rate={liveRate} variant="essential" />
+                <PriceIndex rate={liveRate} variant="full" />
               </div>
               <div className="space-y-6">
                 <InflationTracker />
