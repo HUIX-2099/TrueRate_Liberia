@@ -62,13 +62,9 @@ export function DevDisclaimer() {
           </p>
 
           <p>
-            This platform is <strong className="text-foreground">not affiliated with</strong> the Central Bank of
-            Liberia or any government institution.
-          </p>
-
-          <p>
-            We aggregate data from multiple international currency APIs and community reports to provide accurate,
-            real-time USD/LRD exchange rates for informational purposes.
+            TrueRate is campaigning to become a <strong className="text-foreground">Central Bank market intelligence
+            partner</strong> and aggregates data from Liberian government institutions and international APIs to provide
+            accurate, real-time USD/LRD exchange rates for informational purposes.
           </p>
 
           <div className="mt-4 p-3 rounded-lg bg-muted">
