@@ -2626,3 +2626,496 @@ https://react.dev/link/hydration-mismatch
 [03:49:33.424] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [03:49:33.583] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
 [03:49:44.036] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:50:18.669] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:50:18.834] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:50:23.391] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[03:50:23.391] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[03:50:33.032] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:50:33.404] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:50:33.418] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:50:33.551] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:50:44.039] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:51:18.633] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:51:18.669] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:51:31.636] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:51:33.413] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:51:33.428] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:51:33.579] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:51:45.400] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:52:18.683] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:52:18.699] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:52:31.609] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:52:33.387] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:52:33.428] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:52:33.590] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:52:44.083] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:53:18.659] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:53:18.691] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:53:31.603] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:53:33.414] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:53:33.428] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:53:33.669] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:53:44.056] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:54:18.649] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:54:18.665] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:54:32.895] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:54:33.411] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:54:33.425] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:54:33.546] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:54:43.999] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:55:18.655] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:55:18.669] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:55:31.640] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:55:33.415] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:55:33.434] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:55:33.590] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:55:45.428] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:56:12.137] Server  LOG     ✓ Compiled in 1855ms
+[03:56:16.186] Server  LOG     ✓ Compiled in 343ms
+[03:56:18.668] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:56:18.682] Server  LOG     ✓ Compiled in 0ms
+[03:56:18.700] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:56:31.682] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:56:33.430] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:56:33.453] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:56:34.233] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:56:44.001] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:57:18.708] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:57:18.725] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:57:27.222] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:57:27.263] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:57:27.514] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:57:31.739] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:57:44.527] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:58:19.418] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:58:19.433] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:58:21.842] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:58:21.858] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:58:22.078] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:58:34.694] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:58:44.464] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:18.743] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:18.766] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:21.829] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:21.848] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:22.246] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:27.554] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:28.079] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:28.199] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[03:59:28.199] Browser LOG     Header render time: 3066034.60ms
+[03:59:28.199] Browser LOG     Header render time: 2.40ms
+[03:59:28.199] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/price-index color: rgb(120, 120, 120) color: inherit {"dp":"/price-index","o":"http://localhost:3000/price-index","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771768646036} /_vercel/insights/view
+[03:59:28.215] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:31.577] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[03:59:45.352] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:00:18.639] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:00:18.673] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:00:21.858] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:00:28.002] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:00:31.579] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:00:44.085] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:01:18.682] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:01:18.694] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:01:21.850] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:01:28.010] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:01:31.620] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:01:43.994] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:00.110] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:00.119] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:00.129] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:00.997] Browser LOG     Header render time: 152036.60ms
+[04:02:00.997] Browser LOG     Header render time: 1.40ms
+[04:02:00.997] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771768798079} /_vercel/insights/view
+[04:02:01.091] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:01.102] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:01.117] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:13.096] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:13.106] Browser LOG     Header render time: 12976.50ms
+[04:02:13.107] Browser LOG     Header render time: 0.90ms
+[04:02:13.107] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771768811059} /_vercel/insights/view
+[04:02:13.119] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:18.633] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:18.652] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:21.835] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:32.848] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:02:44.058] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:18.743] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:18.758] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:21.912] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:31.622] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:45.517] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:58.328] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:58.338] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:03:58.416] Browser LOG     Header render time: 6039729.50ms
+[04:03:58.416] Browser LOG     Header render time: 1.40ms
+[04:03:58.416] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771768916384} /_vercel/insights/view
+[04:04:21.925] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:04:31.652] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:04:44.087] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:14.895] Server  LOG     ✓ Compiled in 1004ms
+[04:05:15.066] Browser LOG     Header render time: 76632.10ms
+[04:05:15.066] Browser LOG     Header render time: 1.10ms
+[04:05:15.127] Browser LOG     Header render time: 181976.00ms
+[04:05:15.127] Browser LOG     Header render time: 2.20ms
+[04:05:15.178] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:15.186] Browser ERROR   Route error: {}
+[04:05:15.186] Browser ERROR   Route error: {}
+[04:05:15.249] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:15.293] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:15.331] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:15.578] Server  LOG     ✓ Compiled in 103ms
+[04:05:15.723] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:15.758] Browser LOG     Header render time: 639.60ms
+[04:05:15.758] Browser LOG     Header render time: 0.70ms
+[04:05:15.759] Browser ERROR   Route error: {}
+[04:05:15.759] Browser ERROR   Route error: {}
+[04:05:15.760] Browser LOG     Header render time: 636.10ms
+[04:05:15.760] Browser LOG     Header render time: 1.20ms
+[04:05:16.382] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.422] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.631] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.643] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.717] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.762] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.779] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.796] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.816] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.879] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.949] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.969] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.977] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.983] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:05:16.987] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:06:15.707] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:06:15.725] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:06:15.735] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:07:16.822] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:07:16.902] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:07:16.920] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:15.729] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:15.737] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:15.745] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:35.548] Server  LOG     ✓ Compiled in 106ms
+[04:08:35.723] Browser ERROR   Route error: {}
+[04:08:35.723] Browser ERROR   Route error: {}
+[04:08:35.723] Browser LOG     Header render time: 199991.00ms
+[04:08:35.723] Browser LOG     Header render time: 0.80ms
+[04:08:35.828] Browser LOG     Header render time: 200007.40ms
+[04:08:35.828] Browser LOG     Header render time: 0.80ms
+[04:08:35.859] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:35.899] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:35.981] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:36.020] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:37.090] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:37.182] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:37.203] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:37.223] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:37.299] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:08:37.378] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:00.332] Server  LOG     ✓ Compiled in 322ms
+[04:09:00.976] Browser ERROR   ./app/voice/page.tsx:12:1
+Export selectableLanguages doesn't exist in target module
+  10 | import dynamic from "next/dynamic"
+  11 | import { useLanguage } from "@/lib/i18n/language-context"
+> 12 | import { selectableLanguages } from "@/lib/i18n/translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { useToast } from "@/hooks/use-toast"
+  14 |
+  15 | // Code splitting for heavy components
+
+The export selectableLanguages was not found in module [project]/lib/i18n/translations.ts [app-client] (ecmascript).
+Did you mean to import t?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/voice/page.tsx [Client Component Browser]
+    ./app/voice/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/voice/page.tsx [Client Component SSR]
+    ./app/voice/page.tsx [Server Component]
+[04:09:00.977] Browser ERROR   ./app/voice/page.tsx:12:1
+Export selectableLanguages doesn't exist in target module
+  10 | import dynamic from "next/dynamic"
+  11 | import { useLanguage } from "@/lib/i18n/language-context"
+> 12 | import { selectableLanguages } from "@/lib/i18n/translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { useToast } from "@/hooks/use-toast"
+  14 |
+  15 | // Code splitting for heavy components
+
+The export selectableLanguages was not found in module [project]/lib/i18n/translations.ts [app-ssr] (ecmascript).
+Did you mean to import t?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/voice/page.tsx [Client Component Browser]
+    ./app/voice/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/voice/page.tsx [Client Component SSR]
+    ./app/voice/page.tsx [Server Component]
+[04:09:00.979] Browser ERROR   ./app/voice/page.tsx:12:1
+Export selectableLanguages doesn't exist in target module
+  10 | import dynamic from "next/dynamic"
+  11 | import { useLanguage } from "@/lib/i18n/language-context"
+> 12 | import { selectableLanguages } from "@/lib/i18n/translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { useToast } from "@/hooks/use-toast"
+  14 |
+  15 | // Code splitting for heavy components
+
+The export selectableLanguages was not found in module [project]/lib/i18n/translations.ts [app-client] (ecmascript).
+Did you mean to import t?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/voice/page.tsx [Client Component Browser]
+    ./app/voice/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/voice/page.tsx [Client Component SSR]
+    ./app/voice/page.tsx [Server Component]
+[04:09:00.979] Browser ERROR   ./app/voice/page.tsx:12:1
+Export selectableLanguages doesn't exist in target module
+  10 | import dynamic from "next/dynamic"
+  11 | import { useLanguage } from "@/lib/i18n/language-context"
+> 12 | import { selectableLanguages } from "@/lib/i18n/translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { useToast } from "@/hooks/use-toast"
+  14 |
+  15 | // Code splitting for heavy components
+
+The export selectableLanguages was not found in module [project]/lib/i18n/translations.ts [app-ssr] (ecmascript).
+Did you mean to import t?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/voice/page.tsx [Client Component Browser]
+    ./app/voice/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/voice/page.tsx [Client Component SSR]
+    ./app/voice/page.tsx [Server Component]
+[04:09:00.979] Browser ERROR   ./app/voice/page.tsx:12:1
+Export selectableLanguages doesn't exist in target module
+  10 | import dynamic from "next/dynamic"
+  11 | import { useLanguage } from "@/lib/i18n/language-context"
+> 12 | import { selectableLanguages } from "@/lib/i18n/translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { useToast } from "@/hooks/use-toast"
+  14 |
+  15 | // Code splitting for heavy components
+
+The export selectableLanguages was not found in module [project]/lib/i18n/translations.ts [app-client] (ecmascript).
+Did you mean to import t?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/voice/page.tsx [Client Component Browser]
+    ./app/voice/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/voice/page.tsx [Client Component SSR]
+    ./app/voice/page.tsx [Server Component]
+[04:09:00.979] Browser ERROR   ./app/voice/page.tsx:12:1
+Export selectableLanguages doesn't exist in target module
+  10 | import dynamic from "next/dynamic"
+  11 | import { useLanguage } from "@/lib/i18n/language-context"
+> 12 | import { selectableLanguages } from "@/lib/i18n/translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { useToast } from "@/hooks/use-toast"
+  14 |
+  15 | // Code splitting for heavy components
+
+The export selectableLanguages was not found in module [project]/lib/i18n/translations.ts [app-ssr] (ecmascript).
+Did you mean to import t?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/voice/page.tsx [Client Component Browser]
+    ./app/voice/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/voice/page.tsx [Client Component SSR]
+    ./app/voice/page.tsx [Server Component]
+[04:09:01.933] Server  LOG     ✓ Compiled in 328ms
+[04:09:02.267] Browser ERROR   Route error: {}
+[04:09:02.267] Browser ERROR   Route error: {}
+[04:09:07.198] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:07.280] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:07.282] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:09:07.302] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:09:07.389] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:07.573] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:08.054] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:08.185] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:08.293] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:08.297] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="voice/page...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function VoiceAssistantPage} serverProvidedParams={{...}}>
+        <VoiceAssistantPage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1 pb-...">
+              <section>
+              <section className="py-6 sm:py...">
+                <div className="container ...">
+                  <div className="max-w-4xl ...">
+                    <div>
+                    <Card>
+                    <Card>
+                    <Card>
+                    <Card>
+                      <div data-slot="card" className="bg-card/90...">
+                        <CardHeader>
+                        <CardContent>
+                          <div data-slot="card-content" className="px-6">
+                            <div className="grid md:gr...">
+                              <Button>
+                              <Button variant="outline" className="justify-start" onClick={function onClick}>
+                                <button data-slot="button" className={"inline-f..."} onClick={function onClick}>
+                                  <Badge>
++                                 Liberian English
+-                                 Koloqua
+                              ...
+                            ...
+                    ...
+            ...
+
+[04:09:08.297] Browser LOG     Header render time: 5.90ms
+[04:09:08.297] Browser LOG     Header render time: 30.70ms
+[04:09:08.298] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:09:08.298] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/voice","route":"/voice"}
+[04:09:08.298] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/voice","route":"/voice"}
+[04:09:08.298] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769226249} /_vercel/insights/view
+[04:09:08.298] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769226249} /_vercel/insights/view
+[04:09:08.299] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="voice/page...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function VoiceAssistantPage} serverProvidedParams={{...}}>
+        <VoiceAssistantPage params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <HeaderComponent>
+            <main className="flex-1 pb-...">
+              <section>
+              <section className="py-6 sm:py...">
+                <div className="container ...">
+                  <div className="max-w-4xl ...">
+                    <div>
+                    <Card>
+                    <Card>
+                    <Card>
+                    <Card>
+                      <div data-slot="card" className="bg-card/90...">
+                        <CardHeader>
+                        <CardContent>
+                          <div data-slot="card-content" className="px-6">
+                            <div className="grid md:gr...">
+                              <Button>
+                              <Button variant="outline" className="justify-start" onClick={function onClick}>
+                                <button data-slot="button" className={"inline-f..."} onClick={function onClick}>
+                                  <Badge>
++                                 Liberian English
+-                                 Koloqua
+                              ...
+                            ...
+                    ...
+            ...
+
+[04:09:08.299] Browser LOG     Header render time: 3.80ms
+[04:09:08.300] Browser LOG     Header render time: 14.60ms
+[04:09:08.300] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:09:08.300] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/voice","route":"/voice"}
+[04:09:08.300] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/voice","route":"/voice"}
+[04:09:08.300] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769226129} /_vercel/insights/view
+[04:09:08.300] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769226129} /_vercel/insights/view
+[04:09:08.354] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:08.366] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:08.379] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:14.947] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[04:09:15.468] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:09:15.485] Server  ERROR   ⨯ TypeError: controller[kState].transformAlgorithm is not a function
+[04:09:15.730] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:15.888] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:09:15.989] Browser LOG     Header render time: 77.60ms
+[04:09:15.989] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:09:15.989] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/voice","route":"/voice"}
+[04:09:15.989] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/voice color: rgb(120, 120, 120) color: inherit {"dp":"/voice","o":"http://localhost:3000/voice","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769233967} /_vercel/insights/view
+[04:10:02.102] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:10:08.085] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:10:15.849] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:10:41.903] Server  LOG     ✓ Compiled in 147ms
+[04:11:03.283] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:08.168] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:15.859] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:58.775] Server  LOG     ✓ Compiled in 308ms
+[04:11:59.006] Browser ERROR   Route error: {}
+[04:11:59.007] Browser ERROR   Route error: {}
+[04:11:59.010] Browser LOG     Header render time: 162991.80ms
+[04:11:59.010] Browser LOG     Header render time: 0.80ms
+[04:11:59.011] Browser LOG     Header render time: 170787.50ms
+[04:11:59.011] Browser LOG     Header render time: 1.10ms
+[04:11:59.059] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.106] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.140] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.163] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.181] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.217] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.235] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.252] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.296] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:11:59.404] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:13:00.499] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:13:00.515] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:13:00.606] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:13:59.310] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:13:59.360] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:13:59.438] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:00.320] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:00.335] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:00.652] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:51.985] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:51.996] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:52.018] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:52.367] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[04:15:52.367] Browser LOG     Header render time: 233098.10ms
+[04:15:52.367] Browser LOG     Header render time: 3.00ms
+[04:15:52.367] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771769630043} /_vercel/insights/view
+[04:15:52.877] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:52.902] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:52.917] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:58.930] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:58.953] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD
+[04:15:58.981] Server  LOG     [v0] Market rate from Xe: 184.635 LRD/USD

@@ -257,7 +257,7 @@ export default function VoiceAssistantPage() {
                     {[
                       { name: "Bassa", code: "BA" },
                       { name: "Gio", code: "GI" },
-                      { name: "Mano", code: "MA" },
+                      { name: "Kissi", code: "KI" },
                       { name: "Kru", code: "KR" },
                     ].map((lang) => (
                       <Button

@@ -34,7 +34,7 @@ Prioritized ideas to improve the platform. Use checkboxes to track progress.
 ## Reach
 
 - [x] USSD/short code for feature phones
-- [x] Complete i18n (Liberian English, French, Kpelle) for main flows
+- [x] Complete i18n (Koloqua, French, Kpelle) for main flows
 - [x] Market Woman Mode as prominent/default option
 
 ---

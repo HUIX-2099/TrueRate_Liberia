@@ -1,11 +1,11 @@
 // Multi-language support for TrueRate Liberia
-// Supports English, Liberian English, French, and Kpelle
+// Supports English, Koloqua, French, and Kpelle
 
 export type Language = 'en' | 'lr-en' | 'fr' | 'kpe'
 
 export const languages: { code: Language; name: string; nativeName: string }[] = [
   { code: 'en', name: 'English', nativeName: 'English' },
-  { code: 'lr-en', name: 'Liberian English', nativeName: 'Liberian English' },
+  { code: 'lr-en', name: 'Koloqua', nativeName: 'Koloqua' },
   { code: 'fr', name: 'French', nativeName: 'Français' },
   { code: 'kpe', name: 'Kpelle', nativeName: 'Kpɛllɛ' },
 ]
@@ -195,7 +195,7 @@ export const translations: Record<Language, Record<string, string>> = {
   },
   
   'lr-en': {
-    // Liberian English translations
+    // Koloqua translations
     'nav.home': 'Home',
     'nav.converter': 'Change Money',
     'nav.analytics': 'Rate Story',
@@ -553,7 +553,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'rateTip.marketVsOfficial': 'Market rate is what changers trade; we also show the CBL official rate.',
     'rateTip.oneNumber': 'One number for convert, plan, compare.',
     'rateTip.planWithLrd': 'Knowing the rate helps you plan in LRD with confidence.',
-    'simple.mode': 'Laa-kaa Tɔɔ',
+    'simple.mode': 'Market Women Mode',
     'simple.currentRate': 'Dɔla Kpalai',
     'simple.tapForVoice': 'Gɛɛ ma woo',
     'simple.goingUp': 'Kɔɔ!',
