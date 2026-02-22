@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { Progress } from "@/components/ui/progress"
 import {
   TrendingUp,
@@ -71,31 +80,25 @@ const ESSENTIAL_PRICE_NAMES = new Set([
   "25kg Rice (Thai)",
   "25kg Rice (Local)",
   "Palm Oil (gallon)",
-  "Sugar (1kg)",
-  "Bread (loaf)",
-  "Chicken (1kg)",
-  "Fish (1kg)",
   "Eggs (tray)",
   "Gallon of Gas",
   "Gallon of Diesel",
   "Cooking Gas (14kg)",
   "Cement (50kg)",
-  "Laundry Soap (bar)",
-  "Salt (1kg)",
 ])
 
 // Market Price Index
 export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?: "full" | "essential" }) {
   const prices: PriceItem[] = [
-    { name: "25kg Rice (Thai)", icon: <Wheat className="h-4 w-4" />, priceUSD: 10.5, priceLRD: 10.5 * rate, change: -5, category: "food" },
-    { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 11, priceLRD: 11 * rate, change: -4.5, category: "food" },
-    { name: "Palm Oil (gallon)", icon: <Droplet className="h-4 w-4" />, priceUSD: 1050 / rate, priceLRD: 1050, change: -1.5, category: "food" },
+    { name: "25kg Rice (Thai)", icon: <Wheat className="h-4 w-4" />, priceUSD: 10.5, priceLRD: 1938.206, change: -5, category: "food" },
+    { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 11, priceLRD: 2030.501, change: -4.5, category: "food" },
+    { name: "Palm Oil (gallon)", icon: <Droplet className="h-4 w-4" />, priceUSD: 5.69, priceLRD: 1050, change: -1.5, category: "food" },
     { name: "Sugar (1kg)", icon: <Candy className="h-4 w-4" />, priceUSD: 1.2, priceLRD: 1.2 * rate, change: 0.5, category: "food" },
     { name: "Flour (25kg)", icon: <Wheat className="h-4 w-4" />, priceUSD: 12, priceLRD: 12 * rate, change: 1.2, category: "food" },
     { name: "Bread (loaf)", icon: <UtensilsCrossed className="h-4 w-4" />, priceUSD: 0.9, priceLRD: 0.9 * rate, change: -0.3, category: "food" },
     { name: "Chicken (1kg)", icon: <Beef className="h-4 w-4" />, priceUSD: 3.5, priceLRD: 3.5 * rate, change: 2, category: "food" },
     { name: "Fish (1kg)", icon: <Fish className="h-4 w-4" />, priceUSD: 4, priceLRD: 4 * rate, change: 1, category: "food" },
-    { name: "Eggs (tray)", icon: <Egg className="h-4 w-4" />, priceUSD: 2.2, priceLRD: 2.2 * rate, change: 0.8, category: "food" },
+    { name: "Eggs (tray)", icon: <Egg className="h-4 w-4" />, priceUSD: 2.2, priceLRD: 406.1, change: 0.8, category: "food" },
     { name: "Onions (1kg)", icon: <UtensilsCrossed className="h-4 w-4" />, priceUSD: 1, priceLRD: 1 * rate, change: -0.5, category: "food" },
     { name: "Cassava (kg)", icon: <UtensilsCrossed className="h-4 w-4" />, priceUSD: 0.4, priceLRD: 0.4 * rate, change: 0.2, category: "food" },
     { name: "Tomato (1kg)", icon: <Carrot className="h-4 w-4" />, priceUSD: 1.2, priceLRD: 1.2 * rate, change: 0.3, category: "food" },
@@ -110,12 +113,12 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
     { name: "Sardines (tin)", icon: <Fish className="h-4 w-4" />, priceUSD: 1.2, priceLRD: 1.2 * rate, change: 0.3, category: "food" },
     { name: "Greens (bundle)", icon: <Leaf className="h-4 w-4" />, priceUSD: 0.5, priceLRD: 0.5 * rate, change: 0.2, category: "food" },
     { name: "Sweet Potato (kg)", icon: <Carrot className="h-4 w-4" />, priceUSD: 0.5, priceLRD: 0.5 * rate, change: 0.1, category: "food" },
-    { name: "Gallon of Gas", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.15, priceLRD: 4.15 * rate, change: -0.5, category: "fuel" },
-    { name: "Gallon of Diesel", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.45, priceLRD: 4.45 * rate, change: 0.2, category: "fuel" },
+    { name: "Gallon of Gas", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.15, priceLRD: 766.053, change: -0.5, category: "fuel" },
+    { name: "Gallon of Diesel", icon: <Fuel className="h-4 w-4" />, priceUSD: 4.45, priceLRD: 821.43, change: 0.2, category: "fuel" },
     { name: "Kerosene (gallon)", icon: <Fuel className="h-4 w-4" />, priceUSD: 2.8, priceLRD: 2.8 * rate, change: 0.5, category: "fuel" },
-    { name: "Cooking Gas (14kg)", icon: <Flame className="h-4 w-4" />, priceUSD: 21, priceLRD: 21 * rate, change: 0.5, category: "fuel" },
+    { name: "Cooking Gas (14kg)", icon: <Flame className="h-4 w-4" />, priceUSD: 21, priceLRD: 3876.411, change: 0.5, category: "fuel" },
     { name: "Charcoal (bag)", icon: <Flame className="h-4 w-4" />, priceUSD: 8, priceLRD: 8 * rate, change: 1.5, category: "fuel" },
-    { name: "Cement (50kg)", icon: <BrickWall className="h-4 w-4" />, priceUSD: 8.5, priceLRD: 8.5 * rate, change: 1, category: "construction" },
+    { name: "Cement (50kg)", icon: <BrickWall className="h-4 w-4" />, priceUSD: 8.5, priceLRD: 1569.024, change: 1, category: "construction" },
     { name: "Steel Rods (bundle)", icon: <Construction className="h-4 w-4" />, priceUSD: 385, priceLRD: 385 * rate, change: 2, category: "construction" },
     { name: "Nails (1kg)", icon: <Construction className="h-4 w-4" />, priceUSD: 2.5, priceLRD: 2.5 * rate, change: 0.5, category: "construction" },
     { name: "Paint (gallon)", icon: <Paintbrush className="h-4 w-4" />, priceUSD: 25, priceLRD: 25 * rate, change: 1, category: "construction" },
@@ -146,7 +149,8 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
   const [loading, setLoading] = useState(true)
   const [updatedLabel, setUpdatedLabel] = useState<string>("Updated Today")
   const [sourceLabel, setSourceLabel] = useState<string>("")
-  const [filter, setFilter] = useState("all")
+  const [filter, setFilter] = useState("food")
+  const [selectedGood, setSelectedGood] = useState<string>("")
 
   useEffect(() => {
     let isMounted = true
@@ -242,11 +246,25 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
     }
   }, [])
 
-  const filteredItems = filter === "all" ? items : items.filter((p) => p.category === filter)
+  const filteredItems = items.filter((p) => p.category === filter)
   const filteredPrices =
     variant === "essential"
       ? filteredItems.filter((p) => ESSENTIAL_PRICE_NAMES.has(p.name))
       : filteredItems
+
+  const displayPrices =
+    variant === "full"
+      ? selectedGood !== ""
+        ? items.filter((p) => p.name === selectedGood)
+        : items.filter((p) => ESSENTIAL_PRICE_NAMES.has(p.name))
+      : filteredPrices
+
+  const categoryLabels: Record<string, string> = {
+    food: "Food",
+    fuel: "Fuel",
+    construction: "Build",
+    household: "Household",
+  }
 
   return (
     <Card className="border-border/60 shadow-sm">
@@ -281,15 +299,33 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
       </CardHeader>
       <CardContent>
         {variant === "full" && (
-          <Tabs value={filter} onValueChange={setFilter} className="mb-4">
-            <TabsList className="w-full flex flex-nowrap overflow-x-auto gap-2">
-              <TabsTrigger value="all" className="whitespace-nowrap">All</TabsTrigger>
-              <TabsTrigger value="food" className="whitespace-nowrap">Food</TabsTrigger>
-              <TabsTrigger value="fuel" className="whitespace-nowrap">Fuel</TabsTrigger>
-              <TabsTrigger value="construction" className="whitespace-nowrap">Build</TabsTrigger>
-              <TabsTrigger value="household" className="whitespace-nowrap">Household</TabsTrigger>
-            </TabsList>
-          </Tabs>
+          <>
+            <div className="mb-4">
+              <label className="text-xs font-medium text-muted-foreground mb-2 block">Select goods</label>
+              <Select value={selectedGood} onValueChange={setSelectedGood}>
+                <SelectTrigger className="w-full max-w-sm">
+                  <SelectValue placeholder="Select goods" />
+                </SelectTrigger>
+                <SelectContent>
+                  {(["food", "fuel", "construction", "household"] as const).map((cat) => (
+                    <SelectGroup key={cat}>
+                      <SelectLabel>{categoryLabels[cat]}</SelectLabel>
+                      {items
+                        .filter((p) => p.category === cat)
+                        .map((item) => (
+                          <SelectItem key={item.name} value={item.name}>
+                            {item.name}
+                          </SelectItem>
+                        ))}
+                    </SelectGroup>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            {selectedGood === "" && (
+              <p className="text-xs text-muted-foreground mb-4">Essential commodities only — select a good above for more.</p>
+            )}
+          </>
         )}
         {variant === "essential" && (
           <p className="text-xs text-muted-foreground mb-4">Essential goods only — see full index for all items.</p>
@@ -315,7 +351,7 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
                   </div>
                 </div>
               ))
-            : filteredPrices.map((item) => (
+            : displayPrices.map((item) => (
                 <div 
                   key={item.name} 
                   className="flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-colors hover:bg-muted"
