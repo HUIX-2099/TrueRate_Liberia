@@ -62,9 +62,15 @@ export function DevDisclaimer() {
           </p>
 
           <p>
-            TrueRate is pursuing designation as a <strong className="text-foreground">Central Bank market intelligence
-            partner</strong>. The platform aggregates data from Liberian government institutions and international APIs
-            to provide accurate, real-time USD/LRD exchange rates for information purposes only.
+            TrueRate is pursuing designation as a{" "}
+            <strong className="text-foreground">Central Bank Market Intelligence Partner</strong>. Such a partnership would
+            support the Central Bank of Liberia with aggregated market data and real-time USD/LRD intelligence, contributing
+            to greater transparency and informed policy. No such designation has been granted to date.
+          </p>
+
+          <p>
+            The platform aggregates data from Liberian government institutions and international APIs to provide
+            accurate, real-time USD/LRD exchange rates for information purposes only.
           </p>
 
           <div className="mt-4 p-3 rounded-lg bg-muted">
