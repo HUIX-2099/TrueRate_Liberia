@@ -40,7 +40,7 @@ export function DevDisclaimer() {
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-500/10">
               <AlertTriangle className="h-6 w-6 text-yellow-500" />
             </div>
-            <h2 className="text-xl font-bold">Development Notice</h2>
+            <h2 className="text-xl font-bold">Disclaimer</h2>
           </div>
           <Button variant="ghost" size="icon" onClick={handleClose}>
             <X className="h-4 w-4" />
@@ -49,7 +49,7 @@ export function DevDisclaimer() {
 
         <div className="space-y-3 text-sm text-muted-foreground">
           <p>
-            <strong className="text-foreground">TrueRate-Liberia</strong> is an independent development project by{" "}
+            <strong className="text-foreground">TrueRate-Liberia</strong> is an independent initiative of{" "}
             <a
               href="https://huix-2099.vercel.app"
               target="_blank"
@@ -58,24 +58,24 @@ export function DevDisclaimer() {
             >
               HUIX-2099
             </a>
-            , a Liberian tech startup.
+            , a Liberian technology company.
           </p>
 
           <p>
-            TrueRate is campaigning to become a <strong className="text-foreground">Central Bank market intelligence
-            partner</strong> and aggregates data from Liberian government institutions and international APIs to provide
-            accurate, real-time USD/LRD exchange rates for informational purposes.
+            TrueRate is pursuing designation as a <strong className="text-foreground">Central Bank market intelligence
+            partner</strong>. The platform aggregates data from Liberian government institutions and international APIs
+            to provide accurate, real-time USD/LRD exchange rates for information purposes only.
           </p>
 
           <div className="mt-4 p-3 rounded-lg bg-muted">
             <p className="text-xs text-foreground">
-              <strong>Note:</strong> Exchange rates are for reference only. Always verify rates with your chosen money
-              changer before transactions.
+              <strong>Note:</strong> Exchange rates are for reference only. Users are advised to verify rates with their
+              chosen money changer prior to conducting any transaction.
             </p>
           </div>
 
           <p className="text-xs text-muted-foreground pt-2 border-t border-border/50">
-            Designed & Developed by <strong className="text-foreground">Moses J. Sackey</strong>,{" "}
+            Designed and developed by <strong className="text-foreground">Moses J. Sackey</strong>,{" "}
             <strong className="text-foreground">Victor E. Coleman</strong>
             <br />
             Powered by{" "}
@@ -91,7 +91,7 @@ export function DevDisclaimer() {
         </div>
 
         <Button onClick={handleClose} className="w-full">
-          I Understand
+          I Acknowledge
         </Button>
       </Card>
     </div>
