@@ -1,4 +1,5 @@
-# TrueRate — Priority Data Requirements & Sources  
+# TrueRate — Priority Data Requirements & Sources
+
 ## Phase 2: Data Requirements & System Design
 
 **Document type:** Data requirements specification  
@@ -9,13 +10,15 @@
 
 ## 1. Priority Data Sources
 
-| Priority | Source | Description | Current status |
-|----------|--------|-------------|----------------|
-| **1** | **Business registration database** | Licensed businesses (e.g. money changers); name, license status, validity. | Requested; integration TBD post-MoU. |
-| **2** | **Commodity price monitoring data** | Official prices by commodity (rice, palm oil, cement, etc.), unit, effective date, currency. | **In scope** — ingestion service and schema exist (`commodity_prices`, MoC normalizers). |
-| **3** | **Trade / import statistics** | Declarations or aggregates: port, commodity, date, volume, value (LRD/USD), tariff. | **In scope** — ingestion and schema exist (`trade_declarations`, `import_summaries`). |
-| **4** | **Business licensing status** | Current license status for verification (e.g. active/suspended/expired). | Requested; schema can extend `business_licenses` or similar. |
-| **5** | **Consumer complaint records (aggregated)** | Counts or indicators by category/region; no personal data. | Requested; use for risk/fraud indicators only. |
+
+| Priority | Source                                      | Description                                                                                  | Current status                                                                           |
+| -------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **1**    | **Business registration database**          | Licensed businesses (e.g. money changers); name, license status, validity.                   | Requested; integration TBD post-MoU.                                                     |
+| **2**    | **Commodity price monitoring data**         | Official prices by commodity (rice, palm oil, cement, etc.), unit, effective date, currency. | **In scope** — ingestion service and schema exist (`commodity_prices`, MoC normalizers). |
+| **3**    | **Trade / import statistics**               | Declarations or aggregates: port, commodity, date, volume, value (LRD/USD), tariff.          | **In scope** — ingestion and schema exist (`trade_declarations`, `import_summaries`).    |
+| **4**    | **Business licensing status**               | Current license status for verification (e.g. active/suspended/expired).                     | Requested; schema can extend `business_licenses` or similar.                             |
+| **5**    | **Consumer complaint records (aggregated)** | Counts or indicators by category/region; no personal data.                                   | Requested; use for risk/fraud indicators only.                                           |
+
 
 ---
 
@@ -23,12 +26,14 @@
 
 TrueRate can accept ministry data in the following ways (to be confirmed in DSA):
 
-| Format | Use case | Notes |
-|--------|----------|--------|
-| **API (REST)** | Commodity prices, trade stats, licensing status | Preferred; supports scheduled sync and near-real-time updates. |
-| **CSV / Excel** | Bulletins, periodic reports | Parsers can be added in `services/ingestion/src/moc/` and fed into existing normalizers. |
-| **JSON (file or API)** | Same as API | Current normalizers expect JSON-like structures; see `services/ingestion/src/moc/types.ts`. |
-| **Scheduled reports** | Monthly/quarterly summaries | Manual or automated upload to a designated endpoint; then same validation and storage pipeline. |
+
+| Format                 | Use case                                        | Notes                                                                                           |
+| ---------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **API (REST)**         | Commodity prices, trade stats, licensing status | Preferred; supports scheduled sync and near-real-time updates.                                  |
+| **CSV / Excel**        | Bulletins, periodic reports                     | Parsers can be added in `services/ingestion/src/moc/` and fed into existing normalizers.        |
+| **JSON (file or API)** | Same as API                                     | Current normalizers expect JSON-like structures; see `services/ingestion/src/moc/types.ts`.     |
+| **Scheduled reports**  | Monthly/quarterly summaries                     | Manual or automated upload to a designated endpoint; then same validation and storage pipeline. |
+
 
 ---
 
@@ -78,3 +83,4 @@ Existing ingestion is built for the following shapes (adapt to actual MoCI API):
 - **Data pipeline design:** `docs/architecture/data-pipeline-design.md`  
 - **Database schema:** `docs/architecture/database-schema.sql`, `docs/architecture/data-schema-overview.md`  
 - **Ingestion service:** `services/ingestion/README.md`, `services/ingestion/src/moc/`
+

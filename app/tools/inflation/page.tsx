@@ -128,7 +128,7 @@ export default function InflationTrackerPage() {
                 <Card className="mb-6">
                   <CardContent className="flex items-center justify-center gap-2 py-12">
                     <Loader2 className="h-6 w-6 animate-spin text-primary" />
-                    <span className="text-muted-foreground">Loading inflation data from LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP &amp; CBL…</span>
+                    <span className="text-muted-foreground">Loading inflation data from LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank, Trading Economics, IMF &amp; CBL…</span>
                   </CardContent>
                 </Card>
               )}
@@ -277,7 +277,7 @@ export default function InflationTrackerPage() {
                       <h3 className="font-semibold">In 2020</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      About L$ {exampleAmount2020.toLocaleString()} could buy a 25kg bag of rice, cooking oil, and basic groceries for a week—CPI-adjusted in real time from LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP &amp; CBL (same basket ≈ L$ {equivalentAmount.toLocaleString()} in {exampleLatestYear?.year ?? "2024"}).
+                      About L$ {exampleAmount2020.toLocaleString()} could buy a 25kg bag of rice, cooking oil, and basic groceries for a week—CPI-adjusted in real time from LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank, Trading Economics, IMF &amp; CBL (same basket ≈ L$ {equivalentAmount.toLocaleString()} in {exampleLatestYear?.year ?? "2024"}).
                     </p>
                   </CardContent>
                 </Card>
@@ -312,7 +312,7 @@ export default function InflationTrackerPage() {
                 <CardHeader>
                   <CardTitle>Consumer Price Index (CPI) Data</CardTitle>
                   <CardDescription>
-                    Official inflation statistics for Liberia. Index base: 2018 = 100. Data sources: LISGIS, WFP, FAO, FEWS NET, ReliefWeb, World Bank RTFP, Central Bank of Liberia.
+                    Official inflation statistics for Liberia. Index base: 2018 = 100. Data sources: LISGIS, WFP, FAO, FEWS NET, ReliefWeb, World Bank (RTFP &amp; WDI), Trading Economics, IMF, Central Bank of Liberia.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

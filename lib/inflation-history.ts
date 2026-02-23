@@ -1,7 +1,7 @@
 /**
  * Historical CPI and inflation for Liberia.
  * Index base: 2018 = 100 (LISGIS uses December 2018 as reference; CBL reports YoY inflation).
- * Data sources: LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP, and Central Bank of Liberia.
+ * Data sources: LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP, World Bank WDI, Trading Economics, IMF Data, and Central Bank of Liberia.
  */
 
 export const INFLATION_BASE_YEAR = 2018
@@ -15,6 +15,9 @@ export const FAO_FPMA_URL = "https://www.fao.org/giews/food-prices/en/"
 export const FEWS_NET_URL = "https://fews.net/west-africa"
 export const RELIEFWEB_LIBERIA_URL = "https://reliefweb.int/country/lbr"
 export const WORLD_BANK_RTFP_LIBERIA_URL = "https://microdata.worldbank.org/index.php/catalog/4498"
+export const WORLD_BANK_WDI_URL = "https://datacatalog.worldbank.org/dataset/world-development-indicators"
+export const TRADING_ECONOMICS_LIBERIA_URL = "https://tradingeconomics.com/liberia/consumer-price-index-cpi"
+export const IMF_DATA_URL = "https://www.imf.org/en/Data"
 
 /** All data sources for the inflation tracker (name + URL). */
 export const INFLATION_DATA_SOURCES: { name: string; url: string }[] = [
@@ -24,6 +27,9 @@ export const INFLATION_DATA_SOURCES: { name: string; url: string }[] = [
   { name: "FEWS NET", url: FEWS_NET_URL },
   { name: "ReliefWeb", url: RELIEFWEB_LIBERIA_URL },
   { name: "World Bank RTFP", url: WORLD_BANK_RTFP_LIBERIA_URL },
+  { name: "World Bank WDI", url: WORLD_BANK_WDI_URL },
+  { name: "Trading Economics", url: TRADING_ECONOMICS_LIBERIA_URL },
+  { name: "IMF Data", url: IMF_DATA_URL },
   { name: "Central Bank of Liberia", url: CBL_CPI_URL },
 ]
 
@@ -60,7 +66,7 @@ export const REFERENCE_25KG_RICE_LRD_2024 = 3500
  * Approximate 2020 cost (LRD) of "25kg bag of rice + cooking oil + basic groceries for a week".
  * Derived by CPI-adjusting 2024 market levels (rice ~L$ 3,500 in 2024; basket ~L$ 4,400 in 2024)
  * using LISGIS/CBL CPI: 2020 index 131.5, 2024 index 180.7 (2018=100).
- * Sources: LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP, CBL.
+ * Sources: LISGIS, WFP, FAO, FEWS, ReliefWeb, World Bank RTFP, World Bank WDI, Trading Economics, IMF, CBL.
  */
 export function get2020BasketAmountLrd(cpi2020: number, cpi2024: number): number {
   const basket2024 = 4400

@@ -133,11 +133,23 @@ This roadmap ties **partnership, data, and product phases** to deliverables and 
 
 ---
 
+## Parallel track: University research partnership
+
+To support **data verification**, **student research**, and **CBL market intelligence**, TrueRate can engage a prestige university (economics/finance) in a structured project: students analyze and verify government data against real-time data for **market risk**, **price stability**, **cost of living & affordability**, **commodity price trends**, and **import volume trends**. The class/group is credited; the University fosters real-time finance data collection.
+
+| Deliverable | Location |
+|-------------|----------|
+| **University outreach letter** | [university-research-outreach-letter.md](./university-research-outreach-letter.md) |
+| **University project brief** | [university-research-project-brief.md](./university-research-project-brief.md) |
+
+---
+
 ## Quick Reference: Where to Find What
 
 | Need | Where |
 |------|--------|
 | Partnership docs (Phase 1) | `docs/partnership/` |
+| University research (letter + brief) | [university-research-outreach-letter.md](./university-research-outreach-letter.md), [university-research-project-brief.md](./university-research-project-brief.md) |
 | Data requirements & formats | `docs/partnership/data-requirements.md` |
 | Architecture & diagrams | `docs/architecture/` |
 | Ingestion service | `services/ingestion/` |
