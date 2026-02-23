@@ -180,10 +180,10 @@ export default function RootLayout({
         {/* Preconnect to external APIs */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        {/* Google Fonts: Inter (sans) + JetBrains Mono (mono) */}
+        {/* Google Fonts: DM Sans (hero display), Inter (sans), JetBrains Mono (mono) */}
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap"
         />
       </head>
       <body className="font-sans antialiased pb-16 md:pb-0 overflow-x-hidden min-h-screen">
