@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -16,6 +16,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+  TooltipProvider,
+} from "@/components/ui/tooltip"
 import { Progress } from "@/components/ui/progress"
 import {
   TrendingUp,
@@ -55,6 +61,13 @@ import {
   Apple,
   Leaf,
   Milk,
+  RefreshCw,
+  Search,
+  Download,
+  Link2,
+  BarChart2,
+  ArrowUpDown,
+  X,
 } from "lucide-react"
 
 interface PriceItem {
@@ -87,8 +100,47 @@ const ESSENTIAL_PRICE_NAMES = new Set([
   "Cement (50kg)",
 ])
 
+// Names that are part of the Liberia Price Index basket (COL, market risk, affordability)
+const INDEX_BASKET_NAMES = new Set([
+  "Rice",
+  "Palm Oil",
+  "Cement",
+  "Fuel",
+  "Gas",
+  "Sugar",
+])
+function isIndexBasketItem(name: string): boolean {
+  return [...INDEX_BASKET_NAMES].some((b) => name.toLowerCase().includes(b.toLowerCase()))
+}
+
+export interface PriceIndexProps {
+  rate: number
+  variant?: "full" | "essential"
+  /** Show category tabs (All, Food, Fuel, etc.) and all items by category */
+  showCategoryTabs?: boolean
+  /** Show search input to filter by item name */
+  showSearch?: boolean
+  /** Show Export CSV button */
+  showExport?: boolean
+  /** Show manual refresh button */
+  showRefresh?: boolean
+  /** Highlight items that are in the index basket (COL & risk metrics) */
+  highlightBasketItems?: boolean
+  /** Show link to Market Intelligence page */
+  showMarketIntelligenceLink?: boolean
+}
+
 // Market Price Index
-export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?: "full" | "essential" }) {
+export function PriceIndex({
+  rate,
+  variant = "full",
+  showCategoryTabs = false,
+  showSearch = false,
+  showExport = false,
+  showRefresh = false,
+  highlightBasketItems = false,
+  showMarketIntelligenceLink = false,
+}: PriceIndexProps) {
   const prices: PriceItem[] = [
     { name: "25kg Rice (Thai)", icon: <Wheat className="h-4 w-4" />, priceUSD: 10.5, priceLRD: 1938.206, change: -5, category: "food" },
     { name: "25kg Rice (Local)", icon: <Wheat className="h-4 w-4" />, priceUSD: 11, priceLRD: 2030.501, change: -4.5, category: "food" },
@@ -151,6 +203,11 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
   const [sourceLabel, setSourceLabel] = useState<string>("")
   const [filter, setFilter] = useState("food")
   const [selectedGood, setSelectedGood] = useState<string>("")
+  const [categoryTab, setCategoryTab] = useState<string>("all")
+  const [searchQuery, setSearchQuery] = useState("")
+  const [refreshKey, setRefreshKey] = useState(0)
+  const [sortBy, setSortBy] = useState<"name-asc" | "name-desc" | "price-asc" | "price-desc" | "change-asc" | "change-desc">("name-asc")
+  const [updatedAtIso, setUpdatedAtIso] = useState<string | null>(null)
 
   useEffect(() => {
     let isMounted = true
@@ -219,10 +276,16 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
 
         setItems(mapped)
         if (typeof data?.updatedAt === "string") {
+          setUpdatedAtIso(data.updatedAt)
           const date = new Date(data.updatedAt)
           setUpdatedLabel(
-            Number.isNaN(date.getTime()) ? "Updated Recently" : `Updated ${date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`,
+            Number.isNaN(date.getTime())
+              ? "Updated Recently"
+              : date.toLocaleTimeString ? `Updated ${date.toLocaleDateString("en-US", { month: "short", day: "numeric" })} ${date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}`
+              : `Updated ${date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`,
           )
+        } else {
+          setUpdatedAtIso(null)
         }
         if (Array.isArray(data?.sources) && data.sources.length) {
           setSourceLabel(data.sources[0])
@@ -244,7 +307,7 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
       isMounted = false
       window.clearInterval(id)
     }
-  }, [])
+  }, [refreshKey])
 
   const filteredItems = items.filter((p) => p.category === filter)
   const filteredPrices =
@@ -252,12 +315,37 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
       ? filteredItems.filter((p) => ESSENTIAL_PRICE_NAMES.has(p.name))
       : filteredItems
 
-  const displayPrices =
-    variant === "full"
-      ? selectedGood !== ""
-        ? items.filter((p) => p.name === selectedGood)
-        : items.filter((p) => ESSENTIAL_PRICE_NAMES.has(p.name))
-      : filteredPrices
+  const searchFiltered =
+    showSearch && searchQuery.trim()
+      ? (list: PriceItem[]) =>
+          list.filter((p) => p.name.toLowerCase().includes(searchQuery.trim().toLowerCase()))
+      : (list: PriceItem[]) => list
+  const tabFiltered =
+    showCategoryTabs && categoryTab !== "all"
+      ? (list: PriceItem[]) => list.filter((p) => p.category === categoryTab)
+      : (list: PriceItem[]) => list
+
+  const displayPricesRaw =
+    variant === "full" && showCategoryTabs
+      ? searchFiltered(tabFiltered(items))
+      : variant === "full"
+        ? selectedGood !== ""
+          ? items.filter((p) => p.name === selectedGood)
+          : searchFiltered(
+              showCategoryTabs ? tabFiltered(items) : items.filter((p) => ESSENTIAL_PRICE_NAMES.has(p.name)),
+            )
+        : searchFiltered(filteredPrices)
+
+  const displayPrices = useMemo(() => {
+    const list = [...displayPricesRaw]
+    if (sortBy === "name-asc") list.sort((a, b) => a.name.localeCompare(b.name))
+    else if (sortBy === "name-desc") list.sort((a, b) => b.name.localeCompare(a.name))
+    else if (sortBy === "price-asc") list.sort((a, b) => a.priceLRD - b.priceLRD)
+    else if (sortBy === "price-desc") list.sort((a, b) => b.priceLRD - a.priceLRD)
+    else if (sortBy === "change-asc") list.sort((a, b) => a.change - b.change)
+    else if (sortBy === "change-desc") list.sort((a, b) => b.change - a.change)
+    return list
+  }, [displayPricesRaw, sortBy])
 
   const categoryLabels: Record<string, string> = {
     food: "Food",
@@ -267,6 +355,7 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
   }
 
   return (
+    <TooltipProvider delayDuration={300}>
     <Card className="border-border/60 shadow-sm">
       <CardHeader>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -288,9 +377,47 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
               (Liberia Institute of Statistics)
             </CardDescription>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <Badge variant="outline">{updatedLabel}</Badge>
             <Badge variant="secondary">Live</Badge>
+            {showRefresh && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-8 gap-1.5"
+                onClick={() => setRefreshKey((k) => k + 1)}
+                disabled={loading}
+              >
+                <RefreshCw className={`h-3.5 w-3.5 ${loading ? "animate-spin" : ""}`} />
+                Refresh
+              </Button>
+            )}
+            {showExport && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-8 gap-1.5"
+                onClick={() => {
+                  const headers = "Item,Category,Price (LRD),Price (USD),Change (%)\n"
+                  const rows = displayPrices
+                    .map(
+                      (p) =>
+                        `"${p.name.replace(/"/g, '""')}",${p.category},${p.priceLRD.toFixed(2)},${p.priceUSD.toFixed(2)},${p.change}%`,
+                    )
+                    .join("\n")
+                  const blob = new Blob([headers + rows], { type: "text/csv;charset=utf-8;" })
+                  const url = URL.createObjectURL(blob)
+                  const a = document.createElement("a")
+                  a.href = url
+                  a.download = `liberia-price-index-${new Date().toISOString().slice(0, 10)}.csv`
+                  a.click()
+                  URL.revokeObjectURL(url)
+                }}
+              >
+                <Download className="h-3.5 w-3.5" />
+                Export CSV
+              </Button>
+            )}
           </div>
         </div>
         {sourceLabel && (
@@ -298,7 +425,61 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
         )}
       </CardHeader>
       <CardContent>
-        {variant === "full" && (
+        {showSearch && (
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <div className="relative flex-1 min-w-[200px] max-w-sm">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+              <Input
+                type="search"
+                placeholder="Search items..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-9 pr-9"
+                aria-label="Search price index items"
+              />
+              {searchQuery.trim() && (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7"
+                  onClick={() => setSearchQuery("")}
+                  aria-label="Clear search"
+                >
+                  <X className="h-3.5 w-3.5" />
+                </Button>
+              )}
+            </div>
+          </div>
+        )}
+        {showCategoryTabs && (
+          <div className="mb-4 flex flex-wrap items-center gap-3">
+            <Tabs value={categoryTab} onValueChange={setCategoryTab} className="w-full sm:w-auto">
+              <TabsList className="flex flex-wrap h-auto gap-1">
+                <TabsTrigger value="all" className="text-xs">All</TabsTrigger>
+                <TabsTrigger value="food" className="text-xs">Food</TabsTrigger>
+                <TabsTrigger value="fuel" className="text-xs">Fuel</TabsTrigger>
+                <TabsTrigger value="construction" className="text-xs">Construction</TabsTrigger>
+                <TabsTrigger value="household" className="text-xs">Household</TabsTrigger>
+              </TabsList>
+            </Tabs>
+            <Select value={sortBy} onValueChange={(v: typeof sortBy) => setSortBy(v)}>
+              <SelectTrigger className="w-[180px] h-9 gap-1.5" aria-label="Sort by">
+                <ArrowUpDown className="h-3.5 w-3.5 text-muted-foreground" />
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="name-asc">Name A–Z</SelectItem>
+                <SelectItem value="name-desc">Name Z–A</SelectItem>
+                <SelectItem value="price-asc">Price low → high</SelectItem>
+                <SelectItem value="price-desc">Price high → low</SelectItem>
+                <SelectItem value="change-asc">Change % low → high</SelectItem>
+                <SelectItem value="change-desc">Change % high → low</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        )}
+        {variant === "full" && !showCategoryTabs && (
           <>
             <div className="mb-4">
               <label className="text-xs font-medium text-muted-foreground mb-2 block">Select goods</label>
@@ -330,7 +511,11 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
         {variant === "essential" && (
           <p className="text-xs text-muted-foreground mb-4">Essential goods only — see full index for all items.</p>
         )}
-        
+        {showCategoryTabs && displayPrices.length > 0 && (
+          <p className="text-xs text-muted-foreground mb-2" aria-live="polite">
+            Showing {displayPrices.length} item{displayPrices.length !== 1 ? "s" : ""}
+          </p>
+        )}
         <div className="space-y-2">
           {loading
             ? Array.from({ length: 6 }).map((_, index) => (
@@ -351,17 +536,39 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
                   </div>
                 </div>
               ))
-            : displayPrices.map((item) => (
-                <div 
-                  key={item.name} 
-                  className="flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-background/70 p-3 sm:p-4 transition-colors hover:bg-muted"
+            : displayPrices.length === 0
+              ? (
+                <div className="rounded-xl border border-dashed border-border/60 bg-muted/20 p-6 text-center text-sm text-muted-foreground">
+                  {searchQuery.trim() ? "No items match your search." : "No items in this category."}
+                </div>
+              )
+              : displayPrices.map((item) => (
+                <div
+                  key={item.name}
+                  className={`flex items-center justify-between gap-3 rounded-xl border p-3 sm:p-4 transition-colors hover:bg-muted ${
+                    highlightBasketItems && isIndexBasketItem(item.name)
+                      ? "border-primary/30 bg-primary/5"
+                      : "border-border/60 bg-background/70"
+                  }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
                       {item.icon}
                     </div>
                     <div className="min-w-0">
-                      <div className="font-medium text-sm sm:text-base truncate">{item.name}</div>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-medium text-sm sm:text-base truncate">{item.name}</span>
+                        {highlightBasketItems && isIndexBasketItem(item.name) && (
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Badge variant="secondary" className="text-[10px] px-1.5 py-0 cursor-help">Index basket</Badge>
+                            </TooltipTrigger>
+                            <TooltipContent side="top" className="max-w-[240px] text-xs">
+                              Used for cost of living, market risk, and affordability metrics. Same basket across the platform.
+                            </TooltipContent>
+                          </Tooltip>
+                        )}
+                      </div>
                       <div className="text-xs text-muted-foreground">
                         L${item.priceLRD.toLocaleString()} LRD <span className="text-muted-foreground/80">(≈ ${item.priceUSD.toFixed(2)} USD)</span>
                       </div>
@@ -389,8 +596,21 @@ export function PriceIndex({ rate, variant = "full" }: { rate: number; variant?:
             </Link>
           </div>
         )}
+        {showMarketIntelligenceLink && (
+          <div className="mt-4 pt-4 border-t border-border/60">
+            <Link
+              href="/market-intelligence"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+            >
+              <BarChart2 className="h-4 w-4" />
+              Market Intelligence — cost of living, market risk, affordability
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        )}
       </CardContent>
     </Card>
+    </TooltipProvider>
   )
 }
 

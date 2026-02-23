@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { getCommodityPriceSeries, getMonitoredCommodities } from "@/lib/monitoring/commodity-data"
 import { computeCostOfLivingIndex } from "@/lib/monitoring/commodity-engine/cost-of-living"
+import { PRICE_INDEX_BASKET_ID } from "@/lib/price-index/basket"
 
 export const dynamic = "force-dynamic"
 export const revalidate = 0
@@ -29,6 +30,7 @@ export async function GET(request: Request) {
 
     return NextResponse.json({
       ...result,
+      priceIndexBasketId: PRICE_INDEX_BASKET_ID,
       timestamp: new Date().toISOString(),
     })
   } catch (error) {

@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Trophy, Star, TrendingUp, Bell, MapPin, Flag } from "lucide-react"
+import { DigestSubscribe } from "@/components/digest-subscribe"
 import { useAuth } from "@/lib/auth/auth-context"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
@@ -241,6 +242,10 @@ export default function DashboardPage() {
                     </div>
                   </CardContent>
                 </Card>
+
+                <div className="mt-6">
+                  <DigestSubscribe />
+                </div>
               </div>
             </div>
           </div>

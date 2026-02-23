@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { getCommodityPriceSeries, getMonitoredCommodities, getExchangeRateSeries } from "@/lib/monitoring/commodity-data"
 import { buildCostOfLivingDashboard } from "@/lib/cost-of-living"
+import { PRICE_INDEX_BASKET_ID } from "@/lib/price-index/basket"
 
 export const dynamic = "force-dynamic"
 export const revalidate = 0
@@ -27,7 +28,10 @@ export async function GET(request: Request) {
       baseDate,
     })
 
-    return NextResponse.json(dashboard)
+    return NextResponse.json({
+      ...dashboard,
+      priceIndexBasketId: PRICE_INDEX_BASKET_ID,
+    })
   } catch (error) {
     console.error("[Cost of living dashboard]", error)
     return NextResponse.json(

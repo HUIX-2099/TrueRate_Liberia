@@ -55,6 +55,10 @@ Node.js service that fetches **commodity prices** and **import statistics** from
 | `npm run sync` | One-off full sync (commodity + imports), then exit |
 | `npm run sync:commodity` | One-off commodity sync only |
 | `npm run sync:imports` | One-off import sync only |
+| `npm run trigger` | Run HTTP trigger server (POST /sync with CRON_SECRET runs sync) |
+| `npm run trigger:dev` | Run trigger server with ts-node |
+
+To allow Vercel Cron (or another scheduler) to trigger sync, run the trigger server (e.g. on a small host or serverless), set `CRON_SECRET` and `TRIGGER_PORT`, and configure the Next.js app with `ENABLE_CRON_SYNC=true`, `INGESTION_SERVICE_URL`, and `CRON_SECRET`. The route `POST /api/cron/sync` will then call the ingestion service.
 
 ## API shape (MoC)
 

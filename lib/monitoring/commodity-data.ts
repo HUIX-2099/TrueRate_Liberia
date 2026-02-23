@@ -2,10 +2,12 @@
  * Data provider for commodity price monitoring.
  * Commodity series: plug in your DB or MONITORING_COMMODITY_API_URL.
  * FX series: uses CBL historical rates from existing lib.
+ * Monitored commodities align with the Liberia Price Index basket (market risk, COL, affordability).
  */
 
 import type { PricePoint } from "./commodity-engine/types"
 import { fetchCblHistoricalRates } from "@/lib/cbl-rates"
+import { getPriceIndexBasketForMonitoring } from "@/lib/price-index/basket"
 
 const DEFAULT_DAYS = 90
 
@@ -86,7 +88,7 @@ export async function getExchangeRateSeries(days: number = DEFAULT_DAYS): Promis
   return fallback.map((p) => ({ date: p.date, value: p.rate }))
 }
 
-/** List of commodity identifiers to monitor (extend from config or DB). */
+/** List of commodity identifiers to monitor. Aligned with Price Index basket (COL, market risk, affordability). */
 export function getMonitoredCommodities(): Array<{ id: string; name: string }> {
   const env = process.env.MONITORING_COMMODITIES
   if (env) {
@@ -97,9 +99,5 @@ export function getMonitoredCommodities(): Array<{ id: string; name: string }> {
       // ignore
     }
   }
-  return [
-    { id: "rice", name: "Rice" },
-    { id: "palm-oil", name: "Palm Oil" },
-    { id: "cement", name: "Cement" },
-  ]
+  return getPriceIndexBasketForMonitoring()
 }

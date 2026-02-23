@@ -7,6 +7,7 @@ import { generateMarketDemandScore } from "@/lib/trade-analytics/market-demand-s
 import { detectDemandPatterns } from "@/lib/trade-analytics/demand-patterns"
 import { computeMarketRisk } from "@/lib/market-risk"
 import type { SupplyChange } from "@/lib/market-risk"
+import { PRICE_INDEX_BASKET_ID } from "@/lib/price-index/basket"
 
 export const dynamic = "force-dynamic"
 export const revalidate = 0
@@ -91,7 +92,7 @@ export async function GET(request: Request) {
 
     const inputs = await buildMarketRiskInputs({ days, periods, windowDays, supplyChanges: [] })
     const result = computeMarketRisk(inputs)
-    return NextResponse.json(result)
+    return NextResponse.json({ ...result, priceIndexBasketId: PRICE_INDEX_BASKET_ID })
   } catch (error) {
     console.error("[Market risk]", error)
     return NextResponse.json(
@@ -128,7 +129,11 @@ export async function POST(request: Request) {
 
     const inputs = await buildMarketRiskInputs({ days, periods, windowDays, supplyChanges })
     const result = computeMarketRisk(inputs)
-    return NextResponse.json({ ...result, supplyChangesUsed: supplyChanges.length })
+    return NextResponse.json({
+      ...result,
+      priceIndexBasketId: PRICE_INDEX_BASKET_ID,
+      supplyChangesUsed: supplyChanges.length,
+    })
   } catch (error) {
     console.error("[Market risk POST]", error)
     return NextResponse.json(

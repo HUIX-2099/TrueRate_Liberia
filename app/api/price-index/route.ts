@@ -2,12 +2,14 @@ import { NextResponse } from "next/server"
 
 import { getAggregatedRate } from "@/lib/api/multi-source-rates"
 import { fetchLisgisPrices } from "@/lib/lisgis-prices"
+import { PRICE_INDEX_BASKET_ID } from "@/lib/price-index/basket"
 
 export const revalidate = 60 // Auto-update every minute
 
 /**
- * Essential goods and services prices for Liberia.
+ * Essential goods and services prices for Liberia (Liberia Price Index).
  * Prefers official LISGIS / Ministry of Commerce CPI data when available; falls back to CBL/market indicators.
+ * Market risk, price stability, cost of living index, and affordability use the same basket (priceIndexBasketId).
  */
 const BASE_ITEMS = [
   // Food
@@ -92,6 +94,7 @@ export async function GET() {
         referenceMonth: lisgis.referenceMonth,
         sources: ["LISGIS", "Ministry of Commerce"],
         sourceUrl: "https://lisgis.gov.lr/pricestats.php",
+        priceIndexBasketId: PRICE_INDEX_BASKET_ID,
         items,
       })
     }
@@ -125,6 +128,7 @@ export async function GET() {
     updatedAt: timestamp,
     sources: sources?.length ? sources : ["LISGIS"],
     sourceUrl: "https://lisgis.gov.lr/pricestats.php",
+    priceIndexBasketId: PRICE_INDEX_BASKET_ID,
     items,
   })
 }

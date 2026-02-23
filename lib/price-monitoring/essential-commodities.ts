@@ -1,11 +1,11 @@
 /**
  * Ministry-monitored essential commodities: Rice (25kg, 50kg), Cooking oil, Cement, Fuel, other staples.
- * Used for price monitoring, Cost of Living Index, and FX correlation.
+ * Source IDs align with the Price Index basket (lib/price-index/basket) so COL, market risk, and affordability stay aligned.
  */
 
 import type { EssentialCommodityItem } from "./types"
 
-/** Essential goods monitored by the Ministry (Commerce Today / MoCI). */
+/** Essential goods monitored by the Ministry (Commerce Today / MoCI). Source IDs = Price Index basket. */
 export const ESSENTIAL_COMMODITIES: EssentialCommodityItem[] = [
   { id: "rice-25kg", name: "Rice", unit: "25kg bag", sourceId: "rice", sourceMultiplier: 1, category: "food" },
   { id: "rice-50kg", name: "Rice", unit: "50kg bag", sourceId: "rice", sourceMultiplier: 2, category: "food" },

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { getAggregatedRate } from "@/lib/api/multi-source-rates"
+import { getVerificationMap } from "@/lib/verification"
 
 // CORS headers for embeddable widget (cross-origin fetch from partner sites)
 const corsHeaders = {
@@ -16,10 +17,10 @@ export async function GET() {
   try {
     const aggregatedData = await getAggregatedRate()
 
-    // Simulate money changer rates with slight variations
+    // Simulate money changer rates with slight variations; verification from lib/verification (ministry/DB when available)
     const baseRate = aggregatedData.rate
     const now = new Date().toISOString()
-    const changers = [
+    const changerRows = [
       {
         id: "1",
         name: "Central Bank of Liberia",
@@ -119,6 +120,11 @@ export async function GET() {
         phone: "+231 77 789 0123",
       },
     ]
+    const verifiedMap = getVerificationMap(changerRows.map((c) => c.id))
+    const changers = changerRows.map((c) => ({
+      ...c,
+      verified: verifiedMap[c.id] ?? c.verified,
+    }))
 
     const marketRate = aggregatedData.rate
     const officialRate = aggregatedData.cblRate ?? null

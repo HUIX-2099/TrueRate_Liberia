@@ -3,7 +3,7 @@ import { NextResponse } from "next/server"
 export const dynamic = "force-dynamic"
 export const revalidate = 0
 
-/** Cron-based data sync scheduler is disabled. */
+/** Cron-triggered data sync is disabled. Sync runs via services/ingestion (npm run sync or trigger server). */
 
 export function GET() {
   return NextResponse.json(

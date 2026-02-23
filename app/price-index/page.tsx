@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { PriceIndex } from "@/components/liberia-features"
+import { PriceIndexPeriodCompare } from "@/components/price-index-period-compare"
 import { fetchJson } from "@/lib/api/fetch-json"
 import { getServerApiUrl } from "@/lib/api/server-base-url"
 import { BarChart3, TrendingUp, Activity, Calendar, ShoppingCart, FileSpreadsheet } from "lucide-react"
@@ -105,7 +106,18 @@ export default async function PriceIndexPage() {
                   </div>
                 </div>
               </div>
-              <PriceIndex rate={priceIndexRate} />
+              <div className="mb-6">
+                <PriceIndexPeriodCompare />
+              </div>
+              <PriceIndex
+                rate={priceIndexRate}
+                showCategoryTabs
+                showSearch
+                showExport
+                showRefresh
+                highlightBasketItems
+                showMarketIntelligenceLink
+              />
             </div>
           </div>
         </section>

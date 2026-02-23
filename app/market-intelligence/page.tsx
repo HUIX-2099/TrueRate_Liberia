@@ -369,6 +369,9 @@ export default function MarketIntelligencePage() {
                     <p className="font-medium text-foreground">Affordability</p>
                     <p>Reflects how affordable the basket is relative to typical income. Labels (e.g. moderate, high) describe the level.</p>
                   </div>
+                  <p className="pt-2 border-t border-border text-muted-foreground">
+                    Market risk, price stability, cost of living, and affordability all use the same <strong className="text-foreground">Liberia Price Index</strong> basket (essential goods) so metrics are comparable.
+                  </p>
                 </div>
               </CollapsibleContent>
             </Collapsible>
@@ -493,6 +496,11 @@ export default function MarketIntelligencePage() {
                 </CardContent>
               </Card>
             </div>
+            <p className="mt-3 text-xs text-muted-foreground flex items-center gap-1.5 flex-wrap">
+              <Link2 className="h-3.5 w-3.5 shrink-0" />
+              All four metrics use the same Liberia Price Index basket (essential goods: rice, palm oil, cement, fuel, sugar) for consistency.
+              <a href="/price-index" className="text-primary hover:underline font-medium">View Price Index</a>
+            </p>
           </section>
 
           {/* Charts */}
