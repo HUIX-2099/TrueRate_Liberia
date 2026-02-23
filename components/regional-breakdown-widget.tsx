@@ -90,60 +90,60 @@ export function RegionalBreakdownWidget() {
 
   return (
     <TooltipProvider delayDuration={200}>
-      <Card className="rounded-xl border-border/60 shadow-md overflow-hidden bg-gradient-to-b from-card to-card/95">
-        <CardHeader className="pb-4">
+      <Card className="rounded-2xl border-border/60 shadow-sm overflow-hidden bg-card">
+        <CardHeader className="pb-4 sm:pb-5">
           <CardTitle className="flex items-center gap-3 text-lg font-semibold">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 ring-1 ring-primary/20">
-              <MapPin className="h-5 w-5 text-primary" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <MapPin className="h-5 w-5" />
             </div>
             <span>Regional breakdown</span>
           </CardTitle>
-          <CardDescription className="text-sm leading-relaxed pl-[3.25rem]">
+          <CardDescription className="text-sm leading-relaxed pl-0 sm:pl-[3.25rem] mt-1.5">
             Average USD/LRD rate by region. Monrovia (Montserrado) vs upcountry counties.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           {/* Monrovia vs Upcountry */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
               <BarChart3 className="h-3.5 w-3.5" />
               Monrovia vs Upcountry
             </p>
             <div className="grid grid-cols-2 gap-4">
-              <div className="group rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 p-4 text-center transition-shadow hover:shadow-md">
+              <div className="group rounded-2xl border border-primary/20 bg-primary/5 dark:bg-primary/10 p-4 sm:p-5 text-center transition-all hover:shadow-md hover:border-primary/30">
                 <div className="flex justify-center mb-2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15">
-                    <Building2 className="h-5 w-5 text-primary" />
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                    <Building2 className="h-5 w-5" />
                   </div>
                 </div>
                 <p className="text-sm font-semibold text-foreground">Monrovia</p>
-                <p className="text-2xl font-bold font-mono tabular-nums text-foreground mt-1">
+                <p className="text-2xl sm:text-3xl font-bold font-mono tabular-nums text-foreground mt-1">
                   {monroviaRate ? monroviaRate.toFixed(2) : "—"}
                 </p>
-                <p className="text-xs text-muted-foreground">LRD per USD</p>
+                <p className="text-xs text-muted-foreground mt-0.5">LRD per USD</p>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <span className="inline-block mt-2 text-xs font-medium text-muted-foreground bg-muted/80 px-2 py-0.5 rounded-full">
+                    <span className="inline-block mt-2 text-xs font-medium text-muted-foreground bg-muted/80 dark:bg-muted/60 px-2.5 py-1 rounded-full">
                       {(monrovia ?? regional[0])?.count ?? 0} reports
                     </span>
                   </TooltipTrigger>
                   <TooltipContent>Number of rate reports in this region</TooltipContent>
                 </Tooltip>
               </div>
-              <div className="group rounded-xl border border-secondary/25 bg-gradient-to-br from-secondary/5 to-secondary/10 p-4 text-center transition-shadow hover:shadow-md">
+              <div className="group rounded-2xl border border-secondary/25 bg-secondary/5 dark:bg-secondary/10 p-4 sm:p-5 text-center transition-all hover:shadow-md hover:border-secondary/35">
                 <div className="flex justify-center mb-2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary/15">
-                    <Mountain className="h-5 w-5 text-secondary" />
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/15 text-secondary">
+                    <Mountain className="h-5 w-5" />
                   </div>
                 </div>
                 <p className="text-sm font-semibold text-foreground">Upcountry</p>
-                <p className="text-2xl font-bold font-mono tabular-nums text-foreground mt-1">
+                <p className="text-2xl sm:text-3xl font-bold font-mono tabular-nums text-foreground mt-1">
                   {upcountryRate ? upcountryRate.toFixed(2) : "—"}
                 </p>
-                <p className="text-xs text-muted-foreground">LRD per USD</p>
+                <p className="text-xs text-muted-foreground mt-0.5">LRD per USD</p>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <span className="inline-block mt-2 text-xs font-medium text-muted-foreground bg-muted/80 px-2 py-0.5 rounded-full">
+                    <span className="inline-block mt-2 text-xs font-medium text-muted-foreground bg-muted/80 dark:bg-muted/60 px-2.5 py-1 rounded-full">
                       {(upcountry ?? regional[1])?.count ?? 0} reports
                     </span>
                   </TooltipTrigger>
@@ -152,17 +152,18 @@ export function RegionalBreakdownWidget() {
               </div>
             </div>
             {spread > 0 && (
-              <p className="text-xs text-center text-muted-foreground">
-                Spread: <span className="font-mono font-medium text-foreground">{spread.toFixed(2)}</span> LRD
-                ({spreadPercent}% difference)
+              <p className="text-xs text-center text-muted-foreground pt-0.5">
+                Spread: <span className="font-mono font-semibold text-foreground">{spread.toFixed(2)}</span> LRD
+                <span className="mx-1">·</span>
+                <span>{spreadPercent}% difference</span>
               </p>
             )}
           </div>
 
-          <Separator className="my-1" />
+          <Separator className="my-0.5" />
 
           {/* By county */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">By county</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
               {countySlice.map((c) => {
@@ -170,13 +171,13 @@ export function RegionalBreakdownWidget() {
                 return (
                   <Tooltip key={c.county}>
                     <TooltipTrigger asChild>
-                      <div className="group rounded-xl border border-border/60 bg-muted/20 p-3 text-center transition-all hover:border-primary/30 hover:bg-muted/40 hover:shadow-sm cursor-default">
+                      <div className="group rounded-xl border border-border/60 bg-muted/20 dark:bg-muted/30 p-3 text-center transition-all hover:border-primary/25 hover:bg-muted/40 dark:hover:bg-muted/50 hover:shadow-sm cursor-default">
                         <div className="flex justify-center mb-2">
-                          <CountyFlag county={c.county} className="h-8 w-10 rounded-md shadow-sm object-cover" />
+                          <CountyFlag county={c.county} className="h-8 w-10 rounded-lg object-cover shadow-sm" />
                         </div>
                         <p className="text-lg font-bold font-mono tabular-nums text-foreground">{c.avgRate.toFixed(2)}</p>
                         <p className="text-xs text-muted-foreground">LRD</p>
-                        <Progress value={Math.min(100, pct + 5)} className="h-1.5 mt-2 bg-muted" />
+                        <Progress value={Math.min(100, pct + 5)} className="h-1.5 mt-2 bg-muted rounded-full" />
                         <p className="text-sm font-medium text-foreground mt-1.5 truncate" title={c.county}>
                           {c.county}
                         </p>
@@ -193,18 +194,18 @@ export function RegionalBreakdownWidget() {
             </div>
           </div>
 
-          <Separator className="my-1" />
+          <Separator className="my-0.5" />
 
           <div className="flex justify-center pt-1">
             <Button
               variant="outline"
               size="sm"
-              className="gap-1.5 text-primary border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+              className="gap-2 rounded-lg h-9 px-4 font-medium text-primary border-primary/25 hover:bg-primary/10 hover:border-primary/40"
               asChild
             >
-              <Link href="/analytics">
+              <Link href="/analytics" className="inline-flex items-center">
                 View full analytics
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-4 w-4 shrink-0" />
               </Link>
             </Button>
           </div>

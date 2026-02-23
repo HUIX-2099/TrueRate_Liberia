@@ -65,30 +65,30 @@ export function Hero() {
         <div className="grid gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
           {/* Left Content - left-aligned, larger type */}
           <div className="flex flex-col gap-6 sm:gap-7 md:gap-8 min-w-0 text-left">
-            {/* Live badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-3 py-1.5 text-sm w-fit shadow-sm ring-1 ring-primary/5">
-              <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden>
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-80" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary ring-4 ring-secondary/20" />
+            {/* Live status */}
+            <div className="inline-flex items-center gap-2.5 rounded-full bg-primary/8 dark:bg-primary/12 border border-primary/15 px-3.5 py-2 text-sm w-fit shadow-sm">
+              <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
               </span>
               <span className="text-muted-foreground font-medium">Updated</span>
+              <span className="text-muted-foreground/60" aria-hidden>·</span>
               <span className="text-foreground font-semibold tabular-nums" aria-live="polite">{lastUpdate}</span>
             </div>
 
             {/* Main Heading */}
-            <div className="space-y-4 sm:space-y-5 min-w-0">
-              <h1 className="font-display text-3xl min-[380px]:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight text-balance leading-[1.1]">
-                <span className="text-muted-foreground font-semibold tracking-wide">
-                  The Engine Behind
-                </span>
-                <br className="sm:hidden" />
-                <span className="hero-headline-gradient relative mt-1.5 inline-block bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent tracking-tight after:absolute after:left-0 after:bottom-0 after:block after:h-1 after:w-full after:rounded-full after:bg-gradient-to-r after:from-primary after:via-secondary after:to-primary after:opacity-60 after:content-['']">
+            <div className="space-y-4 sm:space-y-5 min-w-0 animate-in fade-in slide-in-from-bottom-3 duration-600 fill-mode-both delay-75">
+              <p className="border-l-2 border-primary/40 pl-3 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                The Engine Behind
+              </p>
+              <h1 className="font-display text-3xl min-[380px]:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-balance leading-[1.1] pt-0.5">
+                <span className="hero-headline-gradient relative inline-block pb-1.5 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent tracking-tight after:absolute after:left-0 after:bottom-0 after:block after:h-1.5 after:w-full after:rounded-full after:bg-gradient-to-r after:from-primary after:via-secondary after:to-primary after:opacity-70 after:content-['']">
                   Market Transparency in Liberia
                 </span>
               </h1>
-              <p className="pl-4 sm:pl-5 border-l-2 border-primary/40 bg-gradient-to-r from-primary/[0.04] to-transparent pr-2 py-0.5 -mx-0.5 rounded-r-md text-base sm:text-lg md:text-xl text-muted-foreground text-pretty max-w-xl leading-[1.65]">
+              <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-xl leading-[1.7] pl-4 sm:pl-5 border-l-2 border-primary/30 bg-muted/30 dark:bg-muted/20 rounded-r-md py-1 pr-2 -ml-px">
                 TrueRate is a fintech and market transparency platform serving Liberian citizens and businesses with{" "}
-                <strong className="text-foreground font-semibold text-primary/90">reliable exchange rate information</strong>, market intelligence, and financial tools.
+                <strong className="text-foreground font-semibold">reliable exchange rate information</strong>, market intelligence, and financial tools.
               </p>
             </div>
 
@@ -96,22 +96,22 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Button
                 size="lg"
-                className="gap-2 h-11 sm:h-12 px-5 sm:px-6 text-base sm:text-lg rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ring-2 ring-primary/20 w-full sm:w-auto"
+                className="group gap-2.5 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg rounded-2xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 ring-2 ring-primary/15 w-full sm:w-auto font-semibold tracking-wide"
                 asChild
               >
-                <Link href="/converter">
+                <Link href="/converter" className="inline-flex items-center gap-2.5">
                   Try Converter
-                  <ArrowRight className="h-4 w-4 shrink-0" />
+                  <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-2 h-11 sm:h-12 px-5 sm:px-6 text-base sm:text-lg rounded-xl border-2 bg-background/80 backdrop-blur-sm hover:bg-background hover:border-primary/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-auto"
+                className="group gap-2.5 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg rounded-2xl border-2 bg-background/80 backdrop-blur-sm hover:bg-primary/5 hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 w-full sm:w-auto font-semibold tracking-wide"
                 asChild
               >
-                <Link href="/predictions">
-                  <TrendingUp className="h-4 w-4 shrink-0" />
+                <Link href="/predictions" className="inline-flex items-center gap-2.5">
+                  <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5" />
                   View Predictions
                 </Link>
               </Button>
@@ -119,32 +119,32 @@ export function Hero() {
 
             {/* Stats strip */}
             <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-1">
-              <div className="group rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm px-3 py-3 sm:px-4 sm:py-4 text-center transition-all duration-300 hover:border-primary/30 hover:bg-card/90 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5">
-                <div className="flex justify-center mb-1">
-                  <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-primary/15 text-primary transition-transform duration-300 group-hover:scale-110">
+              <div className="group rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm px-3 py-3.5 sm:px-4 sm:py-4 text-center transition-all duration-300 hover:border-primary/30 hover:bg-card/90 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5">
+                <div className="flex justify-center mb-1.5">
+                  <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-primary/15 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/20">
                     <Globe className="h-4 w-4 sm:h-5 sm:w-5" />
                   </span>
                 </div>
                 <span className="block text-xl sm:text-2xl font-bold text-foreground tabular-nums leading-none">100+</span>
-                <span className="block text-[10px] sm:text-xs font-medium text-muted-foreground uppercase tracking-wider mt-0.5">Sources</span>
+                <span className="block text-[10px] sm:text-xs font-medium text-muted-foreground uppercase tracking-wider mt-1">Sources</span>
               </div>
-              <div className="group rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm px-3 py-3 sm:px-4 sm:py-4 text-center transition-all duration-300 hover:border-secondary/30 hover:bg-card/90 hover:shadow-lg hover:shadow-secondary/10 hover:-translate-y-0.5">
-                <div className="flex justify-center mb-1">
-                  <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-secondary/15 text-secondary transition-transform duration-300 group-hover:scale-110">
+              <div className="group rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm px-3 py-3.5 sm:px-4 sm:py-4 text-center transition-all duration-300 hover:border-secondary/30 hover:bg-card/90 hover:shadow-lg hover:shadow-secondary/10 hover:-translate-y-0.5">
+                <div className="flex justify-center mb-1.5">
+                  <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-secondary/15 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary/20">
                     <Shield className="h-4 w-4 sm:h-5 sm:w-5" />
                   </span>
                 </div>
                 <span className="block text-xl sm:text-2xl font-bold text-foreground tabular-nums leading-none">99.2%</span>
-                <span className="block text-[10px] sm:text-xs font-medium text-muted-foreground uppercase tracking-wider mt-0.5">Accuracy</span>
+                <span className="block text-[10px] sm:text-xs font-medium text-muted-foreground uppercase tracking-wider mt-1">Accuracy</span>
               </div>
-              <div className="group rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm px-3 py-3 sm:px-4 sm:py-4 text-center transition-all duration-300 hover:border-accent/30 hover:bg-card/90 hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-0.5">
-                <div className="flex justify-center mb-1">
-                  <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-accent/15 text-accent transition-transform duration-300 group-hover:scale-110">
+              <div className="group rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm px-3 py-3.5 sm:px-4 sm:py-4 text-center transition-all duration-300 hover:border-accent/30 hover:bg-card/90 hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-0.5">
+                <div className="flex justify-center mb-1.5">
+                  <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-accent/15 text-accent transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/20">
                     <Zap className="h-4 w-4 sm:h-5 sm:w-5" />
                   </span>
                 </div>
                 <span className="block text-xl sm:text-2xl font-bold text-foreground tabular-nums leading-none">60s</span>
-                <span className="block text-[10px] sm:text-xs font-medium text-muted-foreground uppercase tracking-wider mt-0.5">Updates</span>
+                <span className="block text-[10px] sm:text-xs font-medium text-muted-foreground uppercase tracking-wider mt-1">Updates</span>
               </div>
             </div>
           </div>

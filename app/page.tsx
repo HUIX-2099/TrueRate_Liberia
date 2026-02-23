@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { 
   ArrowRight, TrendingUp, MapPin, Calculator, Shield, 
-  Briefcase, MessageSquare, Users, Gift, Brain, Crown, Bell
+  Briefcase, MessageSquare, Users, Gift, Brain, Crown, Bell, BarChart3
 } from "lucide-react"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
@@ -34,41 +34,47 @@ export default function HomePage() {
         <Hero />
 
         {/* Regional breakdown + Quick Tools */}
-        <section className="py-10 sm:py-14 md:py-16 bg-background">
+        <section className="py-10 sm:py-14 md:py-16 bg-background" aria-labelledby="rates-by-region-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[100vw] xl:max-w-none">
-            <div className="max-w-4xl mx-auto space-y-4">
-              <div className="text-center space-y-3">
-                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-                  <Badge variant="outline">Regional breakdown</Badge>
-                  <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400">Live</Badge>
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="text-center space-y-4">
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  <Badge variant="outline" className="font-medium">Regional breakdown</Badge>
+                  <Badge className="bg-primary/10 text-primary border-0">Live</Badge>
                   <Badge variant="secondary">By county</Badge>
                 </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance">
+                <h2 id="rates-by-region-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-balance tracking-tight">
                   <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                     Rates by Region
                   </span>
                 </h2>
-                <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
+                <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
                   Compare average USD/LRD rates across Monrovia and upcountry. Use the tools below for quick access.
                 </p>
                 {/* Quick-access tools */}
-                <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
-                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
+                <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+                  <Button variant="outline" size="sm" className="gap-2 rounded-lg h-9 px-4 font-medium" asChild>
                     <Link href="/converter">
-                      <Calculator className="h-4 w-4" />
+                      <Calculator className="h-4 w-4 shrink-0" />
                       Converter
                     </Link>
                   </Button>
-                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
+                  <Button variant="outline" size="sm" className="gap-2 rounded-lg h-9 px-4 font-medium" asChild>
                     <Link href="/tools">
-                      <Bell className="h-4 w-4" />
+                      <Bell className="h-4 w-4 shrink-0" />
                       Alerts
                     </Link>
                   </Button>
-                  <Button variant="outline" size="sm" className="gap-1.5" asChild>
+                  <Button variant="outline" size="sm" className="gap-2 rounded-lg h-9 px-4 font-medium" asChild>
                     <Link href="/map">
-                      <MapPin className="h-4 w-4" />
+                      <MapPin className="h-4 w-4 shrink-0" />
                       Map
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="sm" className="gap-2 rounded-lg h-9 px-4 font-medium" asChild>
+                    <Link href="/analytics">
+                      <BarChart3 className="h-4 w-4 shrink-0" />
+                      Regional breakdown
                     </Link>
                   </Button>
                 </div>
