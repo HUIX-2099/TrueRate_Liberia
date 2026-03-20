@@ -603,16 +603,16 @@ const ConverterPageComponent = () => {
               </p>
             </div>
             <Tabs defaultValue="tools" className="space-y-8">
-              <TabsList className="w-full max-w-[100vw] xl:max-w-none justify-start overflow-x-auto flex-nowrap -mx-1 px-1">
-                <TabsTrigger value="tools" className="gap-2">
+              <TabsList className="grid w-full grid-cols-1 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3">
+                <TabsTrigger value="tools" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                   <Calculator className="h-4 w-4 text-primary" />
                   Quick Tools
                 </TabsTrigger>
-                <TabsTrigger value="changers" className="gap-2">
+                <TabsTrigger value="changers" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                   <Building2 className="h-4 w-4 text-primary" />
                   Compare Changers
                 </TabsTrigger>
-                <TabsTrigger value="remittance" className="gap-2">
+                <TabsTrigger value="remittance" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                   <Globe className="h-4 w-4 text-primary" />
                   Remittance
                 </TabsTrigger>
@@ -748,8 +748,6 @@ const ConverterPageComponent = () => {
                   {/* Price Index — same as /price-index: scrollable list, search, category tabs */}
                   <PriceIndex
                     rate={liveRateValue || 180}
-                    showCategoryTabs
-                    showSearch
                     showExport
                     showRefresh
                     highlightBasketItems

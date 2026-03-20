@@ -166,12 +166,12 @@ export default function AvailabilityPage() {
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-3 flex-wrap">
                 <Tabs value={filter} onValueChange={setFilter} className="flex-1">
-                  <TabsList className="h-auto flex-wrap">
-                    <TabsTrigger value="all" className="text-xs">All</TabsTrigger>
-                    <TabsTrigger value="fuel" className="text-xs gap-1"><Fuel className="h-3 w-3 text-primary" /> Fuel</TabsTrigger>
-                    <TabsTrigger value="rice" className="text-xs gap-1"><ShoppingBasket className="h-3 w-3 text-primary" /> Rice</TabsTrigger>
-                    <TabsTrigger value="cooking_gas" className="text-xs gap-1"><Flame className="h-3 w-3 text-primary" /> Gas</TabsTrigger>
-                    <TabsTrigger value="water" className="text-xs gap-1"><Droplets className="h-3 w-3 text-primary" /> Water</TabsTrigger>
+                  <TabsList className="grid w-full grid-cols-2 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-5">
+                    <TabsTrigger value="all" className="w-full text-xs sm:text-sm min-h-[44px]">All</TabsTrigger>
+                    <TabsTrigger value="fuel" className="w-full text-xs sm:text-sm gap-1 min-h-[44px]"><Fuel className="h-3 w-3 text-primary" /> Fuel</TabsTrigger>
+                    <TabsTrigger value="rice" className="w-full text-xs sm:text-sm gap-1 min-h-[44px]"><ShoppingBasket className="h-3 w-3 text-primary" /> Rice</TabsTrigger>
+                    <TabsTrigger value="cooking_gas" className="w-full text-xs sm:text-sm gap-1 min-h-[44px]"><Flame className="h-3 w-3 text-primary" /> Gas</TabsTrigger>
+                    <TabsTrigger value="water" className="w-full text-xs sm:text-sm gap-1 min-h-[44px]"><Droplets className="h-3 w-3 text-primary" /> Water</TabsTrigger>
                   </TabsList>
                 </Tabs>
                 <Button size="sm" className="rounded-xl" onClick={() => setShowForm(!showForm)}>

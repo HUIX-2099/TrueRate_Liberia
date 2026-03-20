@@ -280,9 +280,9 @@ export default function ToolsPage() {
             </div>
 
             <Tabs defaultValue="daily" className="space-y-6">
-              <TabsList className="w-full sm:w-auto mx-auto flex justify-center">
+              <TabsList className="grid w-full grid-cols-2 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3 lg:w-auto lg:inline-flex">
                 {TOOL_CATEGORIES.map((cat) => (
-                  <TabsTrigger key={cat.id} value={cat.id} className="gap-1.5">
+                  <TabsTrigger key={cat.id} value={cat.id} className="w-full gap-1.5 px-3 py-2.5 text-xs sm:text-sm min-h-[44px]">
                     {cat.icon} {cat.label}
                   </TabsTrigger>
                 ))}

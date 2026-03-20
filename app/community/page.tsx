@@ -297,16 +297,16 @@ export default function CommunityPage() {
                 </p>
               </div>
               <Tabs defaultValue="reports" className="space-y-4 sm:space-y-6">
-                <TabsList className="w-full md:w-auto flex flex-nowrap overflow-x-auto overflow-y-hidden gap-1 sm:gap-2 pb-1 -mx-1 px-1 sm:mx-0 sm:px-0 scrollbar-thin">
-                  <TabsTrigger value="reports" className="whitespace-nowrap min-h-10 flex-shrink-0 data-[state=active]:shadow-sm">
+                <TabsList className="grid w-full grid-cols-2 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3 lg:grid-cols-5">
+                  <TabsTrigger value="reports" className="w-full whitespace-normal min-h-[44px] px-3 py-2.5 text-xs sm:text-sm data-[state=active]:shadow-sm">
                     Street updates
                   </TabsTrigger>
-                  <TabsTrigger value="reviews" className="whitespace-nowrap min-h-10 flex-shrink-0 data-[state=active]:shadow-sm">
+                  <TabsTrigger value="reviews" className="w-full whitespace-normal min-h-[44px] px-3 py-2.5 text-xs sm:text-sm data-[state=active]:shadow-sm">
                     Reviews & notes
                   </TabsTrigger>
-                  <TabsTrigger value="leaderboard" className="whitespace-nowrap min-h-10 flex-shrink-0">Leaderboard</TabsTrigger>
-                  <TabsTrigger value="profile" className="whitespace-nowrap min-h-10 flex-shrink-0">My Profile</TabsTrigger>
-                  <TabsTrigger value="referral" className="whitespace-nowrap min-h-10 flex-shrink-0">Referrals</TabsTrigger>
+                  <TabsTrigger value="leaderboard" className="w-full whitespace-normal min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">Leaderboard</TabsTrigger>
+                  <TabsTrigger value="profile" className="w-full whitespace-normal min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">My Profile</TabsTrigger>
+                  <TabsTrigger value="referral" className="w-full whitespace-normal min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">Referrals</TabsTrigger>
                 </TabsList>
 
                 {/* Rate Reports Tab */}

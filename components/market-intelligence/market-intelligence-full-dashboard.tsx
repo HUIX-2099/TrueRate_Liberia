@@ -311,32 +311,47 @@ export function MarketIntelligenceFullDashboard() {
           </div>
         </div>
         {/* Hero header */}
-        <section className="relative border-b border-border bg-muted/10">
-          <div className="container mx-auto px-4 py-8 md:py-10">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <div>
-                <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-                  Market analytics dashboard
+        <section className="relative overflow-x-hidden min-h-[min(36vh,280px)] sm:min-h-[38vh] border-b border-border/30" aria-label="Market analytics snapshot">
+          <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none" aria-hidden>
+            <div className="absolute inset-0 md:hidden" />
+            <div className="absolute -top-20 -right-20 h-40 w-40 sm:h-52 sm:w-52 md:h-64 md:w-64 rounded-full bg-muted/20 border border-border/30" />
+            <div className="absolute top-1/2 -left-10 h-32 w-32 sm:h-44 sm:w-44 md:h-52 md:w-52 rounded-full bg-muted/20 border border-border/30" />
+          </div>
+          <div className="container relative z-10 mx-auto px-4 py-8 md:py-10 max-w-6xl">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+              <div className="space-y-3 max-w-xl">
+                <p className="border-l-2 border-primary/40 pl-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                  TrueRate · Market intelligence
+                </p>
+                <h1 className="font-display text-2xl min-[360px]:text-3xl sm:text-4xl font-bold tracking-tight text-balance leading-[1.1]">
+                  <span className="relative inline-block pb-1.5 text-foreground">
+                    Market analytics dashboard
+                  </span>
                 </h1>
-                <p className="text-muted-foreground mt-1.5 text-sm md:text-base max-w-xl">
-                  Deep dive: commodity charts, import volumes, ministry price tables, sync logs, and data sources.
+                <p className="text-muted-foreground text-sm md:text-base pl-4 sm:pl-5 border-l-2 border-primary/30 bg-muted/30 dark:bg-muted/20 rounded-r-md py-1.5 pr-2 -ml-px">
+                  Deep dive into commodity trends, import flows, ministry price monitoring, and source-level data quality for Liberia.
                 </p>
                 <a
                   href="#truerate-market-intelligence"
-                  className="inline-flex items-center gap-1.5 mt-2 text-sm font-medium text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
                 >
                   Jump to weekly insights
                 </a>
-              </div>
-              <div className="flex items-center gap-2 shrink-0">
                 {lastFetch && (
-                  <span className="hidden sm:inline text-xs text-muted-foreground">
-                    Updated {lastFetch.toLocaleTimeString()}
-                  </span>
+                  <p className="text-xs text-muted-foreground">
+                    Snapshot updated {lastFetch.toLocaleTimeString()}
+                  </p>
                 )}
-                <Button variant="outline" size="sm" onClick={fetchAll} disabled={loading}>
-                  <RefreshCw className={`h-4 w-4 mr-2 ${loading ? "animate-spin" : ""}`} />
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+                <Button variant="outline" size="sm" onClick={fetchAll} disabled={loading} className="gap-2">
+                  <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
                   Refresh
+                </Button>
+                <Button asChild size="sm" className="gap-2">
+                  <Link href="/market-intelligence">
+                    Back to overview
+                  </Link>
                 </Button>
               </div>
             </div>

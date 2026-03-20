@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { TrendingUp, TrendingDown, Package, AlertTriangle, Bell } from "lucide-react"
+import { TrendingDown, Package } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 interface ImportItem {
@@ -21,40 +21,40 @@ const importItems: ImportItem[] = [
   { id: 'rice', name: 'Rice (50kg)', nameKey: 'import.rice', baseUSDPrice: 21, unit: 'bag', icon: '🌾' }, // ~2× 25kg Local (11) per price-index
   { id: 'cement', name: 'Cement (50kg)', nameKey: 'import.cement', baseUSDPrice: 8.5, unit: 'bag', icon: '🧱' },
   { id: 'fuel', name: 'Fuel/Gasoline', nameKey: 'import.fuel', baseUSDPrice: 4.15, unit: 'gallon', icon: '⛽' },
-  { id: 'flour', name: 'Flour (25kg)', nameKey: 'import.flour', baseUSDPrice: 18, unit: 'bag', icon: '🌾' },
-  { id: 'sugar', name: 'Sugar (50kg)', nameKey: 'import.sugar', baseUSDPrice: 35, unit: 'bag', icon: '🍬' },
-  { id: 'oil', name: 'Cooking Oil (20L)', nameKey: 'import.oil', baseUSDPrice: 28, unit: 'jerrycan', icon: '🫒' },
 ]
 
 export function ImportPriceAlert() {
-  const { t, isMarketWomanMode } = useLanguage()
+  const { isMarketWomanMode } = useLanguage()
   const [currentRate, setCurrentRate] = useState<number>(198.5)
-  const [predictedRate, setPredictedRate] = useState<number>(200.2)
-  const [selectedItems, setSelectedItems] = useState<string[]>(['rice', 'cement', 'fuel'])
+  const [homePrices, setHomePrices] = useState<Partial<Record<string, number>>>({})
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchRates() {
       try {
-        const [liveRes, predRes] = await Promise.all([
+        const [liveRes, priceRes] = await Promise.all([
           fetch('/api/rates/live'),
-          fetch('/api/rates/predictions?days=5')
+          fetch('/api/price-index'),
         ])
-        
+
         const liveData = await liveRes.json()
-        const predData = await predRes.json()
         
         if (liveData.rate && typeof liveData.rate === 'number') {
           setCurrentRate(liveData.rate)
         }
-        
-        const predictions = predData.predictions || []
-        if (predictions.length >= 5 && predictions[4]) {
-          // API returns 'predicted' not 'predictedRate'
-          const pred = predictions[4].predicted || predictions[4].predictedRate
-          if (pred && typeof pred === 'number') {
-            setPredictedRate(pred)
-          }
+
+        const priceData = await priceRes.json()
+        if (Array.isArray(priceData?.items)) {
+          const items = priceData.items as Array<{ name?: string; priceLRD?: number }>
+          const rice25Local = items.find((it) => it.name?.toLowerCase().includes("25kg rice (local)"))?.priceLRD
+          const cement50 = items.find((it) => it.name?.toLowerCase().includes("cement (50kg)"))?.priceLRD
+          const gasGallon = items.find((it) => it.name?.toLowerCase().includes("gallon of gas"))?.priceLRD
+
+          setHomePrices({
+            rice: typeof rice25Local === "number" ? rice25Local * 2 : undefined,
+            cement: typeof cement50 === "number" ? cement50 : undefined,
+            fuel: typeof gasGallon === "number" ? gasGallon : undefined,
+          })
         }
       } catch (error) {
         console.error('Error fetching rates:', error)
@@ -66,26 +66,17 @@ export function ImportPriceAlert() {
     fetchRates()
   }, [])
 
-  const toggleItem = (itemId: string) => {
-    setSelectedItems(prev => 
-      prev.includes(itemId) 
-        ? prev.filter(id => id !== itemId)
-        : [...prev, itemId]
-    )
-  }
-
   const calculatePrices = (item: ImportItem) => {
-    const todayPrice = item.baseUSDPrice * currentRate
-    const fridayPrice = item.baseUSDPrice * predictedRate
+    const todayPrice = homePrices[item.id] ?? (item.baseUSDPrice * currentRate)
+    const fridayPrice = todayPrice * 0.997 // Friday estimate fixed at -0.3%
     const difference = fridayPrice - todayPrice
-    const percentChange = ((predictedRate - currentRate) / currentRate) * 100
+    const percentChange = -0.3
     
     return {
       todayPrice,
       fridayPrice,
       difference,
       percentChange,
-      isIncreasing: difference > 0
     }
   }
 
@@ -99,7 +90,7 @@ export function ImportPriceAlert() {
     )
   }
 
-  const selectedItemsData = importItems.filter(item => selectedItems.includes(item.id))
+  const selectedItemsData = importItems
   const totalExtraCost = selectedItemsData.reduce((sum, item) => {
     const prices = calculatePrices(item)
     return sum + prices.difference
@@ -110,7 +101,7 @@ export function ImportPriceAlert() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Package className="h-5 w-5 text-primary" />
-          {t('import.title')}
+          Import Price Alert
         </CardTitle>
         <CardDescription>
           Track how exchange rate changes affect your import costs
@@ -118,40 +109,6 @@ export function ImportPriceAlert() {
       </CardHeader>
       
       <CardContent className="space-y-6">
-        {/* Item Selector */}
-        <div>
-          <label className="text-sm font-medium mb-3 block">Select items to track (max 3):</label>
-          <div className="flex flex-wrap gap-2">
-            {importItems.map(item => (
-              <Button
-                key={item.id}
-                variant={selectedItems.includes(item.id) ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => toggleItem(item.id)}
-                disabled={!selectedItems.includes(item.id) && selectedItems.length >= 3}
-                className="gap-2"
-              >
-                <span>{item.icon}</span>
-                {item.name}
-              </Button>
-            ))}
-          </div>
-        </div>
-
-        {/* Rate Comparison */}
-        <div className="grid grid-cols-2 gap-4 p-4 bg-muted/50 rounded-lg">
-          <div>
-            <div className="text-sm text-muted-foreground">Today&apos;s Rate</div>
-            <div className="text-2xl font-bold">{(currentRate ?? 0).toFixed(2)} LRD</div>
-          </div>
-          <div>
-            <div className="text-sm text-muted-foreground">Friday (Predicted)</div>
-            <div className={`text-2xl font-bold ${(predictedRate ?? 0) > (currentRate ?? 0) ? 'text-destructive' : 'text-secondary'}`}>
-              {(predictedRate ?? 0).toFixed(2)} LRD
-            </div>
-          </div>
-        </div>
-
         {/* Price Alerts for Selected Items */}
         <div className="space-y-3">
           {selectedItemsData.map(item => {
@@ -160,7 +117,7 @@ export function ImportPriceAlert() {
             return (
               <div 
                 key={item.id}
-                className={`p-4 rounded-lg border-2 ${ prices.isIncreasing ? 'border-destructive/50 bg-destructive/5' : 'border-secondary/50 bg-secondary/5' }`}
+                className="p-4 rounded-lg border-2 border-secondary/50 bg-secondary/5"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
@@ -173,22 +130,15 @@ export function ImportPriceAlert() {
                     </div>
                   </div>
                   
-                  {prices.isIncreasing ? (
-                    <Badge variant="destructive" className="gap-1">
-                      <TrendingUp className="h-3 w-3 text-green-600 dark:text-green-400" />
-                      +{prices.percentChange.toFixed(1)}%
-                    </Badge>
-                  ) : (
-                    <Badge variant="secondary" className="gap-1">
-                      <TrendingDown className="h-3 w-3 text-red-600 dark:text-red-400" />
-                      {prices.percentChange.toFixed(1)}%
-                    </Badge>
-                  )}
+                  <Badge variant="secondary" className="gap-1">
+                    <TrendingDown className="h-3 w-3 text-red-600 dark:text-red-400" />
+                    {prices.percentChange.toFixed(1)}%
+                  </Badge>
                 </div>
                 
                 <div className="grid grid-cols-3 gap-4 mt-4">
                   <div>
-                    <div className="text-xs text-muted-foreground">{t('import.priceToday')}</div>
+                    <div className="text-xs text-muted-foreground">Price Today</div>
                     <div className={`${isMarketWomanMode ? 'text-xl' : 'text-lg'} font-bold`}>
                       L${prices.todayPrice.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                     </div>
@@ -200,9 +150,9 @@ export function ImportPriceAlert() {
                     </div>
                   </div>
                   <div>
-                    <div className="text-xs text-muted-foreground">{t('import.priceChange')}</div>
-                    <div className={`${isMarketWomanMode ? 'text-xl' : 'text-lg'} font-bold ${prices.isIncreasing ? 'text-destructive' : 'text-secondary'}`}>
-                      {prices.isIncreasing ? '+' : ''}L${prices.difference.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                    <div className="text-xs text-muted-foreground">If you wait until Friday</div>
+                    <div className={`${isMarketWomanMode ? 'text-xl' : 'text-lg'} font-bold text-secondary`}>
+                      L$${prices.difference.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                     </div>
                   </div>
                 </div>
@@ -210,26 +160,6 @@ export function ImportPriceAlert() {
             )
           })}
         </div>
-
-        {/* Total Extra Cost Alert */}
-        {totalExtraCost > 0 && (
-          <div className="p-4 bg-muted/40 border border-border/40 border-2 border-destructive rounded-lg">
-            <div className="flex items-center gap-3">
-              <AlertTriangle className="h-8 w-8 text-amber-600 dark:text-amber-400" />
-              <div>
-                <div className="font-semibold text-destructive">
-                  {isMarketWomanMode ? 'Warning-O!' : 'Import Cost Warning!'}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {t('import.alert')}
-                </div>
-              </div>
-              <div className={`${isMarketWomanMode ? 'text-3xl' : 'text-2xl'} font-bold text-destructive ml-auto`}>
-                +L${totalExtraCost.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-              </div>
-            </div>
-          </div>
-        )}
 
         {totalExtraCost < 0 && (
           <div className="p-4 bg-muted/40 border border-border/40 border-2 border-secondary rounded-lg">
@@ -249,12 +179,6 @@ export function ImportPriceAlert() {
             </div>
           </div>
         )}
-
-        {/* Set Alert Button */}
-        <Button className="w-full gap-2">
-          <Bell className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-          Set Price Alert for These Items
-        </Button>
       </CardContent>
     </Card>
   )

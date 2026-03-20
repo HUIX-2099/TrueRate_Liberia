@@ -99,16 +99,16 @@ export default function CrisisDashboardPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Tabs defaultValue="cascade" className="space-y-6">
-                <TabsList className="w-full grid grid-cols-3 h-auto">
-                  <TabsTrigger value="cascade" className="gap-1.5 text-xs sm:text-sm py-2.5">
+                <TabsList className="grid w-full grid-cols-1 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3">
+                  <TabsTrigger value="cascade" className="w-full gap-1.5 text-xs sm:text-sm py-2.5 min-h-[44px]">
                     <Fuel className="h-4 w-4 text-primary" />
                     <span className="hidden sm:inline">Price</span> Cascade
                   </TabsTrigger>
-                  <TabsTrigger value="warnings" className="gap-1.5 text-xs sm:text-sm py-2.5">
+                  <TabsTrigger value="warnings" className="w-full gap-1.5 text-xs sm:text-sm py-2.5 min-h-[44px]">
                     <Bell className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                     Early <span className="hidden sm:inline">Warning</span>
                   </TabsTrigger>
-                  <TabsTrigger value="actions" className="gap-1.5 text-xs sm:text-sm py-2.5">
+                  <TabsTrigger value="actions" className="w-full gap-1.5 text-xs sm:text-sm py-2.5 min-h-[44px]">
                     <Shield className="h-4 w-4 text-primary" />
                     Actions
                   </TabsTrigger>

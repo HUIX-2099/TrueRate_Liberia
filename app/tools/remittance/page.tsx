@@ -310,10 +310,10 @@ export default function RemittanceCalculatorPage() {
                   <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">How Are You Supporting Home?</h2>
                   <p className="text-sm text-muted-foreground">Choose your situation and we&apos;ll help you send the right amount, the right way</p>
                 </div>
-                <TabsList className="w-full sm:w-auto mx-auto flex justify-center">
-                  <TabsTrigger value="family" className="gap-1.5"><Heart className="h-3.5 w-3.5 text-primary" /> Family</TabsTrigger>
-                  <TabsTrigger value="monthly" className="gap-1.5"><PiggyBank className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Monthly Plans</TabsTrigger>
-                  <TabsTrigger value="invest" className="gap-1.5"><TrendingUp className="h-3.5 w-3.5 text-green-600 dark:text-green-400" /> Invest</TabsTrigger>
+                <TabsList className="grid w-full grid-cols-2 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3">
+                  <TabsTrigger value="family" className="w-full gap-1.5 px-3 py-2.5 text-xs sm:text-sm min-h-[44px]"><Heart className="h-3.5 w-3.5 text-primary" /> Family</TabsTrigger>
+                  <TabsTrigger value="monthly" className="w-full gap-1.5 px-3 py-2.5 text-xs sm:text-sm min-h-[44px]"><PiggyBank className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Monthly Plans</TabsTrigger>
+                  <TabsTrigger value="invest" className="w-full gap-1.5 px-3 py-2.5 text-xs sm:text-sm min-h-[44px]"><TrendingUp className="h-3.5 w-3.5 text-green-600 dark:text-green-400" /> Invest</TabsTrigger>
                 </TabsList>
 
                 {/* Family Support Tab */}

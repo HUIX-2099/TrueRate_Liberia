@@ -24,8 +24,6 @@ import {
   Lock,
   CheckCircle2,
   Zap,
-  Star,
-  Crown,
   DollarSign,
   ArrowRight,
   ShieldCheck,
@@ -41,7 +39,6 @@ import { LiveChangerQueue } from "@/components/live-changer-queue"
 import { PushNotifications } from "@/components/push-notifications"
 import { SentimentAnalysis } from "@/components/sentiment-analysis"
 import { BusinessTrustBar } from "@/components/business-trust-bar"
-import { BusinessRateRiskPanel } from "@/components/business-rate-risk-panel"
 import { PageHero } from "@/components/layout/page-hero"
 
 /* Design system (this page):
@@ -89,7 +86,7 @@ export default function BusinessDashboardPage() {
         >
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-6">
             <Button asChild size="lg" className="rounded-xl h-12 px-6 text-base font-semibold shadow-sm min-h-[48px] w-full sm:w-auto focus-visible:ring-[3px]">
-              <Link href="#pricing">Upgrade to Business — $5/mo</Link>
+              <Link href="#tools">Start using free business tools</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-xl h-12 px-6 text-base min-h-[48px] w-full sm:w-auto border-2 focus-visible:ring-[3px]">
               <Link href="#tools">
@@ -116,20 +113,6 @@ export default function BusinessDashboardPage() {
 
         <BusinessTrustBar />
 
-        <section className="py-8 sm:py-12 bg-muted/30" aria-labelledby="rate-risk-heading">
-          <div className="container mx-auto max-w-6xl">
-            <header className="mb-6">
-              <h2 id="rate-risk-heading" className="text-xl sm:text-2xl font-bold text-balance tracking-tight font-display mb-1">
-                Rate risk &amp; recommendation
-              </h2>
-              <p className="text-muted-foreground text-sm">
-                When LRD weakens suddenly, businesses suffer. See the 30-day trend, volatility, and a clear action.
-              </p>
-            </header>
-            <BusinessRateRiskPanel />
-          </div>
-        </section>
-
         <section id="tools" className="py-12 sm:py-16 md:py-20 bg-background" aria-labelledby="tools-heading">
           <div className="container mx-auto max-w-6xl">
             <header className="text-center mb-8 sm:mb-10">
@@ -137,25 +120,25 @@ export default function BusinessDashboardPage() {
                 <span className="text-foreground">Tools & Reports</span>
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto">
-                Everything in one place: forecasts, booking, alerts, and API.
+                Built to support your day-to-day decisions with clear market data, risk signals, and tools that help you protect margin and save more.
               </p>
             </header>
 
             <Tabs defaultValue="tools" className="w-full min-w-0" aria-label="Business tools and reports">
-              <TabsList className="flex flex-nowrap overflow-x-auto w-full max-w-full gap-1 p-1.5 rounded-xl bg-muted/40 border border-border/50 [scrollbar-width:none] [-webkit-overflow-scrolling:touch] md:flex-wrap md:overflow-visible h-auto min-h-[48px]">
-                <TabsTrigger value="tools" className="shrink-0 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] py-3 px-4 text-sm font-medium min-h-[44px]">
-                  Business Tools
+              <TabsList className="grid w-full grid-cols-2 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3 lg:flex lg:flex-wrap">
+                <TabsTrigger value="tools" className="w-full rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] px-3 py-2.5 text-xs sm:text-sm font-medium min-h-[44px] text-center whitespace-normal">
+                  Tools
                 </TabsTrigger>
-                <TabsTrigger value="booking" className="shrink-0 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] py-3 px-4 text-sm font-medium min-h-[44px]">
+                <TabsTrigger value="booking" className="w-full rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] px-3 py-2.5 text-xs sm:text-sm font-medium min-h-[44px] text-center whitespace-normal">
                   Book Changer
                 </TabsTrigger>
-                <TabsTrigger value="alerts" className="shrink-0 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] py-3 px-4 text-sm font-medium min-h-[44px]">
+                <TabsTrigger value="alerts" className="w-full rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] px-3 py-2.5 text-xs sm:text-sm font-medium min-h-[44px] text-center whitespace-normal">
                   Alerts
                 </TabsTrigger>
-                <TabsTrigger value="reports" className="shrink-0 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] py-3 px-4 text-sm font-medium min-h-[44px]">
+                <TabsTrigger value="reports" className="w-full rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] px-3 py-2.5 text-xs sm:text-sm font-medium min-h-[44px] text-center whitespace-normal">
                   Reports
                 </TabsTrigger>
-                <TabsTrigger value="api" className="shrink-0 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] py-3 px-4 text-sm font-medium min-h-[44px]">
+                <TabsTrigger value="api" className="w-full rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-[var(--shadow-card)] px-3 py-2.5 text-xs sm:text-sm font-medium min-h-[44px] text-center whitespace-normal">
                   API Access
                 </TabsTrigger>
               </TabsList>
@@ -451,87 +434,19 @@ export default function BusinessDashboardPage() {
               </TabsContent>
             </Tabs>
 
-            <div id="pricing" className="mt-16 sm:mt-20 scroll-mt-28" aria-labelledby="pricing-heading">
+            <div id="pricing" className="mt-16 sm:mt-20 scroll-mt-28" aria-labelledby="free-access-heading">
               <header className="text-center mb-8 sm:mb-10">
-                <h2 id="pricing-heading" className="text-2xl sm:text-3xl font-bold text-balance tracking-tight font-display mb-2">
-                  <span className="text-foreground">Choose Your Plan</span>
+                <h2 id="free-access-heading" className="text-2xl sm:text-3xl font-bold text-balance tracking-tight font-display mb-2">
+                  <span className="text-foreground">Free Access for Every Business</span>
                 </h2>
                 <p className="text-muted-foreground text-sm sm:text-base max-w-md mx-auto">
-                  Start free, upgrade when you need more. Pay via Orange Money or Lonestar Momo.
+                  All business tools are available at no cost. No payment setup required.
                 </p>
                 <p className="text-xs text-muted-foreground mt-2 flex items-center justify-center gap-1.5">
                   <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
                   Transparent data · CBL & market sources
                 </p>
               </header>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl md:max-w-none mx-auto" role="list">
-                <Card className="rounded-2xl bg-card border border-border/60 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-200" role="listitem">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-primary flex items-center gap-2 text-lg sm:text-xl">
-                      <Star className="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" aria-hidden />
-                      Free
-                    </CardTitle>
-                    <CardDescription>For individuals and small businesses.</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl sm:text-4xl font-bold mb-5 tabular-nums">
-                      $0<span className="text-base text-muted-foreground font-normal">/month</span>
-                    </div>
-                    <ul className="space-y-2.5 mb-6">
-                      {["Real-time rates", "7-day predictions", "Basic converter", "Community forums", "Rate alerts (limited)"].map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button variant="outline" className="w-full rounded-xl min-h-[48px] text-base font-medium">
-                      Current Plan
-                    </Button>
-                  </CardContent>
-                </Card>
-
-                <Card className="border border-border/60 shadow-[var(--shadow-card)] rounded-2xl bg-card relative" role="listitem">
-                  <div className="absolute top-4 right-4 z-10">
-                    <Badge variant="outline" className="rounded-lg font-medium" aria-hidden>Most Popular</Badge>
-                  </div>
-                  <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center gap-2 text-primary text-lg sm:text-xl">
-                      <Crown className="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" aria-hidden />
-                      TrueRate Business
-                    </CardTitle>
-                    <CardDescription>For serious businesses and enterprises.</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl sm:text-4xl font-bold mb-5 tabular-nums">
-                      $5<span className="text-base text-muted-foreground font-normal">/month</span>
-                    </div>
-                    <ul className="space-y-2.5 mb-6">
-                      {[
-                        "Everything in Free",
-                        "30-day rate outlook",
-                        "Invoice USD Protector",
-                        "Cashflow Forecast Tool",
-                        "Changer Booking & Reservation",
-                        "Bulk converter + PDF export",
-                        "Unlimited rate alerts",
-                        "Team accounts (5 users)",
-                        "Historical reports for tax/audit",
-                        "Priority support",
-                      ].map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full rounded-xl min-h-[48px] text-base font-semibold shadow-sm">
-                      <Link href="/auth/signup?plan=business">Upgrade to Business</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
 
             <aside className="mt-10 sm:mt-12" aria-label="Business context">
@@ -539,15 +454,15 @@ export default function BusinessDashboardPage() {
                 <CardContent className="p-6 sm:p-8 md:p-10 text-center">
                   <blockquote className="text-lg sm:text-xl md:text-2xl font-semibold text-balance leading-snug text-foreground mb-4">
                     <p>
-                      Businesses use this dashboard to reduce guesswork, compare rate risk, and plan conversions with clearer timing.
+                      Your business is looked after here with practical guidance to reduce guesswork, watch rate risk, and time conversions with confidence.
                     </p>
                   </blockquote>
                   <p className="text-muted-foreground text-sm sm:text-base mb-6">
-                    Built for practical day-to-day decisions, especially for importers and teams managing cashflow in USD and LRD.
+                    Every feature is designed to help you understand what the market is doing and make informed moves that can lower costs over time.
                   </p>
                   <Button asChild size="lg" className="rounded-xl min-h-[48px] px-8 font-semibold shadow-sm focus-visible:ring-[3px]">
-                    <Link href="/auth/signup?plan=business">
-                      Upgrade to Business — $5/mo
+                    <Link href="#tools">
+                      Explore Business Tools
                       <ArrowRight className="ml-2 h-4 w-4 inline shrink-0 text-muted-foreground" aria-hidden />
                     </Link>
                   </Button>

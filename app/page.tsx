@@ -33,10 +33,6 @@ import { useLiveRate } from "@/lib/live-rate-context"
 import { ListSkeleton, CardSkeleton, SectionHeaderSkeleton } from "@/components/ui/skeleton-presets"
 
 /* Lazy-load below-the-fold components for Core Web Vitals (LCP, TTI) */
-const RegionalBreakdownWidget = dynamic(
-  () => import("@/components/regional-breakdown-widget").then((m) => ({ default: m.RegionalBreakdownWidget })),
-  { loading: () => <ListSkeleton rows={4} className="min-h-[200px]" />, ssr: true }
-)
 const Features = dynamic(
   () => import("@/components/features").then((m) => ({ default: m.Features })),
   { loading: () => <SectionHeaderSkeleton />, ssr: true }
@@ -49,6 +45,39 @@ import { PriceIndex, MarketNews, InflationTracker } from "@/components/liberia-f
 
 export default function HomePage() {
   const { rate: liveRate } = useLiveRate()
+  const trfnTicker = [
+    { label: "USD/LRD", value: "L$183.47", move: "+0.6%", tone: "up" as const },
+    { label: "Fuel (gal)", value: "L$821", move: "-1.1%", tone: "down" as const },
+    { label: "Food Index", value: "112.4", move: "+0.9%", tone: "up" as const },
+    { label: "Transport Trend", value: "Firm", move: "+0.4%", tone: "up" as const },
+  ]
+
+  const trfnHeadlines = [
+    {
+      headline: "Parallel-market FX spread stays narrow despite stronger afternoon dollar bids",
+      impact: "Medium",
+      timeframe: "24-72 hrs",
+      tone: "yellow",
+    },
+    {
+      headline: "Rice and imported staples point to mild retail pressure into next week",
+      impact: "High",
+      timeframe: "1-2 weeks",
+      tone: "red",
+    },
+    {
+      headline: "Transport fares remain firm as route-level operating costs hold elevated",
+      impact: "Medium",
+      timeframe: "2-4 weeks",
+      tone: "yellow",
+    },
+    {
+      headline: "Liquidity signals support near-term LRD stability in core urban markets",
+      impact: "Low",
+      timeframe: "3-5 days",
+      tone: "green",
+    },
+  ] as const
 
   return (
     <div className="min-h-screen flex flex-col w-full min-w-0">
@@ -56,6 +85,93 @@ export default function HomePage() {
       <StickyMobileRateBar />
       <main id="main-content" className="flex-1 w-full min-w-0 overflow-x-hidden" role="main">
         <Hero />
+
+        <PageSection ariaLabelledBy="trfn-outlook-heading" className="py-6 sm:py-8">
+          <PageContainer maxWidth="5xl" className="min-w-0">
+            <div className="rounded-xl border border-border/50 bg-card/80 shadow-sm">
+              <div className="overflow-x-auto border-b border-border/40 scrollbar-thin">
+                <div className="flex min-w-max items-center gap-4 px-4 py-2 sm:px-5">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                    TRFN Live
+                  </span>
+                  {trfnTicker.map((item) => (
+                    <div key={item.label} className="shrink-0 rounded-md border border-border/50 bg-background/70 px-3 py-1.5">
+                      <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{item.label}</p>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-semibold text-foreground">{item.value}</span>
+                        <span
+                          className={`text-xs font-medium ${
+                            item.tone === "up" ? "text-emerald-600 dark:text-emerald-300" : "text-rose-600 dark:text-rose-300"
+                          }`}
+                        >
+                          {item.move}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="px-4 py-4 sm:px-5 sm:py-5">
+                <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <h2 id="trfn-outlook-heading" className="text-base sm:text-lg font-semibold text-foreground">
+                      TRFN - Economic Outlook
+                    </h2>
+                    <p className="mt-1 text-sm text-muted-foreground">Live signals shaping Liberia&apos;s economy</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm" className="h-8 px-3 text-sm border-0 bg-background/70 rounded-none">
+                    <Link href="/trfn-dashboard" className="font-medium">
+                      See more updates →
+                    </Link>
+                  </Button>
+                </div>
+
+                <div className="grid gap-2 sm:gap-3">
+                  {trfnHeadlines.map((item) => (
+                    <Link
+                      key={item.headline}
+                      href="/trfn-dashboard"
+                      className="group rounded-lg border border-border/50 bg-background/70 px-3 py-3 transition-all hover:-translate-y-[1px] hover:border-border/80 hover:bg-muted/40 sm:px-4"
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-start gap-2">
+                          <span
+                            className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
+                              item.tone === "green"
+                                ? "bg-emerald-500"
+                                : item.tone === "red"
+                                  ? "bg-rose-500"
+                                  : "bg-amber-500"
+                            }`}
+                            aria-hidden
+                          />
+                          <p className="text-sm leading-snug text-foreground group-hover:text-primary">
+                            {item.headline}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="ml-2 shrink-0 text-right text-xs space-y-1">
+                        <p
+                          className={`inline-flex rounded-full px-2 py-0.5 font-semibold ${
+                            item.impact === "High"
+                              ? "bg-rose-500/10 text-rose-700 dark:text-rose-300"
+                              : item.impact === "Medium"
+                                ? "bg-amber-500/10 text-amber-700 dark:text-amber-300"
+                                : "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+                          }`}
+                        >
+                          {item.impact}
+                        </p>
+                        <p className="text-muted-foreground">{item.timeframe}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </PageContainer>
+        </PageSection>
 
         {/* Quick Access Cards */}
         <PageSection variant="muted" ariaLabelledBy="tools-heading">
@@ -254,35 +370,7 @@ export default function HomePage() {
                 </Card>
               </Link>
 
-              {/* 8. Today's Market (/market) */}
-              <Link
-                href="/market"
-                className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-xl sm:rounded-2xl block min-w-0"
-              >
-                <Card className="group h-full hover:border-border/60 min-w-0">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted/40 border border-border/40">
-                        <TrendingUp className="h-6 w-6 text-green-600 dark:text-green-400" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h3 className="font-semibold text-lg">Today&apos;s Market</h3>
-                          <Badge
-                            variant="secondary"
-                            className="text-xs font-semibold border border-cyan-300/40 bg-gradient-to-r from-cyan-500/20 to-sky-500/10 text-cyan-700 dark:text-cyan-200"
-                          >
-                            Live
-                          </Badge>
-                        </div>
-                        <p className="text-sm text-muted-foreground">See live USD/LRD rates, CBL vs market context, and daily price movement in one place.</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              {/* 9. Rate outlook */}
+              {/* 8. Rate outlook */}
               <Link
                 href="/predictions"
                 className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-xl sm:rounded-2xl block min-w-0"
@@ -311,40 +399,6 @@ export default function HomePage() {
               </Link>
 
             </div>
-          </PageContainer>
-        </PageSection>
-
-        {/* Regional breakdown + Quick Tools */}
-        <PageSection ariaLabelledBy="rates-by-region-heading">
-          <PageContainer maxWidth="4xl" className="space-y-6 min-w-0">
-            <SectionHeader
-              id="rates-by-region-heading"
-              badge={
-                <>
-                  <Badge variant="outline" className="font-medium text-[11px] sm:text-xs">Economic growth</Badge>
-                  <Badge variant="outline" className="text-[11px] sm:text-xs">Live</Badge>
-                </>
-              }
-              title="Economic Growth: Monrovia vs Upcountry"
-              description={`Monrovia typically grows faster than upcountry. Expand "See county breakdown" to view county-level detail.`}
-              actions={
-                <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch justify-center gap-2 w-full sm:w-auto max-w-sm sm:max-w-none mx-auto">
-                  <Button variant="outline" size="sm" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium" asChild>
-                    <Link href="/converter">
-                      <Calculator className="h-4 w-4 shrink-0 text-primary" />
-                      Converter
-                    </Link>
-                  </Button>
-                  <Button variant="outline" size="sm" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium" asChild>
-                    <Link href="/tools">
-                      <Bell className="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" />
-                      Alerts
-                    </Link>
-                  </Button>
-                </div>
-              }
-            />
-            <RegionalBreakdownWidget />
           </PageContainer>
         </PageSection>
 
@@ -395,13 +449,18 @@ export default function HomePage() {
               description="Real-time essential goods prices, inflation trends, and local market news — one place for cost of living and market intelligence."
               actions={
                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-                  <Button size="sm" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium shadow-sm" asChild>
+                  <Button
+                    size="sm"
+                    className="group h-9 min-h-[36px] gap-1.5 rounded-lg px-3 text-xs font-semibold border border-primary/20 bg-primary text-primary-foreground shadow-sm shadow-primary/20 transition-all duration-200 hover:bg-primary/90 hover:shadow-md hover:shadow-primary/30"
+                    asChild
+                  >
                     <Link href="/price-index">
-                      <BarChart3 className="h-4 w-4 shrink-0 text-primary" aria-hidden />
-                      View full Price Index
+                      <BarChart3 className="h-3.5 w-3.5 shrink-0 text-primary-foreground/90" aria-hidden />
+                      View Full Price Index
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden />
                     </Link>
                   </Button>
-                  <Button size="sm" variant="outline" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium" asChild>
+                  <Button size="sm" variant="outline" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium border-0" asChild>
                     <Link href="/market-intelligence">
                       <TrendingUp className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
                       Market Intelligence
@@ -424,7 +483,7 @@ export default function HomePage() {
                     </div>
                     <Badge variant="outline" className="text-[10px]">Essential basket</Badge>
                   </div>
-                  <PriceIndex rate={liveRate} variant="full" showSearch showCategoryTabs essentialOnly />
+                  <PriceIndex rate={liveRate} variant="full" essentialOnly />
                 </div>
                 <div className="min-w-0 p-4 sm:p-6 space-y-4 sm:space-y-6">
                   <div className="flex items-center gap-2">

@@ -139,12 +139,12 @@ export default function MonitoringDashboardPage() {
 
         <div className="container mx-auto px-4 py-6 max-w-4xl space-y-6">
           <Tabs defaultValue="moc">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="moc" className="gap-2">
+            <TabsList className="grid w-full grid-cols-1 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-2">
+              <TabsTrigger value="moc" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                 <Server className="h-4 w-4 text-primary" />
                 Ministry data services
               </TabsTrigger>
-              <TabsTrigger value="rates" className="gap-2">
+              <TabsTrigger value="rates" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                 <Activity className="h-4 w-4 text-primary" />
                 Rate APIs
               </TabsTrigger>

@@ -193,16 +193,16 @@ export default function PredictionsPage() {
                   </h2>
                   <p className="text-sm text-muted-foreground">Practical outlooks for sending, exchanging, and budgeting</p>
                 </div>
-                <TabsList className="grid w-full grid-cols-3 lg:w-auto lg:inline-flex shadow-sm">
-                  <TabsTrigger value="predictions" className="gap-2">
+                <TabsList className="grid w-full grid-cols-1 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3 shadow-sm">
+                  <TabsTrigger value="predictions" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                     <Brain className="h-4 w-4 text-primary" />
                     Outlook
                   </TabsTrigger>
-                  <TabsTrigger value="signals" className="gap-2">
+                  <TabsTrigger value="signals" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                     <Bell className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                     Planning
                   </TabsTrigger>
-                  <TabsTrigger value="analysis" className="gap-2">
+                  <TabsTrigger value="analysis" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
                     <BarChart3 className="h-4 w-4 text-primary" />
                     Drivers
                   </TabsTrigger>

@@ -5,6 +5,7 @@ import {
   ArrowLeftRight,
   BellRing,
   BarChart3,
+  Briefcase,
   Calculator,
   House,
   LayoutDashboard,
@@ -34,6 +35,7 @@ export interface BottomNavItem {
 export const NAVIGATION_ITEMS: NavItem[] = [
   { href: "/", label: "Home", icon: House, description: "Start here and choose what you need right now" },
   { href: "/market", label: "Live Market", icon: LayoutDashboard, description: "See live USD/LRD, buy/sell spread, and market context" },
+  { href: "/business", label: "Business", icon: Briefcase, description: "Free tools for importers and exporters to plan with confidence" },
   { href: "/converter", label: "Convert", icon: Calculator, description: "Convert USD and LRD with the latest live rate" },
   { href: "/price-index", label: "Compare Prices", icon: ShoppingCart, description: "Check if everyday prices are fair before you buy" },
   { href: "/tools", label: "Money Tools", icon: BellRing, description: "Budget, remittance, inflation, and planning support" },
@@ -44,6 +46,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
 export const MOBILE_MENU_ITEMS: NavItem[] = [
   { href: "/", label: "Home", icon: LayoutDashboard, description: "Start here and choose what you need" },
   { href: "/market", label: "Live Market", icon: LayoutDashboard, description: "Live rates, spread, and market signal" },
+  { href: "/business", label: "Business", icon: Briefcase, description: "Free tools for business planning" },
   { href: "/converter", label: "Convert", icon: Calculator, description: "Quick USD/LRD conversion" },
   { href: "/price-index", label: "Compare Prices", icon: ShoppingCart, description: "Check if a price is fair" },
   { href: "/tools", label: "Money Tools", icon: BellRing, description: "Budget, alerts, and planning tools" },

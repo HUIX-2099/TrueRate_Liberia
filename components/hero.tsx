@@ -60,7 +60,7 @@ export function Hero() {
                 <span className="text-foreground font-semibold tabular-nums" aria-live="polite">{lastUpdate}</span>
               </div>
               <span className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground border border-border/50 rounded-full px-3 py-1">
-                Built for everyday money choices
+                Built for smarter money decisions
               </span>
             </div>
 
@@ -242,7 +242,7 @@ export function Hero() {
                 <Button
                   size="sm"
                   variant="outline"
-                  className="group h-8 px-3 text-xs sm:h-9 sm:px-4 sm:text-sm w-full sm:w-auto shrink-0"
+                  className="group h-8 px-3 text-xs sm:h-9 sm:px-4 sm:text-sm w-full sm:w-auto shrink-0 border-0"
                   aria-label="View today's market"
                   onClick={() => router.push("/market")}
                 >
