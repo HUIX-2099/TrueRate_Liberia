@@ -1,0 +1,398 @@
+// Diaspora Marketplace — PostgreSQL schema
+// Run: pnpm prisma generate && pnpm prisma db push (or migrate)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Connection URL for Migrate/CLI is in prisma.config.ts (Prisma 7)
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  passwordHash  String?   @map("password_hash")
+  role          UserRole  @default(USER)
+  fullName      String?   @map("full_name")
+  phone         String?
+  countryCode   String?   @map("country_code")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  vendors       Vendor?
+  orders        Order[]
+  vendorRatings VendorRating[]
+  fraudReports  FraudReport[]  @relation("Reporter")
+  disputes      Dispute[]
+  activityLogs  ActivityLog[]
+
+  @@map("users")
+}
+
+enum UserRole {
+  USER
+  VENDOR
+  ADMIN
+}
+
+model Vendor {
+  id                 String             @id @default(uuid())
+  userId             String?            @unique @map("user_id")
+  storeName          String             @map("store_name")
+  slug               String             @unique
+  description        String?
+  locationAddress    String             @map("location_address")
+  locationCity       String?            @default("Monrovia") @map("location_city")
+  locationRegion     String?            @map("location_region")
+  phone              String
+  whatsapp           String?
+  businessRegNo      String?            @map("business_reg_no")
+  businessRegStatus  BusinessRegStatus? @map("business_reg_status")
+  truerateVerified   Boolean            @default(false) @map("truerate_verified")
+  verifiedAt         DateTime?          @map("verified_at")
+  categories         String[]           @default([]) // construction, food_groceries, household, fuel
+  logoUrl            String?            @map("logo_url")
+  bannerUrl          String?            @map("banner_url")
+  isActive           Boolean            @default(true) @map("is_active")
+  createdAt          DateTime           @default(now()) @map("created_at")
+  updatedAt          DateTime           @updatedAt @map("updated_at")
+
+  user     User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+  products Product[]
+  orderItems OrderItem[]
+  vendorRatings VendorRating[]
+
+  @@index([slug])
+  @@index([truerateVerified])
+  @@index([categories])
+  @@map("vendors")
+}
+
+enum BusinessRegStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  vendorId    String   @map("vendor_id")
+  name        String
+  slug        String
+  description String?
+  category    ProductCategory
+  unit        String   @default("piece") // piece, kg, liter, gallon, bag
+  priceUsd    Decimal  @map("price_usd") @db.Decimal(12, 2)
+  priceLrd    Decimal? @map("price_lrd") @db.Decimal(14, 2)
+  imageUrl    String?  @map("image_url")
+  isActive    Boolean  @default(true) @map("is_active")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  vendor     Vendor     @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+  orderItems OrderItem[]
+
+  @@unique([vendorId, slug])
+  @@index([vendorId])
+  @@index([category])
+  @@map("products")
+}
+
+enum ProductCategory {
+  construction
+  food_groceries
+  household
+  fuel_voucher
+}
+
+model Order {
+  id               String        @id @default(uuid())
+  userId           String        @map("user_id")
+  status          OrderStatus   @default(DRAFT)
+  totalUsd        Decimal       @map("total_usd") @db.Decimal(12, 2) @default(0)
+  totalLrd        Decimal?      @map("total_lrd") @db.Decimal(14, 2)
+  fxRateSnapshot  Decimal?      @map("fx_rate_snapshot") @db.Decimal(10, 4)
+  feeBreakdown    Json?         @map("fee_breakdown") // { platform_fee_usd, delivery_fee_usd, tax_usd }
+  paymentHold     Boolean       @default(false) @map("payment_hold")
+  stripePaymentId String?       @map("stripe_payment_id")
+  recipientName   String        @map("recipient_name")
+  recipientPhone  String        @map("recipient_phone")
+  deliveryAddress String        @map("delivery_address")
+  deliveryCity    String?       @map("delivery_city")
+  deliveryNotes   String?       @map("delivery_notes")
+  proofPhotoUrl   String?       @map("proof_photo_url")
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+
+  user     User        @relation(fields: [userId], references: [id])
+  items    OrderItem[]
+  disputes Dispute[]
+
+  @@index([userId])
+  @@index([status])
+  @@map("orders")
+}
+
+enum OrderStatus {
+  DRAFT
+  PENDING_PAYMENT
+  PAID
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  DISPUTED
+  REFUNDED
+}
+
+model OrderItem {
+  id           String   @id @default(uuid())
+  orderId      String   @map("order_id")
+  productId    String   @map("product_id")
+  vendorId     String   @map("vendor_id")
+  quantity     Int
+  unitPriceUsd Decimal  @map("unit_price_usd") @db.Decimal(12, 2)
+  lineTotalUsd Decimal  @map("line_total_usd") @db.Decimal(12, 2)
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+  vendor  Vendor  @relation(fields: [vendorId], references: [id])
+
+  @@index([orderId])
+  @@map("order_items")
+}
+
+model VendorRating {
+  id        String   @id @default(uuid())
+  vendorId  String   @map("vendor_id")
+  userId    String   @map("user_id")
+  orderId   String?  @map("order_id")
+  rating    Int      // 1-5
+  comment   String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  vendor Vendor @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+  user   User   @relation(fields: [userId], references: [id])
+
+  @@unique([vendorId, userId, orderId])
+  @@index([vendorId])
+  @@map("vendor_ratings")
+}
+
+model FraudReport {
+  id          String           @id @default(uuid())
+  reporterId  String           @map("reporter_id")
+  subjectType String           @map("subject_type") // vendor, order, user
+  subjectId   String           @map("subject_id")
+  description String
+  status      FraudReportStatus @default(OPEN)
+  adminNotes  String?          @map("admin_notes")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+
+  reporter User @relation("Reporter", fields: [reporterId], references: [id])
+
+  @@index([status])
+  @@map("fraud_reports")
+}
+
+enum FraudReportStatus {
+  OPEN
+  INVESTIGATING
+  RESOLVED
+  DISMISSED
+}
+
+model Dispute {
+  id         String        @id @default(uuid())
+  orderId    String        @map("order_id")
+  userId     String        @map("user_id")
+  reason     String
+  status     DisputeStatus @default(OPEN)
+  resolution String?
+  createdAt  DateTime      @default(now()) @map("created_at")
+  updatedAt  DateTime      @updatedAt @map("updated_at")
+
+  order Order @relation(fields: [orderId], references: [id])
+  user  User  @relation(fields: [userId], references: [id])
+
+  @@index([orderId])
+  @@map("disputes")
+}
+
+enum DisputeStatus {
+  OPEN
+  UNDER_REVIEW
+  RESOLVED
+  REJECTED
+}
+
+model ActivityLog {
+  id         String   @id @default(uuid())
+  userId     String?  @map("user_id")
+  action     String   // order_created, payment_completed, dispute_opened
+  entityType String   @map("entity_type")
+  entityId   String?  @map("entity_id")
+  metadata   Json?
+  ipAddress  String?  @map("ip_address") @db.Inet
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([entityType, entityId])
+  @@index([createdAt(sort: Desc)])
+  @@map("activity_logs")
+}
+
+// =============================================================================
+// Real-time market data network — contributor price submissions
+// =============================================================================
+// Contributors: money changers, supermarkets, fuel stations, hardware stores,
+// market vendors, pharmacies. Submissions feed TrueRate's live price layer.
+// =============================================================================
+
+model MarketPriceSubmission {
+  id               String           @id @default(uuid())
+  item             String           // e.g. "Rice 25kg"
+  price            Decimal          @db.Decimal(14, 2) // LRD
+  currency         String           @default("LRD") @db.VarChar(3)
+  location         String           // e.g. "Duala Market"
+  contributorType  ContributorType  @map("contributor_type")
+  recordedAt       DateTime         @default(now()) @map("recorded_at")
+
+  @@index([recordedAt(sort: Desc)])
+  @@index([contributorType])
+  @@index([location])
+  @@index([item])
+  @@map("market_price_submissions")
+}
+
+enum ContributorType {
+  money_changer
+  supermarket
+  fuel_station
+  hardware_store
+  market_vendor
+  pharmacy
+}
+
+// =============================================================================
+// FX rate persistence — stores the last successfully fetched market rate so
+// the fallback never uses a stale hardcoded constant.
+// =============================================================================
+
+model CachedRate {
+  id         String   @id @default("singleton")
+  rate       Decimal  @db.Decimal(10, 4)
+  confidence Decimal  @db.Decimal(4, 2)
+  sources    String[]
+  fetchedAt  DateTime @default(now()) @map("fetched_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("cached_rates")
+}
+
+// =============================================================================
+// Forums — persisted threads, replies, and votes.
+// =============================================================================
+
+model ForumThread {
+  id         String        @id @default(uuid())
+  title      String
+  excerpt    String
+  body       String?
+  category   ForumCategory
+  authorId   String        @map("author_id")
+  authorName String        @map("author_name")
+  isPinned   Boolean       @default(false) @map("is_pinned")
+  isLocked   Boolean       @default(false) @map("is_locked")
+  replyCount Int           @default(0) @map("reply_count")
+  upvotes    Int           @default(0)
+  downvotes  Int           @default(0)
+  createdAt  DateTime      @default(now()) @map("created_at")
+  updatedAt  DateTime      @updatedAt @map("updated_at")
+
+  replies ForumReply[]
+
+  @@index([category])
+  @@index([createdAt(sort: Desc)])
+  @@map("forum_threads")
+}
+
+model ForumReply {
+  id         String   @id @default(uuid())
+  threadId   String   @map("thread_id")
+  authorId   String   @map("author_id")
+  authorName String   @map("author_name")
+  body       String
+  upvotes    Int      @default(0)
+  downvotes  Int      @default(0)
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  thread ForumThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+
+  @@index([threadId])
+  @@map("forum_replies")
+}
+
+model ForumVote {
+  id         String   @id @default(uuid())
+  targetType String   @map("target_type") // "thread" | "reply"
+  targetId   String   @map("target_id")
+  userId     String   @map("user_id")
+  value      Int      // 1 (upvote) | -1 (downvote)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@unique([targetType, targetId, userId])
+  @@index([targetId])
+  @@map("forum_votes")
+}
+
+enum ForumCategory {
+  scamAlerts
+  exchangeTips
+  marketNews
+  changerReviews
+}
+
+// =============================================================================
+// Gamification — persisted user profiles, points, streaks, and badges.
+// =============================================================================
+
+model GamificationProfile {
+  id                 String    @id @default(uuid())
+  userId             String    @unique @map("user_id")
+  points             Int       @default(0)
+  rank               String    @default("Newcomer")
+  totalRatesReported Int       @default(0) @map("total_rates_reported")
+  totalFraudReports  Int       @default(0) @map("total_fraud_reports")
+  totalForumPosts    Int       @default(0) @map("total_forum_posts")
+  totalReviews       Int       @default(0) @map("total_reviews")
+  streak             Int       @default(0)
+  lastActiveDate     DateTime? @map("last_active_date")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @updatedAt @map("updated_at")
+
+  badges UserBadge[]
+
+  @@index([points(sort: Desc)])
+  @@map("gamification_profiles")
+}
+
+model UserBadge {
+  id        String   @id @default(uuid())
+  profileId String   @map("profile_id")
+  badgeId   String   @map("badge_id")
+  earnedAt  DateTime @default(now()) @map("earned_at")
+
+  profile GamificationProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, badgeId])
+  @@index([profileId])
+  @@map("user_badges")
+}

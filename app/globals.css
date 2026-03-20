@@ -1,0 +1,626 @@
+@import "tailwindcss";
+/* Use Tailwind's plugin directive to avoid extra CSS loaders. */
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Mobile: prevent horizontal overflow and reduce tap highlight */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    button[data-slot="button"]:active,
+    [data-slot="button"]:active {
+      transform: none;
+    }
+  }
+  /* WCAG 2.2: visible focus, 2px solid + 2px offset, 3:1 contrast against adjacent background */
+  :focus {
+    outline: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: oklch(0.35 0.08 260 / 0.2);
+    color: var(--foreground);
+  }
+}
+
+:root {
+  /* <CHANGE> Custom color palette for Liberian currency exchange platform */
+  --background: oklch(1 0.006 95);
+  --foreground: oklch(0.18 0.02 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 260);
+  --primary: oklch(0.35 0.08 260);
+  --primary-foreground: oklch(0.99 0.005 105);
+  --secondary: oklch(0.62 0.15 150);
+  --secondary-foreground: oklch(0.99 0.005 105);
+  --muted: oklch(0.95 0.01 105);
+  --muted-foreground: oklch(0.45 0.02 260);
+  --accent: oklch(0.92 0.12 85);
+  --accent-foreground: oklch(0.28 0.05 260);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.005 105);
+  --border: oklch(0.88 0.01 105);
+  --input: oklch(0.88 0.01 105);
+  --ring: oklch(0.35 0.08 260);
+  --chart-1: oklch(0.62 0.15 150);
+  --chart-2: oklch(0.52 0.18 200);
+  --chart-3: oklch(0.72 0.12 85);
+  --chart-4: oklch(0.45 0.12 300);
+  --chart-5: oklch(0.55 0.2 40);
+  /* Regional rate chart — distinct, accessible bar colors */
+  --regional-chart-1: oklch(0.45 0.12 260);
+  --regional-chart-2: oklch(0.55 0.16 155);
+  --regional-chart-3: oklch(0.55 0.18 205);
+  --regional-chart-4: oklch(0.65 0.16 85);
+  --regional-chart-5: oklch(0.55 0.18 300);
+  --regional-chart-6: oklch(0.6 0.18 25);
+  --regional-chart-7: oklch(0.5 0.14 270);
+  --radius: 0.75rem;
+  /* Fintech design scale: 8px base → 4 6 8 10 12 16 20 24 (Tailwind) */
+  --space-section: 4rem;   /* 64px py between major sections */
+  --space-block: 1.5rem;   /* 24px between content blocks */
+  --space-inline: 1rem;    /* 16px horizontal rhythm */
+  --text-hero: clamp(1.875rem, 5vw + 1rem, 3rem);
+  --text-display: clamp(1.5rem, 3vw + 0.5rem, 1.875rem);
+  --text-body: 1rem;
+  --text-caption: 0.875rem;
+  --text-micro: 0.75rem;
+  /* Mobile: no body text smaller than 14px for readability (use text-sm min) */
+  --tap-target-min: 44px;
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+  --shadow-card-hover: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  /* Institutional: soft, data-focused elevation */
+  --shadow-institutional: 0 2px 8px -2px rgb(0 0 0 / 0.06), 0 4px 12px -4px rgb(0 0 0 / 0.04);
+  --shadow-institutional-hover: 0 4px 14px -3px rgb(0 0 0 / 0.08), 0 6px 20px -6px rgb(0 0 0 / 0.05);
+  --shadow-institutional-raised: 0 8px 24px -4px rgb(0 0 0 / 0.08), 0 12px 32px -8px rgb(0 0 0 / 0.06);
+  /* Ecommerce: soft elevation, modern card feel */
+  --shadow-ecommerce: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+  --shadow-ecommerce-hover: 0 10px 25px -5px rgb(0 0 0 / 0.06), 0 4px 10px -5px rgb(0 0 0 / 0.04);
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+  --motion-ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --motion-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --motion-duration: 200ms;
+  --motion-duration-slow: 350ms;
+  --sidebar: oklch(1 0.006 95);
+  --sidebar-foreground: oklch(0.18 0.02 260);
+  --sidebar-primary: oklch(0.35 0.08 260);
+  --sidebar-primary-foreground: oklch(0.99 0.005 105);
+  --sidebar-accent: oklch(0.95 0.01 105);
+  --sidebar-accent-foreground: oklch(0.28 0.05 260);
+  --sidebar-border: oklch(0.88 0.01 105);
+  --sidebar-ring: oklch(0.35 0.08 260);
+}
+
+.dark {
+  /* <CHANGE> Dark mode colors for better contrast */
+  --background: oklch(0.12 0.02 260);
+  --foreground: oklch(0.97 0.005 105);
+  --card: oklch(0.18 0.02 260);
+  --card-foreground: oklch(0.97 0.005 105);
+  --popover: oklch(0.18 0.02 260);
+  --popover-foreground: oklch(0.97 0.005 105);
+  --primary: oklch(0.75 0.08 260);
+  --primary-foreground: oklch(0.15 0.02 260);
+  --secondary: oklch(0.62 0.15 150);
+  --secondary-foreground: oklch(0.99 0.005 105);
+  --muted: oklch(0.25 0.02 260);
+  --muted-foreground: oklch(0.65 0.02 105);
+  --accent: oklch(0.72 0.12 85);
+  --accent-foreground: oklch(0.15 0.02 260);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.005 105);
+  --border: oklch(0.25 0.02 260);
+  --input: oklch(0.25 0.02 260);
+  --ring: oklch(0.75 0.08 260);
+  --chart-1: oklch(0.62 0.15 150);
+  --chart-2: oklch(0.52 0.18 200);
+  --chart-3: oklch(0.72 0.12 85);
+  --chart-4: oklch(0.65 0.12 300);
+  --chart-5: oklch(0.65 0.2 40);
+  --regional-chart-1: oklch(0.7 0.1 260);
+  --regional-chart-2: oklch(0.65 0.14 155);
+  --regional-chart-3: oklch(0.65 0.16 205);
+  --regional-chart-4: oklch(0.75 0.14 85);
+  --regional-chart-5: oklch(0.7 0.16 300);
+  --regional-chart-6: oklch(0.7 0.16 25);
+  --regional-chart-7: oklch(0.65 0.12 270);
+  --sidebar: oklch(0.14 0.02 260);
+  --sidebar-foreground: oklch(0.97 0.005 105);
+  --sidebar-primary: oklch(0.75 0.08 260);
+  --sidebar-primary-foreground: oklch(0.15 0.02 260);
+  --sidebar-accent: oklch(0.25 0.02 260);
+  --sidebar-accent-foreground: oklch(0.97 0.005 105);
+  --sidebar-border: oklch(0.25 0.02 260);
+  --sidebar-ring: oklch(0.65 0.08 260);
+}
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-display: "DM Sans", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", "Segoe UI Mono", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Hero display font (DM Sans) for headline and subtitle */
+.font-display {
+  font-family: var(--font-display);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
+  }
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  main {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  /* Mobile-first: 320px–480px base; 8px spacing scale — base 16px, sm 24px, lg 32px */
+  .container {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-left: 1rem;   /* 16px — 320px safe */
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 90rem;
+    }
+  }
+  /* Responsive tables: horizontal scroll on mobile (fintech pattern) */
+  .table-wrapper {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .table-wrapper table {
+    width: 100%;
+    min-width: 600px; /* allow horizontal scroll on narrow viewports */
+    display: table;
+  }
+  table {
+    width: 100%;
+    min-width: 0;
+  }
+  pre,
+  code {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+  button,
+  [role="button"],
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+  a:not([class*="underline"]) {
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  /* Mobile: prevent zoom on input focus (iOS) */
+  @media screen and (max-width: 768px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
+  /* Touch-friendly: increase tap area for footer nav/list links on mobile */
+  @media (pointer: coarse) and (max-width: 1024px) {
+    #site-footer ul li a,
+    #site-footer nav a {
+      min-height: var(--tap-target-min);
+      display: inline-flex;
+      align-items: center;
+      padding-block: 0.35em;
+    }
+  }
+}
+
+/* Rate change flash (up = red, down = green) */
+@keyframes rate-flash-up {
+  0% { background-color: oklch(0.577 0.245 27.325 / 0.25); }
+  100% { background-color: transparent; }
+}
+@keyframes rate-flash-down {
+  0% { background-color: oklch(0.62 0.15 150 / 0.25); }
+  100% { background-color: transparent; }
+}
+.animate-rate-flash-up {
+  animation: rate-flash-up 0.5s ease-out;
+}
+.animate-rate-flash-down {
+  animation: rate-flash-down 0.5s ease-out;
+}
+
+/* Chart visibility in dark mode (recharts) */
+.dark [data-slot="chart"] .recharts-cartesian-grid line,
+.dark [data-chart] .recharts-cartesian-grid line {
+  stroke: var(--border);
+}
+.dark [data-slot="chart"] .recharts-cartesian-axis-tick text,
+.dark [data-chart] .recharts-cartesian-axis-tick text {
+  fill: var(--foreground);
+}
+/* Line/curve stroke is set per-series on each chart; do not override so multi-series charts (e.g. CBL vs Market) keep distinct colors. */
+.dark [data-slot="chart"] .recharts-area,
+.dark [data-chart] .recharts-area {
+  fill: var(--primary);
+  fill-opacity: 0.2;
+}
+.dark [data-slot="chart"] .recharts-tooltip-wrapper,
+.dark [data-chart] .recharts-tooltip-wrapper {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+}
+
+/* Forums: subtle icon float and glow */
+@keyframes forum-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes forum-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+.animate-forum-float {
+  animation: forum-float 3s ease-in-out infinite;
+}
+.animate-forum-glow {
+  animation: forum-glow 2.5s ease-in-out infinite;
+}
+
+/* Forums: staggered card entrance */
+@keyframes forum-card-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.forum-card-in {
+  opacity: 0;
+  animation: forum-card-in 0.5s ease-out forwards;
+}
+
+/* Hero: gradient shimmer on headline */
+@keyframes hero-gradient-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.hero-headline-gradient {
+  background-size: 200% auto;
+  animation: hero-gradient-shimmer 8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-headline-gradient {
+    animation: none;
+    background-position: 0% 50%;
+  }
+}
+
+/* Hero: floating orbs */
+@keyframes hero-orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(4%, -3%) scale(1.02); }
+  66% { transform: translate(-2%, 2%) scale(0.98); }
+}
+.hero-orb {
+  animation: hero-orb-float 18s ease-in-out infinite;
+}
+.hero-orb-2 {
+  animation: hero-orb-float 22s ease-in-out infinite;
+  animation-delay: -5s;
+}
+.hero-orb-3 {
+  animation: hero-orb-float 20s ease-in-out infinite;
+  animation-delay: -10s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-orb,
+  .hero-orb-2,
+  .hero-orb-3 {
+    animation: none;
+  }
+}
+
+/* Hero: soft light pools (mobile ambient layer) */
+.hero-mesh {
+  background-image:
+    radial-gradient(ellipse 100% 70% at 15% -15%, oklch(0.35 0.08 260 / 0.1), transparent 52%),
+    radial-gradient(ellipse 70% 50% at 95% 5%, oklch(0.62 0.15 150 / 0.09), transparent 48%),
+    radial-gradient(ellipse 55% 45% at 0% 95%, oklch(0.92 0.12 85 / 0.1), transparent 42%);
+}
+.dark .hero-mesh {
+  background-image:
+    radial-gradient(ellipse 100% 70% at 15% -15%, oklch(0.5 0.1 260 / 0.22), transparent 52%),
+    radial-gradient(ellipse 70% 50% at 95% 5%, oklch(0.5 0.12 150 / 0.14), transparent 48%),
+    radial-gradient(ellipse 55% 45% at 0% 95%, oklch(0.45 0.08 85 / 0.12), transparent 42%);
+}
+
+/* Fintech layout utilities */
+.fintech-section {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+.fintech-section-tight {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.fintech-container {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .fintech-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .fintech-container {
+    max-width: 80rem;
+  }
+}
+
+/* Typography scale (fintech standard) */
+.text-hero {
+  font-size: var(--text-hero);
+  line-height: 1.15;
+}
+.text-display {
+  font-size: var(--text-display);
+  line-height: 1.2;
+}
+.text-body {
+  font-size: var(--text-body);
+}
+.text-caption {
+  font-size: var(--text-caption);
+}
+.text-micro {
+  font-size: var(--text-micro);
+}
+
+/* Card elevation (design tokens) */
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+.shadow-card-hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Institutional elevation & motion */
+.shadow-institutional {
+  box-shadow: var(--shadow-institutional);
+}
+.shadow-institutional-hover {
+  box-shadow: var(--shadow-institutional-hover);
+}
+.shadow-institutional-raised {
+  box-shadow: var(--shadow-institutional-raised);
+}
+.transition-institutional {
+  transition: box-shadow var(--motion-duration) var(--motion-ease-out),
+    transform var(--motion-duration) var(--motion-ease-out),
+    border-color var(--motion-duration) var(--motion-ease-out);
+}
+
+/* Card hover: lift + shadow for interactive cards */
+.card-hover {
+  transition: transform var(--motion-duration) var(--motion-ease-out),
+    box-shadow var(--motion-duration) var(--motion-ease-out),
+    border-color var(--motion-duration) var(--motion-ease-out);
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-institutional-hover);
+}
+.card-hover:active {
+  transform: translateY(0);
+}
+
+/* Staggered section/card entrance */
+@keyframes content-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-content-in {
+  animation: content-fade-in var(--motion-duration-slow) var(--motion-ease-out) forwards;
+}
+.stagger-1 { animation-delay: 50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+.stagger-5 { animation-delay: 250ms; }
+.stagger-6 { animation-delay: 300ms; }
+.stagger-7 { animation-delay: 350ms; }
+.stagger-8 { animation-delay: 400ms; }
+.stagger-9 { animation-delay: 450ms; }
+
+/* Glass surface for overlays and panels */
+.glass {
+  background: oklch(1 0 0 / 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.dark .glass {
+  background: oklch(0.18 0.02 260 / 0.72);
+}
+
+/* Live indicator: static when reduced motion preferred (WCAG) */
+@media (prefers-reduced-motion: reduce) {
+  .live-dot-ping {
+    animation: none;
+  }
+  .live-dot-ping .animate-ping {
+    animation: none;
+    opacity: 0;
+  }
+  .card-hover:hover {
+    transform: none;
+  }
+  .animate-content-in,
+  [class*="stagger-"] {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  [data-slot="card"]:hover {
+    transform: none;
+  }
+}
+
+/* Invest dashboard: print-only main content (Export PDF) */
+@media print {
+  .invest-dashboard-page header,
+  .invest-dashboard-page footer,
+  .invest-dashboard-page nav[role="navigation"],
+  .invest-dashboard-page .no-print {
+    display: none !important;
+  }
+  .invest-dashboard-page main {
+    padding-top: 0;
+  }
+}
+
+/* Thin scrollbar utility */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.7 0 0 / 0.3) transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: oklch(0.7 0 0 / 0.3);
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.6 0 0 / 0.4);
+}
+
+/* Diaspora Economic Command Center: warm, readable palette and spacing */
+.diaspora-dashboard {
+  --diaspora-bg: var(--background);
+  --diaspora-main-bg: oklch(0.985 0.004 95);
+  --diaspora-positive: oklch(0.55 0.16 155);
+  --diaspora-warning: oklch(0.75 0.15 85);
+  --diaspora-negative: oklch(0.55 0.2 25);
+}
+.dark .diaspora-dashboard {
+  --diaspora-bg: oklch(0.11 0.02 260);
+  --diaspora-main-bg: oklch(0.13 0.02 260);
+}
+.diaspora-dashboard .diaspora-main {
+  background: var(--diaspora-main-bg);
+}
