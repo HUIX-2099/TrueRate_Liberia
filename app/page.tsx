@@ -449,15 +449,10 @@ export default function HomePage() {
               description="Real-time essential goods prices, inflation trends, and local market news — one place for cost of living and market intelligence."
               actions={
                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-                  <Button
-                    size="sm"
-                    className="group h-9 min-h-[36px] gap-1.5 rounded-lg px-3 text-xs font-semibold border border-primary/20 bg-primary text-primary-foreground shadow-sm shadow-primary/20 transition-all duration-200 hover:bg-primary/90 hover:shadow-md hover:shadow-primary/30"
-                    asChild
-                  >
+                  <Button size="sm" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium shadow-sm border-0" asChild>
                     <Link href="/price-index">
-                      <BarChart3 className="h-3.5 w-3.5 shrink-0 text-primary-foreground/90" aria-hidden />
-                      View Full Price Index
-                      <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden />
+                      <BarChart3 className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+                      View full Price Index
                     </Link>
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium border-0" asChild>

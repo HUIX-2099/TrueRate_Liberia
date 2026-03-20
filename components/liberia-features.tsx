@@ -628,9 +628,9 @@ export function PriceIndex({
           <div className="mt-4 pt-4 border-t border-border/60">
             <Link
               href="/price-index"
-              className="group inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-semibold text-primary transition-colors duration-200 hover:bg-primary/10 hover:text-primary"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
             >
-              View Full Price Index <ArrowRight className="h-3 w-3 text-primary/70 transition-transform duration-200 group-hover:translate-x-0.5" />
+              View full Price Index <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />
             </Link>
           </div>
         )}
