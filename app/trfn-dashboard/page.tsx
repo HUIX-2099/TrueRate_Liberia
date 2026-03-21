@@ -88,6 +88,15 @@ export default function TrfnDashboardPage() {
 
   return (
     <div className="min-h-screen bg-black text-white font-mono">
+      <div className="flex justify-between items-center px-6 pt-4">
+        <h1 className="text-white font-bold text-lg">TrueRate Liberia Markets</h1>
+        <a
+          href="/submit"
+          className="bg-green-500 hover:bg-green-400 text-black text-xs font-bold px-4 py-2 rounded-lg uppercase tracking-widest transition"
+        >
+          + Submit Price
+        </a>
+      </div>
       <div className="bg-zinc-900 border-b border-zinc-700 px-6 py-2 flex gap-8 text-sm overflow-x-auto whitespace-nowrap">
         <span className="text-green-400">
           USD/LRD <strong>{currentRate?.toFixed(2) ?? "..."}</strong>
