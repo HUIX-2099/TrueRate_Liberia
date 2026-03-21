@@ -1,10 +1,17 @@
 import { NextResponse } from "next/server"
-import { supabase } from "@/lib/supabase/client"
+import { getSupabaseServerClient } from "@/lib/supabase/server"
 
 export async function GET() {
   const apiKey = process.env.EXCHANGE_RATE_API_KEY
+  const supabase = getSupabaseServerClient()
   if (!apiKey) {
     return NextResponse.json({ error: "Missing EXCHANGE_RATE_API_KEY" }, { status: 500 })
+  }
+  if (!supabase) {
+    return NextResponse.json(
+      { error: "Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY" },
+      { status: 500 }
+    )
   }
 
   try {
