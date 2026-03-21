@@ -96,3 +96,5 @@ export function CommodityTracker() {
     </div>
   )
 }
+
+export default CommodityTracker

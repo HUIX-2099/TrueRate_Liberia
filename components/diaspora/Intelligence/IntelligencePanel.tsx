@@ -12,7 +12,7 @@ import { Switch } from "@/components/ui/switch"
 import { cn } from "@/lib/utils"
 import type { RateChartPeriod } from "./RateChart"
 
-const RateChart = dynamic(() => import("./RateChart").then((m) => ({ default: m.RateChart })), {
+const RateChart = dynamic(() => import("./RateChart"), {
   ssr: false,
   loading: () => (
     <div className="h-[260px] w-full rounded-xl border border-border/60 bg-muted/20 flex items-center justify-center text-sm text-muted-foreground animate-pulse">
@@ -21,7 +21,7 @@ const RateChart = dynamic(() => import("./RateChart").then((m) => ({ default: m.
   ),
 })
 
-const CommodityTracker = dynamic(() => import("./CommodityTracker").then((m) => ({ default: m.CommodityTracker })), {
+const CommodityTracker = dynamic(() => import("./CommodityTracker"), {
   ssr: false,
   loading: () => (
     <div className="h-32 w-full rounded-xl border border-border/60 bg-muted/20 flex items-center justify-center text-sm text-muted-foreground animate-pulse">

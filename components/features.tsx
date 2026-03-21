@@ -72,3 +72,5 @@ export function Features() {
     </PageSection>
   )
 }
+
+export default Features

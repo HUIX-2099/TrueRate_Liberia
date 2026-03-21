@@ -158,3 +158,5 @@ export function RateChart({ period, showInflationOverlay, className }: RateChart
     </div>
   )
 }
+
+export default RateChart

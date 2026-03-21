@@ -43,3 +43,5 @@ export function TrustSignals() {
     </PageSection>
   )
 }
+
+export default TrustSignals

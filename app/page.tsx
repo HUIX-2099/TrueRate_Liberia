@@ -33,14 +33,14 @@ import { useLiveRate } from "@/lib/live-rate-context"
 import { ListSkeleton, CardSkeleton, SectionHeaderSkeleton } from "@/components/ui/skeleton-presets"
 
 /* Lazy-load below-the-fold components for Core Web Vitals (LCP, TTI) */
-const Features = dynamic(
-  () => import("@/components/features").then((m) => ({ default: m.Features })),
-  { loading: () => <SectionHeaderSkeleton />, ssr: true }
-)
-const TrustSignals = dynamic(
-  () => import("@/components/trust-signals").then((m) => ({ default: m.TrustSignals })),
-  { loading: () => <CardSkeleton lines={3} className="min-h-[180px]" />, ssr: true }
-)
+const Features = dynamic(() => import("@/components/features"), {
+  loading: () => <SectionHeaderSkeleton />,
+  ssr: true,
+})
+const TrustSignals = dynamic(() => import("@/components/trust-signals"), {
+  loading: () => <CardSkeleton lines={3} className="min-h-[180px]" />,
+  ssr: true,
+})
 import { PriceIndex, MarketNews, InflationTracker } from "@/components/liberia-features"
 
 export default function HomePage() {
