@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react"
 import {
-  Area,
   AreaChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
+  Area,
   XAxis,
   YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
 } from "recharts"
 
 type RateHistoryRow = {
@@ -22,7 +22,7 @@ export default function TrfnDashboardPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("/api/rates/live-supabase")
+    fetch("/api/rates")
       .then((r) => r.json())
       .then((data) => {
         setCurrentRate(data.current ?? null)
@@ -70,12 +70,10 @@ export default function TrfnDashboardPage() {
               <XAxis
                 dataKey="recorded_at"
                 tick={{ fill: "#71717a", fontSize: 10 }}
-                tickFormatter={(value) => new Date(value).toLocaleDateString()}
+                tickFormatter={(v) => new Date(v).toLocaleDateString()}
               />
               <YAxis tick={{ fill: "#71717a", fontSize: 10 }} />
-              <Tooltip
-                contentStyle={{ background: "#18181b", border: "1px solid #3f3f46" }}
-              />
+              <Tooltip contentStyle={{ background: "#18181b", border: "1px solid #3f3f46" }} />
               <Area
                 type="monotone"
                 dataKey="rate"
