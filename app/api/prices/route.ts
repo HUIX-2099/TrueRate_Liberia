@@ -3,6 +3,13 @@ import { supabase } from "@/lib/supabase/client"
 
 /** GET: latest crowd-sourced / stored price rows from Supabase `price_index`. */
 export async function GET() {
+  if (!supabase) {
+    return NextResponse.json(
+      { error: "Supabase is not configured (missing NEXT_PUBLIC_SUPABASE_URL / ANON_KEY)" },
+      { status: 503 }
+    )
+  }
+
   const { data, error } = await supabase
     .from("price_index")
     .select("*")
@@ -18,6 +25,13 @@ export async function GET() {
 
 /** POST: insert a crowd-sourced row into `price_index` (Supabase RLS must allow insert for anon or use service role). */
 export async function POST(req: Request) {
+  if (!supabase) {
+    return NextResponse.json(
+      { error: "Supabase is not configured (missing NEXT_PUBLIC_SUPABASE_URL / ANON_KEY)" },
+      { status: 503 }
+    )
+  }
+
   try {
     const body = (await req.json()) as Record<string, unknown>
     const priceLrd = Number(body.price_lrd)

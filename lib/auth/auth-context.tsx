@@ -1,8 +1,10 @@
 "use client"
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+import type { User as SupabaseUser, Session } from "@supabase/supabase-js"
+import { supabase } from "@/lib/supabase/client"
 
-interface User {
+export interface User {
   id: string
   name: string
   email: string
@@ -13,100 +15,95 @@ interface User {
   joinedDate: string
 }
 
-interface AuthContextType {
+export interface AuthContextType {
   user: User | null
+  session: Session | null
   loading: boolean
   signIn: (email: string, password: string) => Promise<void>
   signUp: (name: string, email: string, password: string) => Promise<void>
-  signOut: () => void
+  signOut: () => Promise<void>
 }
 
-// Default context value for when provider is not available
 const defaultContextValue: AuthContextType = {
   user: null,
+  session: null,
   loading: true,
   signIn: async () => {},
   signUp: async () => {},
-  signOut: () => {},
+  signOut: async () => {},
 }
 
 const AuthContext = createContext<AuthContextType>(defaultContextValue)
 
+function supabaseUserToUser(supabaseUser: SupabaseUser): User {
+  return {
+    id: supabaseUser.id,
+    name: supabaseUser.user_metadata?.name ?? supabaseUser.email?.split("@")[0] ?? "User",
+    email: supabaseUser.email ?? "",
+    phone: supabaseUser.phone,
+    avatar: supabaseUser.user_metadata?.avatar_url,
+    points: supabaseUser.user_metadata?.points ?? 0,
+    rank: supabaseUser.user_metadata?.rank ?? "Newcomer",
+    joinedDate: supabaseUser.created_at,
+  }
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(() => {
-    if (typeof window === 'undefined') return null
-    try {
-      const storedUser = localStorage.getItem("user")
-      return storedUser ? JSON.parse(storedUser) : null
-    } catch {
-      return null
-    }
-  })
-  const [loading, setLoading] = useState(false)
-  const [mounted, setMounted] = useState(false)
+  const [user, setUser] = useState<User | null>(null)
+  const [session, setSession] = useState<Session | null>(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setMounted(true)
+    if (!supabase) {
+      setLoading(false)
+      return
+    }
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+      setUser(session?.user ? supabaseUserToUser(session.user) : null)
+      setLoading(false)
+    })
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+      setUser(session?.user ? supabaseUserToUser(session.user) : null)
+      setLoading(false)
+    })
+
+    return () => subscription.unsubscribe()
   }, [])
 
   const signIn = async (email: string, password: string) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    const mockUser: User = {
-      id: "1",
-      name: "John Doe",
-      email,
-      points: 150,
-      rank: "Rate Guru",
-      joinedDate: "2024-01-15",
-    }
-
-    setUser(mockUser)
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.setItem("user", JSON.stringify(mockUser))
-      } catch (e) {
-        // Ignore localStorage errors
-      }
-    }
+    if (!supabase) throw new Error("Supabase not configured")
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    if (error) throw error
   }
 
   const signUp = async (name: string, email: string, password: string) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    const mockUser: User = {
-      id: "2",
-      name,
+    if (!supabase) throw new Error("Supabase not configured")
+    const { error } = await supabase.auth.signUp({
       email,
-      points: 0,
-      rank: "Newcomer",
-      joinedDate: new Date().toISOString(),
-    }
-
-    setUser(mockUser)
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.setItem("user", JSON.stringify(mockUser))
-      } catch (e) {
-        // Ignore localStorage errors
-      }
-    }
+      password,
+      options: { data: { name, rank: "Newcomer", points: 0 } },
+    })
+    if (error) throw error
   }
 
-  const signOut = () => {
+  const signOut = async () => {
+    if (!supabase) return
+    await supabase.auth.signOut()
     setUser(null)
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.removeItem("user")
-      } catch (e) {
-        // Ignore localStorage errors
-      }
-    }
+    setSession(null)
   }
 
-  return <AuthContext.Provider value={{ user, loading, signIn, signUp, signOut }}>{children}</AuthContext.Provider>
+  return (
+    <AuthContext.Provider value={{ user, session, loading, signIn, signUp, signOut }}>
+      {children}
+    </AuthContext.Provider>
+  )
 }
 
 export function useAuth() {

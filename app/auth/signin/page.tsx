@@ -17,13 +17,19 @@ import {
 import { LogIn, Lock, Mail, MapPin, ShieldCheck, TrendingUp, Loader2 } from "lucide-react"
 import { useState } from "react"
 import { useAuth } from "@/lib/auth/auth-context"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { useToast } from "@/hooks/use-toast"
+
+function safeRedirectPath(raw: string | null): string | null {
+  if (!raw || !raw.startsWith("/") || raw.startsWith("//")) return null
+  return raw
+}
 
 export default function SignInPage() {
   const { signIn } = useAuth()
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { toast } = useToast()
   const [loading, setLoading] = useState(false)
   const [rememberMe, setRememberMe] = useState(false)
@@ -42,7 +48,8 @@ export default function SignInPage() {
         title: "Welcome back!",
         description: "You've successfully signed in.",
       })
-      router.push("/dashboard")
+      const next = safeRedirectPath(searchParams.get("redirect"))
+      router.push(next ?? "/trfn-dashboard")
     } catch (error) {
       toast({
         title: "We couldn't sign you in",

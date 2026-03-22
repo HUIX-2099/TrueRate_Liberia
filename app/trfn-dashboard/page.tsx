@@ -231,7 +231,8 @@ export default function TrfnDashboardPage() {
         const v = ratesR.value as { current?: number | null; history?: RateHistoryRow[]; error?: string }
         if (!v?.error) {
           setCurrentRate(v.current ?? null)
-          setRateHistory(v.history?.reverse() ?? [])
+          // `/api/rates` returns history chronological (oldest → newest) for the chart
+          setRateHistory(v.history ?? [])
         }
       }
       if (priceDataR.status === "fulfilled") {

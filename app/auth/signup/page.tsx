@@ -47,7 +47,7 @@ export default function SignUpPage() {
         title: "Welcome to TrueRate-Liberia!",
         description: "Your account has been created successfully.",
       })
-      router.push("/dashboard")
+      router.push("/trfn-dashboard")
     } catch (error) {
       toast({
         title: "We couldn't create your account",

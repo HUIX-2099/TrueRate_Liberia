@@ -1,6 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { useAuth } from "@/lib/auth/auth-context"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PageContainer } from "@/components/layout/page-container"
@@ -9,6 +11,15 @@ const CATEGORIES = ["Food", "Fuel", "Transport", "Housing", "Medicine", "Electro
 const LOCATIONS = ["Monrovia", "Buchanan", "Gbarnga", "Kakata", "Harbel", "Zwedru", "Other"]
 
 export default function SubmitPrice() {
+  const { user, loading } = useAuth()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push("/auth/signin?redirect=/submit")
+    }
+  }, [user, loading, router])
+
   const [form, setForm] = useState({
     item_name: "",
     category: "Food",
@@ -49,10 +60,22 @@ export default function SubmitPrice() {
     }
   }
 
+  if (loading || !user) {
+    return (
+      <>
+        <Header />
+        <main className="min-h-screen bg-background flex items-center justify-center">
+          <p className="text-muted-foreground text-sm">Checking authentication...</p>
+        </main>
+        <Footer />
+      </>
+    )
+  }
+
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background text-foreground">
+      <main id="main-content" className="min-h-screen bg-background text-foreground pb-20 md:pb-0" role="main">
         <PageContainer maxWidth="2xl" className="py-10 md:py-16">
           <div className="mb-8">
             <p className="text-green-600 dark:text-green-400 text-xs uppercase tracking-widest mb-1">
