@@ -32,6 +32,38 @@ function formatTrend(rates: RateRow[]): { trend: string; values: number[] } {
   return { trend: "stable", values }
 }
 
+/** Optional live view from TrueRate app (dashboard / converter) — complements Supabase snapshot. */
+function formatClientContextBlock(ctx: Record<string, unknown> | null): string {
+  if (!ctx) return ""
+  const rate = ctx.rate
+  const cbl = ctx.cblRate
+  const sourcesRaw = ctx.sources
+  const ts = ctx.timestamp
+  const sources = Array.isArray(sourcesRaw)
+    ? sourcesRaw.filter((s): s is string => typeof s === "string")
+    : []
+  const has =
+    (typeof rate === "number" && Number.isFinite(rate)) ||
+    (typeof cbl === "number" && Number.isFinite(cbl)) ||
+    sources.length > 0 ||
+    typeof ts === "string"
+  if (!has) return ""
+  const lines = ["TrueRate app live context (what the user currently sees):"]
+  if (typeof rate === "number" && Number.isFinite(rate)) {
+    lines.push(`- Display USD/LRD (user preference): ${rate} LRD per USD`)
+  }
+  if (typeof cbl === "number" && Number.isFinite(cbl)) {
+    lines.push(`- CBL official rate (client): ${cbl} LRD per USD`)
+  }
+  if (sources.length > 0) {
+    lines.push(`- Sources shown in app: ${sources.join(", ")}`)
+  }
+  if (typeof ts === "string" && ts.length > 0) {
+    lines.push(`- Client rate timestamp: ${ts}`)
+  }
+  return `${lines.join("\n")}\n\n`
+}
+
 export async function POST(req: Request) {
   const supabase = createServiceRoleClient()
   if (!supabase) {
@@ -48,20 +80,26 @@ export async function POST(req: Request) {
 
   let body: { question?: unknown; context?: unknown } = {}
   try {
-    body = (await req.json()) as { question?: unknown; context?: unknown }
+    const text = await req.text()
+    if (text && text.trim()) {
+      body = JSON.parse(text) as { question?: unknown; context?: unknown }
+    }
+    // empty body is fine — generates default analysis
   } catch {
-    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 })
+    // invalid JSON — still proceed with empty question
+    body = {}
   }
 
   const question =
     typeof body.question === "string" ? body.question.slice(0, 8000) : ""
+  const context: unknown = body.context ?? null
 
   const ctx =
-    body.context !== null && typeof body.context === "object"
-      ? (body.context as Record<string, unknown>)
-      : null
+    context !== null && typeof context === "object" ? (context as Record<string, unknown>) : null
   const rawCrypto = ctx?.crypto
   const cryptoContext = isCryptoContext(rawCrypto) ? rawCrypto : null
+
+  const clientContextBlock = formatClientContextBlock(ctx)
 
   const cryptoBlock = cryptoContext
     ? `
@@ -145,7 +183,7 @@ USD/LRD Rate: ${latestRate?.rate ?? "N/A"} LRD per USD
 Rate Trend (7-day): ${rateTrend} (${rateValues.join(", ")})
 Last Updated: ${latestRate?.recorded_at ?? "N/A"}
 
-${cryptoBlock ? `${cryptoBlock}\n` : ""}
+${clientContextBlock}${cryptoBlock ? `${cryptoBlock}\n` : ""}
 ${pricesBlock}
 
 User Question: ${question || "Provide a brief macro market analysis for Liberia based on current data."}
