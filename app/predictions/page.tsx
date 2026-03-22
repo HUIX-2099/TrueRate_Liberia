@@ -16,13 +16,12 @@ import {
   TrendingDown,
   AlertCircle,
   RefreshCw,
-  Bell,
   Activity,
   BarChart3,
   LineChart,
-  Zap,
 } from "lucide-react"
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 interface CandleData {
   date: string
@@ -42,7 +41,7 @@ interface Prediction {
 const computeBacktestAccuracy = (candles: CandleData[], lookback = 7) => {
   if (candles.length < 2) return null
   const startIndex = Math.max(1, candles.length - lookback)
-  const errors = []
+  const errors: number[] = []
   for (let i = startIndex; i < candles.length; i += 1) {
     const actual = candles[i]?.close
     const predicted = candles[i - 1]?.close
@@ -56,382 +55,382 @@ const computeBacktestAccuracy = (candles: CandleData[], lookback = 7) => {
 }
 
 export default function PredictionsPage() {
+  const {
+    effectiveRate,
+    rate,
+    cblRate,
+    loading: rateLoading,
+    sources,
+    timestamp,
+    refresh: refreshRate,
+  } = useLiveRate()
+
   const [candles, setCandles] = useState<CandleData[]>([])
   const [predictions, setPredictions] = useState<Prediction[]>([])
-  const [currentRate, setCurrentRate] = useState(177.5)
   const [loading, setLoading] = useState(true)
   const [lastUpdate, setLastUpdate] = useState<string>("")
   const [predictionExplanation, setPredictionExplanation] = useState<string>("")
   const backtestAccuracy = useMemo(() => computeBacktestAccuracy(candles), [candles])
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       setLoading(true)
-      const [candleRes, liveRes, predRes] = await Promise.all([
+
+      const [candleRes, predRes] = await Promise.allSettled([
         fetch("/api/rates/candles?days=60"),
-        fetch("/api/rates/live"),
         fetch("/api/rates/predictions?days=7"),
       ])
 
-      const candleData = await candleRes.json()
-      const liveData = await liveRes.json()
-      const predData = await predRes.json()
+      if (candleRes.status === "fulfilled" && candleRes.value.ok) {
+        const candleData = (await candleRes.value.json()) as { candles?: CandleData[] }
+        setCandles(candleData.candles ?? [])
+      }
 
-      setCandles(candleData.candles || [])
-      setPredictions(candleData.predictions || [])
-      if (typeof predData.explanation === "string") setPredictionExplanation(predData.explanation)
-
-      if (typeof liveData.rate === "number") {
-        setCurrentRate(liveData.rate)
-      } else if (candleData.currentRate) {
-        setCurrentRate(candleData.currentRate)
+      if (predRes.status === "fulfilled" && predRes.value.ok) {
+        const predData = (await predRes.value.json()) as {
+          predictions?: Prediction[]
+          explanation?: string
+        }
+        setPredictions(predData.predictions ?? [])
+        setPredictionExplanation(typeof predData.explanation === "string" ? predData.explanation : "")
       }
 
       setLastUpdate(new Date().toLocaleTimeString())
-    } catch (error) {
-      console.error("Error fetching data:", error)
+    } catch (err) {
+      console.error("Predictions fetch error:", err)
     } finally {
       setLoading(false)
     }
-  }
-
-  useEffect(() => {
-    fetchData()
-    const interval = setInterval(fetchData, 60000)
-    return () => clearInterval(interval)
   }, [])
 
-  // Calculate market stats
-  const dayChange = candles.length > 1 
-    ? ((candles[candles.length - 1]?.close || 0) - (candles[candles.length - 2]?.close || 0))
-    : 0
-  const dayChangePercent = candles.length > 1 
-    ? (dayChange / (candles[candles.length - 2]?.close || 1)) * 100 
-    : 0
-  
-  const weekHigh = candles.slice(-7).reduce((max, c) => Math.max(max, c.high), 0)
-  const weekLow = candles.slice(-7).reduce((min, c) => Math.min(min, c.low), Infinity)
-  const avgVolume = candles.slice(-7).reduce((sum, c) => sum + c.volume, 0) / 7
+  useEffect(() => {
+    void fetchData()
+    const interval = setInterval(() => void fetchData(), 60_000)
+    return () => clearInterval(interval)
+  }, [fetchData])
+
+  useEffect(() => {
+    if (loading || rateLoading || effectiveRate <= 0) return
+    setCandles((prev) => {
+      if (prev.length === 0) return prev
+      const idx = prev.length - 1
+      const last = prev[idx]!
+      if (Math.abs(last.close - effectiveRate) < 1e-4) return prev
+      const next = [...prev]
+      next[idx] = { ...last, close: effectiveRate }
+      return next
+    })
+  }, [effectiveRate, rateLoading, loading])
+
+  const currentRate = effectiveRate
+
+  const trend =
+    predictions.length > 1
+      ? predictions[predictions.length - 1]!.predicted > predictions[0]!.predicted
+        ? "up"
+        : "down"
+      : null
+
+  const sevenDayHigh =
+    candles.length > 0
+      ? Math.max(...candles.slice(-7).map((c) => c.high).filter(Number.isFinite))
+      : null
+
+  const sevenDayLow =
+    candles.length > 0
+      ? Math.min(...candles.slice(-7).map((c) => c.low).filter(Number.isFinite))
+      : null
+
+  const avgVolume =
+    candles.length > 0
+      ? Math.round(
+          candles.slice(-7).reduce((s, c) => s + (c.volume || 0), 0) / Math.min(candles.length, 7),
+        )
+      : null
+
+  const handleRefresh = () => {
+    void refreshRate()
+    void fetchData()
+  }
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <ErrorBoundary>
-      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
+      <main
+        id="main-content"
+        className="flex-1 overflow-x-hidden pb-20 md:pb-0"
+        role="main"
+      >
         <PageHero
-          ariaLabel="Rate outlook and planning guide"
+          ariaLabel="Rate outlook"
           label="Live Rate Outlook"
           title="Rate Outlook & Planning Guide"
           description="Use short-term outlooks, recent movement, and market context to plan exchange timing, remittances, and everyday money decisions with more confidence."
           variant="centered"
-          badges={
-            <>
-              <Badge className="px-4 py-1" variant="secondary">
-                <Activity className="h-3 w-3 mr-1 animate-pulse text-primary" />
-                Live Rate Outlook
-              </Badge>
-              <Badge className="bg-muted/40 border border-border/40 text-primary">Planning-first</Badge>
-            </>
-          }
+          pill={{
+            text: rateLoading ? "Loading rate..." : `${effectiveRate.toFixed(2)} LRD/USD`,
+            live: !rateLoading,
+          }}
           contentMaxWidth="max-w-4xl"
-        />
-
-        {/* Live Stats Bar */}
-        <section className="border-b border-border sticky top-16 z-40 shadow-sm">
-          <div className="container mx-auto px-4 py-4">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="flex items-center gap-6">
-                <div className="flex items-center gap-3">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">{currentRate.toFixed(2)}</div>
-                    <div className="text-xs text-muted-foreground">LRD/USD</div>
-                  </div>
-                </div>
-                <div className={`flex items-center gap-2 px-3 py-2 rounded-lg border ${ dayChange > 0 ? "bg-red-50 border-red-200 dark:bg-red-950/20 dark:border-red-800" : "bg-green-50 border-green-200 dark:bg-green-950/20 dark:border-green-800" }`}>
-                  {dayChange > 0 ? <TrendingUp className="h-4 w-4 text-green-600 dark:text-green-400" /> : <TrendingDown className="h-4 w-4 text-red-600 dark:text-red-400" />}
-                  <span className={`text-sm font-semibold ${dayChange > 0 ? "text-red-600" : "text-green-600"}`}>
-                    {dayChange > 0 ? "+" : ""}{dayChange.toFixed(2)} ({dayChangePercent.toFixed(2)}%)
-                  </span>
-                </div>
+        >
+          <div className="mx-auto mt-6 grid w-full max-w-xl grid-cols-3 gap-2 sm:max-w-2xl sm:gap-3">
+            {[
+              {
+                icon: <TrendingUp className="h-4 w-4 text-emerald-600" />,
+                value: sevenDayHigh != null ? sevenDayHigh.toFixed(2) : "—",
+                caption: "7D High",
+              },
+              {
+                icon: <TrendingDown className="h-4 w-4 text-rose-600" />,
+                value: sevenDayLow != null ? sevenDayLow.toFixed(2) : "—",
+                caption: "7D Low",
+              },
+              {
+                icon: <Activity className="h-4 w-4 text-primary" />,
+                value: avgVolume != null ? avgVolume.toLocaleString() : "—",
+                caption: "Avg Vol",
+              },
+            ].map((s) => (
+              <div
+                key={s.caption}
+                className="flex flex-col items-center justify-center gap-1 rounded-xl border border-border/50 bg-muted/20 py-3"
+              >
+                {s.icon}
+                <span className="text-lg font-bold tabular-nums text-foreground">{s.value}</span>
+                <span className="text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                  {s.caption}
+                </span>
               </div>
-              <div className="flex items-center gap-4 text-sm">
-                <div className="hidden sm:flex items-center gap-4 text-muted-foreground">
-                  <span>7D High: <strong className="text-foreground">{weekHigh.toFixed(2)}</strong></span>
-                  <span>7D Low: <strong className="text-foreground">{weekLow.toFixed(2)}</strong></span>
-                  <span className="hidden md:inline">Avg Vol: <strong className="text-foreground">{Math.round(avgVolume).toLocaleString()}</strong></span>
+            ))}
+          </div>
+        </PageHero>
+
+        {!rateLoading && (
+          <div className="border-b border-border/60 bg-muted/30 dark:bg-slate-950/50">
+            <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
+              <div className="flex flex-col gap-3 text-sm sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4">
+                <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+                    <span className="text-muted-foreground">Market Rate:</span>
+                    <strong className="font-mono text-foreground">{rate.toFixed(2)} LRD</strong>
+                  </div>
+                  {cblRate != null && cblRate > 0 && (
+                    <>
+                      <div className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-blue-500" />
+                        <span className="text-muted-foreground">CBL Official:</span>
+                        <strong className="font-mono text-foreground">{cblRate.toFixed(2)} LRD</strong>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-muted-foreground">Spread:</span>
+                        <strong className="font-mono text-amber-600">
+                          L${Math.abs(rate - cblRate).toFixed(2)}
+                        </strong>
+                      </div>
+                    </>
+                  )}
+                  {trend && (
+                    <div
+                      className={`flex items-center gap-1 ${trend === "up" ? "text-rose-600" : "text-emerald-600"}`}
+                    >
+                      {trend === "up" ? (
+                        <TrendingUp className="h-4 w-4" />
+                      ) : (
+                        <TrendingDown className="h-4 w-4" />
+                      )}
+                      <span className="text-xs font-medium">
+                        7-day forecast: {trend === "up" ? "Rising" : "Falling"}
+                      </span>
+                    </div>
+                  )}
                 </div>
-                <Button variant="outline" size="sm" onClick={fetchData} disabled={loading} className="gap-2 rounded-xl min-h-[44px]">
-                  <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
-                  {lastUpdate || "Loading..."}
-                </Button>
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-xs text-muted-foreground">
+                    {sources[0] ?? "ExchangeRate-API + CBL"} · Updated{" "}
+                    {timestamp ? new Date(timestamp).toLocaleTimeString() : "just now"}
+                  </span>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="gap-2"
+                    onClick={handleRefresh}
+                    disabled={loading}
+                  >
+                    <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
+                    {lastUpdate || "Refresh"}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        )}
 
-        {/* Main Content */}
-        <section className="py-10 sm:py-12 md:py-12">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto space-y-8">
-              
-              {/* Trading Chart */}
-              <TradingChart 
-                data={candles} 
-                predictions={predictions}
-                currentRate={currentRate}
-              />
+        <div className="mx-auto max-w-7xl space-y-6 px-4 py-6 sm:px-6 lg:px-8">
+          <ErrorBoundary>
+            <TradingChart
+              data={candles}
+              predictions={predictions}
+              currentRate={currentRate}
+            />
+          </ErrorBoundary>
 
-              {/* Tabs for different views */}
-              <Tabs defaultValue="predictions" className="space-y-6">
-                <div className="text-center mb-6">
-                  <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
-                    <Badge variant="outline">AI Insights</Badge>
-                    <Badge className="bg-muted/40 border border-border/40 text-primary">Multiple Models</Badge>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-foreground">
-                    Planning Insights
-                  </h2>
-                  <p className="text-sm text-muted-foreground">Practical outlooks for sending, exchanging, and budgeting</p>
-                </div>
-                <TabsList className="grid w-full grid-cols-1 gap-1.5 rounded-xl border border-border/50 bg-muted/40 p-1.5 h-auto sm:grid-cols-3 shadow-sm">
-                  <TabsTrigger value="predictions" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
-                    <Brain className="h-4 w-4 text-primary" />
-                    Outlook
-                  </TabsTrigger>
-                  <TabsTrigger value="signals" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
-                    <Bell className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                    Planning
-                  </TabsTrigger>
-                  <TabsTrigger value="analysis" className="w-full gap-2 min-h-[44px] px-3 py-2.5 text-xs sm:text-sm">
-                    <BarChart3 className="h-4 w-4 text-primary" />
-                    Drivers
-                  </TabsTrigger>
-                </TabsList>
+          <Tabs defaultValue="outlook">
+            <TabsList>
+              <TabsTrigger value="outlook">Outlook</TabsTrigger>
+              <TabsTrigger value="planning">Planning</TabsTrigger>
+              <TabsTrigger value="drivers">Drivers</TabsTrigger>
+            </TabsList>
 
-                <TabsContent value="predictions">
-                  <MLPredictions currentRate={currentRate} backtestAccuracy={backtestAccuracy} explanation={predictionExplanation} />
-                </TabsContent>
-
-                <TabsContent value="signals">
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <Card className="border-border/40 rounded-2xl shadow-sm">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-2">
-                          <TrendingUp className="h-5 w-5 text-green-600 dark:text-green-400" />
-                          Better time to buy USD?
-                        </CardTitle>
-                        <CardDescription>Helpful if you need to hold or send dollars soon</CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="space-y-2">
-                          <div className="flex justify-between text-sm">
-                            <span>Rate below recent average</span>
-                            <Badge variant="outline" className="text-green-500">Watch</Badge>
-                          </div>
-                          <div className="flex justify-between text-sm">
-                            <span>Short-term dip continues</span>
-                            <Badge variant="outline" className="text-muted-foreground">Monitor</Badge>
-                          </div>
-                          <div className="flex justify-between text-sm">
-                            <span>Community reports softening</span>
-                            <Badge variant="outline" className="text-green-500">Useful</Badge>
-                          </div>
-                        </div>
-                        <div className="pt-4 border-t">
-                          <div className="text-sm text-muted-foreground mb-2">Watch zone</div>
-                          <div className="text-xl font-bold text-green-500">{(currentRate - 2).toFixed(2)} - {(currentRate - 1).toFixed(2)} LRD</div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-border/40 rounded-2xl shadow-sm">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-2">
-                          <TrendingDown className="h-5 w-5 text-red-600 dark:text-red-400" />
-                          Better time to exchange USD?
-                        </CardTitle>
-                        <CardDescription>Helpful if you need more LRD from dollars you already have</CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="space-y-2">
-                          <div className="flex justify-between text-sm">
-                            <span>Rate above recent average</span>
-                            <Badge variant="outline" className="text-red-500">Watch</Badge>
-                          </div>
-                          <div className="flex justify-between text-sm">
-                            <span>Recent climb slowing</span>
-                            <Badge variant="outline" className="text-red-500">Near</Badge>
-                          </div>
-                          <div className="flex justify-between text-sm">
-                            <span>Volatility is elevated</span>
-                            <Badge variant="outline" className="text-muted-foreground">Monitor</Badge>
-                          </div>
-                        </div>
-                        <div className="pt-4 border-t">
-                          <div className="text-sm text-muted-foreground mb-2">Caution zone</div>
-                          <div className="text-xl font-bold text-red-500">{(currentRate + 1).toFixed(2)} - {(currentRate + 3).toFixed(2)} LRD</div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-border/40 rounded-2xl shadow-sm">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-2">
-                          <Bell className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                          Rate Alerts
-                        </CardTitle>
-                        <CardDescription>Simple thresholds for planning, not trading</CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="space-y-3">
-                          <div className="flex items-center justify-between p-3 rounded-lg bg-muted">
-                            <div>
-                              <div className="text-sm font-medium">Above {(currentRate + 2).toFixed(2)}</div>
-                              <div className="text-xs text-muted-foreground">Budget alert</div>
-                            </div>
-                            <Badge variant="secondary">Active</Badge>
-                          </div>
-                          <div className="flex items-center justify-between p-3 rounded-lg bg-muted">
-                            <div>
-                              <div className="text-sm font-medium">Below {(currentRate - 2).toFixed(2)}</div>
-                              <div className="text-xs text-muted-foreground">Send-home alert</div>
-                            </div>
-                            <Badge variant="secondary">Active</Badge>
-                          </div>
-                        </div>
-                        <Button className="w-full rounded-xl min-h-[44px]" variant="outline">
-                          <Bell className="h-4 w-4 mr-2 text-blue-600 dark:text-blue-400" />
-                          Add Alert
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="analysis">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <Card className="border-border/40 rounded-2xl shadow-sm">
-                      <CardHeader>
-                        <CardTitle>Planning Snapshot</CardTitle>
-                        <CardDescription>The signals most useful for everyday money decisions</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
-                          {[
-                            { name: "1-day move", value: `${dayChange > 0 ? "+" : ""}${dayChange.toFixed(2)} LRD`, signal: dayChange > 0 ? "USD stronger" : dayChange < 0 ? "LRD stronger" : "Flat", color: dayChange > 0 ? "text-red-500" : dayChange < 0 ? "text-green-500" : "text-yellow-500" },
-                            { name: "7-day high", value: weekHigh.toFixed(2), signal: "Upper range", color: "text-red-500" },
-                            { name: "7-day low", value: weekLow.toFixed(2), signal: "Lower range", color: "text-green-500" },
-                            { name: "7-day backtest", value: backtestAccuracy != null ? `${backtestAccuracy.toFixed(1)}%` : "—", signal: "Model confidence", color: "text-blue-500" },
-                            { name: "Avg activity", value: `${Math.round(avgVolume).toLocaleString()}`, signal: "Recent volume", color: "text-yellow-500" },
-                          ].map((indicator) => (
-                            <div key={indicator.name} className="flex items-center justify-between">
-                              <span className="text-sm text-muted-foreground">{indicator.name}</span>
-                              <div className="flex items-center gap-3">
-                                <span className="font-mono font-medium">{indicator.value}</span>
-                                <Badge variant="outline" className={indicator.color}>
-                                  {indicator.signal}
-                                </Badge>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-border/40 rounded-2xl shadow-sm">
-                      <CardHeader>
-                        <CardTitle>Likely Market Drivers</CardTitle>
-                        <CardDescription>What to watch near term when planning exchange or remittance</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-6">
-                          <div>
-                            <div className="flex justify-between text-sm mb-2">
-                              <span>Calmer market</span>
-                              <span>More movement</span>
-                            </div>
-                            <div className="h-4 rounded-full relative">
-                              <div 
-                                className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-lg border-2 border-primary"
-                                style={{ left: "55%" }}
-                              />
-                            </div>
-                            <div className="text-center mt-2">
-                              <span className="text-sm font-medium">Balanced</span>
-                            </div>
-                          </div>
-
-                          <div className="grid grid-cols-2 gap-4 pt-4 border-t">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-green-500">62%</div>
-                              <div className="text-xs text-muted-foreground">Steady remittance support</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-red-500">38%</div>
-                              <div className="text-xs text-muted-foreground">Short-term market stress</div>
-                            </div>
-                          </div>
-
-                          <div className="space-y-2">
-                            <div className="text-sm font-medium">This week, watch for:</div>
-                            <div className="space-y-2 text-sm">
-                              <div className="flex items-center gap-2 text-muted-foreground">
-                                <Zap className="h-3 w-3 text-primary" />
-                                CBL policy announcement expected
-                              </div>
-                              <div className="flex items-center gap-2 text-muted-foreground">
-                                <Zap className="h-3 w-3 text-primary" />
-                                Remittance inflows steady
-                              </div>
-                              <div className="flex items-center gap-2 text-muted-foreground">
-                                <Zap className="h-3 w-3 text-primary" />
-                                Export season beginning
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-              </Tabs>
-
-              {/* Model Info */}
-              <Card className="border-border/40 rounded-2xl border-primary/20 shadow-sm">
-                <CardContent className="p-6">
-                  <div className="flex gap-4">
-                    <div className="h-12 w-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <AlertCircle className="h-6 w-6 text-amber-600 dark:text-amber-400" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <h3 className="font-semibold text-lg text-foreground">About This Outlook</h3>
-                        <Badge className="bg-muted/40 border border-border/40 text-primary">Decision support</Badge>
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                        This page combines recent rate history, short-term model forecasts, and market context to help with
-                        budgeting, remittance timing, and exchange planning. It is meant to support practical decisions,
-                        not encourage speculative trading.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary" className="gap-1">
-                          <Brain className="h-3 w-3 text-primary" />
-                          ARIMA
-                        </Badge>
-                        <Badge variant="secondary" className="gap-1">
-                          <LineChart className="h-3 w-3 text-primary" />
-                          LSTM
-                        </Badge>
-                      </div>
-                    </div>
-                  </div>
+            <TabsContent value="outlook" className="mt-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Brain className="h-5 w-5 text-primary" />
+                    AI Insights
+                    <Badge variant="outline" className="ml-2 text-xs">
+                      Multiple Models
+                    </Badge>
+                  </CardTitle>
+                  <CardDescription>
+                    Planning Insights — practical outlooks for sending, exchanging, and budgeting
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ErrorBoundary>
+                    <MLPredictions
+                      currentRate={currentRate}
+                      explanation={predictionExplanation}
+                      backtestAccuracy={backtestAccuracy}
+                    />
+                  </ErrorBoundary>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
+            </TabsContent>
+
+            <TabsContent value="planning" className="mt-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Planning guidance</CardTitle>
+                  <CardDescription>When to exchange, when to wait, and how to plan</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4 text-sm text-muted-foreground">
+                  {!rateLoading ? (
+                    <>
+                      <div className="rounded-lg border border-border/60 bg-muted/30 p-4">
+                        <p className="mb-1 font-semibold text-foreground">
+                          Today&apos;s rate: L${effectiveRate.toFixed(2)}
+                        </p>
+                        <p>
+                          {cblRate != null && cblRate > 0
+                            ? `The market rate is L${Math.abs(rate - cblRate).toFixed(2)} ${rate > cblRate ? "above" : "below"} the CBL official rate of L${cblRate.toFixed(2)}.`
+                            : "Compare with the CBL official rate before exchanging large amounts."}
+                        </p>
+                      </div>
+                      <div className="rounded-lg border border-border/60 bg-muted/30 p-4">
+                        <p className="mb-1 font-semibold text-foreground">Remittance timing</p>
+                        <p>
+                          {trend === "up"
+                            ? "Forecast shows the LRD may weaken slightly. If you are sending USD to family, they may receive slightly more LRD if the rate continues rising. Monitor over 2–3 days."
+                            : trend === "down"
+                              ? "Forecast shows the LRD may strengthen. Sending remittances sooner may give your family a better rate."
+                              : "Rate outlook is stable. No strong signal to delay or rush your remittance."}
+                        </p>
+                      </div>
+                      <div className="rounded-lg border border-border/60 bg-muted/30 p-4">
+                        <p className="mb-1 font-semibold text-foreground">Business planning</p>
+                        <p>
+                          For import/export businesses, the 7-day outlook helps with invoice timing and FX hedging
+                          decisions. Visit the{" "}
+                          <a href="/business" className="text-primary hover:underline">
+                            Business Dashboard
+                          </a>{" "}
+                          for detailed tools.
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <p>Loading rate data...</p>
+                  )}
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="drivers" className="mt-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Rate drivers</CardTitle>
+                  <CardDescription>Key factors influencing the USD/LRD rate today</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3 text-sm">
+                  {[
+                    { label: "CBL monetary policy", impact: "Moderate", color: "text-amber-600" },
+                    { label: "Remittance inflows", impact: "Stabilizing", color: "text-emerald-600" },
+                    { label: "Import demand (fuel, rice)", impact: "Upward pressure", color: "text-rose-600" },
+                    { label: "Export revenue (rubber, iron ore)", impact: "Stabilizing", color: "text-emerald-600" },
+                    { label: "Parallel market activity", impact: "Monitor", color: "text-amber-600" },
+                  ].map((d) => (
+                    <div
+                      key={d.label}
+                      className="flex items-center justify-between rounded-lg border border-border/50 bg-muted/30 px-4 py-3"
+                    >
+                      <span className="text-foreground">{d.label}</span>
+                      <span className={`font-medium ${d.color}`}>{d.impact}</span>
+                    </div>
+                  ))}
+                  <p className="pt-2 text-xs text-muted-foreground">
+                    Sources: CBL data · ExchangeRate-API · LISGIS · TrueRate market analysis
+                  </p>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
+
+          <Card className="border-border/50 bg-muted/20">
+            <CardContent className="pb-4 pt-4">
+              <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+                <span className="font-medium text-foreground">Models used:</span>
+                {["SMA", "EMA", "Linear Regression", "ARIMA", "Seasonal"].map((m) => (
+                  <Badge key={m} variant="outline" className="text-[10px]">
+                    {m}
+                  </Badge>
+                ))}
+                <span className="sm:ml-auto">Trained on CBL historical data</span>
+              </div>
+              {predictionExplanation && (
+                <p className="mt-2 text-xs text-muted-foreground">{predictionExplanation}</p>
+              )}
+              <p className="mt-3 border-t border-border/40 pt-3 text-xs text-muted-foreground">
+                Forecasts are indicative only. Verify against live money changers or your bank before exchanging or
+                sending money.
+              </p>
+              <div className="mt-3 flex items-start gap-3">
+                <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  This page combines recent rate history, short-term model forecasts, and market context to help with
+                  budgeting, remittance timing, and exchange planning. It supports practical decisions, not speculative
+                  trading.
+                </p>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <Badge variant="secondary" className="gap-1">
+                  <Brain className="h-3 w-3 text-primary" />
+                  ARIMA
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <LineChart className="h-3 w-3 text-primary" />
+                  Ensemble
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <BarChart3 className="h-3 w-3 text-primary" />
+                  CBL history
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </main>
-      </ErrorBoundary>
       <Footer />
     </div>
   )
