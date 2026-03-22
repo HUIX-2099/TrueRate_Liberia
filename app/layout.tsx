@@ -91,7 +91,8 @@ export const metadata: Metadata = {
     "cost of living Liberia",
     "inflation tracker Liberia",
     "LRD stability",
-    "LRD health",
+    "Liberia daily market brief",
+    "My Liberia Daily",
 
     // ── Remittance & diaspora (from Diaspora Mode + Remittance Tools)
     "send money to Liberia",

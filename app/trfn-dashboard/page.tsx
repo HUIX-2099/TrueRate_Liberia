@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { useLiveRate } from "@/lib/live-rate-context"
 import { TrfnAiAnalyst, type TrfnAiCryptoContext } from "@/components/trfn-ai-analyst"
 import { TrfnLiveSignals } from "@/components/trfn-live-signals"
+import { TrfnDailyBrief } from "@/components/trfn-daily-brief"
 import {
   Activity,
   AlertTriangle,
@@ -623,6 +624,11 @@ export default function TrfnDashboardPage() {
                     timestamp,
                   }}
                 />
+              </div>
+
+              {/* ✅ Personalized Daily Brief — full width */}
+              <div className="md:col-span-3">
+                <TrfnDailyBrief />
               </div>
             </div>
           </div>

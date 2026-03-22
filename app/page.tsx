@@ -27,8 +27,8 @@ import { SectionHeader } from "@/components/layout/section-header"
 import { PageContainer } from "@/components/layout/page-container"
 import { StickyMobileRateBar } from "@/components/sticky-mobile-rate-bar"
 import { GovernmentSourceBadge } from "@/components/government-source-badge"
-import { DollarizationRiskIndicator } from "@/components/dollarization-risk-indicator"
 import { TrfnLiveSignals } from "@/components/trfn-live-signals"
+import { TrfnDailyBrief } from "@/components/trfn-daily-brief"
 
 import { useLiveRate } from "@/lib/live-rate-context"
 import { ListSkeleton, CardSkeleton, SectionHeaderSkeleton } from "@/components/ui/skeleton-presets"
@@ -336,22 +336,13 @@ export default function HomePage() {
           </PageContainer>
         </PageSection>
 
-        {/* LRD Health Section */}
-        <PageSection ariaLabelledBy="dollarization-risk-heading">
-          <PageContainer maxWidth="4xl" className="min-w-0">
-            <SectionHeader
-              id="dollarization-risk-heading"
-              badge={
-                <>
-                  <Badge variant="outline" className="text-[11px] sm:text-xs">LRD health</Badge>
-                  <Badge variant="outline" className="text-[11px] sm:text-xs">Live</Badge>
-                  <Badge variant="secondary" className="text-[11px] sm:text-xs">CBL data</Badge>
-                </>
-              }
-              title="LRD Health"
-              description="A simple snapshot of LRD stability today—based on USD demand, the LRD trend, and liquidity stress."
-            />
-            <DollarizationRiskIndicator />
+        {/* My Liberia Daily — personalized AI brief */}
+        <PageSection ariaLabelledBy="my-liberia-daily-heading">
+          <PageContainer maxWidth="5xl" className="min-w-0">
+            <h2 id="my-liberia-daily-heading" className="sr-only">
+              My Liberia Daily
+            </h2>
+            <TrfnDailyBrief />
           </PageContainer>
         </PageSection>
 
