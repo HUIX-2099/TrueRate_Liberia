@@ -30,6 +30,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts"
+import { TrfnAiAnalyst } from "@/components/trfn-ai-analyst"
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Tone = "up" | "down" | "neutral"
@@ -562,6 +563,11 @@ export default function TrfnDashboardPage() {
                     ))}
                   </div>
                 )}
+              </div>
+
+              {/* AI Market Analyst — full width */}
+              <div className="md:col-span-3">
+                <TrfnAiAnalyst crypto={crypto} />
               </div>
             </div>
           </div>

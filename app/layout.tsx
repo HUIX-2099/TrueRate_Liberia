@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   // Primary Meta Tags
   metadataBase: new URL("https://truerateliberia.com"),
   title: {
-    default: "TrueRate Liberia - Trusted Rates and Money Tools",
-    template: "%s | TrueRate Liberia",
+    default: "TrueRate Financial Network — Liberia's Financial Intelligence Platform",
+    template: "%s | TrueRate Financial Network",
   },
   description:
-    "Trusted rates, prices, and practical money tools for everyday decisions in Liberia.",
+    "Know what is happening in Liberia's economy today, then plan tomorrow with clear market facts and practical tools for your home, your work, and your future.",
   
   // Application Info
-  applicationName: "TrueRate Liberia",
+  applicationName: "TrueRate Financial Network",
   generator: "Next.js",
   manifest: "/manifest.webmanifest",
   
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   // Authors & Creator
   authors: [{ name: "HUIX-2099", url: "https://truerateliberia.com" }],
   creator: "HUIX-2099",
-  publisher: "TrueRate Liberia",
+  publisher: "TrueRate Financial Network",
   
   // Robots & Indexing
   robots: {
@@ -70,16 +70,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://truerateliberia.com",
-    siteName: "TrueRate Liberia",
-    title: "TrueRate Liberia - Trusted Rates and Money Tools",
+    siteName: "TrueRate Financial Network",
+    title: "TrueRate Financial Network — Liberia's Financial Intelligence Platform",
     description:
-      "Trusted rates, prices, and practical money tools for everyday decisions in Liberia.",
+      "Know what is happening in Liberia's economy today, then plan tomorrow with clear market facts and practical tools for your home, your work, and your future.",
     images: [
       {
         url: "https://truerateliberia.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TrueRate Liberia - Trusted Rates and Money Tools",
+        alt: "TrueRate Financial Network — Liberia's Financial Intelligence Platform",
         type: "image/png",
       },
     ],
@@ -88,9 +88,9 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "TrueRate Liberia - Trusted Rates and Money Tools",
+    title: "TrueRate Financial Network — Liberia's Financial Intelligence Platform",
     description:
-      "Trusted rates, prices, and practical money tools for everyday decisions in Liberia.",
+      "Know what is happening in Liberia's economy today, then plan tomorrow with clear market facts and practical tools for your home, your work, and your future.",
     images: ["https://truerateliberia.com/og-image.png"],
     creator: "@TrueRateLiberia",
     site: "@TrueRateLiberia",
