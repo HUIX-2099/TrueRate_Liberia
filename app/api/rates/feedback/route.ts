@@ -1,51 +1,46 @@
 import { NextResponse } from "next/server"
+import { createServiceRoleClient } from "@/lib/supabase/service-role"
 
-/**
- * In-memory store for rate feedback (confirm/flag).
- * Replace with a database (e.g. Vercel KV, Postgres) for production persistence.
- */
-const feedbackStore: Array<{
-  type: "confirm" | "flag"
-  rate?: number
-  message?: string
-  location?: string
-  createdAt: string
-}> = []
+export async function GET() {
+  const supabase = createServiceRoleClient()
+  if (!supabase) return NextResponse.json({ feedback: [] })
+  const { data, error } = await supabase
+    .from("rate_feedback")
+    .select("*")
+    .order("created_at", { ascending: false })
+    .limit(50)
+  if (error) {
+    console.error("Rate feedback GET:", error.message)
+    return NextResponse.json({ feedback: [] })
+  }
+  return NextResponse.json({ feedback: data ?? [] })
+}
 
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const type = body?.type === "confirm" || body?.type === "flag" ? body.type : null
-    if (!type) {
-      return NextResponse.json(
-        { error: "Missing or invalid 'type': use 'confirm' or 'flag'" },
-        { status: 400 },
-      )
-    }
-
-    const rate = typeof body?.rate === "number" && body.rate > 0 ? body.rate : undefined
-    const message = typeof body?.message === "string" ? body.message.slice(0, 500) : undefined
-    const location = typeof body?.location === "string" ? body.location.slice(0, 200) : undefined
+    const directionFromType =
+      body?.type === "confirm" || body?.type === "flag" ? (body.type as string) : null
+    const direction =
+      typeof body?.direction === "string"
+        ? body.direction.trim().slice(0, 32)
+        : directionFromType
 
     const entry = {
-      type,
-      rate,
-      message,
-      location,
-      createdAt: new Date().toISOString(),
+      rate: typeof body?.rate === "number" ? body.rate : null,
+      direction,
+      location: typeof body?.location === "string" ? body.location.trim().slice(0, 200) : null,
+      message: typeof body?.message === "string" ? body.message.trim().slice(0, 1000) : null,
+      source: typeof body?.source === "string" ? body.source.trim().slice(0, 64) : "community",
+      created_at: new Date().toISOString(),
     }
-    feedbackStore.push(entry)
-
-    return NextResponse.json({ ok: true, id: feedbackStore.length - 1 })
+    const supabase = createServiceRoleClient()
+    if (supabase) {
+      const { error } = await supabase.from("rate_feedback").insert(entry)
+      if (error) console.error("Rate feedback error:", error.message)
+    }
+    return NextResponse.json({ ok: true, message: "Feedback recorded. Thank you." })
   } catch {
-    return NextResponse.json({ error: "Invalid request body" }, { status: 400 })
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 })
   }
-}
-
-/** Optional: GET for admins to read feedback (e.g. with auth). */
-export async function GET() {
-  return NextResponse.json({
-    count: feedbackStore.length,
-    recent: feedbackStore.slice(-50).reverse(),
-  })
 }

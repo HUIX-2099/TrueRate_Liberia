@@ -1,16 +1,5 @@
 import { NextResponse } from "next/server"
-
-/**
- * SMS subscription store. Replace with a database for production.
- * To send real SMS, set env SMS_PROVIDER (e.g. "twilio" | "africas_talking")
- * and the corresponding API key (SMS_API_KEY or TWILIO_* / AFRICAS_TALKING_*).
- */
-const subscriptions: Array<{
-  phone: string
-  frequency: string
-  alerts: { rateChanges: boolean; weeklyReport: boolean; marketNews: boolean }
-  createdAt: string
-}> = []
+import { createServiceRoleClient } from "@/lib/supabase/service-role"
 
 function normalizePhone(phone: string): string {
   const digits = phone.replace(/\D/g, "")
@@ -19,36 +8,76 @@ function normalizePhone(phone: string): string {
   return "+231" + digits.slice(-8)
 }
 
+function resolveFrequency(raw: unknown): "instant" | "daily" | "weekly" {
+  if (raw === "instant" || raw === "daily" || raw === "weekly") return raw
+  if (raw === "major") return "instant"
+  return "daily"
+}
+
+export async function GET() {
+  const supabase = createServiceRoleClient()
+  if (!supabase) return NextResponse.json({ count: 0 })
+  const { count, error } = await supabase
+    .from("sms_subscriptions")
+    .select("*", { count: "exact", head: true })
+    .eq("active", true)
+  if (error) {
+    console.error("SMS subscriptions GET:", error.message)
+    return NextResponse.json({ count: 0 })
+  }
+  return NextResponse.json({ count: count ?? 0 })
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const phoneRaw = typeof body?.phone === "string" ? body.phone.trim() : ""
-    if (!phoneRaw) {
+    const rawPhone = typeof body?.phone === "string" ? body.phone.trim() : ""
+    if (!rawPhone) {
       return NextResponse.json({ error: "Phone number is required" }, { status: 400 })
     }
-
-    const phone = normalizePhone(phoneRaw)
-    const frequency = ["daily", "weekly", "major"].includes(body?.frequency) ? body.frequency : "daily"
+    const phone = normalizePhone(rawPhone)
+    const frequency = resolveFrequency(body?.frequency)
     const alerts = {
-      rateChanges: typeof body?.alerts?.rateChanges === "boolean" ? body.alerts.rateChanges : true,
-      weeklyReport: typeof body?.alerts?.weeklyReport === "boolean" ? body.alerts.weeklyReport : false,
-      marketNews: typeof body?.alerts?.marketNews === "boolean" ? body.alerts.marketNews : false,
+      alert_rate_changes: body?.alerts?.rateChanges !== false,
+      alert_weekly_report: body?.alerts?.weeklyReport !== false,
+      alert_market_news: body?.alerts?.marketNews === true,
     }
 
-    const existing = subscriptions.findIndex((s) => s.phone === phone)
-    const entry = { phone, frequency, alerts, createdAt: new Date().toISOString() }
-    if (existing >= 0) {
-      subscriptions[existing] = entry
-    } else {
-      subscriptions.push(entry)
+    const supabase = createServiceRoleClient()
+    if (supabase) {
+      const { error } = await supabase
+        .from("sms_subscriptions")
+        .upsert(
+          { phone, frequency, ...alerts, active: true, created_at: new Date().toISOString() },
+          { onConflict: "phone" },
+        )
+      if (error) console.error("SMS subscription error:", error.message)
     }
 
-    // Optional: when SMS_PROVIDER and API key are set, send confirmation SMS or register with provider
-    // const provider = process.env.SMS_PROVIDER
-    // if (provider === "twilio" && process.env.TWILIO_ACCOUNT_SID) { ... }
-    // if (provider === "africas_talking" && process.env.AFRICAS_TALKING_API_KEY) { ... }
+    return NextResponse.json({
+      ok: true,
+      phone,
+      message: `Subscribed! You'll receive ${frequency} rate alerts at ${phone}.`,
+    })
+  } catch {
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 })
+  }
+}
 
-    return NextResponse.json({ ok: true, phone })
+export async function DELETE(request: Request) {
+  try {
+    const body = await request.json()
+    const rawPhone = typeof body?.phone === "string" ? body.phone.trim() : ""
+    if (!rawPhone) {
+      return NextResponse.json({ error: "Phone required" }, { status: 400 })
+    }
+    const phone = normalizePhone(rawPhone)
+    const supabase = createServiceRoleClient()
+    if (supabase) {
+      const { error } = await supabase.from("sms_subscriptions").update({ active: false }).eq("phone", phone)
+      if (error) console.error("SMS unsubscribe error:", error.message)
+    }
+    return NextResponse.json({ ok: true, message: "Unsubscribed successfully." })
   } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 })
   }

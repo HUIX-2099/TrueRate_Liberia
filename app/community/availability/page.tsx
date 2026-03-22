@@ -46,12 +46,44 @@ const TYPE_LABELS: Record<string, string> = {
   other: "Other",
 }
 
+const ALLOWED_ITEM_TYPES = new Set<string>(["fuel", "rice", "cooking_gas", "water", "other"])
+
+function normalizeAvailabilityRow(r: Record<string, unknown>): AvailabilityReport {
+  const rawType = String(r.item_type ?? r.itemType ?? "other")
+  const itemType = (ALLOWED_ITEM_TYPES.has(rawType) ? rawType : "other") as AvailabilityReport["itemType"]
+  return {
+    id: String(r.id ?? ""),
+    itemType,
+    itemName: String(r.item_name ?? r.itemName ?? ""),
+    available: r.available !== false && r.available !== null,
+    price: typeof r.price === "number" ? r.price : undefined,
+    currency: String(r.currency ?? "LRD"),
+    location: String(r.location ?? ""),
+    county: String(r.county ?? ""),
+    waitTime:
+      typeof r.wait_time === "string"
+        ? r.wait_time
+        : typeof r.waitTime === "string"
+          ? r.waitTime
+          : undefined,
+    notes: String(r.notes ?? ""),
+    upvotes: Number(r.upvotes) || 0,
+    reportedAt:
+      typeof r.reported_at === "string"
+        ? r.reported_at
+        : typeof r.reportedAt === "string"
+          ? r.reportedAt
+          : new Date().toISOString(),
+  }
+}
+
 export default function AvailabilityPage() {
   const [reports, setReports] = useState<AvailabilityReport[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState("all")
   const [submitting, setSubmitting] = useState(false)
   const [showForm, setShowForm] = useState(false)
+  const [upvotedIds, setUpvotedIds] = useState<Set<string>>(() => new Set())
   const { toast } = useToast()
 
   const [form, setForm] = useState({
@@ -69,7 +101,10 @@ export default function AvailabilityPage() {
     const url = filter === "all" ? "/api/community/availability" : `/api/community/availability?type=${filter}`
     fetch(url)
       .then((r) => r.json())
-      .then((data) => setReports(data.reports ?? []))
+      .then((data) => {
+        const raw = (data.reports ?? []) as Record<string, unknown>[]
+        setReports(raw.map(normalizeAvailabilityRow))
+      })
       .catch(() => {})
       .finally(() => setLoading(false))
   }, [filter])
@@ -97,16 +132,40 @@ export default function AvailabilityPage() {
           notes: form.notes,
         }),
       })
+      const data = await res.json().catch(() => ({}))
       if (res.ok) {
         toast({ title: "Report received", description: "Thanks for sharing what you found." })
         setForm({ itemType: "fuel", itemName: "", available: "true", price: "", location: "", county: "Montserrado", waitTime: "", notes: "" })
         setShowForm(false)
         fetchReports()
+      } else {
+        toast({
+          title: "Could not submit",
+          description: typeof data?.error === "string" ? data.error : "Please try again.",
+          variant: "destructive",
+        })
       }
     } catch {
       toast({ title: "We couldn't send your report", description: "Please try again in a moment.", variant: "destructive" })
     } finally {
       setSubmitting(false)
+    }
+  }
+
+  const handleUpvote = async (reportId: string) => {
+    if (upvotedIds.has(reportId)) return
+    try {
+      const res = await fetch("/api/community/availability", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: reportId }),
+      })
+      if (res.ok) {
+        setUpvotedIds((prev) => new Set(prev).add(reportId))
+        fetchReports()
+      }
+    } catch {
+      // ignore
     }
   }
 
@@ -298,7 +357,12 @@ export default function AvailabilityPage() {
                               )}
 
                               <div className="flex items-center gap-3 mt-2">
-                                <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors">
+                                <button
+                                  type="button"
+                                  className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors disabled:opacity-50"
+                                  onClick={() => handleUpvote(report.id)}
+                                  disabled={upvotedIds.has(report.id)}
+                                >
                                   <ThumbsUp className="h-3.5 w-3.5 text-primary" /> {report.upvotes} confirm
                                 </button>
                                 <span className="text-xs text-muted-foreground ml-auto">{timeAgo(report.reportedAt)}</span>

@@ -1,141 +1,112 @@
-import { NextResponse } from "next/server"
+import { NextResponse, type NextRequest } from "next/server"
+import { createServiceRoleClient } from "@/lib/supabase/service-role"
 
 export const dynamic = "force-dynamic"
 
-interface AvailabilityReport {
-  id: string
-  itemType: "fuel" | "rice" | "cooking_gas" | "water" | "other"
-  itemName: string
-  available: boolean
-  price?: number
-  currency: "LRD" | "USD"
-  location: string
-  county: string
-  lat?: number
-  lng?: number
-  waitTime?: string
-  notes: string
-  upvotes: number
-  reportedAt: string
+function nextId(): string {
+  return "av-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 8)
 }
 
-const reports: AvailabilityReport[] = [
-  {
-    id: "a1",
-    itemType: "fuel",
-    itemName: "Fuel (PMS)",
-    available: true,
-    price: 900,
-    currency: "LRD",
-    location: "Total Gas Station, Sinkor",
-    county: "Montserrado",
-    lat: 6.312,
-    lng: -10.798,
-    waitTime: "30 min queue",
-    notes: "Open but long lines. Limit 5 gallons per vehicle.",
-    upvotes: 18,
-    reportedAt: new Date(Date.now() - 30 * 60_000).toISOString(),
-  },
-  {
-    id: "a2",
-    itemType: "fuel",
-    itemName: "Fuel (PMS)",
-    available: false,
-    currency: "LRD",
-    location: "NP Gas Station, Paynesville",
-    county: "Montserrado",
-    lat: 6.325,
-    lng: -10.75,
-    notes: "Ran out this morning. No ETA for restock.",
-    upvotes: 12,
-    reportedAt: new Date(Date.now() - 90 * 60_000).toISOString(),
-  },
-  {
-    id: "a3",
-    itemType: "rice",
-    itemName: "Rice (25kg bag)",
-    available: true,
-    price: 4300,
-    currency: "LRD",
-    location: "Gobachop Market",
-    county: "Montserrado",
-    lat: 6.298,
-    lng: -10.78,
-    notes: "Multiple vendors have stock. Prices vary 4,100-4,500 LRD.",
-    upvotes: 25,
-    reportedAt: new Date(Date.now() - 2 * 3600_000).toISOString(),
-  },
-  {
-    id: "a4",
-    itemType: "cooking_gas",
-    itemName: "Cooking Gas (LPG 14kg)",
-    available: true,
-    price: 6000,
-    currency: "LRD",
-    location: "Congo Town, opposite ELWA junction",
-    county: "Montserrado",
-    lat: 6.305,
-    lng: -10.78,
-    waitTime: "No wait",
-    notes: "Available but price went up from 5,500 last week.",
-    upvotes: 8,
-    reportedAt: new Date(Date.now() - 4 * 3600_000).toISOString(),
-  },
-  {
-    id: "a5",
-    itemType: "fuel",
-    itemName: "Diesel",
-    available: true,
-    price: 850,
-    currency: "LRD",
-    location: "LBDI Gas Station, Bushrod Island",
-    county: "Montserrado",
-    lat: 6.34,
-    lng: -10.81,
-    waitTime: "15 min",
-    notes: "Diesel available. PMS sold out.",
-    upvotes: 15,
-    reportedAt: new Date(Date.now() - 45 * 60_000).toISOString(),
-  },
-]
+export async function GET(request: NextRequest) {
+  const supabase = createServiceRoleClient()
+  if (!supabase) return NextResponse.json({ reports: [] })
 
-/** GET /api/community/availability */
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url)
-  const itemType = searchParams.get("type") ?? undefined
+  const itemType = request.nextUrl.searchParams.get("type")
+  const county = request.nextUrl.searchParams.get("county")
 
-  let list = [...reports]
-  if (itemType) list = list.filter((r) => r.itemType === itemType)
+  let query = supabase
+    .from("community_availability")
+    .select("*")
+    .order("reported_at", { ascending: false })
+    .limit(50)
 
-  list.sort((a, b) => new Date(b.reportedAt).getTime() - new Date(a.reportedAt).getTime())
+  if (itemType) query = query.eq("item_type", itemType)
+  if (county) query = query.eq("county", county)
 
-  return NextResponse.json({ reports: list, total: list.length })
+  const { data, error } = await query
+  if (error) {
+    console.error("Community availability GET:", error.message)
+    return NextResponse.json({ reports: [] })
+  }
+  return NextResponse.json({ reports: data ?? [] })
 }
 
-/** POST /api/community/availability */
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const report: AvailabilityReport = {
-      id: `a_${Date.now()}`,
-      itemType: body.itemType ?? "other",
-      itemName: body.itemName ?? "Unknown",
-      available: body.available ?? true,
-      price: typeof body.price === "number" ? body.price : undefined,
-      currency: body.currency ?? "LRD",
-      location: body.location ?? "Unknown",
-      county: body.county ?? "Montserrado",
-      lat: typeof body.lat === "number" ? body.lat : undefined,
-      lng: typeof body.lng === "number" ? body.lng : undefined,
-      waitTime: body.waitTime,
-      notes: body.notes ?? "",
-      upvotes: 0,
-      reportedAt: new Date().toISOString(),
+    const itemType = typeof body?.itemType === "string" ? body.itemType.trim() : ""
+    const itemName = typeof body?.itemName === "string" ? body.itemName.trim() : ""
+    const location = typeof body?.location === "string" ? body.location.trim() : ""
+
+    if (!itemType || !itemName || !location) {
+      return NextResponse.json(
+        { error: "itemType, itemName, and location are required" },
+        { status: 400 },
+      )
     }
 
-    reports.push(report)
-    return NextResponse.json({ success: true, report })
-  } catch (error) {
-    return NextResponse.json({ error: "Failed to submit report" }, { status: 400 })
+    const id = nextId()
+    const entry = {
+      id,
+      item_type: itemType.slice(0, 32),
+      item_name: itemName.slice(0, 128),
+      available: body?.available !== false,
+      price: typeof body?.price === "number" ? body.price : null,
+      currency: body?.currency === "USD" ? "USD" : "LRD",
+      location: location.slice(0, 200),
+      county: typeof body?.county === "string" ? body.county.trim().slice(0, 64) : null,
+      lat: typeof body?.lat === "number" ? body.lat : null,
+      lng: typeof body?.lng === "number" ? body.lng : null,
+      wait_time: typeof body?.waitTime === "string" ? body.waitTime.trim().slice(0, 64) : null,
+      notes: typeof body?.notes === "string" ? body.notes.trim().slice(0, 500) : null,
+      upvotes: 0,
+      reported_at: new Date().toISOString(),
+    }
+
+    const supabase = createServiceRoleClient()
+    if (supabase) {
+      const { error } = await supabase.from("community_availability").insert(entry)
+      if (error) console.error("Availability report error:", error.message)
+    }
+
+    return NextResponse.json({ ok: true, id, report: entry })
+  } catch {
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 })
+  }
+}
+
+export async function PATCH(request: NextRequest) {
+  try {
+    const body = await request.json()
+    const id = typeof body?.id === "string" ? body.id.trim() : ""
+    if (!id) return NextResponse.json({ error: "id required" }, { status: 400 })
+
+    const supabase = createServiceRoleClient()
+    if (!supabase) return NextResponse.json({ ok: true })
+
+    const { error: rpcError } = await supabase.rpc("increment_upvotes", { report_id: id })
+    if (!rpcError) return NextResponse.json({ ok: true })
+
+    const { data: row, error: fetchError } = await supabase
+      .from("community_availability")
+      .select("upvotes")
+      .eq("id", id)
+      .maybeSingle()
+
+    if (fetchError) {
+      console.error("Availability upvote read:", fetchError.message)
+      return NextResponse.json({ ok: true })
+    }
+    if (!row) return NextResponse.json({ ok: true })
+
+    const { error: updateError } = await supabase
+      .from("community_availability")
+      .update({ upvotes: (row.upvotes ?? 0) + 1 })
+      .eq("id", id)
+
+    if (updateError) console.error("Availability upvote update:", updateError.message)
+    return NextResponse.json({ ok: true })
+  } catch {
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 })
   }
 }
