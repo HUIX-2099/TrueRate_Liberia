@@ -18,6 +18,8 @@ import {
 } from "lucide-react"
 import { SMSAlertSignup } from "@/components/liberia-features"
 import { PushNotifications } from "@/components/push-notifications"
+import { TrueRateScore } from "@/components/true-rate-score"
+import { RateAlertSetter } from "@/components/rate-alert-setter"
 import { PlanInLRD } from "@/components/plan-in-lrd"
 import { PageHero } from "@/components/layout/page-hero"
 import { useLiveRate } from "@/lib/live-rate-context"
@@ -545,6 +547,10 @@ export default function ToolsPage() {
               </div>
               <div className="space-y-4">
                 <SMSAlertSignup />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <TrueRateScore />
+                  <RateAlertSetter />
+                </div>
                 <PushNotifications />
               </div>
             </div>

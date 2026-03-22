@@ -52,6 +52,8 @@ import { RateComparisonCallout } from "@/components/rate-comparison-callout"
 import { PlanInLRD } from "@/components/plan-in-lrd"
 import { RateTip } from "@/components/rate-tip"
 import { RateSourceSelector } from "@/components/rate-source-selector"
+import { TrueRateScore } from "@/components/true-rate-score"
+import { RateAlertSetter } from "@/components/rate-alert-setter"
 import { PriceIndex } from "@/components/liberia-features"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { getTranslation } from "@/lib/i18n/translations"
@@ -582,6 +584,11 @@ const ConverterPageComponent = () => {
                 </div>
               </CardContent>
             </Card>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <TrueRateScore />
+              <RateAlertSetter />
+            </div>
         </PageHero>
 
         {/* Features Section */}
