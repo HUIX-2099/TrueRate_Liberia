@@ -13,14 +13,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { PageHero } from "@/components/layout/page-hero"
 import { AlertTriangle, Shield, CheckCircle2, Upload } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useToast } from "@/hooks/use-toast"
+
+interface FraudReportListItem {
+  id: string
+  report_type?: string | null
+  location?: string | null
+  status?: string | null
+  created_at?: string | null
+}
 
 export default function ReportFraudPage() {
   const { toast } = useToast()
   const [submitted, setSubmitted] = useState(false)
   const [referenceId, setReferenceId] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
+  const [recentReports, setRecentReports] = useState<FraudReportListItem[]>([])
   const [formData, setFormData] = useState({
     reportType: "",
     changerName: "",
@@ -30,6 +39,13 @@ export default function ReportFraudPage() {
     reporterName: "",
     reporterPhone: "",
   })
+
+  useEffect(() => {
+    fetch("/api/community/fraud-reports")
+      .then((r) => r.json())
+      .then((data) => setRecentReports(data.reports ?? []))
+      .catch(() => {})
+  }, [submitted])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -290,89 +306,49 @@ export default function ReportFraudPage() {
                   </form>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
 
-        {/* Recent Alerts */}
-        <section className="py-12 sm:py-14 md:py-24 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8 space-y-3">
-                <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-                  <Badge variant="outline">Recent Alerts</Badge>
-                  <Badge className="bg-muted/40 border border-border/40 text-destructive">Community Warnings</Badge>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-balance text-foreground">
-                  Recent Fraud Alerts
-                </h2>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  Stay informed about active fraud threats in your area
-                </p>
-              </div>
-              <div className="space-y-4">
-                <Card className="border-destructive/20 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex flex-col items-center gap-2">
-                        <Badge variant="destructive" className="gap-1">
-                          <AlertTriangle className="h-3 w-3 text-amber-600 dark:text-amber-400" />
-                          Active Alert
-                        </Badge>
-                        <div className="text-xs text-muted-foreground">High Priority</div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h3 className="font-semibold">Counterfeit $100 Bills - Red Light Market</h3>
-                          <Badge className="bg-muted/40 border border-border/40 text-destructive">Counterfeit</Badge>
+              {recentReports.length > 0 && (
+                <Card className="mt-8 border-border/40 rounded-2xl shadow-sm">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-lg">
+                      <AlertTriangle className="h-5 w-5 text-rose-600 dark:text-rose-400" />
+                      Recent Fraud Reports
+                    </CardTitle>
+                    <CardDescription>Community-submitted reports — reviewed by TrueRate team</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    {recentReports.map((report) => (
+                      <div
+                        key={report.id}
+                        className="rounded-lg border border-border/60 bg-muted/30 p-4"
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <Badge variant="outline" className="text-xs capitalize">
+                            {report.report_type?.replace(/[-_]/g, " ") ?? "Report"}
+                          </Badge>
+                          <Badge
+                            className={`text-xs border ${
+                              report.status === "pending"
+                                ? "bg-amber-500/10 text-amber-700 border-amber-500/30 dark:text-amber-400"
+                                : "bg-emerald-500/10 text-emerald-700 border-emerald-500/30 dark:text-emerald-400"
+                            }`}
+                          >
+                            {report.status === "pending" ? "Under Review" : report.status ?? "—"}
+                          </Badge>
                         </div>
-                        <p className="text-sm text-muted-foreground mb-3">
-                          Multiple reports of counterfeit $100 bills circulating near Red Light Market. Check serial
-                          numbers carefully.
+                        <p className="text-sm font-medium text-foreground">{report.location ?? "—"}</p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Submitted{" "}
+                          {report.created_at
+                            ? new Date(report.created_at).toLocaleDateString()
+                            : "—"}{" "}
+                          · Ref: {report.id}
                         </p>
-                        <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <CheckCircle2 className="h-3 w-3 text-green-600 dark:text-green-400" />
-                            12 reports
-                          </span>
-                          <span>Posted 2 days ago</span>
-                        </div>
                       </div>
-                    </div>
+                    ))}
                   </CardContent>
                 </Card>
-
-                <Card className="border-green-500/20 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex flex-col items-center gap-2">
-                        <Badge variant="secondary" className="gap-1 bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-400">
-                          <CheckCircle2 className="h-3 w-3 text-green-600 dark:text-green-400" />
-                          Resolved
-                        </Badge>
-                        <div className="text-xs text-muted-foreground">Case Closed</div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h3 className="font-semibold">Unauthorized Changer - Broad Street</h3>
-                          <Badge className="bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-400">Impersonation</Badge>
-                        </div>
-                        <p className="text-sm text-muted-foreground mb-3">
-                          Individual impersonating licensed changer. Authorities have been notified and the individual
-                          identified.
-                        </p>
-                        <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Shield className="h-3 w-3 text-primary" />
-                            Police notified
-                          </span>
-                          <span>Posted 1 week ago</span>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+              )}
             </div>
           </div>
         </section>

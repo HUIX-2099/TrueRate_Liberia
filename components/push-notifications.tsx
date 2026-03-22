@@ -101,13 +101,24 @@ export function PushNotifications() {
         headers: { "x-notification-client-id": clientId },
       })
       const data = await res.json()
-      if (res.ok && data) {
-        if (data.rateAbove != null) setRateAbove(String(data.rateAbove))
-        if (data.rateBelow != null) setRateBelow(String(data.rateBelow))
-        if (data.moveUpPct != null) setMoveUpPct(String(data.moveUpPct))
-        if (data.moveDownPct != null) setMoveDownPct(String(data.moveDownPct))
-        if (data.digest) setDigest(data.digest)
-        if (data.digestEmail) setDigestEmail(data.digestEmail)
+      const p = data?.prefs as
+        | {
+            rate_above?: number | null
+            rate_below?: number | null
+            move_up_pct?: number | null
+            move_down_pct?: number | null
+            digest?: string
+            digest_email?: string | null
+          }
+        | null
+        | undefined
+      if (res.ok && p) {
+        if (p.rate_above != null) setRateAbove(String(p.rate_above))
+        if (p.rate_below != null) setRateBelow(String(p.rate_below))
+        if (p.move_up_pct != null) setMoveUpPct(String(p.move_up_pct))
+        if (p.move_down_pct != null) setMoveDownPct(String(p.move_down_pct))
+        if (p.digest) setDigest(p.digest as "none" | "daily" | "weekly")
+        if (p.digest_email) setDigestEmail(p.digest_email)
       }
     } catch {
       // ignore

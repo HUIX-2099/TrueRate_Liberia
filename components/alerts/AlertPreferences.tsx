@@ -55,13 +55,24 @@ export function AlertPreferences({ className }: { className?: string }) {
     })
       .then((r) => r.json())
       .then((data) => {
+        const p = data.prefs as
+          | {
+              rate_above?: number | null
+              rate_below?: number | null
+              move_up_pct?: number | null
+              move_down_pct?: number | null
+              digest?: string
+              digest_email?: string | null
+            }
+          | null
+          | undefined
         setPrefs({
-          rateAbove: data.rateAbove ?? null,
-          rateBelow: data.rateBelow ?? null,
-          moveUpPct: data.moveUpPct ?? null,
-          moveDownPct: data.moveDownPct ?? null,
-          digest: data.digest ?? "none",
-          digestEmail: data.digestEmail ?? "",
+          rateAbove: p?.rate_above ?? null,
+          rateBelow: p?.rate_below ?? null,
+          moveUpPct: p?.move_up_pct ?? null,
+          moveDownPct: p?.move_down_pct ?? null,
+          digest: (p?.digest as AlertPrefs["digest"]) ?? "none",
+          digestEmail: p?.digest_email ?? "",
         })
       })
       .catch(() => {})

@@ -10,10 +10,11 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { AlertTriangle, MapPin, ThumbsUp, ThumbsDown, CheckCircle2, Send, Shield } from "lucide-react"
+import { AlertTriangle, MapPin, ThumbsUp, ThumbsDown, CheckCircle2, Send } from "lucide-react"
 import { useState, useEffect, useCallback } from "react"
 import { useToast } from "@/hooks/use-toast"
 
+/** API list row (Supabase) or legacy mock shape */
 interface GougingReport {
   id: string
   itemName: string
@@ -27,6 +28,65 @@ interface GougingReport {
   downvotes: number
   verified: boolean
   createdAt: string
+  status?: string
+}
+
+function buildDescriptionFromForm(form: {
+  itemName: string
+  reportedPrice: string
+  fairPrice: string
+  county: string
+  description: string
+}): string {
+  const lines: string[] = []
+  if (form.itemName) lines.push(`Item: ${form.itemName}`)
+  if (form.reportedPrice.trim()) lines.push(`Price charged: ${form.reportedPrice.trim()} LRD`)
+  if (form.fairPrice.trim()) lines.push(`Reference / fair price: ${form.fairPrice.trim()} LRD`)
+  if (form.county) lines.push(`County: ${form.county}`)
+  if (form.description.trim()) lines.push(form.description.trim())
+  return lines.join("\n")
+}
+
+function normalizeListReport(r: Record<string, unknown>): GougingReport {
+  const created =
+    typeof r.created_at === "string"
+      ? r.created_at
+      : typeof r.createdAt === "string"
+        ? r.createdAt
+        : new Date().toISOString()
+  const status = typeof r.status === "string" ? r.status : undefined
+  if ("itemName" in r && typeof r.itemName === "string") {
+    return {
+      id: String(r.id),
+      itemName: r.itemName,
+      reportedPrice: Number(r.reportedPrice) || 0,
+      fairPrice: Number(r.fairPrice) || 0,
+      overchargePercent: Number(r.overchargePercent) || 0,
+      location: String(r.location ?? ""),
+      county: String(r.county ?? ""),
+      description: String(r.description ?? ""),
+      upvotes: Number(r.upvotes) || 0,
+      downvotes: Number(r.downvotes) || 0,
+      verified: Boolean(r.verified),
+      createdAt: created,
+      status,
+    }
+  }
+  return {
+    id: String(r.id),
+    itemName: "Price gouging report",
+    reportedPrice: 0,
+    fairPrice: 0,
+    overchargePercent: 0,
+    location: String(r.location ?? ""),
+    county: "",
+    description: "",
+    upvotes: 0,
+    downvotes: 0,
+    verified: status === "verified",
+    createdAt: created,
+    status,
+  }
 }
 
 export default function ReportGougingPage() {
@@ -47,7 +107,10 @@ export default function ReportGougingPage() {
   const fetchReports = useCallback(() => {
     fetch("/api/community/gouging-reports")
       .then((r) => r.json())
-      .then((data) => setReports(data.reports ?? []))
+      .then((data) => {
+        const raw = (data.reports ?? []) as Record<string, unknown>[]
+        setReports(raw.map(normalizeListReport))
+      })
       .catch(() => {})
       .finally(() => setLoading(false))
   }, [])
@@ -55,8 +118,18 @@ export default function ReportGougingPage() {
   useEffect(() => { fetchReports() }, [fetchReports])
 
   const handleSubmit = async () => {
-    if (!form.itemName || !form.reportedPrice || !form.location) {
-      toast({ title: "Missing fields", description: "Please fill in item, price, and location.", variant: "destructive" })
+    const location = form.location.trim()
+    const description = buildDescriptionFromForm(form)
+    if (!location) {
+      toast({ title: "Missing location", description: "Please add where this happened.", variant: "destructive" })
+      return
+    }
+    if (!description.trim()) {
+      toast({
+        title: "Add details",
+        description: "Select an item, enter the price charged, or write a short description.",
+        variant: "destructive",
+      })
       return
     }
     setSubmitting(true)
@@ -65,18 +138,22 @@ export default function ReportGougingPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          itemName: form.itemName,
-          reportedPrice: Number(form.reportedPrice),
-          fairPrice: Number(form.fairPrice) || undefined,
-          location: form.location,
-          county: form.county,
-          description: form.description,
+          location,
+          description,
+          amount: form.reportedPrice.trim() || undefined,
         }),
       })
+      const data = await res.json().catch(() => ({}))
       if (res.ok) {
         toast({ title: "Report received", description: "Thanks for helping protect your community." })
         setForm({ itemName: "", reportedPrice: "", fairPrice: "", location: "", county: "Montserrado", description: "" })
         fetchReports()
+      } else {
+        toast({
+          title: "Could not submit",
+          description: typeof data?.error === "string" ? data.error : "Please try again.",
+          variant: "destructive",
+        })
       }
     } catch {
       toast({ title: "We couldn't send your report", description: "Please try again in a moment.", variant: "destructive" })
@@ -180,7 +257,7 @@ export default function ReportGougingPage() {
                     </div>
 
                     <div className="space-y-2 sm:col-span-2">
-                      <Label>Description (optional)</Label>
+                      <Label>Extra details (optional if you filled item and price above)</Label>
                       <Textarea
                         placeholder="Any extra details about the overcharging..."
                         value={form.description}
@@ -214,41 +291,70 @@ export default function ReportGougingPage() {
                     <Card key={report.id} className="border-border/40 rounded-xl">
                       <CardContent className="p-4">
                         <div className="flex items-start gap-3">
-                          <div className={`h-10 w-10 rounded-full flex items-center justify-center shrink-0 ${ report.overchargePercent > 30 ? "bg-muted/40 border border-border/40" : "bg-muted/40 border border-border/40" }`}>
-                            <AlertTriangle className={`h-5 w-5 ${ report.overchargePercent > 30 ? "text-red-500" : "text-orange-500" }`} />
+                          <div
+                            className={`h-10 w-10 rounded-full flex items-center justify-center shrink-0 bg-muted/40 border border-border/40`}
+                          >
+                            <AlertTriangle
+                              className={`h-5 w-5 ${report.overchargePercent > 30 ? "text-red-500" : "text-orange-500"}`}
+                            />
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 flex-wrap mb-1">
                               <span className="font-semibold">{report.itemName}</span>
-                              <Badge variant={report.overchargePercent > 30 ? "destructive" : "outline"} className="text-xs">
-                                +{report.overchargePercent}% overcharge
-                              </Badge>
+                              {report.overchargePercent > 0 && (
+                                <Badge
+                                  variant={report.overchargePercent > 30 ? "destructive" : "outline"}
+                                  className="text-xs"
+                                >
+                                  +{report.overchargePercent}% overcharge
+                                </Badge>
+                              )}
+                              {report.status && (
+                                <Badge variant="outline" className="text-xs capitalize">
+                                  {report.status}
+                                </Badge>
+                              )}
                               {report.verified && (
                                 <Badge variant="secondary" className="text-xs gap-1">
                                   <CheckCircle2 className="h-3 w-3 text-green-600 dark:text-green-400" /> Verified
                                 </Badge>
                               )}
                             </div>
-                            <div className="text-sm">
-                              <span className="text-destructive font-bold">{report.reportedPrice.toLocaleString()} LRD</span>
-                              {report.fairPrice > 0 && (
-                                <span className="text-muted-foreground"> (fair: {report.fairPrice.toLocaleString()} LRD)</span>
-                              )}
-                            </div>
+                            {report.reportedPrice > 0 && (
+                              <div className="text-sm">
+                                <span className="text-destructive font-bold">{report.reportedPrice.toLocaleString()} LRD</span>
+                                {report.fairPrice > 0 && (
+                                  <span className="text-muted-foreground">
+                                    {" "}
+                                    (fair: {report.fairPrice.toLocaleString()} LRD)
+                                  </span>
+                                )}
+                              </div>
+                            )}
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
                               <MapPin className="h-3 w-3 text-blue-600 dark:text-blue-400" />
-                              {report.location}, {report.county}
+                              {report.county ? `${report.location}, ${report.county}` : report.location}
                             </div>
                             {report.description && (
-                              <p className="text-xs text-muted-foreground mt-1">{report.description}</p>
+                              <p className="text-xs text-muted-foreground mt-1 whitespace-pre-wrap">{report.description}</p>
                             )}
                             <div className="flex items-center gap-4 mt-2">
-                              <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors">
-                                <ThumbsUp className="h-3.5 w-3.5 text-primary" /> {report.upvotes}
-                              </button>
-                              <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-destructive transition-colors">
-                                <ThumbsDown className="h-3.5 w-3.5 text-primary" /> {report.downvotes}
-                              </button>
+                              {report.upvotes + report.downvotes > 0 && (
+                                <>
+                                  <button
+                                    type="button"
+                                    className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
+                                  >
+                                    <ThumbsUp className="h-3.5 w-3.5 text-primary" /> {report.upvotes}
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className="flex items-center gap-1 text-xs text-muted-foreground hover:text-destructive transition-colors"
+                                  >
+                                    <ThumbsDown className="h-3.5 w-3.5 text-primary" /> {report.downvotes}
+                                  </button>
+                                </>
+                              )}
                               <span className="text-xs text-muted-foreground ml-auto">{timeAgo(report.createdAt)}</span>
                             </div>
                           </div>

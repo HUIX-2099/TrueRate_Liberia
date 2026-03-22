@@ -1,29 +1,22 @@
 import { NextResponse } from "next/server"
-
-/**
- * In-memory store for "rate at this spot" community submissions.
- * Replace with a database for production.
- */
-const reports: Array<{
-  id: string
-  lat: number
-  lng: number
-  rate: number
-  message?: string
-  photoUrl?: string
-  createdAt: string
-}> = []
+import { createServiceRoleClient } from "@/lib/supabase/service-role"
 
 function nextId(): string {
   return "r-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 8)
 }
 
 export async function GET() {
-  const limit = Math.min(Number(process.env.RATE_REPORTS_LIMIT) || 100, 200)
-  const list = [...reports]
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-    .slice(0, limit)
-  return NextResponse.json({ reports: list })
+  const supabase = createServiceRoleClient()
+  if (!supabase) return NextResponse.json({ reports: [] })
+
+  const { data, error } = await supabase
+    .from("community_rate_reports")
+    .select("*")
+    .order("created_at", { ascending: false })
+    .limit(100)
+
+  if (error) return NextResponse.json({ reports: [] })
+  return NextResponse.json({ reports: data ?? [] })
 }
 
 export async function POST(request: Request) {
@@ -40,23 +33,27 @@ export async function POST(request: Request) {
       )
     }
 
-    const message = typeof body?.message === "string" ? body.message.trim().slice(0, 500) : undefined
-    const photoUrl = typeof body?.photoUrl === "string" && body.photoUrl.startsWith("http")
-      ? body.photoUrl.slice(0, 512)
-      : undefined
-
+    const id = nextId()
     const entry = {
-      id: nextId(),
+      id,
       lat,
       lng,
       rate,
-      message,
-      photoUrl,
-      createdAt: new Date().toISOString(),
+      location_name: typeof body?.locationName === "string" ? body.locationName.trim().slice(0, 200) : "",
+      message: typeof body?.message === "string" ? body.message.trim().slice(0, 500) : "",
+      photo_url: typeof body?.photoUrl === "string" ? body.photoUrl.trim().slice(0, 500) : "",
+      user_id: typeof body?.userId === "string" ? body.userId.trim().slice(0, 64) : "anonymous",
+      verified: false,
+      created_at: new Date().toISOString(),
     }
-    reports.push(entry)
 
-    return NextResponse.json({ ok: true, report: entry })
+    const supabase = createServiceRoleClient()
+    if (supabase) {
+      const { error } = await supabase.from("community_rate_reports").insert(entry)
+      if (error) console.error("Supabase rate report error:", error.message)
+    }
+
+    return NextResponse.json({ ok: true, id, report: entry })
   } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 })
   }

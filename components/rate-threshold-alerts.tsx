@@ -96,11 +96,20 @@ export function RateThresholdAlertListener() {
         })
         const data = await res.json()
         if (cancelled || !res.ok) return
+        const p = data.prefs as
+          | {
+              rate_above?: number | null
+              rate_below?: number | null
+              move_up_pct?: number | null
+              move_down_pct?: number | null
+            }
+          | null
+          | undefined
         setPrefs({
-          rateAbove: data.rateAbove != null ? Number(data.rateAbove) : null,
-          rateBelow: data.rateBelow != null ? Number(data.rateBelow) : null,
-          moveUpPct: data.moveUpPct != null ? Number(data.moveUpPct) : null,
-          moveDownPct: data.moveDownPct != null ? Number(data.moveDownPct) : null,
+          rateAbove: p?.rate_above != null ? Number(p.rate_above) : null,
+          rateBelow: p?.rate_below != null ? Number(p.rate_below) : null,
+          moveUpPct: p?.move_up_pct != null ? Number(p.move_up_pct) : null,
+          moveDownPct: p?.move_down_pct != null ? Number(p.move_down_pct) : null,
         })
       } catch {
         // ignore
