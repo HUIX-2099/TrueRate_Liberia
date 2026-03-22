@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
+import { ExchangeRateJsonLd, FinancialServiceJsonLd, WebsiteJsonLd } from "@/components/json-ld"
 
 interface StructuredDataProps {
   currentRate?: number
@@ -42,59 +43,6 @@ export function StructuredData({ currentRate = 198.5 }: StructuredDataProps) {
       "https://twitter.com/TrueRateLiberia",
       "https://facebook.com/TrueRateLiberia"
     ]
-  }
-
-  // WebSite Schema with Search Action (image helps Google show favicon in search)
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "TrueRate Liberia",
-    "alternateName": "TrueRate",
-    "url": "https://truerateliberia.com",
-    "image": [
-      "https://truerateliberia.com/icons/logo-192.png",
-      "https://truerateliberia.com/icons/logo-192-light.png",
-    ],
-    "description": "Live USD/LRD rates and practical money tools for Liberia.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://truerateliberia.com/converter?amount={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
-  }
-
-  // Financial Service Schema
-  const financialServiceSchema = {
-    "@context": "https://schema.org",
-    "@type": "FinancialService",
-    "name": "TrueRate Liberia Currency Exchange",
-    "description": "Live USD/LRD rates and currency conversion tools for Liberia.",
-    "url": "https://truerateliberia.com",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Liberia"
-    },
-    "serviceType": "Currency Exchange Rate Information",
-    "provider": {
-      "@type": "Organization",
-      "name": "TrueRate Liberia"
-    }
-  }
-
-  // ExchangeRateSpecification Schema (live rate data)
-  const exchangeRateSchema = {
-    "@context": "https://schema.org",
-    "@type": "ExchangeRateSpecification",
-    "currency": "LRD",
-    "currentExchangeRate": {
-      "@type": "UnitPriceSpecification",
-      "price": currentRate,
-      "priceCurrency": "USD"
-    },
-    "exchangeRateSpread": 0.5
   }
 
   // SoftwareApplication Schema (for app-like features)
@@ -190,18 +138,9 @@ export function StructuredData({ currentRate = 198.5 }: StructuredDataProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(financialServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(exchangeRateSchema) }}
-      />
+      <WebsiteJsonLd />
+      <FinancialServiceJsonLd />
+      <ExchangeRateJsonLd rate={currentRate} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
