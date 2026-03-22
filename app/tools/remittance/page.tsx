@@ -19,6 +19,7 @@ import {
 } from "lucide-react"
 import { useState, useEffect, useMemo } from "react"
 import { EmergencyRemittanceMode } from "@/components/crisis/EmergencyRemittanceMode"
+import { RemittanceImpactSummary } from "@/components/remittance-impact-summary"
 import Link from "next/link"
 
 interface RemittanceOption {
@@ -131,6 +132,7 @@ export default function RemittanceCalculatorPage() {
   const [loading, setLoading] = useState(true)
   const [selectedScenario, setSelectedScenario] = useState<string | null>(null)
   const [sendCurrency, setSendCurrency] = useState("USD")
+  const [crisisActive, setCrisisActive] = useState(false)
 
   useEffect(() => {
     fetch("/api/rates/live")
@@ -144,6 +146,13 @@ export default function RemittanceCalculatorPage() {
         setCurrentRate(180)
         setLoading(false)
       })
+  }, [])
+
+  useEffect(() => {
+    fetch("/api/crisis/intelligence")
+      .then((r) => r.json())
+      .then((data: { active?: boolean }) => setCrisisActive(data.active === true))
+      .catch(() => setCrisisActive(false))
   }, [])
 
   const calculateRemittance = () => {
@@ -296,7 +305,7 @@ export default function RemittanceCalculatorPage() {
         <section className="py-4 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <EmergencyRemittanceMode currentRate={currentRate} crisisActive={true} />
+              <EmergencyRemittanceMode currentRate={currentRate} crisisActive={crisisActive} />
             </div>
           </div>
         </section>
@@ -686,6 +695,11 @@ export default function RemittanceCalculatorPage() {
                           <div className="text-xl font-bold text-foreground">${(savings / currentRate).toFixed(2)}</div>
                         </div>
                       </div>
+                      <RemittanceImpactSummary
+                        amountUSD={Number.parseFloat(amount) || 0}
+                        lrdReceived={bestRate}
+                        providerName={results[0].provider}
+                      />
                     </div>
                   )}
                 </CardContent>

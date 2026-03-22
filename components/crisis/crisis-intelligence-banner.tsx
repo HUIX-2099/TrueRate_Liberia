@@ -1,19 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { AlertTriangle, X, ChevronDown, ChevronUp, Shield } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-
-interface CrisisEvent {
-  id: string
-  severity: "low" | "medium" | "high" | "critical"
-  trigger_type: string
-  brief: string
-  actions: string[]
-  avoid: string[]
-  created_at: string
-}
+import { useCrisisIntelligence, type CrisisEvent } from "@/lib/crisis-intelligence-context"
 
 const SEVERITY_CONFIG: Record<
   CrisisEvent["severity"],
@@ -45,58 +36,12 @@ const SEVERITY_CONFIG: Record<
   },
 }
 
-function asStringArray(v: unknown): string[] {
-  if (Array.isArray(v)) return v.filter((x): x is string => typeof x === "string")
-  if (typeof v === "string") {
-    try {
-      const p = JSON.parse(v) as unknown
-      return Array.isArray(p) ? p.filter((x): x is string => typeof x === "string") : []
-    } catch {
-      return []
-    }
-  }
-  return []
-}
-
-function normalizeSeverity(raw: unknown): CrisisEvent["severity"] {
-  if (raw === "low" || raw === "medium" || raw === "high" || raw === "critical") return raw
-  return "medium"
-}
-
-function normalizeCrisis(raw: unknown): CrisisEvent | null {
-  if (!raw || typeof raw !== "object") return null
-  const o = raw as Record<string, unknown>
-  const id = typeof o.id === "string" ? o.id : null
-  if (!id) return null
-  return {
-    id,
-    severity: normalizeSeverity(o.severity),
-    trigger_type: typeof o.trigger_type === "string" ? o.trigger_type : "",
-    brief: typeof o.brief === "string" ? o.brief : "",
-    actions: asStringArray(o.actions),
-    avoid: asStringArray(o.avoid),
-    created_at: typeof o.created_at === "string" ? o.created_at : "",
-  }
-}
-
 export function CrisisIntelligenceBanner() {
-  const [crisis, setCrisis] = useState<CrisisEvent | null>(null)
+  const { crisisActive, activeCrisis: crisis } = useCrisisIntelligence()
   const [expanded, setExpanded] = useState(false)
   const [dismissed, setDismissed] = useState(false)
   const [aiBrief, setAiBrief] = useState("")
   const [loadingBrief, setLoadingBrief] = useState(false)
-
-  useEffect(() => {
-    fetch("/api/crisis/intelligence")
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.active && data.crises?.[0]) {
-          const c = normalizeCrisis(data.crises[0])
-          if (c) setCrisis(c)
-        }
-      })
-      .catch(() => {})
-  }, [])
 
   const fetchAiBrief = async () => {
     if (!crisis || aiBrief) return
@@ -116,7 +61,7 @@ export function CrisisIntelligenceBanner() {
     }
   }
 
-  if (!crisis || dismissed) return null
+  if (!crisisActive || !crisis || dismissed) return null
 
   const config = SEVERITY_CONFIG[crisis.severity]
 

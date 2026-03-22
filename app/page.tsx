@@ -7,7 +7,6 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import {
   ArrowRight,
-  TrendingUp,
   Globe,
   Calculator,
   Shield,
@@ -16,7 +15,6 @@ import {
   Gift,
   Brain,
   Bell,
-  BarChart3,
   ShoppingCart,
 } from "lucide-react"
 import Link from "next/link"
@@ -26,11 +24,10 @@ import { PageSection } from "@/components/layout/page-section"
 import { SectionHeader } from "@/components/layout/section-header"
 import { PageContainer } from "@/components/layout/page-container"
 import { StickyMobileRateBar } from "@/components/sticky-mobile-rate-bar"
-import { GovernmentSourceBadge } from "@/components/government-source-badge"
 import { TrfnLiveSignals } from "@/components/trfn-live-signals"
 import { TrfnDailyBrief } from "@/components/trfn-daily-brief"
+import { SmartEntryGuide } from "@/components/smart-entry-guide"
 
-import { useLiveRate } from "@/lib/live-rate-context"
 import { ListSkeleton, CardSkeleton, SectionHeaderSkeleton } from "@/components/ui/skeleton-presets"
 
 /* Lazy-load below-the-fold components for Core Web Vitals (LCP, TTI) */
@@ -42,10 +39,7 @@ const TrustSignals = dynamic(() => import("@/components/trust-signals"), {
   loading: () => <CardSkeleton lines={3} className="min-h-[180px]" />,
   ssr: true,
 })
-import { PriceIndex, MarketNews, InflationTracker } from "@/components/liberia-features"
-
 export default function HomePage() {
-  const { rate: liveRate } = useLiveRate()
   const trfnTicker = [
     { label: "USD/LRD", value: "L$183.47", move: "+0.6%", tone: "up" as const },
     { label: "Fuel (gal)", value: "L$821", move: "-1.1%", tone: "down" as const },
@@ -59,6 +53,18 @@ export default function HomePage() {
       <StickyMobileRateBar />
       <main id="main-content" className="flex-1 w-full min-w-0 overflow-x-hidden" role="main">
         <Hero />
+
+        <section
+          aria-labelledby="smart-entry-heading"
+          className="border-b border-border/50 bg-background dark:border-slate-800 dark:bg-slate-950"
+        >
+          <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+            <h2 id="smart-entry-heading" className="sr-only">
+              Choose what you need
+            </h2>
+            <SmartEntryGuide />
+          </div>
+        </section>
 
         <PageSection ariaLabelledBy="trfn-outlook-heading" className="py-6 sm:py-8">
           <PageContainer maxWidth="5xl" className="min-w-0">
@@ -74,7 +80,7 @@ export default function HomePage() {
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-semibold text-foreground">{item.value}</span>
                         <span
-                          className={`text-xs font-medium ${
+                          className={`text-xs font-medium tabular-nums ${
                             item.tone === "up" ? "text-emerald-600 dark:text-emerald-300" : "text-rose-600 dark:text-rose-300"
                           }`}
                         >
@@ -343,92 +349,6 @@ export default function HomePage() {
               My Liberia Daily
             </h2>
             <TrfnDailyBrief />
-          </PageContainer>
-        </PageSection>
-
-        {/* Liberia Price Index & Market Insights */}
-        <PageSection
-          variant="muted"
-          ariaLabelledBy="price-index-heading"
-          className="relative pb-12 sm:pb-16 md:pb-20"
-        >
-          <div className="absolute inset-0 pointer-events-none overflow-x-hidden rounded-none" aria-hidden />
-          <PageContainer className="min-w-0 relative">
-            <SectionHeader
-              id="price-index-heading"
-              badge={
-                <div className="flex flex-wrap items-center justify-center gap-2">
-                  <Badge variant="outline" className="text-[11px] sm:text-xs font-medium">
-                    Essential goods
-                  </Badge>
-                  <Badge variant="outline" className="text-[11px] sm:text-xs">
-                    Live prices
-                  </Badge>
-                  <GovernmentSourceBadge
-                    source="lisgis"
-                    href="https://lisgis.gov.lr/pricestats.php"
-                  />
-                </div>
-              }
-              title="Liberia Price Index & Market Insights"
-              description="Real-time essential goods prices, inflation trends, and local market news — one place for cost of living and market intelligence."
-              actions={
-                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-                  <Button size="sm" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium shadow-sm border-0" asChild>
-                    <Link href="/price-index">
-                      <BarChart3 className="h-4 w-4 shrink-0 text-primary" aria-hidden />
-                      View full Price Index
-                    </Link>
-                  </Button>
-                  <Button size="sm" variant="outline" className="gap-2 rounded-lg min-h-[44px] px-4 font-medium border-0" asChild>
-                    <Link href="/market-intelligence">
-                      <TrendingUp className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
-                      Market Intelligence
-                    </Link>
-                  </Button>
-                </div>
-              }
-            />
-            <div className="rounded-xl sm:rounded-2xl border border-border/50 bg-card shadow-sm min-w-0 max-w-6xl mx-auto">
-              <div className="grid gap-0 grid-cols-1 lg:grid-cols-3 max-w-6xl w-full min-w-0">
-                <div className="min-w-0 lg:col-span-2 p-4 sm:p-6 border-b lg:border-b-0 lg:border-r border-border/40">
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <div className="flex items-center gap-2">
-                      <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-muted/40 border border-border/40">
-                        <ShoppingCart className="h-3.5 w-3.5 text-primary" />
-                      </div>
-                      <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                        Price Index
-                      </h3>
-                    </div>
-                    <Badge variant="outline" className="text-[10px]">Essential basket</Badge>
-                  </div>
-                  <PriceIndex rate={liveRate} variant="full" essentialOnly />
-                </div>
-                <div className="min-w-0 p-4 sm:p-6 space-y-4 sm:space-y-6">
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-muted/40 border border-border/40">
-                      <TrendingUp className="h-3.5 w-3.5 text-green-600 dark:text-green-400" />
-                    </div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                      Inflation & context
-                    </h3>
-                  </div>
-                  <InflationTracker />
-                </div>
-              </div>
-            </div>
-            <div className="w-full max-w-6xl mx-auto mt-6 sm:mt-8 pt-2 min-w-0 pb-8 sm:pb-10 overflow-visible">
-              <div className="flex items-center gap-2 mb-4 scroll-mt-24">
-                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-muted/40 border border-border/40">
-                  <Bell className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
-                </div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                  Market news
-                </h3>
-              </div>
-              <MarketNews />
-            </div>
           </PageContainer>
         </PageSection>
 

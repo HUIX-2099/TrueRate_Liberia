@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { Providers } from "@/components/providers"
-import { CrisisIntelligenceBanner } from "@/components/crisis/crisis-intelligence-banner"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { SkipLinks } from "@/components/layout/skip-links"
 import "./globals.css"
@@ -280,7 +279,6 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased min-h-screen min-w-0 w-full overflow-x-hidden box-border pb-[calc(env(safe-area-inset-bottom)+4rem)] md:pb-0 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
         <SkipLinks />
-        <CrisisIntelligenceBanner />
         <Providers>{children}</Providers>
         <ScrollToTop />
         <Analytics />

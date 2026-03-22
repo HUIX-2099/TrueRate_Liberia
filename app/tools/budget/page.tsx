@@ -8,9 +8,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { PiggyBank, Plus, Trash2, TrendingUp, TrendingDown, AlertCircle, Shield } from "lucide-react"
+import { PiggyBank, Plus, Trash2, TrendingUp, TrendingDown, Shield } from "lucide-react"
 import { useState, useEffect } from "react"
+import { useLiveRate } from "@/lib/live-rate-context"
 import { SurvivalBudgetMode } from "@/components/tools/SurvivalBudgetMode"
+import { BudgetHealthSummary } from "@/components/tools/budget-health-summary"
 
 interface BudgetItem {
   id: string
@@ -20,30 +22,48 @@ interface BudgetItem {
   category: string
 }
 
+/** Shape of `/api/liberia-cpi` JSON (subset). */
+interface LiberiaCpiSnapshot {
+  cpi?: number
+  inflationYoY?: number
+  inflationMoM?: number
+  lastMonth?: string
+  updatedAt?: string
+  source?: string
+}
+
 export default function BudgetPlannerPage() {
+  const { effectiveRate, loading: rateLoading } = useLiveRate()
+  const [cpi, setCpi] = useState<LiberiaCpiSnapshot | null>(null)
+
+  const DEFAULT_INCOME: BudgetItem[] = [
+    { id: "inc-1", name: "Monthly salary", amount: 400, currency: "USD", category: "income" },
+  ]
+
+  const DEFAULT_EXPENSES: BudgetItem[] = [
+    { id: "exp-1", name: "Rent (2-bedroom Monrovia)", amount: 200, currency: "USD", category: "housing" },
+    { id: "exp-2", name: "Rice & groceries", amount: 75, currency: "USD", category: "food" },
+    { id: "exp-3", name: "Transport (daily taxi/kekeh)", amount: 40, currency: "USD", category: "transport" },
+    { id: "exp-4", name: "Fuel", amount: 30, currency: "USD", category: "energy" },
+    { id: "exp-5", name: "Phone credit & data", amount: 15, currency: "USD", category: "communication" },
+    { id: "exp-6", name: "School fees (monthly portion)", amount: 25, currency: "USD", category: "education" },
+  ]
+
   const [exchangeRate, setExchangeRate] = useState(180)
-  const [loading, setLoading] = useState(true)
-  const [income, setIncome] = useState<BudgetItem[]>([
-    { id: "1", name: "Monthly Salary", amount: 500, currency: "USD", category: "income" },
-  ])
-  const [expenses, setExpenses] = useState<BudgetItem[]>([
-    { id: "1", name: "Rent", amount: 200, currency: "USD", category: "housing" },
-    { id: "2", name: "Food", amount: 30000, currency: "LRD", category: "food" },
-    { id: "3", name: "Transport", amount: 15000, currency: "LRD", category: "transport" },
-  ])
+  const [income, setIncome] = useState<BudgetItem[]>(DEFAULT_INCOME)
+  const [expenses, setExpenses] = useState<BudgetItem[]>(DEFAULT_EXPENSES)
 
   useEffect(() => {
-    fetch("/api/rates/live")
-      .then((res) => res.json())
-      .then((data) => {
-        setExchangeRate(data.rate)
-        setLoading(false)
-      })
-      .catch((err) => {
-        console.error("[v0] Error fetching rate:", err)
-        setExchangeRate(180)
-        setLoading(false)
-      })
+    if (typeof effectiveRate === "number" && Number.isFinite(effectiveRate) && effectiveRate > 0) {
+      setExchangeRate(effectiveRate)
+    }
+  }, [effectiveRate])
+
+  useEffect(() => {
+    fetch("/api/liberia-cpi")
+      .then((r) => r.json())
+      .then((data: unknown) => setCpi(data as LiberiaCpiSnapshot))
+      .catch(() => {})
   }, [])
 
   const addIncome = () => {
@@ -121,11 +141,19 @@ export default function BudgetPlannerPage() {
                         value={exchangeRate}
                         onChange={(e) => setExchangeRate(Number.parseFloat(e.target.value))}
                         className="text-lg font-semibold"
-                        disabled={loading}
+                        disabled={rateLoading}
                       />
                     </div>
                     <div className="text-2xl font-bold">LRD</div>
                   </div>
+                  {(cpi?.inflationYoY != null || cpi?.lastMonth) && (
+                    <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
+                      Liberia CPI context:{" "}
+                      {cpi.inflationYoY != null ? `${cpi.inflationYoY}% YoY inflation` : "latest index"}
+                      {cpi.lastMonth ? ` · ${cpi.lastMonth}` : ""}
+                      {cpi.source ? ` · ${cpi.source}` : ""}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
 
@@ -166,22 +194,16 @@ export default function BudgetPlannerPage() {
                 </Card>
               </div>
 
-              {balance < 0 && (
-                <Card className="mb-6 border-destructive/50 bg-destructive/5 rounded-2xl">
-                  <CardContent className="p-4">
-                    <div className="flex gap-3">
-                      <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5 text-amber-600 dark:text-amber-400" />
-                      <div>
-                        <h3 className="font-semibold text-destructive mb-1">Budget Deficit</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Your expenses exceed your income by ${Math.abs(balance).toFixed(2)}. Consider reducing
-                          expenses or increasing income.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
+              <BudgetHealthSummary
+                totalIncome={totalIncome}
+                totalExpenses={totalExpenses}
+                effectiveRate={
+                  typeof effectiveRate === "number" && Number.isFinite(effectiveRate) && effectiveRate > 0
+                    ? effectiveRate
+                    : exchangeRate
+                }
+                cpi={cpi}
+              />
 
               {/* Income Section */}
               <Card className="mb-6 border-border/40 rounded-2xl">

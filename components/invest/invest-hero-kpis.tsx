@@ -80,10 +80,15 @@ export function InvestHeroKPIs() {
       fetch("/api/rates/candles?days=21").then((r) => r.json()),
     ]).then(([infData, cpiData, candlesData]) => {
       if (cancelled) return
-      const series = Array.isArray(infData?.series) ? infData.series : []
-      setInflationSeries(series)
-      const last = series[series.length - 1]
-      if (last && typeof last.inflation === "number") setInflation(last.inflation)
+      // /api/inflation returns { series: [{year, cpi, inflation}] }
+      // Read YoY from the last series point
+      if (Array.isArray(infData?.series) && infData.series.length > 0) {
+        const last = infData.series[infData.series.length - 1]
+        if (typeof last?.inflation === "number") setInflation(last.inflation)
+        setInflationSeries(infData.series)
+      }
+      // /api/liberia-cpi returns { cpi, inflationYoY } — also try this for fresher data
+      if (typeof cpiData?.inflationYoY === "number") setInflation(cpiData.inflationYoY)
       if (typeof cpiData?.cpi === "number") setCpi(cpiData.cpi)
       if (cpiData?.lastMonth) setBasketSubtext(cpiData.lastMonth)
       const candles = candlesData?.candles ?? []

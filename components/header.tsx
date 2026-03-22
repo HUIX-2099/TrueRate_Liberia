@@ -16,7 +16,6 @@ import { useAuth } from "@/lib/auth/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { LiveUpdateIndicator } from "@/components/live-update-indicator"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { CrisisAlertBanner } from "@/components/crisis/CrisisAlertBanner"
 import { usePathname } from "next/navigation"
 import { usePerformanceMonitor } from "@/lib/client-utils"
 
@@ -127,7 +126,6 @@ const HeaderComponent = () => {
 
   return (
     <>
-      <CrisisAlertBanner />
       <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 supports-[backdrop-filter]:bg-background/80 shadow-sm min-w-0">
         <div className="w-full mx-auto flex h-14 sm:h-16 lg:h-[72px] items-center justify-between gap-2 sm:gap-3 px-3 sm:px-6 md:px-8 lg:px-10 max-w-[100vw] xl:max-w-[1400px] 2xl:max-w-[1600px] min-w-0">
           <Link href="/" className="flex items-center min-w-0 shrink-0" aria-label="TrueRate Liberia home">

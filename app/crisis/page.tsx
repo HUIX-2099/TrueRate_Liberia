@@ -59,9 +59,9 @@ export default function CrisisDashboardPage() {
       <Header />
       <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden">
         <PageHero
-          ariaLabel="Crisis dashboard"
+          ariaLabel="Crisis monitor"
           label="Live Crisis Monitor"
-          title="Crisis Dashboard"
+          title="Crisis Monitor"
           description="Real-time monitoring of economic shocks in Liberia. Track how price hikes ripple through the economy and get actionable advice to protect your finances."
           variant="centered"
           badges={

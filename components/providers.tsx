@@ -11,6 +11,8 @@ import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { StructuredData } from "@/components/structured-data"
 import { LiveRateProvider } from "@/lib/live-rate-context"
+import { CrisisIntelligenceProvider } from "@/lib/crisis-intelligence-context"
+import { CrisisIntelligenceBanner } from "@/components/crisis/crisis-intelligence-banner"
 import { RateThresholdAlertListener } from "@/components/rate-threshold-alerts"
 
 export function Providers({ children }: { children: ReactNode }) {
@@ -26,12 +28,15 @@ export function Providers({ children }: { children: ReactNode }) {
         <AuthProvider>
           <LanguageProvider>
             <LiveRateProvider>
+            <CrisisIntelligenceProvider>
+            <CrisisIntelligenceBanner />
             <RateThresholdAlertListener />
             <StructuredData />
             <DevDisclaimer />
             <ServiceWorkerRegister />
             {children}
             <EducationalMicroLessons />
+            </CrisisIntelligenceProvider>
             </LiveRateProvider>
             <Toaster />
           </LanguageProvider>

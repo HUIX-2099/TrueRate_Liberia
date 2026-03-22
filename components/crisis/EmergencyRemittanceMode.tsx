@@ -4,7 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { AlertTriangle, Zap, Clock, DollarSign, ArrowRight, CheckCircle2, Smartphone } from "lucide-react"
-import { useState } from "react"
+import { Fragment, useState } from "react"
+import { RemittanceImpactSummary } from "@/components/remittance-impact-summary"
 
 interface QuickSendOption {
   amount: number
@@ -124,44 +125,52 @@ export function EmergencyRemittanceMode({ currentRate, crisisActive = true }: Em
             const totalCost = (selectedAmount ?? 100) + provider.fee
 
             return (
-              <div
-                key={provider.name}
-                className={`p-4 rounded-xl border ${ provider.recommended ? "border-green-500/20 bg-green-500/5" : "border-border/40" }`}
-              >
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold">{provider.name}</span>
-                      {provider.recommended && (
-                        <Badge variant="secondary" className="text-[10px] gap-0.5">
-                          <Zap className="h-2.5 w-2.5 text-primary" /> Fastest
-                        </Badge>
-                      )}
+              <Fragment key={provider.name}>
+                <div
+                  className={`p-4 rounded-xl border ${ provider.recommended ? "border-green-500/20 bg-green-500/5" : "border-border/40" }`}
+                >
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold">{provider.name}</span>
+                        {provider.recommended && (
+                          <Badge variant="secondary" className="text-[10px] gap-0.5">
+                            <Zap className="h-2.5 w-2.5 text-primary" /> Fastest
+                          </Badge>
+                        )}
+                      </div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{provider.bestFor}</div>
                     </div>
-                    <div className="text-xs text-muted-foreground mt-0.5">{provider.bestFor}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-bold text-primary">{receives.toLocaleString()} LRD</div>
-                    <div className="text-xs text-muted-foreground">recipient gets</div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-3 gap-2 text-xs">
-                  <div className="p-2 rounded-lg bg-muted/50">
-                    <div className="text-muted-foreground">Speed</div>
-                    <div className="font-semibold flex items-center gap-1">
-                      <Zap className="h-3 w-3 text-primary" /> {provider.speed}
+                    <div className="text-right">
+                      <div className="font-bold text-primary">{receives.toLocaleString()} LRD</div>
+                      <div className="text-xs text-muted-foreground">recipient gets</div>
                     </div>
                   </div>
-                  <div className="p-2 rounded-lg bg-muted/50">
-                    <div className="text-muted-foreground">Fee</div>
-                    <div className="font-semibold">${provider.fee.toFixed(2)}</div>
-                  </div>
-                  <div className="p-2 rounded-lg bg-muted/50">
-                    <div className="text-muted-foreground">Total cost</div>
-                    <div className="font-semibold">${totalCost.toFixed(2)}</div>
+                  <div className="grid grid-cols-3 gap-2 text-xs">
+                    <div className="p-2 rounded-lg bg-muted/50">
+                      <div className="text-muted-foreground">Speed</div>
+                      <div className="font-semibold flex items-center gap-1">
+                        <Zap className="h-3 w-3 text-primary" /> {provider.speed}
+                      </div>
+                    </div>
+                    <div className="p-2 rounded-lg bg-muted/50">
+                      <div className="text-muted-foreground">Fee</div>
+                      <div className="font-semibold">${provider.fee.toFixed(2)}</div>
+                    </div>
+                    <div className="p-2 rounded-lg bg-muted/50">
+                      <div className="text-muted-foreground">Total cost</div>
+                      <div className="font-semibold">${totalCost.toFixed(2)}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
+                {provider.name === "Orange Money" && selectedAmount != null && (
+                  <RemittanceImpactSummary
+                    lrdReceived={Math.round((selectedAmount - 3) * currentRate)}
+                    providerName="Orange Money"
+                    amountUSD={selectedAmount}
+                  />
+                )}
+              </Fragment>
             )
           })}
         </CardContent>

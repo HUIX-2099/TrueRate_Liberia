@@ -11,7 +11,8 @@ import { RateComparisonCallout } from "@/components/rate-comparison-callout"
 import { CurrencyIconOnly } from "@/components/currency-icon"
 
 export function CurrencyConverter() {
-  const { effectiveRate: currentRate } = useLiveRate()
+  const { effectiveRate: currentRate, cblRate } = useLiveRate()
+  const [historicalMeanLrd, setHistoricalMeanLrd] = useState<number | null>(null)
   const [usdAmount, setUsdAmount] = useState<string>("100")
   const [lrdAmount, setLrdAmount] = useState<string>("")
   const [activeInput, setActiveInput] = useState<"usd" | "lrd">("usd")
@@ -55,6 +56,21 @@ export function CurrencyConverter() {
     })
   }, [])
 
+  useEffect(() => {
+    fetch("/api/rates/historical")
+      .then((r) => r.json())
+      .then((data: { historical?: { rate?: number }[] }) => {
+        const pts = Array.isArray(data?.historical) ? data.historical : []
+        const rates = pts.map((p) => p.rate).filter((x): x is number => typeof x === "number" && x > 0)
+        if (rates.length === 0) {
+          setHistoricalMeanLrd(null)
+          return
+        }
+        setHistoricalMeanLrd(rates.reduce((a, b) => a + b, 0) / rates.length)
+      })
+      .catch(() => setHistoricalMeanLrd(null))
+  }, [])
+
   const handleUsdChange = (value: string) => {
     setUsdAmount(value)
     setActiveInput("usd")
@@ -96,6 +112,12 @@ export function CurrencyConverter() {
       }
     }
   }
+
+  const usdNum = parseFloat(usdAmount) || 0
+  const lrdConverted = parseFloat(lrdAmount) || 0
+  const showFairBanner =
+    activeInput === "usd" && usdAmount && lrdAmount && currentRate > 0 && lrdConverted > 0
+  const isGoodTime = historicalMeanLrd == null || currentRate >= historicalMeanLrd * 0.999
 
   return (
     <Card className="max-w-md mx-auto">
@@ -196,6 +218,24 @@ export function CurrencyConverter() {
                 compact
                 className="mt-2 pt-1"
               />
+              {showFairBanner && (
+                <div
+                  className={`mt-3 rounded-lg border p-3 text-sm ${
+                    isGoodTime
+                      ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200"
+                      : "border-amber-500/30 bg-amber-500/10 text-amber-800 dark:text-amber-200"
+                  }`}
+                >
+                  <p className="font-semibold mb-1">
+                    {isGoodTime ? "✅ This is a fair rate today" : "⚠️ Rate is slightly below average today"}
+                  </p>
+                  <p className="text-xs">
+                    {usdNum} USD = <strong>L${lrdConverted.toLocaleString(undefined, { maximumFractionDigits: 0 })}</strong>{" "}
+                    at today&apos;s market rate of L${currentRate.toFixed(2)}.
+                    {cblRate != null && ` CBL official is L${cblRate.toFixed(2)}.`}
+                  </p>
+                </div>
+              )}
             </>
           )}
           {activeInput === "lrd" && lrdAmount && usdAmount && currentRate > 0 && (

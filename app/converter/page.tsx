@@ -131,6 +131,8 @@ const ConverterPageComponent = () => {
   const [costPrice, setCostPrice] = useState("50000")
   const [markupPercentage, setMarkupPercentage] = useState("25")
 
+  /** Recent average LRD/USD from historical series — for “fair vs below average” banner */
+  const [historicalMeanLrd, setHistoricalMeanLrd] = useState<number | null>(null)
 
   // Debounced values for performance
   const debouncedAmount = useDebounce(amount, 300)
@@ -171,6 +173,20 @@ const ConverterPageComponent = () => {
     return () => clearInterval(interval)
   }, [fetchRate])
 
+  useEffect(() => {
+    fetch("/api/rates/historical")
+      .then((r) => r.json())
+      .then((data: { historical?: { rate?: number }[] }) => {
+        const pts = Array.isArray(data?.historical) ? data.historical : []
+        const rates = pts.map((p) => p.rate).filter((x): x is number => typeof x === "number" && x > 0)
+        if (rates.length === 0) {
+          setHistoricalMeanLrd(null)
+          return
+        }
+        setHistoricalMeanLrd(rates.reduce((a, b) => a + b, 0) / rates.length)
+      })
+      .catch(() => setHistoricalMeanLrd(null))
+  }, [])
 
   useEffect(() => {
     if (!useCustomRate && typeof liveRate === "number") {
@@ -195,6 +211,19 @@ const ConverterPageComponent = () => {
   useEffect(() => {
     setResult(convertedResult)
   }, [convertedResult])
+
+  const showFairRateBanner =
+    fromCurrency === "USD" &&
+    toCurrency === "LRD" &&
+    Boolean(result) &&
+    !Number.isNaN(parseFloat(result)) &&
+    isLiveRateReady &&
+    parseFloat(result) > 0
+
+  const convertedAmountFair = showFairRateBanner ? parseFloat(result) : null
+  const fairRateEffective = showFairRateBanner ? getRate("LRD") / getRate("USD") : 0
+  const isGoodTimeFair =
+    !showFairRateBanner || historicalMeanLrd == null || liveRateValue >= historicalMeanLrd * 0.999
 
   const swapCurrencies = () => {
     setFromCurrency(toCurrency)
@@ -540,6 +569,29 @@ const ConverterPageComponent = () => {
                           compact
                           className="mt-2"
                         />
+                      )}
+                      {convertedAmountFair != null && (
+                        <div
+                          className={`mt-3 rounded-lg border p-3 text-sm ${
+                            isGoodTimeFair
+                              ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200"
+                              : "border-amber-500/30 bg-amber-500/10 text-amber-800 dark:text-amber-200"
+                          }`}
+                        >
+                          <p className="font-semibold mb-1">
+                            {isGoodTimeFair
+                              ? "✅ This is a fair rate today"
+                              : "⚠️ Rate is slightly below average today"}
+                          </p>
+                          <p className="text-xs">
+                            {parseFloat(amount) || 0} USD ={" "}
+                            <strong>L${convertedAmountFair.toLocaleString()}</strong>{" "}
+                            {useCustomRate
+                              ? `at your applied rate of L$${fairRateEffective.toFixed(2)}.`
+                              : `at today's market rate of L$${fairRateEffective.toFixed(2)}.`}
+                            {contextCblRate != null && ` CBL official is L${contextCblRate.toFixed(2)}.`}
+                          </p>
+                        </div>
                       )}
                     </>
                   )}
