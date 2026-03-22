@@ -13,12 +13,17 @@ const CURRENCIES = [
   { code: "LRD", name: "Liberian Dollar", symbol: "L$" },
 ] as const
 
-export function BulkConverter() {
-  const { rate } = useLiveRate()
+type BulkConverterProps = {
+  /** LRD per 1 USD; defaults to `useLiveRate().effectiveRate` */
+  rate?: number
+}
+
+export function BulkConverter({ rate: rateProp }: BulkConverterProps = {}) {
+  const { effectiveRate } = useLiveRate()
   const [fromCurrency, setFromCurrency] = useState<"USD" | "LRD">("USD")
   const [amountsText, setAmountsText] = useState("")
 
-  const lrdPerUsd = rate ?? 192.5
+  const lrdPerUsd = rateProp ?? effectiveRate
 
   const { rows, total } = useMemo(() => {
     const lines = amountsText

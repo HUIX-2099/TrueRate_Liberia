@@ -28,6 +28,7 @@ import { PageContainer } from "@/components/layout/page-container"
 import { StickyMobileRateBar } from "@/components/sticky-mobile-rate-bar"
 import { GovernmentSourceBadge } from "@/components/government-source-badge"
 import { DollarizationRiskIndicator } from "@/components/dollarization-risk-indicator"
+import { TrfnLiveSignals } from "@/components/trfn-live-signals"
 
 import { useLiveRate } from "@/lib/live-rate-context"
 import { ListSkeleton, CardSkeleton, SectionHeaderSkeleton } from "@/components/ui/skeleton-presets"
@@ -51,33 +52,6 @@ export default function HomePage() {
     { label: "Food Index", value: "112.4", move: "+0.9%", tone: "up" as const },
     { label: "Transport Trend", value: "Firm", move: "+0.4%", tone: "up" as const },
   ]
-
-  const trfnHeadlines = [
-    {
-      headline: "Parallel-market FX spread stays narrow despite stronger afternoon dollar bids",
-      impact: "Medium",
-      timeframe: "24-72 hrs",
-      tone: "yellow",
-    },
-    {
-      headline: "Rice and imported staples point to mild retail pressure into next week",
-      impact: "High",
-      timeframe: "1-2 weeks",
-      tone: "red",
-    },
-    {
-      headline: "Transport fares remain firm as route-level operating costs hold elevated",
-      impact: "Medium",
-      timeframe: "2-4 weeks",
-      tone: "yellow",
-    },
-    {
-      headline: "Liquidity signals support near-term LRD stability in core urban markets",
-      impact: "Low",
-      timeframe: "3-5 days",
-      tone: "green",
-    },
-  ] as const
 
   return (
     <div className="min-h-screen flex flex-col w-full min-w-0">
@@ -127,47 +101,7 @@ export default function HomePage() {
                   </Button>
                 </div>
 
-                <div className="grid gap-2 sm:gap-3">
-                  {trfnHeadlines.map((item) => (
-                    <Link
-                      key={item.headline}
-                      href="/trfn-dashboard"
-                      className="group rounded-lg border border-border/50 bg-background/70 px-3 py-3 transition-all hover:-translate-y-[1px] hover:border-border/80 hover:bg-muted/40 sm:px-4"
-                    >
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-start gap-2">
-                          <span
-                            className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
-                              item.tone === "green"
-                                ? "bg-emerald-500"
-                                : item.tone === "red"
-                                  ? "bg-rose-500"
-                                  : "bg-amber-500"
-                            }`}
-                            aria-hidden
-                          />
-                          <p className="text-sm leading-snug text-foreground group-hover:text-primary">
-                            {item.headline}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="ml-2 shrink-0 text-right text-xs space-y-1">
-                        <p
-                          className={`inline-flex rounded-full px-2 py-0.5 font-semibold ${
-                            item.impact === "High"
-                              ? "bg-rose-500/10 text-rose-700 dark:text-rose-300"
-                              : item.impact === "Medium"
-                                ? "bg-amber-500/10 text-amber-700 dark:text-amber-300"
-                                : "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
-                          }`}
-                        >
-                          {item.impact}
-                        </p>
-                        <p className="text-muted-foreground">{item.timeframe}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                <TrfnLiveSignals />
               </div>
             </div>
           </PageContainer>

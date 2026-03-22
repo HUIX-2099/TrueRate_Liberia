@@ -36,7 +36,7 @@ Route: **`GET /api/cron/refresh-rates`**. Add a [Vercel Cron](https://vercel.com
 | `NEWS_API_KEY` | NewsAPI.org if you use a NewsAPI-backed news route |
 | `NOTION_TOKEN` | Notion integration (Bearer token) |
 | `NOTION_DATABASE_ID` | Notion database UUID for API experiments |
-| `ANTHROPIC_API_KEY` | Claude — `POST /api/trfn/analyze` (TRFN market analyst) and `POST /api/notion` |
+| `ANTHROPIC_API_KEY` | Claude — `POST /api/trfn/analyze`, `GET /api/trfn/homepage-signals`, and `POST /api/notion` |
 
 ## Optional / feature-specific
 

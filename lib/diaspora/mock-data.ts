@@ -4,8 +4,7 @@
  */
 
 import type { Vendor, Product } from "./types"
-
-const FX_RATE = 182
+import { getCanonicalFallbackRate } from "@/lib/canonical-rate"
 
 export const MOCK_VENDORS: Vendor[] = [
   {
@@ -261,7 +260,7 @@ export function getMockProductById(id: string): Product | null {
   return MOCK_PRODUCTS.find((p) => p.id === id) ?? null
 }
 
-/** Default FX rate for mock (use /api/rates/live in production). */
+/** Default FX rate for mock APIs when no live rate is available (aligns with app canonical fallback). */
 export function getMockFxRate(): number {
-  return FX_RATE
+  return getCanonicalFallbackRate()
 }

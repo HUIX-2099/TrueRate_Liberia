@@ -1,96 +1,26 @@
 "use client"
 
-import { useEffect, useMemo, useState, type ElementType } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 import { useLiveRate } from "@/lib/live-rate-context"
 import { TrfnAiAnalyst, type TrfnAiCryptoContext } from "@/components/trfn-ai-analyst"
+import { TrfnLiveSignals } from "@/components/trfn-live-signals"
 import {
   Activity,
   AlertTriangle,
   Bitcoin,
-  Bus,
   Clock3,
   DollarSign,
   ExternalLink,
-  Fuel,
-  Gauge,
-  Landmark,
   Newspaper,
-  Plane,
   ShoppingBasket,
   TrendingDown,
   TrendingUp,
   BarChart3,
   Shield,
 } from "lucide-react"
-
-// ─── Static TRFN projections ──────────────────────────────────────────────────
-const PROJECTIONS: Array<{
-  category: string
-  headline: string
-  impact: string
-  timeframe: string
-  confidence: number
-  timestamp: string
-  icon: ElementType
-}> = [
-  {
-    category: "Transport",
-    headline: "Port congestion pressure likely to lift intra-city fares into next cycle",
-    impact: "Medium",
-    timeframe: "7-14 days",
-    confidence: 78,
-    timestamp: "12:05 WAT",
-    icon: Bus,
-  },
-  {
-    category: "Trade",
-    headline: "Wholesale rice corridors show tight spread as dealer restocking accelerates",
-    impact: "High",
-    timeframe: "3-10 days",
-    confidence: 84,
-    timestamp: "11:43 WAT",
-    icon: ShoppingBasket,
-  },
-  {
-    category: "Policy",
-    headline: "CBL liquidity messaging dampens near-term parallel-market speculation pulse",
-    impact: "High",
-    timeframe: "24-72 hrs",
-    confidence: 81,
-    timestamp: "11:18 WAT",
-    icon: Landmark,
-  },
-  {
-    category: "Tourism",
-    headline: "Airport-linked demand pockets support hospitality pricing through weekend window",
-    impact: "Medium",
-    timeframe: "5-8 days",
-    confidence: 73,
-    timestamp: "10:56 WAT",
-    icon: Plane,
-  },
-  {
-    category: "Trade",
-    headline: "Fuel-led logistics stability keeps distributor margins from widening aggressively",
-    impact: "Medium",
-    timeframe: "1-2 weeks",
-    confidence: 76,
-    timestamp: "10:31 WAT",
-    icon: Fuel,
-  },
-  {
-    category: "Policy",
-    headline: "Public procurement pace may inject selective demand into construction imports",
-    impact: "Medium",
-    timeframe: "2-4 weeks",
-    confidence: 69,
-    timestamp: "09:58 WAT",
-    icon: Gauge,
-  },
-]
 
 type LiberiaNewsArticle = {
   title?: string
@@ -123,14 +53,6 @@ type PriceRow = {
   item_name: string
   price_lrd: number
   price_usd?: number | null
-}
-
-function impactColor(i: string) {
-  return i === "High"
-    ? "text-rose-700 dark:text-rose-300"
-    : i === "Medium"
-      ? "text-amber-700 dark:text-amber-300"
-      : "text-emerald-700 dark:text-emerald-300"
 }
 
 function normalizeLiberiaNews(payload: unknown): LiberiaNewsArticle[] {
@@ -740,51 +662,10 @@ export default function TrfnDashboardPage() {
                 TRFN Projections & Economic Signals
               </h2>
               <Badge variant="outline" className="border-border bg-card/60 text-muted-foreground dark:border-slate-700">
-                Timestamped model evidence
+                Live &amp; cached outlook
               </Badge>
             </div>
-            <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 md:gap-5 xl:grid-cols-3">
-              {PROJECTIONS.map((item) => {
-                const Icon = item.icon
-                return (
-                  <article
-                    key={item.headline}
-                    className="rounded-xl border border-border/70 bg-card/95 p-3.5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-border sm:p-4 dark:border-slate-800 dark:bg-slate-900/80 dark:hover:border-slate-600"
-                  >
-                    <div className="mb-3 flex items-center justify-between gap-2">
-                      <Badge className="border border-border/70 bg-muted/70 text-foreground dark:border-slate-700 dark:bg-slate-800">
-                        {item.category}
-                      </Badge>
-                      <Icon className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
-                    </div>
-                    <h3 className="text-sm font-semibold leading-snug text-foreground dark:text-slate-100 sm:text-base">
-                      {item.headline}
-                    </h3>
-                    <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
-                      {[
-                        { label: "Impact", value: item.impact, className: impactColor(item.impact) },
-                        { label: "Timeframe", value: item.timeframe, className: "text-foreground dark:text-slate-200" },
-                        {
-                          label: "Confidence",
-                          value: `${item.confidence}%`,
-                          className: "text-emerald-700 dark:text-emerald-300",
-                        },
-                        { label: "Source", value: "TRFN Engine", className: "text-foreground dark:text-slate-200" },
-                      ].map(({ label, value, className }) => (
-                        <div
-                          key={label}
-                          className="rounded-md border border-border/70 bg-muted/40 p-2 dark:border-slate-800 dark:bg-slate-950/80"
-                        >
-                          <p className="text-muted-foreground">{label}</p>
-                          <p className={`font-semibold ${className}`}>{value}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="mt-3 text-[11px] text-muted-foreground">Timestamp: {item.timestamp}</p>
-                  </article>
-                )
-              })}
-            </div>
+            <TrfnLiveSignals />
 
             <div className="mt-8 rounded-xl border border-border/50 bg-muted/20 p-5 dark:border-slate-800">
               <div className="mb-3 flex items-center gap-2">

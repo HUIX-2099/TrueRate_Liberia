@@ -12,49 +12,68 @@ interface PredictionData {
   currentRate: number
   predictedRate: number
   confidence: number
-  trend: 'up' | 'down' | 'stable'
+  trend: "up" | "down" | "stable"
 }
 
-export function InvoiceProtector() {
+type InvoiceProtectorProps = {
+  /** LRD per USD; if omitted, uses `/api/rates/live` */
+  rate?: number
+}
+
+export function InvoiceProtector({ rate: rateProp }: InvoiceProtectorProps = {}) {
   const { t, isMarketWomanMode } = useLanguage()
-  const [invoiceAmount, setInvoiceAmount] = useState<string>('')
+  const [invoiceAmount, setInvoiceAmount] = useState<string>("")
   const [prediction, setPrediction] = useState<PredictionData | null>(null)
   const [loading, setLoading] = useState(true)
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    let cancelled = false
+
     async function fetchPrediction() {
       try {
-        const [liveRes, predRes] = await Promise.all([
-          fetch('/api/rates/live'),
-          fetch('/api/rates/predictions?days=7')
-        ])
-        
-        const liveData = await liveRes.json()
+        const predRes = await fetch("/api/rates/predictions?days=7")
         const predData = await predRes.json()
-        
-        const currentRate = liveData.rate || 198.5
+        if (cancelled) return
+
+        let currentRate = 198.5
+        if (typeof rateProp === "number" && rateProp > 100 && rateProp < 300) {
+          currentRate = rateProp
+        } else {
+          const liveRes = await fetch("/api/rates/live")
+          const liveData = await liveRes.json()
+          currentRate = typeof liveData.rate === "number" ? liveData.rate : 198.5
+        }
+
         const predictions = predData.predictions || []
-        const avgPredicted = predictions.length > 0 
-          ? predictions.reduce((sum: number, p: { predicted?: number; predictedRate?: number }) => 
-              sum + (p.predicted || p.predictedRate || currentRate), 0) / predictions.length
-          : currentRate
-        
+        const avgPredicted =
+          predictions.length > 0
+            ? predictions.reduce(
+                (sum: number, p: { predicted?: number; predictedRate?: number }) =>
+                  sum + (p.predicted ?? p.predictedRate ?? currentRate),
+                0,
+              ) / predictions.length
+            : currentRate
+
         setPrediction({
           currentRate,
           predictedRate: avgPredicted,
-          confidence: predictions[0]?.confidence || 0.85,
-          trend: avgPredicted > currentRate ? 'up' : avgPredicted < currentRate ? 'down' : 'stable'
+          confidence: predictions[0]?.confidence ?? 0.85,
+          trend:
+            avgPredicted > currentRate ? "up" : avgPredicted < currentRate ? "down" : "stable",
         })
       } catch (error) {
-        console.error('Error:', error)
+        console.error("Error:", error)
       } finally {
-        setLoading(false)
+        if (!cancelled) setLoading(false)
       }
     }
 
-    fetchPrediction()
-  }, [])
+    void fetchPrediction()
+    return () => {
+      cancelled = true
+    }
+  }, [rateProp])
 
   const amount = parseFloat(invoiceAmount) || 0
   const todayCost = prediction ? amount * prediction.currentRate : 0

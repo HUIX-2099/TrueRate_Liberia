@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { getServerApiUrl } from "@/lib/api/server-base-url"
 import { createServiceRoleClient } from "@/lib/supabase/service-role"
 
 export const dynamic = "force-dynamic"
@@ -76,6 +77,14 @@ export async function GET(req: Request) {
     if (error) throw error
 
     console.log(`✅ Rates refreshed at ${timestamp}`)
+
+    try {
+      await fetch(getServerApiUrl("/api/trfn/signals"), { cache: "no-store" })
+      console.log("✅ TRFN signals refreshed")
+    } catch (err) {
+      console.error("TRFN signals refresh failed:", err)
+    }
+
     return NextResponse.json({
       success: true,
       timestamp,

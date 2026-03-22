@@ -8,41 +8,37 @@ import {
 } from "@/components/ui/chart"
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts"
 import { cn } from "@/lib/utils"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 export type RateChartPeriod = "7d" | "30d" | "90d"
 
-const SAMPLE_7D = [
-  { day: "Mon", rate: 182 },
-  { day: "Tue", rate: 183 },
-  { day: "Wed", rate: 184 },
-  { day: "Thu", rate: 185 },
-  { day: "Fri", rate: 186 },
-  { day: "Sat", rate: 185 },
-  { day: "Sun", rate: 186 },
-]
+const DAYS_7 = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] as const
+const OFFS_7 = [-4, -3, -2, -1, 0, -1, 0] as const
 
-const SAMPLE_30D = SAMPLE_7D.flatMap((_, i) =>
-  Array.from({ length: 4 }, (__, j) => ({
-    day: `W${i + 1}.${j + 1}`,
-    rate: 182 + Math.floor((i * 4 + j) / 3),
+function buildSample7d(anchor: number) {
+  return DAYS_7.map((day, i) => ({ day, rate: anchor + OFFS_7[i] }))
+}
+
+function buildSample30d(anchor: number) {
+  return buildSample7d(anchor).flatMap((_, i) =>
+    Array.from({ length: 4 }, (__, j) => ({
+      day: `W${i + 1}.${j + 1}`,
+      rate: anchor - 4 + Math.floor((i * 4 + j) / 3),
+    }))
+  ).slice(0, 30)
+}
+
+function buildSample90d(anchor: number) {
+  return Array.from({ length: 90 }, (_, i) => ({
+    day: `D${i + 1}`,
+    rate: anchor - 6 + Math.min(10, Math.floor(i / 9)),
   }))
-).slice(0, 30)
-
-const SAMPLE_90D = Array.from({ length: 90 }, (_, i) => ({
-  day: `D${i + 1}`,
-  rate: 180 + Math.min(10, Math.floor(i / 9)),
-}))
+}
 
 export interface RateChartProps {
   period: RateChartPeriod
   showInflationOverlay?: boolean
   className?: string
-}
-
-const PERIOD_DATA: Record<RateChartPeriod, { label: string; data: Array<{ day: string; rate: number }> }> = {
-  "7d": { label: "7 days", data: SAMPLE_7D },
-  "30d": { label: "30 days", data: SAMPLE_30D },
-  "90d": { label: "90 days", data: SAMPLE_90D },
 }
 
 /** Illustrative index that moves with the rate but not 1:1—helps compare timing of pressure vs. street FX. */
@@ -60,10 +56,17 @@ function withInflationPulse(
 }
 
 export function RateChart({ period, showInflationOverlay, className }: RateChartProps) {
-  const chartData = useMemo(
-    () => withInflationPulse(PERIOD_DATA[period].data, period),
-    [period]
-  )
+  const { rate } = useLiveRate()
+
+  const chartData = useMemo(() => {
+    const raw =
+      period === "7d"
+        ? buildSample7d(rate)
+        : period === "30d"
+          ? buildSample30d(rate)
+          : buildSample90d(rate)
+    return withInflationPulse(raw, period)
+  }, [period, rate])
 
   return (
     <div className={cn("space-y-3", className)}>

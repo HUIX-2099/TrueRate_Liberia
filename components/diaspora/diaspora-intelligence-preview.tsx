@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useMemo } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -19,28 +19,24 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 import { Area, AreaChart, XAxis, YAxis } from "recharts"
+import { useLiveRate } from "@/lib/live-rate-context"
 
-const SAMPLE_TREND = [
-  { day: "Mon", rate: 182 },
-  { day: "Tue", rate: 183 },
-  { day: "Wed", rate: 184 },
-  { day: "Thu", rate: 185 },
-  { day: "Fri", rate: 186 },
-  { day: "Sat", rate: 185 },
-  { day: "Sun", rate: 186 },
-]
+const TREND_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] as const
+/** Shape around the live anchor (street mid) — same week-over-week drift as before, no fixed LRD level. */
+const TREND_OFFS = [-4, -3, -2, -1, 0, -1, 0] as const
 
 export function DiasporaIntelligencePreview() {
-  const [liveRate, setLiveRate] = useState<number | null>(null)
+  const { effectiveRate, loading, rate } = useLiveRate()
+  const displayRate = loading ? null : effectiveRate
 
-  useEffect(() => {
-    fetch("/api/rates/live")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.rate != null && typeof data.rate === "number") setLiveRate(data.rate)
-      })
-      .catch(() => {})
-  }, [])
+  const chartData = useMemo(
+    () =>
+      TREND_DAYS.map((day, i) => ({
+        day,
+        rate: rate + TREND_OFFS[i],
+      })),
+    [rate]
+  )
 
   return (
     <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-card shadow-[var(--shadow-institutional)] overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/30 hover:-translate-y-0.5">
@@ -62,7 +58,7 @@ export function DiasporaIntelligencePreview() {
           <div className="rounded-lg border border-border/60 bg-muted/30 p-3">
             <p className="text-xs text-muted-foreground mb-0.5">USD/LRD now</p>
             <p className="text-xl font-bold tabular-nums">
-              {liveRate != null ? `${liveRate.toFixed(0)}` : "—"} LRD
+              {displayRate != null ? `${displayRate.toFixed(0)}` : "—"} LRD
             </p>
           </div>
           <div className="rounded-lg border border-border/60 bg-muted/30 p-3">
@@ -78,7 +74,7 @@ export function DiasporaIntelligencePreview() {
             }}
             className="h-full w-full"
           >
-            <AreaChart data={SAMPLE_TREND} margin={{ top: 4, right: 4, bottom: 0, left: 4 }}>
+            <AreaChart data={chartData} margin={{ top: 4, right: 4, bottom: 0, left: 4 }}>
               <defs>
                 <linearGradient id="rateGradient" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="var(--chart-1)" stopOpacity={0.3} />

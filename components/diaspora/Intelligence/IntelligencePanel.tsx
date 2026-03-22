@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useMemo } from "react"
+import { useState, useMemo } from "react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { ArrowRight, LineChart, Radio } from "lucide-react"
@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { cn } from "@/lib/utils"
+import { useLiveRate } from "@/lib/live-rate-context"
 import type { RateChartPeriod } from "./RateChart"
 
 const RateChart = dynamic(() => import("./RateChart"), {
@@ -48,31 +49,17 @@ function formatRateAge(iso: string | undefined): string {
 }
 
 export function IntelligencePanel() {
-  const [liveRate, setLiveRate] = useState<number | null>(null)
-  const [officialRate, setOfficialRate] = useState<number | null>(null)
-  const [rateUpdated, setRateUpdated] = useState<string | undefined>(undefined)
+  const { rate: marketRate, cblRate, timestamp, loading, effectiveRate } = useLiveRate()
+  const displayRate = loading ? null : effectiveRate
   const [period, setPeriod] = useState<RateChartPeriod>("7d")
   const [showInflationOverlay, setShowInflationOverlay] = useState(false)
 
-  useEffect(() => {
-    fetch("/api/rates/live")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.rate != null && typeof data.rate === "number") setLiveRate(data.rate)
-        if (typeof data.timestamp === "string") setRateUpdated(data.timestamp)
-        const official = data.officialRate ?? data.cblRate
-        if (typeof official === "number" && official > 0) setOfficialRate(official)
-        else setOfficialRate(null)
-      })
-      .catch(() => {})
-  }, [])
-
   const spreadPct = useMemo(() => {
-    if (officialRate != null && officialRate > 0 && liveRate != null) {
-      return Number((((liveRate - officialRate) / officialRate) * 100).toFixed(2))
+    if (cblRate != null && cblRate > 0 && marketRate > 0) {
+      return Number((((marketRate - cblRate) / cblRate) * 100).toFixed(2))
     }
     return null
-  }, [officialRate, liveRate])
+  }, [cblRate, marketRate])
 
   const sentiment = useMemo((): "stable" | "watch" | "volatile" => {
     if (spreadPct == null) return "stable"
@@ -81,7 +68,7 @@ export function IntelligencePanel() {
     return "stable"
   }, [spreadPct])
 
-  const updatedLabel = formatRateAge(rateUpdated)
+  const updatedLabel = formatRateAge(timestamp || undefined)
 
   return (
     <SectionContainer
@@ -125,7 +112,7 @@ export function IntelligencePanel() {
                   </span>
                 </div>
                 <p className="text-2xl sm:text-[1.65rem] font-bold tabular-nums text-foreground tracking-tight">
-                  {liveRate != null ? `${liveRate.toFixed(0)} LRD` : "—"}
+                  {displayRate != null ? `${displayRate.toFixed(0)} LRD` : "—"}
                   <span className="text-sm font-semibold text-muted-foreground"> / $1</span>
                 </p>
                 <p className="text-xs text-muted-foreground leading-relaxed">

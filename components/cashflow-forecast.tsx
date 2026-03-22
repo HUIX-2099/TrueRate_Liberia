@@ -32,63 +32,79 @@ interface ForecastData {
   worstCaseLRD: number
 }
 
-export function CashflowForecast() {
+type CashflowForecastProps = {
+  /** LRD per USD from parent (e.g. `useLiveRate().effectiveRate`); if omitted, fetches `/api/rates/live` */
+  rate?: number
+  /** CBL official rate for context display */
+  cblRate?: number
+}
+
+export function CashflowForecast({ rate: externalRate, cblRate }: CashflowForecastProps = {}) {
   const { t, isMarketWomanMode } = useLanguage()
-  const [weeklySales, setWeeklySales] = useState<string>('')
+  const [weeklySales, setWeeklySales] = useState<string>("")
   const [currentRate, setCurrentRate] = useState<number>(198.5)
   const [predictions, setPredictions] = useState<ForecastData[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    let cancelled = false
+
     async function fetchData() {
       try {
-        const [liveRes, predRes] = await Promise.all([
-          fetch('/api/rates/live'),
-          fetch('/api/rates/predictions?days=28')
-        ])
-        
-        const liveData = await liveRes.json()
+        setLoading(true)
+        const predRes = await fetch("/api/rates/predictions?days=28")
         const predData = await predRes.json()
-        
-        setCurrentRate(liveData.rate || 198.5)
-        
-        // Generate weekly forecast data
+        if (cancelled) return
+
+        let baseRate = 198.5
+        if (typeof externalRate === "number" && externalRate > 100 && externalRate < 300) {
+          baseRate = externalRate
+        } else {
+          const liveRes = await fetch("/api/rates/live")
+          const liveData = await liveRes.json()
+          baseRate = typeof liveData.rate === "number" ? liveData.rate : 198.5
+        }
+        setCurrentRate(baseRate)
+
         const weeklyPredictions: ForecastData[] = []
         const preds = predData.predictions || []
-        
+
+        const getRate = (p: { predicted?: number; predictedRate?: number }) =>
+          p.predicted ?? p.predictedRate ?? baseRate
+
         for (let week = 1; week <= 4; week++) {
           const weekPreds = preds.slice((week - 1) * 7, week * 7)
           if (weekPreds.length > 0) {
-            // API returns 'predicted', not 'predictedRate'
-            const getRate = (p: { predicted?: number; predictedRate?: number }) => 
-              p.predicted || p.predictedRate || currentRate
-            
-            const avgRate = weekPreds.reduce((sum: number, p: { predicted?: number; predictedRate?: number }) => 
-              sum + getRate(p), 0) / weekPreds.length
+            const avgRate =
+              weekPreds.reduce((sum: number, p: { predicted?: number; predictedRate?: number }) => sum + getRate(p), 0) /
+              weekPreds.length
             const rates = weekPreds.map((p: { predicted?: number; predictedRate?: number }) => getRate(p))
             const minRate = Math.min(...rates)
             const maxRate = Math.max(...rates)
-            
+
             weeklyPredictions.push({
               week: `Week ${week}`,
               usdSales: 0,
               predictedLRD: avgRate,
               bestCaseLRD: minRate,
-              worstCaseLRD: maxRate
+              worstCaseLRD: maxRate,
             })
           }
         }
-        
+
         setPredictions(weeklyPredictions)
       } catch (error) {
-        console.error('Error:', error)
+        console.error("Error:", error)
       } finally {
-        setLoading(false)
+        if (!cancelled) setLoading(false)
       }
     }
 
-    fetchData()
-  }, [])
+    void fetchData()
+    return () => {
+      cancelled = true
+    }
+  }, [externalRate])
 
   const salesAmount = parseFloat(weeklySales) || 0
   
@@ -145,6 +161,11 @@ export function CashflowForecast() {
             <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">Current Rate</div>
             <div className="text-2xl font-bold tabular-nums">{(currentRate ?? 0).toFixed(2)}</div>
             <div className="text-xs text-muted-foreground">LRD/USD</div>
+            {typeof cblRate === "number" && cblRate > 100 && cblRate < 300 && (
+              <div className="mt-2 text-xs text-muted-foreground">
+                CBL official: <span className="font-medium text-foreground">{cblRate.toFixed(2)}</span>
+              </div>
+            )}
           </div>
           <div className="p-4 rounded-xl bg-muted/40 border border-border/40 border-secondary/20">
             <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">Today&apos;s Value</div>

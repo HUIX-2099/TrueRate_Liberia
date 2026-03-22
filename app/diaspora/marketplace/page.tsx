@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useMemo } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PageContainer } from "@/components/layout/page-container"
@@ -18,6 +18,7 @@ import { VendorListSection } from "@/components/diaspora/Marketplace/VendorListS
 import { useDiasporaCart } from "@/lib/diaspora/cart-context"
 import { PRODUCT_CATEGORIES } from "@/lib/diaspora/constants"
 import type { Product } from "@/lib/diaspora/types"
+import { useLiveRate } from "@/lib/live-rate-context"
 
 const CATEGORY_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   all: LayoutGrid,
@@ -40,7 +41,7 @@ function toDisplayProduct(apiProduct: Product & { priceLrd?: number | null }, fx
     id: apiProduct.id,
     name: apiProduct.name,
     priceUsd: apiProduct.priceUsd,
-    priceLrd: apiProduct.priceLrd ?? Math.round(Number(apiProduct.priceUsd) * fxRate),
+    priceLrd: Math.round(Number(apiProduct.priceUsd) * fxRate),
     fxRate,
     deliveryEtaDays: apiProduct.deliveryEtaDays ?? undefined,
     stockLevel: apiProduct.stockLevel ?? "high",
@@ -53,10 +54,11 @@ function toDisplayProduct(apiProduct: Product & { priceLrd?: number | null }, fx
 
 export default function DiasporaMarketplacePage() {
   const [category, setCategory] = useState("all")
-  const [products, setProducts] = useState<ReturnType<typeof toDisplayProduct>[]>([])
-  const [fxRate, setFxRate] = useState(182)
+  const [rawProducts, setRawProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
   const { items, addItem, totalUsd, itemCount } = useDiasporaCart()
+  const { effectiveRate, loading: rateLoading } = useLiveRate()
+  const displayRate = rateLoading ? null : effectiveRate
 
   const apiCategory = PRODUCT_CATEGORIES.find((c) => c.id === category)?.apiCategory ?? null
 
@@ -69,32 +71,17 @@ export default function DiasporaMarketplacePage() {
       .then((data) => {
         if (cancelled) return
         const list = data.data ?? []
-        setProducts(list.map((p: Product) => toDisplayProduct(p, fxRate)))
+        setRawProducts(list)
       })
-      .catch(() => { if (!cancelled) setProducts([]) })
+      .catch(() => { if (!cancelled) setRawProducts([]) })
       .finally(() => { if (!cancelled) setLoading(false) })
     return () => { cancelled = true }
   }, [apiCategory])
 
-  useEffect(() => {
-    fetch("/api/rates/live")
-      .then((res) => res.json())
-      .then((data) => {
-        if (typeof data?.rate === "number") setFxRate(data.rate)
-      })
-      .catch(() => {})
-  }, [])
-
-  /** Keep LRD hints in sync when live FX loads or updates (no extra network round-trip). */
-  useEffect(() => {
-    setProducts((prev) =>
-      prev.map((p) => ({
-        ...p,
-        fxRate,
-        priceLrd: Math.round(Number(p.priceUsd) * fxRate),
-      }))
-    )
-  }, [fxRate])
+  const products = useMemo(
+    () => rawProducts.map((p) => toDisplayProduct(p, effectiveRate)),
+    [rawProducts, effectiveRate]
+  )
 
   const handleAddToCart = useCallback(
     (id: string) => {
@@ -148,7 +135,7 @@ export default function DiasporaMarketplacePage() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/70 opacity-50" />
                     <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
                   </span>
-                  ~{fxRate} LRD/USD
+                  {displayRate != null ? `~${displayRate.toFixed(0)} LRD/USD` : "—"}
                 </span>
               </div>
               <div className="ml-auto shrink-0">

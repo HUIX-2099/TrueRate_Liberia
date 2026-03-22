@@ -13,20 +13,32 @@ import { CartDrawer } from "./CartDrawer"
 import { CartTrigger } from "./CartTrigger"
 import { Button } from "@/components/ui/button"
 import type { CartItem, Product } from "./types"
+import { useLiveRate } from "@/lib/live-rate-context"
 
-const MOCK_PRODUCTS: Product[] = [
-  { id: "p1", name: "Portland Cement 50kg", priceUsd: 12.5, priceLrd: 2275, fxRate: 182, deliveryEtaDays: [2, 5], stockLevel: "high", frequentlyPurchasedByDiaspora: true, vendorId: "v1", vendorName: "Liberia Build Supply Co.", category: "Construction" },
-  { id: "p2", name: "Premium Rice 25kg", priceUsd: 28, priceLrd: 5096, fxRate: 182, deliveryEtaDays: [1, 3], stockLevel: "medium", frequentlyPurchasedByDiaspora: true, vendorId: "v2", vendorName: "Monrovia Fresh Goods", category: "Food & Groceries" },
+const MOCK_PRODUCTS_BASE: Omit<Product, "priceLrd" | "fxRate">[] = [
+  { id: "p1", name: "Portland Cement 50kg", priceUsd: 12.5, deliveryEtaDays: [2, 5], stockLevel: "high", frequentlyPurchasedByDiaspora: true, vendorId: "v1", vendorName: "Liberia Build Supply Co.", category: "Construction" },
+  { id: "p2", name: "Premium Rice 25kg", priceUsd: 28, deliveryEtaDays: [1, 3], stockLevel: "medium", frequentlyPurchasedByDiaspora: true, vendorId: "v2", vendorName: "Monrovia Fresh Goods", category: "Food & Groceries" },
 ]
 
 export function MarketplacePanel() {
+  const { effectiveRate } = useLiveRate()
+  const products = useMemo<Product[]>(
+    () =>
+      MOCK_PRODUCTS_BASE.map((p) => ({
+        ...p,
+        fxRate: effectiveRate,
+        priceLrd: Math.round(p.priceUsd * effectiveRate),
+      })),
+    [effectiveRate]
+  )
+
   const [category, setCategory] = useState("all")
   const [verifiedOnly, setVerifiedOnly] = useState(false)
   const [location, setLocation] = useState("all")
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
   const handleAddToCart = useCallback((id: string) => {
-    const product = MOCK_PRODUCTS.find((p) => p.id === id)
+    const product = products.find((p) => p.id === id)
     if (!product) return
     setCartItems((prev) => {
       const existing = prev.find((i) => i.id === id)
@@ -48,7 +60,7 @@ export function MarketplacePanel() {
         },
       ]
     })
-  }, [])
+  }, [products])
 
   const cartTotal = useMemo(
     () => cartItems.reduce((s, i) => s + i.priceUsd * i.quantity, 0),
@@ -105,7 +117,7 @@ export function MarketplacePanel() {
         What to send
       </h3>
       <ProductGrid
-        products={MOCK_PRODUCTS}
+        products={products}
         onAddToCart={handleAddToCart}
       />
     </SectionContainer>

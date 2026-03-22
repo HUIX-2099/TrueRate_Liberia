@@ -28,8 +28,9 @@ import {
   ArrowRight,
   ShieldCheck,
 } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
+import { useLiveRate } from "@/lib/live-rate-context"
 import { InvoiceProtector } from "@/components/invoice-protector"
 import { BulkConverter } from "@/components/bulk-converter"
 import { CashflowForecast } from "@/components/cashflow-forecast"
@@ -48,22 +49,11 @@ import { PageHero } from "@/components/layout/page-hero"
  */
 
 export default function BusinessDashboardPage() {
-  const [currentRate, setCurrentRate] = useState<number | null>(null)
-  const [loading, setLoading] = useState(true)
+  const { effectiveRate, loading, cblRate, sources, timestamp } = useLiveRate()
+  const currentRate = loading ? null : effectiveRate
+
   const [apiKey, setApiKey] = useState<string | null>(null)
   const [apiKeyLoading, setApiKeyLoading] = useState(false)
-
-  useEffect(() => {
-    fetch("/api/rates/live")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.rate && typeof data.rate === "number") {
-          setCurrentRate(data.rate)
-        }
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
-  }, [])
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -78,9 +68,8 @@ export default function BusinessDashboardPage() {
           pill={{
             text: loading
               ? "Loading rate…"
-              : currentRate != null
-                ? `1 USD = ${currentRate.toFixed(2)} LRD`
-                : "For Businesses",
+              : `L$${effectiveRate.toFixed(2)} · ${sources[0] ?? "Live"}`,
+            live: !loading,
           }}
           contentMaxWidth="max-w-3xl"
         >
@@ -145,11 +134,11 @@ export default function BusinessDashboardPage() {
 
               <TabsContent value="tools" className="mt-6 sm:mt-8 space-y-6 sm:space-y-8">
                 <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
-                  <InvoiceProtector />
-                  <CashflowForecast />
+                  <InvoiceProtector rate={effectiveRate} />
+                  <CashflowForecast rate={effectiveRate} cblRate={cblRate ?? undefined} />
                 </div>
                 <ImportPriceAlert />
-                <BulkConverter />
+                <BulkConverter rate={effectiveRate} />
                 <SentimentAnalysis />
               </TabsContent>
 
